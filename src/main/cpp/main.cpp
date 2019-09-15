@@ -24,16 +24,7 @@ int main(int argc, char **argv) {
 
     std::map <std::string, std::function<int()>> funcMap =
             {
-                    {"t00_hello",        t00_hello},
-                    {"t01_squirrels",    t01_squirrels},
-                    {"t02_squirrels2",   t02_squirrels2},
-                    {"t03_last_number",  t03_last_number},
-                    {"t04_first_number", t04_first_number},
-                    {"t05_tens_number",  t05_tens_number},
-                    {"t06_3digits",      t06_3digits},
-                    {"t07_pies",         t07_pies},
-                    {"t08_watch",        t08_watch},
-                    {"t09_snail",        t09_snail}
+                    {"t00_hello",        t00_hello}
             };
 
     funcMap[functionName]();
