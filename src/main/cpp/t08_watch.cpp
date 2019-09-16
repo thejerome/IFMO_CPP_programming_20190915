@@ -42,5 +42,6 @@ int t08_watch() {
     hr = mn / 60 % 24;
     sc %= 60;
     mn %= 60;
-    printf("%d:%02d:%02d", hr, mn, sc);
+    cout << hr << ':' << mn / 10 << mn % 10 << ':' << sc / 10 << sc % 10;
+
 };
