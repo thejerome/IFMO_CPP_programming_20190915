@@ -27,5 +27,8 @@
 using namespace std;
 
 int t09_snail() {
-
+	int h = 0, a = 0, b = 0,track=0;
+	cin >> h >> a >> b;
+	track = (h - 1 - a) / (a - b) + 2;
+	cout << track;
 };
