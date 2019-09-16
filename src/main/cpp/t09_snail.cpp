@@ -31,13 +31,10 @@ int t09_snail() {
 
     cin >> h >> a >> b;
 
-    while (ch < h) {
-        d++;
-        ch += a;
-        if(ch < h) {
-            ch -= b;
-        }
-    }
+    d = h / (a - b);
+    h %= (a - b);
+    // h > b ? d++;
+    d += h / b;
 
     cout << d;
 };
