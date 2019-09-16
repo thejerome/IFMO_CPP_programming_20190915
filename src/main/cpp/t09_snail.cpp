@@ -37,6 +37,7 @@ int t09_snail() {
   h = h - a;
   b = a - b;
   d = h / b;
+  d = d + 0.99;
   e2 = e1 + d;
   e2 = e2 - 10;
   cout << e2 + 1;
