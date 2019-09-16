@@ -41,5 +41,5 @@ int t07_pies() {
 	cin >> a >> b >> n;
 	cop = b * n;
 	rub = (a * n) + (cop/100);
-	cout << rub << cop;
+	cout << rub << cop%100;
 };

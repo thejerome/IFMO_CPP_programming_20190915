@@ -41,5 +41,5 @@ int t08_watch() {
 	SecTime -= h * 3600;
 	m = SecTime / 60;
 	s = SecTime - m * 60;
-	cout << h + ":"<< m + ":"<< s;
+	cout << h << ":"<< m << ":"<< s;
 };
