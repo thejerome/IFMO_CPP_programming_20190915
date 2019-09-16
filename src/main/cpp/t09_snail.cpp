@@ -27,5 +27,17 @@
 using namespace std;
 
 int t09_snail() {
+    int h, a, b, ch = 0, d = 0;
 
+    cin >> h >> a >> b;
+
+    while (ch < h) {
+        d++;
+        ch += a;
+        if(ch < h) {
+            ch -= b;
+        }
+    }
+
+    cout << d;
 };

@@ -31,9 +31,16 @@
 
 #include "t08_watch.h"
 #include <iostream>
+#include <cstdio>
 
 using namespace std;
 
 int t08_watch() {
-
+    int hr. mn, sc;
+    cin >> sc;
+    mn = sc / 60;
+    hr = mn / 60 % 24;
+    sc %= 60;
+    mn %= 60;
+    printf("%d:%02d:%02d", hr, mn, sc);
 };
