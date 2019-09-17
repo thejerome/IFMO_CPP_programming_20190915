@@ -1,3 +1,4 @@
+language: cpp
 script:
   - chmod +x run_test.sh
   - chmod +x run_tests.sh
