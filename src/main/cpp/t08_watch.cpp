@@ -35,5 +35,12 @@
 using namespace std;
 
 int t08_watch() {
-
+	int SecTime = 0,h=0,m=0,s=0;
+	cin >> SecTime;
+	h = (SecTime / 3600);
+	SecTime -= h * 3600;
+	h %= 24;
+	m = SecTime / 60;
+	s = SecTime - m * 60;
+	cout << h << ":"<<m/10<< m%10 << ":"<< s/10 <<s%10;
 };
