@@ -28,4 +28,14 @@ using namespace std;
 
 int t09_choco() {
 
+    int n=0;
+    int m=0;
+    int k=0;
+
+    cin>>n>>m>>k;
+
+    if ( k%n == 0 || k%m == 0)
+        cout<<"YES";
+    else
+        cout<<"NO";
 };
