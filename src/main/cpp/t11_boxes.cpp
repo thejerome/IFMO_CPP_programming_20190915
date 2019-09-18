@@ -38,4 +38,60 @@ using namespace std;
 
 int t11_boxes() {
 
+    int a1,a2=0;
+    int b1,b2=0;
+    int c1,c2=0;
+
+    int t=0;
+
+    cin>>a1>>b1>>c1>>a2>>b2>>c2;
+
+    if ( a1>b1 )
+    {
+        t=b1;
+        b1=a1;
+        a1=t;
+    }
+    if ( b1>c1 )
+    {
+        t=c1;
+        c1=b1;
+        b1=t;
+    }
+    if ( a1>b1 )
+    {
+        t=b1;
+        b1=a1;
+        a1=t;
+    }
+
+
+    if ( a2>b2 )
+    {
+        t=b2;
+        b2=a2;
+        a2=t;
+    }
+    if ( b2>c2 )
+    {
+        t=c2;
+        c2=b2;
+        b2=t;
+    }
+    if ( a2>b2 )
+    {
+        t=b2;
+        b2=a2;
+        a2=t;
+    }
+
+    if ( a1==a2 && b1==b2 && c1==c2)
+        cout<<"Boxes are equal";
+    else if ( a1>=a2 && b1>=b2 && c1>=c2 )
+        cout<<"The first box is larger than the second one";
+    else if ( a1<=a2 && b1<=b2 && c1<=c2 )
+        cout<<"The first box is smaller than the second one";
+    else
+        cout<<"Boxes are incomparable";
+
 };
