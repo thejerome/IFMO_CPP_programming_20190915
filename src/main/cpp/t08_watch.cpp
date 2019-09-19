@@ -35,5 +35,21 @@
 using namespace std;
 
 int t08_watch() {
+  int a = 0;
+  int b = 0;
+  int c = 0;
+  int d = 0;
+  int e1 = 0;
+  int e2 = 0;
+  
+  cin >> d;
+  a = d % 60;
+  b = (d / 60) % 60;
+  c = (d / 3600) % 24;
+  e1 = a / 10;
+  a = a % 10;
+  e2 = b / 10;
+  b = b % 10;
+  cout << c <<':'<< e2 << b << ':' << e1 << a;
 
 };
