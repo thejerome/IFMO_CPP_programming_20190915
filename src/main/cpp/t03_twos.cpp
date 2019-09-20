@@ -24,13 +24,13 @@ using namespace std;
 
 int t03_twos() {
     int n=0;
-    int pow=1;
     cin>>n;
 
     if (n==1)
         cout<<"YES";
     else
     {
+        int pow=1;
         while (pow<n)
         {
             pow*=2;
