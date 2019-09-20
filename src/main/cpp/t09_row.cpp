@@ -23,5 +23,40 @@
 using namespace std;
 
 int t09_row() {
+    int n=0;
+    int q_max=0;
+    int q=0;
+    int n_back=0;
+
+    while(true)
+    {
+
+        cin>>n;
+        if (n_back==0)
+            n_back==n;
+
+        if (n==0)
+        {
+            if (q_max==0)
+                q_max=q;
+            break;
+        }
+
+        if ( n==n_back )
+        {
+            n_back=n;
+            q++;
+        }
+        else
+        {
+            if (q_max<q)
+                q_max=q;
+            q=1;
+            n_back=n;
+        }
+
+    }
+
+    cout<<q_max;
 
 };
