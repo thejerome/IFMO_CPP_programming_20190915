@@ -24,9 +24,8 @@ using namespace std;
 
 int t03_twos() {
     int n=0;
-    cin>>n;
-
     int pow=1;
+    cin>>n;
 
     if (n==1)
         cout<<"YES";
