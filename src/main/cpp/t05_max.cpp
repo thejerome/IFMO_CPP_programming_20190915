@@ -21,4 +21,19 @@ using namespace std;
 
 int t05_max() {
 
+    int n=0;
+    int max=0;
+
+    do
+    {
+        cin>>n;
+        if (max==0)
+            max=n;
+        if (n>max)
+            max=n;
+    }
+    while (n!=0);
+
+    cout<<max;
+
 };
