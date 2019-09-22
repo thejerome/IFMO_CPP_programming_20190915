@@ -24,5 +24,10 @@
 using namespace std;
 
 int t01_squirrels() {
-
+  int squirrels;
+	int nuts;
+	cin >> squirrels >> nuts;
+	int res = nuts / squirrels;
+	cout << res;
+	return 0;
 };
