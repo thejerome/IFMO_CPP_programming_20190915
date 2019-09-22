@@ -33,7 +33,7 @@ int t09_snail() {
   cin >> B;
   P = A - B;
   F = H - A;
-  N = (F/P) + ((F%P)/((F%P)+1)) + 1 ;
+  N = (F/P) + ((F%P)/2 + 2)/3 + 1 ;
   cout << N;
   return 0;
 };
