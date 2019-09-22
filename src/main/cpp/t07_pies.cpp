@@ -39,7 +39,7 @@ using namespace std;
 int t07_pies() {
   int a, b, count, rubl, coin;
 	cin >> a >> b >> count;
-	coin = b * cout;
+	coin = b * count;
 	rubl = (a * count) + (coin/100); 
 	cout << rubl << " " <<  coin * count;
 	return 0;
