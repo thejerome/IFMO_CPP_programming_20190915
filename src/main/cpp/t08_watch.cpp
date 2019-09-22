@@ -31,9 +31,12 @@
 
 #include "t08_watch.h"
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
 int t08_watch() {
-
+    int N=0;
+    cin >>N;
+    cout << ((N/3600)%24) << ':' <<setfill('0') << setw(2) <<((N%3600)/60) <<':' <<setfill('0') << setw(2) <<(N%60);
 };
