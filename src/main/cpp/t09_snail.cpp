@@ -33,6 +33,6 @@ int t09_snail() {
     M = A-B;
     C = H/M;
     F = H%M;
-    F = F  / M;
+    F = (F +(M-1)) / M;
     cout <<++C + F;
 };
