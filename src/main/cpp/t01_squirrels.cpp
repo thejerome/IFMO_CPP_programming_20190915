@@ -29,3 +29,8 @@ int t01_squirrels() {
 	cout << (k / n); 
 	return 0;
 };
+
+int main(){
+	t01_squirrels();
+	return 0;
+}
