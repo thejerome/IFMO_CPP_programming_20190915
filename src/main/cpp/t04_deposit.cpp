@@ -22,5 +22,27 @@
 using namespace std;
 
 int t04_deposit() {
+    int p=0;
+    int x=0;
+    int y=0;
+    int k=0;
+    double deposit=0;
+    double p_strong=0;
+
+    cin>>p>>x>>y>>k;
+
+    deposit = x+y*0.01;
+    p_strong = double(p)/100+1;
+
+    for(int i=1; i<=k; i++)
+    {
+        deposit=deposit*p_strong;
+        x=int(deposit);
+        y=int(deposit*100)%100;
+        deposit = x+y*0.01;
+
+    }
+
+    cout<<x<<" "<<y;
 
 };
