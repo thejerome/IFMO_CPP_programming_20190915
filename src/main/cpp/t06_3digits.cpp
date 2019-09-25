@@ -30,4 +30,4 @@ int t06_3digits() {
      c=n / 100 % 10;
    cout << a + b + c;
   return 0;
-};
+}
