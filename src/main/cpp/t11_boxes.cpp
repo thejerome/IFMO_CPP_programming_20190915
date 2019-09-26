@@ -110,11 +110,11 @@ int t11_boxes() {
     {
         cout << "Boxes are equal";
     } else {
-    if ((l1>l2) && (m1>m2) && (s1>s2))
+    if ((l1>=l2) && (m1>=m2) && (s1>=s2))
     {
         cout << "The first box is larger than the second one";
     } else {
-    if ((l1<l2) && (m1<m2) && (s1<s2))
+    if ((l1<=l2) && (m1<=m2) && (s1<=s2))
     {
         cout << "The first box is smaller than the second one";
     } else {
