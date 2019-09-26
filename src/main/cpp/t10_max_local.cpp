@@ -34,7 +34,7 @@ int t10_max_local() {
         cin >> cur;
     }
 
-    if (prpr != 0 && pr > cur && pr > prpr) cnt++;
+    if (cur != 0 && prpr != 0 && pr > cur && pr > prpr) cnt++;
 
     cout << cnt;
 };

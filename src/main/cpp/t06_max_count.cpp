@@ -36,7 +36,7 @@ int t06_max_count() {
     while (in != 0) {
         if(in > mx) {
             mx = in;
-            cnt = 1;
+            cnt = 0;
         }
 
         if (in == mx) cnt++;

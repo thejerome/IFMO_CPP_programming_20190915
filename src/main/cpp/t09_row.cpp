@@ -30,7 +30,7 @@ int t09_row() {
         if (in == cur) cnt++;
         else {
             if (cnt > mxcnt) mxcnt = cnt;
-            cnt = 0;
+            cnt = 1;
             cur = in;
         }
         cin >> in;
