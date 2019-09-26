@@ -44,7 +44,7 @@ int t08_chess_knight() {
         y1 = tmp;
     }
 
-    if ((x1 - x2) == 2 && (y1 - y2) == 1 || (x1 - x2) == 1 && (y1 - y2) == 1)
+    if ((x1 - x2) == 2 && (y1 - y2) == 1 || (x1 - x2) == 1 && (y1 - y2) == 2)
         cout << "YES";
     else
         cout << "NO";

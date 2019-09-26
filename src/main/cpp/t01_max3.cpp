@@ -29,5 +29,5 @@ int t01_max3() {
         a = c;
     }
 
-    cout << c;
+    cout << a;
 };

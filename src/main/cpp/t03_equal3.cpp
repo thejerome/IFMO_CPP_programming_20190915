@@ -27,5 +27,5 @@ int t03_equal3() {
     else if (a == b || a == c || b == c)
         cout << 2;
     else
-        cout << 1;
+        cout << 0;
 };
