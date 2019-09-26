@@ -24,5 +24,7 @@
 using namespace std;
 
 int t02_squirrels2() {
-
+	unsigned short n = 0, k=0;
+	cin >> n >> k;
+	cout << (k%n);
 };
