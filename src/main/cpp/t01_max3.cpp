@@ -32,4 +32,5 @@ int t01_max3() {
         d = c;
     }
     cout << d;
+    return 0;
 };
