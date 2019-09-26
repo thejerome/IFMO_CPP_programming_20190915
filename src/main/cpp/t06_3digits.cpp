@@ -24,4 +24,9 @@ using namespace std;
 
 int t06_3digits() {
 
+    int a = 0;
+    cin >>a;
+    a = a/100 + (a/10)%10 + a%10;
+    cout << a;
+
 };
