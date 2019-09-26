@@ -21,7 +21,10 @@
 #include <iostream>
 
 using namespace std;
-
+	
 int t05_tens_number() {
+	unsigned int n = 0;
+	cin >> n;
+	cout << (n/10%10);
 
 };
