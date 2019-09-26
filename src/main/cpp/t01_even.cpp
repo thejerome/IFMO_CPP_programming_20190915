@@ -19,5 +19,13 @@
 using namespace std;
 
 int t01_even() {
+    int n=0;
+    cin >>n;
+    double  mas[n]={};
+    for(int i=0; i<n; i++)
+        cin>>mas[i];
+
+    for(int i=0; i<n; i+=2)
+        cout<<mas[i]<<" ";
 
 }
