@@ -31,7 +31,7 @@ using namespace std;
 int t07_chess_queen() {
     int a, b, c, d;
     cin >> a >> b >> c >> d;
-    if (((c-a)==(d-b)) || (a==c) || (b==d))
+    if (((c-a)==(d-b)) || (a==c) || (b==d) || ((c-a)==(b-d)))
     {
         cout << "YES";
     }
