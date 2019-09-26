@@ -21,7 +21,7 @@ using namespace std;
 int t04_chess_rook() {
     int a, b, c, d;
     cin >> a >> b >> c >> d;
-    if ((a=c) || (b==d))
+    if ((a==c) || (b==d))
     {
         cout << "YES";
     }
