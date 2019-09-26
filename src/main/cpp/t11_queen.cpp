@@ -39,5 +39,29 @@
 using namespace std;
 
 int t11_queen() {
+    int n=16;
+    bool yes=false;
+    double mas[n]={};
+    for(int i=0; i<n; i++)
+        cin>>mas[i];
 
+    for(int i=0; i<n; i+=2)
+    {
+        for(int j=i+2; j<n; j+=2)
+        {
+            if ( mas[i]==mas[j]  )
+            {
+                yes=true;
+                break;
+            }
+            if(i+1<n && j+1<n)
+                if( (abs(mas[i]-mas[j])==abs(mas[i+1]-mas[j+1])) || (mas[i+1]==mas[j+1]) )
+                {
+                    yes=true;
+                    break;
+                }
+        }
+    }
+
+    yes ? cout<<"YES" : cout<<"NO";
 }

@@ -26,5 +26,21 @@
 using namespace std;
 
 int t09_equals() {
+    int n=0;
+    cin>>n;
+    int count=0;
+    double mas[n]={};
+    for(int i=0; i<n; i++)
+        cin>>mas[i];
 
+    for(int i=0; i<n; i++)
+    {
+        for(int j=i+1; j<n; j++)
+        {
+            if ( mas[i]==mas[j] )
+                count++;
+        }
+    }
+
+    cout<<count;
 }

@@ -19,5 +19,25 @@
 using namespace std;
 
 int t08_cycleswap() {
+    int n=0;
+    cin>>n;
+    double mas[n]={};
+    double  last_element=0;
 
+    for(int i=0; i<n; i++)
+        cin>>mas[i];
+
+    if(n>0)
+        last_element=mas[n-1];
+
+    for(int i=n-1; i>=0; i--)
+    {
+        if(i==0)
+            mas[i]=last_element;
+        else
+            mas[i]=mas[i-1];
+    }
+
+    for(int i=0; i<n; i++)
+        cout<<mas[i]<<" ";
 }
