@@ -36,7 +36,7 @@ using namespace std;
 
         day = (H - A) / PerDay;
 
-        check = H % PerDay;
+        check = (H- A) % PerDay;
 
         check = (check + (PerDay - 1)) / PerDay;
 
