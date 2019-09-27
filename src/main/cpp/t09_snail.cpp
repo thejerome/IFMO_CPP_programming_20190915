@@ -26,6 +26,20 @@
 
 using namespace std;
 
-int t09_snail() {
+    int t09_snail() {
+
+        int H=0, A=0, B=0, day=0, PerDay=0, check=0;
+
+        cin >> H >> A >> B;
+
+        PerDay = A-B;
+
+        day = (H - A) / PerDay;
+
+        check = (H- A) % PerDay;
+
+        check = (check + (PerDay - 1)) / PerDay;
+
+        cout <<++day + check;
 
 };

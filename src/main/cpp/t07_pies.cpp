@@ -38,4 +38,12 @@ using namespace std;
 
 int t07_pies() {
 
+    int A=0, B=0, N=0;
+
+    cin >> A >> B >> N;
+
+    A = A * N + B * N / 100;
+    B = B * N % 100;
+
+    cout << A << " "  << B;
 };
