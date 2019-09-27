@@ -26,8 +26,6 @@
 
 using namespace std;
 
-int t09_snail() {
-
     int t09_snail() {
 
         int H=0, A=0, B=0, day=0, PerDay=0, check=0;
