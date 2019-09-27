@@ -38,7 +38,7 @@ using namespace std;
 
         check = H % PerDay;
 
-        check = (check + (Perday - 1)) / Perday;
+        check = (check + (PerDay - 1)) / PerDay;
 
         cout <<++day + check;
 
