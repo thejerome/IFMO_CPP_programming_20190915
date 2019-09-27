@@ -6,11 +6,11 @@
 //
 //Hello, World!
 
-#include "t00_hello.h"
 #include <iostream>
 
 using namespace std;
 
 int t00_hello() {
-
-};
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
