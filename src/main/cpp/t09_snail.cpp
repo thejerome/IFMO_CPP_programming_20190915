@@ -28,14 +28,20 @@ using namespace std;
 
 int t09_snail() {
 
-    int H=0, A=0, B=0, day=0;
+    int t09_snail() {
 
-    cin >> H >> A >> B;
+        int H=0, A=0, B=0, day=0, PerDay=0, check=0;
 
-    day = ((H - A) / (A - B));
-    
-    day += ((H - A) / (A - B)) % (((H - A) / (A - B)) - 1)
+        cin >> H >> A >> B;
 
-    cout << ++day;
+        PerDay = A-B;
+
+        day = (H - A) / PerDay;
+
+        check = H % PerDay;
+
+        check = (check + (Perday - 1)) / Perday;
+
+        cout <<++day + check;
 
 };
