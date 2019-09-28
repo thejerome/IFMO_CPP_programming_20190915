@@ -29,6 +29,8 @@ int t06_3digits() {
     a = N / 100 ;
     b = N / 10 % 10 ;
     c = N % 10 ;
+    sum = a + b + c ;
+    cout << sum ;
     return 0 ;
 
 
