@@ -24,7 +24,7 @@ using namespace std;
 
 int t06_3digits() {
 
-    int N , sum , a , b , c ;
+    int N = 0 , sum , a , b , c ;
     cin >> N ;
     a = N / 100 ;
     b = N / 10 % 10 ;
