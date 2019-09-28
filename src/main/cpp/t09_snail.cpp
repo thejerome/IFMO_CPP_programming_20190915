@@ -28,4 +28,11 @@ using namespace std;
 
 int t09_snail() {
 
+    int H = 0 , A = 0 , B = 0 , C , D ;
+    cin >> H >> A >> B ;
+    C = H - A ;
+    D = A - B ;
+    cout << 1 + C / D + (C % D + D - 1) / D ;
+    return 0 ;
+
 };
