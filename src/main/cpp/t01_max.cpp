@@ -27,6 +27,44 @@
 using namespace std;
 
 int t01_max() {
-    
+    int n=0;
+    int m=0;
+    int max_i=0;
+    int max_j=0;
+
+    cin>>n>>m;
+
+    double  mas[n][m]= {};
+
+    for (int i=0; i<n; i++)
+    {
+        for (int j=0; j<m; j++)
+        {
+            cin>>mas[i][j];
+        }
+    }
+
+
+    if ( n!=0 && m!=0 )
+    {
+        max_i=0;
+        max_j=0;
+    }
+
+
+    for (int i=0; i<n; i++)
+    {
+        for (int j=0; j<m; j++)
+        {
+            if (mas[i][j]>mas[max_i][max_j])
+            {
+                max_i=i;
+                max_j=j;
+            }
+        }
+    }
+
+    cout<<max_i<<" "<<max_j;
+
     return 0;
 }
