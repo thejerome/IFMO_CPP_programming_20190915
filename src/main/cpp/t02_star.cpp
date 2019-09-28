@@ -20,10 +20,29 @@
 #include "t02_star.h"
 #include <iostream>
 
-
 using namespace std;
 
 int t02_star() {
+    int n=0;
+    cin>>n;
 
+    char mas[n][n]= {};
+
+    for (int i=0; i<n; i++)
+    {
+        for (int j=0; j<n; j++)
+        {
+            if( i==j || (n-1)-i==j || i==n || (n/2)==i || (n/2)==j )
+            {
+                mas[i][j] = '*';
+            }
+            else
+            {
+                mas[i][j] = '.';
+            }
+            cout<<mas[i][j]<<" ";
+        }
+        cout<<endl;
+    }
     return 0;
 }

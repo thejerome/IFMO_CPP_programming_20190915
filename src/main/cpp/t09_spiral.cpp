@@ -17,11 +17,87 @@
 
 #include "t09_spiral.h"
 #include <iostream>
+#include <iomanip>
 
 
 using namespace std;
 
 int t09_spiral() {
-    
+    int n=0;
+    int m=0;
+    int i=0;
+    int j=0;
+    int way=1;
+    int wall=0;
+
+    cin>>n>>m;
+
+    int  mas[n][m]= {};
+
+    for ( int k=1; k<=n*m; k++)
+    {
+        switch (way)
+        {
+            case 1:
+                if( j < m-wall-1 )
+                {
+                    mas[i][j]=k;
+                    j++;
+                    if (j == m-wall-1)
+                    {
+                        way=2;
+                    }
+                }
+                break;
+            case 2:
+                if( i < n-wall-1 )
+                {
+                    mas[i][j]=k;
+                    i++;
+                    if (i == n-wall-1)
+                    {
+                        way=3;
+                    }
+                }
+                break;
+            case 3:
+                if( j > wall )
+                {
+                    mas[i][j]=k;
+                    j--;
+                    if (j == wall)
+                    {
+                        way=4;
+                    }
+                }
+                break;
+
+            case 4:
+                if( i > wall+1 )
+                {
+                    mas[i][j]=k;
+                    i--;
+                    if (i == wall+1)
+                    {
+                        way=1;
+                        wall++;
+                    }
+                }
+                break;
+        }
+        if (k==m*n)
+            mas[i][j]=k;
+
+    }
+
+    for (int i=0; i<n; i++)
+    {
+        for (int j=0; j<m; j++)
+        {
+            cout<<setw(4)<<mas[i][j];
+        }
+        cout<<endl;
+    }
+
     return 0;
 }
