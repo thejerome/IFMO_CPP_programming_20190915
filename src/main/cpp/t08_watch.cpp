@@ -48,6 +48,6 @@ int t08_watch() {
     hou = a%24;
     cout << setw(2) << setfill('0') << hou << ':';
     cout << setw(2) << setfill('0') << min << ':';
-    cout << setw(2) << setfill('0') << sec << ':';
+    cout << setw(2) << setfill('0') << sec << endl;
     return 0;
 }
