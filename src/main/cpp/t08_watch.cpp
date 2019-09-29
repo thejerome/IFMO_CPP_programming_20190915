@@ -45,7 +45,7 @@ int t08_watch() {
   n -= h*3600;
   m = n/60;
   s = n-m*60;
-  cout << h <<':';
+  cout << h%24 <<':';
   if(m < 10)
     cout << '0' << m << ':';
   else
