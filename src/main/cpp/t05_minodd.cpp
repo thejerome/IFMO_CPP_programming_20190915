@@ -32,13 +32,12 @@ int t05_minodd() {
     cin >> n;
     int* a = new int[n];
 
-    for (int i = 0; i < n; i++) cin >> a[i];
-
-    mn = a[0];
-
-    for (int i = 0; i < n; i ++) {
-        if (mn > a[i] && a[i] % 2 != 0)
+    mn = 0;
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+        if (mn == 0 || (a[i] < mn && a[i] % 2 == 1))
             mn = a[i];
+
     }
 
     cout << mn;
