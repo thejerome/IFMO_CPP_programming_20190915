@@ -79,4 +79,15 @@ PASSED: positive_numbers
 PASSED: negative_result
 
 Summary: SUCCESS
+<<<<<<< HEAD
 ```
+=======
+```
+
+Command to tun tests
+
+```bash
+./run_tests.sh t01_max t02_star t03_diag t04_swap t05_kdiag t06_cinema t07_snake t08_chess t09_spiral
+
+```
+>>>>>>> 918e6810adc9601d81fbeaa227623472430f0096
