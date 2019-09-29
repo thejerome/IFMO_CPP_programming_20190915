@@ -46,7 +46,7 @@ int t08_watch() {
     min = a%60;
     a = a/60;
     hou = a%24;
-    cout << setw(2) << setfill('0') << hou << ':';
+    cout << hou << ':';
     cout << setw(2) << setfill('0') << min << ':';
     cout << setw(2) << setfill('0') << sec << endl;
     return 0;
