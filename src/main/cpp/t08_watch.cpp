@@ -46,13 +46,6 @@ int t08_watch() {
   m = n/60;
   s = n-m*60;
   cout << h%24 <<':';
-  if(m < 10)
-    cout << '0' << m << ':';
-  else
-    cout << m << ':';
-  if(s < 10)
-    cout << '0' << s;
-  else
-    cout << s;
-
+  cout << m/10 << m%10 << ':';
+  cout << s/10 << s%10;
 };
