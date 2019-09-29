@@ -31,8 +31,8 @@ int t04_deposit() {
     while (cur++ < K) {
         double tmx = k * X;
         double tmy = k * Y;
-        X = tmx + (int)round(tmy / 100);
-        Y = (int)((tmx - (int)tmx) * 100) + (int)round(tmy) % 100;
+        X = tmx + (int)(tmy / 100);
+        Y = (int)((tmx - (int)tmx) * 100) + (int)tmy % 100;
         X += Y / 100;
         Y %= 100;
     }
