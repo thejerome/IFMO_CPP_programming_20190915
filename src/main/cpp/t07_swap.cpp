@@ -25,11 +25,10 @@ int t07_swap() {
 
     for (int i = 0; i < n; i++) cin >> a[i];
 
-    int tmp;
     for (int i = 1; i < n; i += 2) {
-        tmp = a[i];
+        int tmp = a[i];
         a[i] = a[i - 1];
-        a[i - 1] = a[i];
+        a[i - 1] = tmp;
     }
 
     for (int i = 0; i < n; i++) cout << a[i] << ' ';

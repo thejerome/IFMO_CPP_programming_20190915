@@ -37,7 +37,7 @@ int t05_minodd() {
     mn = a[0];
 
     for (int i = 0; i < n; i += 2) {
-        if (mn < a[i])
+        if (mn > a[i])
             mn = a[i];
     }
 

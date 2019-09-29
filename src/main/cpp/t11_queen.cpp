@@ -40,7 +40,7 @@ using namespace std;
 
 int t11_queen() {
     int n;
-    cin >> n;
+    n = 8;
     int* a = new int[n];
     int* b = new int[n];
 

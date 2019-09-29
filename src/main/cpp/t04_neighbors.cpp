@@ -29,7 +29,7 @@ int t04_neighbors() {
 
     bool flag = true;
     int i = 0;
-    while (++i < (n - 1) && flag) {
+    while (i++ < (n - 1) && flag) {
         if ( a[i] * a[i + 1] > 0) {
             cout << a[i] << ' ' << a[i + 1];
             flag = 0;
