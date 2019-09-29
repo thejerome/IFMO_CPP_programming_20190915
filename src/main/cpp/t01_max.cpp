@@ -27,6 +27,18 @@
 using namespace std;
 
 int t01_max() {
-    
-    return 0;
+    	int n,m,max_ans = -1e9;
+    	int cur_i = 0,cur_j = 0;
+    	cin>>n>>m;
+    	for(int i = 0;i < n;++i){
+    		for(int j = 0;j < m;++j){
+    			int val;
+    			cin>>val;
+    			if(val > max_ans){
+    				max_ans = val;
+    				cur_i = i,cur_j = j;
+    			}
+    		}
+    	}
+    	cout<<cur_i<<' '<<cur_j;
 }
