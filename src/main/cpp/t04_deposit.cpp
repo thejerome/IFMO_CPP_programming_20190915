@@ -30,7 +30,7 @@ int t04_deposit() {
 
     while (cur++ < K) {
         int tmx = k * X;
-        int deb = P * X % 100
+        int deb = P * X % 100;
         int tmy = Y + P * Y / 100;
         X = tmx + (tmy / 100);
         Y = deb + tmy % 100;
