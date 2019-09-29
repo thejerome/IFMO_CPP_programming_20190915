@@ -41,7 +41,7 @@ h = N/3600;
 N = N - h*3600;
 m = N/60;
 s = N - m*60;
-cout << h;
+cout << h%24;
 cout << ':';
 printf("%02d",m);
 cout << ':';

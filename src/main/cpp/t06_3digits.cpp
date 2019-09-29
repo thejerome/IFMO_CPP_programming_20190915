@@ -31,6 +31,6 @@ N = N / 10;
 C = C + N % 10 ;
 N = N / 10;
 C = C + N % 10 ;
-cout << N;
+cout << C;
 // return 0;
 };
