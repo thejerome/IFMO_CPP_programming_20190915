@@ -12,6 +12,7 @@
 //
 //1
 
+#include "t07_fib.h"
 #include <iostream>
 #include <cmath>
 
@@ -19,7 +20,17 @@ using namespace std;
 
 // function fib
 
-int t07_fib()
-{
-    return 0;
+	long long fib(int n){
+		if(n <= 2){
+			return 1;
+		}
+		else {
+			return fib(n - 1) + fib(n - 2);
+		}
+	}
+
+int t07_fib(){
+    	int n;
+    	cin>>n;
+    	cout<<fib(n);
 }

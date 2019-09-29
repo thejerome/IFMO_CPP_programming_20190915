@@ -17,12 +17,19 @@
 //
 //17
 
+#include "t06_sum.h"
 #include <iostream>
 #include <cmath>
 
 using namespace std;
 
 int t06_sum() {
-
-    return 0;
+    	int x,sum = 0;
+    	while(cin>>x){
+    		sum += x;
+    		if(!x){
+    			break;
+    		}
+    	}
+    	cout<<sum;
 }

@@ -22,14 +22,36 @@
 //
 //4
 
+#include "t05_power.h"
 #include <iostream>
 #include <cmath>
 
 using namespace std;
 
 //function power
+double power(double a,int n){
+	if(n == 0){
+		return 1.0;
+	}
+	if(n == 1){
+		return a;
+	} 
+	if(n & 1){
+		double exp = power(a,(n - 1) >> 1);
+		return a * exp * exp;
+	} else {
+		double exp = power(a,n >> 1);
+		return exp * exp;
+	}
+}
 
 int t05_power() {
-
-    return 0;
+    	double a;
+		int n;
+		cin>>a>>n;
+		if(n >= 0){
+			cout<<power(a,n);
+		} else {
+			cout<<1 / power(a,-n);
+		}
 }
