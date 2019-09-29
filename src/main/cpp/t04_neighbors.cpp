@@ -28,7 +28,6 @@ int t04_neighbors() {
     for (int i = 0; i < n; i++) cin >> a[i];
 
     bool flag = true;
-    int i = 0;
 
     for(int i = 0; i < n - 1; i++) {
         if (flag) {
