@@ -34,7 +34,7 @@ int t05_ave() {
     }
 
     if(cnt != 0)
-        cout << setprecision(11) << s / cnt;
+        cout << setprecision(12) << fixed << s / cnt;
     else
         cout << 0;
 };

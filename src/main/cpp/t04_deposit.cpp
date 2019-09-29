@@ -25,14 +25,14 @@ int t04_deposit() {
     int P, X, Y, K, cur = 0;
     cin >> P >> X >> Y >> K;
 
-    double k, tmx, tmy;
+    double k;
     k = 1 + (double) P / 100;
 
     while (cur++ < K) {
-        tmx = k * X;
-        tmy = k * Y;
-        X = tmx + (int)tmy / 100;
-        Y = (int)((tmx - (int)tmx) * 100) + (int)tmy % 100;
+        double tmx = k * X;
+        double tmy = k * Y;
+        X = tmx + round(tmy / 100);
+        Y = (int)((tmx - (int)tmx) * 100) + round(tmy) % 100;
         X += Y / 100;
         Y %= 100;
     }
