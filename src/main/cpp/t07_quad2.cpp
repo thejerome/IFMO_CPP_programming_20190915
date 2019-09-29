@@ -26,7 +26,7 @@ int t07_quad2() {
 
     if((int)a == 0 && (int)b == 0 && int(c) == 0)
         cout << 3;
-    else if ((int)a == 0) {
+    else if (a == 0) {
         (int)b != 0 ? cout << 1 << ' '<< -c / b : cout << 0;
     }
     else {
