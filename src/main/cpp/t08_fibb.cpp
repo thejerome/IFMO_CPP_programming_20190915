@@ -22,4 +22,15 @@ using namespace std;
 
 int t08_fibb() {
 
+int N;
+int a=0,b=1,i=0;
+
+cin >> N;
+while (i<N) {
+	i++;
+	b=a+b;
+	a=b-a;
+}
+cout << a;
+return 0;
 };

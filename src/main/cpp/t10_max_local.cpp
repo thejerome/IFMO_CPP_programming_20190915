@@ -25,4 +25,21 @@ using namespace std;
 
 int t10_max_local() {
 
+int a=1,last=0,next=0,check=0,count=0;
+while (true) {
+	cin >> a;
+	if (a==0) {break;}
+	if (check!=0) {
+		if (check>a) {count++;}
+		check=0;
+	}
+	if (last!=0) {
+		if (a>last) {
+			check=a;
+		}
+	} 
+	last=a;
+}
+cout << count;
+return 0;
 };
