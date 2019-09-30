@@ -22,6 +22,8 @@
 
 using namespace std;
 
+
+
 int t08_queen(){
 
     return 0;
