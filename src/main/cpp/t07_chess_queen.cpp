@@ -25,9 +25,23 @@
 
 #include "t07_chess_queen.h"
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int t07_chess_queen() {
+    int a = 0, b = 0, c = 0, d = 0, di1 = 0, di2 =0;
+    cin >> a >> b >> c >> d;
+    di1 = abs(a - c);
+    di2 = abs(b - d);
+    if (a == c || b == d || di1 == di2)
+    {
+        cout << "YES" << endl;
+    }
+    else
+    {
+        cout << "NO" << endl;
+    }
 
-};
+    return 0;
+}
