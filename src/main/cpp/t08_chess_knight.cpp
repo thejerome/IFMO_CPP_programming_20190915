@@ -30,4 +30,12 @@ using namespace std;
 
 int t08_chess_knight() {
 
+int x,y,a,b;
+cin >> x >> y >> a >> b;
+if ((x-a)*(x-a) + (y-b)*(y-b) == 5  ) {
+	cout << "YES";
+} else { cout << "NO"; }
+
+
+return 0;
 };

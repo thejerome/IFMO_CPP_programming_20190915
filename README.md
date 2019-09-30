@@ -79,6 +79,7 @@ PASSED: positive_numbers
 PASSED: negative_result
 
 Summary: SUCCESS
+...
 ```
 
 ## Script to run tests (in Git Bash on Windows)

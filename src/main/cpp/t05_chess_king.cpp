@@ -17,8 +17,16 @@
 #include "t05_chess_king.h"
 #include <iostream>
 
+
 using namespace std;
 
 int t05_chess_king() {
+int x,y,a,b;
+cin >> x >> y >> a >> b;
+if (abs(x-a)<=1 && abs(y-b)<=1) {
+	cout << "YES";
+} else { cout << "NO"; }
 
+
+return 0;
 };
