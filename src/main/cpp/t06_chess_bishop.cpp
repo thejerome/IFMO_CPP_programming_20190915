@@ -16,9 +16,22 @@
 
 #include "t06_chess_bishop.h"
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int t06_chess_bishop() {
-
-};
+    int a = 0, b = 0, c = 0, d = 0;
+    cin >> a >> b >> c >> d;
+    a = abs(a - c);
+    b = abs(b - d);
+    if (a == b)
+    {
+        cout << "YES" << endl;
+    }
+    else
+    {
+        cout << "NO" << endl;
+    }
+    return 0;
+}

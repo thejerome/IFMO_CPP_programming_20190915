@@ -29,5 +29,17 @@
 using namespace std;
 
 int t08_chess_knight() {
-
-};
+    int a = 0, b = 0, c = 0, d = 0, di1 = 0, di2 =0;
+    cin >> a >> b >> c >> d;
+    di1 = abs(a - c);
+    di2 = abs(b - d);
+    if ((di1 == 1 && di2 == 2) || (di1 == 2 && di2 == 1))
+    {
+        cout << "YES" << endl;
+    }
+    else
+    {
+        cout << "NO" << endl;
+    }
+    return 0;
+}

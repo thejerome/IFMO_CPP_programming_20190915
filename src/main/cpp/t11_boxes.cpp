@@ -37,5 +37,24 @@
 using namespace std;
 
 int t11_boxes() {
-
-};
+    int a = 0, b = 0, c = 0, a2 = 0, b2 = 0, c2 = 0;
+    cin >> a >> b >> c >> a2 >> b2 >> c2;
+    if ((a==a2 && b==b2 && c==c2)||(a==b2 && b==c2 && c==a2)||(a==c2 && b==a2 && c==b2)||(a==a2 && b==c2 && c==b2)||(a==b2 && b==a2 && c==c2)||(a==c2 && b==b2 && c==a2))
+    {
+        cout << "Boxes are equal" << endl;
+    }
+    else if ((a>=a2 && b>=b2 && c>=c2)||(a>=b2 && b>=c2 && c>=a2)||(a>=c2 && b>=a2 && c>=b2)||(a>=a2 && b>=c2 && c>=b2)||(a>=b2 && b>=a2 && c>=c2)||(a>=c2 && b>=b2 && c>=a2))
+    {
+        cout << "The first box is larger than the second one" << endl;
+    }
+    else if ((a<=a2 && b<=b2 && c<=c2)||(a<=b2 && b<=c2 && c<=a2)||(a<=c2 && b<=a2 && c<=b2)||(a<=a2 && b<=c2 && c<=b2)||(a<=b2 && b<=a2 && c<=c2)||(a<=c2 && b<=b2 && c<=a2))
+    {
+        cout << "The first box is smaller than the second one" << endl;
+    }
+    else
+    {
+        cout << "Boxes are incomparable" << endl;
+    }
+    
+    return 0;
+}
