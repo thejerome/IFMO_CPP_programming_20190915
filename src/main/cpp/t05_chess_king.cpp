@@ -16,9 +16,21 @@
 
 #include "t05_chess_king.h"
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int t05_chess_king() {
-
-};
+    int a = 0, b = 0, c = 0, d = 0;
+    cin >> a >> b >> c >> d;
+    if (abs(a - c) <= 1 && abs(b - d) <= 1)
+    {
+        cout << "YES" << endl;
+    }
+    else
+    {
+        cout << "NO" << endl;
+    }
+    
+    return 0;
+}
