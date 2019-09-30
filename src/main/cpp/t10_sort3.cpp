@@ -19,5 +19,22 @@
 using namespace std;
 
 int t10_sort3() {
+	
+int a,b,c, min,max,sum;
+cin >> a >> b >> c;
+sum = a+b+c;
+if (a<=b) {
+	min=a;
+	max=b;
+} else {
+	min=b;
+	max=a;
+}
+if (c<=min) { min = c;}
+if (c>=max) { max = c;}
+cout << min << " " << sum - min - max << " " << max;
+	
 
+
+return 0;
 };
