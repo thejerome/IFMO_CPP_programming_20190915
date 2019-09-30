@@ -37,9 +37,9 @@
 using namespace std;
 
 int t07_pies() {
-  int a=0;
-  int b=0;
-  int n=0;
+  int a;
+  int b;
+  int n;
   cin << a;
   cin << b;
   cin << n;
