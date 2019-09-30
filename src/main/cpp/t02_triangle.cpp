@@ -19,9 +19,21 @@
 using namespace std;
 
 int t02_triangle() {
-    int a = 0, b = 0, c = 0;
+    int a = 0, b = 0, c = 0, max = 0;
     cin >> a >> b >> c;
-    if((a+b)>c || (b+c)>a || (a+c)>b)
+    if(a>b)
+    {
+        max = a;
+    }
+    else
+    {
+        max = b;
+    }
+    if (c>max)
+    {
+        max = c;
+    }
+    if((max == a && c + b > a) || (max == b && a + c > b) || (max == c && a + b > c))
     {
         cout << "YES" << endl;
     }
