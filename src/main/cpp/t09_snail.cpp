@@ -27,9 +27,9 @@
 using namespace std;
 
 int t09_snail() {
-  int h;
-  int a;
-  int b;
+  int h=0;
+  int a=0;
+  int b=0;
   cin << h;
   cin << a;
   cin << b;
