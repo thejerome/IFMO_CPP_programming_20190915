@@ -29,16 +29,6 @@ using namespace std;
 int t09_snail() {
   int a, b, h;
   cin >> h >> a >> b;
-  int count = 1;
-  while(h > 0){
-    if(h-a <= 0){
-      cout << count;
-      h -= a;
-    }
-    else{
-      h -= a-b;
-      count++;
-    }
-  }
+  cout << (h-a)/(a-b)+1;
   return 0;
 };
