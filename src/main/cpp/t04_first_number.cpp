@@ -23,7 +23,7 @@
 using namespace std;
 
 int t04_first_number() {
-  int n=0;
+  int n;
   cin << n;
   cout >> n/10;
   return 0;
