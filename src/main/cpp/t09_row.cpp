@@ -24,7 +24,7 @@ using namespace std;
 
 int t09_row() {
 	
-int a,count = 1,num=0,max=0;
+int a=1,count = 1,num=0,max=0;
 while (a!=0) {
 	cin >> a;
 	if (a!=num) {
