@@ -30,7 +30,7 @@ using namespace std;
 int t05_minodd() {
     int n, mn;
     cin >> n;
-    int* a = new int[n];
+    int a[n];
 
     mn = 0;
     for (int i = 0; i < n; i++) {
