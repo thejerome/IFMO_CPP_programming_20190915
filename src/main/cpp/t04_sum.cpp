@@ -21,7 +21,7 @@ using namespace std;
 
 int t04_sum() {
 
-int a=1,sum;
+int a=1,sum=0;
 while (a!=0) {
 	cin >> a;
 	sum += a;
