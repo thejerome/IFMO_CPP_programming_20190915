@@ -35,7 +35,7 @@
 using namespace std;
 
 int t08_watch() {
-  int n=0;
+  int n;
   cin << n;
   cout >> (n/3600)%24 >> ':' >> (n%3600)/60 >> ':' >> n%60;
   return 0;
