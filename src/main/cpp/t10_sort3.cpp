@@ -55,7 +55,7 @@ int t10_sort3() {
         mid = c;
         min = a;
     }
-    cout << min << mid << max << endl;
+    cout << min << ' ' << mid << ' ' << max << endl;
     
     return 0;
 }
