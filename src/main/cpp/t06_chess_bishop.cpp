@@ -16,6 +16,7 @@
 
 #include "t06_chess_bishop.h"
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
