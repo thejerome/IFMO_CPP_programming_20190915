@@ -23,9 +23,25 @@
 
 #include "t03_both.h"
 #include <iostream>
+#include <map> 
 
 using namespace std;
 
 int t03_both() {
-
+        int n,m;
+        map <long long,bool> ma;
+        int ans = 0;
+        cin>>n;
+        for(int i = 1;i <= n;++i){
+            long long x;
+            cin>>x;
+            ma[x] = true;
+        }
+        cin>>m;
+        for(int i = 1;i <= m;++i){
+            long long x;
+            cin>>x;
+            ans += ma[x];
+        }
+        cout<<ans;
 }

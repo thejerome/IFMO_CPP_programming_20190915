@@ -25,10 +25,19 @@
 
 #include "t02_new.h"
 #include <iostream>
+#include <map> 
 
 
 using namespace std;
 
 int t02_new() {
-    
+        int n;
+        cin>>n;
+        map <long long,bool> ma;
+        for(int i = 1;i <= n;++i){
+            int x;
+            cin>>x;
+            cout<<(ma[x] ? "YES\n" : "NO\n");
+            ma[x] = true;
+        }
 }

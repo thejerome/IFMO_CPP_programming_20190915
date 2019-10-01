@@ -80,9 +80,58 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <map>
+#include <string>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
 int t06_homework() {
-
+        int n;
+        map < string,vector <int> > dic;
+        cin>>n;
+        for(int i = 1;i <= n;++i){
+            string s;
+            cin>>s;
+            int pos = -1;
+            for(int j = 0;j < s.size();++j){
+                if(isupper(s[j])){
+                    pos = j;
+                }
+            }
+            s[pos] = tolower(s[pos]);
+            dic[s].emplace_back(pos);
+        }
+        for(map <string,vector <int> > :: iterator it = dic.begin();it != dic.end();++it){
+            sort((it -> second).begin(),(it -> second).end());
+        }
+        int ans = 0;
+        for(string s;cin>>s;){
+            string lw_s = s;
+            int cnt_uppercase = 0;
+            int pos = -1;
+            for(int i = 0;i < s.size();++i){
+                if(isupper(s[i])){
+                    pos = i;
+                }
+                if(isupper(s[i])){
+                    ++cnt_uppercase;
+                }
+                lw_s[i] = tolower(s[i]);
+            }
+            if(dic[lw_s].empty()){
+                ans += cnt_uppercase != 1;
+            } else {
+                if(cnt_uppercase != 1){
+                    ++ans;
+                } else {
+                    vector <int> :: iterator f = lower_bound(dic[lw_s].begin(),dic[lw_s].end(),pos);
+                    if(f == dic[lw_s].end() or *f != pos){
+                        ++ans;
+                    }
+                }
+            }
+        }
+        cout<<ans;
 }

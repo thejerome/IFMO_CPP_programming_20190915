@@ -23,9 +23,34 @@
 
 #include "t04_both2.h"
 #include <iostream>
+#include <map>
+#include <vector> 
+#include <algorithm>
 
 using namespace std;
 
 int t04_both2() {
-
+        int n,m;
+        cin>>n;
+        map <long long,bool> ma;
+        for(int i = 1;i <= n;++i){
+            long long x;
+            cin>>x;
+            ma[x] = true;
+        }
+        cin>>m;
+        vector <long long> a;
+        for(int i = 1;i <= m;++i){
+            long long x;
+            cin>>x;
+            if(ma[x]){
+                a.emplace_back(x);
+            }
+        }
+        sort(a.begin(),a.end());
+        for(int i = 0;i < a.size();++i){
+            if(!i or a[i] != a[i - 1]){
+                cout<<a[i]<<' ';
+            }
+        }
 }
