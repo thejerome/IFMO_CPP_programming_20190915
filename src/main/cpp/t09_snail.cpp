@@ -30,9 +30,9 @@ int t09_snail() {
   int h;
   int a;
   int b;
-  cin << h;
-  cin << a;
-  cin << b;
-  cout >> ((h-a)/(a-b))+1
+  cin >> h;
+  cin >> a;
+  cin >> b;
+  cout << ((h-a)/(a-b))+1
   return 0;
 };
