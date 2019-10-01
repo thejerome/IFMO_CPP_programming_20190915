@@ -18,5 +18,7 @@
 using namespace std;
 
 int t02_frac_2() {
-
+    double x = 0;
+    cin >> x;
+    cout << floor((x - floor(x)) * 10);
 };
