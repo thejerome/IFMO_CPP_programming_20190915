@@ -24,5 +24,14 @@
 using namespace std;
 
 int t10_max_local() {
-
+    int n = 1, c = 0, pre = 0, prepre = 0;
+    cin >> prepre >> pre;
+    while (n) {
+        cin >> n;
+        if (pre > n && pre > prepre && n)
+            c++;
+        prepre = pre;
+        pre = n;
+    }
+    cout << c;
 };

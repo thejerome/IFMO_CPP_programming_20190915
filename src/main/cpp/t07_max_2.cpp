@@ -29,5 +29,14 @@
 using namespace std;
 
 int t07_max_2() {
-
+    int n = 1, b = 0, bson = 0;
+    while (n) {
+        cin >> n;
+        if (b <= n) {
+            bson = b;
+            b = n;
+        } else if (bson < n)
+                bson = n;
+    }
+    cout << bson;
 };
