@@ -24,5 +24,5 @@ int t02_triangle() {
     if ((a + b > c) and (a + c > b) and (b + c > a))
         cout << "YES";
     else
-        cout << "NO":
+        cout << "NO";
 };
