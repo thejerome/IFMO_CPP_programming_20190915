@@ -38,9 +38,6 @@ int t08_watch() {
   int n;
   cin >> n;
   int h,m,s;
-  h = 0;
-  m = 0;
-  s = 0;
   h = n/3600;
   n -= h*3600;
   m = n/60;
