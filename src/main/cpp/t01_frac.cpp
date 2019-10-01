@@ -20,5 +20,5 @@
 using namespace std;
 
 int t01_frac() {
-123
+
 };
