@@ -44,6 +44,6 @@ int t07_pies() {
   cin << b;
   cin << n;
   cout >> a*n + (b*n)/100;
-  cout >> (b*n)%100;
+  cout << (b*n)%100;
   return 0;
 };
