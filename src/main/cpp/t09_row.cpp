@@ -23,5 +23,16 @@
 using namespace std;
 
 int t09_row() {
-
-};
+int x,pre_x = -1,cnt = 0,t = 0;
+    	while(cin>>x){
+            if(!x)break;
+    		if(x == pre_x){
+    			++cnt;
+    			t = max(t,cnt);
+    		} else {
+    			cnt = 1;
+    			pre_x = x;
+    		}
+    	}
+    	cout<<max(t,cnt);
+}

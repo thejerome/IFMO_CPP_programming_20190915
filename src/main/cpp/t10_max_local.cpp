@@ -24,5 +24,14 @@
 using namespace std;
 
 int t10_max_local() {
-
-};
+    int pre = -1,x = -1,nxt,ans = 0;
+        while(cin>>nxt){
+            if(!nxt)break;
+            if(pre != -1){
+                ans += (x > pre and x > nxt);
+            }
+            pre = x;
+            x = nxt;
+        }
+        cout<<ans;
+}
