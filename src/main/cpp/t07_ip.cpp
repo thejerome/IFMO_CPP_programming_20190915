@@ -29,10 +29,49 @@
 
 #include "t07_ip.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t07_ip() {
+    string s;
+    getline(cin, s);
+    bool IP=true;
+    string number;
+    int count_number=0;
+
+    for(int i=0; i<s.length(); i++ ){
+
+        if(s[s.length()-1] =='.'){
+            IP=false;
+            break;
+        }
+        if( s[i]!='.' ){
+            number+= s[i];
+            if(i== s.length()-1){
+                if(number!="" && stoi(number)>=0 && stoi(number)<=255 ) {
+                    count_number++;
+                }
+                else{
+                    IP= false;
+                }
+            }
+        }
+        else{
+            if( number!="" && stoi(number)>=0 && stoi(number)<=255 ){
+                count_number++;
+                number= "";
+            }
+            else{
+                IP= false;
+                break;
+            }
+        }
+    }
+
+    if( count_number==4 && IP)
+        cout<<"YES";
+    else
+        cout<<"NO";
 
 }

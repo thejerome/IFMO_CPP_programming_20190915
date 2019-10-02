@@ -23,10 +23,24 @@
 
 #include "t04_count.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t04_count() {
+    int count=0;
+    string s;
+    getline(cin, s);
+
+    int pos=0;
+    while (s.find(" ", pos) != string::npos){
+        count++;
+        pos= s.find(" ", pos)+1;
+    }
+    count++;
+
+    cout<<count;
+
+
 
 }
