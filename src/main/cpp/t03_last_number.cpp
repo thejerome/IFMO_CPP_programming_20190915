@@ -23,5 +23,8 @@
 using namespace std;
 
 int t03_last_number() {
-
+  int N;
+  cout << "Enter the number : ";
+  cin>>N;
+  cout << "Answer : " << N%10;
 };
