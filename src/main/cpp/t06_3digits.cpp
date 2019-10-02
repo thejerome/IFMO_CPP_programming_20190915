@@ -23,5 +23,10 @@
 using namespace std;
 
 int t06_3digits() {
+int N,S = 0;
 
+cout << "Enter number : ";
+ cin >> N;
+ S = ((N/10) /10) + ((N / 10) % 10) + ((N %10)%10);
+ cout << "Answer : " << S;
 };
