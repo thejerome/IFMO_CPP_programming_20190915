@@ -23,7 +23,8 @@
 using namespace std;
 
 int t03_twos() {
-	int n,h=2;
+	
+	int n , h = 2;
 	cin >> n;
 	if (n == 1 || n==2)
 		cout << "YES";
