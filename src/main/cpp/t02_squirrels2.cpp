@@ -24,5 +24,8 @@
 using namespace std;
 
 int t02_squirrels2() {
-
+	int k,n;  //k = nuts and n = squirrels
+  cout<<"Enter number of nuts and number of squirrels : " << endl;
+	cin>>n>>k;
+	cout<<"Answer : " << k%n;
 };
