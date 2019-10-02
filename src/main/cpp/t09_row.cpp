@@ -23,5 +23,19 @@
 using namespace std;
 
 int t09_row() {
-
+  
+    int a, pr = -1, cnt = 1, cntM = 1;
+    cin >> a;
+    while (a != 0) {
+        if (pr == a)
+            cnt ++;
+        else { if (cnt > cntM)
+            cntM = cnt;
+            cnt = 1;
+        }
+        pr = a;
+        cin >> a;
+    }
+    cout << cntM;
+  
 };
