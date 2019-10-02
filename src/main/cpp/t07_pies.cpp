@@ -37,5 +37,11 @@
 using namespace std;
 
 int t07_pies() {
-
+ int a, b, n, c, a1, b1;
+    cin >> a >> b >> n;
+     c = n * (100 * a + b);
+    a1 = c / 100;
+    b1 = c - a1 * 100;
+    cout << a1 << ' ' << b1;
+  return 0;
 };
