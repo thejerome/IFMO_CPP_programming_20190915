@@ -22,5 +22,16 @@
 using namespace std;
 
 int t05_ave() {
-
+ double a = 0, sum = 0, count = 0;
+ int x = 1;
+   cin >> x;
+    while (x != 0) {
+     sum += x;
+     count++;
+     cin >> x;
+    }
+    a = sum / count;
+    cout << setprecision(11) << fixed;
+    cout << a;
+  return 0;
 };
