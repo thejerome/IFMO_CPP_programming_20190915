@@ -37,5 +37,13 @@
 using namespace std;
 
 int t07_pies() {
+int A,B,N;
+cout << "Enter Rubel , Kopek , pies : ";
+cin >> A >> B >> N;
+A *= N;
+B *= N;
+A += (B/100);
+B %=100;
 
+cout << "Price : " << A << " " << B;
 };
