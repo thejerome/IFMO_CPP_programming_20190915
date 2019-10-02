@@ -20,7 +20,6 @@
 using namespace std;
 
 int t05_chess_king() {
-int main() {
  int a1, b1, a2, b2;
     cin >> a1 >> b1 >> a2 >> b2;
     if ( (a1-a2 <2) && (a1-a2>-2) && (b1-b2 <2) && (b1-b2)>-2) {
