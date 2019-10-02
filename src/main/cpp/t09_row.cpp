@@ -36,6 +36,8 @@ int t09_row() {
         pr = a;
         cin >> a;
     }
+    if (cntM < cnt)
+        cntM = cnt;
     cout << cntM;
   
 };
