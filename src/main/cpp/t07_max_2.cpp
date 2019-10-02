@@ -29,5 +29,18 @@
 using namespace std;
 
 int t07_max_2() {
-
+ int x, premax = 0, max = 0;
+    cin >> x;
+    while ( x != 0) {
+     if ( x >= max ) {
+       premax = max;
+       max = x;
+         }
+       if ( x > premax && x < max) {
+        premax = x;   
+       }
+        cin >> x;
+    }
+    cout << premax;
+    return 0;
 };
