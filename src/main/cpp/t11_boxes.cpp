@@ -38,8 +38,8 @@ using namespace std;
 
 int t11_boxes() {
  int a1, b1, c1, a2, b2, c2, x1, y1, z1, x2, y2, z2;
-    cin >> a1 >> b1 >> c1 >> a2 >> b2 >> c2;  // x - min, y-mid, z- big
-    //--------------------------------
+    cin >> a1 >> b1 >> c1 >> a2 >> b2 >> c2; 
+
     if ( a1 <= b1 && a1 <= c1 ) {
      if ( b1 <= c1) {
          x1 = a1; y1 = b1; z1 = c1;  
@@ -67,7 +67,7 @@ int t11_boxes() {
             }
         }
        }
-    //--------------------------------------
+
     if ( a2 <= b2 && a2 <= c2 ) {
      if ( b2 <= c2) {
          x2 = a2; y2 = b2; z2 = c2;  
@@ -91,11 +91,11 @@ int t11_boxes() {
          x2 = c2; y2 = a2; z2 = b2;     
          }
             else {
-         x2 = c2; y2 = b2; z2 = a2;     // x-min, y-mid, z-max
+         x2 = c2; y2 = b2; z2 = a2;    
             }
         }
        }
-    //----------------------------------
+
     if (x1 == x2 && y1 == y2 && z1 == z2) {
      cout << "Boxes are equal";   
       }
