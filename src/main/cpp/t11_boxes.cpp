@@ -37,5 +37,46 @@
 using namespace std;
 
 int t11_boxes() {
+  
+    int x1, y1, z1, x2, y2, z2, sizeRatio = 0;
+    cin >> x1 >> y1 >> z1 >> x2 >> y2 >> z2;
 
+    if (x1 * y1 * z1 > x2 * y2 * z2)
+        sizeRatio = 1;
+    else if (x1 * y1 * z1 < x2 * y2 * z2)
+        sizeRatio = 2;
+
+    if (sizeRatio == 0)
+        if (((x1 == x2) and (y1 == y2) and (z1 == z2)) or
+            ((x1 == x2) and (z1 == y2) and (y1 == z2)) or
+            ((y1 == x2) and (x1 == y2) and (z1 == z2)) or
+            ((y1 == x2) and (z1 == y2) and (x1 == z2)) or
+            ((z1 == x2) and (x1 == y2) and (y1 == z2)) or
+            ((z1 == x2) and (y1 == y2) and (x1 == z2)))
+            cout << "Boxes are equal";
+        else
+            cout << "Boxes are incomparable";
+
+    if (sizeRatio == 1)
+        if (((x1 >= x2) and (y1 >= y2) and (z1 >= z2)) or
+            ((x1 >= x2) and (z1 >= y2) and (y1 >= z2)) or
+            ((y1 >= x2) and (x1 >= y2) and (z1 >= z2)) or
+            ((y1 >= x2) and (z1 >= y2) and (x1 >= z2)) or
+            ((z1 >= x2) and (x1 >= y2) and (y1 >= z2)) or
+            ((z1 >= x2) and (y1 >= y2) and (x1 >= z2)))
+            cout << "The first box is larger than the second one";
+        else
+            cout << "Boxes are incomparable";
+
+    if (sizeRatio == 2)
+        if (((x1 <= x2) and (y1 <= y2) and (z1 <= z2)) or
+            ((x1 <= x2) and (z1 <= y2) and (y1 <= z2)) or
+            ((y1 <= x2) and (x1 <= y2) and (z1 <= z2)) or
+            ((y1 <= x2) and (z1 <= y2) and (x1 <= z2)) or
+            ((z1 <= x2) and (x1 <= y2) and (y1 <= z2)) or
+            ((z1 <= x2) and (y1 <= y2) and (x1 <= z2)))
+            cout << "The first box is smaller than the second one";
+        else
+            cout << "Boxes are incomparable";
+      
 };
