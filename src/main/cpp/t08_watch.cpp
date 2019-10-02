@@ -35,5 +35,15 @@
 using namespace std;
 
 int t08_watch() {
-
+    int n, c, m, s, dm, em, ds, es;
+    cin >> n;
+    c = n / 3600;
+    m = n - c * 3600;
+    dm = m / 600;
+    em = m / 60 % 10;
+    s = m - (dm * 10 + em) * 60;
+    ds = s / 10;
+    es = s % 10;
+    cout << c % 24 << ":" << dm << em << ":" << ds << es << endl;
+    return 0;
 };
