@@ -17,9 +17,32 @@
 #include "t07_quad2.h"
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 
 using namespace std;
 
 int t07_quad2() {
+    double D,x1,x2,a,b,c;
+    cin >> a >> b >> c;
 
+    if (a==0) {
+        if (b==0 && c==0) cout << setprecision(6) << 3;
+        if (b==0 && c!=0) cout << 0;
+        if (b!=0) cout << "1 " << -c/b;
+    } else{
+        D=b*b-4*a*c;
+        if (D>0) {
+            x1=(-b+sqrt(D))/(2*a);
+            x2=(-b-sqrt(D))/(2*a);
+            if (x1>x2) {
+                cout << setprecision(6) << "2 " <<x2 << " " << x1;
+            } else cout << x1 << " " << x2;
+        } else {
+            if (D==0) {
+                cout << "1 "<<-b/2/a;
+            } else cout << 0;
+        }
+    }
+
+    return 0;
 };
