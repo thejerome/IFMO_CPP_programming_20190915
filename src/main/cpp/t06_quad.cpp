@@ -21,7 +21,9 @@
 using namespace std;
 
 int t06_quad() {
-	double a, b, c, D, x1, x2;
+	double a, b, c, D, x1=2, x2=2;
+	x1=0;
+	x2=0;
 	cin >> a >> b >> c;
 	D = sqrt(b * b - 4 * a * c);
 	if (D > 0)
