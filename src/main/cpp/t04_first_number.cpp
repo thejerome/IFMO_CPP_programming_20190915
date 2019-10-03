@@ -24,7 +24,6 @@ using namespace std;
 
 int t04_first_number() {
  int N;
-    cout << "Enter the number : ";
     cin>>N;
-    cout << "Answer : " << N/10;
+    cout<< N/10;
 };
