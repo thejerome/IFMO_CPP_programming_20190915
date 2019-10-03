@@ -24,13 +24,14 @@ using namespace std;
 
 int t03_twos() 
 {
-	int n , h;
+	int n , h=0;
+	h=1;
+	h++;
 	cin >> n;
 	if (n == 1 || n==2)
 		cout << "YES";
 	else
 	{
-		h=2;
 	while (h<=n)
 	{
 		h *= 2;
