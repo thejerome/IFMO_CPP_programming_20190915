@@ -24,8 +24,8 @@ using namespace std;
 
 int t05_tens_number() {
  int N;
-    cout << "Enter a number : ";
     cin >>  N;
      N /= 10;
-    cout<< "Answer : " << N%10;
+    cout<< N%10;
+ return 0;
 };
