@@ -37,32 +37,7 @@ using namespace std;
 
 int main() {
 	int N;
-	int h;
-	int m;
-	int s;
-	string ms = "";
-	string ss = "";
-
 	cin >> N;
-	h = N / 3600;
-	N = N - (h * 3600);
-	m = N / 60;
-	s = N % 60;
-	while (h > 24) {
-		h = h - 12;
-	};
-	if (m < 10) {
-		ms = "0" + m);
-	}
-	else {
-		ms = m;
-	};
-	if (s < 10) {
-		ss = "0" + s);
-	}
-	else {
-		ss = s;
-	};
-	cout << h << ":" << ss << ":" << ms << endl;
+	cout << (((N/3600)%60)%24) << ':' << ((N/60)%60)/10 << ((N/60)%60)%10 << ':' << (N%60)/10 << (N%60)%10 << endl;
 	return 0;
 };
