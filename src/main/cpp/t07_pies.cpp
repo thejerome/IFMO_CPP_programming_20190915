@@ -37,5 +37,11 @@
 using namespace std;
 
 int t07_pies() {
+    int A, B, N;
+    cin >> A;
+    cin >> B;
+    cin >> N;
+    cout << A*N+B*N/100 << " " << B*N%100;
 
+    return 0;
 };
