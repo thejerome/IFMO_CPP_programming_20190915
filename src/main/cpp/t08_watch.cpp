@@ -35,5 +35,12 @@
 using namespace std;
 
 int t08_watch() {
-
+   int N, h, m, s;
+    cin >> N;
+    h = N / 60 / 60 % 24;
+    m = N / 60 % 60;
+    s = N % 60;
+    printf("%d:%0.2d:%0.2d",h,m,s);
+return 0;
 };
+
