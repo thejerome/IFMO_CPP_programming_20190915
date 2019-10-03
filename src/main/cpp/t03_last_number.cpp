@@ -23,7 +23,8 @@
 using namespace std;
 
 int t03_last_number() {
-	int N;
-	cout <<N/10;
+	int n;
+	cin >>n;
+	cout <<(n/10);
 	return 0;
 };
