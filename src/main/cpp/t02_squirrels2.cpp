@@ -28,4 +28,5 @@ int t02_squirrels2() {
   cout<<"Enter number of nuts and number of squirrels : " << endl;
 	cin>>n>>k;
 	cout<<"Answer : " << k%n;
+	return 0;
 };
