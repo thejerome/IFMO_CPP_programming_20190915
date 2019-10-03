@@ -37,5 +37,13 @@
 using namespace std;
 
 int t07_pies() {
-
+	int a=0; int b=0; int n=0; int PrK=0; int PrR=0;
+	
+	cin>>a;
+	cin>>b;
+	cin>>n;
+	PrK= (b*n)%100;
+	PrR=a*n+(b*n)/100;
+	cout<<PrR<<" "<<PrK;
+	
 };
