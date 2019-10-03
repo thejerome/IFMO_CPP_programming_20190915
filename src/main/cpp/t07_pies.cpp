@@ -47,6 +47,6 @@ int t07_pies() {
 	B = B * N;
 	A = A + (B / 100);
 	B = (B % 100);
-	cout << A + " " +B << endl;
+	cout << A << " " << B << endl;
 	return (0);
 };
