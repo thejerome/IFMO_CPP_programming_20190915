@@ -27,4 +27,5 @@ int t03_last_number() {
   cout << "Enter the number : ";
   cin>>N;
   cout << "Answer : " << N%10;
+  return 0;
 };
