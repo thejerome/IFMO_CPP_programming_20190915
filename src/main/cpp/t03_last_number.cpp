@@ -22,6 +22,10 @@
 
 using namespace std;
 
-int t03_last_number() {
-
+int t03_last_number()
+{
+    int N;
+    cin >> N;
+    cout << (N - (N / 10) * 10);
+    return 0;
 };
