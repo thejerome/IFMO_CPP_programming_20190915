@@ -55,7 +55,7 @@ int t11_boxes() {
         c = b;
         b = s;
     }
-	if(x<y) {
+    if(x<y) {
         s = x;
         x = y;
         y = s;
@@ -70,12 +70,13 @@ int t11_boxes() {
         z = y;
         y = s;
     }
-	if(x==a&&y==b&&z==c)
-		cout<<"Boxes are equal";
-	else if (x<=a&&y<=b&&z<=c)
-		cout<<"The first box is larger than the second on";
-	else if(x=>a&&y=>b&&z=>c)
-		cout<<"The first box is smaller than the second one";
-	else
-		cout<<"Boxes are incomparable";
+    if(x==a&&y==b&&z==c)
+        cout<<"Boxes are equal";
+    else if (x<=a&&y<=b&&z<=c)
+        cout<<"The first box is larger than the second on";
+    else if(x>=a&&y>=b&&z>=c)
+        cout<<"The first box is smaller than the second one";
+    else
+        cout<<"Boxes are incomparable";
+	return 0;
 };
