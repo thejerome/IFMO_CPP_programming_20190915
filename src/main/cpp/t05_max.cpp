@@ -20,5 +20,13 @@
 using namespace std;
 
 int t05_max() {
-
+int m = 0, x;
+cin >> x;
+while(x != 0)
+{
+    if(x > m)m = x;
+    cin >> x;
+}
+cout << m;
+return 0;
 };
