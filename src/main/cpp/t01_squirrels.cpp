@@ -22,7 +22,7 @@
 
 using namespace std;
 
-int int() {
+int main() {
  int N, K, R;
     cin >> N;
     cin >> K;
