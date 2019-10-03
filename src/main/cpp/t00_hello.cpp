@@ -6,6 +6,7 @@
 //
 //Hello, World!
 
+#include "t00_hello.h"
 #include <iostream>
 
 using namespace std;
