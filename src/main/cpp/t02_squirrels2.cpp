@@ -24,5 +24,10 @@
 using namespace std;
 
 int t02_squirrels2() {
-
+    int N;
+    int K;
+    cin >> N;
+    cin >> K;
+    cout << (K - ((K / N) * N));
+    return 0;
 };
