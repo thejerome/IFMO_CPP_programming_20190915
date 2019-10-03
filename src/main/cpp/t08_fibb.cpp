@@ -21,5 +21,21 @@
 using namespace std;
 
 int t08_fibb() {
-
+	int n,i=0,last=1,prelast=1;
+	cin >> n;
+	if (n == 0)
+		cout << "0";
+	else if (n < 3)
+		cout << "1";
+	else
+	{
+		while (i < n-2)
+		{
+			int j = prelast;
+			prelast += last;
+			last = j;
+			i++;
+		}
+		cout << prelast;
+	}
 };
