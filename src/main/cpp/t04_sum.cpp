@@ -26,7 +26,6 @@ int t04_sum() {
     while (n != 0){
         cin >> n;
         s += n;
-        cout << s << ' ';
     }
     cout << s;
     return 0;
