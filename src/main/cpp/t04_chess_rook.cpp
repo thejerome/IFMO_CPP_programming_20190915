@@ -21,6 +21,6 @@ using namespace std;
 int t04_chess_rook() {
     int i,j,k,l;
     cin>>i>>j>>k>>l;
-    if((i+1==k && j==l) || (i-1==k && j==l) || (j-1==l && i==k) || (j+1==l && i==k) ) cout<<"YES";
+    if(i==k || j==l ) cout<<"YES";
     else cout<<"NO";
 };
