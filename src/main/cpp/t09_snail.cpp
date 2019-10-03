@@ -29,11 +29,8 @@ using namespace std;
 int t09_snail() {
 	int h,a,b;
 	cin>>h>>a>>b;
-	if(a >= h){
-		cout<<1;
-	} else {
-		int d = (h - b) / (a - b);
-		int u = (h - b) % (a - b);
-		cout<<(u > 0) + d;
-	}
+	int d = (h - b) / (a - b);
+	int u = (h - b) % (a - b);
+	u = min(u,1);
+	cout<<u + d;
 }
