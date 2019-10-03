@@ -29,6 +29,6 @@ using namespace std;
 int t09_snail() {
     int n,a,b;
     cin>>n>>a>>b;
-   cout<<(n-b)/(a-b)+(n-b)%(a-b);
+   cout<<(n-b)/(a-b)+bool((n-b)%(a-b));
 
 };
