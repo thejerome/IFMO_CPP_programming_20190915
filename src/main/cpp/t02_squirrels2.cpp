@@ -24,8 +24,8 @@
 using namespace std;
 
 int t02_squirrels2() {
-	int k,n;  //k = nuts and n = squirrels
-	cin>>n>>k;
-	cout<< k%n;
-	return 0;
+int k,n;  //k = nuts and n = squirrels
+cin>>n>>k;
+cout<< k%n;
+return 0;
 };
