@@ -32,6 +32,5 @@ int H,A,B,C ;
 cin >> H >> A >> B;
 C = (H-B) / (A-B) + (H-B) % (A-B);
 cout << C;
-
- return 0;
+return 0;
 };
