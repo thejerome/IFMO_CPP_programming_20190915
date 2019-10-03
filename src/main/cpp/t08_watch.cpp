@@ -37,12 +37,12 @@ using namespace std;
 int t08_watch() {
     int N;
     cin>>N;
-    cout<<N/3600%24;
+    cout<<N/3600%24;              //hours
     cout<<":";
-    cout<<(N%3600/60)/10;
+    cout<<(N%3600/60)/10;         //minutes
     cout<<(N%3600/60)%10;
     cout<<":";
-    cout<<(N%3600%60)/10;
+    cout<<(N%3600%60)/10;         //seconds
     cout<<(N%3600%60)%10<<endl;
     return 0;
 };
