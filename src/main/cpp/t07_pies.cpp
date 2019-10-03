@@ -18,6 +18,7 @@
 //
 //10
 //15
+
 //2
 //Sample Output 1:
 //
@@ -37,5 +38,8 @@
 using namespace std;
 
 int t07_pies() {
-
-};
+    int n,a,b;
+    cin>>a>>b>>n;
+    int sum=a*n*100+b*n;
+    cout<<sum/100<<" "<<sum%100<<endl;
+    };
