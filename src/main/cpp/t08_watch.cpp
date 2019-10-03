@@ -25,7 +25,7 @@
 //Sample Input 2:
 //
 //129700
-//Sample Output 2:
+//Sample Output 2
 //
 //12:01:40
 
@@ -35,5 +35,8 @@
 using namespace std;
 
 int t08_watch() {
-
+	int N;
+	cin >> N;
+	cout << N / 3600 << ":" << N % 3600 / 60 / 10 << N % 3600 / 60 % 10 << ":" << N % 60 / 10 << N % 60 % 10;
+	return 0;
 };
