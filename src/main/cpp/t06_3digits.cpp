@@ -23,10 +23,11 @@
 using namespace std;
 
 int t06_3digits() {
-int N,S = 0;
+
+int N,S ;
 
 cout << "Enter number : ";
  cin >> N;
- S = ((N/10) /10) + ((N / 10) % 10) + ((N %10)%10);
+ S = ((N/10) /10) + ((N / 10) % 10) + (N %10);
  cout << "Answer : " << S;
 };
