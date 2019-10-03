@@ -73,7 +73,7 @@ int t11_boxes() {
     if(x==a&&y==b&&z==c)
         cout<<"Boxes are equal";
     else if (x<=a&&y<=b&&z<=c)
-        cout<<"The first box is larger than the second on";
+        cout<<"The first box is larger than the second one";
     else if(x>=a&&y>=b&&z>=c)
         cout<<"The first box is smaller than the second one";
     else
