@@ -26,7 +26,7 @@ int main() {
  int N, K, R;
     cin >> N;
     cin >> K;
-    R = k / n;
+    R = K / N;
     cout << R << endl;
     return 0;
 };
