@@ -36,4 +36,11 @@ using namespace std;
 
 int t08_watch() {
 
+   int N,Hours,Mins,sec;
+    cin >> N;
+   Hours = (N%86400 / 3600);
+   Mins = (N%3600 / 60);
+   sec = (N%60);
+
+   cout << Hours << ":" << Mins /10 << Mins %10 << ":" << sec / 10 << sec%10;
 };
