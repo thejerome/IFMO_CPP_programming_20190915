@@ -39,11 +39,23 @@ int t08_watch() {
 	int h;
 	int m;
 	int s;
+	String ms = "";
+	String ss = "";
+
 	cin >> N;
 	h = N / 3600;
 	N = N - (h * 3600);
 	m = N / 60;
 	s = N % 60;
-	cout << h <<":" << ("%02d ", m) << ":" << ("%02d ", s ) << endl;
+	while (h > 24) {
+	h = h - 12;
+	}
+	if (m < 10) {
+		ms = "0" + m;
+	}
+	if (s < 10) {
+		ss = "0" + s;
+	}
+	cout << h <<":" << ss << ":" << ms << endl;
 	return 0;
 };
