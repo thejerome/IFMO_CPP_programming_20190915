@@ -28,19 +28,20 @@
 //Sample Output 2:
 //
 //12:01:40
-
+#include "string"
 #include "t08_watch.h"
 #include <iostream>
 
+
 using namespace std;
 
-int t08_watch() {
+int main() {
 	int N;
 	int h;
 	int m;
 	int s;
-	String ms = "";
-	String ss = "";
+	string ms = "";
+	string ss = "";
 
 	cin >> N;
 	h = N / 3600;
@@ -48,14 +49,20 @@ int t08_watch() {
 	m = N / 60;
 	s = N % 60;
 	while (h > 24) {
-	h = h - 12;
-	}
+		h = h - 12;
+	};
 	if (m < 10) {
-		ms = "0" + m;
+		ms = "0" + m);
 	}
+	else {
+		ms = m;
+	};
 	if (s < 10) {
-		ss = "0" + s;
+		ss = "0" + s);
 	}
-	cout << h <<":" << ss << ":" << ms << endl;
+	else {
+		ss = s;
+	};
+	cout << h << ":" << ss << ":" << ms << endl;
 	return 0;
 };
