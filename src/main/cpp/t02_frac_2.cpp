@@ -18,5 +18,8 @@
 using namespace std;
 
 int t02_frac_2() {
-
+	double d;
+	cin >> d;
+	cout << floor((d-trunc(d)) / 0.1);
+	
 };
