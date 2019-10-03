@@ -23,5 +23,8 @@
 using namespace std;
 
 int t06_3digits() {
-
+	int n;
+	cin >> n;
+	cout << ((n/10%10)+(n/100)+(n%10));
+	return 0;
 };
