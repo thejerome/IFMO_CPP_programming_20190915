@@ -27,4 +27,4 @@ int t04_first_number() {
     cin >> n;
     cout << n  / 10;
     return 0;
-};
+}

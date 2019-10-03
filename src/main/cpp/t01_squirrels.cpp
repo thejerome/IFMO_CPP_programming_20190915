@@ -28,4 +28,4 @@ int t01_squirrels() {
  cin >> N >> k ;
  cout << k / N ;
  return 0;
-};
+}

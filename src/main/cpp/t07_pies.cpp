@@ -43,4 +43,4 @@ int t07_pies() {
     A = N*A + N*B;
     cout << A/100 << " " << A%100;
     return 0;
-};
+}

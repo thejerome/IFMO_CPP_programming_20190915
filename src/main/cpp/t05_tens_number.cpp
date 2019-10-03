@@ -27,4 +27,4 @@ int t05_tens_number() {
     cin >> n;
     cout << n  / 10 % 10;
     return 0;
-};
+}

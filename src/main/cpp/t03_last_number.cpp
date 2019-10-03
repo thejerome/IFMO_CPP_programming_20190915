@@ -27,4 +27,4 @@ int n = 0;
 cin >> n;
 cout << n  % 10;
 return 0;
-};
+}

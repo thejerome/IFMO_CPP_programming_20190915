@@ -29,4 +29,4 @@ int t02_squirrels2() {
         cin >> N >> k ;
         cout << k % N ;
         return 0;
-};
+}
