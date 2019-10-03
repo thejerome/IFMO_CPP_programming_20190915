@@ -18,7 +18,7 @@
 //3
 //2
 //Sample Output:
-//
+////
 //8
 
 #include "t09_snail.h"

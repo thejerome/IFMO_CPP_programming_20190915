@@ -15,7 +15,7 @@
 //3
 //14
 //Sample Output:
-//
+////
 //4
 
 #include "t01_squirrels.h"

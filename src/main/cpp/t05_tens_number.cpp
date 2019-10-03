@@ -16,7 +16,7 @@
 //Sample Output:
 //
 //7
-
+//
 #include "t05_tens_number.h"
 #include <iostream>
 
