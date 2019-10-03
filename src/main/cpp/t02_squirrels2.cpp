@@ -24,5 +24,9 @@
 using namespace std;
 
 int t02_squirrels2() {
+    int value1(0), value2(0);
+    std::cin >> value1;
+    std::cin >> value2;
+    std::cout << (value2%value1) << std::endl;
 
-};
+}

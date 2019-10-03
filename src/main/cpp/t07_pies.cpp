@@ -37,5 +37,10 @@
 using namespace std;
 
 int t07_pies() {
+    int rub, cop, value, price_rub, price_cop;
+    std::cin >> rub >> cop >> value;
+    price_rub = rub*value + (cop*value)/100;
+    price_cop = (cop*value)%100;
+    std::cout << (price_rub) << ' ' << price_cop << std::endl;
 
-};
+}

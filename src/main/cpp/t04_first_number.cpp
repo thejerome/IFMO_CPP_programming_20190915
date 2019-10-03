@@ -23,5 +23,7 @@
 using namespace std;
 
 int t04_first_number() {
-
-};
+    int value;
+    std::cin >> value;
+    std::cout << value/10 << std::endl;
+}

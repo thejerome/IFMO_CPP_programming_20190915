@@ -23,5 +23,8 @@
 using namespace std;
 
 int t06_3digits() {
+    int value;
+    std::cin >> value;
+    std::cout << (value%10)+((value/10)%10)+(value/100) << std::endl;
 
-};
+}

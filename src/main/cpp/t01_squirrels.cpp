@@ -17,12 +17,15 @@
 //Sample Output:
 //
 //4
-
 #include "t01_squirrels.h"
 #include <iostream>
 
 using namespace std;
 
 int t01_squirrels() {
+    int value1(0), value2(0);
+    std::cin >> value1;
+    std::cin >> value2;
+    std::cout << (value2/value1) << std::endl;
 
-};
+}

@@ -35,5 +35,8 @@
 using namespace std;
 
 int t08_watch() {
+    int value;
+    std::cin >> value;
+    std::cout << (((value/3600)%60)%24) <<':'<< ((value/60)%60)/10<<((value/60)%60)%10 << ':' << (value%60)/10 <<  (value%60)%10 << std::endl;
 
-};
+}
