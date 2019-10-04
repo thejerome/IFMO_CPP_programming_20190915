@@ -83,7 +83,7 @@
 #include <map>
 #include <string>
 #include <vector>
-#include <algorithm>
+#include <set>
 
 using namespace std;
 
@@ -104,7 +104,14 @@ int t06_homework() {
             dic[s].emplace_back(pos);
         }
         for(map <string,vector <int> > :: iterator it = dic.begin();it != dic.end();++it){
-            sort((it -> second).begin(),(it -> second).end());
+            multiset <int> ms;
+            for(int i = 0;i < (it -> second).size();++i){
+                ms.insert((it -> second)[i]);
+            }
+            (it -> second).clear();
+            for(multiset <int> :: iterator ii = ms.begin();ii != ms.end();++ii){
+                (it -> second).emplace_back(*ii);
+            }
         }
         int ans = 0;
         for(string s;cin>>s;){
