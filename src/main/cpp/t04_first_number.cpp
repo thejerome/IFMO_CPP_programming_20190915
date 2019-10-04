@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int t_04firstnumber(){
+int t_04Firstnumber(){
     int d;
     cin >> d;
     d = d / 10;
