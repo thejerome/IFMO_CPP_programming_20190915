@@ -20,5 +20,11 @@
 using namespace std;
 
 int t05_chess_king() {
-
+    unsigned short a1=0, a2=0, b1=0, b2=0;
+    cin >> a1 >> a2 >> b1 >> b2;
+    if ((b1==a1 or b1==a1+1 or b1==a1-1) and (b2==a2 or b2==a2+1 or b2==a2-1))  {
+        cout << "YES";
+    } else {
+        cout << "NO";
+    }
 };

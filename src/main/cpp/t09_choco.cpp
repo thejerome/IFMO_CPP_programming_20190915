@@ -15,7 +15,7 @@
 //        Sample Input 2:
 //
 //2
-//10
+//10    
 //7
 //Sample Output 2:
 //
@@ -27,5 +27,11 @@
 using namespace std;
 
 int t09_choco() {
-
+    int n=0, m=0, k=0;
+    cin >> n >> m >> k;
+    if ((k%m==0 or k%n==0) and k<n*m) {
+        cout << "YES";
+    } else {
+        cout << "NO";
+    }
 };
