@@ -31,7 +31,9 @@ using namespace std;
 int t07_chess_queen() {
     int i,j,k,l;
     cin>>i>>j>>k>>l;
-    if((i==k || j==l) || (j+1==l && i+1==k) || (j-1==l && i-1==k) || (j-1==l && i+1==k) || (j+1==l && i-1==k) || (j+2==l && i-2==k)||(j+3==l && i-3==k)||(j-3==l && i-3==k)||(j-2==l && i-2==k)||(j-2==l && i+2==k)||(j+3==l && i-3==k)||(j+2==l && i+2==k)||(j+3==l && i+3==k) ) cout<<"YES";
+    if(i<k){swap=i;i=k;k=swap;}
+    if(j<l){swap=j;j=l;l=swap;}	 
+    if((i==k || j==l) || i-k==j-l) cout<<"YES";
     else cout<<"NO";
 
 };
