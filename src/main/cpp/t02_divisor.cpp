@@ -27,5 +27,6 @@ int n;
     			cout<<i;
                 break;
     		}
+            ++i;
     	}
 }
