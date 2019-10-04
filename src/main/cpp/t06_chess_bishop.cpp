@@ -23,6 +23,6 @@ int t06_chess_bishop() {
 
     int i,j,k,l;
     cin>>i>>j>>k>>l;
-    if((j+1==l && i+1==k) || (j-1==l && i-1==k) || (j-1==l && i+1==k) || (j+1==l && i-1==k) ) cout<<"YES";
+    if((j+1==l && i+1==k) || (j-1==l && i-1==k) || (j-1==l && i+1==k) || (j+1==l && i-1==k) || (j+2==l && i-2==k)||(j+3==l && i-3==k)||(j-3==l && i-3==k)||(j-2==l && i-2==k)||(j-2==l && i+2==k)||(j+3==l && i-3==k)||(j+2==l && i+2==k)||(j+3==l && i+3==k)) cout<<"YES";
     else cout<<"NO";
 };
