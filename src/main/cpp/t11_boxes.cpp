@@ -37,7 +37,7 @@
 using namespace std;
 
 int t11_boxes() {
-    int a,b,c,a1,b1,c1;
+    int a,b,c,a1,b1,c1,swap;
     cin>>a>>b>>c>>a1>>b1>>c1;
     if(a>b) {swap=b;b=a;a=swap;}
     if(b>c) {swap=c;c=b;b=swap;}
