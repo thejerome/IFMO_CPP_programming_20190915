@@ -37,7 +37,7 @@ using namespace std;
 int t08_watch() {
 	int n, m, h;
 	cin >> n;
-	n %= 24 * 60 * 60;
+	n %= 60 * 60 * 24;
 	h = n / 3600;
 	n %= 3600;
 	m = n / 60;
