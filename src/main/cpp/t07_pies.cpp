@@ -40,7 +40,6 @@ int t07_pies() {
 	int a, b, n;
 	cin >> a >> b >> n;
 	b += a * 100;
-	a = 0;
 	b *= n;
 	a = b / 100;
 	b %= 100;
