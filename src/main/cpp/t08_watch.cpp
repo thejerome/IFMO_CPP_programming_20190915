@@ -30,10 +30,17 @@
 //12:01:40
 
 #include "t08_watch.h"
-#include <iostream>
+#include <iostream> 
 
 using namespace std;
 
 int t08_watch() {
-
-};
+	int N,h,mm,ss;
+	cin>>N;
+	N %= 86400;
+	h=N/3600;
+	N %= 3600;
+	mm=N/60;
+	N %= 60;
+	cout<<h<<":"<<(mm / 10) % 10<<mm % 10<<":"<<(N / 10) % 10<<N % 10;
+}
