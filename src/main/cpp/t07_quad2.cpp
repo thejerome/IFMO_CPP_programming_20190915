@@ -21,24 +21,24 @@
 using namespace std;
 
 int t07_quad2() {
-    double a, b, c, d;
+    double a, b, c;
     cin >> a >> b >> c;
     if (a == 0 && b == 0 && c == 0)
         cout << 3;
     else {
-        d = pow(b, 2) - 4 * a * c;
-        if ((a == 0 && b == 0 && c != 0) || d < 0)
+
+        if ((a == 0 && b == 0 && c != 0) || pow(b, 2) - 4 * a * c < 0)
             cout << 0;
-        else if (d == 0 || a == 0) {
+        else if (pow(b, 2) - 4 * a * c == 0 || a == 0) {
             cout << 1 << ' ';
-            d == 0 ? cout << (-b) / 2 / a : cout << (-c) / b;
+            pow(b, 2) - 4 * a * c == 0 ? cout << (-b) / 2 / a : cout << (-c) / b;
         }
         else {
             cout << 2 << ' ';
-            if ((-b - sqrt(d))/2 / a < (-b + sqrt(d))/2 / a)
-                cout << (-b - sqrt(d))/2 / a << ' ' << (-b + sqrt(d))/2 / a;
+            if ((-b - sqrt(pow(b, 2) - 4 * a * c))/2 / a < (-b + sqrt(pow(b, 2) - 4 * a * c))/2 / a)
+                cout << (-b - sqrt(pow(b, 2) - 4 * a * c))/2 / a << ' ' << (-b + sqrt(pow(b, 2) - 4 * a * c))/2 / a;
             else
-                cout << (-b + sqrt(d))/2 / a << ' ' << (-b - sqrt(d))/2 / a;
+                cout << (-b + sqrt(pow(b, 2) - 4 * a * c))/2 / a << ' ' << (-b - sqrt(pow(b, 2) - 4 * a * c))/2 / a;
         }
     }
 };
