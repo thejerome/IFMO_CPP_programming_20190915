@@ -27,7 +27,7 @@ int t07_quad2() {
         y = b * b - 4 * a * c;
         if (y == 0) {
             x = -b / (2 * a);
-            cout << 1 << (x+0);
+            cout << 1 << " " << (x+0);
         }
         if (y < 0) {
             cout << 0;
