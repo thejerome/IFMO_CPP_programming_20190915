@@ -21,28 +21,9 @@
 using namespace std;
 
 int t07_quad2() {
-	double a, b, c, x, y;
+	double a, b, c, x;
     cin >> a >> b >> c;
-    if (a != 0) {
-        y = b * b - 4 * a * c;
-        if (y == 0) {
-            x = -b / (2 * a);
-            cout << 1 << " " << (x+0);
-        }
-        if (y < 0) {
-            cout << 0;
-        }
-        if (y > 0) {
-            x = (-b + sqrt(y)) / (2 * a);
-            y = (-b - sqrt(y)) / (2 * a);
-            if (x > y)
-                cout << 2 << " " << y << " " << x;
-            else
-                cout << 2 << " " << x << " " << y;
-        }
-        
-    }
-    else {
+    if (a == 0) {
         if (b != 0 && c != 0)
             cout << 1 << " " << -c / b;
         if (b == 0 && c != 0)
@@ -50,6 +31,24 @@ int t07_quad2() {
         if (c == 0 && b != 0)
             cout << 1 << " " << 0;
         if (c == 0 && b == 0)
-            cout << 3;
+            cout << 3;     
+    }
+    else {
+		c = b * b - 4 * a * c;
+        if (c == 0) {
+            x = -b / (2 * a);
+            cout << 1 << " " << (x+0);
+        }
+        if (c < 0) {
+            cout << 0;
+        }
+        if (c > 0) {
+            x = (-b + sqrt(c)) / (2 * a);
+            c = (-b - sqrt(c)) / (2 * a);
+            if (x > c)
+                cout << 2 << " " << c << " " << x;
+            else
+                cout << 2 << " " << x << " " << c;
+        }
     }
 };
