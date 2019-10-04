@@ -20,5 +20,11 @@
 using namespace std;
 
 int t06_chess_bishop() {
-
+    unsigned short x1=0, x2=0, y1=0, y2=0;
+    cin >> y1 >> x1 >> y2 >> x2;
+    if (abs(x1-x2) == abs(y1-y2)) {
+        cout << "YES";
+    } else {
+        cout << "NO";
+    }
 };
