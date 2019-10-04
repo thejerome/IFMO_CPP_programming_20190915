@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main(){
+int t_01squirell(){
     int k,n,m ;
     cin >> k;
     n = k / 2;
