@@ -25,7 +25,7 @@ int t01_quad() {
     	while(i <= n){
     		if(i * i <= n){
                         cout<<i * i<<' ';
-                else {
+                } else {
                         break;
                 }       
                 ++i;
