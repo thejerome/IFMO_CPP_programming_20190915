@@ -28,12 +28,7 @@ int t04_neighbors() {
     for ( i = 1; i < n; i++) {
         cin >> a[i];
       if ( a[i] >= 0 && a[i-1] >= 0 || a[i] < 0 && a[i-1] < 0) {
-          if ( a[i-1] < a[i]) {
        cout << a[i-1] << " " << a[i];
-          }
-          else {
-            cout << a[i] << " " << a[i-1];   
-          }
           break;
       }
     }
