@@ -18,27 +18,29 @@
 using namespace std;
 
 int t01_max3() {
-int A,B,C;
+ int A,B,C;
     cin>> A >> B >> C;
-
-    if (A > B && A > C)
+ if ((A == B) && (B == C) && (C == A))
     {
         cout << A;
+    }
+else
+{
+  if ((A>=C)&&(A>=B))
+    {
 
+        cout << A;
     }
 
-
-     if (B > A && B > C)
+    else if ((B >= A) && (B >= C))
     {
+
         cout << B;
-
     }
-
-
-     if (C > B && C > A)
+    else if ((C >= A)&&(C >=B))
     {
+
         cout << C;
-
-    }
-
+    }   
+}
 };
