@@ -21,8 +21,10 @@ using namespace std;
 
 int t06_chess_bishop() {
 
-    int i,j,k,l;
+    int i,j,k,l,swap;
     cin>>i>>j>>k>>l;
+    if(i<k){swap=i;i=k;k=swap;}
+    if(j<l){swap=j;j=l;l=swap;}
     if(i-k==j-l) cout<<"YES";
     else cout<<"NO";
 };
