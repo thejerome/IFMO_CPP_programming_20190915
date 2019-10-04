@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main(){
+int t_09snail(){
     int a,b,h,l;
    cin >> h >> a >> b;
    l = 0;
