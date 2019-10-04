@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main(){
+int t_02squirrels2(){
     int k,x ;
     cin >> k;
     x = k % 2;
