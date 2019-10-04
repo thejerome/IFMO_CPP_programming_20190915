@@ -33,6 +33,4 @@ int t09_snail() {
 	u=(H-b)%(a-b);
 	u=min(u,1);
 	cout<<((H-b)/(a-b))+u;
-	
-
-};
+}
