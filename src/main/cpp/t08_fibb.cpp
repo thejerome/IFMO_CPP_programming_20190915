@@ -32,6 +32,6 @@ int t08_fibb() {
             f2 += f1;
             f1 = f2 - f1;
         }
-        cout << f2;
+        cout << f1;
     }
 };
