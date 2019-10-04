@@ -29,8 +29,10 @@ int t07_quad2() {
         d = pow(b, 2) - 4 * a * c;
         if ((a == 0 && b == 0 && c != 0) || d < 0)
             cout << 0;
-        else if (d == 0)
-            cout << 1 << ' ' <<  (-b)/ 2 / a;
+        else if (d == 0 || a == 0) {
+            cout << 1 << ' ';
+            d == 0 ? cout << (-b) / 2 / a : cout << (-c) / b;
+        }
         else {
             cout << 2 << ' ';
             if ((-b - sqrt(d))/2 / a < (-b + sqrt(d))/2 / a)
