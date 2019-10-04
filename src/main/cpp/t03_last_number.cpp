@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main(){
+int t_03lastnumber(){
     int d;
     cin >> d;
     d = d % 10;
