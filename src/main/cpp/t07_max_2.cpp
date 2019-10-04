@@ -51,6 +51,6 @@ int t07_max_2() {
 		}
         cin>>i;
     }
-    cout<<m;
+    cout<<m1;
     return 0;
 };
