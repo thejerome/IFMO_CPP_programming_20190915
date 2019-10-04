@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main(){
+int t_08watch(){
     int a,b,c;
    cin >> c;
    b = (c / 60) % 60 ;
