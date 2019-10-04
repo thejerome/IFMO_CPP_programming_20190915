@@ -45,8 +45,10 @@ int t11_boxes() {
     if(a1>b1) {swap=b;b=a;a=swap;}
     if(b1>c1) {swap=c;c=b;b=swap;}
     if(a1>b1) {swap=b;b=a;a=swap;}
-    if(a>a1 && b>b1 && c>c1) cout<<"The first box is larger than the second one";
-    else if(a<a1 && b<b1 && c<c1) cout<<"The first box is smaller than the second one";
-    else if(a==a1 && b==b1 && c==c1) cout<<"Boxes are equal";
+   
+    if(a==a1 && b==b1 && c==c1) cout<<"Boxes are equal";
+    else if(a>=a1 && b>=b1 && c>=c1) cout<<"The first box is larger than the second one";
+    else if(a=<a1 && b=<b1 && c=<c1) cout<<"The first box is smaller than the second one";
+    
     else cout<<"Boxes are incomparable";
 };
