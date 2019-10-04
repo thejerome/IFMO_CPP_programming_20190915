@@ -21,5 +21,19 @@
 using namespace std;
 
 int t08_fibb() {
-
-};
+int n;
+    	cin>>n;
+    	if(!n){
+    		cout<<0;
+    	} else if(n == 1){
+    		cout<<1;
+    	} else {
+    		int a = 0,b = 1,fibb;
+    		for(int i = 2;i <= n;++i){
+    			fibb = a + b;
+    			a = b;
+    			b = fibb;
+    		}
+    		cout<<fibb;
+    	}
+}

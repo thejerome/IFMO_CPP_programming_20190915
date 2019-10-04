@@ -19,5 +19,15 @@
 using namespace std;
 
 int t01_quad() {
-
-};
+        int n;
+    	cin>>n;
+        int i = 1;
+    	while(i <= n){
+    		if(i * i <= n){
+                        cout<<i * i<<' ';
+                } else {
+                        break;
+                }       
+                ++i;
+    	}
+}
