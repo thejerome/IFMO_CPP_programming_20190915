@@ -27,5 +27,10 @@
 using namespace std;
 
 int t09_snail() {
-
+	int h;
+	int a;
+	int b;
+	cin >> h >> a >> b;
+	cout << (h - b) / (a - b) + ((h - b) % (a - b) + (a - b) - 1) / (a - b);
+	return 0;
 };
