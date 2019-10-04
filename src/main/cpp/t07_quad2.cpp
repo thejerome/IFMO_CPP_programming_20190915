@@ -25,6 +25,13 @@ int t07_quad2() {
     cin >> a >> b >> c;
     if (a != 0) {
         y = b * b - 4 * a * c;
+        if (y == 0) {
+            x = -b / (2 * a);
+            cout << 1 << (x+0);
+        }
+        if (y < 0) {
+            cout << 0;
+        }
         if (y > 0) {
             x = (-b + sqrt(y)) / (2 * a);
             y = (-b - sqrt(y)) / (2 * a);
@@ -33,13 +40,7 @@ int t07_quad2() {
             else
                 cout << 2 << " " << x << " " << y;
         }
-        if (y == 0) {
-            x = -b / (2 * a);
-            cout << 1 << x + 0;
-        }
-        if (y < 0) {
-            cout << 0;
-        }
+        
     }
     else {
         if (b != 0 && c != 0)
