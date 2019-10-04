@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main(){
+int t_063digits(){
     int d,x,z,c,s;
     cin >> d;
     c = d % 10;
