@@ -29,6 +29,7 @@ int t10_max_local() {
   while(i!=0)
   {
     cin>>i;
+    if(i==0)break;
     if(mid>i && before<mid)br++;
     before=mid;
     mid=i;
