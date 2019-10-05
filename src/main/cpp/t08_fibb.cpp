@@ -23,6 +23,10 @@ using namespace std;
 int t08_fibb() {
     int N=0, a=1, b=1, c = 2;
     cin >> N;
+    if (N == 0)
+    {
+        cout << 0;
+    }
     if (N == 1)
     {
         cout << a;
