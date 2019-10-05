@@ -30,13 +30,15 @@ using namespace std;
 
 int t07_max_2() {
 
-    int i,max,maxsecond=0;
+    int i,max,maxsecond=0,flag=false;
     cin>>i;
     max=i;
     while(i!=0){
+      if(max==i)flag=true;
       if(i<max && maxsecond<i){maxsecond=i;}
-      else if(max<i){maxsecond=max;max=i;}
+      else if(max<i){maxsecond=max;max=i;flag=false;}
       cin>>i;
     }
-    cout<<maxsecond;
+    if(flag)cout<<max;
+    else  cout<<maxsecond;
 };

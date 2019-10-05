@@ -24,7 +24,7 @@
 using namespace std;
 
 int t10_max_local() {
-  int i,before,mid,br=0;
+  int i=0,before,mid,br=0;
   cin>>before>>mid;
   while(i!=0)
   {
