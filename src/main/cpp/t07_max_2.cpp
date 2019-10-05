@@ -34,7 +34,7 @@ int t07_max_2() {
     while (N != 0)
     {
         cin >> N;
-        if (N <= a) && (N >= c)
+        if ((N <= a) && (N >= c))
         {
             c = N;
         }
