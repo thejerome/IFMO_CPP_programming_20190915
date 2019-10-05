@@ -37,6 +37,7 @@ int t06_max_count() {
   while(i!=0){
     if(i>max) {max=i;br=0;}
     if(i==max)br++;
+    cin>>i;
   }
   cout<<br;
 };
