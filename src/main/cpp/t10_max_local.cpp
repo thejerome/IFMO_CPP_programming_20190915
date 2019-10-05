@@ -30,7 +30,7 @@ int t10_max_local() {
     cin >> a;
     if ((b>a) && (b>c))
     {
-        d++
+        d++;
     }
     while (N != 0)
     {
