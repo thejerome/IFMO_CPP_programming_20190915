@@ -23,9 +23,10 @@ int t06_chess_bishop() {
  int X1,X2,Y1,Y2 = 0;
 cin >> X1 >> Y1 >> X2 >> Y2;
 
-bool k = (X2 == Y2);
+bool k = ((X1 - X2) == (Y1-Y2) | ((X1 - X2) == -(Y1-Y2)));
 if (k == true)
     cout << "YES";
 else
     cout << "NO";
+
 };
