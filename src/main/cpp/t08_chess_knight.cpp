@@ -29,5 +29,34 @@
 using namespace std;
 
 int t08_chess_knight() {
+        int x,y,u,v;
+        cin>>x>>y>>u>>v;
+        if(x - 2 == u){
+            if(v == y - 1 or v == y + 1){
+                cout<<"YES";
+            } else {
+                cout<<"NO";
+            }
+        } else if(x + 2 == u){
+            if(v == y - 1 or v == y + 1){
+                cout<<"YES";
+            } else {
+                cout<<"NO";
+            }
+        } else if(y - 2 == v){
+            if(x + 1 == u or x - 1 == u){
+                cout<<"YES";
+            } else {
+                cout<<"NO";
+            }
+        } else if(y + 2 == v){
+            if(x + 1 == u or x - 1 == u){
+                cout<<"YES";
+            } else {
+                cout<<"NO";
+            }
+        } else {
+            cout<<"NO";
+        }
+}
 
-};
