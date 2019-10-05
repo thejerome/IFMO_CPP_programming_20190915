@@ -25,6 +25,13 @@ using namespace std;
 
 int t10_max_local() {
     int N=1, a=0, b=0, c=0, d=0;
+    cin >> c;
+    cin >> b;
+    cin >> a;
+    if ((b>a) && (b>c))
+    {
+        d++
+    }
     while (N != 0)
     {
     cin >> N;
@@ -35,7 +42,7 @@ int t10_max_local() {
     {
         d++;
     }
-    if ((b>a) && (N==0))
+    if ((b>c) && (N==0))
     {
         d--;
     }
