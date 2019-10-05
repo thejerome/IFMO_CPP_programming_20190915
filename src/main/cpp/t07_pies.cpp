@@ -44,7 +44,7 @@ int t07_pies() {
 	a=n/100;
 	b=n%100;
 	cout<<a;
-	cout<<"";
+	cout<<(" ");
 	cout<<b;
 	return 0;
 };
