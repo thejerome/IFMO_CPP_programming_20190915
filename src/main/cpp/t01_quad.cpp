@@ -21,7 +21,7 @@ using namespace std;
 int t01_quad() {
     int N, a=1;
     cin >> N;
-    while (a*a < N)
+    while (a*a <= N)
     {
         cout << (a*a) << " ";
         a++;
