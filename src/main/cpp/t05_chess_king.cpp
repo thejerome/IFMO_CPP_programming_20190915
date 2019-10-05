@@ -20,5 +20,31 @@
 using namespace std;
 
 int t05_chess_king() {
-
-};
+        int x,y,u,v;
+        cin>>x>>y>>u>>v;
+        if(x == u){
+            if(y - 1 == v or y + 1 == v){
+                cout<<"YES";
+            } else {
+                cout<<"NO";
+            }
+        } else if(y == v){
+            if(x - 1 == u or x + 1 == u){
+                cout<<"YES";
+            } else {
+                cout<<"NO";
+            }
+        } else {
+            if(x - 1 == u and y - 1 == v){
+                cout<<"YES";
+            } else if(x - 1 == u and y + 1 == v){
+                cout<<"YES";
+            } else if(x + 1 == u and y - 1 == v){
+                cout<<"YES";
+            } else if(x + 1 == u and y + 1 == v){
+                cout<<"YES";
+            } else {
+                cout<<"NO";
+            }
+        }
+}
