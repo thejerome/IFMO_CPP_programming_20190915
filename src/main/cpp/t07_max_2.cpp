@@ -29,15 +29,14 @@
 using namespace std;
 
 int t07_max_2() {
-  int i,max,maxsecond=0;
-  cin>>i;
-  max=i;
-  while(i!=0){
-    if(i<max) {
-      if(maxsecond<i)maxsecond=i;
-    }
-    else {maxsecond=max;max=i;}
+
+    int i,max,maxsecond=0;
     cin>>i;
-  }
-  cout<<maxsecond;
+    max=i;
+    while(i!=0){
+      if(i<max && maxsecond<i){cout<<"tuk: "<<maxsecond<<endl;;maxsecond=i;}
+      else if(max<i){maxsecond=max;max=i;}
+      cin>>i;
+    }
+    cout<<maxsecond;
 };
