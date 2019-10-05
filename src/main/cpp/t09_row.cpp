@@ -28,7 +28,7 @@ int t09_row() {
     cin >> a;
     if (a==b)
     {
-        c++;
+        ++c;
     }
     while (N != 0)
     {
@@ -39,7 +39,7 @@ int t09_row() {
     {
         c++;
     }
-    else if (d < c)
+    else if (d <= c)
     {
         d = c;
         c = 1;
