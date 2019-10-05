@@ -28,5 +28,14 @@
 using namespace std;
 
 int t05_minodd() {
-
+int mo = 1e6, a[10], n;
+cin >> n;
+for(int i = 0; i < n; i++)
+{
+    cin >> a[i];
+    if((a[i] % 2 == 1 || a[i] % 2 == -1) && a[i] < mo)mo = a[i];
+}
+if(mo != 1e6)cout << mo;
+else cout << 0;
+return 0;
 }
