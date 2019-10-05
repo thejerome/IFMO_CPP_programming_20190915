@@ -34,13 +34,13 @@ int t07_max_2() {
     while (N != 0)
     {
         cin >> N;
-        if ((N <= a) && (N >= c))
-        {
-            c = N;
-        }
         if (N >= a)
         {
+            c = a;
             a = N;
+        } else if (N >=c)
+        {
+            c = N;
         }
     }
         cout << c;
