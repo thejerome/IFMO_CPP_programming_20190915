@@ -34,10 +34,11 @@ int t07_max_2() {
     cin>>i;
     max=i;
     while(i!=0){
-      if(max==i)flag=true;
+
       if(i<max && maxsecond<i){maxsecond=i;}
       else if(max<i){maxsecond=max;max=i;flag=false;}
       cin>>i;
+      if(max==i)flag=true;
     }
     if(flag)cout<<max;
     else  cout<<maxsecond;
