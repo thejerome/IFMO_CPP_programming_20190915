@@ -28,5 +28,4 @@ int t05_tens_number() {
 	N=N/10;
 	cout<<N%10;
 	return 0;
-
 };

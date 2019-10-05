@@ -47,5 +47,4 @@ int t07_pies() {
 	cout<<"";
 	cout<<b;
 	return 0;
-
 };
