@@ -30,13 +30,16 @@ using namespace std;
 
 int t07_max_2() {
     int N=1, a=0, c=0;
-    cin >> a;
+
     while (N != 0)
     {
         cin >> N;
+        if (N <= a) && (N >= c)
+        {
+            c = N;
+        }
         if (N >= a)
         {
-            c = a;
             a = N;
         }
     }
