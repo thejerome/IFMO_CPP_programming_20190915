@@ -34,7 +34,7 @@ int t07_max_2() {
     cin>>i;
     max=i;
     while(i!=0){
-      if(i<max && maxsecond<i){cout<<"tuk: "<<maxsecond<<endl;;maxsecond=i;}
+      if(i<max && maxsecond<i){maxsecond=i;}
       else if(max<i){maxsecond=max;max=i;}
       cin>>i;
     }
