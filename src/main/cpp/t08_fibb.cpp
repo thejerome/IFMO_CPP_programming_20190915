@@ -21,6 +21,7 @@
 using namespace std;
 
 int t08_fibb() {
+    
     int n=0, k=0, f1=1, f2=1, s=0;
     cin >> n;
     while (k<(n-2)) {
