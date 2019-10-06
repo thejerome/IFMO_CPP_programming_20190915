@@ -17,13 +17,9 @@
 //Sample Output:
 //
 //2
-
-#include "t02_squirrels2.h"
 #include <iostream>
-
 using namespace std;
-
-int t02_squirrels2() {
+int main() {
   int K, N;
 	cout << "Число Орешков:";
 	cin >> K;
@@ -31,4 +27,4 @@ int t02_squirrels2() {
 	cin >> N;
 	cout << "Сколько орешков останется:" << K % N;
 	return 0;
-};
+}

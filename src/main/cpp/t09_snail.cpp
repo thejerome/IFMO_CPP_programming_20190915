@@ -20,13 +20,13 @@
 //Sample Output:
 //
 //8
-
-#include "t09_snail.h"
 #include <iostream>
 using namespace std;
-int t09_snail() {
-	int H, A, B, N = (A - B);
-	cin >> H, A, B, N;
-	cout << H / N;
+int main() {
+	int H, A, B, N, P;
+	cin >> H >> A >> B;
+	P = H - A;
+	N = A - B;
+	cout << 1 + P / N + (P % N + N - 1) / N;
 	return 0;
-};
+}

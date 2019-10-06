@@ -17,13 +17,9 @@
 //Sample Output:
 //
 //4
-
-#include "t01_squirrels.h"
 #include <iostream>
-
 using namespace std;
-
-int t01_squirrels() 
+int main() 
 {
 	int K, N;
 	cout << "Число Орешков:";
@@ -32,4 +28,4 @@ int t01_squirrels()
 	cin >> N;
 	cout << "Сколько орешков достанется каждой белочке:" << K / N;
 	return 0;
-};
+}

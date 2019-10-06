@@ -16,15 +16,11 @@
 //Sample Output:
 //
 //17
-
-#include "t06_3digits.h"
 #include <iostream>
-
 using namespace std;
-
-int t06_3digits() {
+int main() {
 	int N = 941;
 	cin >> N;
 	cout << N % 10 + N / 10 % 10 + N / 100;
 	return 0;
-};
+}

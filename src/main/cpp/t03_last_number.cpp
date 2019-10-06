@@ -16,16 +16,12 @@
 //Sample Output:
 //
 //3
-
-#include "t03_last_number.h"
 #include <iostream>
-
 using namespace std;
-
-int t03_last_number() {
+int main() {
 	int N;
 	cin >> N;
 	cout << N % 10;
 	endl;
 	return 0;
-};
+}

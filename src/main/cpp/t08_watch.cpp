@@ -28,16 +28,11 @@
 //Sample Output 2:
 //
 //12:01:40
-
-#include "t08_watch.h"
 #include <iostream>
-
 using namespace std;
-
-int t08_watch() {
-	int N, H=N/3600, M=(N-H*3600)/60, S=N-H*3600-M*60;
+int main() {
+	int N, H = N / 3600, M = (N - H * 3600) / 60, S = N - H * 3600 - M * 60;
 	cin >> N, H, M, S;
 	cout << H << ':' << M << ':' << S;
 	return 0;
-
-};
+}
