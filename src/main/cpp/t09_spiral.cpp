@@ -22,6 +22,41 @@
 using namespace std;
 
 int t09_spiral() {
-    
-    return 0;
+    int a[100][100], n, m, s = 1, x;
+	cin >> n >> m;
+	if (n >= m)x = m;
+	else x = n;
+	for (int i = 0; i < (x % 2 ? x / 2 + 1: x / 2) ; i++)
+	{
+		for (int j = i; j < m - i; j++)
+		{
+			a[i][j] = s;
+			s++;
+		}
+		for (int j = i + 1; j < n - i; j++)
+		{
+			a[j][m - i - 1] = s;
+			s++;
+		}
+		for (int j = m - i - 2;  !((x % 2 == 1) && (i == x / 2)) && j > i; j--)
+		{
+			a[n - i - 1][j] = s;
+			s++;
+		}
+		for (int j = n - i - 1; !((x % 2 == 1) && (i == x / 2)) && j > i; j--)
+		{
+			a[j][i] = s;
+			s++;
+		}
+	}
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+			if (a[i][j] < 10)cout << "   " << a[i][j];
+			else if (a[i][j] < 100)cout << "  " << a[i][j];
+			else if (a[i][j] < 1000)cout << " " << a[i][j];
+			else cout << a[i][j];
+		cout << endl;
+	}
+	return 0;
 }
