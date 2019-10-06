@@ -22,13 +22,13 @@
 using namespace std;
 
 int t09_spiral() {
-    int a[100][100], n, m, s = 1, x;
+    int a[100][100], n, m, s = 1, x, y;
 	cin >> n >> m;
 	if (n >= m)x = m;
 	else x = n;
-	if(x % 2 == 1)x = x / 2 + 1;
-	else x /= 2;
-	for (int i = 0; i < x; i++)
+	if(x % 2 == 1)y = x / 2 + 1;
+	else y = x / 2;
+	for (int i = 0; i < y; i++)
 	{
 		for (int j = i; j < m - i; j++)
 		{
