@@ -25,7 +25,7 @@ int t04_deposit() {
   int p,x,y,k,sum=0;
   cin>>p>>x>>y>>k;
   y=y+x*100;
-  while()
+  while(1)
   {
 
     if(k==0)break;
