@@ -39,11 +39,11 @@ using namespace std;
 int t11_boxes() {
 
 
-  int A1, B1, C1, A2, B2, C2;
+    int A1, B1, C1, A2, B2, C2;
     cin >> A1 >> B1 >> C1 >> A2 >> B2 >> C2;
 
 
-    if ((A1 * B1 * C1 < A2 * B2 * C2))
+    if ((A1 * B1 * C1 < A2 * B2 * C2) | (A1 + B1 + C1 < A2+B2+C2))
     {
         cout << "The first box is smaller than the second one";
 
@@ -67,6 +67,7 @@ int t11_boxes() {
     {
         cout << "Boxes are incomparable";
     }
+
 
 
 
