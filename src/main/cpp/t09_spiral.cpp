@@ -26,7 +26,9 @@ int t09_spiral() {
 	cin >> n >> m;
 	if (n >= m)x = m;
 	else x = n;
-	for (int i = 0; i < (x % 2 ? x / 2 + 1: x / 2) ; i++)
+	if(x % 2 == 1)x = x / 2 + 1;
+	else x /= 2;
+	for (int i = 0; i < x; i++)
 	{
 		for (int j = i; j < m - i; j++)
 		{
