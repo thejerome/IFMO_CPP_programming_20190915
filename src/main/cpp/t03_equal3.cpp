@@ -19,7 +19,7 @@
 using namespace std;
 
 int t03_equal3() {
-      int a,b,c,br=0;
+      int a,b,c;
     cin>>a>>b>>c;
     if(a==b && c==b && a==c) cout<<"3";
     else if(a==b || c==b || a==c) cout<<"2";
