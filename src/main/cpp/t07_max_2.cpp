@@ -29,5 +29,17 @@
 using namespace std;
 
 int t07_max_2() {
-
+    unsigned int n=1, max=1, pmax=1;
+    while (n!=0) {
+        cin >> n;
+        if (n > max) {
+            pmax=max;
+            max=n;
+        } else {
+            if (n > pmax) {
+                pmax=n;
+            }
+        }
+    }
+    cout << pmax;
 };
