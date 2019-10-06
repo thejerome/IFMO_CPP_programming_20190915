@@ -29,7 +29,7 @@ int t05_ave() {
     sum=sum+a;
     br++;
   }
-  cout<< setprecision(12)<<fixed<<(double)sum/(br-1);
+  cout<< setprecision(11)<<fixed<<(double)sum/(br-1);
 
 
 };
