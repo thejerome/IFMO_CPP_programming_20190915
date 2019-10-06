@@ -18,6 +18,41 @@
 
 using namespace std;
 
-int t03_equal3() {
-
-};
+int t03_equal3()
+    {
+        int a, b, c;
+        cin >> a >> b >> c;
+        int b1, b2, b3;
+        if (a == b)
+        {
+            b1 = 1;
+        }
+        else
+        {
+            b1 = 0;
+        }
+        if (a == c)
+        {
+            b2 = 1;
+        }
+        else
+        {
+            b2 = 0;
+        }
+        if (c == b)
+        {
+            b3 = 1;
+        }
+        else
+        {
+            b3 = 0;
+        }
+        int sum;
+        sum = b1+b2+b3;
+        if (sum == 1)
+        {
+            sum++;
+        }
+        cout << sum;
+        return 0;
+    };

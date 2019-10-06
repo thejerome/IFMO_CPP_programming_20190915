@@ -18,6 +18,45 @@
 
 using namespace std;
 
-int t10_sort3() {
+int t10_sort3()
+{
+    //в условии не указано, целые ли числа, но в критериях выполнения заданий написано, что мы можем использовать только целые
+    int x1, x2, x3, max;
+    cin >> x1 >> x2 >> x3;
+    max = x1;
+    int b;
+    b = 1;
+    if (x2 > max)
+    {
+        max = x2;
+        b = 2;
+    }
+    if (x3 > max)
+    {
+        max = x3;
+        b = 3;
+    }
+    if (b==1)
+    {
+        if (x2 > x3)
+            cout << x3 << ' ' << x2 << ' ' << x1;
+        else
+            cout << x2 << ' ' << x3 << ' ' << x1;
+    }
+    if (b==2)
+    {
+        if (x1 > x3)
+            cout << x3 << ' ' << x1 << ' ' << x2;
+        else
+            cout << x1 << ' ' << x3 << ' ' << x2;
+    }
+    if (b==3)
+    {
+        if (x2 > x1)
+            cout << x1 << ' ' << x2 << ' ' << x3;
+        else
+            cout << x2 << ' ' << x1 << ' ' << x3;
+    }
+    return 0;
 
 };
