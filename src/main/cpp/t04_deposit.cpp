@@ -31,7 +31,6 @@ int t04_deposit() {
     if(k==0)break;
   k--;
     y=y+y*p/100;
-    sum=sum+y;
   }
-cout<<sum/100<<" "<<sum%100;
+cout<<y/100<<" "<<y%100;
 };
