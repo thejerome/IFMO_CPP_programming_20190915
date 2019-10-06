@@ -24,5 +24,11 @@
 using namespace std;
 
 int t02_squirrels2() {
-
+  int K, N;
+	cout << "Число Орешков:";
+	cin >> K;
+	cout << "Число Белок:";
+	cin >> N;
+	cout << "Сколько орешков останется:" << K % N;
+	return 0;
 };

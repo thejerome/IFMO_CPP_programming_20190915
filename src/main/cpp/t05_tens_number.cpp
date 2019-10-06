@@ -16,12 +16,14 @@
 //Sample Output:
 //
 //7
-
-#include "t05_tens_number.h"
+include "t05_tens_number.h"
 #include <iostream>
 
 using namespace std;
 
 int t05_tens_number() {
-
+	int N ;
+	cin >> N;
+	cout <<  N / 10 % 10;
+	return 0;
 };

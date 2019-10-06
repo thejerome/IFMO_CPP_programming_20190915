@@ -23,9 +23,10 @@
 
 #include "t09_snail.h"
 #include <iostream>
-
 using namespace std;
-
 int t09_snail() {
-
+	int H, A, B, N = (A - B);
+	cin >> H, A, B, N;
+	cout << H / N;
+	return 0;
 };

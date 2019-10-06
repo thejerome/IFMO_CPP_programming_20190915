@@ -23,6 +23,13 @@
 
 using namespace std;
 
-int t01_squirrels() {
-
+int t01_squirrels() 
+{
+	int K, N;
+	cout << "Число Орешков:";
+	cin >> K;
+	cout << "Число Белок:";
+	cin >> N;
+	cout << "Сколько орешков достанется каждой белочке:" << K / N;
+	return 0;
 };

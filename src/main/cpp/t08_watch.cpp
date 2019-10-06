@@ -35,5 +35,9 @@
 using namespace std;
 
 int t08_watch() {
+	int N, H=N/3600, M=(N-H*3600)/60, S=N-H*3600-M*60;
+	cin >> N, H, M, S;
+	cout << H << ':' << M << ':' << S;
+	return 0;
 
 };
