@@ -27,6 +27,7 @@
 #include <iostream>
 
 using namespace std;
+int t08_chess_knight() {
 int X1,X2,Y1,Y2 = 0;
 cin >> X1 >> Y1 >> X2 >> Y2;
 
@@ -35,4 +36,5 @@ if (k == true)
     cout << "YES";
 else
     cout << "NO";
+
 };
