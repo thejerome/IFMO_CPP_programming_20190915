@@ -30,4 +30,16 @@ using namespace std;
 
 int t07_max_2() {
 
+    int i,max,maxsecond=0,flag=false;
+    cin>>i;
+    max=i;
+    while(i!=0){
+
+      if(i<max && maxsecond<i){maxsecond=i;}
+      else if(max<i){maxsecond=max;max=i;flag=false;}
+      cin>>i;
+      if(max==i)flag=true;
+    }
+    if(flag)cout<<max;
+    else  cout<<maxsecond;
 };

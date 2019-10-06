@@ -22,4 +22,18 @@ using namespace std;
 
 int t08_fibb() {
 
+int n,sum,br=2,first=0,second=1;
+cin>>n;
+
+while(br<=n)
+{
+  sum=first+second;
+  first=second;
+  second=sum;
+
+  br++;
+}
+if(n==0)cout<<"0";
+else if(n==1)cout<<"1";
+else cout<<sum;
 };
