@@ -22,10 +22,10 @@ using namespace std;
 int main() 
 {
 	int K, N;
-	cout << "Число Орешков:";
+	cout << "number of nuts:";
 	cin >> K;
-	cout << "Число Белок:";
+	cout << "The number of squirrels:";
 	cin >> N;
-	cout << "Сколько орешков достанется каждой белочке:" << K / N;
+	cout << "How many nuts will each squirrel get:" << K / N;
 	return 0;
 }
