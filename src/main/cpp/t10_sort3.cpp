@@ -41,8 +41,8 @@ int t10_sort3() {
         n3 = N1;
         n1 = N3;
     }
-    int temp=0;
     if (n2 >= n3) {
+        int temp=0;
         temp = n2;
         n2 = n3;
         n3 = temp;
