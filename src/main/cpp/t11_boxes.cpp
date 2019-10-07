@@ -67,7 +67,7 @@ else if ((A1 <= C2) && (((B1 <= B2) && (C1 <= A2)) || ((B1 <= A2) && (C1 <= B2))
 cout << "The first box is smaller than the second one";
 }
 else {
-cout << "Boxes are incomporable";
+cout << "Boxes are incomparable";
 }
 return 0;
 
