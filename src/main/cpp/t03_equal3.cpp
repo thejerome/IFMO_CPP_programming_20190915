@@ -25,11 +25,11 @@ if ((A == B)&& (B == C) && (A == C))
 {
     cout << ("3");
 }
-else if  (((A != C)&&(A==B)) | ((B != A)&&(B==C)) | ((C != B)&&(A==C)) )
+else if  (((A != C)&&(A==B)) || ((B != A)&&(B==C)) || ((C != B)&&(A==C)) )
 {
     cout << ("2");
 }
-else if ( (A != B | C) && (B != A | C) && (C != A | B))
+else if ( (A != B || C) && (B != A || C) && (C != A || B))
 {
     cout << ("0");
 }
