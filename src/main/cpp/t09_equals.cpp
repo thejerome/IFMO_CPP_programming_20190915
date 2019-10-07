@@ -26,5 +26,37 @@
 using namespace std;
 
 int t09_equals() {
-
+            int n;
+            int maxx = 0;
+            cin>>n;
+            int a[n + 1];
+            for(int i = 0;i < n;++i){
+                cin>>a[i];
+                maxx = max(maxx,a[i]);
+                if(a[i] < 0){
+                    maxx = max(maxx,-a[i]);
+                }
+            }
+            int cnt_positive[maxx + 1];
+            int cnt_negative[maxx + 1];
+            for(int i = 0;i <= maxx;++i){
+                cnt_positive[i] =cnt_negative[i] = 0;
+            }
+            for(int i = 0;i < n;++i){
+                if(a[i] >= 0){
+                    ++cnt_positive[a[i]];
+                } else {
+                    ++cnt_negative[-a[i]];
+                }
+            }
+            long long ans = 0;
+            for(int i = 0;i <= maxx;++i){
+                if(cnt_positive[i] > 1){
+                    ans += cnt_positive[i] * (cnt_positive[i] - 1);
+                }
+                if(cnt_negative[i] > 1){
+                    ans += cnt_negative[i] * (cnt_negative[i] - 1);
+                }
+            }
+            cout<<ans / 2;
 }
