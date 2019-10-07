@@ -19,5 +19,21 @@
 using namespace std;
 
 int t03_equal3() {
-
+	int a = 0, b = 0, c = 0, N = 0;
+	cin >> a >> b >> c;
+	if (a == b) N++;
+	if (a == c) N++;
+	if (b == c) N++;
+	switch (N)
+	{
+		case 0:
+			cout << 0;
+			break;
+		case 1:
+			cout << 2;
+			break;
+		case 3:
+			cout << 3;
+			break;
+	}
 };
