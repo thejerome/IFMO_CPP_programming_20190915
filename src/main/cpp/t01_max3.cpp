@@ -28,7 +28,6 @@ int t01_max3() {
 
     if (first > second) max = first;
         else max = second;
-    if (max > third) max = max;
-    else max = third;
+    if (max < third) max = third;
     cout << max;
 };
