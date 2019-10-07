@@ -22,7 +22,7 @@ int t04_chess_rook() {
 int A,B,C,D = 0;
 cin >> A >> B >> C >> D;
 
-bool k = (A == C | B == D);
+bool k = (A == C || B == D);
 if (k == true)
     cout << "YES";
 else
