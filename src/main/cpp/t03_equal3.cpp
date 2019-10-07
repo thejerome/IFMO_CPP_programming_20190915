@@ -20,4 +20,19 @@ using namespace std;
 
 int t03_equal3() {
 
+    int first=0;
+    int second=0;
+    int third=0;
+    int answer=0;
+    cin >> first >> second >> third;
+
+    if (first == second) ++answer;
+
+    if (second == third) ++answer;
+
+    if (first == third) ++answer;
+
+    if (answer == 1) cout << ++answer;
+
+    else cout << answer;
 };

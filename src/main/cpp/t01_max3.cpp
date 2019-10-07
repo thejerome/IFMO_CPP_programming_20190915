@@ -19,4 +19,15 @@ using namespace std;
 
 int t01_max3() {
 
+    int first=0;
+    int second=0;
+    int third=0;
+    int max=0;
+
+    cin >> first >> second >> third;
+
+    if (first > second) max = first;
+        else max = second;
+    if (max < third) max = third;
+    cout << max;
 };

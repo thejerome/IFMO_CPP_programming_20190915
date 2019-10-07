@@ -20,4 +20,12 @@ using namespace std;
 
 int t02_triangle() {
 
+    int first=0;
+    int second=0;
+    int third=0;
+    cin >> first >> second >> third;
+
+    if ((first + second) > third && (first + third) > second && (second + third) > first)
+        cout << "YES";
+    else cout << "NO";
 };
