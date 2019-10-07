@@ -70,6 +70,5 @@ else {
 cout << "Boxes are incomporable";
 }
 return 0;
-}
 
 };
