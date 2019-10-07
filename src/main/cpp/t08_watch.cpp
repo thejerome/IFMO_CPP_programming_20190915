@@ -36,4 +36,14 @@ using namespace std;
 
 int t08_watch() {
 
-};
+long int N, A, B, C;
+
+ cin >> N;
+ A=N/3600;
+ B=(N%3600)/60;
+ C=(N%60)%60;
+
+ cout <<A%24<<":"<<B/10<<B%10<<":"<<C/10<<C%10<< endl;
+
+return 0;
+}
