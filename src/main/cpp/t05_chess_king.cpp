@@ -26,8 +26,7 @@ int t05_chess_king() {
     int y2=0;
     cin >> x1 >> y1 >> x2 >> y2;
 
-    if (x1 - x2 > 1 || x1 - x2 < -1 || y1 - y2 > 1 || y1 - y2 < -1) {
+    if (x1 - x2 > 1 || x1 - x2 < -1 || y1 - y2 > 1 || y1 - y2 < -1)
         cout << "NO";
-    }
     else cout << "YES";
 };

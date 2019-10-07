@@ -26,13 +26,9 @@ int t01_max3() {
 
     cin >> first >> second >> third;
 
-    if (first > second) {
-        max = first;
-    } else {
-        max = second;}
-    if (max > third) {
-      max = max;
-    } else { max = third;
-        }
+    if (first > second) max = first;
+        else max = second;
+    if (max > third) max = max;
+    else max = third;
     cout << max;
 };

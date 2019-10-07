@@ -25,8 +25,7 @@ int t02_triangle() {
     int third=0;
     cin >> first >> second >> third;
 
-    if ((first + second) > third && (first + third) > second && (second + third) > first) {
+    if ((first + second) > third && (first + third) > second && (second + third) > first)
         cout << "YES";
-    }
     else cout << "NO";
 };
