@@ -19,5 +19,12 @@
 using namespace std;
 
 int t03_equal3() {
-
+  int a, b, c, k = 0;
+  cin >> a >> b >> c;
+  k += bool(a==b);
+  k += bool(a==c);
+  k += bool(c==b);
+  if(k == 1)
+    k++;
+  cout << k;
 };
