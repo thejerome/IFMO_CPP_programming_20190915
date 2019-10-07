@@ -17,7 +17,7 @@
 //        Выведите ответ на задачу.
 //
 //Sample Input 1:
-//
+////
 //3602
 //Sample Output 1:
 //
@@ -28,12 +28,16 @@
 //Sample Output 2:
 //
 //12:01:40
-
+#include "string"
 #include "t08_watch.h"
 #include <iostream>
+
 
 using namespace std;
 
 int t08_watch() {
-
+	int N;
+	cin >> N;
+	cout << (((N/3600)%60)%24) << ':' << ((N/60)%60)/10 << ((N/60)%60)%10 << ':' << (N%60)/10 << (N%60)%10 << endl;
+	return 0;
 };

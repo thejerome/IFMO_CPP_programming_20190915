@@ -11,7 +11,7 @@
 //        Выведите одно целое число - ответ на задачу.
 //
 //Sample Input:
-//
+////
 //3
 //14
 //Sample Output:
@@ -24,5 +24,11 @@
 using namespace std;
 
 int t02_squirrels2() {
+	int N;
+	int K;
+	cin >> N;
+	cin >> K;
+	cout << (K % N) << endl;
+	return 0;
 
 };

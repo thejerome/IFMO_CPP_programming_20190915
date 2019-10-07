@@ -18,7 +18,7 @@
 //3
 //2
 //Sample Output:
-//
+////
 //8
 
 #include "t09_snail.h"
@@ -27,5 +27,15 @@
 using namespace std;
 
 int t09_snail() {
+	int H;
+	int A;
+	int B;
+	int C;
 
+	cin >> H;
+	cin >> A;
+	cin >> B;
+	
+	cout << (H/(A-B)-(A-(H%(A-B)))/(A - B)) + 1 << endl;
+	return 0;
 };

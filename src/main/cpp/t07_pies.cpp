@@ -23,7 +23,7 @@
 //
 //20 30
 //Sample Input 2:
-//
+////
 //2
 //50
 //4
@@ -36,6 +36,17 @@
 
 using namespace std;
 
-int t07_pies() {
-
+int t07_pies() {	
+	int A;
+	int B;
+	int N;
+	cin >> A;
+	cin >> B;
+	cin >> N;
+	A = A * N;
+	B = B * N;
+	A = A + (B / 100);
+	B = (B % 100);
+	cout << A << " " << B << endl;
+	return (0);
 };
