@@ -34,13 +34,13 @@ int t07_quad2() {
     }
     if (a!=0) {
         c=(pow(b,2)-4*a*c);
-        if (int(c) > 0) {
+        if (round(c) > 0) {
             cout << 2 << " " << ((-1*b-sqrt(c))/(2*a)) << " " << ((-1*b+sqrt(c))/(2*a));
         }
-        if (int(c) < 0) {
+        if (round(c) < 0) {
             cout << 0;
         }
-        if (int(c)==0) {
+        if (round(c)==0) {
             cout << 1 << " " << (-1*b)/(2*a);
         }
     }
