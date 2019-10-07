@@ -19,7 +19,7 @@
 
 #include "t08_chess.h"
 #include <iostream>
-
+#include <iomanip>
 
 using namespace std;
 
@@ -41,9 +41,7 @@ for(int i = 0; i < n; i++)
 for(int i = 0; i < n; i++)
 {
     for(int j = 0; j < m; j++)
-    if(a[i][j] < 10)cout << "   " << a[i][j];
-    else if(a[i][j] < 100)cout << "  " << a[i][j];
-    else cout << " " << a[i][j];
+        cout << setw(4) << a[i][j];
     cout << endl;
 }
     return 0;
