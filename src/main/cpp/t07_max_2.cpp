@@ -28,6 +28,19 @@
 
 using namespace std;
 
-int t07_max_2() {
+int t07_max_2() { 
+  int N,predexter = 0,dexter = 0;
+     cin >> N;
+    while (  N != 0 ) { 
+        if ( N >= dexter ) { 
+            predexter = dexter;
+            dexter = N;
+        }
+        if ( N  > predexter && N < dexter  ) {
+            predexter = N;
+        }
+        cin >> N;
+    }
+    cout << predexter;
 
 };
