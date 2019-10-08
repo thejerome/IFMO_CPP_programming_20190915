@@ -21,28 +21,34 @@ using namespace std;
 int t02_triangle() {
 int a,b,c = 0;
  cin >> a >> b >> c;
- if (a>c & a>b){
+ if (a>0 & b>0 & c>0 & a>c & a>b){
  	if (a < b+c){
- 		cout << "YES";    
+ 		cout << "YES"; 
+                return 0;   
   	}
  	else{
  		cout <<  "NO";
+                return 0;
   	}
  }
-if (b>c & b>a){
+if (a>0 & b>0 & c>0 & b>c & b>a){
 	if (b < a+c){
 	 	cout << "YES";
+                return 0;
 	  }
 	else{
 	 	cout <<  "NO";
+                return 0;
   	}
  }
-if (c>a & c>b){
+if ( c>0 & b>0 & a>0 & c>a & c>b){
 	if (c < c+b){
 	        cout << "YES";
+                return 0;
       }
         else{
 	        cout <<  "NO";
+                return 0;
       }
  }
 else {
