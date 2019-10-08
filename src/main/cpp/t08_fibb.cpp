@@ -21,7 +21,7 @@
 using namespace std;
 
 int t08_fibb() {
-int f1 = 0,f2 = 0, N , i = 0, fsum = 0;
+int f1 = 1,f2 = 1, N , i = 0, fsum = 0;
     cin >> N;
     while ( i < N -2 ) {
         fsum = f1 + f2;
