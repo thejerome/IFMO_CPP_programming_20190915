@@ -39,7 +39,10 @@ int t07_max_2() {
         if (n > m){
             m1 = m;
             m = n;
-        }
+        }else{
+            if (n > m1){
+                m1 = n;
+        }    
     }
     cout << m1;
     return 0;
