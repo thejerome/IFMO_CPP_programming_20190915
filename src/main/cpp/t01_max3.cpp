@@ -20,22 +20,19 @@ using namespace std;
 int t01_max3() {
 	int a,b,c = 0;
 	cin >> a >> b >> c;
-	 if (a>b){
-	     if (a>c){
-	 	cout << a;
-	 	}
-	     if (a<c){
-	     	cout << c;
-	     }
-	     else {
-	     	if (b>c){
-	     	    cout << b;
-	     	}
-	     	if (b<c){
-	     	    cout << c;
-	     	}
-	     }
-	 }
+	 if (a >= b & a >= c){
+             cout << a;
+             return 0;
+         }
+         if (b >= a & b >= c){
+             cout << b;
+             return 0;
+         }
+         else {
+             cout << c;
+             return 0;
+         }
+
 return 0;
    
 };
