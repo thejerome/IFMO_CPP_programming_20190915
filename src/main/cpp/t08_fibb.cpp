@@ -22,7 +22,7 @@ using namespace std;
 
 int t08_fibb() {
 int f1=0, f2=1, m=0, l=0;
-    cin >> n;
+    cin >> l;
     while (m<l) {
         m++;
         f2=f1+f2;
