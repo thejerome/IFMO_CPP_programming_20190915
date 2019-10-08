@@ -22,6 +22,24 @@
 
 using namespace std;
 
-int t09_row() {
+int t09_row() { 
+  int count = 1, N, X, countx = 1;
+    cin >> X >> N;
+      while ( N != 0 ) {
+     if ( N == X ) {
+         count++; 
+         if ( count > countx )
+         {
+         countx = count;   
+         }
+     }
+        else {
+            count = 1;
+        }
+       X = N;
+       cin >> N;
+    }
+    cout << countx;
+  return 0;
 
 };

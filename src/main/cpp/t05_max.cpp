@@ -19,6 +19,16 @@
 
 using namespace std;
 
-int t05_max() {
+int t05_max() { 
+  int  min = -1, N;
+    cin >> N;
+    while ( N != 0 ) {
+         if ( N > min ) {
+             min = N;
+         }
+        cin >> N;
+    }
+    cout << min;
+  return 0;
 
 };
