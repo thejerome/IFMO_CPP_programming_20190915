@@ -29,7 +29,7 @@ using namespace std;
 int t09_choco() {
 int a,b,c = 0;
 cin >> a >> b >> c;
-if(c%a == 0 || c%b == 0){
+if(c%a == 0 or c%b == 0){
 	cout << "YES";
 }
 else {
