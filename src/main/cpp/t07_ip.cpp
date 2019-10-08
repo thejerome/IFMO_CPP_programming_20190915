@@ -29,10 +29,34 @@
 
 #include "t07_ip.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t07_ip() {
 
+            string id;
+            cin>>id;
+            int l = -1;
+            id = id + ".";
+            int cnt = 0;
+            while(id.find(".",l + 1) != string::npos){
+                int r = id.find(".",l + 1);
+                if(r - l - 1 > 0){
+                    int val = 0;
+                    for(int j = l + 1;j < r;++j){
+                        val = val * 10 + (id[j] - '0');
+                    }
+                    if(!(0 <= val and val <= 255)){
+                        cout<<"NO";
+                        exit(0);
+                    }
+                } else {
+                    cout<<"NO";
+                    exit(0);
+                }
+                l = r;
+                ++cnt;
+            }
+            cout<<(cnt == 4 ? "YES" : "NO");
 }

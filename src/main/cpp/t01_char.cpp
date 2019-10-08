@@ -25,10 +25,13 @@
 
 #include "t01_char.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t01_char() {
 
+            char ch;
+            cin>>ch;
+            cout<<('0' <= ch and ch <= '9' ? "yes" : "no");
 }

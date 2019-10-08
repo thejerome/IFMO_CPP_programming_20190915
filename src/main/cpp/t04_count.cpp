@@ -23,10 +23,15 @@
 
 #include "t04_count.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t04_count() {
-
+            string s;
+            int cnt= 0;
+            while(cin>>s){
+                ++cnt;
+            }
+            cout<<cnt;
 }

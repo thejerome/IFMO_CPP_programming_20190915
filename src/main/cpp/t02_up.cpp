@@ -19,10 +19,19 @@
 
 #include "t02_up.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t02_up() {
-    
+            char ch;
+            cin>>ch;
+            if('A' <= ch and ch <= 'Z'){
+                cout<<ch;
+            } else if('a' <= ch and ch <= 'z'){
+                ch -= 32;
+                cout<<ch;
+            } else {
+                cout<<ch;
+            }
 }
