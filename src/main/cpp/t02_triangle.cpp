@@ -21,7 +21,7 @@ using namespace std;
 int t02_triangle() {
 int a,b,c = 0;
  cin >> a >> b >> c;
- if (a>0 & b>0 & c>0 & a>c & a>b){
+ if (a>0 and b>0 and c>0 and a>c and a>b){
  	if (a < b+c){
  		cout << "YES"; 
                 return 0;   
@@ -31,7 +31,7 @@ int a,b,c = 0;
                 return 0;
   	}
  }
-if (a>0 & b>0 & c>0 & b>c & b>a){
+if (a>0 and b>0 and c>0 and b>c and b>a){
 	if (b < a+c){
 	 	cout << "YES";
                 return 0;
@@ -41,7 +41,7 @@ if (a>0 & b>0 & c>0 & b>c & b>a){
                 return 0;
   	}
  }
-if ( c>0 & b>0 & a>0 & c>a & c>b){
+if ( c>0 and b>0 and a>0 and c>a and c>b){
 	if (c < a+b){
 	        cout << "YES";
                 return 0;
