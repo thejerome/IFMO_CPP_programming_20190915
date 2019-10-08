@@ -42,8 +42,8 @@ int t07_max_2() {
         }else{
             if (n > m1){
                 m1 = n;
-        }    
-    }
+        };    
+    };
     cout << m1;
     return 0;
 };
