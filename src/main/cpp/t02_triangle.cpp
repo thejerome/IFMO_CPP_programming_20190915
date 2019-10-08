@@ -42,7 +42,7 @@ if (a>0 & b>0 & c>0 & b>c & b>a){
   	}
  }
 if ( c>0 & b>0 & a>0 & c>a & c>b){
-	if (c < c+b){
+	if (c < a+b){
 	        cout << "YES";
                 return 0;
       }
