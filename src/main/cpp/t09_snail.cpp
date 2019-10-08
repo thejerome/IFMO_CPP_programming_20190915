@@ -33,5 +33,4 @@ int t09_snail() {
 	cin>>b;
 	h=h-a-1;
 	cout<<h/(a-b)+2;
-
 };
