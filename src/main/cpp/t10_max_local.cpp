@@ -23,6 +23,18 @@
 
 using namespace std;
 
-int t10_max_local() {
+int t10_max_local() { 
+   int x,Y,z,i = 0;
+     cin >> x >> Y >> z; 
+        while ( z != 0 ) {
+            if ( Y > x && Y > z ) { 
+                i++;
+            } 
+            x = Y;
+            Y = z;
+            cin >> z;
+        }
+    cout << i;  
+  return 0;
 
 };
