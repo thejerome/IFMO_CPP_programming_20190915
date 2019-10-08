@@ -29,5 +29,14 @@
 using namespace std;
 
 int t08_chess_knight() {
+int a,b,c,d = 0;
+cin >> a >> b >> c >> d;
+if (((a == c-2 or a == c+2) and (b == d-1 or b == d+1)) or ((b == d-2 or b == d+2) and (a == c+1 or a == c-1))){
+	cout << "YES";
+}
+else { 
+        cout <<  "NO";
+}
+return 0;
 
 };
