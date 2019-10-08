@@ -21,14 +21,12 @@
 using namespace std;
 
 int t08_fibb() {
-int f1 = 1,f2 = 1, N , i = 0, fsum = 0;
-    cin >> N;
-    while ( i < N -2 ) {
-        fsum = f1 + f2;
-        f1 = f2;
-        f2 = fsum;
-        i++;
+int f1=0, f2=1, m=0, l=0;
+    cin >> n;
+    while (m<l) {
+        m++;
+        f2=f1+f2;
+        f1=f2-f1;
     }
-    cout << f2;
-
+    cout << f1;
 };
