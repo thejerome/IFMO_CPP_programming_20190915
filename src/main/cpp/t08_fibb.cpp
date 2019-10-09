@@ -29,6 +29,7 @@ int t08_fibb() {
         fl = f;
         f = fl + fpl;
     }
-    cout << f;
+    if (n == 0) cout << 0;
+    else cout << f;
     return 0;
 };
