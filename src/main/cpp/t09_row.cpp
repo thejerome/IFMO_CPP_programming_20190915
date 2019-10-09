@@ -40,10 +40,9 @@ int t09_row() {
         n = n1;
         cin >> n1;
     }
-    if (m == 1){
-        cout << 0;
-    }else{
-        cout << m;
+    if (k > m){
+        m = k;
     }
+    cout << m;
     return 0;
 };
