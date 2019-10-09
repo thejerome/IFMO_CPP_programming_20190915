@@ -46,4 +46,4 @@ int t07_max_2() {
     };
     cout << m1;
     return 0;
-};
+}
