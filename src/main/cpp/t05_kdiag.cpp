@@ -44,10 +44,15 @@ int t05_kdiag() {
     for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
             cin>>a[i][j];
-            int t=i-j+1;
-            if(k==t)
-                cout<<a[i][j];
         }
     }
-    return 0;
+    int k;
+    cin>>k;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            int t=i-j;
+            if(k==t)
+                cout<<a[i][j]<<" ";
+        }
+    }
 }
