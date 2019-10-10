@@ -24,4 +24,21 @@ using namespace std;
 
 int t09_row() {
 
+    int N=1;
+    int preN=0;
+    int maxcount=1;
+    int count=1;
+
+    do {
+        cin >> N;
+        if (N == preN) count +=1;
+        else {
+            if (maxcount < count) maxcount = count;
+            count = 1;
+        }
+
+        preN = N;
+    } while (N != 0);
+
+    cout << maxcount;
 };

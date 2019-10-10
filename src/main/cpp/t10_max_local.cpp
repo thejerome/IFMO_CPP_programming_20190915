@@ -25,4 +25,18 @@ using namespace std;
 
 int t10_max_local() {
 
+    int N=2147483647;
+    int n2=2147483647;
+    int n3=2147483647;
+    int count=0;
+
+    while (N !=0) {
+        int n1;
+        n1 = n2;
+        n2 = n3;
+        n3 = N;
+        if (n2 > n1 && n2 > n3) ++count;
+        cin >> N;
+    }
+    cout << count;
 };

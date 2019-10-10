@@ -20,4 +20,13 @@ using namespace std;
 
 int t02_divisor() {
 
+    int N=0;
+    int devisor=2;
+    cin >> N;
+
+    while ((N % devisor) != 0) {
+        ++devisor;
+    }
+    cout << devisor;
+
 };

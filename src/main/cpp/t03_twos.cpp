@@ -24,4 +24,14 @@ using namespace std;
 
 int t03_twos() {
 
+    int N=0;
+    int twos=1;
+    cin >> N;
+
+    while (twos < N) {
+        twos *= 2;
+    }
+    if (twos == N) cout << "YES";
+    else cout << "NO";
+
 };
