@@ -30,4 +30,20 @@ using namespace std;
 
 int t07_max_2() {
 
+    int N=1;
+    int max=-2147483647;
+    int max2=-2147483646;
+    int reserve=0;
+
+    while (N != 0) {
+        cin >> N;
+        if (N >= max) {
+            reserve = max;
+            max = N;
+        }
+        if (N < max && N > max2) max2 = N;
+        if (N == max) if (reserve > max2) max2 = reserve;
+    }
+
+    cout << max2;
 };
