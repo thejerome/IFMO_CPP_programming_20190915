@@ -13,11 +13,11 @@
 //
 //Sample Input:
 //
-//3 4
-//0 1 0 1
-//1 0 0 1
-//1 1 1 1
-//2
+/*3 4
+0 1 0 1
+1 0 0 1
+1 1 1 1
+2*/
 //Sample Output:
 //
 //2
@@ -29,6 +29,37 @@
 using namespace std;
 
 int t06_cinema() {
-    
+    int n,m;
+    cin>>n>>m;
+    int a[n][m];
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            cin>>a[i][j];
+        }
+    }
+    int k;
+    cin>>k;
+    bool b=0;
+    for(int i=0;i<n;i++){
+        int t=0;
+        int max=0;
+        for(int j=0;j<m;j++){
+            if(a[i][j]==0)
+                t++;
+            else{
+                if(t>max)
+                    max=t;
+                t=0;
+            }
+        }
+        if(k<=max) {
+            b = 1;
+            cout<<(i+1);
+            break;
+        }
+    }
+    if(!b)
+        cout<<0;
+
     return 0;
 }
