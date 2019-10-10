@@ -22,5 +22,15 @@
 using namespace std;
 
 int t04_deposit() {
-
+    double P, X, Y, K, sum;
+    cin >> P >> X >> Y >> K;
+    sum = X+(Y/100);
+    while (K != 0)
+    {
+        sum = sum + (sum*(P/100));
+        sum = (trunc(sum*100)/100);
+        K = K-1;
+    }
+    cout << trunc(sum) << " " << ((sum - trunc(sum))*100);
+    return 0;
 };
