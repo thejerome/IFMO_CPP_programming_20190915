@@ -17,11 +17,49 @@
 
 #include "t09_spiral.h"
 #include <iostream>
+#include <iomanip>
 
 
 using namespace std;
 
 int t09_spiral() {
-    
+    int n, m, s = 1;
+    cin >> n >> m;
+    int a[n][m];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            a[i][j]=0;
+        }
+    }
+    int i=0,j=0;
+    while(s<m*n){
+        while(a[i][(j+1)%m]==0){
+            a[i][j]=s;
+            s++;
+            j++;
+        }
+        while(a[(i+1)%n][j]==0){
+            a[i][j]=s;
+            s++;
+            i++;
+        }
+        while(a[i][(j-1)%m]==0){
+            a[i][j]=s;
+            s++;
+            j--;
+        }
+        while(a[(i-1)%n][j]==0){
+            a[i][j]=s;
+            s++;
+            i--;
+        }
+    }
+    a[i][j]=m*n;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cout<<setw(4)<<a[i][j];
+        }
+        cout<<endl;
+    }
     return 0;
 }

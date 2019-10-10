@@ -10,23 +10,23 @@
 //Программа получает на вход число n, не превосходящие 10, затем массив размером n × n, затем число k.
 //Sample Input 1:
 //
-//4
-//1 2 3 4
-//5 6 7 8
-//0 1 2 3
-//4 5 6 7
-//1
+/*4
+1 2 3 4
+5 6 7 8
+0 1 2 3
+4 5 6 7
+1*/
 //Sample Output 1:
 //
 //5 1 6
 //Sample Input 2:
 //
-//4
-//1 2 3 4
-//5 6 7 8
-//0 1 2 3
-//4 5 6 7
-//-2
+/*4
+1 2 3 4
+5 6 7 8
+0 1 2 3
+4 5 6 7
+-2*/
 //Sample Output 2:
 //
 //3 8
@@ -38,6 +38,21 @@
 using namespace std;
 
 int t05_kdiag() {
-    
-    return 0;
+    int n;
+    cin>>n;
+    int a[n][n];
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            cin>>a[i][j];
+        }
+    }
+    int k;
+    cin>>k;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            int t=i-j;
+            if(k==t)
+                cout<<a[i][j]<<" ";
+        }
+    }
 }
