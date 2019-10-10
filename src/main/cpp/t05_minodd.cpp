@@ -35,7 +35,7 @@ int t05_minodd() {
     m=a[0];
     for(int i=1;i<n;i++){
         cin>>a[i];
-        if(a[i]<m&&a[i]%2!=0){
+        if((a[i]<m||m%2==0)&&a[i]%2!=0){
             m=a[i];
         }
     }
