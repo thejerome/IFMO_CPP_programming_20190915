@@ -33,7 +33,7 @@ int t02_star() {
                 a[i][j]='*';
             else
                 a[i][j]='.';
-            cout<<a[i][j];
+            cout<<a[i][j]<<" ";
         }
         cout<<endl;
     }

@@ -52,6 +52,8 @@ int t06_cinema() {
                 t=0;
             }
         }
+        if(t>max)
+            max=t;
         if(k<=max) {
             b = 1;
             cout<<(i+1);
