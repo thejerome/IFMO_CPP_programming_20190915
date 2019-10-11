@@ -51,10 +51,10 @@ int t07_ip() {
         num3=s.substr(dot2+1,dot3-dot2);
         num4=s.substr(dot3+1);
         int i1,i2,i3,i4;
-        i1=int(num1);
-        i2=int(num2);
-        i3=int(num3);
-        i4=int(num4);
+        i1=stoi(num1);
+        i2=stoi(num2);
+        i3=stoi(num3);
+        i4=stoi(num4);
         if(i1>255||i2>255||i3>255||i4>255)
             b=0;
     }
