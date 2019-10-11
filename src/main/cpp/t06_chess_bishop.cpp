@@ -25,4 +25,3 @@ int t06_chess_bishop() {
     if (a/c == b/d or a+b == c+d) {cout << "YES";}
     else {cout <<"NO";}
 }
-};
