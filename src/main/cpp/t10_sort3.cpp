@@ -19,5 +19,28 @@
 using namespace std;
 
 int t10_sort3() {
+    int a, b, c;
+    cin >> a >> b >> c;
+    int tmp = a;
+    if (a > b){
+        tmp = a;
+        a = b;
+        b = tmp;
+    }
+
+    if (b > c){
+        tmp = c;
+        c = b;
+        b = tmp;
+    }
+
+    if (a > b){
+        tmp = a;
+        a = b;
+        b = tmp;
+    }
+
+
+    cout << a << ' ' << b << ' '  << c;
 
 };

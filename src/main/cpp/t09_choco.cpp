@@ -27,5 +27,8 @@
 using namespace std;
 
 int t09_choco() {
+    int N, M, K;
+    cin >> N >> M >> K;
+    cout << (K % 2 ? "NO" : "YES");
 
 };
