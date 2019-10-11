@@ -24,5 +24,12 @@
 using namespace std;
 
 int t02_up() {
-    
+    char c;
+    cin>>c;
+    int i=c-'a';
+    if(i<26&&i>=0)
+        cout<<char('A'+i);
+    else
+        cout<<c;
+    return 0;
 }

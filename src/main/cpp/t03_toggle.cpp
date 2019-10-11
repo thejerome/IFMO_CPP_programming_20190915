@@ -24,5 +24,17 @@
 using namespace std;
 
 int t03_toggle() {
-
+    char c;
+    cin>>c;
+    int i=c-'a';
+    int I=c-'A';
+    if(i<26&&i>=0)
+        cout<<char('A'+i);
+    else {
+        if(I<26&&I>=0)
+            cout<<char('a'+I);
+        else
+            cout<<c;
+    }
+    return 0;
 }

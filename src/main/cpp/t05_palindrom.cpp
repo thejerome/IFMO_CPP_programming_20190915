@@ -23,5 +23,17 @@
 using namespace std;
 
 int t05_palindrom() {
-
+    string s;
+    cin>>s;
+    int n= s.size();
+    bool b=1;
+    for(int i=0;i<n;i++){
+        if(s.substr(i,1)!=s.substr(n-i-1,1))
+            b=0;
+    }
+    if(b)
+        cout<<"yes";
+    else
+        cout<<"no";
+    return 0;
 }
