@@ -24,8 +24,10 @@ using namespace std;
 int queen(int, int, int, int [11][11]);
 
 int queen(int c, int s, int n, int a[11][11]) {
-    //cout<<c<<endl;
-    // print(a);
+    /*   if(s==252) {
+           cout << c << endl;
+           print(a);
+       }*/
     if (c == -1) {
         return s;
     }
@@ -77,7 +79,7 @@ int queen(int c, int s, int n, int a[11][11]) {
     }
 }
 
-int main() {
+int t08_queen() {
     int c = 0;
     int s = 0;
     int n;
