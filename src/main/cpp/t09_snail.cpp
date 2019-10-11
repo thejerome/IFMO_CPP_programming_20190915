@@ -31,7 +31,7 @@ int t09_snail() {
     int A = 0;
     int B = 0;
     cin >> H >> A >> B;
-    cout << (H - B) / (A - B) + 1;
+    cout << (H - B) / (A - B) + ((H - B) % (A - B) + (A - B) - 1) / (A - B);
     return 0;
 
 };
