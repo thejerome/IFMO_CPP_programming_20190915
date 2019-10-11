@@ -29,5 +29,11 @@
 using namespace std;
 
 int t08_chess_knight() {
+    int x1,y1,x2,y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    int defX = (x1 > x2) ? (x1 - x2) : (x2 - x1);
+    int defY = (y1 > y2) ? (y1 - y2) : (y2 - y1);
+    int def = defX + defY;
+    cout << (def == 3 && defX != 3 && defY != 3 ? "YES" : "NO");
 
 };
