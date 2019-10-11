@@ -22,7 +22,7 @@ using namespace std;
 
 int t07_quad2() {
 
-    double a=0, b=0, c=0, D=0, x1=0, x2=0;
+    double a=0, b=0, c=0, D=0, x1=0;
     cin >> a >> b >> c;
 
     if (a != 0) {
@@ -30,7 +30,7 @@ int t07_quad2() {
 
         if (D > 0) {
             x1 = (-b + sqrt(D)) / 2 / a;
-            x2 = (-b - sqrt(D)) / 2 / a;
+            int x2 = (-b - sqrt(D)) / 2 / a;
             if (x1 <= x2) cout << '2' << ' ' << x1 << ' ' << x2;
             if (x2 < x1) cout << '2' << ' ' << x2 << ' ' << x1;
         }
