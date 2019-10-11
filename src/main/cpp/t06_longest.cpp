@@ -32,7 +32,7 @@ int t06_longest() {
     for(i=s.find(' ',i+1);i<n && i>=0;i=s.find(' ',i+1)){
         h=s.find(' ',i+1);
         if(h==-1)
-            h=n+1;
+            h=n;
         if(h-i>m) {
             m = h - i;
             ind =i;
