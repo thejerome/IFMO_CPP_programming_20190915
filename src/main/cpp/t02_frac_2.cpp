@@ -19,4 +19,11 @@ using namespace std;
 
 int t02_frac_2() {
 
+    double X=0;
+
+    cin >> X;
+    X -= trunc (X);
+    X *= 10;
+    X = trunc (X);
+    cout << X;
 };

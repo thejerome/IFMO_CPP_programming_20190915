@@ -21,4 +21,14 @@ using namespace std;
 
 int t03_triangle() {
 
+    double A=0;
+    double B=0;
+    double C=0;
+    double S=0;
+    double P=0;
+    cin >> A >> B >> C;
+
+    P = (A + B + C) / 2;
+    S = sqrt (P * (P - A) * (P - B) * (P - C));
+    cout << fixed << setprecision(4) << S;
 };
