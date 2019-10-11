@@ -27,9 +27,9 @@ int t07_quad2() {
         cout << 3;
     }else if ((b*b - 4*a*c < 0)||((a == 0)&&(b == 0)&&(c != 0))){
         cout << 0;
-    }else if (b*b - 4*a*c == 0){
+    }else if ((b*b - 4*a*c == 0)&&(a != 0)){
         cout << 1 << ' ' << (-b)/(2*a);
-    }else if (b*b - 4*a*c > 0){
+    }else if ((b*b - 4*a*c > 0)&&(a != 0)){
         cout << 2 << ' ' << (-b - sqrt(b*b - 4*a*c))/(2*a) << ' ' << (-b + sqrt(b*b - 4*a*c))/(2*a);
     }else if (a == 0){
         cout << 1 << ' ' << -c/b;
