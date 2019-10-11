@@ -30,7 +30,7 @@ int t07_quad2() {
 
         if (D > 0) {
             x1 = (-b + sqrt(D)) / 2 / a;
-            double x2 = (-b - sqrt(D)) / 2 / a;
+            int x2 = (-b - sqrt(D)) / 2 / a;
             if (x1 <= x2) cout << '2' << ' ' << x1 << ' ' << x2;
             if (x2 < x1) cout << '2' << ' ' << x2 << ' ' << x1;
         }
