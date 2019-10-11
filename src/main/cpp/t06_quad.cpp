@@ -26,7 +26,6 @@ int t06_quad() {
     if (b*b - 4*a*c == 0){
         cout << (-b)/(2*a);
     }else if (b*b - 4*a*c > 0){
-        cout << (-b - sqrt(b*b - 4*a*c))/(2*a);
-        cout << (-b + sqrt(b*b - 4*a*c))/(2*a);
+        cout << (-b - sqrt(b*b - 4*a*c))/(2*a) << (-b + sqrt(b*b - 4*a*c))/(2*a);
     }
 };
