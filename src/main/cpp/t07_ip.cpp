@@ -34,5 +34,33 @@
 using namespace std;
 
 int t07_ip() {
-
+    string s;
+    cin>>s;
+    bool b=1;
+    int dot1,dot2,dot3,dot4;
+    dot1=s.find('.');
+    dot2=s.find('.',dot1+1);
+    dot3=s.find('.',dot2+1);
+    dot4=s.find('.',dot3+1);
+    if(dot3==-1||dot4!=-1)
+        b=0;
+    else {
+        string num1, num2,num3,num4;
+        num1=s.substr(0,dot1);
+        num2=s.substr(dot1+1,dot2-dot1);
+        num3=s.substr(dot2+1,dot3-dot2);
+        num4=s.substr(dot3+1);
+        int i1,i2,i3,i4;
+        i1=int(num1);
+        i2=int(num2);
+        i3=int(num3);
+        i4=int(num4);
+        if(i1>255||i2>255||i3>255||i4>255)
+            b=0;
+    }
+    if(b)
+        cout<<"yes";
+    else
+        cout<<"no";
+    return 0;
 }

@@ -22,5 +22,22 @@
 using namespace std;
 
 int t06_longest() {
-
+    string s;
+    getline(cin,s);
+    int n=s.size();
+    int i=-1;
+    int h=s.find(' ',i+1);
+    int m=h-i;
+    int ind=i;
+    for(i=s.find(' ',i+1);i<n && i>=0;i=s.find(' ',i+1)){
+        h=s.find(' ',i+1);
+        if(h==-1)
+            h=n+1;
+        if(h-i>m) {
+            m = h - i;
+            ind =i;
+        }
+    }
+    cout<<s.substr(ind+1,s.find(' ',ind+1)-ind);
+    return 0;
 }
