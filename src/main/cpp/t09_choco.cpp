@@ -29,6 +29,6 @@ using namespace std;
 int t09_choco() {
     int N, M, K;
     cin >> N >> M >> K;
-    cout << (K % 2 ? "NO" : "YES");
+    cout << (K <= N * M && (K % M == 0 || K % N == 0) ? "YES" : "NO");
 
 };
