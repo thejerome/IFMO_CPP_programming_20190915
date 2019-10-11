@@ -28,7 +28,7 @@ int t06_quad() {
 
     if (D > 0) {
         x1 = (-b + sqrt(D)) / 2 / a;
-        int x2 = (-b - sqrt(D)) / 2 / a;
+        double x2 = (-b - sqrt(D)) / 2 / a;
         if (x1 <= x2) cout << x1 << ' ' << x2;
         if (x2 < x1) cout << x2 << ' ' << x1;
     }
