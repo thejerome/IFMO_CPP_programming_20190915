@@ -30,6 +30,6 @@ int t04_deposit() {
         x = double(int((x * (1 + (p/100)))*100))/100;
         n ++;
     }
-    cout << int(x) << ' ' << int(x * 100) % 100;
+    cout << int(x) << ' ' << (x - int(x))*100;
     return 0;
 };
