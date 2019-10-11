@@ -22,9 +22,8 @@ int t03_equal3() {
     int a, b, c;
     cin >> a >> b >> c;
     int ans = 0;
-    if (a == b) ans = 2;
-    if (b == c) ans = 2;
-    if (a == c) ans++;
+    if (a == b || b == c || a == c) ans = 2;
+    if (a == b && b == c && a == c) ans = 3;
     cout << ans;
 
 

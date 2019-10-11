@@ -31,6 +31,6 @@ using namespace std;
 int t07_chess_queen() {
     int x1,y1,x2,y2;
     cin >> x1 >> y1 >> x2 >> y2;
-    cout << ((x1 - y1 == x2 - y2) || (x1 - y1 == y2 - x2) || (x1 == x2) || (y1 == y2) ? "YES" : "NO");
+    cout << ((x1 - x2 == y1 - y2) || (x1 - x2 == y2 - y1) || (x1 == x2) || (y1 == y2) ? "YES" : "NO");
 
 };
