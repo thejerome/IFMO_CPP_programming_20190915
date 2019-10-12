@@ -19,6 +19,11 @@
 
 using namespace std;
 
-int t03_triangle() {
+int t03_triangle() { 
+  double z,y,x,p;
+    cin >> z >> y >> x >> p;
+    p = ( x + y + z ) / 2;
+        cout << sqrt ( p * ( p - x ) * ( p - y ) * ( p - z ) );    
+  return 0;
 
 };
