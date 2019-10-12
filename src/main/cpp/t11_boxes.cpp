@@ -59,20 +59,20 @@ int t11_boxes() {
     if (d <=e)
     {
         if (d<=f) {
-            if (f<=e) {a1 = d, b1 = f, c1 = e;}
-            else   {a1 = d, b1 = e, c1 = f;}
+            if (f<=e) {d1 = d, e1 = f, f1 = e;}
+            else   {d1 = d, e1 = e, f1 = f;}
         }
-        else {a1 = f, b1 = d, c1 = e;}
+        else {d1 = f, e1 = d, f1 = e;}
     }
     else {
         if (e<=f) {
-            if (f<=a) {a1 = e, b1 = f, c1 = d;}
-            else   {a1 = e, b1 = d, c1 = f;}
+            if (f<=a) {d1 = e, e1 = f, f1 = d;}
+            else   {d1 = e, e1 = d, f1 = f;}
         }
-        else {a1 = f, b1 = e, c1 = d;}
+        else {d1 = f, e1 = e, f1 = d;}
     }
 
-    if (a>=d and b>=e and c>=f) {if (a == d and b == e and c == f) {cout << "Boxes are equal";} else {cout << "The first box is larger than the second one";}}
-    else {if (a<=d and b<=e and c<=f) {cout << "The first box is smaller than the second one";} else {cout <<"Boxes are incomparable";}}  
+    if (a1>=d1 and b1>=e1 and c1>=f1) {if (a1 == d1 and b1 == e1 and c1 == f1) {cout << "Boxes are equal";} else {cout << "The first box is larger than the second one";}}
+    else {if (a1<=d1 and b1<=e1 and c1<=f1) {cout << "The first box is smaller than the second one";} else {cout <<"Boxes are incomparable";}}  
 
 };
