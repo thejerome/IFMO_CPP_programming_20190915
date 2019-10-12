@@ -34,6 +34,7 @@ int t07_quad2() {
 	
 	if(a == 0 && b == 0){
 		cout << 0 << endl;
+		return 0;
 	}
 
     if(a == 0){
