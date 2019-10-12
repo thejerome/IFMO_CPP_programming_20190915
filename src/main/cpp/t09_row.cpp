@@ -35,6 +35,7 @@ while(N!=0)
     }
         if(N=S){F++;}
     cin >> N;
-    cout << F << "\n";
+    
 }
+    cout << F << "\n";
 };
