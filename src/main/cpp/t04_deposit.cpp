@@ -22,5 +22,21 @@
 using namespace std;
 
 int t04_deposit() {
+	int p, x, y, k;
 
+    cin >> p >> x >> y >> k;
+
+    y += x * 100;
+
+    for(int i = 0; i < k; i++){
+        float delta = y / 100.0 * p;
+        y += (int)delta;
+    }
+
+    x = y / 100;
+    y %= 100;
+
+    cout << x << " " << y << endl;
+	
+	return 0;
 };
