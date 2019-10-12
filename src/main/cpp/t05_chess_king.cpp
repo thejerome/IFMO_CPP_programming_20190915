@@ -21,4 +21,13 @@ using namespace std;
 
 int t05_chess_king() {
 
+  int a, b, c, d, a1, a2, b1, b2;
+  cin >> a >> b >> c >> d;
+  a1 = a + 1;
+  a2 = a - 1;
+  b1 = b + 1;
+  b2 = b - 1;
+  
+  if ((a == c or c == a1 or c == a2) and (b == d or d == b1 or d == b2)) {cout << "YES";}
+  else {cout << "NO";}  
 };
