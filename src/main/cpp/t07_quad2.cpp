@@ -26,6 +26,15 @@ int t07_quad2() {
     cin >> a >> b >> c;
 
     int d = b * b - 4 * a * c;
+	
+	if(a == 0 && b == 0 && c == 0){
+		cout << 3 << endl;
+		return 0;
+	}
+	
+	if(a == 0 && b == 0){
+		cout << 0 << endl;
+	}
 
     if(a == 0){
         cout << 1 << " " << -1.0 * c / b << endl;
