@@ -30,5 +30,21 @@
 using namespace std;
 
 int t06_max_count() {
+	int mmax = 0, coumax = 0;
+    int t;
 
+    do{
+        cin >> t;
+        if(t == mmax)
+            coumax++;
+
+        if(t > mmax){
+            mmax = t;
+            coumax = 1;
+        }
+
+    }while(t != 0);
+
+    cout << coumax << endl;
+    return 0;
 };
