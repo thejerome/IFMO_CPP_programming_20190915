@@ -29,6 +29,6 @@ int t05_ave() {
         count++;
     }
     count--;
-    cout << setprecision(11) << (double)sum / count;
+    cout << setprecision(11) << fixed << (double)sum / count;
     return 0;
 };
