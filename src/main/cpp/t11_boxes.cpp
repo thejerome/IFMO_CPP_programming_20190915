@@ -73,6 +73,6 @@ int t11_boxes() {
     }
 
     if (a>=d and b>=e and c>=f) {if (a == d and b == e and c == f) {cout << "Boxes are equal";} else {cout << "The first box is larger than the second one";}}
-    else {if (a<=d and b<=e and c<=f) {cout << "The first box is smaller than the second one";} else (cout <<"Boxes are incomparable";)}  
+    else {if (a<=d and b<=e and c<=f) {cout << "The first box is smaller than the second one";} else {cout <<"Boxes are incomparable";}}  
 
 };
