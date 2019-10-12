@@ -19,5 +19,11 @@
 using namespace std;
 
 int t04_chess_rook() {
-
+	int start1, start2, fin1, fin2;
+	cin >> start1 >> start2 >> fin1 >> fin2;
+	if(start1 == fin1 || start2 == fin2)
+		cout << "YES" << endl;
+	else
+		cout << "NO" << endl;
+	return 0;
 };

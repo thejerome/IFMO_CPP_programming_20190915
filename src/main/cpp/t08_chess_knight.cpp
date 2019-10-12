@@ -29,5 +29,18 @@
 using namespace std;
 
 int t08_chess_knight() {
+	int start1, start2, fin1, fin2;
+	int r1, r2;
 
+	cin >> start1 >> start2 >> fin1 >> fin2;
+
+	r1 = fin1 - start1;
+	r2 = fin2 - start2;
+
+	if(r1 * r1 + r2 * r2 == 5)
+        cout << "YES" << endl;
+    else
+        cout << "NO" << endl;
+
+	return 0;
 };

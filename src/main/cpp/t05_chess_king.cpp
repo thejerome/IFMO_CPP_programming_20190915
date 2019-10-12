@@ -20,5 +20,23 @@
 using namespace std;
 
 int t05_chess_king() {
-
+	int start1, start2, fin1, fin2;
+	bool is;
+	
+	cin >> start1 >> start2 >> fin1 >> fin2;
+	
+	if(start1 == fin1 && (start2 - fin2) * (start2 - fin2) == 1)
+		is = 1;
+	
+	if(start2 == fin2 && (start1 - fin1) * (start1 - fin1) == 1)
+		is = 1;
+	
+	if((start1 - fin1) * (start1 - fin1) * (start2 - fin2) * (start2 - fin2) == 1)
+		is = 1;
+	
+	if(is)
+		cout << "YES" << endl;
+	else
+		cout << "NO" << endl;
+	return 0;
 };

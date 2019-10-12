@@ -37,5 +37,124 @@
 using namespace std;
 
 int t11_boxes() {
+	int a1, b1, c1, a2, b2, c2, a3, b3, c3;
 
+    cin >> a1 >> b1 >> c1 >> a2 >> b2 >> c2;
+
+    a3 = a2;
+    b3 = b2;
+    c3 = c2;
+
+    if(a3 == a1 && b3 == b1 && c3 == c1){
+        cout << "Boxes are equal" << endl;
+        return 0;
+    }
+
+    if(a1 >= a3 && b1 >= b3 && c1 >= c3){
+        cout << "The first box is larger than the second one" << endl;
+        return 0;
+    }
+
+    if(a3 >= a1 && b3 >= b1 && c3 >= c1){
+        cout << "The first box is smaller than the second one" << endl;
+        return 0;
+    }
+
+    a3 = a2;
+    b3 = c2;
+    c3 = b2;
+
+    if(a3 == a1 && b3 == b1 && c3 == c1){
+        cout << "Boxes are equal" << endl;
+        return 0;
+    }
+
+    if(a1 >= a3 && b1 >= b3 && c1 >= c3){
+        cout << "The first box is larger than the second one" << endl;
+        return 0;
+    }
+
+    if(a3 >= a1 && b3 >= b1 && c3 >= c1){
+        cout << "The first box is smaller than the second one" << endl;
+        return 0;
+    }
+
+    a3 = b2;
+    b3 = a2;
+    c3 = c2;
+
+    if(a3 == a1 && b3 == b1 && c3 == c1){
+        cout << "Boxes are equal" << endl;
+        return 0;
+    }
+
+    if(a1 >= a3 && b1 >= b3 && c1 >= c3){
+        cout << "The first box is larger than the second one" << endl;
+        return 0;
+    }
+
+    if(a3 >= a1 && b3 >= b1 && c3 >= c1){
+        cout << "The first box is smaller than the second one" << endl;
+        return 0;
+    }
+
+    a3 = b2;
+    b3 = c2;
+    c3 = a2;
+
+    if(a3 == a1 && b3 == b1 && c3 == c1){
+        cout << "Boxes are equal" << endl;
+        return 0;
+    }
+
+    if(a1 >= a3 && b1 >= b3 && c1 >= c3){
+        cout << "The first box is larger than the second one" << endl;
+        return 0;
+    }
+
+    if(a3 >= a1 && b3 >= b1 && c3 >= c1){
+        cout << "The first box is smaller than the second one" << endl;
+        return 0;
+    }
+
+    a3 = c2;
+    b3 = a2;
+    c3 = b2;
+
+    if(a3 == a1 && b3 == b1 && c3 == c1){
+        cout << "Boxes are equal" << endl;
+        return 0;
+    }
+
+    if(a1 >= a3 && b1 >= b3 && c1 >= c3){
+        cout << "The first box is larger than the second one" << endl;
+        return 0;
+    }
+
+    if(a3 >= a1 && b3 >= b1 && c3 >= c1){
+        cout << "The first box is smaller than the second one" << endl;
+        return 0;
+    }
+
+    a3 = c2;
+    b3 = b2;
+    c3 = a2;
+
+    if(a3 == a1 && b3 == b1 && c3 == c1){
+        cout << "Boxes are equal" << endl;
+        return 0;
+    }
+
+    if(a1 >= a3 && b1 >= b3 && c1 >= c3){
+        cout << "The first box is larger than the second one" << endl;
+        return 0;
+    }
+
+    if(a3 >= a1 && b3 >= b1 && c3 >= c1){
+        cout << "The first box is smaller than the second one" << endl;
+        return 0;
+    }
+
+    cout << "Boxes are incomparable" << endl;
+    return 0;
 };

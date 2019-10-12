@@ -19,5 +19,16 @@
 using namespace std;
 
 int t03_equal3() {
-
+	int m1, m2, m3;
+	cin >> m1 >> m2 >> m3;
+	bool t12 = (m1 == m2), 
+		 t23 = (m2 == m3), 
+		 t13 = (m1 == m3);
+	if(t12 + t23 + t13 == 0)
+		cout << 0 << endl;
+	else if(t12 + t13 + t23 == 3)
+		cout << 3 << endl;
+	else
+		cout << 2 << endl;
+	return 0;
 };
