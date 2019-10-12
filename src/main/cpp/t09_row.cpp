@@ -23,5 +23,24 @@
 using namespace std;
 
 int t09_row() {
+	int tLast, t, cou = 1, coumax = 1;
+	cin >> tLast;
 
+	do{
+        cin >> t;
+        if(t == tLast)
+            cou++;
+
+        else{
+            if(cou > coumax)
+                coumax = cou;
+
+            cou = 1;
+            tLast = t;
+        }
+
+	}while(t != 0);
+
+    cout << coumax << endl;
+    return 0;
 };

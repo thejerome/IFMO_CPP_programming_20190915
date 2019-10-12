@@ -21,5 +21,20 @@
 using namespace std;
 
 int t08_fibb() {
+	int n, fib1 = 0, fib2 = 1;
+    cin >> n;
+	
+	if(n == 0){
+		cout << 0;
+		return 0;
+	}
 
+    for(int i = 1; i < n; i++){
+        int temp = fib1 + fib2;
+        fib1 = fib2;
+        fib2 = temp;
+    }
+
+    cout << fib2 << endl;
+    return 0;
 };
