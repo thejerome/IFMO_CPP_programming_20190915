@@ -34,7 +34,7 @@ int t05_ave() {
         cou++;
     }
 
-    cout << (sum * 1.0 / cou) << endl;
-
+    cout << setprecision(11) << fixed << (sum * 1.0 / cou) << endl;
+	
     return 0;
 };
