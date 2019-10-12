@@ -20,5 +20,10 @@
 using namespace std;
 
 int t01_frac() {
-
+	double n;
+	
+    cin >> n;
+    cout << (n - trunc(n)) << endl;
+    
+    return 0;
 };

@@ -22,5 +22,19 @@
 using namespace std;
 
 int t05_ave() {
+	int sum = 0, cou = 0, t;
 
+    while(true){
+        cin >> t;
+
+        if(t == 0)
+            break;
+
+        sum += t;
+        cou++;
+    }
+
+    cout << setprecision(11) << fixed << (sum * 1.0 / cou) << endl;
+	
+    return 0;
 };
