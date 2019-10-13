@@ -24,7 +24,7 @@ int t07_quad2() {
  double a, b, c, d, x1, x2;
     cin >> a >> b >> c;
     if ( a != 0 ) {
-        D = pow(b,2) - 4 * a * c;
+        d = pow(b,2) - 4 * a * c;
         if ( d > 0 ) {
             x1 = ( b * (-1) - sqrt(d) ) / ( 2 * a );
             x2 = ( b * (-1) + sqrt(d) ) / ( 2 * a );
@@ -37,6 +37,6 @@ int t07_quad2() {
     else if ( a ==0 and b!= 0 ) cout << 1 << " " << c * (-1) / b;
     else if ( a == 0 and c == 0 and b != 0 ) cout << 1 << " " << 0;
     else if ( a == 0 and b == 0 and c != 0 ) cout << 0; 
-    else if (a == 0 and b == 0 and c == 0) cout << 3
+    else if (a == 0 and b == 0 and c == 0) cout << 3;
     return 0;
 };
