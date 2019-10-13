@@ -33,7 +33,9 @@ int t03_equal3() {
     }
     else {
         if (b!=c) {
-        cout<<0;
+            if (a!=c){
+               cout<<0;
+            }
     }
     }
     
