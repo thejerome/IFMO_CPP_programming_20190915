@@ -48,7 +48,8 @@ int t06_cinema() {
         if (cmb >= pl) {
             cout << i + 1;
             f = false;
-            break;
+            i = n;
+            j = m;
         }
     }
     if (f)
