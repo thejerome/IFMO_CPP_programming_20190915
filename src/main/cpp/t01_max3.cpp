@@ -18,31 +18,19 @@
 using namespace std;
 
 int t01_max3() {
-    int a,b,c;
+int a,b,c;
     cin>>a;
     cin>>b;
     cin>>c;
-    if (a>=b) {
-        if (a>=c) {
-            cout<<a<<endl;
-        }
-        if (a==b){
-            cout<<b<<endl;
-        }
-        if (a<=c){
-            cout<<c<<endl;
-        }
-        
+    if (a>=b && a>=c) {
+        cout<<a;
     }
-    if (a<b) {
-        if (b>=c) {
-            cout<<b<<endl;
-        }
-        
-        if (b<=c){
-            cout<<c<<endl;
-        }
-        
+    if (b>a && b>=c) {
+        cout<<b;
     }
+    if (c>a && c>b) {
+        cout<<c;
+    }
+    
     return 0;
 }
