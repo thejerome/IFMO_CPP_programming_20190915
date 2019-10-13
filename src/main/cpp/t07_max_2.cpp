@@ -29,5 +29,24 @@
 using namespace std;
 
 int t07_max_2() {
-
-};
+    int a = 0, i = 0, c = 0;
+    while (true)
+    {
+        cin >> a;
+        if (a == 0)
+        {
+            cout << c << endl;
+            break;
+        }
+        else if (a >= i)
+        {
+            c = i;
+            i = a;
+        }
+        else if (a < i && a > c)
+        {
+            c = a;
+        }
+    }
+    return 0;
+}
