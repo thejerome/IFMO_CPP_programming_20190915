@@ -35,7 +35,7 @@ double a, b, c, d, x1, x2;
         }
     }
     if ( d == 0 ) {
-       x1 = ( b * (-1) ) / 2 * a; 
+       x1 = ( b * (-1) ) / ( 2 * a ); 
        cout << x1;
     }
   return 0;
