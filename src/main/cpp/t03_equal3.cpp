@@ -23,29 +23,16 @@ int t03_equal3() {
     cin>>a;
     cin>>b;
     cin>>c;
-    if (a==b) {
-        if (a==c){
+    if (a==b && a==c) {
         cout<<3;
-        }
-        else{
-         cout<<2;
-        }
     }
     else {
-        if (b!=c) {
-            if (a!=c){
-               cout<<0;
-            }
+        if ((a==b) || (a==c) || (b==c)) {
+        cout<<2;
+        }
+        else {
+            cout<<0;
+        }
     }
-    }
-    
-    if (a==c) {
-             cout<<2;
-         }
-    if (b==c) {
-             cout<<2;
-         }
-    
-    
     return 0;
 }
