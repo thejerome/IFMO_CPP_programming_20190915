@@ -21,22 +21,22 @@
 using namespace std;
 
 int t07_quad2() {
- double a, b, c, d, x1, x2;
+ double a, b, c, d, z1, z2;
     cin >> a >> b >> c;
     if ( a != 0 ) {
         d = pow(b,2) - 4 * a * c;
         if ( d > 0 ) {
-            x1 = ( b * (-1) - sqrt(d) ) / ( 2 * a );
-            x2 = ( b * (-1) + sqrt(d) ) / ( 2 * a );
-            if ( x1 > x2 ) cout << 2 << " " << x2 << " " << x1;
-            else cout << 2 << " " << x1 << " " << x2;
+            z1 = ( b * (-1) - sqrt(d) ) / ( 2 * a );
+            z2 = ( b * (-1) + sqrt(d) ) / ( 2 * a );
+            if ( z1 > z2 ) cout << 2 << " " << z2 << " " << z1;
+            else cout << 2 << " " << z1 << " " << z2;
         }
-        else if ( D == 0 ) cout << 1 << " " << b * (-1) / ( 2 * a );
+        else if ( d == 0 ) cout << 1 << " " << b * (-1) / ( 2 * a );
         else cout << 0;
     }
-    else if ( a ==0 and b!= 0 ) cout << 1 << " " << c * (-1) / b;
-    else if ( a == 0 and c == 0 and b != 0 ) cout << 1 << " " << 0;
-    else if ( a == 0 and b == 0 and c != 0 ) cout << 0; 
-    else if (a == 0 and b == 0 and c == 0) cout << 3;
+    else if ( a == 0 && b != 0 ) cout << 1 << " " << c * (-1) / b;
+    else if ( a == 0 && c == 0 && b != 0 ) cout << 1 << " " << 0;
+    else if ( a == 0 &&  b == 0 && c != 0 ) cout << 0; 
+    else if (a == 0 && b == 0 && c == 0) cout << 3;
     return 0;
 };
