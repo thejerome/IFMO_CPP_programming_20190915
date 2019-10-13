@@ -39,7 +39,7 @@ if (n>m && n>k) {
         cout<<k<<' '<<m<<' '<<n;
     }
 }
-if (k>m && k>n) {
+if (k>m && k>=n) {
     if (n>m) {
         cout<<m<<' '<<n<<' '<<k;
     }
