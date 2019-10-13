@@ -28,7 +28,4 @@ double i;
     i=(x*100+y)+(x*100+y)*p/100;
    cout<<trunc(i/100)<<" "<< round((i/100-trunc(i/100))*100);
    return 0;
-} 
-
-
 };
