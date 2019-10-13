@@ -19,7 +19,7 @@
 
 using namespace std;
 
-int t05_chess_king() {
+int t05_chess_king(){
    
     int a2,b2,a1,b1;
     int d1=0,d2=0;
@@ -29,17 +29,11 @@ int t05_chess_king() {
     cin>>b2;
     d1=a1-b1;
     d2=a2-b2;
-    if (d1>=-1) {
-        if (d1<=1){
-            if (d2>=-1){
-                if (d2<=1) {
-                    cout<<"YES";
-                }
-            }
-        }
+    if ((d1==1 || d1==0)&& (d2==1 || d2==0)) {
+        cout<<"YES";
     }
     else {
-      cout<<"NO";
-                }
+        cout<<"NO";
+    }
     return 0;
 };
