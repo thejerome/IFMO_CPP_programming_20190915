@@ -26,7 +26,7 @@ using namespace std;
 int t03_twos() {
     long int a = 0, i = 0;
     cin >> a;
-    if ((i % 2) == 0){
+    if ((a % 2) == 0){
         while (true)
         {
             if (a == pow(2, i)){
