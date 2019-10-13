@@ -14,5 +14,6 @@ using namespace std;
 int t00_hello() {
 	cout << "Hello, World!" << endl;
 	return 0;
+	
 
 };
