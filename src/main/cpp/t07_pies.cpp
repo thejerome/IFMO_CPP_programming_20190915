@@ -43,5 +43,4 @@ int t07_pies() {
     A = A * N;
     cout << A << " " << B << endl;
     return 0;
-}
 };
