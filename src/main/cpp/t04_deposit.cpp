@@ -23,12 +23,12 @@ using namespace std;
 
 int t04_deposit() { 
 int P, X, Y, a, b = 0;
-    cin >> p >> x >> y >> a;
-    y = x * 100 + y;
+    cin >> P >> X >> Y >> a;
+    Y = X * 100 + Y;
     while (b < a) {
-        y = y * (1 + (double)p / 100);
+        Y = Y * (1 + (double)P / 100);
         b++;
     }
-    cout << y / 100 << " " << y % 100;
+    cout << Y / 100 << " " << Y % 100;
     return 0;
 };
