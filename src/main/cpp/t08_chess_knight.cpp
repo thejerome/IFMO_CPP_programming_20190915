@@ -37,17 +37,13 @@ int t08_chess_knight() {
     cin>>b2;
     d1=a1-b1;
     d2=a2-b2;
-    if (d1==2 || d1==-2) {
-        if (d2==1 || d2==-1){
+    if ((d1==2 || d1==-2) && (d2==1 || d2==-1)) {
+            cout<<"YES";
+    }
+    if ((d1==1 || d1==-1) && (d2==2 || d2==-2)){
             cout<<"YES";
         }
-    }
-    if (d1==1 || d1==-1) {
-        if (d2==2 || d2==-2){
-            cout<<"YES";
-        }
-    }
-    else {
+     else {
         cout<<"NO";
     }
 
