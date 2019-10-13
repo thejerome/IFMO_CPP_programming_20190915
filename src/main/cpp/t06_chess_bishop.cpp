@@ -27,18 +27,13 @@ int t06_chess_bishop() {
     cin>>a2;
     cin>>b1;
     cin>>b2;
-    d1=a1-a2;
-    d2=b1-b2;
-    if (d1-d2==0){
+    d1=a1-b1;
+    d2=a2-b2;
+    if (d1-d2==0 || d1+d2==0){
         cout<<"YES";
     }
-    else  {
-        if (d1+d2==0) {
-        cout<<"YES";
-        }
-        else {
+    else   {
             cout<<"NO";
         }
-    }
     return 0;
 };
