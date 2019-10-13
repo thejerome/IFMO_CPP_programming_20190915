@@ -36,28 +36,20 @@ int t07_chess_queen() {
     cin>>a2;
     cin>>b1;
     cin>>b2;
-    d1=a1-a2;
-    d2=b1-b2;
+    d1=a1-b1;
+    d2=a2-b2;
 
-    if (d1-d2==0){
+    if (d1-d2==0 || d1+d2==0){
         cout<<"YES";
     }
-    else  {
-        if (d1+d2==0) {
+    else {
+        if (a1-b1==0 || a2-b2==0){
         cout<<"YES";
         }
         else {
-        if (a1-b1==0){
-        cout<<"YES";
-    }
-        if (a2-b2==0) {
-        cout<<"YES";
-    }
-        else {
-        
-            cout<<"NO";
+        cout<<"NO";
         }
-        }
+       
     }
     return 0;
 };
