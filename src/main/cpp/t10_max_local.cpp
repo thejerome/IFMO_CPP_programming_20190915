@@ -24,5 +24,24 @@
 using namespace std;
 
 int t10_max_local() {
-
-};
+    long int a = 0, prev_a = 0, kol_max_local = 0, candidate = 0;
+    while (true)
+    {
+        cin >> a;
+        if (a == 0)
+        {
+            cout << kol_max_local << endl;
+            break;
+        }
+        if (a < prev_a && prev_a == candidate && candidate != 0)
+        {
+            kol_max_local++;
+        }
+        else if (a > prev_a && prev_a != 0)
+        {
+            candidate = a;
+        }
+        prev_a = a;
+    }
+    return 0;
+}

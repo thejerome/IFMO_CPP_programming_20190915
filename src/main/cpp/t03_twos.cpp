@@ -19,9 +19,32 @@
 
 #include "t03_twos.h"
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int t03_twos() {
-
-};
+    long int a = 0;
+    cin >> a;
+    if ((a % 2) == 0){
+        long int i = 0;
+        while (true)
+        {
+            if (a == pow(2, i)){
+                cout << "YES" << endl;
+                break;
+            }
+            else if (a < pow(2, i))
+            {
+                cout << "NO" << endl;
+                break;
+            }
+            ++i;
+        }
+    }
+    else
+    {
+        cout << "NO" << endl;   
+    }
+    return 0;
+}
