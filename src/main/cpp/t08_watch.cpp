@@ -31,9 +31,23 @@
 
 #include "t08_watch.h"
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
 int t08_watch() {
-
-};
+    int a = 0;
+    int sec = 0;
+    int min = 0;
+    int hou = 0;
+    cin >> a;
+    sec = a%60;
+    a = a/60;
+    min = a%60;
+    a = a/60;
+    hou = a%24;
+    cout << hou << ':';
+    cout << min/10 << min%10 << ':';
+    cout << sec/10 << sec%10 << endl;
+    return 0;
+}
