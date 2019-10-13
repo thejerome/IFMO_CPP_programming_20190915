@@ -20,5 +20,25 @@
 using namespace std;
 
 int t06_chess_bishop() {
-
+   
+    int a2,b2,a1,b1;
+    int d1=0,d2=0;
+    cin>>a1;
+    cin>>a2;
+    cin>>b1;
+    cin>>b2;
+    d1=a1-a2;
+    d2=b1-b2;
+    if (d1-d2==0){
+        cout<<"YES";
+    }
+    else  {
+        if (d1+d2==0) {
+        cout<<"YES";
+        }
+        else {
+            cout<<"NO";
+        }
+    }
+    return 0;
 };
