@@ -29,5 +29,8 @@
 using namespace std;
 
 int t08_chess_knight() {
-
+int a,b,x,y;
+cin >>a>>b>>x>>y;
+if (((((a-x)==2) or ((a-x)==-2)) and (((b-y)==1) or ((b-y)==-1))) or ((((a-x)==1) or ((a-x)==-1)) and (((b-y)==2) or ((b-y)==-2)))) cout << "YES";
+    else cout << "NO";
 };
