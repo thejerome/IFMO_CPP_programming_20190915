@@ -22,9 +22,13 @@
 using namespace std;
 
 int t04_deposit() { 
-int p,x,y,i=0;
-    cin >> p>>x>>y;
-    i=(x*100+y)+(x*100+y)*p/100;
-   cout<<trunc(i/100)<<" "<< round((i/100-trunc(i/100))*100);
-   return 0;
+int P, X, Y, a, b = 0;
+    cin >> p >> x >> y >> a;
+    y = x * 100 + y;
+    while (b < a) {
+        y = y * (1 + (double)p / 100);
+        b++;
+    }
+    cout << y / 100 << " " << y % 100;
+    return 0;
 };
