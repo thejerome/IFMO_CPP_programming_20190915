@@ -24,9 +24,10 @@
 using namespace std;
 
 int t03_twos() {
-    long int a = 0, i = 0;
+    long int a = 0;
     cin >> a;
     if ((a % 2) == 0){
+        long int i = 0;
         while (true)
         {
             if (a == pow(2, i)){
