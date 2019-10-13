@@ -22,10 +22,10 @@
 using namespace std;
 
 int t04_deposit() { 
-  double p, x, y, k;
-  cin >> p >> x >> y;
-  k = x * 100 + y + (x * 100 + y) * p / 100 ;
-    cout << (int)k/100 << " " << (int)k % 100 ;
+  double P, X, Y, v;
+  cin >> P >> X >> Y;
+  v = X * 100 + Y + ( X * 100 + Y ) * P / 100 ;
+    cout << (int)v/100 << " " << (int)v % 100 ;
   return 0;
 
 
