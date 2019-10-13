@@ -23,7 +23,7 @@ using namespace std;
 int t06_quad() {
 double a, b, c, d, x1, x2;
     cin >> a >> b >> c
-    d = b * b - 4 * a * c;
+    d =  pow ( b , 2 ) - 4 * a * c;
     if ( d > 0 ) {
      x1 = ( b * (-1) + sqrt(d) ) / 2 * a; 
      x2 = ( b * (-1) - sqrt(d) ) / 2 * a;  
