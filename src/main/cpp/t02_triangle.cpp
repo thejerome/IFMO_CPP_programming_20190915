@@ -22,7 +22,7 @@ int t02_triangle() {
     int a = 0, b = 0, c = 0;
     bool p = false;
     cin >>a >>b >>c;
-    if ((a*a == b*b + c*c) or (b*b == a*a + c*c) or (c*c == b*b + a*a)) {
+    if ((a < b+c) and (b < b+c) and (c < a+b)) {
         p = true;
     }
     if (p == 1){
