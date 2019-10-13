@@ -40,12 +40,13 @@ int t08_chess_knight() {
     if ((d1==2 || d1==-2) && (d2==1 || d2==-1)) {
             cout<<"YES";
     }
+    else {
     if ((d1==1 || d1==-1) && (d2==2 || d2==-2)){
             cout<<"YES";
         }
-     else {
+    else {
         cout<<"NO";
     }
-
+}
     return 0;
 };
