@@ -18,6 +18,12 @@
 
 using namespace std;
 
-int t02_divisor() {
-
-};
+int t02_divisor(){
+    int a,i=2;
+    cin>>a;
+    while (a%i!=0) {
+        ++i;
+    }
+    cout<<i;
+    return 0;
+}
