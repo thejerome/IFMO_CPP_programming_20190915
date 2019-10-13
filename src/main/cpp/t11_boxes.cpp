@@ -36,7 +36,7 @@
 
 using namespace std;
 
-int t11_boxes() {
+int t11_boxes(){
  int a1,b1,c1,a2,b2,c2,max1,mid1,min1,max2,mid2,min2;
     cin>>a1;
     cin>>b1;
@@ -44,9 +44,9 @@ int t11_boxes() {
     cin>>a2;
     cin>>b2;
     cin>>c2;
-    if (a1>b1 && a1>c1) {
+    if (a1>=b1 && a1>=c1) {
         max1=a1;
-        if (c1>b1) {
+        if (c1>=b1) {
             mid1=c1;
             min1=b1;
         }
@@ -55,9 +55,9 @@ int t11_boxes() {
             min1=c1;
         }
     }
-    if (c1>b1 && c1>a1) {
+    if (c1>=b1 && c1>=a1) {
         max1=c1;
-        if (a1>b1) {
+        if (a1>=b1) {
             mid1=a1;
             min1=b1;
         }
@@ -66,9 +66,9 @@ int t11_boxes() {
             min1=a1;
         }
     }
-    if (b1>c1 && b1>a1) {
+    if (b1>=c1 && b1>=a1) {
         max1=a1;
-        if (c1>a1) {
+        if (c1>=a1) {
             mid1=c1;
             min1=a1;
         }
@@ -77,9 +77,9 @@ int t11_boxes() {
             min1=c1;
         }
     }
-    if (a2>b2 && a2>c2) {
+    if (a2>=b2 && a2>=c2) {
         max2=a2;
-        if (c2>b2) {
+        if (c2>=b2) {
             mid2=c2;
             min2=b2;
         }
@@ -88,9 +88,9 @@ int t11_boxes() {
             min2=c2;
         }
     }
-    if (b2>c2 && b2>a2) {
-        max2=a2;
-        if (c2>a2) {
+    if (b2>=c2 && b2>=a2) {
+        max2=b2;
+        if (c2>=a2) {
             mid2=c2;
             min2=a2;
         }
@@ -99,9 +99,9 @@ int t11_boxes() {
             min2=c2;
         }
     }
-    if (c2>b2 && c2>a2) {
+    if (c2>=b2 && c2>=a2) {
         max2=c2;
-        if (a2>b2) {
+        if (a2>=b2) {
             mid2=a2;
             min2=b2;
         }
