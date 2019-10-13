@@ -31,6 +31,6 @@ using namespace std;
 int t07_chess_queen() {
 int a,b,x,y;
 cin >>a>>b>>x>>y;
-if (((x-a)==(y-b)) or ((a==x) or (b==y))) cout << "YES";
+if ((((x-a)==(y-b)) or ((x-a)==(b-y))) or ((a==x) or (b==y))) cout << "YES";
     else cout << "NO";
 };
