@@ -24,16 +24,11 @@ int t02_triangle() {
     cin>>a;
     cin>>b;
     cin>>c;
-    if (a+b>c) {
-        if (c+b>a){
-            if (a+c>b){
+    if (a+b>c && b+c>a && a+c>b) {
                 cout<<"YES";
             }
             else {
                 cout<<"NO";
             }
-        }
-    }
-    
     return 0;
 }
