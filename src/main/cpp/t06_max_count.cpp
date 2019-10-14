@@ -40,6 +40,6 @@ while (i!=0){
     if (s < i) {
         s=i;
         c=1;};
-s=i;};
+};
 cout << c;
 };
