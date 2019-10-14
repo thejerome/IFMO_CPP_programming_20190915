@@ -34,6 +34,7 @@ int t07_max_2() {
     while (a!=0) {
         cin>>a;
         if (a>max) {
+            max2=max;
             max=a;
         }
         else {
