@@ -29,5 +29,12 @@
 using namespace std;
 
 int t08_chess_knight() {
-
+  int A1, B1, A2, B2, qwe, qweA, qweB;
+    cin >> A1 >> B1 >> A2 >> B2;
+    qweA = (A1 > A2) ? (A1 - A2) : (A2 - A1);
+    qweB = (B1 > B2) ? (B1 - B2) : (B2 - B1);
+    qwe = qweA + qweB;
+    if (qwe == 3 && qweA != 3 && qweB != 3) cout << "YES" << endl;
+    else cout << "NO" << endl;
+    return 0;
 };
