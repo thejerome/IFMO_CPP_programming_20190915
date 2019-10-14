@@ -32,5 +32,6 @@ while (i <= N){
     s0=s1;
     s1=s2;
     i++;};
-cout << s1;
+if (N=0) cout >> 0;
+    else cout << s1;
 };
