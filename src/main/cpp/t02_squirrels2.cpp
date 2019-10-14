@@ -6,7 +6,7 @@ using namespace std;
 int t02_squirrels2() {
     int k,x ;
     cin >> k;
-    x = k % 2;
+    x = k % n;
     cout << x ;
     return 0;
 }
