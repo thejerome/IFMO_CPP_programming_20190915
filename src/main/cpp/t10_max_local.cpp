@@ -24,5 +24,25 @@
 using namespace std;
 
 int t10_max_local() {
-
+    int a_prev, a, a_post, loc_max;
+    loc_max = 0;
+    cin >> a_prev >> a;
+    if (a == 0) {
+        cout << loc_max;
+        return 0;
+    }
+    cin >> a_post;
+    if (a_post == 0) {
+        cout << loc_max;
+        return 0;
+    }
+    if (a > a_prev && a > a_post) loc_max = loc_max + 1;
+    while (a_post != 0) {
+        a_prev = a;
+        a = a_post;
+        cin >> a_post;
+        if (a_post == 0) break;
+        if (a > a_prev && a > a_post) loc_max = loc_max + 1;
+    }
+    cout << loc_max;
 };
