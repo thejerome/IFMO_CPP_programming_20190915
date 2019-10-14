@@ -5,10 +5,10 @@ using namespace std;
 
 int t08_watch() {
     int a,b,c;
-   cin >> c;
-   b = (c / 60) % 60 ;
-   a = (c /3600) % 24 ;
-   c = c % 60 ;
-   printf("%01d:%02d:%02d", a, b, c);
+  cin >> c;
+  a = c%60;
+  b = (c/60)%60;
+  c = (c/3600)%24;  
+  cout << c << ":" << b/10 << b%10 << ":" << a/10 << a%10;
     return 0;
 }
