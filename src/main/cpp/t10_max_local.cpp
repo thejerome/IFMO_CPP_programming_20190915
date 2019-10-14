@@ -27,15 +27,12 @@ int t10_max_local() {
 int i,s1,s2,count;
 cin >> s1;
 cin >> s2;
-count=1
+count=0;
 while (i!=0){
     cin >> i;
-    if (s==i) count++;
-        else {
-            if (count > maxcount) {
-                maxcount=count;
-                count=1;};
-        };
-s=i;};
+    if ((s1<s2)and(s2>i)) count++;
+    s1=s2;
+    s2=i;
+   };
 cout << count;
 };
