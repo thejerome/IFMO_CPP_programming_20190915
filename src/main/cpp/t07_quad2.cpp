@@ -25,8 +25,18 @@ int t07_quad2() {
    cin>>a>>b>>c;
    d=b*b-4*a*c;
    d1=sqrt(d);
+   if (a!=0 ){
    x1=(-b+d1)/(2*a);
    x2=(-b-d1)/(2*a);
+   }
+   else {
+       x1=-c/b;
+       x2=x1;
+   }
+   if (a==0 && b==0 && c==0) {
+           cout<<3;
+       }
+      else {
    if (x1==x2) {
        cout<<1<<' '<<x1;
    }
@@ -44,5 +54,6 @@ int t07_quad2() {
          cout<<0;
    }
    }
+      }
     return 0;
 }
