@@ -4,10 +4,9 @@
 using namespace std;
 
 int t01_squirrels() {
-    int k,n,m ;
+    int k,n, ;
     cin >> k;
-    n = k / 2;
-    m = n ;
-    cout << n << "    " << m;
+    n = k / n;
+    cout << n ;
     return 0;
 }
