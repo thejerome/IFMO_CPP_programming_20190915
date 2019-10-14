@@ -1,9 +1,9 @@
-#include "t04_first_number.h"
+#include "t03_last_number.h"
 #include <iostream>
 
 using namespace std;
 
-int t_04Firstnumber(){
+int t03_last_number() {
     int d;
     cin >> d;
     d = d / 10;
