@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int t_063digits(){
+int t06_3digits() {
     int d,x,z,c,s;
     cin >> d;
     c = d % 10;
