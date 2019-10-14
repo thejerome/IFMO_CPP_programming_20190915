@@ -22,7 +22,7 @@ int t08_cycleswap() {
 
     int n;
     cin >> n;
-    int a[n], ans = n;
+    int a[n];
     for (int i = 0; i < n; i ++)
         cin >> a[i];
 
