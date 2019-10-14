@@ -20,14 +20,15 @@
 using namespace std;
 
 int t03_triangle() {
-   double a,b,c,s,p;
+   double a,b,c,s,p,p1;
    cin>>a>>b>>c;
-   s=a*b*c;
-   cout<<int(s)<<'.'<<(s - int(s))*10000;
+   p1=(a+b+c)/2;
+   s=sqrt(p1*(p1-a)*(p1-b)*(p1-c));
+   cout<<int(s)<<'.';
    p=s-int(s);
-   for (int i=0;i<3;i++) {
+   for (int i=0;i<4;i++) {
        p=p*10;
-       cout<<p;
+       cout<<int(p);
        p=p-int(p);
    }
     return 0;
