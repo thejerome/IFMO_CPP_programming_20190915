@@ -106,8 +106,8 @@ int t11_boxes() {
         }
     
     
-        cout << a << ' ' << b << ' ' << c << endl;
-        cout << a2 << ' ' << b2 << ' ' << c2 << endl;
+        //cout << a << ' ' << b << ' ' << c << endl;
+        //cout << a2 << ' ' << b2 << ' ' << c2 << endl;
         if(a*b*c > a2*b2*c2){
           if(a >= a2 && b >= b2 && c >= c2)
             cout << "The first box is larger than the second one";
