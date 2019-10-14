@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int t_01squirell(){
+int t01_squirrels() {
     int k,n,m ;
     cin >> k;
     n = k / 2;
