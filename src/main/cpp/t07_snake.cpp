@@ -23,7 +23,7 @@ using namespace std;
 
 int t07_snake() {
 
-    int n, m, k, cnt = 1;
+    int n, m, cnt = 1;
     cin >> n >> m;
     int a[n][m];
 
