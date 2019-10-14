@@ -6,8 +6,7 @@ using namespace std;
 int t09_snail() {
     int a,b,h,l;
    cin >> h >> a >> b;
-   l = h / (a - b) ;
-   l = l + 1;
+   l = (h-a-1)/(a-b)+2 ;
    cout << l;
     return 0;
 }
