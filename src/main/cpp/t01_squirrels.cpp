@@ -4,7 +4,7 @@
 using namespace std;
 
 int t01_squirrels() {
-    int k,n, ;
+    int k,n ;
     cin >> k;
     n = k / n;
     cout << n ;
