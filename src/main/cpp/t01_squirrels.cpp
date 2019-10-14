@@ -1,3 +1,4 @@
+#include <t01_squirrels.h>
 #include <iostream>
 
 using namespace std;
