@@ -21,7 +21,7 @@ using namespace std;
 
 int t03_triangle() {
   
-    float a, b, c, p, S;
+    double a, b, c, p, S;
     cin >> a >> b >> c;
     p = (a + b + c) / 2;
     S = sqrt(p * (p - a) * (p - b) * (p - c));
