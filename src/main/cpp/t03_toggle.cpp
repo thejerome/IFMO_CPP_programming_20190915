@@ -24,5 +24,8 @@
 using namespace std;
 
 int t03_toggle() {
-
+    char a;
+    cin >> a;
+    if (isupper(a)) cout << char(tolower(a));
+    else cout << char(toupper(a));
 }
