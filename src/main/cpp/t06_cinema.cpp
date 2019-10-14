@@ -29,6 +29,34 @@
 using namespace std;
 
 int t06_cinema() {
+
+    int n, m, k, cnt, mxcnt = 0, ans = 0;
+    cin >> n >> m;
+    int a[n][m + 1];
+    for (int i = 0; i < n; i ++)
+        for (int j = 0; j < m; j ++)
+            cin >> a[i][j];
+    cin >> k;
+
+    for (int i = 0; i < n; i ++)
+        a[i][m] = 1;
+
+    for (int i = 0; i < n; i ++) {
+        cnt = int(!a[i][0]);
+        mxcnt = cnt;
+        for (int j = 0; j < n; j ++)
+            if (a[i][j + 1] == 1) {
+                if (cnt > mxcnt)
+                    mxcnt = cnt;
+                cnt = 0;
+            } else
+                cnt += 1;
+        if (mxcnt >= k) {
+            ans = i + 1;
+            break;
+        }
+    }
+    cout << ans;
     
     return 0;
 }
