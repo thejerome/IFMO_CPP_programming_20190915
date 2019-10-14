@@ -31,9 +31,8 @@ while (i!=0){
     cin >> i;
     if (s==i) count++;
         else {
-            if (count > maxcount) {
-                maxcount=count;
-                count=1;};
+            if (count > maxcount) maxcount=count;
+            count=1;
         };
 s=i;};
 cout << maxcount;
