@@ -1,8 +1,9 @@
 #include "t07_pies.h"
 #include <iostream>
+
 using namespace std;
 
-int t_07pies(){
+int t07_pies() {
     int a,b,c;
     cin >> a >> b >> c;
     b = b * c;
