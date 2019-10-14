@@ -26,8 +26,7 @@ int t09_row() {
   int a;
   int k = 1;
   int b;
-  int mm;
-  int pp;
+  int s = 0;
   cin >> a;
   int n;
   n = a;
@@ -37,8 +36,15 @@ int t09_row() {
       k++;
     }
     else{
+      b = a;
+      s++;
       
     }
+    if(k <= s){
+      n = b;
+      k = s;
+      s = 0;
+    }
   }
-
+  cout << k;
 };
