@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int t_05tensnumber(){
+int t05_tens_number() {
     int d;
     cin >> d;
     d = d / 10;
