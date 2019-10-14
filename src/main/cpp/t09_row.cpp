@@ -24,11 +24,9 @@ using namespace std;
 
 int t09_row() {
 int i,s,count,maxcount;
-s=0;
 count=1;
 maxcount =1;
-cin >> i;
-s=i;
+cin >> s;
 while (i!=0){
     cin >> i;
     if (s==i) count++;
