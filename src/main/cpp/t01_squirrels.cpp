@@ -5,7 +5,7 @@ using namespace std;
 
 int t01_squirrels() {
     int k,n ;
-    cin >> k;
+    cin >> n >> k;
     n = k / n;
     cout << n ;
     return 0;
