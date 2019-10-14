@@ -19,5 +19,23 @@
 using namespace std;
 
 int t10_sort3() {
-
-};
+  int N, M, K, Q;
+    cin >> N >> M >> K;
+    if (N > M) {
+        Q = N;
+        N = M;
+        M = Q;
+    }
+    if (M > K) {
+        Q = K;
+        K = M;
+        M = Q;
+    }
+    if (N > M) {
+        Q = N;
+        N = M;
+        M = Q;
+    }
+    cout << N << " " << M << " " << K << endl;
+    return 0;
+}; 
