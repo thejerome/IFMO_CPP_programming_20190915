@@ -1,3 +1,4 @@
+#include <t06_3digits.h>
 #include <iostream>
 
 using namespace std;
