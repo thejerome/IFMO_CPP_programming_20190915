@@ -1,4 +1,4 @@
-//Вам дан словарь, состоящий из пар слов. 
+ //Вам дан словарь, состоящий из пар слов.
 // Каждое слово является синонимом к парному ему слову. 
 // Все слова в словаре различны. 
 // Для одного данного слова определите его синоним.
@@ -15,22 +15,36 @@
 //
 //Sample Input:
 //
-//3
-//Hello Hi
-//Bye Goodbye
-//List Array
-//Goodbye
-//
+/*3
+Hello Hi
+Bye Goodbye
+List Array
+Goodbye
+*/
 //Sample Output:
 //
 //Bye
 
 #include "t05_syn.h"
 #include <iostream>
+#include <map>
 
 
 using namespace std;
 
 int t05_syn() {
-
+    map<string,string> m1,m2;
+    string s1,s2;
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        cin>>s1;
+        cin>>s2;
+        m1[s1]=s2;
+        m2[s2]=s1;
+    }
+    cin>>s1;
+    cout<<m1[s1];
+    cout<<m2[s1];
+	return 0;
 }

@@ -25,10 +25,22 @@
 
 #include "t02_new.h"
 #include <iostream>
-
+#include <set>
 
 using namespace std;
 
 int t02_new() {
-    
+    set<int> s;
+    int n,c,size;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        size=s.size();
+        cin>>c;
+        s.emplace(c);
+        if(s.size()>size){
+            cout<<"NO"<<endl;
+        } else
+            cout<<"YES"<<endl;
+    }
+    return 0;
 }
