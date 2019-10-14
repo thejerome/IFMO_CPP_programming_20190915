@@ -30,9 +30,9 @@ int i,s1,s2,count;
   count=0;
   while (i!=0){
       cin >> i;
-      if ((s1<s2)and(s2>i)) count++;
+      if ((s1<s2)and(s2>i) and (i!=0)) count++;
       s1=s2;
       s2=i;
      };
   cout << count;
-  };
+ };
