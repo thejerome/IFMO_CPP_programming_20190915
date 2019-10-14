@@ -1,8 +1,9 @@
 #include "t08_watch.h"
 #include <iostream>
+
 using namespace std;
 
-int t_08watch(){
+int t08_watch() {
     int a,b,c;
    cin >> c;
    b = (c / 60) % 60 ;
