@@ -37,9 +37,9 @@ i=-1;
 while (i!=0){
     cin >> i;
     if (s==i) c++;
-    if (s > i) {
+    if (s < i) {
         s=i;
         c=1;};
-};
+s=i;};
 cout << c;
 };
