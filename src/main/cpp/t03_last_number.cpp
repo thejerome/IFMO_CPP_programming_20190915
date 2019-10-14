@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int t_03lastnumber(){
+int t03_last_number(){
     int d;
     cin >> d;
     d = d % 10;
