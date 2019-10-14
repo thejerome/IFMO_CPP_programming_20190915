@@ -1,8 +1,9 @@
 #include "t09_snail.h"
 #include <iostream>
+
 using namespace std;
 
-int t_09snail(){
+int t09_snail() {
     int a,b,h,l;
    cin >> h >> a >> b;
    l = h / (a - b) ;
