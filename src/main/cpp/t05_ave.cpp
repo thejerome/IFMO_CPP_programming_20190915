@@ -22,5 +22,19 @@
 using namespace std;
 
 int t05_ave() {
+  
+    int inp, cnt = 0;
+    double sum = 0;
+    cin >> inp;
+  
+    while (inp != 0) {
+        sum += inp;
+        cnt += 1;
+        cin >> inp;
+    }
+  
+    cout.setf(ios::fixed);
+    cout.precision(11);
+    cout << sum / cnt;
 
 };
