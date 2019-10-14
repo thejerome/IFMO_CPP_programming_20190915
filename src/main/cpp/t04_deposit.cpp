@@ -31,7 +31,8 @@ int t04_deposit() {
        a=a*b;
        c=a*100;
        a=double(c)/100;
-   }
-   cout<<int(a)<<' '<<int ((a-int(a))*100);
+       }
+   c=a;
+   cout<<c<<' '<<(a-c)*100;
     return 0;
 }
