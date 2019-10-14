@@ -36,9 +36,10 @@ i=-1;
 while (i!=0){
     cin >> i;
     if ((s > i) and (i > p)) p=i;
-    if (s < i) {
+    if (s <= i) {
         p=s;
         s=i;};
+
 };
 cout << p;
 };
