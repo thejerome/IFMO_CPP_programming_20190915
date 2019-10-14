@@ -28,7 +28,7 @@ int t10_max_local() {
     
     while (a!=0) {
         cin>>a;
-        if (b>c && b>a) {
+        if (b>c && b>a && (a!=0 && b!=0 && c!=0)) {
             i++;
         }
         c=b;
