@@ -33,7 +33,7 @@ int t07_quad2() {
        x1=-c/b;
        x2=x1;
    }
-   if (a==0 && b==0 && c!=) {
+   if (a==0 && b==0 && c!=0) {
       cout<<0;
    }
    else {
