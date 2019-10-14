@@ -19,5 +19,10 @@
 using namespace std;
 
 int t10_sort3() {
-
+  int N, M, K;
+    cin >> N >> M >> K;
+    if (N <= M && N <= K && K <= M) cout << N << K << M;
+    if (K <= N && K <= M && N >= M) cout << K << M << N;
+    if (M <= N && M <= K && K >= N) cout << M << N << K;
+    return 0;
 };
