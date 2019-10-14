@@ -8,8 +8,8 @@ int t07_pies() {
     cin >> a >> b >> c;
     b = b * c;
     a = a * c;
-    a = a + b / 100 ;
+    a = a + (b / 100) ;
     b = b % 100 ;
-    cout << a << "  " << b ;
+    cout << a << " " << b ;
     return 0;
 }
