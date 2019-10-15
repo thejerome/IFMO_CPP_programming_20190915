@@ -16,7 +16,7 @@
 #include <iostream>
 
 
-using namespace std;
+using namespace std; 
 
 int t02_even2() {
 	int N = 0, l = 0;

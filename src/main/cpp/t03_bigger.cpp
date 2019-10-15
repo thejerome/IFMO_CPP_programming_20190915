@@ -27,4 +27,4 @@ int t03_bigger() {
 		x = y;
 		cin >> y;
 	}
-}
+} 

@@ -25,5 +25,5 @@ int t01_even() {
 	{
 		cin >> l;
 		if (i % 2 == 0) { cout << l << " " ; }
-	}
+	} 
 }
