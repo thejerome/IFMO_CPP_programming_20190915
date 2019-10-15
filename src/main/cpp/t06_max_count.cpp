@@ -42,8 +42,10 @@ int t06_max_count() {
       n = a;
       k = 1;
     }
-    else
-      k++;
+    else{
+        if(a == n)
+            k++;
+    } 
     cin >> a;  
   }
   cout << k;
