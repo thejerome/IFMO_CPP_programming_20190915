@@ -21,5 +21,16 @@
 using namespace std;
 
 int t06_quad() {
-
-};
+            double a,b,c;
+            cin>>a>>b>>c;
+            double delta = b*b - 4.0*a*c;
+            if(delta >= 0.0){
+                double x1 = (-b + sqrt(delta)) / (2.0 * a);
+                double x2 = (-b - sqrt(delta)) / (2.0 * a);
+                if(delta == 0.0){
+                    cout<<x1;
+                } else {
+                    cout<<min(x1,x2)<<' '<<max(x1,x2);
+                }
+            }
+}
