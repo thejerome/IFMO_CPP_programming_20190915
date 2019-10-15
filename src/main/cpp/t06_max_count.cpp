@@ -30,7 +30,9 @@
 using namespace std;
 
 int t06_max_count() {
-  int N = 1, max, Cmax;
+  int N = 1;
+  int max = -2147483647;
+  int Cmax;
     while (N != 0){
     cin >> N;
     if (N == max) ++Cmax;
