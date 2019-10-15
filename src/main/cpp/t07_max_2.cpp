@@ -29,5 +29,17 @@
 using namespace std;
 
 int t07_max_2() {
+  int N = 1, max = -2147483646, max1 = -2147483646, Q;
+    while (N != 0) {
+        cin >> N;
+        if (N >= max) {
+            Q = max;
+            max = N;
+        }
+        if (N < max && N > max1) max1 = N;
+        if (N == max) if (Q > max1) max1 = Q;
+    }
 
+    cout << max1 << endl;
+    return 0;
 };
