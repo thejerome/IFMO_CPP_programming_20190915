@@ -48,5 +48,7 @@ int t07_max_2() {
     }
     //cout << mt << endl;
   }
+  if(mt == 0)
+    mt = n;
   cout << mt;
 };
