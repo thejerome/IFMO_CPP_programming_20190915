@@ -29,18 +29,17 @@ int t10_unique() {
     int n;
     cin >> n;
     int a[n];
-    bool f;
     for (int i = 0; i < n; i ++)
         cin >> a[i];
 
+    int j = 0;
     for (int i = 0; i < n; i ++) {
-        f = true;
-        for (int j = 0; j < n; j ++)
+        for (j = 0; j < n; j ++)
             if (a[i] == a[j] and i != j) {
-                f = false;
+                j --;
                 break;
             }
-        if (f)
+        if (j == n)
             cout << a[i] << " ";
     }
 
