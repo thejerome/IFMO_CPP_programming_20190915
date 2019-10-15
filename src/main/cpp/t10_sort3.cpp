@@ -23,21 +23,21 @@ int t10_sort3() {
 	cin >> a >> b >> c;
 	if ((a > b) && (a > c)) {
 		if (b > c)
-			cout << a << b << c;
+			cout << c << " " << b << " " << a;
 		else
-			cout << a << c << b;
+			cout << b << " " << c << " " << a;
 	}
 	else if ((b > c) && (b > a)) {
 		if (a > c)
-			cout << b << a << c;
+			cout << c << " " << a << " " << b;
 		else
-			cout << b << c << a;
+			cout << a << " " << c << " " << b;
 	}
 	else {
 		if (a > b)
-			cout << c << a << b;
+			cout << b << " " << a <<" " << c;
 		else
-			cout << c << b << a;
+			cout << a << " "<< b << " " << c;
 
 	}
 	return 0;
