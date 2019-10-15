@@ -24,5 +24,18 @@
 using namespace std;
 
 int t10_max_local() {
-
+  int Q=2147483647;
+    int Q2=2147483647;
+    int Q3=2147483647;
+    int W;
+    while (Q != 0) {
+        int Q1;
+        Q1 = Q2;
+        Q2 = Q3;
+        Q3 = Q;
+        if (Q2 > Q1 && Q2 > Q3) ++W;
+        cin >> Q;
+    }
+    cout << W << endl;
+    return 0;
 };
