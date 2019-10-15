@@ -32,18 +32,21 @@ int t07_max_2() {
   int a;
   int n = -1;
   cin >> a;
-  int mt;
+  int mt = 0;
   if(a > n){
     n = a;
   }
   while(a != 0){
     cin >> a;
+    if(a > mt && a < n){
+        mt = a;
+    }
     if(a > n){
       mt = n;
       n = a;
+      
     }
-    
+    //cout << mt << endl;
   }
   cout << mt;
-
 };
