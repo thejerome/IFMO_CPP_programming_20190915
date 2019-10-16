@@ -25,7 +25,7 @@ using namespace std;
 
 int t05_palindrom() {
   
-    string c;
+   string c;
    getline(cin, c);
     for (int i = 0; i < c.length() / 2; i ++)
         if (c[i] != c[c.length() - i - 1]) {
