@@ -29,7 +29,7 @@
 using namespace std;
 
 int t07_max_2() {
-    int count = 0;
+  
     int max = 0;
     int max1 = 0;
     int a = 1;
