@@ -23,9 +23,9 @@
 using namespace std;
 
 int t09_row() {
-    int a = -1, a1, c = 1, max = 0;
+    int a = -1, /*a1,*/ c = 1, max = 0;
     while (a != 0){
-        a1 = a;
+        int a1 = a;
         cin >>a;
         if (a == a1) {c++;} else {c = 1;}
         if (c > max) {max = c;}
