@@ -19,7 +19,7 @@
 using namespace std;
 
 int t07_swap() {
-  int n, m = 0, i, temp = 0;
+  int n, m = 0, i, temp;
     cin >> n;
     m = n - n % 2;
     vector <int> a(n);
