@@ -29,7 +29,7 @@
 using namespace std;
 
 int t07_max_2() {
-  
+  //codacy doesn't see the pull request
     int max = 0;
     int max1 = 0;
     int a = 1;
