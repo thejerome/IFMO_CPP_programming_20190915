@@ -14,10 +14,24 @@
 
 #include "t08_cycleswap.h"
 #include <iostream>
-
+#include <vector>
 
 using namespace std;
 
 int t08_cycleswap() {
-
+  int n, i, temp = 0;
+    cin >> n;
+    vector <int> a(n);
+    for ( i = 0; i < n; i++) {
+     cin >> a[i];   
+    }
+    temp = a[n-1];
+    for ( i = n-1; i > 0; i--) {
+       a[i] = a[i-1]; 
+    }
+     a[0] = temp;
+     for ( i = 0; i < n; i++) {
+     cout << a[i] << " ";   
+    }
+  return 0;
 }

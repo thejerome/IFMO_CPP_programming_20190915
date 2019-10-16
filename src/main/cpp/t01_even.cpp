@@ -14,10 +14,20 @@
 
 #include "t01_even.h"
 #include <iostream>
-
+#include <vector>
 
 using namespace std;
 
 int t01_even() {
-
+ int n, i;
+    cin >> n;
+    vector <int> a(n);
+        for ( i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+    
+    for ( i = 0; i < n; i+=2) {
+        cout << a[i] << " ";
+    }
+  return 0;
 }

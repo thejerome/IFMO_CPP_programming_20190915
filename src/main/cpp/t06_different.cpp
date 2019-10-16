@@ -14,10 +14,21 @@
 
 #include "t06_different.h"
 #include <iostream>
-
+#include <vector>
 
 using namespace std;
 
 int t06_different() {
-
+   int n, i, count = 0;
+    cin >> n;
+    vector <int> a(n);
+    cin >> a[0];
+     for (i = 1; i < n; i++) {
+      cin >> a[i];
+       if (a[i] != a[i-1]) {
+           count++;
+       }
+     }
+    cout << count + 1;
+  return 0;
 }

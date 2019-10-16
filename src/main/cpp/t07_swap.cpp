@@ -14,10 +14,25 @@
 
 #include "t07_swap.h"
 #include <iostream>
-
+#include <vector>
 
 using namespace std;
 
 int t07_swap() {
-
+  int n, m = 0, i;
+    cin >> n;
+    m = n - n % 2;
+    vector <int> a(n);
+    for (i = 1; i < m; i+=2) {
+      cin >> a[i-1] >> a[i];
+         a[i-1] = a[i] + a[i-1];
+         a[i] = a[i-1] - a[i];
+         a[i-1] = a[i-1] - a[i];
+        cout << a[i-1] << " " << a[i] << " ";
+    }
+    if ( n % 2 != 0 ) {
+        cin >> a[n];
+        cout << a[n];
+    }
+  return 0;
 }

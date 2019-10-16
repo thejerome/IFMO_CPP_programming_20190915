@@ -14,10 +14,20 @@
 
 #include "t03_bigger.h"
 #include <iostream>
-
+#include <vector>
 
 using namespace std;
 
 int t03_bigger() {
-
+  int n,i;
+    cin >> n;
+    vector <int> a(n);
+    cin >> a[0];
+    for ( i = 1; i < n; i++) {
+      cin >> a[i];
+        if (a[i] > a[i-1]) {
+            cout << a[i] << " ";
+        }
+    }
+  return 0;
 }

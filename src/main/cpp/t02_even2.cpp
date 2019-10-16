@@ -14,10 +14,19 @@
 
 #include "t02_even2.h"
 #include <iostream>
-
+#include <vector>
 
 using namespace std;
 
 int t02_even2() {
-
+ int n, i;
+    cin >> n;
+    vector <int> a(n);
+    for (i = 0; i < n; i++) {
+        cin >> a[i];
+        if ( a[i] % 2 == 0 ) {
+            cout << a[i] << " ";
+        }
+    }
+  return 0;
 }
