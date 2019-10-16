@@ -18,5 +18,10 @@
 using namespace std;
 
 int t02_frac_2() {
-
+int b;
+double a;
+cin >> a;
+a=a*10;
+b=a;
+cout << b%10;
 };
