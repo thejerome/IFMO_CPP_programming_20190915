@@ -28,6 +28,7 @@ int t06_longest() {
 	int pla = 0;
 	string x;
 	getline(cin, x);
+	x.insert(x.end(), ' ');
 	for (int i = 0; x[i] != '\0'; i++)
 		if (x[i] == ' ') {
 			if (len > max) {

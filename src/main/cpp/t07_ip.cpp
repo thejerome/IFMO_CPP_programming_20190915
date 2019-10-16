@@ -36,5 +36,20 @@
 using namespace std;
 
 int t07_ip() {
-
+	char addr1[4][10]{};
+	int addr2[4];
+	string x;
+	getline(cin, x);
+	for (int i = 0, k = 0; i < 4; i++, k++) {
+		for (int j = 0; x[k] != '.' && x[k] != '\0'; j++, k++)
+			addr1[i][j] = x[k];
+		addr2[i] = stoi(addr1[i], 0, 10);
+	}
+	for (int i = 0; addr2[i] >= 0 && addr2[i] <= 255; i++)
+		if (i == 3) {
+			cout << "YES";
+			return 0;
+		}
+	cout << "NO";
+	return 0;
 }
