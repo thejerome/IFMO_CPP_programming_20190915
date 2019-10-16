@@ -36,35 +36,41 @@ using namespace std;
 
 int t07_ip() {
   
-    int n = 0, cnt = 1;
-    char c[523];
-    cin.getline(c, 523);
+    int cnt = 0;
+    string c;
+    getline(cin, c);
 
     if (c[0] != '.') {
-        n += c[0] - '0';
-        for (int i = 1; i < strlen(c); i ++) {
+        cnt += c[0] - '0';
+        for (int i = 1; i < c.length(); i ++) {
             if (c[i] == '.') {
-                if (n > -1 and n < 256 and c[i - 1] != '.') {
-                    cnt ++;
-                    n = 0;
+                if (cnt > -1 and cnt < 256 and c[i - 1] != '.') {
+                    cnt = 0;
                 }
                 else {
                     cnt = -1;
                     break;
                 }
             } else if (c[i] >= '0' and c[i] <= '9'){
-                n = n * 10 + (c[i] - '0');
+                cnt = cnt * 10 + (c[i] - '0');
             }
             else {
-                cnt ++;
+                cnt = -1;
                 break;
             }
         }
     }
 
-    if (cnt == 4)
-        cout << "YES";
-    else
+    if (cnt != -1 and c[c.length() - 1] != '.') {
+        cnt = 0;
+        for (int i = 1; i < c.length(); i ++)
+            if (c[i] == '.')
+                cnt ++;
+        if (cnt == 3)
+            cout << "YES";
+        else
+            cout << "NO";
+    } else
         cout << "NO";
 
 }
