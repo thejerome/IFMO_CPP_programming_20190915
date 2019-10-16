@@ -36,6 +36,7 @@ int min4(int a, int b, int c, int d) {
 
 int t01_min() {
 	int a = 0, b = 0, c = 0, d = 0;
+	cin >> a >> b >> c >> d;
 	cout << min4(a, b, c, d);
     return 0;
 }
