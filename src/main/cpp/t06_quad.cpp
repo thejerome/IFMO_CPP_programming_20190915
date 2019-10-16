@@ -35,7 +35,7 @@ int t06_quad() {
         }
     }
     if ( d == 0 ) {
-       x1 = (-sqrt(d)) / 2 / a; 
+       x1 = (-b + sqrt(d)) / 2 / a; 
         cout << x1;
     }
   return 0;
