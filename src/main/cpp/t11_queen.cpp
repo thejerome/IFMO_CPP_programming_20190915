@@ -46,12 +46,15 @@ int t11_queen() {
     for (i = 1; i < 9; i++) {
      cin >> x[i] >> y[i];   
     }
-    for (i = 1; i < 8; i++) {
-        for (j = i + 1; i < 9; j++) {
-            if (x[i] == x[j] || y[i] == y[j] || (x[i]+y[j] == y[i]+x[j]) ) {
+    for (i = 1; i < 9; i++) {
+        for (j = i + 1; j < 9; j++) {
+            if (x[i] == x[j] || y[i] == y[j] || abs(x[i]-x[j]) == abs(y[i]-y[j]) ) {
                 b = 1;
+                break;
             }
+            if (b) { break; }
         }
+        if (b) { break; }
     }
     if (b) {
         cout << "YES";
