@@ -26,4 +26,5 @@ int t05_max() {
         if (a > max) {max = a;}
     }
     cout <<max;
+    return 0;
 };

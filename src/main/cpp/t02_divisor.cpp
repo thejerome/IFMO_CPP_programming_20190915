@@ -27,4 +27,5 @@ int t02_divisor() {
         p--;
     }
     cout <<d;
+    return 0;
 };

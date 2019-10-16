@@ -26,4 +26,5 @@ int t04_sum() {
         s = s + a;
     }
     cout <<s;
+    return 0;
 };

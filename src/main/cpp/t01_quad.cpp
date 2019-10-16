@@ -25,4 +25,5 @@ int t01_quad() {
         cout <<(i*i) <<" ";
         i++;
     }
+    return 0;
 };
