@@ -29,12 +29,13 @@ using namespace std;
 
 //function power
 double power(double a, int n) {
-	if (n - 1 > 0)
+	double la = a;
+	if (n > 0)
 		return a * power(a, n - 1);
-	if (n - 1 < 0)
+	if (n < 0)
 		return 1 / power(a, -n);
-	if (!(n - 1))
-		return a;
+	if (!n)
+		return a / la;
 }
 
 int t05_power() {
