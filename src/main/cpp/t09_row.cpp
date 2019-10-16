@@ -23,5 +23,15 @@
 using namespace std;
 
 int t09_row() {
-
+    int s, n , k = 0, c = 0;
+    cin >> n;
+    cin >> s;
+    while (n!=0) {
+        if(s == n) {k++;}
+        if(s != n) {if (c < k) {c = k;}; k = 0;}
+        s = n;
+        cin >> n;
+    }
+    if(c!=0) {cout << c + 1;}
+    else {cout << 1;}
 };
