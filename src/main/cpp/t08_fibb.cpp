@@ -21,12 +21,11 @@
 using namespace std;
 
 int t08_fibb() {
-    int s=0, n = 1, a = 1, k = 0, c = 2;
+    int s=0, n = 1, a = 1, c = 2;
     cin >> s;
     if(s == 0 or s == 1) {cout << s;}
     else {
-    while (c!= s) {k = a; a = n;
-    n = n + k; c++;
+    while (c!= s) {n = n + a; a = n - a; c++;
     }
     cout << n;}
 };
