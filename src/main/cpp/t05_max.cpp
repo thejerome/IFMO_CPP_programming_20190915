@@ -20,7 +20,7 @@
 using namespace std;
 
 int t05_max() {
-    int s=0, n;
+    int s=0, n=1;
     cin >> s;
     while (n!= 0) {cin >> n;
     if(s < n) {s = n;};
