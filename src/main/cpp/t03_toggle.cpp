@@ -24,5 +24,13 @@
 using namespace std;
 
 int t03_toggle() {
-
+	char x;
+	cin >> x;
+	if (x >= 97 && x <= 122)
+		cout << char(x - 32);
+	if (x >= 65 && x <= 90)
+		cout << char(x + 32);
+	else
+		cout << x;
+	return 0;
 }
