@@ -21,18 +21,18 @@
 using namespace std;
 
 int t08_fibb() {
-    int N, F, F1, F2;//, i = 1;
+    int N = 0; int F = 0;//, F1 = 0;//, F2;//, i = 1;
     cin >>N;
     if ((N == 0) or (N == 1)) {
         F = N;
     } else {
         F = 1;
-        F1 = 0;
+        int F1 = 0;
         int i =1;
         while (i < N) {
             i++;
-            F2 = F1;
-            F1 = F;
+            int F2 = F1;
+             F1 = F;
             F = F1 + F2;
         }
     }
