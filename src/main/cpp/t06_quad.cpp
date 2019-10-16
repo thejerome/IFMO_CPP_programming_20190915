@@ -23,18 +23,17 @@ using namespace std;
 int t06_quad() {
   float A, B, C, D, X1, X2;
     cin >> A >> B >> C;
-    D = B * B - 4 * A * C;
-    if (D > 0){
+    D = B * B - 4 * A * A;
+
+    if (D >= 0) {
         X1 = (-B + sqrt(D)) / (2 * A);
         X2 = (-B - sqrt(D)) / (2 * A);
     }
-    if (D == 0){
+    if (D == 0)
         cout << X1;
-    }
-    if (D > 0 && X1 > X2){
-        cout << X2 << " " << X1;
-    }
-    else if (D > 0){
-        cout << X1 << " " << X2;
-    }
+    if (D > 0 and X1 > X2)
+        cout << X2 << " " << X1 << endl;
+    else if (D > 0)
+        cout << X1 << " " << X2 << endl;
+        return 0;
 };
