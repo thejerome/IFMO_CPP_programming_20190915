@@ -30,4 +30,15 @@ using namespace std;
 
 int t07_max_2() {
 
+    int s=0, n, a = 0;
+    cin >> s;
+    cin >> n;
+    a = n;
+    while (n!= 0) { if(s <= n) {a = s; s = n;}
+    else {if(a <= n) {a = n;};}
+
+    cin >> n;
+    }
+    cout << a;
+
 };
