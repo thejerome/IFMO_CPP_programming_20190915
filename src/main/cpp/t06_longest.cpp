@@ -25,10 +25,10 @@ using namespace std;
 int t06_longest() {
   
     int cnt = 0, maxl = 0, maxind = 0, ind = 0;
-    char c[523];
-    cin.getline(c, 523);
+    string c;
+    getline(cin, c);
 
-    for (int i = 0; i < strlen(c); i ++)
+    for (int i = 0; i < c.length(); i ++)
         if (c[i] == ' ') {
             if (maxl < cnt) {
                 maxl = cnt;
@@ -43,7 +43,7 @@ int t06_longest() {
         maxind = ind;
     }
 
-    for (int i = maxind; i < strlen(c); i ++)
+    for (int i = maxind; i < c.length(); i ++)
         if (c[i] != ' ')
             cout << c[i];
         else
