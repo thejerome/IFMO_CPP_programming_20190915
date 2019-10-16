@@ -28,14 +28,14 @@ bool isCapture(int x1, int y1, int x2, int y2) {
 
 int queen(int n, int c, int a[], int cnt) {
     if (c < n * 2) {
-        int j;
         for (int i = 0; i < n * 2; i += 2){
             a[c + 1] = i / 2;
-            j = c - 2;
-            for (j; j > -1; j -= 2)
-                if (isCapture(a[c], a[c + 1], a[j], a[j + 1]))
+            for (int j = c - 2; j > -1; j -= 2)
+                if (isCapture(a[c], a[c + 1], a[j], a[j + 1])) {
+                    a[c + 1] = -1;
                     break;
-            if (j == -2) {
+                }
+            if (a[c + 1] != -1) {
                 cnt = queen(n, c + 2, a, cnt);
             }
         }
