@@ -25,8 +25,8 @@ int t06_quad() {
     cin >> a >> b >> c;
     d = b * b - 4 * a * c;
     if ( d > 0 ) {
-     x1 = ((-1) * b + sqrt(d)) / 2 / a; 
-     x2 = ((-1) * b - sqrt(d)) / 2 / a;  
+     x1 = (-b + sqrt(d)) / 2 / a; 
+     x2 = (-b - sqrt(d)) / 2 / a;  
         if ( x1 < x2 ) {
          cout << x1 << " " << x2;
         }
@@ -35,7 +35,7 @@ int t06_quad() {
         }
     }
     if ( d == 0 ) {
-       x1 = ((-1) * b + sqrt(d)) / 2 / a; 
+       x1 = (-sqrt(d)) / 2 / a; 
         cout << x1;
     }
   return 0;
