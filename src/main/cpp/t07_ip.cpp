@@ -29,10 +29,42 @@
 
 #include "t07_ip.h"
 #include <iostream>
+#include <cstring>
 
 
 using namespace std;
 
 int t07_ip() {
+  
+    int n = 0, cnt = 1;
+    char c[523];
+    cin.getline(c, 523);
+
+    if (c[0] != '.') {
+        n += c[0] - '0';
+        for (int i = 1; i < strlen(c); i ++) {
+            if (c[i] == '.') {
+                if (n > -1 and n < 256 and c[i - 1] != '.') {
+                    cnt ++;
+                    n = 0;
+                }
+                else {
+                    cnt = -1;
+                    break;
+                }
+            } else if (c[i] >= '0' and c[i] <= '9'){
+                n = n * 10 + (c[i] - '0');
+            }
+            else {
+                cnt ++;
+                break;
+            }
+        }
+    }
+
+    if (cnt == 4)
+        cout << "YES";
+    else
+        cout << "NO";
 
 }
