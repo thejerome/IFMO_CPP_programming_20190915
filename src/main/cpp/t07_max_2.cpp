@@ -31,10 +31,14 @@ using namespace std;
 int t07_max_2() {
     int s=0, n, a = 0;
     cin >> s;
-    while (n!= 0) {cin >> n;
-    if(s < n) {a= s; s = n;};
+    cin >> n;
+    while (n!= 0) {
+
+        if(s <= n) {a = s; s = n;}
+        cin >> n;
     }
     cout << a;
+
 
 
 };
