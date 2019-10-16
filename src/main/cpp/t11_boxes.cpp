@@ -37,5 +37,25 @@
 using namespace std;
 
 int t11_boxes() {
-
+    int A1 = 0, A2 = 0, B1 = 0, B2 = 0, C1 = 0, C2 = 0;
+    cin >>A1 >>B1 >>C1 >>A2 >>B2 >>C2;
+    if (((A1 == A2) and (B1 == B2) and (C1 == C2)) or  ((A1 == A2) and (C1 == B2) and (B1 == C2)) or
+        ((B1 == A2) and (C1 == B2) and (A1 == C2)) or  ((B1 == A2) and (A1 == C2) and (C1 == C2)) or
+        ((C1 == A2) and (A1 == B2) and (B1 == C2)) or ((C1 == A2) and (B1 == B2) and (A1 == C2))) {
+        cout << "Boxes are equal";
+    } else {
+        if (((A1 <= A2) and (B1 <= B2) and (C1 <= C2)) or ((A1 <= A2) and (C1 <= B2) and (B1 <= C2)) or
+            ((B1 <= A2) and (C1 <= B2) and (A1 <= C2)) or ((B1 <= A2) and (A1 <= C2) and (C1 <= C2)) or
+            ((C1 <= A2) and (A1 <= B2) and (B1 <= C2)) or ((C1 <= A2) and (B1 <= B2) and (A1 <= C2))) {
+            cout << "The first box is smaller than the second one";
+        } else {
+        if (((A2 <= A1) and (B2 <= B1) and (C2 <= C1)) or ((A2 <= A1) and (C2 <= B1) and (B2 <= C1)) or
+            ((B2 <= A1) and (C2 <= B1) and (A2 <= C1)) or ((B2 <= A1) and (A2 <= C1) and (C2 <= C1)) or
+            ((C2 <= A1) and (A2 <= B1) and (B2 <= C1)) or ((C2 <= A1) and (B2 <= B1) and (A2 <= C1))) {
+            cout << "The first box is larger than the second one";
+        } else {
+            cout << "Boxes are incomparable";
+        }
+        }
+    }
 };
