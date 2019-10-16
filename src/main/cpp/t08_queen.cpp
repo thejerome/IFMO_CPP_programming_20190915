@@ -29,7 +29,7 @@ void update(int n, int** a, int x, int y, int u) {
 				a[i][j] += u;
 }
 
-int t08_queen(int n, int** a, int i = 0) {
+int ferz(int n, int** a, int i = 0) {
 	int combos = 0;
 	for (int j = 0; j < n; j++) {
 		if (!a[i][j]) {
@@ -54,7 +54,7 @@ int t08_queen(int n, int** a, int i = 0) {
 	return combos;
 }
 
-int main() {
+int t08_queen() {
 	int n = 0;
 	cin >> n;
 	int** a = new int* [n];
