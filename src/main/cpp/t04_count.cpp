@@ -31,9 +31,9 @@ using namespace std;
 int t04_count() {
   
     int cnt = 1;
-    char c[523];
-    cin.getline(c, 523);
-    for (int i = 0; i < strlen(c); i ++)
+    string c;
+    getline(cin, c);
+    for (int i = 0; i < c.length(); i ++)
         if (c[i] == ' ')
             cnt ++;
     cout << cnt;
