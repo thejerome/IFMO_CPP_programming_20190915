@@ -25,23 +25,27 @@
 using namespace std;
 
 int t10_unique() {
-  int n, i, j, count = 0;
-    bool b = 1;
+ int n, i, j, count = 0;
     cin >> n;
     vector <int> a(n);
-    for (i=0; i < n; i++) {
-     cin >> a[n];   
-    }
     for (i = 0; i < n; i++) {
-        for (j = 0; j < n; j++) {
-            if ( i != j && a[i] == a[j]) {
-                b = 0;
-            }
-        }
-        if (b) {
-            cout << a[i] << " ";
-        }
-            b = 1;       
+        cin >> a[i];
     }
+    
+     for (i = 0; i < n; i++) {
+       for (j = 0; j < n; j++) {
+           if (a[i] == a[j]) {
+               count++;
+           }
+           if (count == 2) {
+               break;
+           }
+       }
+         if (count == 1) {
+             cout << a[i] << " ";
+         }
+         count = 0;
+     }
+           
   return 0;
 }
