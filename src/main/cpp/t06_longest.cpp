@@ -17,10 +17,36 @@
 
 #include "t06_longest.h"
 #include <iostream>
+#include <cstring>
 
 
 using namespace std;
 
 int t06_longest() {
+  
+    int cnt = 0, maxl = 0, maxind = 0, ind = 0;
+    char c[523];
+    cin.getline(c, 523);
+
+    for (int i = 0; i < strlen(c); i ++)
+        if (c[i] == ' ') {
+            if (maxl < cnt) {
+                maxl = cnt;
+                maxind = ind;
+            }
+            ind = i + 1;
+            cnt = 0;
+        } else
+            cnt ++;
+    if (maxl < cnt) {
+        maxl = cnt;
+        maxind = ind;
+    }
+
+    for (int i = maxind; i < strlen(c); i ++)
+        if (c[i] != ' ')
+            cout << c[i];
+        else
+            break;
 
 }
