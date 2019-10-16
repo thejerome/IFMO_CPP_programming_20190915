@@ -63,7 +63,7 @@ int t07_ip() {
 
     if (cnt != -1 and c[c.length() - 1] != '.') {
         cnt = 0;
-        for (int i = 1; i < c.length(); i ++)
+        for (int i = 0; i < c.length(); i ++)
             if (c[i] == '.')
                 cnt ++;
         if (cnt == 3)
