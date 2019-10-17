@@ -41,7 +41,7 @@ int t07_ip() {
 	getline(cin, x);
 	while (x[l + p] != '\0') {
 		if (x[l + p] == '.')
-			if (x[p] = !'.' && stoi(x.substr(p, l)) >= 0 && stoi(x.substr(p, l)) <= 255) {
+			if (x[p] != '.' && stoi(x.substr(p, l)) >= 0 && stoi(x.substr(p, l)) <= 255) {
 				p += l + 1;
 				l = 0;
 				++c;
