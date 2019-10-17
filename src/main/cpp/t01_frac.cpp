@@ -24,5 +24,5 @@ int t01_frac() {
   int a;
   cin >> x;
   a = int(x);
-  cout << x - a;
+  cout << setprecision(5) << x - a;
 };
