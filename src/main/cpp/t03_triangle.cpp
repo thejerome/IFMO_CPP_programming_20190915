@@ -20,5 +20,8 @@
 using namespace std;
 
 int t03_triangle() {
-
+float A,B,C,S;
+cin >> A >> B >> C;
+S = 0.5*A*B;
+cout <<fixed << setprecision(4) << S;
 };
