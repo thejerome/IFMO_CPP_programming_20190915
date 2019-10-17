@@ -17,11 +17,38 @@
 
 #include "t07_snake.h"
 #include <iostream>
+#include <iomanip>
 
 
 using namespace std;
 
 int t07_snake() {
-    
+    int M, N, x = 1;
+    int** matrix;
+    cin >> M >> N;
+
+    matrix = new int*[M];
+    for (int i = 0; i < M; i++) {
+        matrix[i] = new int[N];
+    }
+    for (int i = 0; i < M; i++) {
+        if (i%2 == 0){
+            for (int j = 0; j < N; j++) {
+                matrix[i][j] = x;
+                x++;
+            }
+        } else {
+            for (int j = N-1; j >= 0; j--) {
+                matrix[i][j] = x;
+                x++;
+            }
+        }
+    }
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < N; j++) {
+            cout << setw(4) << matrix[i][j];
+        }
+        cout << endl;
+    }
     return 0;
 }

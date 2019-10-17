@@ -17,11 +17,67 @@
 
 #include "t09_spiral.h"
 #include <iostream>
+#include <iomanip>
 
 
 using namespace std;
 
 int t09_spiral() {
-    
+    int M, N, x = 1, ch = 0;
+    int** matrix;
+    cin >> M >> N;
+
+    matrix = new int*[M];
+    for (int i = 0; i < M; i++) {
+        matrix[i] = new int[N];
+    }
+    for (int i = 0; i <M; i++) {
+        for (int j = 0; j < N; j++) {
+            matrix[i][j] = 0;
+        }
+    }
+    while (x <= N*M) {
+        for (int i = 0+ch; i < 1+ch; i++) {
+            for (int j = 0+ch; j < N-ch; j++) {
+                matrix[i][j] = x;
+                x++;
+            }
+        }
+        if (x >= N*M){
+            break;
+        }
+        for (int i = 1+ch; i < M-ch; i++) {
+            for (int j = N-1-ch; j < N-ch; j++){
+                matrix[i][j] = x;
+                x++;
+            }
+        }
+        if (x >= N*M){
+            break;
+        }
+        for (int i = M-1-ch; i < M-ch; i++) {
+            for (int j = N-2-ch; j >= 0+ch; j--){
+                matrix[i][j] = x;
+                x++;
+            }
+        }
+        if (x >= N*M){
+            break;
+        }
+        for (int i = M-2-ch; i >= 1+ch; i--) {
+            for (int j = 0+ch; j < 1+ch; j++){
+                matrix[i][j] = x;
+                x++;
+            }
+        }
+        ch++;
+    }
+
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < N; j++) {
+            cout << setw(4 ) << matrix[i][j];
+        }
+        cout << endl;
+    }
     return 0;
 }

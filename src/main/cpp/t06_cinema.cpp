@@ -29,6 +29,33 @@
 using namespace std;
 
 int t06_cinema() {
-    
+    int M, N, k, count = 1, num = 21;
+    int** matrix;
+    cin >> M >> N;
+    matrix = new int*[M];
+    for (int i = 0; i < M; i++) {
+        matrix[i] = new int[N];
+    }
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < N; j++) {
+            cin >> matrix[i][j];
+        }
+    }
+    cin >> k;
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < N-1; j++) {
+            if ((matrix[i][j] == 0) && (matrix[i][j+1] == 0)){
+                count++;
+            }
+            if ((count == k) && (i+1 < num)){
+                num = i+1;
+            }
+        }
+        count = 1;
+    }
+    if (num == 21){
+        num = 0;
+    }
+    cout << num;
     return 0;
 }
