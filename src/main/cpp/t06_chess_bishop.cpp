@@ -23,8 +23,7 @@ int t06_chess_bishop() {
   int a,b,c,d ;
     cin >> a >> b >> c >> d ;
     if (a!=c and b!=d) {
-        if (((a+b)%2)==((c+d)%2)) {
-          if (((a/c)==(b/d)) or ((a/c) == (d/b))) { 
+      if (abs(a-c) == abs(d-b))
             cout << "YES";
             return 0;
         }
