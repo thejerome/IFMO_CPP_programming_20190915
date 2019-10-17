@@ -19,19 +19,47 @@
 //
 //Sample Input:
 //
-//26
-//5
-//30 35 40 41 42
-//Sample Output:
+/*26
+5
+30 35 40 41 42
+*///Sample Output:
 //
 //3
 
 #include "t02_shoes.h"
 #include <iostream>
+#include <algorithm>
+#include <vector>
 
 
 using namespace std;
-
+int co=0;
+int size=0;void inc(int n){
+    if(n>=size+3){
+        size=n;
+        co++;
+    }
+}
+bool fit(int n){
+    if(n>=size){
+        size=n;
+        co++;
+        return 1;
+    }
+    else
+        return 0;
+}
 int t02_shoes() {
-    
+    int n,c;
+    cin>>size;
+    cin>>n;
+    vector<int> a;
+    for(int i =0;i<n;i++){
+        cin>>c;
+        a.push_back(c);
+    }
+    sort(a.begin(),a.end());
+    for_each(find_if(a.begin(),a.end(),fit),a.end(),inc);
+    cout<<co;
+    return 0;
 }
