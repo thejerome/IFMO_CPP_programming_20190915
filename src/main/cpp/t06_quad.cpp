@@ -22,7 +22,7 @@ using namespace std;
 
 int t06_quad() {
     int a, b, c, D, x1, x2;
-    сin >> a >> b >> c;
+    cin >> a >> b >> c;
     D = sqrt(pow(b, 2) - 4*a*c);
     if (D > 0){
         x1 = (-b + D)/2;
