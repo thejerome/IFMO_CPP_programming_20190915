@@ -20,27 +20,27 @@ using namespace std;
 
 int t10_sort3() {
   int a,b,c  ;
-    cin >> a >> b  >> c  ;
+    cin >> a >> >> b  >> c  ;
     if (a>=b) {
         if (a>=c) {
             if (b>=c) {
-                cout << c << b << a ;
+                cout << c << " " << b << " " << a ;
                 return 0;
             };
-            cout << b << c << a;
+            cout << b << " " << c << " " << a;
             return 0;
         }
-        cout << b << a << c;
+        cout << b << " " <<  a << " " << c;
         return 0;
     }
     if (b>=c) {
         if (a>=c) {
-            cout << c << a << b;
+            cout << c << " " << a << " " << b;
             return 0;
         }
-        cout << a << c << b;
+        cout << a << " " << c << " " << b;
+        return 0;
     }
-    cout << a << b << c;
+    cout << a << " " << b << " " << c;
     return 0;
-
 };
