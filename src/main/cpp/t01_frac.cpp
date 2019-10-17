@@ -16,7 +16,7 @@
 #include "t01_frac.h"
 #include <iostream>
 #include <cmath>
-
+#include <iomanip>
 using namespace std;
 
 int t01_frac() {
