@@ -63,4 +63,3 @@ int t11_boxes() {
         return 0;
     }
 }
-};
