@@ -13,20 +13,41 @@
 //
 //Sample Input:
 //
-//2
-//1 2
-//2 3
-//Sample Output:
-//
+/*2
+1 2
+2 3
+Sample Output:
+*/
 //1 2
 //2 3
 
 #include "t03_points.h"
 #include <iostream>
+#include <map>
+#include <vector>
+#include <algorithm>
 
 
 using namespace std;
 
 int t03_points() {
-    
+    int n;
+    string xs,ys,s;
+    map<int,string> a;
+    cin>>n;
+    vector<int> rs;
+    for(int i =0;i<n;i++){
+        cin>>xs;
+        cin>>ys;
+        s=xs+" "+ys;
+        rs.push_back(stoi(xs)*stoi(xs)+stoi(ys)*stoi(ys));
+        a[stoi(xs)*stoi(xs)+stoi(ys)*stoi(ys)]+=s+"\n";
+    }
+    sort(rs.begin(),rs.end());
+    cout<<a[rs[0]];
+    for(int i=1;i<n;i++){
+        if(rs[i]!=rs[i-1])
+            cout<<a[rs[i]];
+    }
+    return 0;
 }
