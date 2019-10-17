@@ -49,7 +49,7 @@ while (N!=0)
     }
 
 }
-if (F==true)
+if (F)
     {
         cout << MAX;
 }
