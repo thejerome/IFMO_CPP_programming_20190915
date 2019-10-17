@@ -22,7 +22,7 @@ using namespace std;
 
 int t07_quad2() {
     int a, b, c, D, x1, x2;
-    сin >> a, b, c;
+    cin >> a >> b >> c;
     D = sqrt(pow(b, 2) - 4*a*c);
     if (D > 0){
         x1 = (-b + D)/2;
@@ -37,7 +37,7 @@ int t07_quad2() {
     else if(D == 0){
         x1 = (-b + D)/2;
         cout << 1 << " " << x1;
-    };
+    }
     else if (D < 0){
         cout << 0;
     }
