@@ -22,7 +22,7 @@ using namespace std;
 int t06_chess_bishop() {
   int a,b,c,d ;
     cin >> a >> b >> c >> d ;
-    if (a!=c & b!=d) {
+    if (a!=c and b!=d) {
         if (((a+b)%2)==((c+d)%2)) {
             cout << "YES";
             return 0;
