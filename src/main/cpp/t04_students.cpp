@@ -37,7 +37,7 @@ using namespace std;
 
 int t04_students() {
     int n;
-    double m,a,b,c;
+    double a,b,c;
     string sn,fn,s;
     map<double,string> st;
     cin>>n;
@@ -48,10 +48,10 @@ int t04_students() {
         cin>>a;
         cin>>b;
         cin>>c;
-        m=(a+b+c)/3;
+        c=(a+b+c)/3;
         s=sn+" "+fn;
-        p.push_back(m);
-        st[m]+=s+"\n";
+        p.push_back(c);
+        st[c]+=s+"\n";
     }
     sort(p.begin(),p.end());
     reverse(p.begin(),p.end());
