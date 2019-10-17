@@ -24,6 +24,29 @@
 using namespace std;
 
 int t02_star() {
+    int N;
+    string** matrix;
+    cin >> N;
 
+    matrix = new string*[N];
+    for (int i = 0; i < N; i++) {
+        matrix[i] = new string[N];
+    }
+    cout << endl;
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            if ((i == j) || ((i + j) == (N - 1)) || (j == N/2) || (i == N/2)){
+                matrix[i][j] = "*";
+            } else {
+                matrix[i][j] = ".";
+            }
+        }
+    }
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
     return 0;
 }

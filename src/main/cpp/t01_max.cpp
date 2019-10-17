@@ -27,6 +27,30 @@
 using namespace std;
 
 int t01_max() {
-    
+    int M, N, max = 0, imax = 0, jmax = 0;
+    int** matrix;
+    cin >> M >> N;
+
+    matrix = new int*[M];
+    for (int i = 0; i < M; i++) {
+        matrix[i] = new int[N];
+    }
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < N; j++) {
+            cin >> matrix[i][j];
+        }
+    }
+    cout << endl;
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < N; j++) {
+            if (matrix[i][j] > max) {
+                max = matrix[i][j];
+                imax = i;
+                jmax = j;
+            }
+        }
+    }
+    cout << endl;
+    cout << imax << " " << jmax;
     return 0;
 }

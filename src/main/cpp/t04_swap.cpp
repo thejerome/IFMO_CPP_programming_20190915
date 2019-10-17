@@ -25,6 +25,34 @@
 using namespace std;
 
 int t04_swap() {
-    
+    int M, N, t, i, j;
+    int** matrix;
+    cin >> M >> N;
+
+    matrix = new int*[M];
+    for (int b = 0; b < M; b++) {
+        matrix[b] = new int[N];
+    }
+    for (int b = 0; b < M; b++) {
+        for (int a = 0; a < N; a++) {
+            cin >> matrix[b][a];
+        }
+    }
+    cin >> i >> j;
+    cout << endl;
+    for (int b = 0; b < M; b++) {
+        for (int a = i; a < i+1; a++){
+            t = matrix[b][a];
+            matrix[b][a] = matrix[b][j];
+            matrix[b][j] = t;
+        }
+    }
+    for (int b = 0; b < M; b++) {
+        for (int a = 0; a < N; a++) {
+            cout << matrix[b][a] << " ";
+        }
+        cout << endl;
+    }
     return 0;
 }
+

@@ -38,6 +38,34 @@
 using namespace std;
 
 int t05_kdiag() {
-    
+    int N, k, t=0;
+    int** matrix;
+    cin >> N;
+
+    matrix = new int*[N];
+    for (int i = 0; i < N; i++) {
+        matrix[i] = new int[N];
+    }
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            cin >> matrix[i][j];
+        }
+    }
+    cin >> k;
+    if (k >= 0){
+        for (int i = k; i < N; i++) {
+            for (int j = i-k; j < i-k+1; j++) {
+                cout << matrix[i][j] << " ";
+            }
+        }
+    } else {
+        for (int i = 0; i < N+k; i++) {
+            for (int j = abs(k)+t; j < abs(k)+1+t; j++) {
+                cout << matrix[i][j] << " ";
+            }
+            t++;
+        }
+    }
+
     return 0;
 }
