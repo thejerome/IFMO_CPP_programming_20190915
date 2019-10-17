@@ -22,5 +22,17 @@
 using namespace std;
 
 int t04_deposit() {
+    int rubl, k;
+    float coin, p, money;
+    cin >> p >> rubl >> coin >> k;
+    money = (rubl + (coin/100));
+    p = 1 + (p/100);
+    while (k > 0){
+        money = money * p;
+        cout << money << " ";
+        k--;
+        };
+    cout << int(money)<< " "<< int(money * 100) % 100;
+    return 0;
 
 };
