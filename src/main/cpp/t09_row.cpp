@@ -23,5 +23,20 @@
 using namespace std;
 
 int t09_row() {
+int N,B,C=1,F=C;
+cin >> N;
+B = N;
 
+while (N!=0)
+{
+    cin >> N;
+    if (B == N)
+    {
+        C++;
+    }
+    else if (F <= C) {F=C;C=1;}
+    B=N;
+
+}
+cout << F;
 };

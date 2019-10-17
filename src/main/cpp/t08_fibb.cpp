@@ -21,5 +21,15 @@
 using namespace std;
 
 int t08_fibb() {
+int N,Cym,S=1,F=0,C=0;
+cin >> N;
 
+while (C<=N-2)
+    {
+
+    
+    Cym=F+S; F=S;   S=Cym;
+    C++;
+    }
+if(N==0){cout << 0;}    else if (N==1) {cout << 1;}     else {cout << Cym;}
 };

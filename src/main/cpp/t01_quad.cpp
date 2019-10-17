@@ -19,5 +19,26 @@
 using namespace std;
 
 int t01_quad() {
+int N,C,S;
+    C = 0;
+    S = 0;
+
+cin >> N;
+
+ do
+ {
+        if (C = S)
+        {
+
+        C*=S;
+        if (C <= N)
+        {
+            cout << C << "\n";
+        }
+}
+
+    C++;
+    S++;
+} while (C <= N);
 
 };

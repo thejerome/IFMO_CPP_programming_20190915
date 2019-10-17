@@ -24,5 +24,25 @@
 using namespace std;
 
 int t10_max_local() {
+int N,P,M,C=0;
+cin >> N ;
+P = N;
+cin >> N;
+M = N;
 
+while (N!=0)
+{
+    cin >> N;
+    if (N!=0)
+    {
+
+
+    if ((M > N) && (P < M))
+    {
+        C++;
+    }
+   P = M; M = N;
+    }
+}
+cout << C;
 };
