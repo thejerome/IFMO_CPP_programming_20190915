@@ -29,10 +29,11 @@ int t04_deposit() {
     p = 1 + (p/100);
     while (k > 0){
         money = money * p;
-        cout << money << " ";
+        money = float(int(money * 100)) / 100;
         k--;
         };
     cout << int(money)<< " "<< int(money * 100) % 100;
     return 0;
+
 
 };
