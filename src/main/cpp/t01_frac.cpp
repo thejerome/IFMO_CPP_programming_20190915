@@ -20,9 +20,7 @@
 using namespace std;
 
 int t01_frac() {
-    float n, num;
+   double n;
     cin >> n;
-    num = floor(n);
-    n = n - num;
-    cout << n;
+    cout << n - int(n);
 };
