@@ -44,7 +44,7 @@ int t11_boxes() {
         return 0;
     }
     if ((a*b*c)<(d*e*f)) {
-        cout << "The first box is smaller than the secon one";
+        cout << "The first box is smaller than the second one";
         return 0;
     }
     if ((a*b*c)==(d*e*f)) {
@@ -53,6 +53,4 @@ int t11_boxes() {
     }
     cout << "Boxes are incomparable";
     return 0;
-}
-
 };
