@@ -20,5 +20,10 @@
 using namespace std;
 
 int t03_triangle() {
-
+    float a, b, c, p, s;
+    p = (a+b+c)/2;
+    s = sqrt(p*(p-a)*(p-b)*(p-c));
+    cout.setf(ios::fixed);
+    cout.precision(4);
+    cout << s;
 };
