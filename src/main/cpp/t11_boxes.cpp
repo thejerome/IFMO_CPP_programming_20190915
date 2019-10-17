@@ -39,19 +39,20 @@ using namespace std;
 int t11_boxes() {
   int a, b, c, d, e, f;
     cin >> a >> b >> c >> d >> e >> f;
-    if (a>d and b>e and c>f) {
+    if ((a*b*c>)(d*e*f)) {
         cout << "The first box is larger than the second one";
         return 0;
     }
-    if (a<d and b<e and c<f) {
+    if ((a*b*c)<(d*e*f)) {
         cout << "The first box is smaller than the secon one";
         return 0;
     }
-    if (a==d and b==e and c==f) {
+    if ((a*b*c)==(d*e*f)) {
         cout << "Boxes are equal";
         return 0;
     }
     cout << "Boxes are incomparable";
     return 0;
+}
 
 };
