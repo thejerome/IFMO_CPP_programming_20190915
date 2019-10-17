@@ -36,7 +36,7 @@ int t06_quad() {
     }
     else if(D == 0){
         x1 = (-b + D)/2;
-        cout << x1
+        cout << x1;
     };
     return 0;
 
