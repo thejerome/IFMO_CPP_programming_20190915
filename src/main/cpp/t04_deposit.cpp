@@ -36,5 +36,5 @@ int t04_deposit() {
     }
     y = floor(x/100);
     x = (x/100 - y)*100;
-    cout << int(y) << " " << int(x);
+    cout << int(y) << " " << int(x+0.999);
 };
