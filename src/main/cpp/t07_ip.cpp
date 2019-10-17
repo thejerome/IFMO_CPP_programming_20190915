@@ -43,7 +43,7 @@ int t07_ip() {
 		if (x[l + p] == '.')
 			if (x[p] != '.' && stoi(x.substr(p, l)) >= 0 && stoi(x.substr(p, l)) <= 255) {
 				p += l + 1;
-				l = 0;
+				l = -1;
 				++c;
 			}
 			else {
@@ -52,7 +52,7 @@ int t07_ip() {
 			}
 		++l;
 	}
-	if (stoi(x.substr(p, l)) >= 0 && stoi(x.substr(p, l)) <= 255 && c == 3)
+	if (x[p] != '\0' && stoi(x.substr(p, l)) >= 0 && stoi(x.substr(p, l)) <= 255 && c == 3)
 		cout << "YES";
 	else
 		cout << "NO";
