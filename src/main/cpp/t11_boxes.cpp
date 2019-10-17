@@ -39,11 +39,11 @@ using namespace std;
 int t11_boxes() {
   int a, b, c, d, e, f;
     cin >> a >> b >> c >> d >> e >> f;
-    if (a>d & b>e & c>f) {
+    if (a>d and b>e and c>f) {
         cout << "YES";
         return 0;
     }
-    else if (a<d & b<e & c<f) {
+    else if (a<d and b<e and c<f) {
         cout << "YES";
         return 0;
     }
