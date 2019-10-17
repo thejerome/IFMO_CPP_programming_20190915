@@ -16,10 +16,30 @@
 
 #include "t04_neighbors.h"
 #include <iostream>
-
+#include <cmath>
 
 using namespace std;
 
 int t04_neighbors() {
+    int n;
+    int a[n], b[n];
+    cin>>n;
+    for (int i=0;i<n;i++) {
+        cin>>a[i];
+        if (abs(a[i])==a[i]) {
+            b[i]=1;
+        }
+        else {
+            b[i]=0;
+        }
+    }
+    
+    for (int i=1;i<n;i++) {
+        if (b[i]==b[i-1]) {
+            cout<<a[i-1]<<' '<<a[i];
+            break;
+        }
+    }
 
+    return 0;
 }
