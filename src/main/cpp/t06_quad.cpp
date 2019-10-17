@@ -21,17 +21,18 @@
 using namespace std;
 
 int t06_quad() {
-    int a, b, c, D, x1, x2;
-    cin >> a >> b >> c;
+     int a, b, c;
+    float  x1, x2, D;
+    cin >> a >> b >>  c;
     D = sqrt(pow(b, 2) - 4*a*c);
     if (D > 0){
-        x1 = (-b + D)/2;
-        x2 = (-b - D)/2;
+        x1 = ((-b + D) / (2 * a));
+        x2 = ((-b - D) / (2 * a));
         if (x1 < x2){
-            cout << x1 << x2;
+            cout << x1 << " " << x2;
         }
         else{
-            cout << x2 << x1;
+            cout << x2 << " " << x1;
         }
     }
     else if(D == 0){
@@ -39,7 +40,6 @@ int t06_quad() {
         cout << x1;
     };
     return 0;
-
 
 
 };
