@@ -20,7 +20,7 @@ using namespace std;
 
 int t10_sort3() {
   int a,b,c  ;
-    cin >> a >> >> b  >> c  ;
+    cin >> a >> b >> c  ;
     if (a>=b) {
         if (a>=c) {
             if (b>=c) {
