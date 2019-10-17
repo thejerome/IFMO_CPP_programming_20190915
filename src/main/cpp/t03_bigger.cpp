@@ -19,7 +19,7 @@
 using namespace std;
 
 int t03_bigger() {
-    int n,b;
+    int n;
     int a[n];
     cin>>n;
     for(int i=0;i<n;i++) {
