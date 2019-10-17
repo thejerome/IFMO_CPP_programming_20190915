@@ -31,7 +31,7 @@ Sample Output:
 using namespace std;
 
 int t03_points() {
-    int n,x,y;
+    int n,x;
     string xs,ys,s;
     map<int,string> a;
     cin>>n;
@@ -39,9 +39,7 @@ int t03_points() {
     for(int i =0;i<n;i++){
         cin>>xs;
         cin>>ys;
-        x=stoi(xs);
-        y=stoi(ys);
-        x=x*x+y*y;
+        x=stoi(xs)*stoi(xs)+stoi(ys)*stoi(ys);
         s=xs+" "+ys;
         rs.push_back(x);
         a[x]+=s+"\n";
