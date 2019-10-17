@@ -31,11 +31,13 @@ using namespace std;
 int t07_chess_queen() {
   int a,b,c,d ;
     cin >> a >> b >> c >> d ;
-    if (a!=c and b!=d) {
+     if (a!=c and b!=d) {
         if (((a+b)%2)==((c+d)%2)) {
+          if ((a/c)==(b/d) or (a/c) == (d/b)) { 
             cout << "YES";
             return 0;
         }
+      }    
     }
     if (a==c or b==d) {
         cout << "YES";
