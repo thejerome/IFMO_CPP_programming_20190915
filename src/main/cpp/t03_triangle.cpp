@@ -21,8 +21,8 @@ using namespace std;
 
 int t03_triangle() {
   float a, b, c, p, x;
-  cin >> a, b, c;
+  cin >> a >> b >> c;
   p= (a + b + c)/2;
-  x = psqrt(p*(p-a)*(p-b)*(p-c));
+  x = sqrt(p*(p-a)*(p-b)*(p-c));
   cout << fixed << setprecision(4) << x;
 };
