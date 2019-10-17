@@ -37,5 +37,17 @@
 using namespace std;
 
 int t11_boxes() {
+  int a, b, c, d, e, f;
+    cin >> a >> b >> c >> d >> e >> f;
+    if (a>d & b>e & c>f) {
+        cout << "YES";
+        return 0;
+    }
+    else if (a<d & b<e & c<f) {
+        cout << "YES";
+        return 0;
+    }
+    else cout << "NO";
+    return 0;
 
 };
