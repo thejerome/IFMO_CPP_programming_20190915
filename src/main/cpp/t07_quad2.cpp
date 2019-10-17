@@ -19,7 +19,7 @@
 #include <cmath>
 
 using namespace std;
-int t06_quad2() {
+int t07_quad2() {
     float a, b, c, d, x1, x2;
     cin >> a >> b >> c;
     d = b*b - 4*a*c;
