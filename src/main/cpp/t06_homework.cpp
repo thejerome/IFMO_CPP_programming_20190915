@@ -55,12 +55,7 @@
 //
 //Sample Input 1:
 //
-/*4
-cAnnot
-cannOt
-fOund
-pAge
-thE pAge cAnnot be fouNd
+/*С
 */
 //Sample Output 1:
 //
@@ -107,21 +102,22 @@ int t06_homework() {
 
     int sum=0;
     int lastspace=-1;
-    getline(cin,s);
-    getline(cin,s);
+    string tmp;
+    cin>>s;
+    getline(cin,tmp);
+    s=s+tmp;
     s+=" ";
     n=s.size();
-    set<int> wordud;
+    int wordud=0;
+    int ind;
     for(int i=0;i<n;i++){
         if(s[i]==' ') {
             lastspace=i;
             bool b = false;
-            if (wordud.size() == 1) {
+            if (wordud == 1) {
                 if (dict[sres].size() == 0)
                     b = true;
                 else {
-                    int ind;
-                    for (int t:wordud) { ind = t; }
                     for (int t:dict[sres]) {
                         if (t == ind)
                             b = true;
@@ -131,11 +127,14 @@ int t06_homework() {
             if(!b)
                 sum++;
             sres="";
-            wordud.clear();
+            wordud=0;
+            ind=0;
         }
         else{
-            if(s[i] <= 'Z' && s[i] >= 'A')
-                wordud.emplace(i-1-lastspace);
+            if(s[i] <= 'Z' && s[i] >= 'A') {
+                wordud++;
+                ind =i - 1 - lastspace;
+            }
             sres+=tolower(s[i]);
         }
     }
