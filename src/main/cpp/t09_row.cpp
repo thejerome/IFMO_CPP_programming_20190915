@@ -39,6 +39,9 @@ int t09_row() {
 			}
 		}
 	}
-	cout << e;
-	return 0;
+	if (d ==0){
+	  cout << e;
+	  return 0;
+	}
+
 };
