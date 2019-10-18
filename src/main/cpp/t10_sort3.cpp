@@ -41,5 +41,5 @@ int a,b,c;
     else if(c>=b && b>=a){
         cout<<a<<" "<<b<<" "<<c<<endl;
     }
-   return 0
+   return 0;
 };
