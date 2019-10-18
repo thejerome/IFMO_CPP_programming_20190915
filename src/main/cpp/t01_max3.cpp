@@ -22,15 +22,15 @@ int a,b,c;
  cin>>a;
  cin>>b;
  cin>>c;
- if(a>b && a>c)
+ if(a>b && b>c)
  {
      cout<<a<<endl;
  }
- if(b>a && b>c)
+ if(b>a && a>c)
  {
      cout<<b<<endl;
  }
- if(c>a && c>b)
+ if(c>a && a>b)
  {
      cout<<c<<endl;
  }
