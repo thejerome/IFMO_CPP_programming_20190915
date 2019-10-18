@@ -23,16 +23,14 @@
 using namespace std;
 
 int t03_twos() {
-int b = 0;
-	cin >> b;
-	int a = 0;
-	while (pow(2,a) <= b) {
-		if (pow(2, a) == b) {
+	int a,d = 0;
+	cin >> d;
+	while (a*2 <= d) {
+		if (a*2 == d) {
 			cout << "YES";
 			return 0;
 		}
-
-		a++;
+		a = 2*a;		
 	}
 	cout << "NO";
 	return 0;
