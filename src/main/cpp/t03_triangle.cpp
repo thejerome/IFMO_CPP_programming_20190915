@@ -20,5 +20,14 @@
 using namespace std;
 
 int t03_triangle() {
-
+	double a = 0;
+	double b = 0;
+	double c = 0;
+	double z = 0;
+	cin >> a >> b >> c;
+	z = (a + b + c) * 0.5 * ((a + b + c) * 0.5 - a) * ((a + b + c) * 0.5 - b) * ((a + b + c) * 0.5 - c);
+	z = sqrt(z);
+	cout.precision(4);
+	cout << fixed << z;
+	return 0;
 };
