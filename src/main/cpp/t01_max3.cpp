@@ -19,14 +19,9 @@ using namespace std;
 
 int t01_max3() {
 
-    int i,j;
-    cin >> i >> j;
-    if(i > j){
-        cout << i;
-    }else{
-        cout << j;
-    }
-
+    int i,j,k;
+    cin >> i >> j >> k;
+    cout << (max(max(i,j),k));
     return 0;
 
 };
