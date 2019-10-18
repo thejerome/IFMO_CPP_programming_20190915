@@ -38,6 +38,9 @@ int t07_max_2() {
 			d = b;
 			b = a;
 		}
+		if (d < a and a < b) {
+			d = a;
+		}
 	}
 	cout << d;
 	return 0;
