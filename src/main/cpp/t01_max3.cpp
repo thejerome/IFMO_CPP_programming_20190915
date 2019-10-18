@@ -19,4 +19,14 @@ using namespace std;
 
 int t01_max3() {
 
+    int i,j;
+    cin >> i >> j;
+    if(i > j){
+        cout << i;
+    }else{
+        cout << j;
+    }
+
+    return 0;
+
 };

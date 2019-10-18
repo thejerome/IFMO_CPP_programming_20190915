@@ -30,4 +30,13 @@ using namespace std;
 
 int t07_chess_queen() {
 
+    int a,b,i,j;
+    cin >> a >> b >> i >> j;
+    if(abs(a - i) == abs(b - j) || abs(a - i) == 0 || abs(b - j) == 0){
+        cout << "YES";
+    }else{
+        cout << "NO";
+    }
+    return 0;
+
 };
