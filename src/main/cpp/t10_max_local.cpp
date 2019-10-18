@@ -25,7 +25,8 @@ using namespace std;
 
 int t10_max_local() {
     int tmp = 0;
-    int prev = 0, prev2 = 0;
+    int prev = 0;
+    int prev2 = 0;
     int counter = 0;
     cin >> prev2 >> prev;
     while(cin >> tmp && tmp != 0){
