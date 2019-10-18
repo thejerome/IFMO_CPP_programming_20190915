@@ -32,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="t07_quad2.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="t07_quad2.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/cpp/t07_quad2.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-313">
-              <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+            <state relative-caret-position="270">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -82,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="t06_quad.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="t06_quad.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/cpp/t06_quad.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+            <state relative-caret-position="162">
+              <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -127,8 +127,8 @@
         <option value="$PROJECT_DIR$/src/main/cpp/t03_triangle.cpp" />
         <option value="$PROJECT_DIR$/src/main/cpp/t04_deposit.cpp" />
         <option value="$PROJECT_DIR$/src/main/cpp/t05_ave.cpp" />
-        <option value="$PROJECT_DIR$/src/main/cpp/t06_quad.cpp" />
         <option value="$PROJECT_DIR$/src/main/cpp/t07_quad2.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t06_quad.cpp" />
       </list>
     </option>
   </component>
@@ -222,12 +222,12 @@
       <workItem from="1571304854195" duration="33000" />
       <workItem from="1571304916320" duration="4651000" />
       <workItem from="1571379070465" duration="394000" />
-      <workItem from="1571379998653" duration="4515000" />
+      <workItem from="1571379998653" duration="4646000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9630000" />
+    <option name="totallyTimeSpent" value="9761000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -446,18 +446,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/cpp/t06_quad.cpp">
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t07_quad2.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/cpp/t07_quad2.cpp">
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t06_quad.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-313">
-          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state relative-caret-position="162">
+          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
           <folding />
         </state>
       </provider>
