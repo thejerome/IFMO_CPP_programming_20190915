@@ -19,5 +19,13 @@
 using namespace std;
 
 int t06_different() {
-
+	int N = 0, x = 0, y = 0, r = 1;
+	cin >> N >> x >> y;
+	for(int i=0; i<N; i++)
+	{
+		if (x != y) { r++; }
+		x = y;
+		cin >> y;
+	}
+	cout << r;
 }
