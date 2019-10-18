@@ -30,7 +30,7 @@ int t10_max_local() {
 		a = c;
 		c = d;
 		cin >> d;
-		if (c > a and c > d and g <= c) {
+		if (c > a and c > d and g <= c and d != 0) {
 			if (g < c){
 				f = 0;
 			}
