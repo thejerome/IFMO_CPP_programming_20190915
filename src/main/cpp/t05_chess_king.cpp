@@ -25,8 +25,8 @@ int t05_chess_king() {
     cin>>b;
     cin>>c;
     cin>>d;
-    bool t1=(-1=a-c || 1=a-c);
-    bool t2=(-1=b-d || 1=b-d);
+    bool t1=(-1==a-c || 1==a-c);
+    bool t2=(-1==b-d || 1==b-d);
     if(t1||t2)
     {
         cout<<"YES"<<endl;
