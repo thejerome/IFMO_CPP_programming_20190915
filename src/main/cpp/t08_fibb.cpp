@@ -30,6 +30,6 @@ int t08_fibb() {
         f1 = f2;
         f2 = sum;
     }
-    cout << f2;
+    cout <<((n) ? f2 : 0);
 
 };

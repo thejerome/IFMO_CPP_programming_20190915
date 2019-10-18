@@ -26,8 +26,8 @@ int t03_twos() {
     int n = 0;
     cin >> n;
     int i = 1;
-    while (i *= 2 < n)
-    cout << (i == n) ? "YES" : "NO";
+    while (i < n) i *= 2;
+    cout << ((i == n) ? "YES" : "NO");
 
 
 };

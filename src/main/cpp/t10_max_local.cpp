@@ -27,6 +27,7 @@ int t10_max_local() {
     int tmp = 0;
     int prev = 0, prev2 = 0;
     int counter = 0;
+    cin >> prev2;
     while(cin >> tmp && tmp != 0){
         if (prev > tmp && prev > prev2) counter++;
         prev2 = prev;

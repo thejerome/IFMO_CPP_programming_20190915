@@ -35,6 +35,7 @@ int t09_row() {
         }
         prev = tmp;
     }
+    max = (max > counter) ? max : counter;
     cout << max;
 
 };
