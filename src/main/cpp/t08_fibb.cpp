@@ -22,7 +22,10 @@ using namespace std;
 
 int t08_fibb() {
     int n = 0;
-    int i = 1, f1 = 0, f2 = 1, sum = 0;
+    int i = 1;
+    int f1 = 0;
+    int f2 = 1;
+    int sum = 0;
     cin >> n;
     while (i++ < n)
     {
