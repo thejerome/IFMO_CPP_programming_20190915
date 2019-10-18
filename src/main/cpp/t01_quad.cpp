@@ -25,10 +25,9 @@ int t01_quad() {
     int sqr_i = 1;
     while (sqr_i <= n)
     {
-        cout << sqr_i;
+        cout << sqr_i << " ";
         i++;
         sqr_i = i * i;
-        cout << sqr_i << ' ';
     }
 
 
