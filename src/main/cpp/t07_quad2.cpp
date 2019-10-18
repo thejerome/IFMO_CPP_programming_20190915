@@ -22,8 +22,6 @@ using namespace std;
 
 int t07_quad2() {
     double a, b, c;
-    double x1 = 0;
-    double x2 = 0;
 
     cin >> a >> b >> c;
 
@@ -36,6 +34,8 @@ int t07_quad2() {
         }
     }
     else {
+        double x1 = 0;
+        double x2 = 0;
         double d = b * b - 4 * a * c;
 
         if (d > 0) {
