@@ -35,4 +35,4 @@ int t05_ave() {
     y = i/k;
     cout << setprecision(11) << fixed<<y;
   return 0;
-};
+}
