@@ -40,8 +40,14 @@ int t07_quad2() {
 		return 0;
 	}
 	if (d == 0 or a == 0){
-		cout << "1" << " " << (-c) / b;
-		return 0;
+		if( d == 0){
+		   cout << "1" << " " << (-c) / b;
+		   return 0;
+		}
+		else {
+		   cout << "1" << " " << x1;
+		   return 0;
+		}
 	}
 	if ( d > 0 ){
 		if (x1 > x2) {
