@@ -33,9 +33,30 @@
 
 #include "t11_boxes.h"
 #include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int t11_boxes() {
+
+    int a,b,c,i,j,k;
+    cin >> a >> b >> c >> i >> j >> k;
+    int box1 [3] = {a,b,c};
+    int box2 [3] = {i,j,k};
+    int n = sizeof(box1)/sizeof(box1[0]);
+    sort(box1, box1+n);
+    sort(box2, box2+n);
+
+    if(box1[0] == box2[0] && box1[abs(1)] == box2[1] && box1[2] == box2[2]){
+        cout << "Boxes are equal";
+    }else if(box1[0] <= box2[0] && box1[1] <= box2[1] && box1[2] <= box2[2]){
+        cout << "The first box is smaller than the second one";
+    }else if(box1[0] >= box2[0] && box1[1] >= box2[1] && box1[2] >= box2[2]){
+        cout << "The first box is larger than the second one";
+    }else{
+        cout << "Boxes are incomparable";
+    }
+
+    return 0;
 
 };

@@ -30,4 +30,13 @@ using namespace std;
 
 int t08_chess_knight() {
 
+    int a,b,i,j;
+    cin >> a >> b >> i >> j;
+    if(abs(a - i) == 2 && abs(b - j) == 1 || abs(a - i) == 1 && abs(b - j) == 2){
+        cout << "YES";
+    }else{
+        cout << "NO";
+    }
+    return 0;
+
 };

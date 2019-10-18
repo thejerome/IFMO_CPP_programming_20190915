@@ -20,4 +20,14 @@ using namespace std;
 
 int t02_triangle() {
 
+    int i,j,k;
+    cin >> i >> j >> k;
+    int m = max(max(i,j),k);
+    if(i+j+k-m > m){
+        cout << "YES";
+    }else{
+        cout << "NO";
+    }
+    return 0;
+
 };
