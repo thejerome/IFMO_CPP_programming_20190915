@@ -43,12 +43,12 @@ int t07_quad2() {
 		cout << "1" << " " << (-c) / b;
 		return 0;
 	}
-	if (x1 != 0 and d > 0 and x2 != 0){
+	if ( d > 0 ){
 		if (x1 > x2) {
-			cout << "2" << x2 << " " << x1;
+			cout << " " << "2" << x2 << " " << x1;
 		}
 		else {
-			cout << "2" << x1 << " " << x2;
+			cout << " " << "2" << x1 << " " << x2;
 		}
 	}
 	return 0;
