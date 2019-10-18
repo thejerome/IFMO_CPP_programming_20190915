@@ -35,7 +35,7 @@ int t06_quad() {
 		cout << x1;
 		return 0;
 	}
-	if (x1 != 0 and d > 0 and x2 != 0){
+	if ( d > 0) {
 		if (x1 > x2) {
 			cout << x2 << " " << x1;
 		}
