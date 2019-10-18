@@ -24,16 +24,20 @@
 using namespace std;
 
 int t10_max_local() {
-	int a,c,g = 0;
+	int a,c,g,f = 0;
 	int d = 1;
 	while (d != 0) {
 		a = c;
 		c = d;
 		cin >> d;
-		if (c > a and c > d and g < c) {
-			g = c;
+		if (c > a and c > d and g <= c) {
+			if (g < c){
+				f = 0;
+			}
+			g = c;			
+			f++;
 		}
 	}
-	cout << g;
+	cout << f;
 	return 0;
 };
