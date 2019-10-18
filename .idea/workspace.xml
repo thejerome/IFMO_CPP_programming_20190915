@@ -10,14 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21e85e6c-31ce-46bf-8c84-db9e2f33fae3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/t01_quad.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/t01_quad.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/t02_divisor.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/t02_divisor.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/t04_sum.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/t04_sum.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/t05_max.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/t05_max.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/t06_max_count.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/t06_max_count.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/t07_max_2.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/t07_max_2.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/t08_fibb.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/t08_fibb.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/t09_row.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/t09_row.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/t03_twos.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/t03_twos.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="t03_twos.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="t03_twos.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/cpp/t03_twos.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="287">
+              <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -119,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="t10_max_local.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="t10_max_local.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/cpp/t10_max_local.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="362">
+              <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -157,6 +151,8 @@
         <option value="$PROJECT_DIR$/src/main/cpp/t07_max_2.cpp" />
         <option value="$PROJECT_DIR$/src/main/cpp/t08_fibb.cpp" />
         <option value="$PROJECT_DIR$/src/main/cpp/t09_row.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t10_max_local.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t03_twos.cpp" />
       </list>
     </option>
   </component>
@@ -250,12 +246,12 @@
       <workItem from="1571304854195" duration="33000" />
       <workItem from="1571304916320" duration="4651000" />
       <workItem from="1571379070465" duration="394000" />
-      <workItem from="1571379998653" duration="2270000" />
+      <workItem from="1571379998653" duration="2910000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7385000" />
+    <option name="totallyTimeSpent" value="8025000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -263,12 +259,12 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2657512" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32737276" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32737276" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -371,14 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/cpp/t03_twos.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/cpp/t04_sum.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -429,8 +417,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/cpp/t10_max_local.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="362">
+          <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t03_twos.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
           <folding />
         </state>
       </provider>
