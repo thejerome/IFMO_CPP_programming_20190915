@@ -28,7 +28,7 @@ int t09_row() {
 	int g = 0;
 	int b = 0;
 	int z = 0;
-	int e = 0;
+	int e = 1;
 	z = 1;
 	while (z != 0)
 	{
