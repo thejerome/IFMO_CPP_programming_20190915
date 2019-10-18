@@ -33,6 +33,6 @@ int t05_ave() {
         if (x == 0)
             break;}
     y = i/k;
-    cout << setprecision(5) << fixed<<y;
+    cout << setprecision(11) << fixed<<y;
   return 0;
 };
