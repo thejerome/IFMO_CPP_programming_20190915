@@ -19,5 +19,14 @@
 using namespace std;
 
 int t02_triangle() {
-
+    int A,B,C;
+    cin >> A;
+    cin >> B;
+    cin >> C;
+  
+    if ((A+B>C) && (A+C>B) && (C+B>A))
+        cout << "YES";
+    else 
+        cout << "NO";
+    return 0;
 };
