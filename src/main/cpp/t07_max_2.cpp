@@ -50,4 +50,4 @@ int t07_max_2() {
             prmax = x;}
     cout << prmax;
   return 0;
-};
+}

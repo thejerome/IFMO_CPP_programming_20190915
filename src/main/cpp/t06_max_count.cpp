@@ -46,4 +46,4 @@ int t06_max_count() {
 
     cout << i;
   return 0;
-};
+}

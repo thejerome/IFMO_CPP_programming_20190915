@@ -30,4 +30,4 @@ int t02_divisor() {
             x++;
     }
 return 0;
-};
+}

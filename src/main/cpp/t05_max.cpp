@@ -32,4 +32,4 @@ int t05_max() {
             max = x; }
     cout << max;
   return 0;
-};
+}

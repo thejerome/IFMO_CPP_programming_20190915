@@ -29,4 +29,4 @@ int t04_sum() {
             break;}
     cout << i;
   return 0;
-};
+}
