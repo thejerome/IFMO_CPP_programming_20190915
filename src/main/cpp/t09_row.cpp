@@ -23,8 +23,8 @@
 using namespace std;
 
 int t09_row() {
-	int a,c,g,e = 0;
-	int b,d = 1;
+	int a,c,g = 0;
+	int b,d,e = 1;
 	while (d != 0) {
 		c = d;
 		cin >> d;
