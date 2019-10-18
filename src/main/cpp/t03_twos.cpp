@@ -23,7 +23,8 @@
 using namespace std;
 
 int t03_twos() {
-	int a,d = 0;
+	int d = 0;
+	int a = 1;
 	cin >> d;
 	while (a*2 <= d) {
 		if (a*2 == d) {
@@ -31,6 +32,10 @@ int t03_twos() {
 			return 0;
 		}
 		a = 2*a;		
+	}
+	if (d == 1) {
+		cout << "YES";
+		return 0;
 	}
 	cout << "NO";
 	return 0;
