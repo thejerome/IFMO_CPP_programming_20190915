@@ -25,11 +25,10 @@ int t08_fibb() {
     int i = 1;
     int f1 = 0;
     int f2 = 1;
-    int sum = 0;
     cin >> n;
     while (i++ < n)
     {
-        sum = f1 + f2;
+        int sum = f1 + f2;
         f1 = f2;
         f2 = sum;
     }
