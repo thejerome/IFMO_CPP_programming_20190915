@@ -24,7 +24,7 @@ int a,b,c;
     cin>>b;
     cin>>c;
     if(a>=b && b>=c){
-        cout<<c<<" "<<b<<""<<a<<endl;
+        cout<<c<<" "<<b<<" "<<a<<endl;
     }
     else if(a>=c && c>=b){
         cout<<b<<" "<<c<<" "<<a<<endl;
