@@ -24,4 +24,20 @@ using namespace std;
 
 int t09_row() {
 
+    int i, i0, eq, max_eq;
+    cin >> i0;
+    i = -1;
+    eq = 1;
+    max_eq = 0;
+    while (i!= 0) {
+        cin >> i;
+        if (i0 == i) eq = eq + 1;
+        else eq = 1;
+        if (max_eq < eq) max_eq = eq;
+        i0 = i;
+        if (i == 0) break;
+    }
+    cout << max_eq;
+    return 0;
+
 };
