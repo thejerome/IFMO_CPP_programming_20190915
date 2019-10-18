@@ -27,5 +27,18 @@
 using namespace std;
 
 int t09_choco() {
-
+int N,M,K;
+   cin>>N;
+   cin>>M;
+   cin>>K;
+   bool t1=K<N*M;
+   bool t2=(K%N==0) || (K%M==0);
+   if(t1 && t2)
+   {
+       cout<<"YES"<<endl;
+   } else
+       {
+       cout<<"NO"<<endl;
+       }
+    return 0;
 };

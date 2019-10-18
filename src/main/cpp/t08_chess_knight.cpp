@@ -29,5 +29,21 @@
 using namespace std;
 
 int t08_chess_knight() {
-
+int a,b,c,d;
+    cin>>a;
+    cin>>b;
+    cin>>c;
+    cin>>d;
+    bool t1=((a-c)==2)||((a-c)==-2);
+    bool t2=((b-d)==2)||((b-d)==-2);
+    bool t3=((a-c)==1)||((a-c)==-1);
+    bool t4=((b-d)==1)||((b-d)==-1);
+    if((t1 && t3)||(t1 && t4)||(t2 && t3)||(t2 && t4))
+    {
+        cout<<"YES"<<endl;
+    }else
+        {
+        cout<<"NO"<<endl;
+        }
+    return 0;
 };
