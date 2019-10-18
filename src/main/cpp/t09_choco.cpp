@@ -31,8 +31,9 @@ int t09_choco() {
     cin >> N >> M >> K;
     if ((K%N == 0 || K%M == 0) && (K < N * M)) {
         cout << "YES";
-    else 
+    }else{
         cout << "NO";
+    }
     return 0;
     
 };
