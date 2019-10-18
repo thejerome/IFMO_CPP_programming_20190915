@@ -23,7 +23,7 @@ using namespace std;
 
 int t06_quad() {
     double a, b, c, x1, x2, dis, zero;
-    cout << setprecision(6) << fixed;
+    cout << setprecision(5) << fixed;
     zero = 1.0e-15;
     cin >> a >> b >> c;
     dis = b*b - 4*a*c;

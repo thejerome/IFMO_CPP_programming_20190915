@@ -23,7 +23,7 @@ using namespace std;
 
 int t07_quad2() {
     double a, b, c, x1, x2, dis, zero;
-    cout << setprecision(6) << fixed;
+    cout << setprecision(5) << fixed;
     zero = 1.0e-7;
     cin >> a >> b >> c;
     if (fabs(a) <= zero && fabs(b) <= zero && fabs(c) <= zero){
