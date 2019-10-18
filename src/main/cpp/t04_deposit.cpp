@@ -22,15 +22,15 @@
 using namespace std;
 
 int t04_deposit() {
-	double P = 0, X = 0, Y = 0, K = 0, J = 0;
-	cin >> P >> X >> Y >> K;
+	int K = 0, L = 0, P = 0;
+	cin >> P;
+	cin >> L; L = L * 100;
+	cin >> K; L = L + K;
+	cin >> K;
 	while (K>0) 
 	{
 		K--;
-		J = X;
-		X = int(X * (1 + P / 100)) + int((Y * (1 + P / 100))/100);
-		Y = int(Y * (1 + P / 100)) % 100 + (J * (1 + P / 100)-int(J * (1 + P / 100)))*100;
-		if (Y >= 100) { X = X + 1; Y = Y - 100; }
+		L =L * (1 + (double)P / 100);
 	}
-	cout << X << " " << Y;
+	cout << L/100 << " " << L%100;
 };
