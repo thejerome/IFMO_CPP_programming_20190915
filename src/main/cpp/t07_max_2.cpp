@@ -30,10 +30,10 @@ using namespace std;
 
 int t07_max_2() {
 	int a = 1;
-	int b,c,d = 0;
+	int b = 0;
+	int d = 0;
 	while (a != 0) {
-		cin >> c;
-		a = c;
+		cin >> a;
 		if (b <= a) {
 			d = b;
 			b = a;
