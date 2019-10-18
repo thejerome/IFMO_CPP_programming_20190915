@@ -24,6 +24,6 @@ double A,B,C,S,L;
 cin >> A >> B >> C;
 L= (A+B+C)/2;
 {S =sqrt(L*(L-A)*(L-B)*(L-C));
-cout << fixed << setprecision(4)<<  float (S);
+cout << fixed << setprecision(4)<<  double (S);
 }
 };
