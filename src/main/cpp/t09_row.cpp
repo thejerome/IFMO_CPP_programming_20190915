@@ -32,12 +32,11 @@ int N,M,i,j;
          cin>>N;
          if(M==N){
              i++;
-             if(i<=j){
+             if(i>=j){
              j=i;
              }
          }
          else if(M!=N){
-             j=i;
              i=1;
          }
          M=N;
