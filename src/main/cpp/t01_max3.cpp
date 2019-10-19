@@ -20,13 +20,13 @@ using namespace std;
 int t01_max3() {
     int a,b,c;
     cin >> a >> b >> c;
-    if (a > b > c) {
+    if (a > b && a > c ) {
         cout << a;
     };
-    if (b > a > c) {
+    if (b > a && b > c) {
         cout << b;
     }
-    else {
+    else  {
         cout << c;
     }
     return 0;
