@@ -38,7 +38,7 @@ int t06_max_count() {
         if ( a > max){
             max = a;
         };
-        elif (a == max){
+        else if (a == max){
             count++
         };
     };
