@@ -34,7 +34,7 @@ int t06_max_count() {
     cin << a;
     max = a;
     while (a != 0){
-        cin << a;
+        cin >> a;
         if ( a > max){
             max = a;
         };
