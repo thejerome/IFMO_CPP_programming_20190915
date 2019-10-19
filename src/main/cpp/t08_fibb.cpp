@@ -21,16 +21,17 @@
 using namespace std;
 
 int t08_fibb() {
-    int n;
+    int n, i = 0;
     cin >> n;
     int a=0;
     int b=1;
     int c = 0;
-    for(int i= 0; i<n; i++){
-        c = b;
-        b = a;
-        a = c+b;
-    cout << a << " ";
+   while(i<n){
+        i++;
+        b += a;
+        a = b - a;
+
     };
+    cout << a << " ";
     return 0;
 };
