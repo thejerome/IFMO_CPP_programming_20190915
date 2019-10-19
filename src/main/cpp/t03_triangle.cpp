@@ -21,7 +21,7 @@ using namespace std;
 
 int t03_triangle() {
   int a, b, c;
-  ccin >> a >> b >> c;
+  cin >> a >> b >> c;
   double x;
   double p;
   p = (a+b+c)/3;
