@@ -23,18 +23,18 @@
 using namespace std;
 
 int t03_twos() {
-    int n;
+   int n;
     cin >> n;
     while (n % 2 == 0){
         n /= 2;
     };
 
+
     if (n == 1){
-        cout << "Yes";
+        cout << "YES";
     }
     else {
-        cout << "No";
+        cout << "NO";
     };
     return 0;
-
 };
