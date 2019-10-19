@@ -20,5 +20,11 @@
 using namespace std;
 
 int t03_triangle() {
-
+  int a, b, c;
+  ccin >> a >> b >> c;
+  double x;
+  double p;
+  p = (a+b+c)/3;
+  x = sqrt(p*(p-a)*(p-b)*(p-c));
+  cout << x;
 };
