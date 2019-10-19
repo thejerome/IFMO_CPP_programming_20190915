@@ -20,7 +20,7 @@
 using namespace std;
 
 int t03_triangle() {
-double A,B,C,L
+double A,B,C,L;
 double S;
 
 cin >> A >> B >> C;
