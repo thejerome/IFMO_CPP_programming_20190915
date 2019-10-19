@@ -22,7 +22,6 @@ int t02_divisor() {
      int num, a = 3;
     bool b = true;
     cin >> num;
-};
 
     if (n % 2 == 0) {
         f = false;
