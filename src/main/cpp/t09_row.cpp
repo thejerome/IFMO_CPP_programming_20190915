@@ -23,8 +23,8 @@
 using namespace std;
 
 int t09_row() {
-    int n, prev = -1, cou = 1, count = 1;
-    cin >> n;
+     int n, prev = -1, cou = 1, count = 1;
+  	    cin >> n;
     while (n != 0) {
         if (prev == n){
             cou ++;
@@ -36,6 +36,10 @@ int t09_row() {
         prev = n;
         cin >> n;
     };
+       if (count < cou){
+        count = cou;
+       };
+
     cout << count;
     return 0;
 };
