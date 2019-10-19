@@ -22,7 +22,7 @@ using namespace std;
 int t05_max() {
     int a;
     int max;
-    cin << a;
+    cin >> a;
     max = a;
     while (a != 0){
         cin >> a;
@@ -30,4 +30,6 @@ int t05_max() {
             max = a;
         };
     };
+    cout << max;
+    return 0;
 };
