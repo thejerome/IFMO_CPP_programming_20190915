@@ -27,5 +27,11 @@
 using namespace std;
 
 int t09_snail() {
-
+	int H, A, B,count,day;
+	cin >> H >> A >> B;
+	count = A - B;
+	day = H / count; 
+	//-1, потому что мы считаем сначала день, а потом ночь, а count считает сразу и то и то.
+	cout << day-1;
+	return 0;
 };
