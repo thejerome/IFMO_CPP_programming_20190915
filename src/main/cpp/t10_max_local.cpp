@@ -25,17 +25,16 @@ using namespace std;
 
 int t10_max_local() {
      int a, n, c, cou= 0;
-    cin >> a >> n;
-    while (n != 0 || c != 0){
-        cin >> c;
+    cin >> a >> n >> c;
+    while (c != 0){
         //cout << a << " "<< n << " "<< c;
         if (n > a && n > c){
             cou++;
         };
         a = n;
         n = c;
-
-    };
+        cin >> c;
+	    };
     cout << cou;
     return 0;
 
