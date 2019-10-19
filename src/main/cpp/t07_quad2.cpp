@@ -23,18 +23,18 @@ using namespace std;
 int t07_quad2() {
   double a, b, c;
       cin >> a >> b >> c;
-      double d;
+      double g;
       if(a != 0){
-          d = b*b - 4*a*c;
-          if(d == 0){
+          g = b*b - 4*a*c;
+          if(g == 0){
               cout << "1 " << (-b)/(2*a);
           }
           else{
-              if(d > 0){
+              if(g > 0){
                   double x, y;
-                  d = sqrt(d);
-                  x = (-b+d)/(2*a);
-                  y = (-b-d)/(2*a);
+                  g = sqrt(g);
+                  x = (-b+g)/(2*a);
+                  y = (-b-g)/(2*a);
                   if(x > y)
                     cout << "2 " << y << ' ' << x;
                     else
