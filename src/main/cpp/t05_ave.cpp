@@ -34,5 +34,5 @@ int t05_ave() {
       //cout << a << ' ' << k << ' ' << s << endl;
       s /= k;
      
-      cout << setprecision(11) << s << fixed;
+      cout << setprecision(11) << fixed << s ;
 };
