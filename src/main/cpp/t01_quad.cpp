@@ -19,5 +19,12 @@
 using namespace std;
 
 int t01_quad() {
-
+int i,j;
+    cin>>j;
+    i=1;
+    while(i*i<=j){
+        cout<<i*i<<endl;
+        i++;
+    }
+    return 0;
 };
