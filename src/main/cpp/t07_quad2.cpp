@@ -24,14 +24,15 @@ int t07_quad2() {
   double a, b, c;
       cin >> a >> b >> c;
       double d;
-      if(int(a) != 0){
-          d = sqrt(b*b - 4*a*c);
+      if(a != 0){
+          d = b*b - 4*a*c;
           if(d == 0){
               cout << "1 " << (-b)/(2*a);
           }
           else{
               if(d > 0){
                   double x, y;
+                  d = sqrt(d);
                   x = (-b+d)/(2*a);
                   y = (-b-d)/(2*a);
                   if(x > y)
@@ -44,7 +45,7 @@ int t07_quad2() {
           }
       }
       else{
-          if(int(b) != 0){
+          if(b != 0){
               cout << "1 " << (-c)/b;
           }
           else{
@@ -55,5 +56,4 @@ int t07_quad2() {
           }
             
       }
-
 };
