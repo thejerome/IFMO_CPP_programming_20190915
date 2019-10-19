@@ -18,5 +18,9 @@
 using namespace std;
 
 int t02_frac_2() {
-
+double a;
+    cin>>a;
+    a=floor((a-floor(a))/0.1);
+    cout<<a<<endl;
+    return 0;
 };
