@@ -31,9 +31,20 @@
 
 #include "t08_watch.h"
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
 int t08_watch() {
+	int N;
+	cin >> N;
+	int a, b, c;
+	a = N / 3600;
 
+	c = N % 60;
+
+	b = N / 60 - a * 60;
+	cout << a << ":" << setw(2) << setfill('0') << b << ":" << setw(2) << setfill('0') << c; 
+	//не уверен насчет самого правильного выбронного мною варианта с выводом 0 до одиночной цифры
+	return 0;
 };
