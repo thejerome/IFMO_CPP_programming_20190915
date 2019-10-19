@@ -31,6 +31,7 @@ int N,M,i,j;
          cin>>N;
          if(M==N){
              i++;
+             j=i;
          }
          else if(M!=N && j<i){
              j=i;
