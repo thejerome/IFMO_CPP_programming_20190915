@@ -35,8 +35,7 @@ int N,M,i,j;
             if(i>=j){
                 j=i;
             }
-        }
-        else if(M!=N){
+        }else{
             i=1;
         }
         M=N;
