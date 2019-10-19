@@ -30,6 +30,6 @@ double P,X,Y,K,i;
         Y=floor(Y);
         i++;
     }
-    cout<<fixed<<setprecision(0)<<Y/100<<" "<<int(Y)%100<<endl;
+    cout<<Y/100<<" "<<int(Y)%100<<endl;
     return 0;
 };
