@@ -37,9 +37,9 @@ int t06_max_count() {
         cin >> a;
         if ( a > max){
             max = a;
-        };
+        }
         else if (a == max){
-            count++
+            count++;
         };
     };
     cout << count;
