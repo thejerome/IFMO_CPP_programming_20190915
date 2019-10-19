@@ -26,14 +26,17 @@ int t09_row() {
 int N,M,i,j;
      cin>>N;
      i=1;
+     j=0
      M=N;
      while(N!=0){
          cin>>N;
          if(M==N){
              i++;
-             j=i;
+             if(i<=j){
+             j=i
+             }
          }
-         else if(M!=N && j<i){
+         else if(M!=N){
              j=i;
              i=1;
          }
