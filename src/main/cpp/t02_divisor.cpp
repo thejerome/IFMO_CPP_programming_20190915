@@ -23,13 +23,13 @@ int t02_divisor() {
     bool b = true;
     cin >> num;
 
-    if (n % 2 == 0) {
-        f = false;
+    if (num % 2 == 0) {
+        b = false;
         a = 2;
     };
 
     while (a * a <= num && b){
-        if (n % a == 0){
+        if (num % a == 0){
             b = false;
         }
         else{
