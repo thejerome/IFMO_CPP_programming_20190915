@@ -22,7 +22,7 @@ using namespace std;
 
 int t08_fibb() {
     int n;
-    cin » n;
+    cin >> n;
     int a=0;
     int b=1;
     int c = 0;
@@ -30,7 +30,7 @@ int t08_fibb() {
         c = b;
         b = a;
         a = c+b;
-    cout « a « " ";
+    cout << a << " ";
     };
     return 0;
 };
