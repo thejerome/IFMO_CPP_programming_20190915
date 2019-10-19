@@ -23,6 +23,6 @@ int t01_frac() {
 double a;
     cin>>a;
     a= floor(a);
-    cout<<a<<endl;
+    cout<<a-floor(a)<<endl;
     return 0;
 };
