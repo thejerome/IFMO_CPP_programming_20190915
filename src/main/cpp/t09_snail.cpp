@@ -32,6 +32,6 @@ int t09_snail() {
 	count = A - B;
 	day = H / count; 
 	//-1, потому что мы считаем сначала день, а потом ночь, а count считает сразу и то и то.
-	cout << day-1;
+	cout << (day-1);
 	return 0;
 };
