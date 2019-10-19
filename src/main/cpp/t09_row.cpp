@@ -23,5 +23,21 @@
 using namespace std;
 
 int t09_row() {
-
+int N,M,i,j;
+     cin>>N;
+     i=1;
+     M=N;
+     while(N!=0){
+         cin>>N;
+         if(M==N){
+             i++;
+         }
+         else if(M!=N && j<i){
+             j=i;
+             i=1;
+         }
+         M=N;
+     }
+     cout<<j<<endl;
+    return 0;
 };
