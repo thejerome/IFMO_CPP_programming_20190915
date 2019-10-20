@@ -47,4 +47,5 @@ int t07_quad2() {
      else {
          cout <<"0";
      }
+     return 0;
  }

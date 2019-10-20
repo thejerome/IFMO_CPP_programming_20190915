@@ -42,4 +42,5 @@ int t06_quad() {
      else {
          cout <<"";
      }
+     return 0;
  }
