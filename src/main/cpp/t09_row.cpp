@@ -23,18 +23,18 @@
 using namespace std;
 
 int t09_row() {
-     int n, prev = -1, cou = 1, count = 1;
+     int n, prev = 0, cou = 1, count = 1;
   	    cin >> n;
     while (n != 0) {
+        prev = n;
+        cin >> n;
         if (prev == n){
             cou ++;
-        }
-        else if (cou > count){
+        };
+        if (cou > count){
             count = cou;
             cou = 1;
         };
-        prev = n;
-        cin >> n;
     };
        if (count < cou){
         count = cou;
