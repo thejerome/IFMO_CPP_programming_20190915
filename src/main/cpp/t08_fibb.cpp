@@ -27,6 +27,9 @@ int t08_fibb() {
     b = 1;
     k = 1;
     f = 0;
+    if (N == 0) {
+        k = k - 1;
+    }
     while (k != N) {
         f = a + b;
         a = b;
