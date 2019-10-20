@@ -29,5 +29,17 @@
 using namespace std;
 
 int t07_max_2() {
+	int N = 1, S = 0, S2 = 0;
+	cin >> N;
+	S = N;
+	while (N != 0) {
+		cin >> N;
+		if (N > S) { S2 = S; S = N; }
+		else {
+			if (S2 <= S && S2 < N) { S2 = N; }
+		}
 
+	}
+	cout << S2;
+	return 0;
 };
