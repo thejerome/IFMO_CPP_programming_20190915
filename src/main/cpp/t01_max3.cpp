@@ -19,7 +19,7 @@ using namespace std;
 
 int t01_max3() {
     int a,b,c,max;
-    max = 0;
+    max = a;
     cin >> a >> b >> c;
     if (max < a) {
         max = a;
