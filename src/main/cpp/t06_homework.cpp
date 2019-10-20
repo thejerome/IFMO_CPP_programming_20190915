@@ -80,9 +80,38 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
+#include <string>
 
 using namespace std;
 
 int t06_homework() {
+    set<string> a;
+    set<string> la;
+    int n, ans = 0;
+    string in;
+    cin >> n;
 
+    for (int i = 0; i < n; i++) {
+        cin >> in;
+        a.insert(in);
+        for (int k = 0; k < in.length(); k++) in[k]= tolower(in[k]);
+        la.insert(in);
+    }
+
+    while (cin >> in) {
+        string s = in;
+        for (int k = 0; k < in.length(); k++) in[k]= tolower(in[k]);
+        if (a.find(s) == a.end()){
+            if (la.find(in) == la.end()) {
+                int cnt = 0;
+                for (int i = 0; i < s.length(); i++)
+                    if (isupper(s[i])) cnt++;
+                if (cnt != 1) ans++;
+            }
+            else ans++;
+        }
+    }
+
+    cout << ans;
 }
