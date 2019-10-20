@@ -21,5 +21,13 @@
 using namespace std;
 
 int t06_quad() {
-
+double A,B,C,D,X1,X2;
+cin >> A >> B >> C;
+D = sqrt(pow(B,2) - (4*A*C));
+X1 = (-B+D)/(2*A);
+X2 = (-B-D)/(2*A);
+if(X1>X2){int S=X1;X1=X2;X2=S;}
+if (D==0){cout << X1;}
+else if(D>0){cout << X1 << " " << X2;}
+return 0;
 };
