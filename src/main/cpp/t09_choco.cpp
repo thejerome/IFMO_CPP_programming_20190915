@@ -28,4 +28,15 @@ using namespace std;
 
 int t09_choco() {
 
+int N, M, K;
+
+  cin >> N;
+  cin >> M;
+  cin >> K;
+
+  if ( ((K%N==0) && (K<=N*(M-1))) || ((K%M==0) && (K<=M*(N-1))) ) {
+        cout << "YES";
+  } else cout << "NO";
+
+  return 0;
 };
