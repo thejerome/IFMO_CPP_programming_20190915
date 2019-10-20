@@ -23,5 +23,11 @@
 using namespace std;
 
 int t03_last_number() {
-
+int N;
+cin >> N;
+while(N >= 10){
+N = N%10;
+}
+cout << N;
+return 0;
 };
