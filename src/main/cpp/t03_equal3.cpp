@@ -19,5 +19,15 @@
 using namespace std;
 
 int t03_equal3() {
+    int A1, B2, C3, score = 0;
+    cin >> (A1) >> (B2) >> (C3);
+    if (A1 != B2 && B2 != C3 && A1 != C3)
+        score=0;
+    if (A1 == B2 || B2 == C3 || A1 == C3)
+        score=2;
+    if (A1 == B2 && B2 == C3 && A1 == C3)
+        score=3;
+    cout << score;
+
 
 };
