@@ -23,10 +23,10 @@ using namespace std;
 int t07_quad2() {
 double A,B,C,D,X1,X2;
 cin >> A >> B >> C;
-D = sqrt(pow(B,2) - (4*A*C));
-X1 = (-B+D)/(2*A);
-X2 = (-B-D)/(2*A);
-if(X1>X2){int S=X1;X1=X2;X2=S;}
+D = pow(B,2) - 4*A*C;
+X1 = (-B+sqrt(D))/(2*A);
+X2 = (-B-sqrt(D))/(2*A);
+if(X1>X2){double S=X1;X1=X2;X2=S;}
 if ((A==0) && (B==0) && (C==0)){cout << 3;}
 else if (A == 0 && B == 0 && C != 0){cout << 0;}
 else if (A == 0){cout << 1 << " " << -C/B;}
