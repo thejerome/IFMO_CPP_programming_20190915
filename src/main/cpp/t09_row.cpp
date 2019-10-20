@@ -23,5 +23,23 @@
 using namespace std;
 
 int t09_row() {
-
-};
+     int q,w,e,r;
+     q = 1;
+     w = 1;
+     r = 0;
+     cin >> e;
+     while (e != 0)
+     {
+         if (e != r)
+         {
+             if(q > w)w = q;
+             r = e;
+             q = 1;
+         }
+         else q++;
+         cin >> e;
+     }
+     if (q > w)w = q;
+     cout << w;
+     return 0;
+ }
