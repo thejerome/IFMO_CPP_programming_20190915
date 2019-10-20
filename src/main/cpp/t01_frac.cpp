@@ -20,5 +20,11 @@
 using namespace std;
 
 int t01_frac() {
+double N;
+cin >> N;
+int P = N;
+N-=P;
 
+
+cout  << N;
 };

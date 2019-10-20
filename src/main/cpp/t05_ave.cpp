@@ -22,5 +22,15 @@
 using namespace std;
 
 int t05_ave() {
+int N=1,S=0,C=0;
 
+while(N!=0)
+{
+    cin >> N;
+    S = S+N;
+    C++;
+
+}
+C = C - 1;
+cout << fixed << setprecision(11) << (double)S/C;
 };
