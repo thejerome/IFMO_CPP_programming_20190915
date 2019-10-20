@@ -32,7 +32,7 @@ int t07_max_2() {
 int a;
   cin >> a;
   int max1 = a, max2 = -1;
-  while (x)
+  while (a)
   {
     cin >> a;
     if (a > max1)
@@ -40,7 +40,7 @@ int a;
       max2 = max1;
       max1 = a;
     }
-    else if ( x > max2 )
+    else if ( a > max2 )
       max2 = a;
   }
   cout << max2;
