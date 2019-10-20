@@ -29,17 +29,20 @@
 using namespace std;
 
 int t07_max_2() {
-    int a, b, c;
+    int a, b, c, d;
     c = 0;
-    b = 0;
+    d = 0;
     cin >> a;
+    b = a;
     while (a != 0) {
+        cin >> a;
         if (a > b) {
+            d = b;
             b = a;
         }
-        cin >> a;
-        if (a <= b && a > c) {
-            c = a;
+        if (c < b && a > c) {
+            c = d;
+
         }
     }
     cout << c;

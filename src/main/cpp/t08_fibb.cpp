@@ -25,7 +25,8 @@ int t08_fibb() {
     cin >> N;
     a = 0;
     b = 1;
-    k = 1;
+    k = 0;
+    f = 0;
     while ( k != N) {
         f = a + b;
         a = b;
