@@ -19,5 +19,15 @@
 using namespace std;
 
 int t04_chess_rook() {
+	int a, b, c, d;
+	cin >> a >> b >> c >> d; // a,b - для первой клетки
+	if ((a == c) || (b == d)) {
+		cout << "YES" << endl;
+	 }
+	else {
+		cout << "NO" << endl;
+	}
+	return 0;
+
 
 };
