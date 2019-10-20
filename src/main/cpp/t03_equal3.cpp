@@ -22,14 +22,13 @@ int t03_equal3() {
     int a, b, c, cou;
     cin >> a >> b >> c;
     if (a != b && b != c && a != c){
-        cou = "1";
+        cou = 1;
     };
     if (a == b || b == c || a == c){
-        cou = "2";
+        cou = 2;
     };
     if (a == b && b == c && a == c){
-        cou = "3";
-    };
+        cou = 3;
     cout << cou;
     return 0;
 };
