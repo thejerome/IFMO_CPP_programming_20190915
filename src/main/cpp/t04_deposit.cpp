@@ -23,6 +23,7 @@ using namespace std;
 
 int t04_deposit() {
     double p, y, k, x;
+    int a;
     int c = 0;
     cin >> p >> x >> y >> k;
     p = p/100 + 1;
@@ -34,7 +35,8 @@ int t04_deposit() {
         x = floor(x);
         c++;
     }
-    y = floor(x/100);
-    x = (x/100 - y)*100;
-    cout << int(y) << " " << int(x);
+    y = int(x/100);
+    a = int(x);
+    a = a % 100;
+    cout << int(y) << " " << a;
 };
