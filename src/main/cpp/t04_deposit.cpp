@@ -22,5 +22,14 @@
 using namespace std;
 
 int t04_deposit() {
+    int P,X,Y,K,TOTAL;
+    cin >> P >> X >> Y >> K;
+    TOTAL=X*100+Y;
+    P=100+P;
+    while (K) {
+        TOTAL=(TOTAL*P)/100;
+        K--;
+    }
+    cout << (int(TOTAL)/100) << " " << (int(TOTAL)%100);
 
 };
