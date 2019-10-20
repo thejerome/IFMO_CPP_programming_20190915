@@ -29,5 +29,19 @@
 using namespace std;
 
 int t07_max_2() {
+  int x,i,k=0;
+    cin>>x;
+    i=x;
+    while(x!=0){
+        cin>>x;
+        if(x>=i){
+            k=i;
+            i=x;
+        }
+        else if(x<i&&x>=k){
+            k=x;
+        }
+    }
+    cout<<k;
 
-};
+}
