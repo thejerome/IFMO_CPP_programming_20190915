@@ -58,6 +58,7 @@ int t10_sort3() {
 		if (f == 3) {
 			if (b > a) {
 				mid = a;
+				max = b;
 			}
 			else {
 				mid = b;
