@@ -20,10 +20,10 @@
 using namespace std;
 
 int t05_chess_king() {
-    int x, y, x1, y1;
-    cin >> x >> y >> x1 >> y1;
+    int x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
 
-    if ( abs(x-x1)==1 && abs(y-y1)==1 ){
+    if ( ((x1==x2 && y1+1==y2) || (x1==x2 && y1-1==y2) || (y1==y2  &&  x1+1==x2) || (y1==y2  &&  x1-1==x2) || (x1+1==x2 && y1+1==y2) || (x1+1==x2 && y1-1==y2) || (x1-1==x2 && y1+1==y2) || (x1-1==x2 && y1-1==y2)){
         cout << "YES";
     }
     else{
@@ -31,3 +31,5 @@ int t05_chess_king() {
         };
     return 0;
 };
+
+    
