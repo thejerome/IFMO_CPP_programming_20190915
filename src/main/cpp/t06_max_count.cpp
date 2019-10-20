@@ -34,16 +34,14 @@ int t06_max_count() {
 	max = 0;
 	i = 1;
 	c = 0;
+		max = i;
 	while (i != 0) {
-		cin >> i;
-		if (i > max) {
-			c = -1;
-			max = i;
-			
+		if (i > max) { 
+			max = i; c = 0; 
 		}
-		else { c++; };
-
-	};
+		if (i == max) c++; 
+		cin >> i;
+	}
 	cout << c;
 	return 0;
 };

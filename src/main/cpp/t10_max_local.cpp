@@ -29,7 +29,7 @@ int t10_max_local() {
 	i1 = 0; 
 	kol = 0;
 	c = 0;
-	while (i !=0)
+	while (true)
 	{
 		cin >> i;
 		if (i == 0)
