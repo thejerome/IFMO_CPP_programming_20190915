@@ -22,5 +22,10 @@
 using namespace std;
 
 int t05_ave() {
-
+    double N, S;
+    cin >> N;
+    while (N!=0) {
+        S += N;
+    }
+    cout << S;
 };
