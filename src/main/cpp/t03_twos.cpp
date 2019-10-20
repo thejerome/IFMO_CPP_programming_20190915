@@ -23,5 +23,7 @@
 using namespace std;
 
 int t03_twos() {
-
+int n = 8;
+cout << ( ( n & ( n - 1 ) ) ? "NO" : "YES" ) <<endl;
+return 0;
 };
