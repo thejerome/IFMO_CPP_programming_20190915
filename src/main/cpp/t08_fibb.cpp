@@ -25,7 +25,6 @@ int t08_fibb() {
     cin >> n;
     int a=0;
     int b=1;
-    int c = 0;
    while(i<n){
         i++;
         b += a;
