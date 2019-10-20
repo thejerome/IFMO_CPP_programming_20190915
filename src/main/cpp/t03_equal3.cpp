@@ -19,7 +19,7 @@
 using namespace std;
 
 int t03_equal3() {
-    int value1, value2, value3, score;
+    int value1, value2, value3, score = 0;
     cin >> (value1) >> (value2) >> (value3);
     if (value1 != value2 && value2 != value3 && value1 != value3)
         score=0;

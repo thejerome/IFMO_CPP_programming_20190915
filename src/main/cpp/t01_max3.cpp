@@ -18,7 +18,7 @@
 using namespace std;
 
 int t01_max3() {
-    int value1, value2, value3;
+    int value1, value2, value3 = 0;
     cin >> (value1) >> (value2) >> (value3);
 
     if (value1 < value2)
