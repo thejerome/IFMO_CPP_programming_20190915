@@ -24,9 +24,8 @@ using namespace std;
 
 int t05_tens_number() {
 int a;
-cout << "Vvedite chislo";
 cin >> a;
 int c = a/10%10;
-cout << "predposlednya cifra = " << c << endl;
+cout << c << endl;
 return 0;
 }
