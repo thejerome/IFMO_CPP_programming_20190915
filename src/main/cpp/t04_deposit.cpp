@@ -22,5 +22,22 @@
 using namespace std;
 
 int t04_deposit() {
+    int P;
+    int X;
+    int Y;
+    int K;
+    cin >> P >> X >> Y >> K;
+    while (K != 0)
+    {
+        Y = ((Y + X * 100) * (P+100))/ 100;
+        //cout << Y << ' ';
+        X = Y / 100;
+        Y = Y % 100;
+        //cout << X << ' ' << Y << ' ';
+
+        K--;
+    }
+    cout << X << ' ' << Y;
+    return 0;
 
 };
