@@ -29,8 +29,10 @@ int A1, B1, A2, B2, x, y;
   cin >> A2;
   cin >> B2;
 
-  x=abs(A1-A2);
-  y=abs(B1-B2);
+  x=A1-A2;
+  y=B1-B2;
+  if (x<0) { x=x*(-1);}
+  if (y<0) { y=y*(-1);}
 
   if ( ((x==0) && (y==0)) || ((x>1) || (y>1)) ) {
         cout << "NO";
