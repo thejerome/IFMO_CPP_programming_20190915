@@ -32,7 +32,7 @@ int t09_row() {
             i++;
             b=a;
         }
-        else if(a!=b){
+        else {
             if(i>c){
                 c=i;
                 i=1;
