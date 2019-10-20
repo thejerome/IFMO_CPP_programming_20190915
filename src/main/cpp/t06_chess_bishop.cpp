@@ -20,13 +20,13 @@
 using namespace std;
 
 int t06_chess_bishop() {
-    int h,v,H,V;
-    cin >> h >> v >> H >> V;
-    if ( (H==h-1&&V==v-1)||(H==h+1&&V==v+1)||(H==h-1&&V==v+1)||(H==h-1&&V==v-1)||(H==h-2&&V==v-2)||(H==h+2&&V==v+2)||(H==h-2&&V==v+2)||(H==h-2&&V==v-2)||(H==h-3&&V==v-3)||(H==h+3&&V==v+3)||(H==h-3&&V==v+3)||(H==h-3&&V==v-3)||(H==h-4&&V==v-4)||(H==h+4&&V==v+4)||(H==h-4&&V==v+4)||(H==h-4&&V==v-4)||(H==h-5&&V==v-5)||(H==h+5&&V==v+5)||(H==h-5&&V==v+5)||(H==h-5&&V==v-5)||(H==h-6&&V==v-6)||(H==h+6&&V==v+6)||(H==h-6&&V==v+6)||(H==h-6&&V==v-6)||(H==h-7&&V==v-7)||(H==h+7&&V==v+7)||(H==h-7&&V==v+7)||(H==h-7&&V==v-7) ) {
-      cout << "YES";
-    }
-    else {
-        cout << "NO";
-    }
-    return 0;
+int h,v,H,V;
+cin >> h >> H >> v >> V;
+if((h - v) == (H - V) || (h - v) == (V -H)){
+  cout << "YES";
+}
+else {
+  cout << "NO";
+}
+return 0;
 }
