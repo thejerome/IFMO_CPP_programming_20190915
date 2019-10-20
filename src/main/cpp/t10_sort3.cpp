@@ -32,7 +32,7 @@ int t10_sort3() {
 	}
 	else if (c <= b && c <= a) {
 		min = c;
-		f = 3
+		f = 3;
 	}
 	if (f == 1) {
 		if (b > c) {
@@ -42,26 +42,27 @@ int t10_sort3() {
 		else {
 			max = c;
 			mid = b;
-		};
+		}
 
 	}
 	if (f == 2) {
 		if (a > c) {
 			mid = c;
 		}
-		else{
+		else {
 			mid = a;
 			max = c;
-	}
-	if (f == 3) {
-		if (b > a) {
-			mid = a;
 		}
-		else {
-			mid = b;
-			max = a;
 	}
-
+		if (f == 3) {
+			if (b > a) {
+				mid = a;
+			}
+			else {
+				mid = b;
+				max = a;
+			}
+		}
 		cout << min << " " << mid << " " << max << endl;
 		return 0;
 

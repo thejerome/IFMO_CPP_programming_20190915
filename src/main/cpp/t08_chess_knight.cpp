@@ -31,7 +31,7 @@ using namespace std;
 int t08_chess_knight() {
 	int a, b, c, d;
 	cin >> a >> b >> c >> d;
-	if ((((a = c -2) || (a = c + 2)) && (b = d -1 || b = d + 1)) || (((a = c - 1) || (a = c + 1)) && (b = d - 2 || b = d + 2))) {
+	if ((((a == c -2) || (a == c + 2)) && (b == d -1 || b == d + 1)) || (((a == c - 1) || (a == c + 1)) && (b == d - 2 || b == d + 2))) {
 		cout << "YES" << endl;
 	}
 	else {
