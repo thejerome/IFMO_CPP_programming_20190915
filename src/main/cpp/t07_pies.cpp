@@ -38,14 +38,11 @@ using namespace std;
 
 int t07_pies() {
 int a, b, c;
-cout << "rubli";
 cin >> a;
-cout << "kopeyky";
 cin >> b;
-cout << "kolichestvo pirozhkov";
 cin >> c;
 a = a * c;
 b = b * c;
-cout << "cena = " << a + b / 100<< " " << b % 100 << endl;
+cout << a + b / 100<< " " << b % 100 << endl;
 return 0;
 };
