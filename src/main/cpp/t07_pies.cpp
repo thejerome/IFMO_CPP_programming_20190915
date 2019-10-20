@@ -1,4 +1,4 @@
-//Покупка пирожков
+﻿//Покупка пирожков
 //
 //
 //Пирожок в столовой стоит A рублей и B копеек. Определите, сколько рублей и копеек нужно заплатить за N пирожков.
@@ -37,5 +37,15 @@
 using namespace std;
 
 int t07_pies() {
-
+int a, b, c;
+cout << "rubli";
+cin >> a;
+cout << "kopeyky";
+cin >> b;
+cout << "kolichestvo pirozhkov";
+cin >> c;
+a = a * c;
+b = b * c;
+cout << "cena = " << a + b / 100<< " " << b % 100 << endl;
+return 0;
 };

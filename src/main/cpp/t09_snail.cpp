@@ -1,4 +1,4 @@
-//Улитка
+﻿//Улитка
 //
 //        Улитка ползет по вертикальному шесту высотой H метров, поднимаясь за день на A метров, а за ночь спускаясь на B метров. На какой день улитка доползет до вершины шеста?
 //
@@ -27,5 +27,13 @@
 using namespace std;
 
 int t09_snail() {
-
+int a, b, c;
+cout << "visota shesta";
+cin >> a;
+cout << "podnimaetsa";
+cin >> b;
+cout << "opuskaetsa";
+cin >> c;
+cout << "podnimetsa v den #" << a / (b - c) << endl;
+return 0;
 };
