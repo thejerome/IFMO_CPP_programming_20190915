@@ -24,9 +24,8 @@ using namespace std;
 
 int t04_first_number() {
 int a;
-cout << "Введите двузначное число ";
 cin >> a;
 int c = a / 10;
-cout <<"Первая цифра = " << c << endl;
+cout << c << endl;
 return 0;
 };
