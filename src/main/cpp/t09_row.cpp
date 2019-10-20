@@ -23,5 +23,22 @@
 using namespace std;
 
 int t09_row() {
+	int b, a, j, mj=1;
+	cin >> a;
+	cin >> b;
+	j = 1;
+	while (b != 0) {
+
+		if (a == b) {
+			j += 1;
+			if (mj < j)
+				mj = j;
+		}
+		else
+			j = 1;
+		a = b;
+		cin >> b;
+	}
+	cout << mj;
 
 };
