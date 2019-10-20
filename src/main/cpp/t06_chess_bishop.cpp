@@ -20,5 +20,16 @@
 using namespace std;
 
 int t06_chess_bishop() {
-
-};
+	int x1, x2, y1, y2;
+	cin >> x1 >> y1 >> x2 >> y2;
+	int raznX = x2 - x1;
+	int raznY = y2 - y1;
+	if ( raznX == raznY || -raznX == raznY || raznX == -raznY){
+		cout << "YES";
+	}
+	else
+	{
+		cout << "NO";
+	}
+	return 0;
+}

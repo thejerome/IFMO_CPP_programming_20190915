@@ -29,5 +29,19 @@
 using namespace std;
 
 int t07_chess_queen() {
+	int x1, x2, y1, y2;
+	cin >> x1 >> y1 >> x2 >> y2;
+	int raznX = x2 - x1;
+	int raznY = y2 - y1;
+	if((raznX == raznY || -raznX == raznY || raznX == -raznY) || (x1 == x2 || y1 == y2))
+	{
+		cout << "YES";
+	}
+	else
+	{
+		cout << "NO";
+	}
 
+
+	return 0;
 };
