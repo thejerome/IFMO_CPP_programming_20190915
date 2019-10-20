@@ -22,7 +22,7 @@ int t03_equal3() {
     int a, b, c, cou;
     cin >> a >> b >> c;
     if (a != b && b != c && a != c){
-        cou = 1;
+        cou = 0;
     };
     if (a == b || b == c || a == c){
         cou = 2;
