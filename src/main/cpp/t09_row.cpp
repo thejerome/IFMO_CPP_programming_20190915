@@ -23,11 +23,11 @@
 using namespace std;
 
 int t09_row() {
-  int a,b,c,d,e ;
- b = 1;
- c = 0;
- d = 0;
- e = 0;
+ int a = 0 ;
+ int b = 1;
+ int c = 0;
+ int d = 0;
+ int e = 0;
  cin >> a ;
  while (a!=0) {
      c = a;
