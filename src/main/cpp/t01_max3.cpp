@@ -18,13 +18,13 @@
 using namespace std;
 
 int t01_max3() {
-    int value1, value2, value3 = 0;
-    cin >> (value1) >> (value2) >> (value3);
+    int valueA, valueB, valueC = 0;
+    cin >> (valueA) >> (valueB) >> (valueC);
 
-    if (value1 < value2)
-            value1 = value2;
-    if (value1 < value3)
-            value1 = value3;
-    cout << (value1);
+    if (valueA < valueB)
+        valueA = valueB;
+    if (valueA < valueC)
+        valueA = valueC;
+    cout << (valueA);
 
 };
