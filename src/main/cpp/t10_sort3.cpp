@@ -19,13 +19,14 @@
 using namespace std;
 
 int t10_sort3() {
+    int a,b,c:
     cin >> a >> b >> c;
-    if a >= b {
-        if b >= c {
+    if (a >= b) {
+        if (b >= c) {
             cout << c << b << a;
         };
         else {
-            if a > c {
+            if (a > c) {
                 cout << b << c <<a;
                 };
             else {
@@ -34,11 +35,11 @@ int t10_sort3() {
         };
     };
     else {
-        if a >= c {
+        if (a >= c) {
             cout << c << a << b;
         };
         else {
-            if b > c {
+            if (b > c) {
                 cout << a << c << b;
             };
             else {
