@@ -26,7 +26,7 @@ int t03_equal3() {
         if (a == b) && (a == c) {
             cout << '3';
         };
-    };
+    }
     else {
         cout << '0';
     };

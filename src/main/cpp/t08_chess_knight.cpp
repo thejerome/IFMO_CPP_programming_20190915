@@ -30,10 +30,10 @@ using namespace std;
 
 int t08_chess_knight() {
     int x,x1,y,y1;
-    cin >> x >> y >> x1 >> x2;
+    cin >> x >> y >> x1 >> y1;
     if ((abs(x-x1) == 2) && (abs(y-y1) == 1)) || ((abs(x-x1) == 1) && (abs(y-y1) == 2)) {
         cout << 'YES';
-    };
+    }
     else {
         cout << 'NO';
     };
