@@ -28,12 +28,9 @@ using namespace std;
 
 int t09_snail() {
 int a, b, c;
-cout << "visota shesta";
 cin >> a;
-cout << "podnimaetsa";
 cin >> b;
-cout << "opuskaetsa";
 cin >> c;
-cout << "podnimetsa v den #" << a / (b - c) << endl;
+cout << a / (b - c) << endl;
 return 0;
 };
