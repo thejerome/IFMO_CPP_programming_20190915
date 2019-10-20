@@ -29,6 +29,7 @@ int t03_equal3() {
     };
     if (a == b && b == c && a == c){
         cou = 3;
+    };
     cout << cou;
     return 0;
 };
