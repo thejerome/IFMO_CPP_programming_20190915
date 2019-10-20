@@ -19,19 +19,19 @@
 using namespace std;
 
 int t10_sort3() {
-    int value1, value2, value3, tmp,tmp_m,tmp_l;
-    cin >> (value1) >> (value2) >> (value3);
-    if ((value1>=value2) && (value1>=value3)) {
+    int value1, value2, value3, tmp,tmp_m,tmp_l = 0;
+    cin >>value1 >>value2 >> value3;
+    if (value1>=value2 && value1>=value3) {
         tmp = value1;
         tmp_m = value2;
         tmp_l = value3;
     }
-    if ((value2>=value1) && (value2>=value3)) {
+    if (value2>=value1 && value2>=value3) {
         tmp = value2;
         tmp_m = value1;
         tmp_l = value3;
     }
-    if ((value3>=value1) && (value3>=value2)) {
+    if (value3>=value1 && value3>=value2) {
         tmp = value3;
         tmp_m = value1;
         tmp_l = value2;
