@@ -25,6 +25,6 @@ int t06_chess_bishop() {
     if ((a - c) * (a - c) == (b - d) * (a - c)) {
         cout << "YES";
     } else
-        cout << "No";
+        cout << "NO";
     return 0;
 };

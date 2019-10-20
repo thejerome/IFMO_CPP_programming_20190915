@@ -34,6 +34,6 @@ int t07_chess_queen() {
     if (((a - c) * (a - c) == (b - d) * (b - d)) || (a == c || b == d)) {
         cout << "YES";
     } else
-        cout << "No";
+        cout << "NO";
     return 0;
 };

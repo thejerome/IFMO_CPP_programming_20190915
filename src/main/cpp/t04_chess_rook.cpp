@@ -24,6 +24,6 @@ int t04_chess_rook() {
     if (a == c || b == d) {
         cout << "YES";
     } else
-        cout << "No";
+        cout << "NO";
     return 0;
 };

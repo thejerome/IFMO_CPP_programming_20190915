@@ -34,6 +34,6 @@ int t08_chess_knight() {
     if (((a - c) * (a - c) == 1 & (b - d) * (b - d) == 4) || ((b - d) * (b - d) == 1 & (a - c) * (a - c) == 4)) {
         cout << "YES";
     } else
-        cout << "No";
+        cout << "NO";
     return 0;
 };

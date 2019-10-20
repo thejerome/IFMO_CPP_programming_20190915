@@ -22,9 +22,9 @@ using namespace std;
 int t05_chess_king() {
     int a, b, c, d;
     cin >> a >> b >> c >> d;
-    if ((a - c <= 1 & a - c >= -1) & (b - d <= 1 & b - d >= -1)) {
+    if ((a - c <= 1 && a - c >= -1) && (b - d <= 1 && b - d >= -1)) {
         cout << "YES";
     } else
-        cout << "No";
+        cout << "NO";
     return 0;
 };
