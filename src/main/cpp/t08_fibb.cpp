@@ -23,8 +23,8 @@ using namespace std;
 int t08_fibb() {
     int a, b, s , d, z ;
   b = 0;
-  s = 1;
-  d = 0;
+  s = 0;
+  d = 1;
   z = 0;
   cin >> a;
   while (a>b) {
