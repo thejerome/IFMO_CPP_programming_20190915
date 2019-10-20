@@ -20,8 +20,9 @@
 using namespace std;
 
 int t01_frac() {
-float x;
+double x;
 cin>>x;
-cout<<x - int(x);
+X-=int(x);
+cout<<x;
 return 0;
 };
