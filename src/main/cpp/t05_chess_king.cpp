@@ -16,9 +16,24 @@
 
 #include "t05_chess_king.h"
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int t05_chess_king() {
 
-};
+int A1, B1, A2, B2, x, y;
+
+  cin >> A1;
+  cin >> B1;
+  cin >> A2;
+  cin >> B2;
+
+  x=abs(A1-A2);
+  y=abs(B1-B2);
+
+  if ( ((x==0) && (y==0)) || ((x>1) || (y>1)) ) {
+        cout << "NO";
+  } else cout << "YES";
+
+  return 0;
