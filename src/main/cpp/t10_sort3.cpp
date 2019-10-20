@@ -19,7 +19,7 @@
 using namespace std;
 
 int t10_sort3() {
-int a, b, c3, tempf,tempm,templ = 0;
+int a, b, c, tempf,tempm,templ = 0;
     cin >>a >>b >> c;
     if (a>=b && a>=c) {
         tempf = a;
