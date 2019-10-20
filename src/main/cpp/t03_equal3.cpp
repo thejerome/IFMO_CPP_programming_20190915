@@ -19,13 +19,13 @@
 using namespace std;
 
 int t03_equal3() {
-    int value1, value2, value3, score = 0;
-    cin >> (value1) >> (value2) >> (value3);
-    if (value1 != value2 && value2 != value3 && value1 != value3)
+    int A1, B2, C3, score = 0;
+    cin >> (A1) >> (B2) >> (C3);
+    if (A1 != B2 && B2 != C3 && A1 != C3)
         score=0;
-    if (value1 == value2 || value2 == value3 || value1 == value3)
+    if (A1 == B2 || B2 == C3 || A1 == C3)
         score=2;
-    if (value1 == value2 && value2 == value3 && value1 == value3)
+    if (A1 == B2 && B2 == C3 && A1 == C3)
         score=3;
     cout << score;
 
