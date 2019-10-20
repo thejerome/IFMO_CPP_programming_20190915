@@ -9,7 +9,7 @@
 //2
 //3
 //Sample Output:
-//
+////
 //3
 
 #include "t01_max3.h"

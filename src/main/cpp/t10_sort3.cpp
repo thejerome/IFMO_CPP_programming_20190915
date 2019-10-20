@@ -7,7 +7,7 @@
 //Sample Input:
 //
 //1
-//2
+//2//
 //1
 //Sample Output:
 //

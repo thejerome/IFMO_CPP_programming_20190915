@@ -18,7 +18,7 @@
 //10
 //7
 //Sample Output 2:
-//
+////
 //NO
 
 #include "t09_choco.h"
