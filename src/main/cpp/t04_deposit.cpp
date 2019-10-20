@@ -22,5 +22,17 @@
 using namespace std;
 
 int t04_deposit() {
+    long vklad = 0;
+    short procent = 0, years = 0, cents = 0, i = 0;
+    cin >> procent >> vklad >> cents >> years;
 
-};
+    vklad = vklad*100 + cents;
+
+    while (i < years)
+    {
+        vklad = (vklad/100.0)*(100 + procent);
+        i++;
+    }
+    cout << int(vklad/100) << ' ' << vklad%100 << endl;
+    return 0;
+}
