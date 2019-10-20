@@ -37,74 +37,37 @@
 using namespace std;
 
 int t11_boxes() {
-    int a1, a2, b1, b2, c1, c2, m, n, k, z, x, c;
-    cin >> a1;
-    cin >> b1;
-    cin >> c1;
-    cin >> a2;
-    cin >> b2;
-    cin >> c2;
-    if ((a1 >= b1) && (a1 >= c1) && (b1 >= c1)) { m == a1; n == b1; k == c1; }
-    else {
-        if ((a1 >= b1) && (a1 >= c1) && (b1 <= c1)) {
-            m = a1; n = c1; k = b1;
-        }
-    }
-    if ((b1 >= a1) && (b1 >= c1) && (a1 >= c1)) {
-        m = b1; n = a1; k = c1;
-    }
-    else {
-        if ((b1 >= a1) && (b1 >= c1) && (c1 >= a1)) {
-            m = b1; n = c1; k = a1;
-        }
-    }
-    if ((c1 >= a1) && (c1 >= b1) && (b1 >= a1)) {
-        m = c1; n = b1; k = a1;
-    }
-    else {
-        if ((c1 >= a1) && (c1 >= b1) && (a1 >= b1)) {
-            m = c1; n = a1; k = b1;
-        }
-    }
-    if ((a2 >= b2) && (a2 >= c2) && (b2 >= c2)) { z = a2; x = b2; c = c2; }
-    else {
-        if ((a2 >= b2) && (a2 >= c2) && (b2 <= c2)) {
-            z = a2; x = c2; c = b2;
-        }
-    }
-    if ((b2 >= a2) && (b2 >= c2) && (a2 >= c2)) {
-        z = b2; x = a2; c = c2;
-    }
-    else {
-        if ((b2 >= a2) && (b2 >= c2) && (c2 >= a2)) {
-            z = b2; x = c2; c = a2;
-        }
-    }
-    if ((c2 >= a2) && (c2 >= b2) && (b2 >= a2)) {
-        z = c2; x = b2; c = a2;
-    }
-    else {
-        if ((c2 >= a2) && (c2 >= b2) && (a2 >= b2)) {
-            z = c2; x = a2; c = b2;
-        }
-    }
-    if ((m = z) && (n = x) && (k = c)) {
-        cout << "Boxes are equal";
-    }
-    else {
-
-        if ((m > z) && (n > x) && (k > c)) {
-            cout << "The first box is larger than the second one";
-        }
-        else {
-            if ((m < z) && (n < x) && (k < c)) {
-                cout << "The first box is smaller than the second one";
-            }
-            else {
-                cout << "Boxes are incomparable";
-            }
-        }
-    }
-
-    return 0;
+int a,s,d,f,g,h;
+cin >> a >> s >> d >> f >> g >> h;
+if((a==h && s==g && d==f) || (a==h && s==f && d==g)){
+cout << "Boxes are equal";
+}
+else
+if((a==f && s==g && d==h)|| (a==f && s==h && d==g)){
+cout << "Boxes are equal";
+}
+else
+if((a==g && s==h && d==f)|| (a==g && s==f && d==h)){
+cout << "Boxes are equal";
+}
+else
+if((a>=f && s>=g && d>=h) || (a>=f && s>=h && d>=g) || (a>=g && s>=f && d>=h) || (a>=g && s>=h && d>=f)){
+cout << "The first box is larger than the second one";
+}
+else
+if((a>=h && s>=g && d>=f) || (a>=h && s>=f && d>=g)){
+cout << "The first box is larger than the second one";
+}
+else
+if((a<=f && s<=g && d<=h) || (a<=f && s<=h && d<=g) || (a<=g && s<=f && d<=h) || (a<=g && s<=h && d<f)){
+cout << "The first box is smaller than the second one";
+}
+else
+if((a<=h && s<=g && d<f) || (a<=h && s<=f && d<=g)){
+cout << "The first box is smaller than the second one";
+}
+else{
+cout << "Boxes are incomparable";
+}
+return 0;
 };
