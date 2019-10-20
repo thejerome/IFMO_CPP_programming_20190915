@@ -21,9 +21,9 @@ using namespace std;
 int t10_sort3() {
  int a,b,c,SWAP;
   cin>>a>>b>>c;
-    if (a>b){SWAP=a;a=b;b=SWAP;}
-    if (b>c){SWAP=b;b=c;c=SWAP;}
-    if (c>a){SWAP=c;c=a;a=SWAP;}
+    if (a>b){SWAP=b;b=a;a=SWAP;}
+    if (b>c){SWAP=c;c=b;b=SWAP;}
+    
   cout<< b << " " << c << " " << a;
 
   return 0;
