@@ -20,4 +20,21 @@ using namespace std;
 
 int t04_chess_rook() {
 
+int A1, B1, A2, B2, K=0;
+
+  cin >> A1;
+  cin >> B1;
+  cin >> A2;
+  cin >> B2;
+
+  if (A1==A2) {
+      if (B1!=B2) {++K;}
+  } else if (A1!=A2) {
+      if (B1==B2) {++K;}
+  }
+  if (K==1) {
+    cout << "YES";
+  } else cout << "NO";
+
+  return 0;
 };
