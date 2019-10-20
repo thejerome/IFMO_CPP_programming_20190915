@@ -33,7 +33,7 @@ while (A>=2)
 }
 A/=2;
 }
-IF (!B) {cout<<"YES";}
+if (!B) {cout<<"YES";}
 else {cout<<"NO";}
 return 0;
 };
