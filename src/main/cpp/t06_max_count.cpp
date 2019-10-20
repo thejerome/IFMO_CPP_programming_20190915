@@ -46,4 +46,5 @@ int t06_max_count() {
     cin >> x;    
   }
   cout << y;
+  return 0;
 };
