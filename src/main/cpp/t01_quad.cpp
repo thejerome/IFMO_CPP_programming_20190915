@@ -24,5 +24,4 @@ int t01_quad() {
  for(int i=0;i*i<n;i++)
  cout<<i<<'\t'<<i*i<<endl;
 return 0;
-
 };
