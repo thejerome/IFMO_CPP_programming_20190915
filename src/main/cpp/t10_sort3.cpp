@@ -24,7 +24,7 @@ int t10_sort3() {
     if (a>b){SWAP=a;a=b;b=SWAP;}
     if (b>c){SWAP=b;b=c;c=SWAP;}
     if (c>a){SWAP=c;c=a;a=SWAP;}
-  cout<< c << " " << b << " " << a;
+  cout<< b << " " << c << " " << a;
 
   return 0;
 };
