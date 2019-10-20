@@ -5,7 +5,7 @@
 //Формат выходных данных
 //        Программа должна вывести YES, если из первой клетки ходом слона можно попасть во вторую или NO в противном случае.
 //Sample Input:
-//
+////
 //4
 //4
 //5
@@ -20,5 +20,14 @@
 using namespace std;
 
 int t06_chess_bishop() {
+	int a, b, c, d;
+	cin >> a >> b >> c >> d;
+	if ((abs(a - c)) == (abs(b - d))) {
+		cout << "YES" << endl;
+}
+	else {
+		cout << "NO" << endl;
 
+	}
+	return 0;
 };

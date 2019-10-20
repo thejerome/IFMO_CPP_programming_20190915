@@ -3,7 +3,7 @@
 //Формат входных данных
 //        Вводятся три числа.
 //Формат выходных данных
-//        Выведите ответ на задачу.
+//        Выведите ответ на задачу.//
 //Sample Input:
 //
 //1
@@ -19,5 +19,20 @@
 using namespace std;
 
 int t03_equal3() {
+	int a, b, c;
+	cin >> a >> b >> c;
 
+	if ((a == b) && (a == c)) {
+		cout << 3 << endl;
+	}
+
+	else if (a == b || a == c || b == c) {
+		cout << 2 << endl;
+	}
+
+	else {
+		cout << 0 << endl;
+	}
+
+	return 0;
 };

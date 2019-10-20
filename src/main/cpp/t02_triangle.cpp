@@ -5,7 +5,7 @@
 //Формат выходных данных
 //        Выведите ответ на задачу.
 //Sample Input:
-//
+////
 //3
 //4
 //5
@@ -19,5 +19,15 @@
 using namespace std;
 
 int t02_triangle() {
+	int A, B, C;
+	cin >> A >> B >> C;
+	if (((A + B )> C) && ((B + C) > A) && ((A + C) > B)) {
+		cout << "YES" << endl;
+
+	 }
+	else {
+		cout << "NO" << endl;
+	}
+	return 0;
 
 };
