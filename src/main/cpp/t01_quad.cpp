@@ -20,4 +20,13 @@ using namespace std;
 
 int t01_quad() {
 
+int N, K=0;
+
+cin >> N;
+
+while ((K+1)*(K+1)<=N) {
+    cout << (++K)*K << " ";
+}
+
+return 0;
 };
