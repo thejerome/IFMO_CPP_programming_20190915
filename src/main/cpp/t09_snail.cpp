@@ -31,6 +31,6 @@ int a, b, c;
 cin >> a;
 cin >> b;
 cin >> c;
-cout << (a-a%(b-c))/(b-c)+1 << endl;
+cout << (a-b)/(b-c)+1 << endl;
 return 0;
 };
