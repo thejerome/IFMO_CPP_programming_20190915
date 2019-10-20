@@ -20,4 +20,16 @@ using namespace std;
 
 int t08_cycleswap() {
 
+    int N=0;
+    cin >> N;
+    int a[N];
+
+    for (int i = 1; i < N; i++) {
+        cin >> a[i];
+    }
+    cin >> a[0];
+    for (int i = 0; i < N; i++) {
+        cout << a[i] << ' ';
+
+    }
 }

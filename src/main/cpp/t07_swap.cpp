@@ -20,4 +20,19 @@ using namespace std;
 
 int t07_swap() {
 
+    int N=0;
+    cin >> N;
+    int a[N];
+
+    for (int i = 0; i < N; i++) {
+        cin >> a[i];
+        if ((i % 2) != 0) {
+            int temp = a[i];
+            a[i] = a[i-1];
+            a[i-1] = temp;
+        }
+    }
+    for (int i = 0; i < N; i++) {
+        cout << a[i] << ' ';
+    }
 }
