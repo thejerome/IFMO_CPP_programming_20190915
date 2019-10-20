@@ -47,5 +47,6 @@ int t10_max_local() {
 		}
 		i1 = i;
 	}
+	cout << kol;
 	return 0;
 };
