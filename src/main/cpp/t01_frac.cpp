@@ -21,4 +21,11 @@ using namespace std;
 
 int t01_frac() {
 
+double K;
+
+cin >> K;
+
+cout << K-int(K);
+
+return 0;
 };
