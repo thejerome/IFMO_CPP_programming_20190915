@@ -29,5 +29,13 @@
 using namespace std;
 
 int t08_chess_knight() {
-
-};
+    int h, v, H, V;
+    cin >> h >> v >> H >> V;
+    if ( (H==h+1&&V==v-2)||(H==h+2&&V==v-1)||(H==h-1&&V==v-2)||(H==h-2&&V==v-1)||(H==h-1&&V==v+2)||(H==h-2&&V==v+1)||(H==h+1&&V==v+2)||(H==h+2&&V==v+1) ) {
+        cout << "YES";
+    }
+    else {
+        cout << "NO";
+    }
+    return 0;
+}
