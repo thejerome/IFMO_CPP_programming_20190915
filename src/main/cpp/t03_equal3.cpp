@@ -21,7 +21,7 @@ using namespace std;
 int t03_equal3() {
     int a, b, c;
     cin >> a >> b >> c;
-    if (a == b & a == c) {
+    if (a == b && a == c) {
         cout << "3";
     } else
         if ((a == b && a != c) || (a == c && a != b) || (b == c && b != a)) {
