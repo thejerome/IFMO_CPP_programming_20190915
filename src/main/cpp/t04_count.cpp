@@ -23,10 +23,25 @@
 
 #include "t04_count.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t04_count() {
-
+string s;
+int x = 0, n = 0;
+bool k = false;
+getline(cin, s);
+if(s == ""){
+    cout << 0;
+    return 0;
+}
+while(s.find(' ', n) != string::npos)
+{
+    x++; k = true;
+    n = s.find(' ', n) + 1;
+}
+if(k)cout << ++x;
+else cout << 1;
+return 0;
 }

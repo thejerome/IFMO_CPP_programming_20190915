@@ -34,5 +34,43 @@
 using namespace std;
 
 int t07_ip() {
-
+string s;
+cin >> s;
+if(s[0] == '.' || s[s.size() - 1] == '.')
+{
+    cout << "NO";
+    return 0;
+}
+int count = 0, position = 0;
+while(s.find('.', position) != string::npos)
+{
+    count++;
+    position = s.find('.', position) + 1;
+}
+if(count != 3)
+{
+        cout << "NO";
+        return 0;
+}
+for(int i = 0; i < s.size(); i++)
+{
+    int n = 0;
+    while(i<s.size() && s[i] != '.')
+    {
+        n = n * 10 + (s[i] - '0');
+        i++;
+    }
+    if(n > 255 || n < 0)
+    {
+        cout << "NO";
+        return 0;
+    }
+    if(i < s.size() - 1)if(s[i + 1] == '.')
+    {
+        cout << "NO";
+        return 0;
+    }
+}
+cout << "YES";
+return 0;
 }

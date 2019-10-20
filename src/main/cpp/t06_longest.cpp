@@ -22,5 +22,12 @@
 using namespace std;
 
 int t06_longest() {
-
+string s, x;
+cin >> x;
+while(cin >> s)
+{
+    if(s.size() > x.size())x = s;
+}
+cout << x;
+return 0;
 }
