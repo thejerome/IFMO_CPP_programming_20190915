@@ -20,5 +20,31 @@
 using namespace std;
 
 int t06_chess_bishop() {
+int x,y,z,t;
+   cin>>x>>y>>z>>t;
+   if(z >x && t>y){
+       if(z-x==t-y){
+           cout<<"YES";
+       }
+       else{
+           cout<<"NO";
+       }
+   }
+   else if(z<x && t<y){
+       if(x-z==y-t){
+           cout<<"YES";
+       }
+       else{
+           cout<<"NO";
+       }
+   }
+   else{
+       if(x+y==z+t){
+           cout<<"YES";
+       }
+       else{
+           cout<<"NO";
+       }
+   }
 
-};
+}
