@@ -21,5 +21,17 @@
 using namespace std;
 
 int t07_quad2() {
+double A,B,C,X1,X2,D;
+cin >> A >> B >> C;
 
+D=pow(B,2)-4*A*C;
+X1=(-B+(sqrt(D)))/(2*A);
+X2=(-B-(sqrt(D)))/(2*A);
+if (X1>X2){double F=X2;X2=X1;X1=F;}
+if (A== 0 && B == 0 && C == 0) {cout << 3 << endl;}
+else if (A == 0 && B == 0 && C !=0){cout << 0;}
+else if (D==0){cout << 1 << " " << X1 << endl;}
+else if (A == 0) {cout << 1 << " " << -C/B << endl;}
+else if (D<0){cout << 0 << endl;}
+else if (D>0){cout << 2 << " " << X1 << " " << X2 << endl; }
 };
