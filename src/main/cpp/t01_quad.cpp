@@ -24,6 +24,7 @@ int t01_quad() {
     cin >> a ;
     while (b<a) {
         cout << (b*b) << " ";
+        b=b++;
         b=b*b;
     }
 };
