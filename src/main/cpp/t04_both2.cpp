@@ -31,7 +31,7 @@ using namespace std;
 int t04_both2() {
     vector<int>ans;
     set<int> a;
-    int n, in, cnt = 0;
+    int n, in;
     cin >> n;
 
     for (int i = 0; i < n; i++) {
