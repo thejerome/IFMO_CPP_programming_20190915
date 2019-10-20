@@ -19,4 +19,13 @@ using namespace std;
 
 int t02_frac_2() {
 
+double K;
+
+cin >> K;
+
+K=K*10;
+
+cout << int(K)%10;
+
+return 0;
 };
