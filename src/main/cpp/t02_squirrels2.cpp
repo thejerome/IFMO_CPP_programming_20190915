@@ -26,11 +26,9 @@ using namespace std;
 int t02_squirrels2() {
 setlocale(0, "");
 int a, b;
-cout << "Количество белочек = ";
 cin >> a;
-cout << "Количество орешков = ";
 cin >> b;
 int c = b%a;
-cout <<"Остаток = " << c << endl;
+cout << c << endl;
 return 0;
 };
