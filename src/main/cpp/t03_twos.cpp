@@ -23,5 +23,17 @@
 using namespace std;
 
 int t03_twos() {
+int A;
+ int B=false;
+cin >> A;
+while (A>=2)
+{
+if (A%2!=0)
+{B=true;}
+A=2;
+}
 
+if (!B) {cout << "YES";}
+
+else {cout << "NO";}
 };
