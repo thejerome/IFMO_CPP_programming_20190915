@@ -23,8 +23,8 @@ int t05_chess_king() {
 int a1, b1, a2, b2;
     cin >> a1 >> b1 >> a2 >> b2;
     if ((a1 == a2 - 1 || a1 == a2 || a1 == a2 + 1) && (b1 == b2 - 1 || b1 == b2 || b1 == b2 + 1))
-        cout << " Yes" << endl << endl;
+        cout << "YES" << endl << endl;
     else
-        cout << "No";
+        cout << "NO";
     return 0;
 };
