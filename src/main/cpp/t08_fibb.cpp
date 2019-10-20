@@ -21,7 +21,7 @@
 using namespace std;
 
 int t08_fibb() {
-    int S =1,N, a=1, x=1,y=0, tmp;
+    int S =1,N, a=1, x=1,y=0, tmp=0;
     cin >> N;
     while (a<N && N!=0) {
         S=x+y;

@@ -24,7 +24,7 @@
 using namespace std;
 
 int t10_max_local() {
-    int S, N, D=0, score=0;
+    int S=0, N, D=0, score=0;
     cin >> N;
     while (N!=0) {
         S=N;
