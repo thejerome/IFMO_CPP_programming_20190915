@@ -29,7 +29,7 @@
 using namespace std;
 
 int t07_max_2() {
-int x;
+int a;
   cin >> a;
   int max1 = a, max2 = -1;
   while (x)
