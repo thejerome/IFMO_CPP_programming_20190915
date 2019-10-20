@@ -16,9 +16,25 @@
 
 #include "t06_chess_bishop.h"
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int t06_chess_bishop() {
 
+int A1, B1, A2, B2, x, y;
+
+  cin >> A1;
+  cin >> B1;
+  cin >> A2;
+  cin >> B2;
+
+  x=abs(A1-A2);
+  y=abs(B1-B2);
+
+  if ( (x=y) && ((x+y)!=0) ) {
+        cout << "YES";
+  } else cout << "NO";
+
+  return 0;
 };
