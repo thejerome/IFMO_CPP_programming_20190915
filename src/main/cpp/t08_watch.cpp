@@ -36,8 +36,7 @@ using namespace std;
 
 int t08_watch() {
 int n;
-cout << "proshlo sekund";
 cin >> n;
-cout << "Vremya" << n / 3600 % 24 << ":" << n % 3600 / 60 / 10 << n % 3600 / 60 % 10 << ":" << n % 60 / 10 << n % 60 % 10 << endl;
+cout << n / 3600 % 24 << ":" << n % 3600 / 60 / 10 << n % 3600 / 60 % 10 << ":" << n % 60 / 10 << n % 60 % 10 << endl;
 return 0;
 };
