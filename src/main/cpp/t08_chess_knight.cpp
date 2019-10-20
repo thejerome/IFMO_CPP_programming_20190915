@@ -29,5 +29,32 @@
 using namespace std;
 
 int t08_chess_knight() {
+	int x1, x2, y1, y2;
+	cin >> x1 >> y1 >> x2 >> y2;
+	int raznX, raznY;
+	if (x1 > x2)
+	{
+		raznX = x1 - x2;
+	}
+	else
+	{
+		raznX = x2 - x1;
+	}
 
+	if (y1>y2)
+	{
+		raznY = y1 - y2;
+	}
+	else
+	{
+		raznY = y2 - y1;
+	}
+	if (raznX + raznY == 3) 
+	{
+		cout << "YES";
+	}else
+	{
+		cout << "NO";
+	}
+	return 0;
 };
