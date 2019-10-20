@@ -22,5 +22,16 @@
 using namespace std;
 
 int t04_deposit() {
-
-};
+     float P,X,Y,K;
+     cin >> P >> X >> Y >> K;
+     Y += X * 100;
+     while(--K >= 0)
+     {
+         Y *= (1 + P / 100);
+         Y = trunc(Y);
+     }
+     cout.precision(0);
+     cout << fixed;
+     cout << floor(Y / 100) << " " << (Y / 100 - floor(Y / 100)) * 100;
+     return 0;
+ }
