@@ -21,7 +21,7 @@
 using namespace std;
 
 int t08_fibb() {
-    int a, b, s , d, z ;
+    long long a, b, s , d, z ;
   b = 0;
   s = 0;
   d = 1;
