@@ -22,7 +22,7 @@
 using namespace std;
 
 int t04_deposit() {
-    float p, y, k, x;
+    double p, y, k, x;
     int c = 0;
     cin >> p >> x >> y >> k;
     p = p/100 + 1;
@@ -36,5 +36,5 @@ int t04_deposit() {
     }
     y = floor(x/100);
     x = (x/100 - y)*100;
-    cout << int(y) << " " << int(x+0.999);
+    cout << int(y) << " " << int(x);
 };
