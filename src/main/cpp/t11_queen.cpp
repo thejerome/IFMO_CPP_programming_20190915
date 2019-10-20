@@ -40,8 +40,8 @@ using namespace std;
 
 int t11_queen() {
     const int N = 8;
-    int x[7];
-    int y[7];
+    int x[N];
+    int y[N];
     bool check = false;
 
     for (int i = 0; i < N; i++) {

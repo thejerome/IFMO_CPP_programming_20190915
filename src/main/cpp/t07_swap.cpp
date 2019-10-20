@@ -25,10 +25,9 @@ int t07_swap() {
     int a[N];
 
     for (int i = 0; i < N; i++) {
-        int temp=0;
         cin >> a[i];
         if ((i % 2) != 0) {
-            temp = a[i];
+            int temp = a[i];
             a[i] = a[i-1];
             a[i-1] = temp;
         }
