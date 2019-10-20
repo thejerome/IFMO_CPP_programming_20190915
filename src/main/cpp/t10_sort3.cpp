@@ -19,26 +19,26 @@
 using namespace std;
 
 int t10_sort3() {
-    int value1, value2, value3, tmp,tmp_m,tmp_l = 0;
-    cin >>value1 >>value2 >> value3;
-    if (value1>=value2 && value1>=value3) {
-        tmp = value1;
-        tmp_m = value2;
-        tmp_l = value3;
+    int A1, B2, C3, tmp,tmp_middle,tmp_last = 0;
+    cin >>A1 >>B2 >> C3;
+    if (A1>=B2 && A1>=C3) {
+        tmp = A1;
+        tmp_middle = B2;
+        tmp_last = C3;
     }
-    if (value2>=value1 && value2>=value3) {
-        tmp = value2;
-        tmp_m = value1;
-        tmp_l = value3;
+    if (B2>=A1 && B2>=C3) {
+        tmp = B2;
+        tmp_middle = A1;
+        tmp_last = C3;
     }
-    if (value3>=value1 && value3>=value2) {
-        tmp = value3;
-        tmp_m = value1;
-        tmp_l = value2;
+    if (C3>=A1 && C3>=B2) {
+        tmp = C3;
+        tmp_middle = A1;
+        tmp_last = B2;
     }
-    if (tmp_m>tmp_l)
-        cout << tmp_l << " " << tmp_m << " " << tmp;
+    if (tmp_middle>tmp_last)
+        cout << tmp_last << " " << tmp_middle << " " << tmp;
     else
-        cout << tmp_m << " " << tmp_l << " " << tmp;
+        cout << tmp_middle << " " << tmp_last << " " << tmp;
 
 };
