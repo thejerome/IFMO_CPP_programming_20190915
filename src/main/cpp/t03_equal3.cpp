@@ -19,16 +19,18 @@
 using namespace std;
 
 int t03_equal3() {
-    int a, b, c;
+    int a, b, c, cou;
     cin >> a >> b >> c;
     if (a != b && b != c && a != c){
-        cout << '0';
+        cou = "1";
     };
     if (a == b || b == c || a == c){
-        cout << '2';
+        cou = "2";
     };
     if (a == b && b == c && a == c){
-        cout << '3';
+        cou = "3";
     };
+    cout << cou;
+    return 0;
 };
   
