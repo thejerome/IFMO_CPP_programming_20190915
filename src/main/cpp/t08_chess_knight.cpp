@@ -25,9 +25,18 @@
 
 #include "t08_chess_knight.h"
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int t08_chess_knight() {
+int A1,B1,A2,B2;
+    cin >> A1 >> B1 >> A2 >> B2;
+    if (((B2 == B1 + 1) || (B2 == B1 - 1)) && ((A2 == A1 + 2) || (A2 == A1 -2)))
 
+        {cout << "YES";}
+    else if (((B2 == B1 + 2) || (B2 == B1 - 2)) && ((A2 == A1 + 1) || (A2 == A1 - 1)))
+        {cout << "YES";}
+        else {cout << "NO";}
+        return 0;
 };
