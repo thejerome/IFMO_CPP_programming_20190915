@@ -22,5 +22,18 @@
 using namespace std;
 
 int t04_deposit() {
-
+    int P=0, X=0, Y=0, K=0;
+    cin >>P >>X >>Y >>K;
+    double Y1 = Y;
+    double F = X + (Y1/100);
+    double P1 = P;
+    P1 = 1 + P1/100;
+    for (int i = 0; i<K; i++) {
+        F = F * P1;
+        F = F*100;
+        F = trunc(F);
+        F = F/100;
+    }
+    cout <<trunc(F) <<" " << round((F - trunc(F))*100);
+    return 0;
 };

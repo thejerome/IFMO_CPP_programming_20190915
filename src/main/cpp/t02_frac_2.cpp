@@ -13,10 +13,16 @@
 #include "t02_frac_2.h"
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 
 
 using namespace std;
 
 int t02_frac_2() {
-
+    double x =0;
+    cin >>x;
+    double b =  (x - trunc(x)) *10;
+    double c = trunc(b);
+    cout  <<c;
+    return 0;
 };

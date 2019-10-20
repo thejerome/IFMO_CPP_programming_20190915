@@ -18,9 +18,22 @@
 #include "t05_ave.h"
 #include <iostream>
 #include <iomanip>
+#include <iomanip>
 
 using namespace std;
 
 int t05_ave() {
+    double S =0;
+    int n = 0;
+    int a = -1;
 
+    while (a != 0) {
+        cin >>a;
+        S = S + a;
+        n++;
+    }
+    n = n-1;
+    S = S/n;
+    cout <<setprecision(11) <<fixed <<S;
+    return 0;
 };
