@@ -24,4 +24,21 @@ using namespace std;
 
 int t09_row() {
 
+int N, K, M=1, L=1;
+
+cin >> N;
+K=N;
+
+while (N<0 || N>0) {
+    cin >> N;
+    if (N==K) { ++M;
+    } else if (M>L) {
+        L=M;
+        M=1;
+    }
+}
+
+cout << L;
+
+return 0;
 };
