@@ -24,7 +24,7 @@ int t02_divisor()  {
      cin >> Q;
      while(Q % R != 0){
          R++;
-     cout << R;
      }
+     cout << R;
      return 0;
  }
