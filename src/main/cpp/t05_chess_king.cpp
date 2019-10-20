@@ -23,10 +23,10 @@ int t05_chess_king() {
     int x,x1,y,y1;
     cin >> x >> y >> x1 >> y1;
     if (abs(x-x1) == 1) || (abs(y-y1) == 1) {
-        cout << 'YES';
+        cout << "YES";
     }
     else {
-        cout << 'NO';
+        cout << "NO";
     };
     return 0;
 };

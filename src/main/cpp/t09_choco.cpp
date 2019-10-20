@@ -29,11 +29,11 @@ using namespace std;
 int t09_choco() {
     int n,m,k;
     cin >> n << m << k;
-    if (k < n*m) && ((n % k == 0) || (m % k == 0)) {
-        cout << 'YES';
+    if ((k < n*m) && ((n % k == 0) || (m % k == 0))) {
+        cout << "YES";
     }
     else {
-        cout << 'NO';
+        cout << "NO";
     };
     return 0;
 };

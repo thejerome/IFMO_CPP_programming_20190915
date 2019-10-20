@@ -21,11 +21,11 @@ using namespace std;
 int t04_chess_rook() {
     int x,x2,y,y2;
     cin >> x >> y >> x2 >> y2;
-    if (x == x2) || (y == y2) {
-        cout << 'YES';
+    if ((x == x2) || (y == y2)) {
+        cout << "YES";
     }
     else {
-        cout << 'NO';
+        cout << "NO";
     }
     return 0;
 };
