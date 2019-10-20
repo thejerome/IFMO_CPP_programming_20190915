@@ -29,5 +29,26 @@
 using namespace std;
 
 int t08_chess_knight() {
+ int x, y, z, t;
+    cin >> x >> y >> z >> t;
+    if( x-z ==2 || x-z == -2){
+        if(y-t==1||y-t==-1){
+            cout<<"YES";
+        }
+        else{
+            cout<<"NO";
+        }
+    }
+    else if(x-z ==1||x-z==-1){
+        if(y-t==-2||y-t==2){
+            cout<<"YES";
+        }
+        else{
+            cout<<"NO";
+        }
+    }
+    else{
+        cout<<"NO";
+    }
 
-};
+}

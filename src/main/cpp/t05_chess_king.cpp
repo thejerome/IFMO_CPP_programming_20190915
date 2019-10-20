@@ -20,5 +20,38 @@
 using namespace std;
 
 int t05_chess_king() {
-
-};
+int x,y,z,t;
+   cin>>x>>y>>z>>t;
+   if(x==z){
+       if(t-1==y||t+1==y){
+           cout<<"YES";
+       }
+       else{
+           cout<<"NO";
+       }
+   }
+   else if(y==t){
+       if(z+1==x || z-1==x){
+           cout<<"YES";
+       }
+       else{
+           cout<<"NO";
+       }
+   }
+   else{
+       if(z-1==x&& t-1==y){
+           cout<<"YES";
+       }
+       else if(z-1==x&&t+1==y){
+           cout<<"YES";
+       }
+       else if(z+1==x&&t+1==y){
+           cout<<"YES";
+       }
+       else if(z+1==x&&t-1==y){
+           cout<<"YES";
+       }
+       else{
+      	 cout<<"NO";
+	}
+}}

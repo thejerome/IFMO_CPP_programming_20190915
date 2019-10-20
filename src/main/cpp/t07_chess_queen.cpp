@@ -29,5 +29,57 @@
 using namespace std;
 
 int t07_chess_queen() {
+   int x,y,z,t;
+    cin>>x>>y>>z>>t;
+    if(x==z||y==t){
+        cout<<"YES";
+    }
+    else{
+        if(x<z&&y<t){
+            x-=z;
+            y-=t;
+            x=-x;
+            y=-y;
+            if(x == y){
+                cout<<"YES";
+            }
+            else{
+                cout<<"NO";
+            }}
+        else if(x>z&&y<t){
+            x-=z;
+            y-=t;
+            y=-y;
+            if(x==y) {
+                cout << "YES";
+            }
+            else{
+                cout<<"NO";
+            }
+        }
+        else if(x<z&&y>t){
+            x-=z;
+            y-=t;
+            x=-x;
+            if(x==y) {
+                cout << "YES";
+            }
+            else{
+                cout<<"NO";
+            }
+        }
+        else{
+            x-=z;
+            y-=t;
+            y=-y;
+            x=-x;
+            if(x==y) {
+                cout << "YES";
+            }
+            else{
+                cout<<"NO";
+        }
+       }
 
-};
+    }
+}
