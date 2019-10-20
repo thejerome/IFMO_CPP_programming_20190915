@@ -27,12 +27,11 @@ int t08_fibb() {
             cout << 1;
         }
         else {
-          int i=1;
-            while (N > i) {
+            while (N > 1) {
                 c = a + b;
                 a = b;
                 b = c;
-                i++;
+                --N;
             }
             cout << c;
         }
