@@ -24,9 +24,8 @@ using namespace std;
 
 int t06_3digits() {
 int a;
-cout << "Vvedite tryohznachnoe chislo";
 cin >> a;
 int c = a/100 + a%10 + a/10%10;
-cout << "summa cifr = " << c << endl;
+cout << c << endl;
 return 0;
 };
