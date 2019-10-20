@@ -23,11 +23,9 @@
 using namespace std;
 
 int t03_last_number() {
-setlocale(0, "");
 int a;
-cout << "Введите число ";
 cin >> a;
 int c = a % 10;
-cout << "Последняя цифра " << c << endl;
+cout << c << endl;
 return 0;
 };
