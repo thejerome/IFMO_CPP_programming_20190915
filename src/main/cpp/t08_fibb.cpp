@@ -25,14 +25,17 @@ int t08_fibb() {
     cin >> N;
     a = 0;
     b = 1;
-    k = 0;
+    k = 1;
     f = 0;
-    while ( k != N) {
+    while (k != N) {
         f = a + b;
         a = b;
         b = f;
         k++;
     }
-    cout << f;
+    if (N == 1) {
+        cout << 1;
+    } else
+        cout << f;
     return 0;
 };
