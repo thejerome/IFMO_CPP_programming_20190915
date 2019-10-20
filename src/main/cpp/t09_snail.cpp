@@ -27,10 +27,12 @@
 using namespace std;
 
 int t09_snail() {
-int a, b, c;
+int a, b, c, d, e;
 cin >> a;
 cin >> b;
 cin >> c;
-cout << (a-b)/(b-c)+1 << endl;
+e = a - b;
+d = b - c;
+cout << 1+e/d+(e%d+d-1)/d << endl;
 return 0;
 };
