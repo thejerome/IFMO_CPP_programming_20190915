@@ -34,9 +34,9 @@ int t07_quad2() {
             double x1 = (-b) / (2 * a);
             cout << "1 " << x1;
         } else cout << 0;
-    } else if (b != 0) cout << "1 " << (-c) / b;
-    else if ((c == 0) && (b != 0)) cout << "1 " << 0;
-    else if ((c == 0) && (b = 0)) cout << 3;
-    else if ((c != 0) && (b = 0)) cout << 0;
+    } else if ((a==0) && (b != 0)) cout << "1 " << (-c) / b;
+    else if ((a==0) && (c == 0) && (b != 0)) cout << "1 " << 0;
+    else if ((a==0) && (c == 0) && (b = 0)) cout << 3;
+    else if ((a==0) && (c != 0) && (b = 0)) cout << 0;
     return 0;
 }
