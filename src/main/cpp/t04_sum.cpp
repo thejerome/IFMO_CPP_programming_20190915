@@ -20,5 +20,13 @@
 using namespace std;
 
 int t04_sum() {
-
+    int x,s;
+    cin >> x;
+    s = x;
+    while (x != 0) {
+      cin >> x;
+      s = (s + x);
+    };
+    cout << s << endl;
+    return 0;
 };
