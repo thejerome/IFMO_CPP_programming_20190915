@@ -25,6 +25,6 @@ int t03_triangle() {
     cin >> a >> b >> c;
     h = (a*a - ((a*a - b*b + c*c)*(a*a - b*b + c*c)) / 4*c*c);
     s = h*c/2;
-    cout << setprecision(5) << s;
+    cout << s;
     return 0;
 };
