@@ -21,4 +21,17 @@ using namespace std;
 
 int t04_sum() {
 
+int N, K=0;
+
+cin >> N;
+
+while (N<0 || N>0) {
+    K=K+N;
+    cin >> N;
+}
+
+cout << K;
+
+return 0;
+
 };

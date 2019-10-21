@@ -30,4 +30,21 @@ using namespace std;
 
 int t07_max_2() {
 
+int N, K, M=0;
+
+cin >> N;
+K=N;
+while (N<0 || N>0) {
+    cin >> N;
+    if (N>K) {
+        M=K;
+        K=N;
+    } else if (N==K) {M=N;
+    } else if (N>M) {M=N;}
+}
+
+cout << M;
+
+return 0;
+
 };
