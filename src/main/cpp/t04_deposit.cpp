@@ -34,6 +34,7 @@ int t04_deposit() {
         a = a + 1;
     }
     cout << X << " " << Y;
+
     return 0;
 }
 };

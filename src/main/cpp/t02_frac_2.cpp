@@ -21,5 +21,6 @@ int t02_frac_2() {
     double X;
     cin >> X;
     cout << int(X * 10) % 10;
+
     return 0;
 };

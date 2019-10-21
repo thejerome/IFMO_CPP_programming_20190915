@@ -27,5 +27,6 @@ int t03_triangle() {
     cout << fixed;
     cout.precision(4);
     cout << S << endl;
+
     return 0;
 };

@@ -33,5 +33,6 @@ int t05_ave() {
     }
     b /= k;
     cout << b;
+
     return 0;
 };
