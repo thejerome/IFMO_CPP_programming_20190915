@@ -34,7 +34,7 @@ int t07_chess_queen() {
 
     cin >> A >> B >> C >> D;
 
-    if ((A-C) == (B-D)|A == C |B ==D){
+    if (abs(A-C) == abs(B-D)|A == C |B ==D){
         cout << "YES";
     }
     else{
