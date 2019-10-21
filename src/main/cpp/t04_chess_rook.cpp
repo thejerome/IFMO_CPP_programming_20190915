@@ -29,9 +29,7 @@ int A1, B1, A2, B2, K=0;
 
   if (A1==A2) {
       if (B1!=B2) {++K;}
-  } else if (A1!=A2) {
-      if (B1==B2) {++K;}
-  }
+  } else if (B1==B2) {++K;}
   if (K==1) {
     cout << "YES";
   } else cout << "NO";
