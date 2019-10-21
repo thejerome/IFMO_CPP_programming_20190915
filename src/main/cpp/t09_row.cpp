@@ -36,7 +36,10 @@ int t09_row() {
             if (max < len) {
                 max = len;
                 len = 1;
-            };
+            }
+            else {
+                len = 1;
+            }
         };
         x2 = x1;
         cin >> x1;
