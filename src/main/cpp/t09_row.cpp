@@ -4,7 +4,7 @@
 //Формат входных данных
 //        Вводится последовательность натуральных чисел, оканчивающаяся числом 0 (само число 0 в последовательность не входит, а служит как признак ее окончания).
 //Формат выходных данных
-//        Выведите ответ на задачу.
+//        Выведите ответ на задачу.//
 //Sample Input:
 //
 //1
@@ -16,7 +16,7 @@
 //Sample Output:
 //
 //2
-
+////
 #include "t09_row.h"
 #include <iostream>
 
@@ -24,4 +24,31 @@ using namespace std;
 
 int t09_row() {
 
+	int N, max, max1, counter;
+	N = 1;
+	max = 1;
+	max1 = 0;
+	counter = 1;
+	cin >> max1;
+	while (N != 0)
+	{
+		cin >> N;
+		if (N == max1) {
+			max++;
+		}
+		else {
+			if (max > counter) {
+				counter = max;
+			}
+				max1 = N;
+				max = 1;
+			
+		}
+
+	}
+	if (max > counter) {
+		counter = max;
+	}
+	cout << counter << endl;
+	return 0;
 };
