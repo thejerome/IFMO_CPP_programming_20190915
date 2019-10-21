@@ -23,16 +23,17 @@
 using namespace std;
 
 int t09_row() {
-    int n, i, counter = 1, maxcounter = 1;
-    cin >> n;
-    while (i!=0) {
-        cin >> i;
-        if (n == i) { counter++; }
-        else {
-            if (counter > maxcounter) { maxcounter = counter; }
-            counter = 1;
-                }
-        n = i;
-                }
-    cout << maxcounter;
-    };
+    int a = 1, b = 0, m = 1, p = 0,
+    while (a!=0) {
+        cin >> a;
+        if (a == b) { c++; }
+        if (a != b)
+        {
+            if (m>p) { n=m ;}
+            m = 1;
+        }
+        b = a;
+    }
+    cout << p;
+    return 0;
+    }
