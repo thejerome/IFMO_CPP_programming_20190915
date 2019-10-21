@@ -24,12 +24,12 @@ using namespace std;
 int t05_ave() {
 	double x = 0, a;
 	int n = 0;
+	cin >> a;
 	while (a != 0) {
-		cin >> a;
 		x += a;
 		n++;
+		cin >> a;
 	}
-	n--;
 	cout << fixed << setprecision(11) << x / n;
 	return 0;
 };
