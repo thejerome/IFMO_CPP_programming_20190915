@@ -22,20 +22,18 @@ using namespace std;
 
 int t08_fibb() {
 
-int N, i=1, K=1, M=0, S=0;
+int N, i=1, K=1, S=0;
 
 cin >> N;
 
 while (i<N) {
     ++i;
-    M=S;
-    S=K;
-    K=M+K;
+    K=S+K;
+    S=K-S;
 }
 
 if (N==0) { cout << 0;
 } else cout << K;
 
 return 0;
-
 };
