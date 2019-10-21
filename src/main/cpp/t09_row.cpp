@@ -23,7 +23,7 @@
 using namespace std;
 
 int t09_row() {
-    int a = 1, b = 0, m = 1, p = 0,
+    int a = 1, b = 0, m = 1, p = 0;
     while (a!=0) {
         cin >> a;
         if (a == b) { c++; }
@@ -36,4 +36,4 @@ int t09_row() {
     }
     cout << p;
     return 0;
-    }
+};
