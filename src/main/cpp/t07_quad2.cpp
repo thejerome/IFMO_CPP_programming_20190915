@@ -29,6 +29,10 @@ int t07_quad2() {
     if ((a == 0 and c == 0) or (b == 0 and c == 0)) {
         cout << "3";
         return 0;
+    }      
+    if ((a==0 and b==0) or (d<0)) {
+          cout << "0";
+    return 0;    
     }
     if (d==0) {
         cout << "1" << " " << x1;
@@ -46,6 +50,4 @@ int t07_quad2() {
         else cout << "2" << " " << x1 << " " << x2;
         return 0;
     }
-    cout << "0";
-    return 0;
 };
