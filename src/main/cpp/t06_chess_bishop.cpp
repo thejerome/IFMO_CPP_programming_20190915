@@ -34,7 +34,7 @@ int A1, B1, A2, B2, x, y;
   if (x<0) { x=x*(-1);}
   if (y<0) { y=y*(-1);}
 
-  if ( (x=y) && ((x+y)!=0) ) {
+  if ( (x==y) && ((x+y)!=0) ) {
         cout << "YES";
   } else cout << "NO";
 
