@@ -25,7 +25,7 @@ int t05_ave() {
 	double a, s;
 	int N;
 	N = 0;
-	b = 0;
+	s = 0;
 	cin >> a;
 	while (a != 0) {
 		s = s + a;

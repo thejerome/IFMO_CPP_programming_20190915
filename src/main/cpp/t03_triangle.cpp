@@ -6,7 +6,7 @@
 //Sample Input:
 //
 //3
-//4
+//4//
 //5
 //Sample Output:
 //
