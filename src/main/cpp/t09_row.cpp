@@ -26,10 +26,10 @@ int t09_row() {
     int a = 1, b = 0, m = 1, p = 0;
     while (a!=0) {
         cin >> a;
-        if (a == b) { c++; }
+        if (a == b) { m++; }
         if (a != b)
         {
-            if (m>p) { n=m ;}
+            if (m>p) { p=m ;}
             m = 1;
         }
         b = a;
