@@ -29,6 +29,6 @@ int t08_fibb() {
         f0 = f1;
         f1 = f2;
     }
-    cout << f2;
+    cout << f1;
     return 0;
 };
