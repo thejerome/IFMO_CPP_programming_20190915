@@ -21,5 +21,35 @@
 using namespace std;
 
 int t07_quad2() {
-
+	double a, b, c, x1, d;
+	cin >> a >> b >> c;
+	d = b * b - 4 * a * c;
+	if (a != 0) {
+		if (d == 0) {
+			x1 = (-b + sqrt(d)) / (2 * a);
+			cout << 1 << " " << x1;
+		}
+		else if (d > 0) {
+			double x2;
+			x1 = (-b + sqrt(d)) / (2 * a);
+			x2 = (-b - sqrt(d)) / (2 * a);
+			if (x1 < x2)
+				cout << 2 << " " << x1 << " " << x2;
+			else
+				cout << 2 << " " << x2 << " " << x1;
+		}
+		else
+			cout << 0;
+	}
+	else if(b!=0){
+		x1 = (-c / b);
+		cout << 1 << " " << x1;
+	}
+	else if (c == 0) {
+		cout << 3;
+	}
+	else{
+		cout << 0;
+	}
+	return 0;
 };
