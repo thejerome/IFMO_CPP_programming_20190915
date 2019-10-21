@@ -26,7 +26,7 @@ int t03_twos() {
     int A,N;
     cin >> N;
     A = 1;
-    while A < N {
+    while (A < N) {
         A = A*2;
     };
     if (A == N) {
