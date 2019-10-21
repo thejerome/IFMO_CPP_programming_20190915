@@ -42,12 +42,13 @@ int t07_quad2() {
 	}
 
 	else if (D > 0) {
+		
 		if (x1 > x2) {
-			cout << x2 << " " << x1 << endl;
+			cout << 2 << " " << x2 << " " << x1 << endl;
 			return 0;
 		}
 		else {
-			cout << x1 << " " << x2 << endl;
+			cout << 2 << " " << x1 << " " << x2 << endl;
 			return 0;
 		}
 
@@ -57,7 +58,7 @@ int t07_quad2() {
 		return 0;
 	}
 	else if (D == 0) {
-		cout << x1 << endl;
+		cout 1 << " " << x1 << endl;
 		return 0;
 	}
 };
