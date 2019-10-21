@@ -25,8 +25,8 @@ int t07_quad2() {
 	double D, x1, x2;
 	cin >> a >> b >> c;
 	D = (b * b) - 4 * a * c;
-	x1 = (-b - D) / (2 * a);
-	x2 = (-b + D) / (2 * a);
+	x1 = (-b - sqrt(D)) / (2 * a);
+	x2 = (-b + sqrt(D)) / (2 * a);
 	if (a == b == c == 0) {
 		cout << 3  << endl;
 		return 0;

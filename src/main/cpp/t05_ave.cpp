@@ -33,6 +33,8 @@ int t05_ave() {
 		N++;
 	}
 	s = s / N;
+	cout << fixed;
+	cout.precision(11);
 	cout << s << endl;
 	return 0;
 };
