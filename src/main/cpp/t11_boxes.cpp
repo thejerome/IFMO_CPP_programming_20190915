@@ -90,7 +90,7 @@ int A1, B1, C1, A2, B2, C2, s=0, l=0, e=0;
         ++l;
     }
 
-  if (e>=l && e>=s) {
+  if (e>=l && e>=s && e>0) {
     cout << "Boxes are equal";
   } else if (s>l && s>0) {
     cout << "The first box is smaller than the second one";
