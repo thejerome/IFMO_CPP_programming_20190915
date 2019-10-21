@@ -26,23 +26,23 @@ int t09_row() {
     int x1,x2,max,len;
     cin >> x1;
     x2 = x1;
-    len = 0;
+    len = 1;
     max = 0;
     while (x1 != 0) {
+        cin >> x1;
         if (x1 == x2) {
             len++;
+            if (len >= max) {
+                max = len;
+            };
         }
         else {
+            len = 1;
+            x1 = x2;
             if (max < len) {
                 max = len;
-                len = 1;
-            }
-            else {
-                len = 1;
-            }
+            };
         };
-        x2 = x1;
-        cin >> x1;
     };
     cout << len << endl;
     return 0;
