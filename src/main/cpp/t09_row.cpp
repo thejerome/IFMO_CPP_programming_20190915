@@ -23,22 +23,24 @@
 using namespace std;
 
 int t09_row() {
-    int x1,x2,max,len;
-    x1 = -1;
-    x2 = 0;
+    int x1, x2, len, max;
+    cin >> x1;
+    x2 = x1;
+    len = 1;
     max = 1;
-    len = 0;
     while (x1 != 0) {
         cin >> x1;
+        if (x1 == x2) {
+            len++;
+        }
+        if (len > max) {
+            max = len;
+        }
         if (x1 != x2) {
-            if (len > max) {
-                max = len;
-                len = 0;
-            };
-        };
+            len = 1;
+        }
         x2 = x1;
-        len++;
-    };
+    }
     cout << max;
     return 0;
 };
