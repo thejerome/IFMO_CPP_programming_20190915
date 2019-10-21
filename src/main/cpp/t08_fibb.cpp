@@ -29,6 +29,10 @@ int t08_fibb() {
         f0 = f1;
         f1 = f2;
     }
-    cout << f1;
+
+    if (n==0) cout << "0";
+    else {
+        cout << f1;
+    }
     return 0;
 };
