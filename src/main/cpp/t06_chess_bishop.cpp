@@ -24,7 +24,7 @@ int t06_chess_bishop() {
 
     cin >> A >> B >> C >> D;
 
-    if ((A-C) == (B-D)){
+    if ( abs(A-C) == abs(B-D)){
         cout << "YES";
     }
     else{
