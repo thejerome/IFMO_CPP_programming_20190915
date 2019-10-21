@@ -20,5 +20,10 @@
 using namespace std;
 
 int t01_frac() {
-
+    int n = 0;
+    double x = 0;
+    cin  >> x;
+    n = x;
+    cout << x-n;
+    return 0;
 };
