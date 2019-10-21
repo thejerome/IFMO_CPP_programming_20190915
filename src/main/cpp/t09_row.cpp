@@ -36,10 +36,13 @@ int t09_row() {
 			max++;
 		}
 		else {
-			if (max > counter)  counter = max;
-			max1 = N;
-			max = 1;
+			if (max > counter) {
+				counter = max;
+				max1 = N;
+				max = 1;
+			}
 		}
+
 	}
 	cout << counter << endl;
 	return 0;
