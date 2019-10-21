@@ -39,3 +39,4 @@ int A1, B1, A2, B2, x, y;
   } else cout << "YES";
 
   return 0;
+};
