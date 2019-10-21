@@ -27,4 +27,4 @@ int t05_max() {
         if (n > m) {m = s;}
     }
     cout << m;
-};
+}
