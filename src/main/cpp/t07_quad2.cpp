@@ -8,7 +8,7 @@
 //Sample Input:
 //
 //1
-//-1
+//-1//
 //-2
 //Sample Output:
 //

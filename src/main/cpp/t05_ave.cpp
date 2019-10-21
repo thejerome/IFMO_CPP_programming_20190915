@@ -8,7 +8,7 @@
 //Sample Input:
 //
 //1
-//7
+//7//
 //9
 //0
 //Sample Output:
