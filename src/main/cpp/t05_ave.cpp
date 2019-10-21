@@ -22,8 +22,7 @@
 using namespace std;
 
 int t05_ave() {
-	double a, s;
-	int N;
+	double a, s, N;
 	N = 0;
 	s = 0;
 	cin >> a;
