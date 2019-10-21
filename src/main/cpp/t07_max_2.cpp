@@ -38,7 +38,7 @@ int t07_max_2() {
             max2 = max1;
             max1 = x;
          };
-        if ((max2 < x) && (a < max1)) {
+        if ((max2 < x) && (x < max1)) {
             max2 = x;
         };
     cin >> x;
