@@ -20,4 +20,24 @@ using namespace std;
 
 int t03_equal3() {
 
+    int A, B, C;
+    int N = 0;
+
+    cin >> A >> B >> C;
+
+    if (A == B)
+        N++;
+
+    if (A == C)
+        N++;
+
+    if (C == B)
+        N++;
+    
+    if (N==1)
+        N++;
+
+    cout << N;
+    return 0;
+
 };
