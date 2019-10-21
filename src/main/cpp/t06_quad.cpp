@@ -31,9 +31,9 @@ cin >> c;
 D=b*b-4*a*c;
 
 if (D>0) {
-        if ((-b-sqrt(D))/2*a < (-b+sqrt(D))/2*a){
-    cout << (-b-sqrt(D))/2*a << " " << (-b+sqrt(D))/2*a;
-    }else cout << (-b+sqrt(D))/2*a << " " << (-b-sqrt(D))/2*a;
+        if ((-b-sqrt(D))/(2*a) < (-b+sqrt(D))/(2*a)){
+    cout << (-b-sqrt(D))/(2*a) << " " << (-b+sqrt(D))/(2*a);
+    }else cout << (-b+sqrt(D))/(2*a) << " " << (-b-sqrt(D))/(2*a);
 } else if (D=0) {
     cout << -b/2*a;
 }
