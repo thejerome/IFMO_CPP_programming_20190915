@@ -22,7 +22,7 @@ int t02_divisor() {
     int a,b;
     cin >> a;
     b = 2;
-    while (a % b !== 0) {
+    while (a % b != 0) {
             b++;
     };
     cout << b;

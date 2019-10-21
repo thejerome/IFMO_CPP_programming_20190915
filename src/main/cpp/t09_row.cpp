@@ -38,7 +38,7 @@ int t09_row() {
                 len = 1;
             };
         };
-        x2 = x1
+        x2 = x1;
         cin >> x1;
     };
     cout << len << endl;
