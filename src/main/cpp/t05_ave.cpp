@@ -23,4 +23,20 @@ using namespace std;
 
 int t05_ave() {
 
+int N, i=0;
+double s;
+
+cin >> N;
+s=s+N;
+while (N!=0) {
+    ++i;
+    cin >> N;
+    s=s+N;
+}
+
+cout << fixed;
+cout << setprecision(11);
+cout << s/i;
+
+return 0;
 };
