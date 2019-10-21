@@ -58,7 +58,7 @@ int t07_quad2() {
 		return 0;
 	}
 	else if (D == 0) {
-		cout 1 << " " << x1 << endl;
+		cout << 1 << " " << x1 << endl;
 		return 0;
 	}
 };
