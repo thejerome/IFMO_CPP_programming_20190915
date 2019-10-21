@@ -25,7 +25,7 @@ int t04_deposit() {
     int p = 0, x = 0, y = 0, k = 0, s = 0;
     cin >> p >> x >> y >> k;
     y = x*100 + y;
-    while (i<k) {
+    while (s<k) {
         y = y*(1+(double)p/100);
         s++;
     }
