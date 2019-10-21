@@ -23,7 +23,8 @@ using namespace std;
 
 int t04_deposit() {
 
-float P, X, Y;
+float P, Y;
+double X;
 int K, i=1;
 
 cin >> P;
@@ -36,7 +37,7 @@ P=1+P/100;
  while (i<=K) {
     ++i;
     X=X*P;
-    Y=Y*P+100*(X-int(X));
+    Y=Y*P+(X-int(X))*100;
     X=int(X)+int(Y/100);
     Y=int(Y)%100;
  }
