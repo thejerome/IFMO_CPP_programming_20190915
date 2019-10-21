@@ -33,6 +33,9 @@ int t03_equal3() {
 
     if (C == B)
         N++;
+    
+    if (N==1)
+        N++;
 
     cout << N;
     return 0;
