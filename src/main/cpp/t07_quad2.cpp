@@ -27,7 +27,7 @@ int t07_quad2() {
 	D = (b * b) - 4 * a * c;
 	x1 = (-b - sqrt(D)) / (2 * a);
 	x2 = (-b + sqrt(D)) / (2 * a);
-	if (a == b == c == 0) {
+	if (a == 0 && b == 0 && c == 0) {
 		cout << 3  << endl;
 		return 0;
 	}
@@ -56,7 +56,7 @@ int t07_quad2() {
 	else if (D < 0) {
 		return 0;
 	}
-	else if (D = 0) {
+	else if (D == 0) {
 		cout << x1 << endl;
 		return 0;
 	}

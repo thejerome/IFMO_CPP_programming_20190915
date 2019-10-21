@@ -43,7 +43,7 @@ int t06_quad() {
 		else if (D < 0) {
 			return 0;
 		}
-		else if (D = 0) {
+		else if (D == 0) {
 			cout << x1 << endl;
 			return 0;
 		}
