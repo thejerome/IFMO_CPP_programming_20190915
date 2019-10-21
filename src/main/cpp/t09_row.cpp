@@ -31,11 +31,11 @@ K=N;
 
 while (N!=0) {
     cin >> N;
-    if (N==K) { ++M;
+    if (N==K) { ++M; cout << M;
     } else if (M>L) {
         L=M;
         M=1;
-    }
+    } else M=1;
     K=N;
 }
 
