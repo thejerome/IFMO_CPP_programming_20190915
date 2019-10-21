@@ -24,7 +24,7 @@ int t05_max() {
     while (n!=0)
     {
         cin >> n;
-        if (n > m) {m = s;}
+        if (n > m) {m = n;}
     }
     cout << m;
 };
