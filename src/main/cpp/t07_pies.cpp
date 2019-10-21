@@ -39,7 +39,7 @@ using namespace std;
 int t07_pies() {
 int a,b,n;
 cin >> a >> b >> n;
-cout << n*(a*100+b)/100 << " " << (n*(a*100+b)/100);
+cout << n*(a*100+b)/100 << " " << (n*(a*100+b)%100);
 return 0;
 
 };
