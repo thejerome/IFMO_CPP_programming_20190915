@@ -29,5 +29,12 @@
 using namespace std;
 
 int t08_chess_knight() {
-
+int l, c, l2, c2; 
+cin >> l >> c >> l2 >> c2; 
+if (((l2 - l) * (l2 - l) + (c2 - c) * (c2 - c) == 5)) { 
+cout << "YES"; 
+} else { 
+cout << "NO"; 
+} 
+return 0;
 };
