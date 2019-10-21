@@ -28,10 +28,10 @@ int t08_fibb() {
     z = 0;
     cin >> a;
     while (a>b) {
-        b = b++;
         s = s + d;
         d = z;
         z = s;
+        b++;
     }
     cout << s ;
     return 0;
