@@ -27,4 +27,4 @@ int t01_quad() {
         i++;
     }
     return 0;
-}
+};

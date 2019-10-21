@@ -42,4 +42,4 @@ int t07_max_2() {
     }
     cout << m2;
     return 0;
-}
+};

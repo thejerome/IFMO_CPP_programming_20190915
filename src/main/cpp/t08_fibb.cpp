@@ -31,4 +31,4 @@ int t08_fibb() {
     }
     cout << f2;
     return 0;
-}
+};

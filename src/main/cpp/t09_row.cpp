@@ -35,4 +35,4 @@ int t09_row() {
         n = i;
                 }
     cout << maxcounter;
-    }
+    };

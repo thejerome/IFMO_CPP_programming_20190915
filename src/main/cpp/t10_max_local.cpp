@@ -35,4 +35,4 @@ int t10_max_local() {
         i2 = i3;
     }
     cout << count;
-}
+};

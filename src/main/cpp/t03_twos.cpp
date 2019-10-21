@@ -29,4 +29,4 @@ int t03_twos() {
     if (i==N) { cout << "YES"; }
     else { cout << "NO"; }
     return 0;
-}
+};
