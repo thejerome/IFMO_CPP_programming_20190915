@@ -44,6 +44,6 @@ int t09_row() {
             };
         };
     };
-    cout << len << endl;
+    cout << len;
     return 0;
 };
