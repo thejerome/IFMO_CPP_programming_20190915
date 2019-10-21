@@ -23,10 +23,10 @@ int t03_triangle() {
     int a,b,c;
     double h,s;
     cin >> a >> b >> c;
-    h = 0;
-    s = 0;
-    h = (a*a - ((a*a - b*b + c*c)*(a*a - b*b + c*c)) / (4*c*c));
-    s = h*c/2;
+    p = (a + b +c) / 2;
+    s = sqrt(p*(p - a)*(p - b)*(p - c));
+    //h = (a*a - ((a*a - b*b + c*c)*(a*a - b*b + c*c)) / (4*c*c));
+    //s = h*c/2;
     cout << s;
     return 0;
 };
