@@ -31,4 +31,21 @@ using namespace std;
 
 int t06_max_count() {
 
+	int N, Max, Counter;
+	Max = -50000;
+	Counter = 0;
+	cin >> N;
+	Max = N;
+	while (N != 0) {
+		if (N > Max) {
+			Max = N;
+		    Counter = 0; 
+		}
+		if (N == S) {
+			Counter = Counter + 1; 
+		}
+		cin >> N;
+	}
+	cout << Counter << endl;
+	return 0;
 };

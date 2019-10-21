@@ -30,4 +30,24 @@ using namespace std;
 
 int t07_max_2() {
 
+	int N, Max, Max2;
+	Max = -50000;
+	Max2 = Max;
+	cin >> N;
+	Max = N;
+	while (N != 0) {
+		cin >> N;
+		if (N > Max){
+	    Max2 = Max;
+		Max = N; 
+		}
+		else {
+			if ((Max2 <= Max) && (Max2 < N)){ 
+				Max2 = N; 
+			}
+		}
+
+	}
+	cout << S2 << endl;
+	return 0;
 };

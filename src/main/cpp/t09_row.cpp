@@ -24,4 +24,23 @@ using namespace std;
 
 int t09_row() {
 
+	int N, max, max1, counter;
+	max = -30000;
+	max1 = max;
+	counter = 0;
+	cin >> max1;
+	while (N != 0)
+	{
+		cin >> N;
+		if (N == max1) {
+			max++;
+		}
+		else {
+			if (max > counter)  counter = max;
+			max1 = N;
+			max = 1;
+		}
+	}
+	cout << counter << endl;
+	return 0;
 };
