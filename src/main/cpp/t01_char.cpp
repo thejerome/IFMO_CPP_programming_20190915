@@ -26,7 +26,6 @@
 #include "t01_char.h"
 #include <iostream>
 
-
 using namespace std;
 
 int t01_char() {
