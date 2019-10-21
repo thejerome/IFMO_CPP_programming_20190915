@@ -21,20 +21,10 @@ using namespace std;
 
 int t03_triangle() {
     int a,b,c;
-    double h,s,p;
+    double s,p;
     cin >> a >> b >> c;
     p = (a + b +c) / 2;
     s = sqrt(p*(p - a)*(p - b)*(p - c));
-    //h = (a*a - ((a*a - b*b + c*c)*(a*a - b*b + c*c)) / (4*c*c));
-    //s = h*c/2;
-    cout << s;
+    cout << setprecision(5) << s;
     return 0;
 };
-
-    //V(9 - n*n) = sqrt(9 - n*n)
-    //V(16 - (5 - n)^2)= sqrt(16 - 25 + 10n - n^2) = sqrt(10n - 9 - n*n)
-    // 9 == 10n -9
-    // 10n == 18
-    // n == 1.8
-    // h == sqrt(9 - 3.24) == 2.4
-    // s == 5*1.2 == 6.0
