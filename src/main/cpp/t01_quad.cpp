@@ -11,7 +11,7 @@
 //50
 //Sample Output:
 //
-//1 4 9 16 25 36 49
+//1 4 9 16 25 36 49//
 
 #include "t01_quad.h"
 #include <iostream>

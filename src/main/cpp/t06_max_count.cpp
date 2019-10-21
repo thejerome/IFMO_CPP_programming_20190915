@@ -23,7 +23,7 @@
 //Sample Output 2:
 //
 //2
-
+//
 #include "t06_max_count.h"
 #include <iostream>
 
@@ -32,7 +32,6 @@ using namespace std;
 int t06_max_count() {
 
 	int N, Max, Counter;
-	Max = -50000;
 	Counter = 0;
 	cin >> N;
 	Max = N;

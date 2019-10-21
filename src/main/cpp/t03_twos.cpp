@@ -4,7 +4,7 @@
 //        Вводится натуральное число.
 //Формат выходных данных
 //        Выведите ответ на задачу.
-//Sample Input 1:
+//Sample Input 1://
 //
 //1
 //Sample Output 1:
@@ -24,9 +24,8 @@ using namespace std;
 
 int t03_twos() {
 
-	int N, i;
+	int N;
 	N = 0;
-	i = 2;
 	cin >> N;
 	while (N % 2 == 0) {
 		N = N / 2;
