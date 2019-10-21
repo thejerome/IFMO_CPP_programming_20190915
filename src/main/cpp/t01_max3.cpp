@@ -24,11 +24,12 @@ int t01_max3() {
   cin >> B;
   cin >> C;
 
-  if (A >= B) {
-  if (A >= C) { cout << A; }
-  } else if (B >= C) {
-  cout << B;
-  } else cout << C;
-
+  if (B>A) {
+  A=B;
+  }
+  if (C>A) {
+  A=C;
+  }
+  cout << A;
   return 0;
 };
