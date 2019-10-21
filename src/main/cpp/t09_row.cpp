@@ -26,8 +26,8 @@ int t09_row() {
 
 	int N, max, max1, counter;
 	max = -30000;
-	max1 = max;
-	counter = 0;
+	max1 = 1;
+	counter = 1;
 	cin >> max1;
 	while (N != 0)
 	{
