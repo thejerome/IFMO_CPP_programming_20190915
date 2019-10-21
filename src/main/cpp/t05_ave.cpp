@@ -8,9 +8,9 @@
 //Sample Input:
 //
 //1
-//7
+//7//
 //9
-//0
+//0//
 //Sample Output:
 //
 //5.66666666667
@@ -22,5 +22,18 @@
 using namespace std;
 
 int t05_ave() {
-
+	double a, s, N;
+	N = 0;
+	s = 0;
+	cin >> a;
+	while (a != 0) {
+		s = s + a;
+		cin >> a;
+		N++;
+	}
+	s = s / N;
+	cout << fixed;
+	cout.precision(11);
+	cout << s << endl;
+	return 0;
 };

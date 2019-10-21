@@ -4,10 +4,10 @@
 //Формат выходных данных
 //        Выведите ответ на задачу. Точность - 4 знака после запятой.
 //Sample Input:
-//
-//3
-//4
-//5
+////
+//3//
+//4//
+//5//
 //Sample Output:
 //
 //6.0000
@@ -20,5 +20,12 @@
 using namespace std;
 
 int t03_triangle() {
-
+	double a, b, c;
+	double S, p;
+	cin >> a >> b >> c;
+	p = (a + b + c) / 2;
+    S = sqrt(p * (p - a) * (p - b) * (p - c));
+	cout << fixed;
+	cout.precision(4);
+	cout << S << endl;
 };

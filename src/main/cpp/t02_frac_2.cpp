@@ -4,7 +4,7 @@
 //Формат выходных данных
 //        Выведите ответ на задачу.
 //Sample Input:
-//
+////////
 //1.79
 //Sample Output:
 //
@@ -18,5 +18,8 @@
 using namespace std;
 
 int t02_frac_2() {
-
+	double X;
+	cin >> X;
+	cout << int( X * 10) % 10;
+	return 0;
 };
