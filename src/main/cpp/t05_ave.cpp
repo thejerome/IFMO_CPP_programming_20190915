@@ -24,7 +24,7 @@ using namespace std;
 int t05_ave() {
 
 int N, i=0;
-double s;
+double s=0;
 
 cin >> N;
 s=s+N;
