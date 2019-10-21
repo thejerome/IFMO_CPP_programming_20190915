@@ -37,11 +37,11 @@ if ((a==0) && (c==0)) {
 } else if (a==0) {
         cout << "1 " << -c/b;
 } else if (D>0) {
-        if ((-b-sqrt(D))/2*a < (-b+sqrt(D))/2*a){
-    cout << "2 " << (-b-sqrt(D))/2*a << " " << (-b+sqrt(D))/2*a;
-    }else cout << "2 " << (-b+sqrt(D))/2*a << " " << (-b-sqrt(D))/2*a;
+        if ((-b-sqrt(D))/(2*a) < (-b+sqrt(D))/(2*a)){
+    cout << "2 " << (-b-sqrt(D))/(2*a) << " " << (-b+sqrt(D))/(2*a);
+    }else cout << "2 " << (-b+sqrt(D))/(2*a) << " " << (-b-sqrt(D))/(2*a);
 } else if (D==0) {
-    cout << -b/2*a;
+    cout << "1 " << -b/(2*a);
 } else cout << "0";
 
 return 0;
