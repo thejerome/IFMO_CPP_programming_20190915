@@ -22,4 +22,21 @@ using namespace std;
 
 int t06_quad() {
 
+double D, a, b, c;
+
+cin >> a;
+cin >> b;
+cin >> c;
+
+D=b*b-4*a*c;
+
+if (D>0) {
+        if ((-b-sqrt(D))/(2*a) < (-b+sqrt(D))/(2*a)){
+    cout << (-b-sqrt(D))/(2*a) << " " << (-b+sqrt(D))/(2*a);
+    }else cout << (-b+sqrt(D))/(2*a) << " " << (-b-sqrt(D))/(2*a);
+} else if (D==0) {
+    cout << (-b)/(2*a);
+}
+
+return 0;
 };
