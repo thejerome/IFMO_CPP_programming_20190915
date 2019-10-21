@@ -38,4 +38,65 @@ using namespace std;
 
 int t11_boxes() {
 
+int A1, B1, C1, A2, B2, C2, s=0, l=0, e=0;
+
+  cin >> A1;
+  cin >> B1;
+  cin >> C1;
+  cin >> A2;
+  cin >> B2;
+  cin >> C2;
+
+  if (A1==A2 && B1==B2 && C1==C2) {
+        ++e;
+    } else if (A1<=A2 && B1<=B2 && C1<=C2) {
+        ++s;
+    } else if (A1>=A2 && B1>=B2 && C1>=C2) {
+        ++l;
+    }
+  if (A1==A2 && B1==C2 && C1==B2) {
+        ++e;
+    } else if (A1<=A2 && B1<=C2 && C1<=B2) {
+        ++s;
+    } else if (A1>=A2 && B1>=C2 && C1>=B2) {
+        ++l;
+    }
+  if (A1==B2 && B1==A2 && C1==C2) {
+        ++e;
+    } else if (A1<=B2 && B1<=A2 && C1<=C2) {
+        ++s;
+    } else if (A1>=B2 && B1>=A2 && C1>=C2) {
+        ++l;
+    }
+  if (A1==B2 && B1==C2 && C1==A2) {
+        ++e;
+    } else if (A1<=B2 && B1<=C2 && C1<=A2) {
+        ++s;
+    } else if (A1>=B2 && B1>=C2 && C1>=A2) {
+        ++l;
+    }
+  if (A1==C2 && B1==A2 && C1==B2) {
+        ++e;
+    } else if (A1<=C2 && B1<=A2 && C1<=B2) {
+        ++s;
+    } else if (A1>=C2 && B1>=A2 && C1>=B2) {
+        ++l;
+    }
+  if (A1==C2 && B1==B2 && C1==A2) {
+        ++e;
+    } else if (A1<=C2 && B1<=B2 && C1<=A2) {
+        ++s;
+    } else if (A1>=C2 && B1>=B2 && C1>=A2) {
+        ++l;
+    }
+
+  if (e>=l && e>=s && e>0) {
+    cout << "Boxes are equal";
+  } else if (s>l && s>0) {
+    cout << "The first box is smaller than the second one";
+  } else if (l>s && l>0) {
+    cout << "The first box is larger than the second one";
+  } else cout << "Boxes are incomparable";
+
+  return 0;
 };

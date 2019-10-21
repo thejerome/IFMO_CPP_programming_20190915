@@ -20,4 +20,23 @@ using namespace std;
 
 int t10_sort3() {
 
+int A, B, C, D;
+
+  cin >> A;
+  cin >> B;
+  cin >> C;
+
+  if (A>B) {
+        D=B; B=A; A=D;
+  }
+  if (B>C) {
+        D=C; C=B; B=D;
+  }
+  if (A>B) {
+        D=B; B=A; A=D;
+  }
+
+  cout << A << " " << B << " " << C << endl;
+
+  return 0;
 };
