@@ -22,5 +22,16 @@
 using namespace std;
 
 int t05_ave() {
-
+    double a, b, k;
+    b = 0;
+    k = 0;
+    cin >> a;
+    while (a != 0) {
+        b = b + a;
+        cin >> a;
+        k++;
+    }
+    b /= k;
+    cout << b;
+    return 0;
 };
