@@ -22,4 +22,27 @@ using namespace std;
 
 int t07_quad2() {
 
+double D, a, b, c;
+
+cin >> a;
+cin >> b;
+cin >> c;
+
+D=b*b-4*a*c;
+
+if ((a==0) && (c==0)) {
+        cout << "3";
+} else if ((a==0) && (b==0)) {
+        cout << "0";
+} else if (a==0) {
+        cout << "1 " << -c/b;
+} else if (D>0) {
+        if ((-b-sqrt(D))/2*a < (-b+sqrt(D))/2*a){
+    cout << "2 " << (-b-sqrt(D))/2*a << " " << (-b+sqrt(D))/2*a;
+    }else cout << "2 " << (-b+sqrt(D))/2*a << " " << (-b-sqrt(D))/2*a;
+} else if (D==0) {
+    cout << -b/2*a;
+} else cout << "0";
+
+return 0;
 };
