@@ -25,7 +25,7 @@ int t05_chess_king() {
 
     cin >> A >> B >> C >> D;
 
-    if (abs(A-C)<=1|abs(B-D)<=1){
+    if (abs(A-C)<=1 && abs(B-D)<=1){
         cout << "YES";
     }
     else{
