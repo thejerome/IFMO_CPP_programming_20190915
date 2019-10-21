@@ -24,26 +24,21 @@ using namespace std;
 
 int t09_row() {
     int x1,x2,max,len;
-    cin >> x1;
-    x2 = x1;
-    len = 1;
-    max = 0;
+    x1 = -1;
+    x2 = 0;
+    max = 1;
+    len = 0;
     while (x1 != 0) {
         cin >> x1;
-        if (x1 == x2) {
-            len++;
-            if (len >= max) {
+        if (x1 != x2) {
+            if (len > max) {
                 max = len;
-            };
-        }
-        else {
-            len = 1;
-            x1 = x2;
-            if (max < len) {
-                max = len;
+                len = 0;
             };
         };
+        x2 = x1;
+        len++;
     };
-    cout << len;
+    cout << max;
     return 0;
 };
