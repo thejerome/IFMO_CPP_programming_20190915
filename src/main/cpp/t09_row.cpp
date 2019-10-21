@@ -16,7 +16,7 @@
 //Sample Output:
 //
 //2
-//
+////
 #include "t09_row.h"
 #include <iostream>
 

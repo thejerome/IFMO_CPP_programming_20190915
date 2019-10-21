@@ -8,7 +8,7 @@
 //
 //3
 //6
-//8
+//8//
 //0//
 //Sample Output:
 //
@@ -21,7 +21,7 @@ using namespace std;
 
 int t04_sum() {
 	int N;
-	N = 0;
+	N = -1;
 	int sum;
 	sum = 0;
 	while (N != 0) {
