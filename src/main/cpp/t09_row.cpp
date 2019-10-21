@@ -23,13 +23,13 @@
 using namespace std;
 
 int t09_row() {
-    int x,x2,max,len;
-    cin >> x;
-    x2 = x;
+    int x1,x2,max,len;
+    cin >> x1;
+    x2 = x1;
     len = 0;
     max = 0;
-    while (x != 0) {
-        if (x == x2) {
+    while (x1 != 0) {
+        if (x1 == x2) {
             len++;
         }
         else {
@@ -38,7 +38,8 @@ int t09_row() {
                 len = 1;
             };
         };
-        cin >> x;
+        x2 = x1
+        cin >> x1;
     };
     cout << len << endl;
     return 0;

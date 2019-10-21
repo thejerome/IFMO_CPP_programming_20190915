@@ -33,7 +33,7 @@ int t07_max_2() {
     cin >> x;
     max1 = x;
     while (x != 0) {
-      if (max1 < x) {
+      if (max1 <= x) {
           max2 = max1;
           max1 = x;
       };

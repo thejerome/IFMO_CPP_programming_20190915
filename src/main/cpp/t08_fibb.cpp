@@ -26,13 +26,22 @@ int t08_fibb() {
     count = 1;
     x1 = 0;
     x2 = 1;
-    if (n == 0) cout << x1 << endl;
-    if (n == 1) cout << x2 << endl;
-    while (count < n) {
-        count++;
-        x = x1 + x2;
-        x1 = x2;
-        x2 = x;
+    if (n == 0) {
+        cout << x1 << endl;
+    }
+    else {
+        if (n == 1) {
+            cout << x2 << endl;
+        }
+        else {
+            while (count < n) {
+                count++;
+                x = x1 + x2;
+                x1 = x2;
+                x2 = x;
+            };
+            cout << x2;
+        };
     };
     return 0;
 };
