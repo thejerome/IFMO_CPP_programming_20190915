@@ -41,7 +41,7 @@ int t06_max_count() {
 			Max = N;
 		    Counter = 0; 
 		}
-		if (N == S) {
+		if (N == Max) {
 			Counter = Counter + 1; 
 		}
 		cin >> N;

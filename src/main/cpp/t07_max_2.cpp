@@ -48,6 +48,6 @@ int t07_max_2() {
 		}
 
 	}
-	cout << S2 << endl;
+	cout << Max2 << endl;
 	return 0;
 };
