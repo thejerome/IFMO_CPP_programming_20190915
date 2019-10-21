@@ -25,6 +25,7 @@ int t03_triangle() {
     cin >> a >> b >> c;
     p = (a + b +c) / 2;
     s = sqrt(p*(p - a)*(p - b)*(p - c));
-    cout << setprecision(5) << s;
+    cout << fixed;
+    cout << setprecision(4) << s;
     return 0;
 };
