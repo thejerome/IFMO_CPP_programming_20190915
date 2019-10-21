@@ -32,7 +32,9 @@ int t05_ave() {
         k++;
     }
     b /= k;
-    cout << b;
+    cout << fixed;
+    cout.precision(11);
+    cout << b << endl;
 
     return 0;
 };
