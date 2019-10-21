@@ -20,7 +20,7 @@
 
 using namespace std;
 
-int t07_quad2.h() {
+int t07_quad2() {
 	double a, b, c;
 	double D, x1, x2;
 	cin >> a >> b >> c;
