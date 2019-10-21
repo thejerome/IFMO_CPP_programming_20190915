@@ -26,11 +26,9 @@ int A, B, C;
   cin >> B;
   cin >> C;
 
-  if (A+B>C) {
-  if (B+C>A) {
-  if (A+C>B) {
-  cout << "YES"; }
-  }} else cout << "NO";
+  if ((A+B>C) && (B+C>A) && (A+C>B)) {
+  cout << "YES";
+  } else cout << "NO";
 
   return 0;
 };
