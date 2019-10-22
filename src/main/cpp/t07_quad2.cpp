@@ -21,7 +21,7 @@
 using namespace std;
 
 int t07_quad2() {
-    int a, b, c;
+    double a, b, c;
     cin >> a >> b >> c;
     if (a == 0) {
         if (b == 0) {
