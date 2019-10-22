@@ -24,7 +24,7 @@ int t06_chess_bishop() {
     cin >> x1 >> y1 >> x2 >> y2 ;
     z1 = x1 - y1;
     z2 = x2 - y2;
-    if ( z1 == z2 ) {
+    if ( z1 == z2 || -z1 == z2 || z1 == -z2 ) {
         cout << "YES";
     }
     else {
