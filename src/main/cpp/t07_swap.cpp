@@ -20,12 +20,12 @@ using namespace std;
 
 int t07_swap() {
     int size=1;
-    short t;
     cin >> size;
     int a[size]{};
     for (int i=0; i<size; i++) {
         cin >> a[i];
     }
+    int t;
     for (int i=1; i<size; i++) {
         if (size%2!=0 and a[i]==size) {
             break;
