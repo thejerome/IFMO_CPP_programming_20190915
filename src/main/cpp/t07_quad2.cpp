@@ -17,6 +17,7 @@
 #include "t07_quad2.h"
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 
 using namespace std;
 
