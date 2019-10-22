@@ -29,16 +29,17 @@ int t07_quad2() {
             else cout << 0;
         } else if (c == 0) cout << 1 << " " << 0;
         else cout << 1 << " " << ((-c) / b);
-        else
+        else }
         d = b * b - 4 * a * c;
         if (d > 0) {
             double x1 = ((-b + sqrt(d)) / (2 * a));
             double x2 = ((-b - sqrt(d)) / (2 * a));
-            if (x1 < x2) { cout << 2 << " " << x1 << " " << x2; } else { cout << 2 << " " << x2 << " " << x1 }
+            if (x1 < x2) { cout << 2 << " " << x1 << " " << x2; } else { cout << 2 << " " << x2 << " " << x1 ;}
         } else if (d == 0) {
             double x = (-b) / (2 * a);
             cout << 1 << " " << x;
         } else cout << 0;
+        }
     };
     return 0;
 }
