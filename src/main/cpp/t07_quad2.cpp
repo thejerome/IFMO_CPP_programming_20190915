@@ -28,7 +28,9 @@ int t07_quad2() {
             if (c == 0) cout << 3;
             else cout << 0;
         } else if (c == 0) cout << 1 << " " << 0;
-        else cout << 1 << " " << ((-c) / b);
+        else { double xn = (-c / b);
+            cout << 1 << " " << fixed << setprecision(4) << xn;
+            }
         } 
         else {
             d = b * b - 4 * a * c;
