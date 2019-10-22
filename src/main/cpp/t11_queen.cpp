@@ -41,7 +41,7 @@ using namespace std;
 int t11_queen() {
     int x[8]{};
     int y[8]{};
-    int k=1;
+    unsigned short k=1;
     for (int i=0; i<8; i++) {
         cin >> x[i] >> y[i];
     }

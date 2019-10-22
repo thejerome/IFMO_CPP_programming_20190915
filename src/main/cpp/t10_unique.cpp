@@ -26,7 +26,7 @@ using namespace std;
 
 int t10_unique() {
     int size=1;
-    int k=0;
+    unsigned short k=0;
     cin >> size;
     int a[size]{};
     for (int i=0; i<size; i++) {
