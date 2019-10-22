@@ -25,8 +25,8 @@ int t07_swap() {
     for (int i=0; i<size; i++) {
         cin >> a[i];
     }
-    int t;
     for (int i=1; i<size; i++) {
+        int t;
         if (size%2!=0 and a[i]==size) {
             break;
         }

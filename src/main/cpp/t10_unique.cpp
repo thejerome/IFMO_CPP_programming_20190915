@@ -31,9 +31,8 @@ int t10_unique() {
     for (int i=0; i<size; i++) {
         cin >> a[i];
     }
-    int k=0;
     for (int i=0; i<size; i++) {
-        k=0;
+        int k=0;
         for (int j=0; j<size; j++) {
             if ((a[i]==a[j]) and i!=j) {
                 k=1;
