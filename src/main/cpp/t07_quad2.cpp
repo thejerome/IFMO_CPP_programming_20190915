@@ -17,7 +17,6 @@
 #include "t07_quad2.h"
 #include <iostream>
 #include <cmath>
-#include <iomanip>
 
 using namespace std;
 
@@ -30,7 +29,7 @@ int t07_quad2() {
             else cout << 0;
         } else if (c == 0) cout << 1 << " " << 0;
         else { double xn = (-c / b);
-            cout << 1 << " " << fixed << setprecision(4) << xn;
+            cout << 1 << " " << xn;
             }
         } 
         else {
