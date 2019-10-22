@@ -20,7 +20,7 @@ using namespace std;
 
 int t07_swap() {
     int size=1;
-    int t=0;
+    int t;
     cin >> size;
     int a[size]{};
     for (int i=0; i<size; i++) {
