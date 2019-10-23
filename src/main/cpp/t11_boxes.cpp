@@ -37,46 +37,14 @@
 using namespace std;
 
 int t11_boxes() {
-    int  A1 , B1 , C1 , A2 , B2 = 0 , C2 = 0 ;
-    int k = 0;
+    int A1 , B1 , C1 , A2 , B2 , C2 ;
     cin >> A1 >> B1 >> C1 >> A2 >> B2 >> C2 ;
-    if ( A1 > B1 )
-    {
-        k = B1 ;
-        B1 = A1 ;
-        A1 = k ;
-    }
-    if ( B1 > C1 )
-    {
-        k = C1 ;
-        C1 = B1 ;
-        B1 = k ;
-    }
-    if ( A1 > B1 )
-    {
-        k = B1 ;
-        B1 = A1 ;
-        A1 = k ;
-    }
-    if ( A2 > B2 )
-    {
-        k = B2 ;
-        B2 = A2 ;
-        A2 = k ;
-    }
-    if ( B2 > C2 )
-    {
-        k = C2 ;
-        C2 = B2 ;
-        B2 = k ;
-    }
-    if ( A2 > B2 )
-    {
-        k = B2 ;
-        B2 = A2 ;
-        A2 = k ;
-    }
-
+    if ( A1 > B1 ) swap( A1 , B1 );
+    if ( B1 > C1 ) swap( B1 , C1 );
+    if ( A1 > C1 ) swap( A1 , C1 );
+    if ( A2 > B2 ) swap( A2 , B2 );
+    if ( B2 > C2 ) swap( B2 , C2 );
+    if ( A2 > C2 ) swap( A2 , C2 );
     if ( A1 == A2 && B1 == B2 && C1 == C2) {
         cout << "Boxes are equal";
     }
