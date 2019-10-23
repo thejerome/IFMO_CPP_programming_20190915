@@ -31,7 +31,7 @@ cout << 3;
 cout << 0; 
 } 
 } else { 
-cout << 1 << endl << -c / b; 
+cout << 1 << " " << -c / b; 
 } 
 } else { 
 b /= -2 * a; 
