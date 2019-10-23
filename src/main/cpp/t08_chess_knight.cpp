@@ -25,9 +25,17 @@
 
 #include "t08_chess_knight.h"
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int t08_chess_knight() {
-
+	int a, b, c, d;
+	cin >> a >> b >> c >> d;
+	if (abs(b - a) == 1 && abs(d - c) == 2)
+		cout << "YES";
+	else if (abs(b - a) == 2 && abs(d - c) == 1)
+		cout << "YES";
+	else cout << "NO";
+	return 0;
 };
