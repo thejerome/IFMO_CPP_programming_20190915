@@ -37,9 +37,9 @@
 using namespace std;
 
 int t11_boxes() {
-    int  A1 , B1 , C1 , A2 , B2 , C2 ;
+    int  A1 , B1 , C1 , A2 , B2 = 0 , C2 = 0 ;
     int ch = 0;
-    cin>> A1 >> B1 >> C1 >> A2 >> B2 >> C2 ;
+    cin >> A1 >> B1 >> C1 >> A2 >> B2 >> C2 ;
     if ( A1 > B1 )
     {
         ch = B1 ;
@@ -51,6 +51,12 @@ int t11_boxes() {
         ch = C1 ;
         C1 = B1 ;
         B1 = ch ;
+    }
+    if ( A1 > B1 )
+    {
+        ch = B1;
+        B1 = A1;
+        A1 = ch;
     }
     if ( A2 > B2 )
     {
