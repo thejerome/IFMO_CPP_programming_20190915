@@ -23,6 +23,9 @@ using namespace std;
 int t08_fibb() {
 int n, f = 1, i = 1, a = 2; 
 cin >> n; 
+if (n == 0) { 
+f = 0; 
+} 
 if (n == 1) { 
 f = 1; 
 } 

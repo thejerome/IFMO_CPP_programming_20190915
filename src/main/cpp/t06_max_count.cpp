@@ -30,7 +30,7 @@
 using namespace std;
 
 int t06_max_count() {
-int n, count = 0; 
+int n, ct = 0; 
 int max = -1; 
 while (cin >> n && n != 0) { 
 if (max < n) { 
