@@ -32,10 +32,17 @@ using namespace std;
 int t08_chess_knight() {
 	int a, b, c, d;
 	cin >> a >> b >> c >> d;
-	if (abs(b - a) == 1 && abs(d - c) == 2)
-		cout << "YES";
-	else if (abs(b - a) == 2 && abs(d - c) == 1)
-		cout << "YES";
-	else cout << "NO";
+	int d_x = a - b;
+        int d_y = c - d;
+
+    bool step_x = (abs(d_x) == 2);
+    bool step_y = (abs(d_y) == 2);
+    bool side_x = (abs(d_x) == 1);
+    bool side_y = (abs(d_y) == 1);
+
+    if ((step_x && side_y) || (step_y && side_x))
+        cout << "YES";
+    else 
+        cout << "NO";
 	return 0;
 };
