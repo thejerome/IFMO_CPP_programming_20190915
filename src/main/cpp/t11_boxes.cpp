@@ -38,43 +38,43 @@ using namespace std;
 
 int t11_boxes() {
     int  A1 , B1 , C1 , A2 , B2 = 0 , C2 = 0 ;
-    int ch = 0;
+    int k = 0;
     cin >> A1 >> B1 >> C1 >> A2 >> B2 >> C2 ;
     if ( A1 > B1 )
     {
-        ch = B1 ;
+        k = B1 ;
         B1 = A1 ;
-        A1 = ch ;
+        A1 = k ;
     }
     if ( B1 > C1 )
     {
-        ch = C1 ;
+        k = C1 ;
         C1 = B1 ;
-        B1 = ch ;
+        B1 = k ;
     }
     if ( A1 > B1 )
     {
-        ch = B1;
-        B1 = A1;
-        A1 = ch;
+        k = B1 ;
+        B1 = A1 ;
+        A1 = k ;
     }
     if ( A2 > B2 )
     {
-        ch = B2 ;
+        k = B2 ;
         B2 = A2 ;
-        A2 = ch ;
+        A2 = k ;
     }
     if ( B2 > C2 )
     {
-        ch = C2 ;
+        k = C2 ;
         C2 = B2 ;
-        B2 = ch ;
+        B2 = k ;
     }
     if ( A2 > B2 )
     {
-        ch = B2 ;
+        k = B2 ;
         B2 = A2 ;
-        A2 = ch ;
+        A2 = k ;
     }
 
     if ( A1 == A2 && B1 == B2 && C1 == C2) {
