@@ -19,5 +19,12 @@
 using namespace std;
 
 int t03_bigger() {
-
+    int n, prev, curr;
+    cin >> n >> prev;
+    while (--n) 
+    {
+        cin >> curr;
+        if (curr > prev) cout << curr << " ";
+        prev = curr;
+    }
 }
