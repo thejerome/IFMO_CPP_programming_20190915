@@ -23,5 +23,15 @@
 using namespace std;
 
 int t03_twos() {
-
+int n; cin >> n; 
+int x = 0; 
+int y = 0; 
+while (n > 1) { 
+if (n % 2 == 0) { 
+x ++; } 
+n = n / 2; 
+y ++; } 
+if (x == y) { cout << "YES"; } 
+else { cout << "NO"; } 
+return 0; 
 };
