@@ -23,5 +23,22 @@
 using namespace std;
 
 int t09_row() {
+  int N = 1;
+    int qweN = 0;
+    int maxQ = 1;
+    int Q = 1;
 
+    do {
+        cin >> N;
+        if (N == qweN) Q +=1;
+        else {
+            if (maxQ < Q) maxQ = Q;
+            Q = 1;
+        }
+
+        qweN = N;
+    } while (N != 0);
+
+    cout << maxQ << endl;
+    return 0;
 };

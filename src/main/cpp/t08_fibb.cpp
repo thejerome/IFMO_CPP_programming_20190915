@@ -21,5 +21,20 @@
 using namespace std;
 
 int t08_fibb() {
+  int N=0;
+    int fib1=0;
+    int fib2=1;
+    int fibN=0;
+    int Q = 2;
+    cin >> N;
 
+    while (Q <= N) {
+        fibN = fib1 + fib2;
+        if ((Q % 2) == 0) fib1 += fib2;
+        if ((Q % 2) == 1) fib2 += fib1;
+        ++Q;
+    }
+    if (N == 1) fibN++;
+    cout << fibN << endl;
+    return 0;
 };
