@@ -20,7 +20,6 @@ using namespace std;
 
 int t01_even() {
 
-
     int num;
     cin >> num;
     int *arr = new int[num];
