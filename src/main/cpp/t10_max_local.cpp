@@ -24,5 +24,15 @@
 using namespace std;
 
 int t10_max_local() {
-
+    int count = 0, i1, i2, i3=-1;
+    cin >> i1;
+    cin >> i2;
+    while (i3 != 0)
+    {
+        cin >> i3;
+        if ((i1 < i2) && (i2 > i3) && (i3!=0)) {count++;}
+        i1 = i2;
+        i2 = i3;
+    }
+    cout << count;
 };
