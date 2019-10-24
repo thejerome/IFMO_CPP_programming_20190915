@@ -39,5 +39,54 @@
 using namespace std;
 
 int t11_queen() {
-
+	int N = 8;
+    int M[N][N];
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < N; j++)
+            M[i][j] = 0;
+    for (int i = 0; i < N; i++)    {
+        int a,b;
+        cin >> a >> b;
+        M[a-1][b-1] = 1;
+    }
+    int sum1 = 0, sum2 = 0;
+    
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++){
+    		sum1 += M[i][j];
+    		sum2 += M[j][i];
+        }
+        if (sum1 > 1 || sum2 > 1) {
+        	cout << "YES" << endl;
+			return 0;
+        }
+        sum1 = 0;
+        sum2 = 0;
+    }
+    for (int bias = 0; bias < N; bias++)	{
+        for (int j = 0; j < N - bias; j++)	{
+            sum1 += M[j][j+bias];
+            sum2 += M[j+bias][j];
+        }
+        if (sum1 > 1 || sum2 > 1 ) {
+        	cout << "YES" << endl;
+        	return 0;
+        }
+        sum1 = 0;
+        sum2 = 0;
+    }
+    for (int bias = 0; bias < N; bias++)	{
+        for (int j = 0; j < N - bias; j++)	{
+            sum1 += M[N-j-1][j+bias];
+            sum2 += M[N-j-1-bias][j];
+        }
+        if (sum1 > 1 || sum2 > 1 ) {
+        	cout << "YES" << endl;
+        	return 0;
+        }
+        sum1 = 0;
+        sum2 = 0;
+    }
+    cout << "NO";
+    return 0;
 }

@@ -25,5 +25,16 @@
 using namespace std;
 
 int t10_unique() {
+int n,c, i = 0;
+
+cin >> n;
+int a[n];   
+while(cin >> a[i++]);
+for (auto i:a)
+{ c = 0;
+for (auto j:a) c+= i==j;
+c == 1 && cout << i << ' ';
+}
+
 
 }

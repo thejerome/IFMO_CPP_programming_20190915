@@ -21,5 +21,17 @@
 using namespace std;
 
 int t04_neighbors() {
-
+    int n;
+    cin >> n;
+    int a, b;
+    cin >> a;
+    while (--n) {
+        cin >> b;
+        if (a * b > 0) {
+            cout << a << " " << b;
+            break;
+        }
+        a = b;
+    }
+  return 0;
 }
