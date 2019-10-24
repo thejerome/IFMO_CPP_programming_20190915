@@ -23,7 +23,7 @@ int t03_equal3() {
  cin >> a >> b >> c;
     if (a == b && a == c) {
         cout << 3;
-    }
+    } //кодаси вернись
     else {
         if (a != b && a != c && b != c) {
             cout << 0; 
