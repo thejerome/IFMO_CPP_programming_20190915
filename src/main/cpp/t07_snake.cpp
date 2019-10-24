@@ -16,7 +16,8 @@
 //  11  12  13  14  15
 
 #include "t07_snake.h"
-#include <bits/stdc++.h>
+#include <iostream>
+#include <iomanip>
 
 
 using namespace std;

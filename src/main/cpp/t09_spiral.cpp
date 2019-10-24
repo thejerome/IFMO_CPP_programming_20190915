@@ -16,14 +16,14 @@
 //  12  11  10   9   8
 
 #include "t09_spiral.h"
-#include <bits/stdc++.h>
-
+#include <iostream>
+#include <iomanip>
 
 using namespace std;
 
 
 int t09_spiral() {
-            const int N = 102;
+    const int N = 102;
     int a[N][N];
     int n,m;
         cin>>n>>m;
