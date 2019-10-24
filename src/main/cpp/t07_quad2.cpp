@@ -21,5 +21,48 @@
 using namespace std;
 
 int t07_quad2() {
-
+    double a, b, c, D=0, x1, x2;
+    cin >> a >> b >> c;
+    D = (b*b) - (4*a*c);
+    if ((a == 0) && (b == 0) && (c == 0)) 
+    {
+        cout << 3;
+    } 
+    else if (a != 0) // для квадратного уравнения
+    {
+        if (D == 0)
+            {
+                cout << 1 << " ";
+                x1 = (-b/(2*a));
+                cout << x1;
+            }
+        if (D > 0)
+            {
+                cout << 2 << " ";
+                x1 = (-b + sqrt(D))/(2*a);
+                x2 = (-b - sqrt(D))/(2*a);
+                if (x1>x2)
+                    {
+                        cout << x2 << " " << x1 ;
+                    } else
+                    {
+                        cout << x1 << " " << x2 ;
+                    }
+            }
+        if (D < 0)
+            {
+                cout << 0;
+            }
+    } 
+    else if ((b != 0) && (c != 0))// для линейного уравнения 
+    {
+        cout << 1 << " ";
+        x1 = (-c/b);
+        cout << x1;
+    }
+    else if ((b == 0) && (c != 0))// для равенства
+    {
+        cout << 0;
+    }
+    return 0;
 };
