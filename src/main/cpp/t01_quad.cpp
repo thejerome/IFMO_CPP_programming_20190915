@@ -19,6 +19,7 @@
 using namespace std;
 
 int t01_quad() {
+	
 	int n, i;
 	i = 1;
 	cin >> n;
