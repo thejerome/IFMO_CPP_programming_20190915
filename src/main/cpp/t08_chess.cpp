@@ -18,7 +18,9 @@
 //   6   0   7   0   8
 
 #include "t08_chess.h"
-#include <bits/stdc++.h>
+#include <iostream>
+#include <iomanip>
+
 
 using namespace std;
 
