@@ -22,4 +22,30 @@ using namespace std;
 
 int t07_quad2() {
 
-};
+            double a,b,c;
+            cin>>a>>b>>c;
+            if(a == 0 and b == 0 and c == 0){
+                cout<<3;
+            } else {
+                if(a != 0) {
+                    double delta = b * b - 4.0 * a * c;
+                    if (delta >= 0.0) {
+                        double x1 = (-b + sqrt(delta)) / (2.0 * a);
+                        double x2 = (-b - sqrt(delta)) / (2.0 * a);
+                        if (delta == 0.0) {
+                            cout << 1 << ' ' << x1;
+                        } else {
+                            cout << 2 << ' ' << min(x1, x2) << ' ' << max(x1, x2);
+                        }
+                    } else {
+                        cout << 0;
+                    }
+                } else {
+                    if(b == 0){
+                        cout<<0;
+                    } else {
+                        cout<<1<<' '<<-c / b;
+                    }
+                }
+            }
+}
