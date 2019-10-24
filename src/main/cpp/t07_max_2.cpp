@@ -29,5 +29,25 @@
 using namespace std;
 
 int t07_max_2() {
+    int x,y,max, prmax;
+    cin >> x >> y;
+    if ( x>=y){
+        max =x;
+        prmax = y;}
+    else{
+        max= y;
+        prmax = x;}
+    while (x!=0){
+       
+        cin >> x;
 
-};
+        if (x == 0)
+            break;
+        if (x >= max){
+            prmax = max;
+            max=x;}
+        else if (prmax < x)
+            prmax = x;}
+    cout << prmax;
+  return 0;
+}

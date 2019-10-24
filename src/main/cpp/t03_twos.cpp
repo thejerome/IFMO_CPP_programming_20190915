@@ -23,5 +23,13 @@
 using namespace std;
 
 int t03_twos() {
-
-};
+    int n, t;
+    cin >> n;
+    if ((n & (n-1)) == 0) {
+        cout << "YES";
+    }
+    else{
+        cout << "NO";
+    }
+  return 0;
+}
