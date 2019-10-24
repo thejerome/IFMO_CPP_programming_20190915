@@ -35,4 +35,5 @@ int t06_different() {
     cout << count;
     delete [] arr;
     return 0;
+    
 }
