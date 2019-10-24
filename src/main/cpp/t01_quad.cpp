@@ -19,6 +19,7 @@
 using namespace std;
 
 int t01_quad() {
+    
     int n,i = 1;
     cin >> n;
     while (i*i <= n) {
