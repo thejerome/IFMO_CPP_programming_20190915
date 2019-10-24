@@ -25,8 +25,8 @@
 using namespace std;
 
 int t10_unique() {
-int n, i = 0;
-bool c;
+int n,c, i = 0;
+
 cin >> n;
 int a[n];   
 while(cin >> a[i++]);

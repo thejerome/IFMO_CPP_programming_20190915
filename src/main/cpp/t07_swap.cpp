@@ -19,8 +19,7 @@
 using namespace std;
 
 int t07_swap() {
-  int n;
-bool j;
+  int n,j;
   std::cin >> n;
   int *m= new int[n];
     for (int i=0;i<n;i++){std::cin >> m[i];}
