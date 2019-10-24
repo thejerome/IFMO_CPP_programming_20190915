@@ -29,5 +29,7 @@ int t05_ave() {
                 sum += (double)x;
                 ++cnt;
             }
-            cout<<setprecision(11)<<fixed<<sum / (double)cnt;
+            cout<<fixed<<showpoint;
+  	    cout<<setprecision(11);
+	    cout<<sum / ((double)cnt);
 }
