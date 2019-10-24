@@ -23,5 +23,18 @@
 using namespace std;
 
 int t09_row() {
-
+    int S, N,score=1, d=1;
+    cin >> N;
+    while (N!=0) {
+        S=N;
+        cin >> N;
+        if (N==S) {
+            score++;
+            if (score>d)
+                d=score;
+        }
+        else
+            score=1;
+    }
+    cout << d;
 };
