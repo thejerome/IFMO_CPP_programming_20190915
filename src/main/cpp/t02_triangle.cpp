@@ -23,7 +23,7 @@ int t02_triangle() {
     cin >> a >> b >> c;
     if (a + b > c && b + c > a && a + c > b) {
         cout << "YES";
-    }
+    } //кодаси вернись
     else {
         cout << "NO";
     }
