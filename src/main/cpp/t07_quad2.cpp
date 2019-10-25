@@ -21,7 +21,7 @@
 using namespace std;
 
 int t07_quad2() {
-	double a, b, c, x;
+	double a, b, c;
     cin >> a >> b >> c;
     if (a == 0) {
         if (b != 0 && c != 0)
@@ -36,19 +36,14 @@ int t07_quad2() {
     else {
 		c = b * b - 4 * a * c;
         if (c == 0) {
-            x = -b / (2 * a);
-            cout << 1 << " " << (x+0);
+            cout << 1 << " " << (-b / (2 * a)+0);
         }
         if (c < 0) {
             cout << 0;
         }
         if (c > 0) {
-            x = (-b + sqrt(c)) / (2 * a);
-            c = (-b - sqrt(c)) / (2 * a);
-            if (x > c)
-                cout << 2 << " " << c << " " << x;
-            else
-                cout << 2 << " " << x << " " << c;
+                cout << 2 << " " <<(-b - sqrt(c)) / (2 * a)<< " " << (-b + sqrt(c)) / (2 * a);
         }
     }
+    return 0;
 };

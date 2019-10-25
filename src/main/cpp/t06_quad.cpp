@@ -36,5 +36,5 @@ int t06_quad() {
 		else
 			cout<<x<<" "<<y;
 	}
-	
+    return 0;
 };
