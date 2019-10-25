@@ -30,6 +30,7 @@
 #include "t04_students.h"
 #include <iostream>
 #include <algorithm>
+#include <utility>
 #include <vector>
 #include <string>
 
@@ -43,7 +44,7 @@ struct Student {
     double avg;
     Student(){};
 
-    Student(string name_, int mark1_, int mark2_, int mark3_) {
+    Student(const string& name_, int mark1_, int mark2_, int mark3_) {
         name = name_;
         mark1 = mark1_;
         mark2 = mark2_;
