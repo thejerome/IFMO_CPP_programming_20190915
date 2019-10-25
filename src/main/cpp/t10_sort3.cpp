@@ -38,4 +38,5 @@ int t10_sort3() {
     }
     cout << a << " " << b << " " << c;
     return 0;
+    
 };
