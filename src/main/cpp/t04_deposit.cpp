@@ -31,4 +31,5 @@ int t04_deposit() {
     }
     cout << y / 100 << " " << y % 100;
     return 0;
+    
 };
