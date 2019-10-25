@@ -26,9 +26,13 @@
 #include "t01_char.h"
 #include <iostream>
 
-
 using namespace std;
 
-int t01_char() {
 
+int t01_char() {
+char x;
+cin >> x;
+if(x >= '0' && x <= '9')cout << "yes";
+else cout << "no";
+return 0;
 }

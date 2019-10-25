@@ -18,10 +18,16 @@
 
 #include "t05_palindrom.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t05_palindrom() {
-
+string s;
+bool x = true;
+getline(cin, s);
+for(int i = 0; i < s.size() / 2; i++)if(s[i] != s[s.size() - 1 - i])x = false;
+if(x)cout << "yes";
+else cout << "no";
+return 0;
 }
