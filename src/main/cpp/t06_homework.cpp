@@ -55,34 +55,89 @@
 //
 //Sample Input 1:
 //
-//4
-//cAnnot
-//cannOt
-//fOund
-//pAge
-//thE pAge cAnnot be fouNd
-//
+/*С
+*/
 //Sample Output 1:
 //
 //2
 //
 //Sample Input 2:
 //
-//4
-//cAnnot
-//cannOt
-//fOund
-//pAge
-//The PAGE cannot be found
+/*4
+cAnnot
+cannOt
+fOund
+pAge
+The PAGE cannot be found
 //Sample Output 2:
-//
+*/
 //4
 
 #include "t06_homework.h"
 #include <iostream>
+#include <map>
+#include <set>
 
 using namespace std;
 
 int t06_homework() {
+    map<string,set<int>> dict;
+    string s,sres="";
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        cin>>s;
+        int c=s.length();
+        for(char let:s){
+            sres+=tolower(let);
+        }
+        int j=0;
+        for(;j<c;j++) {
+            if (s[j] <= 'Z' && s[j] >= 'A')
+                break;
+        }
+        dict[sres].emplace(j);
+        sres="";
+    }
 
+    int sum=0;
+    int lastspace=-1;
+    string tmp;
+    cin>>s;
+    getline(cin,tmp);
+    s=s+tmp;
+    s+=" ";
+    n=s.size();
+    int wordud=0;
+    int ind;
+    for(int i=0;i<n;i++){
+        if(s[i]==' ') {
+            lastspace=i;
+            bool b = false;
+            if (wordud == 1) {
+                if (dict[sres].size() == 0)
+                    b = true;
+                else {
+                    for (int t:dict[sres]) {
+                        if (t == ind)
+                            b = true;
+                    }
+                }
+            }
+            if(!b)
+                sum++;
+            sres="";
+            wordud=0;
+            ind=0;
+        }
+        else{
+            if(s[i] <= 'Z' && s[i] >= 'A') {
+                wordud++;
+                ind =i - 1 - lastspace;
+            }
+            sres+=tolower(s[i]);
+        }
+    }
+    cout<<sum;
+    return 0;
 }

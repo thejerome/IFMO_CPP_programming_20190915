@@ -18,14 +18,36 @@
 //3
 //4 3 2
 //Sample Output:
-//
 //2 3
 
 #include "t04_both2.h"
 #include <iostream>
+#include <set>
+
+
 
 using namespace std;
 
 int t04_both2() {
-
+    set<int> s, sres;
+    int n, c;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        cin >> c;
+        s.emplace(c);
+    }
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        cin >> c;
+        if (s.find(c)!=s.end()) {
+            sres.emplace(c);
+        }
+    }
+    for (int i :sres) {
+        cout<<i<<" ";
+    }
+    return 0;
 }
+
+
+

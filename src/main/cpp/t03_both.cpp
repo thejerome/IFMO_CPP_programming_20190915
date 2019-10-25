@@ -23,9 +23,25 @@
 
 #include "t03_both.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t03_both() {
-
+    set<int> s,sres;
+    int n,c;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        cin>>c;
+        s.emplace(c);
+    }
+    cin>>n;
+    for(int i=0;i<n;i++){
+        cin>>c;
+        if(s.find(c)!=s.end()){
+            sres.emplace(c);
+        }
+    }
+    cout<<sres.size();
+    return 0;
 }

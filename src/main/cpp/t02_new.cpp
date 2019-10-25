@@ -25,10 +25,21 @@
 
 #include "t02_new.h"
 #include <iostream>
-
+#include <set>
 
 using namespace std;
 
 int t02_new() {
-    
+    set<int> s;
+    int n,c;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        cin>>c;
+        if(s.find(c)==s.end()){
+            cout<<"NO"<<endl;
+        } else
+            cout<<"YES"<<endl;
+        s.emplace(c);
+    }
+    return 0;
 }
