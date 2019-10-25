@@ -26,6 +26,7 @@ using namespace std;
 
 int t01_sort() {
     int n;
+
     cin >> n;
     int a[n];
 
