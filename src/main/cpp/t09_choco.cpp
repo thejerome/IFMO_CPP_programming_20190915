@@ -13,8 +13,6 @@
 //Sample Output 1:
 //
 //YES
-//        Sample Input 2:
-//
 //2
 //10
 //7
@@ -37,3 +35,5 @@ int t09_choco() {
 	return 0;
 		
 };
+
+
