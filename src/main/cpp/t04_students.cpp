@@ -46,11 +46,7 @@ struct Student {
 
 
 
-    Student(const string& name_, int mark1_, int mark2_, int mark3_) {
-        name = name_;
-        mark1 = mark1_;
-        mark2 = mark2_;
-        mark3 = mark3_;
+    Student(const string& name_, int mark1_, int mark2_, int mark3_) : name(name_), mark1(mark1_), mark2(mark2_), mark3(mark3_) {
         avg = 1.0 * (mark1 + mark2 +mark3) / 3;
 
     }
