@@ -20,6 +20,7 @@
 
 using namespace std;
 
+
 //function min 
 int min(int a, int b)
 {
