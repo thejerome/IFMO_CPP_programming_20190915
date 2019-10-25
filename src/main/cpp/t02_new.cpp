@@ -31,16 +31,15 @@ using namespace std;
 
 int t02_new() {
     set<int> s;
-    int n,c,size;
+    int n,c;
     cin>>n;
     for(int i=0;i<n;i++){
-        size=s.size();
         cin>>c;
-        s.emplace(c);
-        if(s.size()>size){
+        if(s.find(c)==s.end()){
             cout<<"NO"<<endl;
         } else
             cout<<"YES"<<endl;
+        s.emplace(c);
     }
     return 0;
 }

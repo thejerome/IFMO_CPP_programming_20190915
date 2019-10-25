@@ -28,24 +28,20 @@
 using namespace std;
 
 int t03_both() {
-    set<int> s,stmp,sres;
-    int n,c,size;
+    set<int> s,sres;
+    int n,c;
     cin>>n;
     for(int i=0;i<n;i++){
         cin>>c;
         s.emplace(c);
     }
     cin>>n;
-    stmp=s;
     for(int i=0;i<n;i++){
-        size=stmp.size();
         cin>>c;
-        stmp.emplace(c);
-        if(stmp.size()==size){
+        if(s.find(c)!=s.end()){
             sres.emplace(c);
         }
-        stmp=s;
     }
     cout<<sres.size();
-	return 0;
+    return 0;
 }
