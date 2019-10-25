@@ -39,4 +39,4 @@ int t07_chess_queen() {
     else
         cout<<"NO";
     return 0;
-};
+}

@@ -38,4 +38,4 @@ int t10_sort3() {
     }
     cout<<c<<" "<<b<<" "<<a;
     return 0;
-};
+}

@@ -38,4 +38,4 @@ int t08_chess_knight() {
     else
         cout<<"NO";
     return 0;
-};
+}

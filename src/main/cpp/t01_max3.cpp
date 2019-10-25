@@ -28,4 +28,4 @@ int t01_max3() {
 		a=c;
 	cout<<a;
 	return 0;
-};
+}

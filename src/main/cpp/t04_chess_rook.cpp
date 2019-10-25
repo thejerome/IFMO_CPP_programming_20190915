@@ -26,4 +26,4 @@ int t04_chess_rook() {
 	else
 		cout<<"NO";
 	return 0;
-};
+}

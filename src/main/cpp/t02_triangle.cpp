@@ -28,4 +28,4 @@ int t02_triangle() {
         cout<<"NO";
     }
     return 0;
-};
+}

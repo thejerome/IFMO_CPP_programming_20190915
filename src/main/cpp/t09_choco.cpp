@@ -34,6 +34,6 @@ int t09_choco() {
 		cout<<"NO";
 	return 0;
 		
-};
+}
 
 
