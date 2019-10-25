@@ -18,12 +18,13 @@
 //3
 //4 3 2
 //Sample Output:
-//
 //2 3
 
 #include "t04_both2.h"
 #include <iostream>
 #include <set>
+
+
 
 using namespace std;
 
@@ -51,3 +52,6 @@ int t04_both2() {
     }
     return 0;
 }
+
+
+
