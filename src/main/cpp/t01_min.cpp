@@ -18,7 +18,6 @@
 #include "t01_min.h"
 #include <iostream>
 
-
 using namespace std;
 
 //function min 
