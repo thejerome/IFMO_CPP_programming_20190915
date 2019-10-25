@@ -1,4 +1,5 @@
-//Есть две коробки, первая размером A1×B1×C1, вторая размером A2×B2×C2. Определите, можно ли разместить одну из этих коробок внутри другой, при условии, что поворачивать коробки можно только на 90 градусов вокруг ребер.
+//Есть две коробки, первая размером A1×B1×C1, вторая размером A2×B2×C2. 
+//Определите, можно ли разместить одну из этих коробок внутри другой, при условии, что поворачивать коробки можно только на 90 градусов вокруг ребер.
 //
 //Формат входных данных
 //        Программа получает на вход числа A1, B1, C1, A2, B2, C2.
@@ -37,5 +38,45 @@
 using namespace std;
 
 int t11_boxes() {
-
-};
+	int a,b,c,x,y,z,s;
+    cin>>a>>b>>c>>x>>y>>z;
+    if(a<b) {
+        s = a;
+        a = b;
+        b = s;
+    }
+    if(a<c) {
+        s = c;
+        c = a;
+        a = s;
+    }
+    if(b<c) {
+        s = c;
+        c = b;
+        b = s;
+    }
+    if(x<y) {
+        s = x;
+        x = y;
+        y = s;
+    }
+    if(x<z) {
+        s = z;
+        z = x;
+        x = s;
+    }
+    if(y<z) {
+        s = z;
+        z = y;
+        y = s;
+    }
+    if(x==a&&y==b&&z==c)
+        cout<<"Boxes are equal";
+    else if (x<=a&&y<=b&&z<=c)
+        cout<<"The first box is larger than the second one";
+    else if(x>=a&&y>=b&&z>=c)
+        cout<<"The first box is smaller than the second one";
+    else
+        cout<<"Boxes are incomparable";
+	return 0;
+}
