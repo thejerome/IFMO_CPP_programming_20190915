@@ -34,7 +34,7 @@ int t07_chess_queen() {
     cin>>x1>>y1>>x2>>y2;
     int dx=x1-x2;
     int dy=y1-y2;
-    if(dx*dx==dy*dy|x1==x2|y1==y2)
+    if((dx*dx==dy*dy)|(x1==x2|y1==y2))
         cout<<"YES";
     else
         cout<<"NO";
