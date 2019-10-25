@@ -19,6 +19,7 @@
 
 #include "t03_twos.h"
 #include <iostream>
+#include <conio.h>
 
 using namespace std;
 
