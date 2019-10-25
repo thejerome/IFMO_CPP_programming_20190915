@@ -27,5 +27,9 @@
 using namespace std;
 
 int t09_choco() {
-
+    int n, m, k;
+    cin >> n >> m >> k;
+    if (k % n == 0 and k / n <= m or k % m == 0 and k / m <= n) cout << "YES";
+    else cout << "NO";
+    return 0;
 };
