@@ -30,3 +30,4 @@ int t05_chess_king() {
         cout<<"NO";
     return 0;
 };
+//for codacy
