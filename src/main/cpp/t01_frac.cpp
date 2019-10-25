@@ -13,6 +13,7 @@
 //
 //0.9
 
+
 #include "t01_frac.h"
 #include <iostream>
 #include <cmath>
@@ -20,5 +21,9 @@
 using namespace std;
 
 int t01_frac() {
-
+	double d;
+	cin>>d;
+	int i=d;
+	cout<<(d-i);
+	return 0;
 };
