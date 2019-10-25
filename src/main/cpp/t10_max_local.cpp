@@ -24,9 +24,10 @@
 using namespace std;
 
 int t10_max_local() {
-    int pp, p, n, count = 0;
+    int p, n, count = 0;
     cin >> p >> n;
     while (n != 0) {
+        int pp;
         pp = p;
         p = n;
         cin >> n;
