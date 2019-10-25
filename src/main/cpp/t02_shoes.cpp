@@ -50,6 +50,8 @@ int t02_shoes() {
             start = a[pos];
         }
 
+
+
         for (unsigned int i = pos + 1; i < n; i++) {
             if (a[i] >= start + 3) {
                 cnt++;

@@ -43,6 +43,8 @@ int t03_points() {
         cin >> a[i].first >> a[i].second;
     }
 
+
+
     sort(a.begin(), a.end(), cmp);
 
     for(int i = 0; i < a.size(); i++) cout << a[i].first << ' ' << a[i].second << endl;
