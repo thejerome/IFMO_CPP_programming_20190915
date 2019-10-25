@@ -42,6 +42,7 @@ int t07_ip() {
     for (int i = 0; i < 4; i++) {
         if (flag && a != "") {
             size_t ind = 0;
+
             int byte = std::stoi(a, &ind, 10);
             if (ind + 1 < a.length())
                 a = a.substr(ind + 1);
