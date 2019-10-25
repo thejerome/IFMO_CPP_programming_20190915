@@ -44,6 +44,8 @@ struct Student {
     double avg;
     Student(){};
 
+
+
     Student(const string& name_, int mark1_, int mark2_, int mark3_) {
         name = name_;
         mark1 = mark1_;
