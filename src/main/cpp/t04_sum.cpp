@@ -20,7 +20,7 @@
 using namespace std;
 
 int t04_sum() {
-	int N;
+	int N=0;
 	int sum = 0;
 	while (N != 0) {
 		cin >> N;
