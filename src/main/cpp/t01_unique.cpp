@@ -19,27 +19,18 @@
 
 #include "t01_unique.h"
 #include <iostream>
-#include <vector>
-#include <algorithm>
+#include <set> 
 
 using namespace std;
 
 int t01_unique() {
-        int n;
-        cin>>n;
-        vector <int> a;
-        for(int i = 1;i <= n;++i){
-            int x;
-            cin>>x;
-            a.emplace_back(x);
-        }
-        sort(a.begin(),a.end());
-        int ans = 0;
-        for(int i = 0;i < a.size();++i){
-            if(!i)++ans;
-            else if(a[i] != a[i - 1]){
-                ++ans;
+            int n;
+            cin>>n;
+            set <int> st;
+            for(int i = 1;i <= n;++i){
+                int x;
+                cin>>x;
+                st.insert(x);
             }
-        }
-        cout<<ans;
+            cout<<st.size();
 }

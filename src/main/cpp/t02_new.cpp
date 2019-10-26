@@ -31,13 +31,13 @@
 using namespace std;
 
 int t02_new() {
-        int n;
-        cin>>n;
-        map <long long,bool> ma;
-        for(int i = 1;i <= n;++i){
-            int x;
-            cin>>x;
-            cout<<(ma[x] ? "YES\n" : "NO\n");
-            ma[x] = true;
-        }
+            int n;
+            cin>>n;
+            map <int,bool> ma;
+            for(int i = 1;i <= n;++i){
+                int x;
+                cin>>x;
+                cout<<(ma[x] ? "YES\n" : "NO\n");
+                ma[x] = true;
+            }
 }

@@ -88,57 +88,47 @@
 using namespace std;
 
 int t06_homework() {
-        int n;
-        map < string,vector <int> > dic;
-        cin>>n;
-        for(int i = 1;i <= n;++i){
-            string s;
-            cin>>s;
-            int pos = -1;
-            for(int j = 0;j < s.size();++j){
-                if(isupper(s[j])){
-                    pos = j;
+            int n;
+            map < string,vector <int> > dic;
+            cin>>n;
+            for(int i = 1;i <= n;++i){
+                string s;
+                cin>>s;
+                int pos = -1;
+                for(int j = 0;j < s.size();++j){
+                    if(isupper(s[j])){
+                        pos = j;
+                    }
+                }
+                if(pos != -1) {
+                    s[pos] = tolower(s[pos]);
+                    dic[s] . emplace_back(pos);
                 }
             }
-            s[pos] = tolower(s[pos]);
-            dic[s].emplace_back(pos);
-        }
-        for(map <string,vector <int> > :: iterator it = dic.begin();it != dic.end();++it){
-            multiset <int> ms;
-            for(int i = 0;i < (it -> second).size();++i){
-                ms.insert((it -> second)[i]);
-            }
-            (it -> second).clear();
-            for(multiset <int> :: iterator ii = ms.begin();ii != ms.end();++ii){
-                (it -> second).emplace_back(*ii);
-            }
-        }
-        int ans = 0;
-        for(string s;cin>>s;){
-            string lw_s = s;
-            int cnt_uppercase = 0;
-            int pos = -1;
-            for(int i = 0;i < s.size();++i){
-                if(isupper(s[i])){
-                    pos = i;
+            int ans = 0;
+            for(string s;cin>>s;){
+                string lw_s = s;
+                int cnt_uppercase = 0;
+                int pos = -1;
+                for(int i = 0;i < s.size();++i){
+                    if(isupper(s[i])){
+                        pos = i;
+                        ++cnt_uppercase;
+                    }
+                    lw_s[i] = tolower(s[i]);
                 }
-                if(isupper(s[i])){
-                    ++cnt_uppercase;
-                }
-                lw_s[i] = tolower(s[i]);
-            }
-            if(dic[lw_s].empty()){
-                ans += cnt_uppercase != 1;
-            } else {
-                if(cnt_uppercase != 1){
-                    ++ans;
-                } else {
-                    vector <int> :: iterator f = lower_bound(dic[lw_s].begin(),dic[lw_s].end(),pos);
-                    if(f == dic[lw_s].end() or *f != pos){
-                        ++ans;
+                ans += (cnt_uppercase != 1);
+                if(cnt_uppercase == 1){
+                    bool notfound = true;
+                    for(int i = 0;i < dic[lw_s].size();++i){
+                        if(dic[lw_s][i] == pos){
+                            notfound = false;
+                        }
+                    }
+                    if(!dic[lw_s].empty()){
+                        ans += notfound;
                     }
                 }
             }
-        }
-        cout<<ans;
+            cout<<ans;
 }
