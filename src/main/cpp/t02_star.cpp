@@ -47,5 +47,4 @@ int t02_star() {
 		cout << endl;
 	}
     return 0;
-    return 0;
 }
