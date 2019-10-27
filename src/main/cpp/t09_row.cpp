@@ -27,6 +27,7 @@ int i,s,count,maxcount;
 count=1;
 maxcount =1;
 cin >> s;
+i=-1;
 while (i!=0){
     cin >> i;
     if (s==i) count++;
