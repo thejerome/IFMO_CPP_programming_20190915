@@ -19,16 +19,16 @@
 using namespace std;
 
 int t07_swap() {
-    int n,t;
+    int n;
     cin >> n;
     int a[n];
     for (int i = 0; i < n; ++i) {
         cin >> a[i];
     }
-    for (int i = 0; i < (n/2*2); i=i+2) {
-        t=a[i];
+    for (int i = 0,temp; i < (n/2*2); i=i+2) {
+        temp=a[i];
         a[i]=a[i+1];
-        a[i+1]=t;
+        a[i+1]=temp;
     }
     for (int i = 0; i < n; ++i) {
         cout << a[i] << ' ';
