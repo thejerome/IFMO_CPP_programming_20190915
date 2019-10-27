@@ -25,14 +25,14 @@
 using namespace std;
 
 int t10_unique() {
-    int n,k=0;
+    int n;
     cin >> n;
     int a[n];
     for (int i = 0; i < n; ++i) {
         cin >> a[i];
     }
     for (int i = 0; i < n; ++i) {
-        k=0;
+        int k=0;
         for (int j = 0; (j < n) ; ++j) {
             if (j==i) { continue;}
             if (a[i]==a[j]) {
