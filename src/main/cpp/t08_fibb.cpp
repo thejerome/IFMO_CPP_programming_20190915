@@ -21,5 +21,17 @@
 using namespace std;
 
 int t08_fibb() {
-
+    
+int N,i,s1, s2;
+cin >> N;
+s1=0;
+s2=1;
+i=0;
+while (i < N){
+    s2 = s1+s2;
+    s1=s2-s1;
+    i++;};
+if (N==0) cout << 0;
+    else cout << s1;
+    
 };
