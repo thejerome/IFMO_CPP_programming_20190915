@@ -34,11 +34,11 @@ int t01_max() {
     int a[n][m];
     int maxI = 0;
     int maxJ = 0;
+    int max=0;
 
     for (int i=0; i<n; i++) {
         for (int j=0; j<m; j++) {
 
-            int max;
             cin >> a[i][j];
             if (i == 0 && j == 0) max = a[i][j];
 
