@@ -22,5 +22,14 @@
 using namespace std;
 
 int t04_deposit() {
-
+int X,Y,K,s;
+double P;
+cin >>P>>X>>Y>>K;
+P=P/100;
+s=X*100+Y;
+for ( int i=1; i <=K; i++)
+    s=s*(1+P);
+X=s/100;
+Y=s-X*100;
+cout <<X<< " "<<Y;
 };
