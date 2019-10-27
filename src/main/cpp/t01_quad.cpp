@@ -24,6 +24,8 @@ int N,i;
 cin >> N;
 i=1;
 while (i*i <=N) {
+    
     cout << i*i<< " ";
     i++;};
+    
 };
