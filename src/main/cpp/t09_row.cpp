@@ -31,7 +31,7 @@ int t09_row() {
 		if (a == b) {
 			c++;
 		}
-		else if (a != b) {
+		else if (a!== b) {
 			if (c > max) {
 				max = c;
 				c = 1;
