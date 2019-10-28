@@ -36,6 +36,9 @@ int t09_row() {
 				max = c;
 				c = 1;
 			}
+			else {
+				c = 1;
+			}
 		}
 		a = b;
 		cin >> b;
