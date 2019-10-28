@@ -36,7 +36,7 @@ int t07_max_2() {
 		cin >> a;
 		if (a > big1)
 		{
-			big1 = big2;
+			big2 = big1;
 			big1 = a;
 		}
 		else if (a > big2)
