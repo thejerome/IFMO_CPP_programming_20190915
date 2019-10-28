@@ -29,6 +29,36 @@
 using namespace std;
 
 int t06_cinema() {
+  int n, m, i, j, k, h, count = 0, row = 0;
+    bool b = 0;
+    cin >> n >> m;
+    int a[n][m];
     
-    return 0;
+    for ( i = 0; i < n; i++) {
+         for ( j = 0; j < m; j++) {
+             cin >> a[i][j];
+         }
+     }
+    cin >> k;
+    
+    for ( i = 0; i < n; i++) {
+         for ( j = 0; j <= m-k; j++) {
+             
+            if (a[i][j] == 0 && b == 0) {
+             for (h = j; h < j+k; h++) {
+               if (a[i][h] == 0) {
+                  count++;
+               }
+             }
+                if (count == k) {
+                    row = i+1;
+                    b = 1;
+                }
+              count = 0;
+             }
+            }
+         }
+        
+        cout << row;
+  return 0;
 }
