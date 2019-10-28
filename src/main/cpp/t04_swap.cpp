@@ -25,7 +25,7 @@
 using namespace std;
 
 int t04_swap() {
-   int n, m, i, j, temp, x1, x2;
+   int n, m, i, j, x1, x2;
     cin >> n >> m;
     int a[n][m];
     for ( i = 0; i < n; i++) {
@@ -34,11 +34,11 @@ int t04_swap() {
         }
     }
     
-    cin >> x1 >> x2;
+    cin >> x1 >> x2;  //поменять a[i][x1] с a[i][x2]
     for (i = 0; i < n; i++) {
-        temp = a[i][x1];
-        a[i][x1] = a[i][x2];
-        a[i][x2] = temp;
+    a[i][x1] = a[i][x2] + a[i][x1];
+       a[i][x2] = a[i][x1] - a[i][x2];
+       a[i][x1] = a[i][x1] - a[i][x2]
     }
     
     for ( i = 0; i < n; i++) {
