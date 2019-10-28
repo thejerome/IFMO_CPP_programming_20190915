@@ -24,7 +24,7 @@
 using namespace std;
 
 int t10_max_local() {
-	int a, b, c;
+	int a, b;
 	int d = 0;
 	if (cin >> a && a)
 	{
@@ -44,4 +44,5 @@ int t10_max_local() {
 		}
 	}
 	cout << d;
+	return 0;
 };
