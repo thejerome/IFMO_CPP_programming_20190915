@@ -29,7 +29,7 @@ int t10_max_local() {
 	if (cin >> a && a)
 	{
 		if (cin >> b && b)
-		{
+		{int c;
 			if (cin >> c)
 			{
 				while (c)
