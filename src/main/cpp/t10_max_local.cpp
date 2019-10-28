@@ -24,10 +24,10 @@
 using namespace std;
 
 int t10_max_local() {
-	int a, b;
+	int a;
 	int d = 0;
 	if (cin >> a && a)
-	{
+	{int b;
 		if (cin >> b && b)
 		{int c;
 			if (cin >> c)
