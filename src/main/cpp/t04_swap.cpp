@@ -34,11 +34,11 @@ int t04_swap() {
         }
     }
     
-    cin >> x1 >> x2;  //поменять a[i][x1] с a[i][x2]
+    cin >> x1 >> x2; 
     for (i = 0; i < n; i++) {
     a[i][x1] = a[i][x2] + a[i][x1];
        a[i][x2] = a[i][x1] - a[i][x2];
-       a[i][x1] = a[i][x1] - a[i][x2]
+       a[i][x1] = a[i][x1] - a[i][x2];
     }
     
     for ( i = 0; i < n; i++) {
