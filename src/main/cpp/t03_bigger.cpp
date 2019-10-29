@@ -24,7 +24,8 @@ cin >> P;
 int C[P];
 for(int L = 1;L<P;L++)
 {
-    if (C[L] > [C[L- 1]) 
+    cin >> C[L];
+    if (C[L] > (C[L - 1]))
         cout << C[L] << " ";
 
 }
