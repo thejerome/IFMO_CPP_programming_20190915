@@ -23,7 +23,7 @@ int P;
     
 cin >> P;
 int C[P];
-for(int L = 1;L<P;L++)
+for(int L = 0;L<P;L++)
 {
     cin >> C[L];
     if (C[L] > (C[L - 1]))
