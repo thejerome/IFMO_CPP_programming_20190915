@@ -39,6 +39,7 @@ int t07_max_2() {
 			if (S2 <= S && S2 < N) { S2 = N; }
 		}
 
+
 	}
 	cout << S2;
 	return 0;
