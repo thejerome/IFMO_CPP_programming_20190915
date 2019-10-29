@@ -24,7 +24,7 @@ int t07_quad2() {
 	double a, b, c;
 	cin >> a >> b >> c;
 	int d = b * b - 4 * a * c;
-    if (a == 0 && b == 0 && c == 0) {
+	if (a == 0 && b == 0 && c == 0) {
 		cout << 3;
 		return 0;
 	}

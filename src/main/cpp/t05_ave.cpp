@@ -29,6 +29,7 @@ int t05_ave() {
 		sum = sum + N;
 		col++;
 	}
+
 	cout << setprecision(11) << fixed << sum / col;
 	return 0;
 
