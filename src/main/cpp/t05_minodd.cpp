@@ -28,5 +28,25 @@
 using namespace std;
 
 int t05_minodd() {
+int P,Z=0;
+cin >> P;
+int C[P];
+for(int L = 0;L<P;L++)
+{
 
+
+     cin >> C[L];
+
+
+
+    if((C[L]%2!=0) && (Z==0 || Z > C[L]))
+    {
+
+       Z=C[L];
+
+    }
+
+
+ }
+ cout << Z;
 }
