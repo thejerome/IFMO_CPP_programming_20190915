@@ -19,5 +19,13 @@
 using namespace std;
 
 int t01_even() {
-
+  int N, L;
+    cin >> N;
+    for (int i = 0; i < N; i++){
+        cin >> L;
+        if (i % 2 == 0) cout << L << " " << endl;
+    }
+  return 0;
 }
+
+
