@@ -20,6 +20,7 @@ using namespace std;
 
 int t03_bigger() {
 int P;
+    
 cin >> P;
 int C[P];
 for(int L = 1;L<P;L++)
