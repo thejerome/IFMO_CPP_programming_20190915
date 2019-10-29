@@ -15,6 +15,7 @@
 //
 //5.66666666667
 
+
 #include "t05_ave.h"
 #include <iostream>
 #include <iomanip>
@@ -22,5 +23,19 @@
 using namespace std;
 
 int t05_ave() {
+    double a, b, k;
+    b = 0;
+    k = 0;
+    cin >> a;
+    while (a != 0) {
+        b = b + a;
+        cin >> a;
+        k++;
+    }
+    b /= k;
+    cout << fixed;
+    cout.precision(11);
+    cout << b << endl;
 
+    return 0;
 };
