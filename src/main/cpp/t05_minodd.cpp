@@ -28,5 +28,14 @@
 using namespace std;
 
 int t05_minodd() {
-
+  int N, L;
+    int L2 = 2147483647;
+    cin >> N;
+    for (int i = 0; i < N; i++){
+        cin >> L;
+        if(L % 2 != 0 && L < L2) L2 = L;
+    }
+    if (L2 == 2147483647) cout << "0";
+    else cout << L2;
+    return 0; 
 }
