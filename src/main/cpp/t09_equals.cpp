@@ -26,15 +26,22 @@
 using namespace std;
 
 int t09_equals() {
-  int N, i, j, R;
+  int N = 0;
+    int i = 0;
+    int j = 0;
+    int R = 0;
 	cin >> N;
 	N--;
-	int a[N];
-	for (i = 0; i <= N; i++)cin >> a[i];
+	int a[N] = { 0 };
+	for (i = 0; i <= N; i++){
+		cin >> a[i];
+	}
 	for (i = 0; i <= N-1; i++){
 		for (j = i+1; j <= N; j++){
-			if (a[i] == a[j])  R++; }
-    }
+			if (a[i] == a[j]) { R++; }
+		}
+
+	}
 	cout << R << endl;
 	return 0;
 }
