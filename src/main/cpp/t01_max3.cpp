@@ -23,5 +23,5 @@ int t01_max3() {
 	if (a >= b && a >= c) { cout << a; }
 	else if (b >= c && b >= a) cout << b;
 	else if (c >= a && c >= b) cout << c;
-	return 0;
+	return 0; 
 };
