@@ -29,7 +29,6 @@ int t05_max() {
       	max = i;
       };
       
-
  };
  cout << max;
  return 0;
