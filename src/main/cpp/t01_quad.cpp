@@ -24,7 +24,7 @@ int t01_quad() {
     cin>>n;
     d=i*i;
     while(d<=n){
-       // cout<<d<<" ";
+        cout<<d<<" ";
         i++;
         d=i*i;
     }
