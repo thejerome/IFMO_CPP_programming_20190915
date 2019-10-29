@@ -25,7 +25,7 @@ int C[P];
 for(int L = 1;L<P;L++)
 {
     if (C[L] > [C[L- 1]) 
-        cout << C[L];
+        cout << C[L] << " ";
 
 }
 }
