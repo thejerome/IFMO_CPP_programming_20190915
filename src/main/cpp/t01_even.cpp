@@ -26,7 +26,7 @@ for(int L = 0;L<P;L++)
 {
 
     cin >> C[L];
-  if (i%2==0)
+  if (L%2==0)
     cout << C[L]  << " ";
 
 }
