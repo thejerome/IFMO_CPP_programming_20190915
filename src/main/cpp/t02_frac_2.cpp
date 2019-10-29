@@ -10,6 +10,7 @@
 //
 //7
 
+
 #include "t02_frac_2.h"
 #include <iostream>
 #include <cmath>

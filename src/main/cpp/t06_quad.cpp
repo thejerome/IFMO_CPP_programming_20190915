@@ -14,6 +14,7 @@
 //
 //-1 2
 
+
 #include "t06_quad.h"
 #include <iostream>
 #include <cmath>

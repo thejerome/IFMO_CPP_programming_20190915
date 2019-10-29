@@ -15,6 +15,7 @@
 //
 //5.66666666667
 
+
 #include "t05_ave.h"
 #include <iostream>
 #include <iomanip>
