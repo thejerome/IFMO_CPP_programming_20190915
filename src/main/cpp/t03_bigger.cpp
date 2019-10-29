@@ -19,5 +19,12 @@
 using namespace std;
 
 int t03_bigger() {
-
+  int N, L, L2;
+    cin >> N >> L >> L2;
+    for (int i = 0; i < N; i++){
+        if (L2 > L) {cout << L2 << " " << endl;}
+        L = L2;
+        cin >> L2;
+    }
+  return 0;
 }
