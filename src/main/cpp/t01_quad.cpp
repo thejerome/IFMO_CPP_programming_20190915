@@ -23,7 +23,8 @@ int t01_quad() {
     cin >> a ;
     i = 1;
     b = i*i ;
-    while ( b <= a ) {
+    while ( b <= a )
+    {
         cout << b << " ";
         i++;
         b = i * i;

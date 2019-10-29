@@ -37,5 +37,5 @@ int t03_twos() {
 {
           cout <<"NO" ;
 }
-      return 0 ;
+       return 0 ;
 };
