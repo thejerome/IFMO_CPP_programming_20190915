@@ -24,7 +24,7 @@ int t08_fibb() {
     int a, b, c, i, n;
       a = 0;
       b = 1;
-      c = 0;
+      
       i = 1;
       n = 0;
     cin >> n;

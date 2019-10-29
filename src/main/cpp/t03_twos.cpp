@@ -23,8 +23,8 @@
 using namespace std;
 
 int t03_twos() {
-   int n,i;
-   i = 1;
+   int n;
+   int i = 1;
    cin >> n;
    if (n==1) cout << "YES";
    else {
