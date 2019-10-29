@@ -12,7 +12,6 @@
 //
 //6.0000
 
-
 #include "t03_triangle.h"
 #include <iostream>
 #include <cmath>
