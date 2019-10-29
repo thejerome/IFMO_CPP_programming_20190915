@@ -25,7 +25,8 @@ int t04_deposit() {
 	int p, x, y, n, i = 0;
 		cin >> p >> x >> y >> n;
 		while (i < n) {
-			
+			int z;
+			z = x * p % 100;
 			x = x + x * p / 100;
 			y = y + y * p / 100 + z;
 			x = x + y / 100;
