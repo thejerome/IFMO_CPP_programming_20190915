@@ -39,7 +39,6 @@ int t07_quad2() {
 				if(x1 == x2) cout << 1 << " " << x1;
 				else if (x1 > x2)cout << 2 << " " << x2 << " " << x1;
 				else cout << 2 << " " << x1 << " " << x2;
-
 			}
 			
 			else cout << 0;
