@@ -22,8 +22,8 @@
 using namespace std;
 
 int t05_ave() {
-	double N , sum = 0, col = 0;
-	while (N != 0) {
+	double N=0 , sum = 0, col = 0;
+	while (N!= 0) {
 		cin >> N;
 		if (N == 0) break;
 		sum = sum + N;
