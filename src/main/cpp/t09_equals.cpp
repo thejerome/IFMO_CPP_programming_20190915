@@ -26,7 +26,7 @@
 using namespace std;
 
 int t09_equals() {
-  int N = 0, i = 0, j = 0, R = 0;
+  int N, i, j, R;
 	cin >> N;
 	N--;
 	int a[N];
