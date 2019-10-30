@@ -23,14 +23,15 @@ using namespace std;
 
 int t04_deposit() {
     int p,x,y,k;
-    double s;
+    double s,ss;
     cin >> p >> x >> y >> k;
-    s = x*100 + y;
+    s = (x*100 + y);
     for (int i = 0; i < k; i++) {
-        s = s*(1 + (p / 100));
+        ss = (s*(1 + (p / 100)));
+        s = ss;
     };
-    x = s / 100;
-    y = s - x*100;
+    x = floor(s / 100);
+    y = (s - x*100);
     cout << x << " " << y;
     return 0;
 };
