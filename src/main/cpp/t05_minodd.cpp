@@ -47,7 +47,6 @@ for (int i=0;i <= (count-1);i++) {
      if (((a[i]%2==1)or(a[i]%2==-1)) and (a[i]<m)) {
         flag=true;
         m=a[i];
-         cout<<m;
      };
      };
 if (flag) {
