@@ -24,23 +24,23 @@ using namespace std;
 int t06_quad() {
     double a,b,c,D,x1,x2;
     cin >> a >> b >> c;
+    cout << a << b << c;
     D = (b*b - 4*a*c);
+    cout << D;
     if (D = 0) {
         cout << "000";
         x1 = (-b/(2*a));
         cout << x1;
-    }
-    else {
-        if (D > 0) {
-            cout << "111";
-            x1 = ((-b+sqrt(D))/(2*a));
-            x2 = ((-b-sqrt(D))/(2*a));
-            if (x1 < x2) {
-                cout << x1 << " " << x2;
-            }
-            else {
-                cout << x2 << " " << x1;
-            };
+    };
+    if (D > 0) {
+        cout << "111";
+        x1 = ((-b+sqrt(D))/(2*a));
+        x2 = ((-b-sqrt(D))/(2*a));
+        if (x1 < x2) {
+            cout << x1 << " " << x2;
+        }
+        else {
+            cout << x2 << " " << x1;
         };
     };
     return 0;
