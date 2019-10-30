@@ -24,11 +24,11 @@ int t07_quad2() {
     double a,b,c,D,x1,x2;
     cin >> a >> b >> c;
     D = (b*b - 4*a*c);
-    if (a == 0) {
+    if ((a == 0) && ((a + b + c ) != 0)) {
         cout << "0";
     }
     else {
-        if (D == 0) {
+        if ((D == 0) && ((a + b + c ) != 0)){
             x1 = (-b / (2 * a));
             cout << "1 " << x1;
         };
