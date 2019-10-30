@@ -41,7 +41,7 @@ int t07_quad2() {
         };
     };
     if (D < 0) {
-        if ((a + b + c) = 0) {
+        if ((a + b + c) == 0) {
             cout << "3";
         }
         else {

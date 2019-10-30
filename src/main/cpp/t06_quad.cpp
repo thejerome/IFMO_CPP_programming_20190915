@@ -37,7 +37,7 @@ int t06_quad() {
                 cout << x1 << " " << x2;
             }
             else {
-                cout << x2 << " " <, x1;
+                cout << x2 << " " << x1;
             };
         };
     };
