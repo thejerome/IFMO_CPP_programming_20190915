@@ -20,6 +20,17 @@
 
 using namespace std;
 
-int t04_neighbors() {
+int t04_neighbors() { 
+   int i,n;
+    cin >> n;
+    int a[n];
+    for(int i=0;i<n;i++){
+        cin >> a[i];
+        if (((a[i]/(a[i-1])>0)&&(i>0))) {
+            cout << a[i-1] << ' ' << a[i] << endl;
+            break;
+        }
+    }
+  return 0;
 
 }
