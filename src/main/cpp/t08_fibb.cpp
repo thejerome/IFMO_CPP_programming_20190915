@@ -23,13 +23,13 @@ using namespace std;
 int t08_fibb() {
     int F0 = 0;
     int F1 = 1;
-    int F;
+    
     int N;
     cin >> N;
 
     int i = 2;
     while (i <= N+1)
-    {
+    {   int F;
         F = F1;
         F1 = F1 + F0;
         F0 = F;
