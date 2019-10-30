@@ -43,7 +43,7 @@ int t09_row() {
         }
         else if (l > a)
         {
-            a = l;
+            a = 1;
             i = 1;
         }
     }
