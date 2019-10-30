@@ -26,11 +26,13 @@ int t06_quad() {
     cin >> a >> b >> c;
     D = (b*b - 4*a*c);
     if (D = 0) {
+        cout << "000";
         x1 = (-b/(2*a));
         cout << x1;
     }
     else {
         if (D > 0) {
+            cout << "111";
             x1 = ((-b+sqrt(D))/(2*a));
             x2 = ((-b-sqrt(D))/(2*a));
             if (x1 < x2) {

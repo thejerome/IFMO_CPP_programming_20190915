@@ -22,8 +22,8 @@
 using namespace std;
 
 int t04_deposit() {
-    int p,x,y,k;
-    double s,ss;
+    int x,y,k;
+    double s,ss,p;
     cin >> p >> x >> y >> k;
     s = (x*100 + y);
     for (int i = 0; i < k; i++) {
