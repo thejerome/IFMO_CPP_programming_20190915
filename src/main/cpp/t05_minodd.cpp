@@ -28,5 +28,18 @@
 using namespace std;
 
 int t05_minodd() {
-
+int count,i,m;
+i=0;
+cin >> count;
+int a[count];
+for (i;i <= (count-1);i++) {
+    cin >> a[i];
+};
+for (int i=0;i <= (count-1);i++) {
+    m=a[1];
+    if ((a[i]%2==1) and (a[i]<m)) {
+        m=a[i];};
+     };
+if (m%2==1) cout << m;
+else cout << 0;
 }
