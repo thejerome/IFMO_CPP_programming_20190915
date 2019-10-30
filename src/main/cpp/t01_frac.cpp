@@ -20,6 +20,7 @@ using namespace std;
 
 int t01_frac() {
 double x;
+//codacy
 cin >> x;
 cout << (x-trunc(x));
 return 0;
