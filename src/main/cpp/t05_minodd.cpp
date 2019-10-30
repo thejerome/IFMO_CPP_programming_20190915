@@ -29,17 +29,28 @@ using namespace std;
 
 int t05_minodd() {
 int count,i,m;
+bool flag;
 i=0;
+m=0;
+flag=false;
 cin >> count;
 int a[count];
 for (i;i <= (count-1);i++) {
     cin >> a[i];
 };
 for (int i=0;i <= (count-1);i++) {
-    m=a[1];
-    if ((i%2==1) and (a[i]<m)) {
-        m=a[i];};
+     if ((a[i]%2==1) or(a[i]%2==-1))  {
+        m=a[i];
+        flag=true;
+     };};
+for (int i=0;i <= (count-1);i++) {
+     if (((a[i]%2==1)or(a[i]%2==-1)) and (a[i]<m)) {
+        flag=true;
+        m=a[i];
+         cout<<m;
      };
-if (m%2==1) cout << m;
+     };
+if (flag) {
+    cout << m;}
     else cout << 0;
 }
