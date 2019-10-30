@@ -28,10 +28,11 @@ for (i;i <= (count-1);i++) {
     cin >> a[i];
 };
 for (int i=0;i <= (count-1);i=i+2) {
-     m=a[i];
-     a[i]=a[i+1];
-     a[i+1]=m;}
-for (i;i <= (count-1);i++) {
-    cout << a[i];
+     if (i!=count-1){
+        m=a[i];
+        a[i]=a[i+1];
+        a[i+1]=m;};}
+for (i=0;i <= (count-1);i++) {
+    cout << a[i]<< " ";
 };
 }
