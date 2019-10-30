@@ -23,7 +23,6 @@ using namespace std;
 int t08_fibb() {
     int n, m1, m2, k, t;
     cin >> n;
-    t = 0;
     k = 2;
     m1 = 1;
     m2 = 1;
