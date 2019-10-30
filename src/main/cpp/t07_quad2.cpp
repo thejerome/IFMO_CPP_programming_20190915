@@ -36,7 +36,7 @@ int t07_quad2() {
                 cout << "2 " << x1 << " " << x2;
             }
             else {
-                cout << "2 " << x2 << " " <, x1;
+                cout << "2 " << x2 << " " << x1;
             };
         };
     };
@@ -45,7 +45,7 @@ int t07_quad2() {
             cout << "3";
         }
         else {
-            cout << "0"
+            cout << "0";
         };
     };
     return 0;
