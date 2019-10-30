@@ -16,9 +16,12 @@
 #include "t01_frac.h"
 #include <iostream>
 #include <cmath>
-
 using namespace std;
 
 int t01_frac() {
-
+double x;
+//codacy
+cin >> x;
+cout << (x-trunc(x));
+return 0;
 };
