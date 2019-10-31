@@ -30,7 +30,7 @@ int t07_quad2() {
         if (int(D) < 0)
             cout << 0;
         if (int(D) == 0)
-            cout << 1 << "" << -b / 2 * a;
+            cout << 1 << " " << -b / ( 2 * a );
         if ( int ( D ) > 0 )
             cout << 2 << " " << x1 << " " << x2 ;
     }
