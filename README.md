@@ -9,6 +9,8 @@ Source structure should be the following. All `.cpp` scripts should be located u
 All tests for a single cpp file should be located under corresponding directory `src/test/resources/script_name`.
 Each test is basically a directory with two txt files `input.txt`  and `output.txt`.
 
+
+
 ```
 src/
     main/
