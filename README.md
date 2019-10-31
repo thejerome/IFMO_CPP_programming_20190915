@@ -1,3 +1,5 @@
+sd;'f;'sd.f'
+
 # IFMO_CPP_programming_20190915
 [![from_flaxo with_♥](https://img.shields.io/badge/from_flaxo-with_♥-blue.svg)](https://github.com/tcibinan/flaxo)
 
@@ -6,6 +8,8 @@
 Source structure should be the following. All `.cpp` scripts should be located under `src/main/cpp` directory.
 All tests for a single cpp file should be located under corresponding directory `src/test/resources/script_name`.
 Each test is basically a directory with two txt files `input.txt`  and `output.txt`.
+
+
 
 ```
 src/
@@ -45,6 +49,7 @@ PASSED: another_test_case
 
 Summary: SUCCESS
 ```
+
 
 Failure output
 ```
