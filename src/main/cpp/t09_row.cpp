@@ -24,9 +24,9 @@ using namespace std;
 
 int t09_row() {
     int a = - 1 , max = 0 , count = 1 ;
-    int b ;
     while ( a != 0 )
     {
+        int b ;
         b = a ;
         cin >> a ;
         if ( b == a )
