@@ -34,10 +34,7 @@
 #include "t11_queen.h"
 #include <iostream>
 #include <cmath>
-
-
 using namespace std;
-
 int t11_queen() {
 	const int eight = 8;
 	int RUN[80];
@@ -66,9 +63,6 @@ int t11_queen() {
 					if (RUN[pos - 9 * count] == -1)
 					{
 						nah = true;
-						turns_[j] = 0;
-						j = 4;
-						i = eight;
 						break;
 					}
 				}
@@ -77,9 +71,6 @@ int t11_queen() {
 					if (RUN[pos + 9 * count] == -1)
 					{
 						nah = true;
-						turns_[j] = 0;
-						j = 4;
-						i = eight;
 						break;
 					}
 				}
@@ -88,9 +79,6 @@ int t11_queen() {
 					if (RUN[pos - 7 * count] == -1)
 					{
 						nah = true;
-						turns_[j] = 0;
-						j = 4;
-						i = eight;
 						break;
 					}
 				}
@@ -99,9 +87,6 @@ int t11_queen() {
 					if (RUN[pos + 7 * count] == -1)
 					{
 						nah = true;
-						turns_[j] = 0;
-						j = 4;
-						i = eight;
 						break;
 					}
 				}
