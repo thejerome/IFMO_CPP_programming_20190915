@@ -41,4 +41,4 @@ int t07_quad2() {
     if ( a == 0 && b == 0 && c != 0 )
         cout << 0 ;
     return 0 ;
-};
+ };
