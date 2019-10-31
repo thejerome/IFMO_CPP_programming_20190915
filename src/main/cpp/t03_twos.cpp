@@ -19,9 +19,23 @@
 
 #include "t03_twos.h"
 #include <iostream>
-
 using namespace std;
 
 int t03_twos() {
-
+    int N ;
+    int i = 2 ;
+    cin >> N ;
+       while ( N % i == 0 )
+{
+           N = N / 2 ;
+}
+       if ( N == 1 )
+{
+          cout << "YES" ;
+}
+       else
+{
+          cout <<"NO" ;
+}
+       return 0 ;
 };
