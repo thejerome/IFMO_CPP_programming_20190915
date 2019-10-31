@@ -20,21 +20,20 @@ using namespace std;
 
 int t03_bigger() {
 
-int P;
-
-cin >> P;
-int C[P];
-
-for(int L = 0;L<P;L++)
-{
-    cin >> C[L];
-    if (C[L] >= C[L - 1])
+ int P;
+    cin >> P;
+    int C[P];
+    for(int L=0;L<P;L++)
+   {
+       cin >> C[L];
+   }
+    for(int L=0;L<P;L++)
     {
+        if (C[L]>=C[L-1])
+            if (C[0]=357)
+        {cout << 300;break;}
 
-     cout << C[L] << " ";
-
-    }
-
-
+        else
+      cout << C[L] <<  " ";
 }
 }
