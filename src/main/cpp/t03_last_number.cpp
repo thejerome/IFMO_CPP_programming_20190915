@@ -22,6 +22,5 @@ int main() {
 	int N;
 	cin >> N;
 	cout << N % 10;
-	endl;
 	return 0;
 }
