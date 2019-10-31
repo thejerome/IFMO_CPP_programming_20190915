@@ -47,9 +47,6 @@ int t11_queen() {
 		cin >> line >> row;
 		a[i] = line;
 		b[i] = row;
-	}
-	for (int i = 0; i < eight; i++)
-	{
 		int pos = (a[i] - 1) * eight + (b[i] - 1);
 		int turns_[4] = { a[i] - 1 >= b[i] - 1 ? b[i] - 1 : a[i] - 1,eight - a[i] >= eight - b[i] ? eight - b[i] : eight - a[i],a[i] - 1 >= eight - b[i] ? eight - b[i] : a[i] - 1, eight - a[i] >= b[i] - 1 ? b[i] - 1 : eight - a[i] };
 		RUN[pos] = -1;
