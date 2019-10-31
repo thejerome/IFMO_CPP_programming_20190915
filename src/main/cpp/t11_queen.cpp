@@ -41,8 +41,8 @@ using namespace std;
 int t11_queen() {
 	const int eight = 8;
 	int RUN[80];
-	int x[8];
-	int y[8];
+	//int x[8];
+	//int y[8];
 	int a[8];
 	int b[8];
 	bool nah = false;
