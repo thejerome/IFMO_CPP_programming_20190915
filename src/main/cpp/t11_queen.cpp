@@ -61,34 +61,22 @@ int t11_queen() {
 				if (j == 0)
 				{
 					if (RUN[pos - 9 * count] == -1)
-					{
 						nah = true;
-						break;
-					}
 				}
 				else if (j == 1)
 				{
 					if (RUN[pos + 9 * count] == -1)
-					{
 						nah = true;
-						break;
-					}
 				}
 				else if (j == 2)
 				{
 					if (RUN[pos - 7 * count] == -1)
-					{
 						nah = true;
-						break;
-					}
 				}
 				else if (j == 3)
 				{
 					if (RUN[pos + 7 * count] == -1)
-					{
 						nah = true;
-						break;
-					}
 				}
 				turns_[j]--;
 				count++;
