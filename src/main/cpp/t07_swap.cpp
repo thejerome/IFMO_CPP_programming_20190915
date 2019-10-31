@@ -19,5 +19,30 @@
 using namespace std;
 
 int t07_swap() {
+    int P;
+    cin >> P;
+int C[P];
+for(int L = 0;L<P;++L)
+{
+   if(L%2==0 && L+1 < P)
+   {
+       cin >> C[L+1];
+   }
+    else if(L%2!=0)
+    {
+        cin >> C[L-1];
+    }
+        else
+        {
 
+        cin >> C[L];
+    }
+
+
+}
+
+for(int L = 0;L<P;L++)
+{
+cout << C[L] << " ";
+}
 }
