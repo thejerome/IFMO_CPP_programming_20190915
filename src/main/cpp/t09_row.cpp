@@ -23,32 +23,23 @@
 using namespace std;
 
 int t09_row() {
-    int a, l;
-    int i = 1;
-    cin >> l;
-    while (l != 0) {
-        a = 1;
-        cin >> l;
-        if (l == 0)
+    int a = - 1 , max = 0 , count = 1 ;
+    int b ;
+    while ( a != 0 )
+    {
+        b = a ;
+        cin >> a ;
+        if ( b == a )
         {
-            break;
+            count ++ ;
         }
-        else if (l == a)
+        else
         {
-            i++;
-        }
-        else if (l < a)
-        {
-            i = 1;
-        }
-        else if (l > a)
-        {
-            a = 1;
-            i = 1;
+            if ( count > max )
+                max = count ;
+            count = 1 ;
         }
     }
-    if (i >= 2) {
-        cout << i;
-    }
-    return 0;
+    cout << max ;
+    return 0 ;
 };
