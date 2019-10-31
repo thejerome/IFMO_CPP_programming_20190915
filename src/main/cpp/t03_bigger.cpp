@@ -30,11 +30,9 @@ int t03_bigger() {
     for(int L=0;L<P;L++)
     {
 
-            if (C[0]==357)
-        {cout << 300;break;}
-
-        else if (C[L]>=C[L-1])
+   if (C[L]>C[L-1])
       cout << C[L] <<  " ";
 }
+
 
 }
