@@ -19,17 +19,15 @@
 using namespace std;
 
 int t02_even2() {
-	int z = 0;
-
-	cin >> z;
+	int r = 0;
+	cin >> r;
 
 	int a [40];
 
-	for (int i = 0; i < z; i++)
+	for (int i = 0; i < r; i++)
+	{
 		cin >> a[i];
-
-	//Ну, ок. Вывод:
-	for (int i = 0; i < z; i++)
 		if (a[i] % 2 == 0)
 			cout << a[i] << " ";
+	}
 }
