@@ -28,5 +28,7 @@ int t08_cycleswap() {
    }
    cout << C[P-1] << " ";
    for(int L=0;L<P-1;L++)
+   {
     cout << C[L] << " ";
+   }
 }
