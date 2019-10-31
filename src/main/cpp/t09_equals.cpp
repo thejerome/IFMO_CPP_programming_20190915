@@ -26,5 +26,38 @@
 using namespace std;
 
 int t09_equals() {
+	int z = 0, sum = 0;
 
+	cin >> z;
+
+	int a [40];
+	for (int i = 0; i < z; i++)
+		cin >> a[i];
+
+	for (int i = 0; i < z - 1; i++)
+	{
+		for (int j = 0; j < z - i - 1; j++)
+			if (a[j] > a[j + 1])
+			{
+				int h = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = h;
+			}
+	}
+	bool cut = false;
+	int g = 1;
+	for (int i = 1; i < z; i++)
+	{
+		if (a[i] == a[i - 1])
+			g++;
+		if(a[i] != a[i - 1] || i==z-1)
+			cut = true;
+		if (cut)
+		{
+			sum += (g * (g - 1)) / 2;
+			g = 1;
+			cut = false;
+		}
+	}
+	cout << sum;
 }

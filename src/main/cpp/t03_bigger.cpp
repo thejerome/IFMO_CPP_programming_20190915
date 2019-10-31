@@ -19,5 +19,17 @@
 using namespace std;
 
 int t03_bigger() {
+	int z = 0;
 
+	cin >> z;
+
+	int a [40];
+
+	for (int i = 0; i < z; i++)
+		cin >> a[i];
+
+	//Ну, ок. Вывод:
+	for (int i = 1; i < z; i++)
+		if (a[i-1] < a[i])
+			cout << a[i] << " ";
 }
