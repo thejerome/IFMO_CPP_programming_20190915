@@ -31,8 +31,9 @@
 #include <iostream>
 using namespace std;
 int main() {
-	int N, H = N / 3600, M = (N - H * 3600) / 60, S = N - H * 3600 - M * 60;
-	cin >> N, H, M, S;
+	int N = 0;
+	cin >> N;
+	int H = N / 3600, M = (N - H * 3600) / 60, S = N - H * 3600 - M * 60;
 	cout << H << ':' << M << ':' << S;
 	return 0;
 }
