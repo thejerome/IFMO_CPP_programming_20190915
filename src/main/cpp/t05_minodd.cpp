@@ -28,5 +28,15 @@
 using namespace std;
 
 int t05_minodd() {
-
+    int n, min = INT32_MAX;
+    bool found = false;
+    cin >> n;
+    int a[n];
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+        if (a[i] % 2 != 0 and a[i] < min) { min = a[i]; found = true; }
+    }
+    if (found) cout << min;
+    else cout << 0;
+    return (0);
 }
