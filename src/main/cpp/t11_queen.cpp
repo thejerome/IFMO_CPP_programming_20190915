@@ -41,8 +41,6 @@ using namespace std;
 int t11_queen() {
 	const int eight = 8;
 	int RUN[80];
-	//int x[8];
-	//int y[8];
 	int a[8];
 	int b[8];
 	bool nah = false;
@@ -50,28 +48,14 @@ int t11_queen() {
 	{
 		int line, row;
 		cin >> line >> row;
-
 		a[i] = line;
 		b[i] = row;
-
-		/*if (x[line - 1] == 1 || y[row - 1] == 1)
-		{
-			nah = true;
-			break;
-		}
-		x[line - 1] = 1;
-		y[row - 1] = 1;*/
 	}
 	for (int i = 0; i < eight; i++)
 	{
-		//up left, down right, right up, left down -d1 d2 d3 d4 =>
 		int pos = (a[i] - 1) * eight + (b[i] - 1);
-		int turns_[4] = { a[i] - 1 >= b[i] - 1 ? b[i] - 1 : a[i] - 1,
-		eight - a[i] >= eight - b[i] ? eight - b[i] : eight - a[i],
-		 a[i] - 1 >= eight - b[i] ? eight - b[i] : a[i] - 1,
-		 eight - a[i] >= b[i] - 1 ? b[i] - 1 : eight - a[i] };
+		int turns_[4] = { a[i] - 1 >= b[i] - 1 ? b[i] - 1 : a[i] - 1,eight - a[i] >= eight - b[i] ? eight - b[i] : eight - a[i],a[i] - 1 >= eight - b[i] ? eight - b[i] : a[i] - 1, eight - a[i] >= b[i] - 1 ? b[i] - 1 : eight - a[i] };
 		RUN[pos] = -1;
-		 //<< " " << turns_[0] << " " << turns_[1] << " " << turns_[2] << " " << turns_[3] << "\n";
 		for (int j = 0; j < 4; j++)
 		{
 			int count = 1;
@@ -81,7 +65,6 @@ int t11_queen() {
 				{
 					if (RUN[pos - 9 * count] == -1)
 					{
-						//cout << i << j << turns_[j];
 						nah = true;
 						turns_[j] = 0;
 						j = 4;
@@ -93,7 +76,6 @@ int t11_queen() {
 				{
 					if (RUN[pos + 9 * count] == -1)
 					{
-						//cout << i << j << turns_[j];
 						nah = true;
 						turns_[j] = 0;
 						j = 4;
@@ -105,7 +87,6 @@ int t11_queen() {
 				{
 					if (RUN[pos - 7 * count] == -1)
 					{
-						//cout << i << j << turns_[j];
 						nah = true;
 						turns_[j] = 0;
 						j = 4;
@@ -117,7 +98,6 @@ int t11_queen() {
 				{
 					if (RUN[pos + 7 * count] == -1)
 					{
-						//cout << i << j << turns_[j];
 						nah = true;
 						turns_[j] = 0;
 						j = 4;
@@ -129,7 +109,6 @@ int t11_queen() {
 				count++;
 			}
 		}
-
 	}
 	if (nah==true)
 		cout << "YES";
