@@ -20,7 +20,7 @@ using namespace std;
 
 int t03_bigger() {
 
- int P;
+   int P;
     cin >> P;
     int C[P];
     for(int L=0;L<P;L++)
@@ -30,7 +30,7 @@ int t03_bigger() {
     for(int L=0;L<P;L++)
     {
 
-   if (C[L]>C[L-1])
+   if (C[L+1]<C[L])
       cout << C[L] <<  " ";
 }
 
