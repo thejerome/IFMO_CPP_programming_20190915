@@ -18,5 +18,10 @@
 using namespace std;
 
 int t01_max3() {
+  int c;
+
+  int v;
+  return 0;
+  
 
 };
