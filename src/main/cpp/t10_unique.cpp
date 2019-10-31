@@ -5,7 +5,7 @@
 //Формат выходных данных
 //        Выведите ответ на задачу.
 //Sample Input 1:
-//
+/
 //6
 //1 2 2 3 3 3
 //Sample Output 1:
@@ -25,5 +25,21 @@
 using namespace std;
 
 int t10_unique() {
-
+  int n,br=0,br1=0;
+  cin>>n;
+  int arr[n];
+  for(int i=0;i<n;i++)cin>>arr[i];
+  for(int i=0;i<n;i++)
+  {
+    for(int j=0;j<n;j++)
+    {
+      if(j!=i){
+      if(arr[i]==arr[j]){br++;}
+      }
+    }
+    if(br1==0 && br==0)cout<<arr[i];
+    else if(br==0) cout<<" "<<arr[i];
+    br=0;
+    br1++;
+  }
 }
