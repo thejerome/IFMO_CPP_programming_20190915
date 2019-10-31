@@ -37,13 +37,10 @@
 using namespace std;
 int t11_queen() {
 	const int eight = 8;
-	int RUN[80];
-	int a[8];
-	int b[8];
+	int RUN[80], a[8], b[8];
 	bool nah = false;
 	for (int i = 0; i < eight; i++)
-	{
-		int line, row;
+	{int line, row;
 		cin >> line >> row;
 		a[i] = line;
 		b[i] = row;
@@ -54,34 +51,13 @@ int t11_queen() {
 		{
 			int count = 1;
 			while (turns_[j] > 0)
-			{
-				if (j == 0)
-				{
-					if (RUN[pos - 9 * count] == -1)
-						nah = true;
-				}
-				else if (j == 1)
-				{
-					if (RUN[pos + 9 * count] == -1)
-						nah = true;
-				}
-				else if (j == 2)
-				{
-					if (RUN[pos - 7 * count] == -1)
-						nah = true;
-				}
-				else if (j == 3)
-				{
-					if (RUN[pos + 7 * count] == -1)
-						nah = true;
-				}
+			{if (j == 0){if (RUN[pos - 9 * count] == -1)nah = true; } if (j == 1)
+				{if (RUN[pos + 9 * count] == -1) nah = true; }else if (j == 2)
+				{if (RUN[pos - 7 * count] == -1) nah = true; }else if (j == 3)
+				{if (RUN[pos + 7 * count] == -1) nah = true; }
 				turns_[j]--;
 				count++;
 			}
 		}
-	}
-	if (nah==true)
-		cout << "YES";
-	else
-		cout << "NO";
+	}if (nah==true) cout << "YES"; else cout << "NO";
 }
