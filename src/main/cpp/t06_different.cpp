@@ -42,4 +42,3 @@ int main() {
     cout << t + 1;
     return 0;
 }
-}
