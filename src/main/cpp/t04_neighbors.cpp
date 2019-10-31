@@ -22,14 +22,11 @@ using namespace std;
 
 int t04_neighbors() {
 	int z = 0;
-
 	cin >> z;
-
 	int a [40];
 	int b [40];
 	for (int i = 0; i < z; i++)
 		cin >> a[i];
-
 	int j = 0, mn = 2;
 	bool nitsketazo = false;
 	bool is_higher = false;
