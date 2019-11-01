@@ -19,5 +19,17 @@
 using namespace std;
 
 int t06_different() {
+    int n = 0;
+    int A = 0;
+    int prev = 0;
+    int count = 0;
+    cin >> n >> A;
+    for (int i = 0; i < n; i++){
+        prev = A;
+        cin >> A;
+        if (prev == A) continue;
+        else count++;
+    }
+    cout << count;
 
 }

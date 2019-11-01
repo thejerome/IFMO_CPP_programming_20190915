@@ -19,5 +19,14 @@
 using namespace std;
 
 int t03_bigger() {
+    int n = 0;
+    int A = 0;
+    int prev = 0;
+    cin >> A;
+    for (int i = 1; i < n; i++) {
+        prev = A;
+        cin >> A;
+        if (A > prev) cout << A << " ";
+    }
 
 }
