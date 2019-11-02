@@ -24,7 +24,7 @@
 using namespace std;
 
 int t02_star() {
-int n,i=1,j=1;
+int n,i,j;
     cin>>n;
     int a[n][n];
         for(i=1;i<n+1;i++){
