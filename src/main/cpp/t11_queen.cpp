@@ -39,28 +39,34 @@
 using namespace std;
 
 int t11_queen() {
-  int i,j;
-    bool flag=false;
+  bool flag=false;
     int a[8][2];
     for(int i=0;i<8;i++)
     for(int j=0;j<2;j++)
     {
         cin>>a[i][j];
     }
-      for(int i=0;i<8-1;i++) if(a[i][0]==a[i+1][0] || a[i][1]==a[i+1][1]) {flag=true;}
     int k,l,t,p,swap;
-    if(!flag){
-    for(int i=0;i<8-1;i++)
+    for(int i=0;i<8-2;i++)
     {
-
       k=a[i][0];
       l=a[i][1];
-      t=a[i+1][0];
-      p=a[i+1][1];
+      int mediumk,mediuml;
+      mediumk=k;
+      mediuml=l;
+      for(int j=i;j<8-1;j++)
+      {
+      t=a[j+1][0];
+      p=a[j+1][1];
       if(k<t){swap=k;k=t;t=swap;}
       if(l<p){swap=l;l=p;p=swap;}
-      if((k==t || l==p) || k-t==l-p) {flag=true;}
-    }}
+      if((k==t || l==p) || k-t==l-p) {flag=true;break;}
+      k=mediumk;
+      l=mediuml;
+      }
+      if(flag)break;
+
+    }
     if(flag)cout<<"YES";
     else  cout<<"NO";
 
