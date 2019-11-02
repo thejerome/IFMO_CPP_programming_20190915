@@ -19,11 +19,25 @@
 
 #include "t08_chess.h"
 #include <iostream>
-
+#include <iomanip>
 
 using namespace std;
 
 int t08_chess() {
-    
-    return 0;
+	int a = 0, b = 0, z[121][121], counter = 1;
+	cin >> a >> b;
+	for (int i = 0; i < a; i++)
+	{
+		for (int j = 0; j < b; j++)
+		{
+			if ((j % 2 == 0 && i%2==0) || (i%2==1 && j%2==1))
+			{
+				cout << setw(4) << counter << fixed;
+				counter++;
+			}
+			else
+				cout << setw(4) << 0 << fixed;
+		}
+		cout << endl;
+	}
 }

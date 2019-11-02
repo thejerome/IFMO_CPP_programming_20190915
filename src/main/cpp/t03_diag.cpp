@@ -22,6 +22,17 @@
 using namespace std;
 
 int t03_diag() {
-    
-    return 0;
+	int a, x[101][101],place=0;
+	cin >> a;
+	for (int i = 0; i < a; i++)
+	{
+		int begin = -place;
+		for (int j = 0; j < a; j++)
+		{
+			cout << abs(begin)<< " ";
+			begin++;
+		}
+		place++;
+		cout << endl;
+	}
 }
