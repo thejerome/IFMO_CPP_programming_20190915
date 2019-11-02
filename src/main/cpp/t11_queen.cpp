@@ -49,7 +49,7 @@ int t11_queen() {
 
     for(int i=0;i<8-2;i++)
     {
-      int k,l,t,p,swap;
+      int k,l;
       k=a[i][0];
       l=a[i][1];
       int mediumk,mediuml;
@@ -57,13 +57,14 @@ int t11_queen() {
       mediuml=l;
       for(int j=i;j<8-1;j++)
       {
-      t=a[j+1][0];
-      p=a[j+1][1];
-      if(k<t){swap=k;k=t;t=swap;}
-      if(l<p){swap=l;l=p;p=swap;}
-      if((k==t || l==p) || k-t==l-p) {flag=true;break;}
-      k=mediumk;
-      l=mediuml;
+        int t,p,swap;
+        t=a[j+1][0];
+        p=a[j+1][1];
+        if(k<t){swap=k;k=t;t=swap;}
+        if(l<p){swap=l;l=p;p=swap;}
+        if((k==t || l==p) || k-t==l-p) {flag=true;break;}
+        k=mediumk;
+        l=mediuml;
       }
       if(flag)break;
 
