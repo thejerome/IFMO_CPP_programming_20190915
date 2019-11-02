@@ -24,6 +24,8 @@ using namespace std;
 int t07_snake() {
 	int a = 0, b = 0, z[31][31], q = 0, w = 4;
 	w=0;
+	w--;
+	a =w++;
 	cin >> a >> b;
 	for (int i = 0; i < a; i++)
 	{
