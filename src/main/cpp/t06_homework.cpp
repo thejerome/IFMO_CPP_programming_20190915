@@ -80,9 +80,41 @@
 
 #include "t06_homework.h"
 #include <iostream>
-
+#include <vector>
+#include <string>
+#include <algorithm>
 using namespace std;
-
+bool ok2(string & left, string & right)
+{
+    string left2 = left, right2 = right;
+    for(int i = 0; i < left2.size(); i++)
+        left2[i] = tolower(left2[i]);
+    for(int i = 0; i < right2.size(); i++)
+        right2[i] = tolower(right2[i]);
+    return (left2 == right2);
+}
+bool ok(string & s, vector<string> & dir)
+{
+    int yd = 0;
+    for(int i = 0; i < s.length(); i++)if(isupper(s[i]))yd++;
+    if(yd != 1)return false;
+    bool d = false;
+    for(int i = 0; i < dir.size(); i++)
+    {
+        if(ok2(s, dir[i]))d = true;
+        if(s == dir[i])return true;
+    }
+    if(d) return false;
+    else return true;
+}
 int t06_homework() {
-
+int n, count = 0;
+string s;
+cin >> n;
+vector<string> dir(n), ter;
+for(int i = 0; i < n; i++)cin >> dir[i];
+while(cin >> s)ter.emplace_back(s);
+for(int i = 0; i < ter.size(); i++)if(!ok(ter[i], dir))count++;
+cout << count;
+return 0;
 }
