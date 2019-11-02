@@ -28,5 +28,20 @@
 using namespace std;
 
 int t05_minodd() {
+int n,i;
+    cin>>n;
+    int a[n];
+    int k=0;
+    for(i=0;i<n;i++){
+        cin>>a[i];
+    }
+    for(i=0;i<n;i++){
+        if(a[i]%2!=0){
+         if(k==0||a[i]<k){
+k=a[i];
+}}
+else
+k==0;}
+cout<<k;
 
 }
