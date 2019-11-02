@@ -25,6 +25,19 @@
 using namespace std;
 
 int t04_swap() {
-    
+    int n,m,i,j,x,y;
+  cin>>n>>m;
+  int a[n][m];
+  for(x=0;x<n;x++)
+      for(y=0;y<m;y++)
+          cin>>a[x][y];
+      cin>>i>>j;
+      for(x=0;x<n;x++){
+          swap(a[x][i],a[x][j]);
+          for(y=0;y<m;y++){
+              cout<<a[x][y]<<" ";
+          }
+          cout<<endl;
+      }
     return 0;
 }
