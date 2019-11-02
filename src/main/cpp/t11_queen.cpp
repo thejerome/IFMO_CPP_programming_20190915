@@ -46,9 +46,10 @@ int t11_queen() {
     {
         cin>>a[i][j];
     }
-    int k,l,t,p,swap;
+
     for(int i=0;i<8-2;i++)
     {
+      int k,l,t,p,swap;
       k=a[i][0];
       l=a[i][1];
       int mediumk,mediuml;

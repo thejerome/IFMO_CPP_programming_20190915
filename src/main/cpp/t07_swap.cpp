@@ -19,7 +19,7 @@
 using namespace std;
 
 int t07_swap() {
-  int n,swap;
+  int n;
   cin>>n;
   int arr[n];
   for(int i=0;i<n;i++)
@@ -28,6 +28,7 @@ int t07_swap() {
   }
   for(int i=0;i<n-1;i+=2)
   {
+    int swap;
     swap=arr[i];
     arr[i]=arr[i+1];
     arr[i+1]=swap;

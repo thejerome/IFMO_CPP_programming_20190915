@@ -21,7 +21,7 @@
 using namespace std;
 
 int t04_neighbors() {
-  int n,br=0,a=0,b=0;
+  int n,a=0,b=0;
   cin>>n;
   int arr[n];
   for(int i=0;i<n;i++)
