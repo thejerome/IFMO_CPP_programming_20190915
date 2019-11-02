@@ -19,9 +19,6 @@
 using namespace std;
 
 int t06_different() {
-#include <iostream>
-#include <vector>
-using namespace std;
 int i,n,k=1;
     cin >> n;
     int a[n];
