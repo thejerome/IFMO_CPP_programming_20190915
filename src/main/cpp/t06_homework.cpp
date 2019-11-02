@@ -84,7 +84,7 @@
 #include <string>
 #include <algorithm>
 using namespace std;
-bool ok2(string & left, string & right)
+bool ok2(const string & left, const string & right)
 {
     string left2 = left, right2 = right;
     for(int i = 0; i < left2.size(); i++)
