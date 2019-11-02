@@ -27,6 +27,27 @@
 using namespace std;
 
 int t01_max() {
-    
-    return 0;
+    int P,D;
+    cin >> P >> D;
+    int C[10][10];
+    for(int L=0;L<P;L++){
+    for(int H=0;H<D;H++)
+        {
+            cin >> C[L][H];
+        }
+        }
+	int K=C[0][0], PM=0,DM=0;
+         for(int L=0;L<P;L++){
+        for(int H=0;H<D;H++){
+
+          if (C[L][H] > K)
+            {
+            K=C[L][H];
+            PM=L;
+            DM=H;
+            }
+            }
+            }
+         cout << PM << " " << DM;
+         return 0;  
 }
