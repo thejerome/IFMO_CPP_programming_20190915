@@ -39,7 +39,9 @@
 using namespace std;
 
 int t11_queen() {
-int a[8],b[8];
+int a[8];
+int b[8];
+int i,j;
   for (i=0;i<8;i++) {
     cin >> a[i] >> b[i];
   }
