@@ -27,6 +27,23 @@
 using namespace std;
 
 int t01_max() {
+    int n,m,i,j,x=0,y=0;
+   cin>>n>>m;
+   int a[n][m];
+   for(i=0;i<n;i++){
+       for(j=0;j<m;j++)
+           cin >> a[i][j];}
+       for(i=0;i<n;i++){
+           for(j=0;j<m;j++) {
+               if (a[i][j] > a[x][y]) {
+                   a[x][y] = a[i][j];
+                   x = i;
+                   y = j;
+               }
+           }
+
+   }
+   cout<<x<<" "<<y;
+   return 0;
     
-    return 0;
 }
