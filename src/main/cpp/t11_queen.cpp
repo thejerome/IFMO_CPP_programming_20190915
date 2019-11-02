@@ -40,18 +40,18 @@ using namespace std;
 
 int t11_queen() {
 int a[8],b[8];
-  for (int i=0;i<8;i++) {
+  for (i=0;i<8;i++) {
     cin >> a[i] >> b[i];
   }
   bool q=1;
   for ( i=0;i<8;i++) {
     for ( j=i+1;j<8;j++) {
-      if ( ( a[i]==a[j])|(b[i]==b[j])|(abs(a[i]-a[j])==abs(y[i]-y[j]))) { 
-        k=0;
+      if ( ( a[i]==a[j])|(b[i]==b[j])|(abs(a[i]-a[j])==abs(b[i]-b[j]))) { 
+        q=0;
       }
     }
   }
-  if ( k==1) { 
+  if ( q==1) { 
     cout << "NO";
   }
   else {
