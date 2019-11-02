@@ -25,5 +25,18 @@ using namespace std;
 
 int t02_star() {
 
-    return 0;
+   int P;
+cin >> P;
+int C[15][15];
+
+for(int L=0; L < P; L++){
+    for(int H=0; H < P; H++){
+          if (L == H || L == P/2 || H == P/2 || L == P - H-1){C[L][H] = 1;}
+            else C[L][H] = 0;}
+    }
+ for (int L = 0; L < P; L++) {
+        for (int H = 0; H < P; H++) {
+            if (C[L][H] == 0) cout << "." << " ";
+            else cout << "*" << " ";} cout << endl;
+    }
 }
