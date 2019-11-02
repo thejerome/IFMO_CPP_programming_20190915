@@ -78,11 +78,11 @@ int t09_spiral() {
 		if (count == summary + 1)
 			break;
 	}
-	for (int i = 0; i < ac; i++)
+	for (int de = 0; i < ac; i++)
 	{
-		for (int j = 0; j < bc; j++)
+		for (int ko = 0; j < bc; j++)
 		{
-			cout << setw(4) << z[i][j] << fixed;
+			cout << setw(4) << z[de][ko] << fixed;
 		}
 		cout << endl;
 	}
