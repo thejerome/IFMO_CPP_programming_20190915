@@ -22,6 +22,7 @@ int t03_bigger() {
     int n = 0;
     int A = 0;
     int prev = 0;
+    cin >> n;
     cin >> A;
     for (int i = 1; i < n; i++) {
         prev = A;

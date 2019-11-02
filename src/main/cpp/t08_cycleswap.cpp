@@ -24,7 +24,7 @@ int t08_cycleswap() {
     int A[n];
     for (int i = 0; i < n; i++) cin >> A[i];
     cout << A[n-1];
-    for (int i = 1; i < n - 1; i++) cout << " " << A[i];
+    for (int i = 0; i < n - 1; i++) cout << " " << A[i];
 
 
 }

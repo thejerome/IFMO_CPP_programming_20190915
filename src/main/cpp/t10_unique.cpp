@@ -29,11 +29,11 @@ int t10_unique() {
     cin >> n;
     int A[n];
     for (int i = 0; i < n; i++) cin >> A[i];
-    cout << A[0];
-    for (int i = 1; i < n; i++) {
+
+    for (int i = 0; i < n; i++) {
         bool ch = true;
-        for (int j = 0; j < i; j++)
-            if (A[i] == A[j]) ch = false;
+        for (int j = 0; j < n; j++)
+            if (A[i] == A[j] && i != j) ch = false;
         if (ch) cout << " " << A[i];
 
     }
