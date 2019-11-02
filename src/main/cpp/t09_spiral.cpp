@@ -22,7 +22,7 @@
 using namespace std;
 
 int t09_spiral() {
-	int a = 0, b = 0, ac = 0, bc = 0, ab = 1, bb = 0, z[21][21], count = 1, summary = 0;
+		int a = 0, b = 0, ac = 0, bc = 0, ab = 1, bb = 0, z[21][21], count = 1, summary = 0;
 	cin >> a >> b;
 	summary = a * b;
 	int i = 0, j = 0;
@@ -78,9 +78,9 @@ int t09_spiral() {
 		if (count == summary + 1)
 			break;
 	}
-	for (int de = 0; i < ac; i++)
+	for (int de = 0; de < ac; de++)
 	{
-		for (int ko = 0; j < bc; j++)
+		for (int ko = 0; ko < bc; ko++)
 		{
 			cout << setw(4) << z[de][ko] << fixed;
 		}
