@@ -27,10 +27,30 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
+#include <vector>
 
 using namespace std;
 
 int t05_syn() {
-
+	int n;
+	cin >> n;
+	string s;
+	vector<vector<string>> dictionary(n, vector<string>(2));
+	for (int i = 0; i < n; i++)
+		cin >> dictionary[i][0] >> dictionary[i][1];
+	cin >> s;
+	for (int i = 0; i < n; i++)
+	{
+		if (dictionary[i][0] == s)
+		{
+			cout << dictionary[i][1];
+			break;
+		}
+		else if (dictionary[i][1] == s)
+		{
+			cout << dictionary[i][0];
+			break;
+		}
+	}
+	return 0;
 }
