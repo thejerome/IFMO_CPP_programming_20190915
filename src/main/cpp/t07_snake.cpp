@@ -26,6 +26,7 @@ int t07_snake() {
 	w=0;
 	w--;
 	a =w++;
+	w++;
 	a=0;
 	cin >> a >> b;
 	for (int i = 0; i < a; i++)
