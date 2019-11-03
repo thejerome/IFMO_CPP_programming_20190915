@@ -27,6 +27,7 @@ using namespace std;
 
 int t09_equals() {
   int n;
+    int k = 0;
   cin >> n;
   int a[n];
   int b[n];
@@ -50,6 +51,7 @@ int t09_equals() {
         for(int l = 0; l < n; l++){
           if(b[l] == 0){
             b[l] = a[i];
+            c[l]++;
             l = n+2;
           }
         }
@@ -59,4 +61,18 @@ int t09_equals() {
         nul++;
     }
   }
+  for(int i = 0; i < n; i++){
+      if(b[i] != 0){
+          int h = c[i];
+          while(h > 1){
+              k += h-1;
+              h--;
+          }
+      }
+  }
+  while(nul > 1){
+      k += nul-1;
+      nul--;
+  }
+  cout << k;
 }
