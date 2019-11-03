@@ -26,6 +26,7 @@ using namespace std;
 
 int t10_unique() {
 int P;
+bool D = true;
     cin >> P;
     int C[P];
     for(int L=0;L<P;L++)
@@ -34,13 +35,12 @@ int P;
    }
     for(int L=0;L<P;L++)
     {
-        int H;
-       for(H=0;H<P;H++)
-        {
-          if (L!=H && C[L]==C[H])   {break;}
-
-
-        }
-    if (H=P){cout << C[L] << " ";}
+    int H ;
+        for (H=0; H<P; H++)
+            if (C[L] == C[H] && L != H) {
+                D = false;
+                break;
+            }
+        if (D==true) cout << C[L] << " ";
     }
 }
