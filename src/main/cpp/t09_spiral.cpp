@@ -39,17 +39,18 @@ int t09_spiral() {
                 a[Q - 1][i] = K++;
         }
         if (P != W - 1){
-            for (i = Q - 2; i > P;i--)
-                a[i][P] = k++;
+            for (int i = Q - 2; i > P;i--)
+                a[i][P] = K++;
         }
         P++;
         Q--;
         W--;
     }
-    for (int i = 0; i < M,i++){
+    for (int i = 0; i < M;i++){
         for (int j = 0; j < N; j++)
             cout << a[i][j] << " ";
         cout << endl;
     }
     return 0;
 }
+
