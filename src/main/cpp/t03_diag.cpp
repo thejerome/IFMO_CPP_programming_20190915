@@ -26,19 +26,15 @@ int t03_diag() {
   int P;
 cin >> P;
 int C[100][100];
-
 for(int L=0; L < P; L++){
     for(int H=0; H < P; H++){
-
-         C[L][H] = abs(L-H);
-
-
-    }
+        if (L == H)
+         C[L][H] = 0;
+         else
+         C[L][H] = abs(L-H);}
 }
  for (int L = 0; L < P; L++) {
         for (int H = 0; H < P; H++) {
-
-
                 cout <<  C[L][H] << " ";}
     cout << endl;
     }
