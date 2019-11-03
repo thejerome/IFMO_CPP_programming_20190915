@@ -31,9 +31,9 @@ int t10_unique() {
     int b[n];
     int k = 0;
     int l = 0;
-    for(int i = 0; i < n, i++)
+    for(int i = 0; i < n; i++)
       b[i] = 0;
-    for(int i = 0; i < n, i++)
+    for(int i = 0; i < n; i++)
         cin >> a[i];
     for(int i = 0; i < n; i++){
       l = 0;
