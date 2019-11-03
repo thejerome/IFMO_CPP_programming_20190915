@@ -29,7 +29,7 @@
 using namespace std;
 
 int t06_cinema() {
-int n,m,k,max,number;
+int n,m,k,number;
 cin >>n>>m;
 int a[n][m];
 for (int i=0;i <=(n-1);i++) {
@@ -39,7 +39,7 @@ cin>> k;
 number=n;
 bool flag=true;
 for (int i=0; i<=(n-1);i++){
-    max=0;
+    int max=0;
     if (flag){
         for (int j=0; j<=(m-1); j++){
             if (a[i][j]==0) {
