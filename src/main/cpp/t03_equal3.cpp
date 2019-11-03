@@ -26,7 +26,7 @@ if ((a==b) && (b==c))
 else if ((a==c) || (a==b) || (b==c))
     cout << 2;
 else 
-    cout << 1;
+    cout << 0;
 return 0;
 
 };
