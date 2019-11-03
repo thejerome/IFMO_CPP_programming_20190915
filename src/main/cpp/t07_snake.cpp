@@ -39,7 +39,7 @@ int t07_snake() {
             else {
                 Q = M * i - (j - 1);
                 for (int e = j;e <= M; e++){
-                    a[i][y] = Q;
+                    a[i][e] = Q;
                     Q--;
                     cout << a[i][e] << " ";
                 }
