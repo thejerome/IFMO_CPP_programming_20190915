@@ -31,8 +31,8 @@ int a[count];
 for (int i=0;i <= (count-1);i++) {
     cin >> a[i];
 };
-for (int i=0, bool flag;i <= (count-1);i++) {
-    flag=true;
+for (int i=0;i <= (count-1);i++) {
+    bool flag=true;
     for (int j=0;j <= (count-1);j++) {
         if ((a[i]==a[j]) and (i!=j))
             flag=false;};

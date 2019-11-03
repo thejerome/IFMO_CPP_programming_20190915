@@ -25,7 +25,7 @@ int a[count];
 for (int i=0;i <= (count-1);i++) {
     cin >> a[i];
 };
-for (int i=0, int m=0;i <= (count-1);i=i+2) {
+for (int i=0, m=0;i <= (count-1);i=i+2) {
      if (i!=count-1){
         m=a[i];
         a[i]=a[i+1];
