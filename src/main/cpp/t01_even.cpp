@@ -19,5 +19,15 @@
 using namespace std;
 
 int t01_even() {
-
+int count;
+cin >> count;
+int a[count];
+for (int i=0;i <= (count-1);i++) {
+    cin >> a[i];
+};
+for (int i=0;i <= (count-1);i++) {
+    if (i%2==0) {
+        cout << a[i]<< " ";};
+     };
 }
+
