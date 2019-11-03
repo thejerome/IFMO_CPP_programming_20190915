@@ -19,6 +19,7 @@
 using namespace std;
 
 int t01_even() {
+	int N;
 	int A[N];
 	cin >> N;
 	for (int i = 0; i < N; i++) {
