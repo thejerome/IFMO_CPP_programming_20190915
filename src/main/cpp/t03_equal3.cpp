@@ -23,7 +23,7 @@ int a,b,c;
 cin >> a >> b >> c;
 if ((a==b) && (b==c))
     cout << 3;
-else if ((a=c) || (a=b) || (b=c))
+else if ((a==c) || (a==b) || (b==c))
     cout << 2;
 else 
     cout << 1;
