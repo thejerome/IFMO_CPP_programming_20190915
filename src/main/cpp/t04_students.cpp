@@ -29,10 +29,28 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
-
+class student
+{
+    public:
+    string name, last_name;
+    int a[3];
+    int sum;
+};
 int t04_students() {
-    
+    int n;
+    cin >> n;
+    vector<student> f(n);
+    for(int i = 0; i < n; i++)
+    {
+        cin >> f[i].name >> f[i].last_name >> f[i].a[0] >> f[i].a[1] >> f[i].a[2];
+        f[i].sum = f[i].a[0] + f[i].a[1] + f[i].a[2];
+    }
+    sort(f.begin(), f.end(), [](const student & left, const student & right){ return left.sum > right.sum; });
+    for(int i = 0; i < n; i++)cout << f[i].name << " " << f[i].last_name << endl;
+    return 0;
 }
 

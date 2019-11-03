@@ -28,10 +28,25 @@
 
 #include "t02_shoes.h"
 #include <iostream>
-
-
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 int t02_shoes() {
-    
+    int quantity, mini;
+    cin >> mini >> quantity;
+    vector<int> numbers(quantity);
+    for(int i = 0; i < quantity; i++)cin >> numbers[i];
+    sort(numbers.begin(), numbers.end());
+    int min_size = mini - 3, count = 0;
+    for(int i = 0; i < quantity; i++)
+    {
+        if(numbers[i] >= min_size + 3)
+        {
+            count++;
+            min_size = numbers[i];
+        }
+    }
+    cout << count;
+    return 0;
 }
