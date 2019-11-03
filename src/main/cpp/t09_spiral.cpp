@@ -46,5 +46,6 @@ int t09_spiral() {
             cout << setw(4) << a[i][j];
         }
     }
+    
     return 0;
 }
