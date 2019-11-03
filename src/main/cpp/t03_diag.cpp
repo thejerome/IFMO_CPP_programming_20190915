@@ -23,5 +23,16 @@ using namespace std;
 
 int t03_diag() {
     
-    return 0;
+   int P;
+cin >> P;
+int C[15][15];
+
+for(int L=0; L < P; L++){
+    for(int H=0; H < P; H++){
+
+         C[L][H] = abs(L-H);
+
+        cout <<  C[L][H] << " ";}
+        cout << endl;
+    }
 }
