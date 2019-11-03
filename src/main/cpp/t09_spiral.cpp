@@ -63,8 +63,8 @@ int t09_spiral() {
             if(!f)break;
             ++i,++j,--k,--q;
         }
-        for(int i = 1;i <= n;++i){
-            for(int j = 1;j <= m;++j){
+        for(i = 1;i <= n;++i){
+            for(j = 1;j <= m;++j){
                 cout<<setw(4)<<a[i][j];
             }
             cout<<'\n';
