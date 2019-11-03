@@ -38,6 +38,47 @@
 
 using namespace std;
 
-int t11_queen() {
+struct queen{
+    int x, y;
+};
 
+int t11_queen() {
+	int n = 8, cou = 0;
+    queen arr[n];
+
+    for(int i = 0; i < n; i++)
+        cin >> arr[i].x >> arr[i].y;
+
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            if(i == j)
+                continue;
+
+            bool is;
+            int r1, r2;
+
+            r1 = arr[j].x - arr[i].x;
+            r2 = arr[j].y - arr[i].y;
+
+            if(r1 * r1 == r2 * r2)
+                is = 1;
+
+            if(arr[i].x == arr[j].x || arr[i].y == arr[j].y)
+                is = 1;
+
+            if(is)
+                cou++;
+        }
+    }
+
+    if(cou)
+        cout << "YES" << endl;
+    else
+        cout << "NO" << endl;
+//    cout << cou;
+
+//    for(int i = 0; i < n; i++)
+//        cout << arr[i] << " ";
+
+    return 0;
 }
