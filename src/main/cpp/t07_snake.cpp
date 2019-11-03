@@ -23,5 +23,30 @@ using namespace std;
 
 int t07_snake() {
     
-    return 0;
+    int P,D,S=0;
+    cin >> P >> D;
+    int C[30][30];
+    for(int L = 0; L < P; L++){
+        for(int H = 0; H < D; H++){
+
+        S++;
+        if (L%2==0)
+        { C[L][H]= S;}
+        else 
+        {C[L][D - H -1]= S;}
+        }
+    }
+
+    for(int L = 0; L < P; L++){
+        for(int H = 0; H < D; H++){
+        if (C[L][H]%10==C[L][H])
+        {cout << "   ";}
+        else if  (C[L][H]%100==C[L][H])
+        {cout << "  ";}
+        else  if (C[L][H]%1000==C[L][H])
+        {cout << " ";}
+            cout << C[L][H];
+        }
+        cout << endl;
+    }
 }
