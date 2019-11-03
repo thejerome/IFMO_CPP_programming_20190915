@@ -52,6 +52,6 @@ for (int i=0,ch; i<=(n-1);i++){
         cout <<i+1;
         flag=false;}
 }
-if (g_max==0) cout <<0;
+if ((g_max==0) or (g_max<k)) cout <<0;
     return 0;
 }
