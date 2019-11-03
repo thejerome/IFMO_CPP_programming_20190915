@@ -39,7 +39,7 @@
 using namespace std;
 
 int t11_queen() {
-    int num = 16, t = 0, count = 0;
+    int num = 16, count = 0;
     int arr[num];
     for (int i = 0; i < num; i++) {
         cin >> arr[i];
