@@ -30,5 +30,42 @@ using namespace std;
 
 int t06_cinema() {
     
-    return 0;
+	int a = 0, b = 0, z[21][21], k = 0, max = 0;
+	cin >> a>>b;
+	for (int i = 0; i < a; i++)
+	{
+		for (int j = 0; j < b; j++)
+		{
+			cin >> z[i][j];
+		}
+	}
+	cin >> k;
+	for (int i = 0; i < a; i++)
+	{
+		int row = 0;
+		bool found = false;
+		for (int j = 0; j < b; j++)
+		{
+			if (z[i][j] == 0 && found == true)
+				row++;
+			if ((z[i][j] == 1 || (z[i][j] == 0 && j == b - 1 && row + 1 >= k)) && found == true && row >= k && max == 0)
+			{
+				max = i + 1;
+				i = a;
+				break;
+			}
+			if (z[i][j] == 0 && found == false)
+			{
+				row++;
+				found = true;
+			}
+			else if (z[i][j] == 1 && found == true)
+			{
+				found = false;
+				row = 0;
+			}
+			
+		}
+	}
+	cout << max;
 }

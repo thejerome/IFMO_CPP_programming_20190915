@@ -27,6 +27,21 @@
 using namespace std;
 
 int t01_max() {
-    
-    return 0;
+	int x=0, y=0,max=-500,remx=0,remy=0;
+	cin >> x >> y;
+	int a[101][101];
+	for (int i = 0; i < x; i++)
+	{
+		for (int j = 0; j < y; j++)
+		{
+			cin >> a[i][j];
+			if (a[i][j] > max)
+			{
+				max = a[i][j];
+				remx = i;
+				remy = j;
+			}
+		}
+	}
+	cout << remx << " " << remy;
 }

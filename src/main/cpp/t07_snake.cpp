@@ -17,11 +17,32 @@
 
 #include "t07_snake.h"
 #include <iostream>
-
+#include <iomanip>
 
 using namespace std;
 
 int t07_snake() {
-    
-    return 0;
+	int a = 0, b = 0, z[40][31], q = 0, w = 4;
+	z[39][30] = w;
+	cin >> a >> b;
+	for (int i = 0; i < a; i++)
+	{
+		w = 0;
+		if (i % 2 == 1)
+			for (int j = (i + 1) * b; j > z[i - 1][b - 1]; j--)
+			{
+				z[q][w] = j;
+				w++;
+				cout << setw(4) << j << fixed;
+			}
+		else
+			for (int j = (i == 0 ? 1 : z[i - 1][0] + 1); j <= b * (i + 1); j++)
+			{
+				z[q][w] = j;
+				w++;
+				cout << setw(4) << j << fixed;
+			}
+		cout << endl;
+		q++;
+	}
 }
