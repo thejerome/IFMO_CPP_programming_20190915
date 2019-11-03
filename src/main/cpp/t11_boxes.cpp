@@ -37,17 +37,29 @@
 using namespace std;
 
 int t11_boxes() {
-int a1,a2,b1,b2,c1,c2;
-cin >> a1 >> a2 >> b1 >> b2 >> c1 >> c2;
-if ((a1 == a2 && b1 == b2 && c1 == c2) || (a1 == a2 && b1 == c2 && c1 == b2) || (a1 == c2 && b1 == b2 && c1 == a2) || (a1 == b2 && b1 == a1 && c1 == c2))
-{
-    cout << "Boxes are equal";
+   int koka, sasasa, kola, fass, heelo, hee;
+ 
+    cin >> koka >> kola >> heelo >> sasasa >> fass >> hee;
+ 
+    if ((koka == sasasa && kola == fass && heelo == hee) || (koka == sasasa && kola == hee && heelo == fass) || (koka == hee && kola == fass && heelo == sasasa) || (koka == fass && kola == koka && heelo == hee))
+    {
+        cout << "Boxes are equal";
+        return 0;
+    }
+    if ((koka <= sasasa && kola <= fass && heelo <= hee) || (koka <= fass && kola <= sasasa && heelo <= hee) || (koka <= sasasa && heelo <= fass && kola <= hee) || (koka <= hee && kola <= fass && heelo <= sasasa) || (koka <= hee && heelo <= fass && kola <= sasasa) || (koka <= fass && kola <= hee && heelo <= sasasa))
+    {
+        cout << "The first box is smaller than the second one";
+    }
+    else
+    {
+        if ((koka >= sasasa && kola >= fass && heelo >= hee) || (koka >= fass && kola >= sasasa && heelo >= hee) || (koka >= sasasa && heelo >= fass && kola >= hee) || (koka >= hee && kola >= fass && heelo >= sasasa) || (koka >= hee && heelo >= fass && kola >= sasasa) || (koka >= fass && kola >= hee && heelo >= sasasa))
+        {
+            cout << "The first box is larger than the second one";
+        }
+        else
+        {
+            cout << "Boxes are incomparable";
+        }
+    }
     return 0;
-}
-if ((a1 <= a2 && c1 <= b2 && b1 <= c2) || (a1 < c2 && b1 <= b2 && c1 <= a2) || (a1 <= c2 && c1 <=b2 && b1 <= a2) || (a1 <= b2 && b1 <= c2 && c1 <=a2) || (a1 <= a2 && b1 <=b2 && c1 <= c2) || (a1 <=b2 && b1 <= a2 && c1 <= c2))
-cout << "The first box is smaller than the second one";
-else if ((a1 >= a2 && b1 >= b2 && c1 >= c2) || (a1 >= a2 && c1 >= b2 && b1 >=c2) || (a1 >= b2 && b1 >= a2 && c1 >= c2) || (a1 >= c2 && b1 >= b2 && c1 >= a2) || (a1 >= c2 && c1 >= b2 && b1 >= a2) || (a1 >= b2 && b1 >= c2 && c1 >= a2))
-cout << "The first box is larger then the second one";
-else cout << "Boxes are incomparable";
-return 0;
 };
