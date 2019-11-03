@@ -19,7 +19,7 @@
 using namespace std;
 
 int t06_different() {
-    int num = 0, prev, next, count = 0;
+    int num = 0, count = 1;
     cin >> num;
     int *arr = new int[num];
     for (int i = 0; i < num; i++) {
