@@ -50,7 +50,7 @@ int t11_queen() {
         for ( int n = k + 1 ; n < 8 ; n++ ){
             if ( A [k] == A [n] || B [k] == B [n] || abs(A [k] - A [n]) != abs(B [k] - B [n]) ){
                 m = 0;
-            }cout<<m;
+            }
         }
     }
 
