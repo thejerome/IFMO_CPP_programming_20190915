@@ -25,7 +25,7 @@
 using namespace std;
 
 int t10_unique() {
-    int num = 0, t = 0, count = 0;
+    int num = 0, count = 0;
     cin >> num;
     int *arr = new int[num];
     for (int i = 0; i < num; i++) {
