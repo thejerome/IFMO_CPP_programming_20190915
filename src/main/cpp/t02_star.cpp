@@ -24,18 +24,21 @@
 using namespace std;
 
 int t02_star() {
-    int N;
+     int N;
      cin >> N;
      int a[N][N];
-     for (int i = 1;i < N+1;i++){
-        for (int j = 1;j < N+1;j++){
-            if(j == ((N + 1) / 2)) cout << "*" << " ";
-            if (i == (N + 1) / 2) cout << "*" << " ";
-            else if ((i + j) == (N + 1)) cout << "*" << " ";
-            else if (i == j) cout << "*" << " ";
-            else cout << "." << " ";
+     for (int i = 1;i < N + 1;i++){
+        for (int j = 1;j < N + 1;j++){
+            if(j == ((N + 1) / 2) || i == ((N + 1) / 2))
+                cout << "*" << " ";
+            else if ((i + j) == (N + 1))
+                cout << "*" << " ";
+            else if (i == j)
+                cout << "*" << " ";
+                else
+                    cout << "." << " ";
         }
-         cout << endl;
+        cout << endl;
      }
      return 0;
- }
+}
