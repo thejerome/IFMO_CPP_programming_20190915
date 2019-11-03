@@ -56,6 +56,5 @@ int t06_cinema() {
     }
     if (!not_found) cout << i;
     else cout << 0;
-
     return 0;
 }

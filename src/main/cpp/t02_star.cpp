@@ -44,6 +44,5 @@ int t02_star() {
             cout << star[i][j] << " ";
         }
     }
-
     return 0;
 }
