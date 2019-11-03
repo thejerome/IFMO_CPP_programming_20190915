@@ -80,9 +80,55 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <map>
+#include <string>
+#include <vector>
+#include <set>
 
 using namespace std;
 
 int t06_homework() {
-
+            int n;
+            map < string,vector <int> > dic;
+            cin>>n;
+            for(int i = 1;i <= n;++i){
+                string s;
+                cin>>s;
+                int pos = -1;
+                for(int j = 0;j < s.size();++j){
+                    if(isupper(s[j])){
+                        pos = j;
+                    }
+                }
+                if(pos != -1) {
+                    s[pos] = tolower(s[pos]);
+                    dic[s] . emplace_back(pos);
+                }
+            }
+            int ans = 0;
+            for(string s;cin>>s;){
+                string lw_s = s;
+                int cnt_uppercase = 0;
+                int pos = -1;
+                for(int i = 0;i < s.size();++i){
+                    if(isupper(s[i])){
+                        pos = i;
+                        ++cnt_uppercase;
+                    }
+                    lw_s[i] = tolower(s[i]);
+                }
+                ans += (cnt_uppercase != 1);
+                if(cnt_uppercase == 1){
+                    bool notfound = true;
+                    for(int i = 0;i < dic[lw_s].size();++i){
+                        if(dic[lw_s][i] == pos){
+                            notfound = false;
+                        }
+                    }
+                    if(!dic[lw_s].empty()){
+                        ans += notfound;
+                    }
+                }
+            }
+            cout<<ans;
 }
