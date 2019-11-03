@@ -32,14 +32,23 @@
 //
 //NO
 
+#include "t03_circle.h"
+#include "t02_dist.h"
 #include <iostream>
 #include <cmath>
 
 using namespace std;
 
+double dist(double x1,double y1,double x2,double y2);
+
 //function IsPointInCircle
+	bool IsPointInCircle(double x,double y,double xc,double yc,double r){
+		double d = dist(x,y,xc,yc);
+		return (d <= r);
+	}
 
 int t03_circle() {
-
-    return 0;
+    	double x,y,xc,yc,r;
+    	cin>>x>>y>>xc>>yc>>r;
+    	cout<<(IsPointInCircle(x,y,xc,yc,r) ? "YES" : "NO");
 }

@@ -27,14 +27,23 @@
 //
 //NO
 
+#include "t04_area.h"
+#include "t02_dist.h"
 #include <iostream>
 #include <cmath>
 
 using namespace std;
 
+double dist(double x1,double y1,double x2,double y2);
+
 //function IsPointInArea
+bool IsPointInArea(double x,double y){
+	return (dist(x,y,-1,1) == 2.0 ? ((-3*(x + y) >= 0 and -2*(-2*x + y - 2) >= 0) or ((x + y) >= 0 and 2*(-2*x + y - 2) >= 0)) 
+							     	 : (dist(x,y,-1,1) < 2 ? ((x + y) >= 0 and 2*(-2*x + y - 2) >= 0) : (-3*(x + y) >= 0 and -2*(-2*x + y - 2) >= 0)));
+}
 
 int t04_area() {
-
-    return 0;
+    	double x,y;
+    	cin>>x>>y;
+    	cout<<(IsPointInArea(x,y) ? "YES" : "NO");
 }

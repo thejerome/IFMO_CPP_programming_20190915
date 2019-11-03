@@ -16,14 +16,19 @@
 //
 //1.41421
 
+#include "t02_dist.h"
 #include <iostream>
 #include <cmath>
 
 using namespace std;
 
 //function distance
+	double dist(double x1,double y1,double x2,double y2){
+		return sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+	}
 
 int t02_dist() {
-
-    return 0;
+    	double x1,x2,y1,y2;
+    	cin>>x1>>y1>>x2>>y2;
+    	cout<<dist(x1,y1,x2,y2);
 }
