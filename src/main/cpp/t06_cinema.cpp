@@ -54,7 +54,8 @@ int t06_cinema() {
          break;}
         }
         else {FR = 0;}}
-   FR = 0;
+     if (FR == )
+     {break;}
     }
     cout << G;
 }
