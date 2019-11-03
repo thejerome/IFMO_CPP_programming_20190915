@@ -38,5 +38,5 @@ int t06_different() {
       
     
   }
-  cout << k;
+  cout << k+1;
 }
