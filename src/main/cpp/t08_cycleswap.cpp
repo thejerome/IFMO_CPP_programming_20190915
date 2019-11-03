@@ -19,21 +19,15 @@
 using namespace std;
 
 int t08_cycleswap() {
-	int n, q, x;
-	cin >> n;
-	vector <int> a;
-	for (int i = 0; i < n; i++) {
-		cin >> x;
-	}
-	q = a[n - 1];
-	for (int i = n - 1; i > 0; i--) {
-		x = a[i - 1];
-		a[i - 1] = a[i];
-		a[i] = x;
-	}
-	a[0] = q;
-	for (auto now : a) {
-		cout << now << " ";
-	}
-	return 0;
+int x;
+cin>>x;
+int a[x];
+for(int i=0;i<x;i++){
+    cin>>a[i];
+}
+cout<<a[x-1]<<" ";
+for(int i=0;i<x-1;i++){
+    cout<<a[i]<<" ";
+}
+return 0;
 }
