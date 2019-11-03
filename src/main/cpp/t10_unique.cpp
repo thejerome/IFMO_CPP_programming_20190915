@@ -33,15 +33,15 @@ cin >> P;
 
     for(int L=0;L<P;L++){
         int H , D=0;
-        bool O;
         for (H=0; H<P; H++){
         if (C[L] - C[H] == 0 )
-            {D++;O=false;}
-            else {O = true;}
+            {D++;}
+
         }
-        if (O && D - 1 == 0)
+        if (D - 1 == 0)
         {
             cout << C[L] << " ";
         }
     }
 }
+
