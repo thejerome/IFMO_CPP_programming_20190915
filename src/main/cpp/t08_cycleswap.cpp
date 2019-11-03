@@ -20,6 +20,7 @@ using namespace std;
 
 int t08_cycleswap() {
 	int n;
+
 	cin >> n;
 	int mas[n];
 	for (int i = 0; i < n; i++)
