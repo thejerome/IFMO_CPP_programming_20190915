@@ -29,7 +29,7 @@ using namespace std;
 
 int t05_minodd() {
     int i;
-    int m;
+    int m = 0;
     cin >> i;
     int A [i];
     int B [i];
