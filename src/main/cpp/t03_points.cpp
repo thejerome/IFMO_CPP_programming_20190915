@@ -23,10 +23,28 @@
 
 #include "t03_points.h"
 #include <iostream>
-
+#include <algorithm>
+#include <vector>
 
 using namespace std;
 
+   	const int N = 1e2 + 2;
+        int x[N],y[N];
+        int ord[N];
+
+        bool cmp(int i,int j){
+            return x[i] * x[i] + y[i] * y[i] < x[j] * x[j] + y[j] * y[j];
+        }
+
 int t03_points() {
-    
+        int n;
+        cin>>n;
+        for(int i = 1;i <= n;++i){
+             cin>>x[i]>>y[i];
+             ord[i] = i;
+        }
+        sort(ord + 1,ord + 1 + n,cmp);
+        for(int i = 1;i <= n;++i){
+            cout<<x[ord[i]]<<' '<<y[ord[i]]<<'\n';
+        }
 }

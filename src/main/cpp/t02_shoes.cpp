@@ -28,10 +28,32 @@
 
 #include "t02_shoes.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
 int t02_shoes() {
-    
+            int n,m;
+            vector <int> shoes_size;
+            cin>>m>>n;
+            shoes_size.resize(n + 1,0);
+            for(int i = 0;i < n;++i){
+                cin>>shoes_size[i];
+            }
+            int ans = 0;
+            for(int i = 0;i < n;++i){
+                if(shoes_size[i] >= m){
+                    int tmp = shoes_size[i];
+                    int cnt = 1;
+                    for(int j = i + 1;j < n;++j){
+                        if(shoes_size[j] - tmp >= 3){
+                            tmp = shoes_size[j];
+                            ++cnt;
+                        }
+                    }
+                    ans = max(ans,cnt);
+                }
+            }
+            cout<<ans;
 }

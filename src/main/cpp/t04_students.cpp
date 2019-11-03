@@ -29,10 +29,30 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
+        bool cmp_t04(const pair <int,int> x,const pair <int,int> y){
+            return (x.first > y.first) or (x.first == y.first and x.second < y.second);
+        }
+
 int t04_students() {
-    
+            int n;
+            cin>>n;
+            pair <int,int> score[n + 1];
+            string s[2][n + 1];
+            for(int i = 0;i < n;++i){
+                cin>>s[0][i]>>s[1][i];
+                int x,y,z;
+                cin>>x>>y>>z;
+                score[i].first = x + y + z;
+                score[i].second = i;
+            }
+            sort(score,score + n,cmp_t04);
+            for(int i = 0;i < n;++i){
+                int j = score[i].second;
+                cout<<s[0][j]<<' '<<s[1][j]<<'\n';
+            }
 }
 
