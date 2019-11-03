@@ -34,29 +34,41 @@
 using namespace std;
 
 int t07_ip() {
-
-            string id;
-            cin>>id;
-            int l = -1;
-            id = id + ".";
-            int cnt = 0;
-            while(id.find(".",l + 1) != string::npos){
-                int r = id.find(".",l + 1);
-                if(r - l - 1 > 0){
-                    int val = 0;
-                    for(int j = l + 1;j < r;++j){
-                        val = val * 10 + (id[j] - '0');
-                    }
-                    if(!(0 <= val and val <= 255)){
+            string s;
+            cin>>s;
+            int dot[5];
+            int x = 0;
+            for(int i = 0;i < s.size();++i){
+                if(s[i] == '.'){
+                    if(x == 3){
                         cout<<"NO";
                         exit(0);
                     }
-                } else {
+                    dot[++x] = i;
+                }
+            }
+            dot[0] = -1;
+            dot[4] = s.size();
+            for(int i = 1;i <= 4;++i){
+                int l = dot[i - 1] + 1;
+                int r = dot[i] - 1;
+                if(l > r){
                     cout<<"NO";
                     exit(0);
+                } else {
+                    int f = 0;
+                    for(int j = l;j <= r;++j){
+                        if(s[j] < '0' or s[j] > '9'){
+                            cout<<"NO";
+                            exit(0);
+                        }
+                        f = f*10 + (s[j] - '0');
+                    }
+                    if(!(0 <= f and f <= 255)){
+                        cout<<"NO";
+                        exit(0);
+                    }
                 }
-                l = r;
-                ++cnt;
             }
-            cout<<(cnt == 4 ? "YES" : "NO");
+            cout<<"YES";
 }
