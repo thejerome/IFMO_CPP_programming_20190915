@@ -39,5 +39,24 @@
 using namespace std;
 
 int t11_queen() {
-
+    int N = 16;
+    int p[N];
+    bool f = false;
+    for (int i=0; i<N; i++){
+        cin >>p[i];
+    }
+    for (int i=0, j=1, u=1; i<N and j<N; i=i+2, j=j+2, u++){
+        for (int k=u+1; k<8; k++){
+            if ((p[i] == p[(i+((k-u)*2))] and (p[j] != p[j+((k-u)*2)])) or ((p[i] != p[i+((k-u)*2)]) and (p[j] == p[j+((k-u)*2)])) or ((p[i] ==p[i+((k-u)*2)]) and (p[j]==p[j+((k-u)*2)])) or ((p[i] - p[i+((k-u)*2)]) == (p[j] - p[j+((k-u)*2)])) or ((p[i] - p[i+((k-u)*2)]) == -(p[j] - p[j+((k-u)*2)]))) {
+                f = true;
+            }
+        }
+    }
+    if (!f) {
+        cout <<"NO";
+    }
+    if (f) {
+        cout <<"YES";
+    }
+    return 0;
 }
