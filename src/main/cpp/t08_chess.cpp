@@ -47,14 +47,15 @@ int t08_chess() {
 
     for(int L = 0; L < P; L++){
         for(int H = 0; H < D; H++){
-        if (C[L][H]%10==C[L][H])
+         if (C[L][H]<10)
         {cout << " ";}
-        if (C[L][H]%100==C[L][H])
+        if (C[L][H]<100)
         {cout << "  ";}
-        if (C[L][H]%1000==C[L][H])
+        if (C[L][H]<1000)
         {cout << "  ";}
         cout << C[L][H];
         }
         cout << endl;
+       
     }
 }
