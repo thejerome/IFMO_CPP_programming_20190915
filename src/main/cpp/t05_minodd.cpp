@@ -28,5 +28,26 @@
 using namespace std;
 
 int t05_minodd() {
-
+    int i;
+    int m;
+    cin >> i;
+    int A [i];
+    int B [i];
+    for ( int k = 0 ; k < i ; k++ ){
+        cin >>  A [k];
+    }
+    for ( int k = 0 , h = 0; k < i ; k++ ){
+        if( A [k] % 2 == 1 ){
+            B [h] = A [k];
+            h++;
+        }
+    }
+    m = B [0];
+    for ( int k = 1 , h ; k < h ; k++ ){
+        if( B [k] < m ){
+            m = B [k];
+        }
+    }
+        cout << m << endl;
+        return 0;
 }
