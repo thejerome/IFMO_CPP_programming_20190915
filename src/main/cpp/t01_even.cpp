@@ -19,5 +19,17 @@
 using namespace std;
 
 int t01_even() {
+    int N;
+    cin >> N;
+    int arr[N];
+    if (N > 0) {
+        for (int i = 0; i < N; i++) {
+            cin >> arr[i];
+        }
+        for (int i = 0; i < (N - 1) / 2 + 1; i++) {
+            cout << arr[i * 2] << ' ';
+        }
+    }
+    return 0;
 
-}
+};

@@ -21,5 +21,20 @@
 using namespace std;
 
 int t04_neighbors() {
+    int N;
+    cin >> N;
+    float arr[N];
+    int alpha = 1;
+    int i = 0;
+    while (alpha > 0)
+    {
+        cin >> arr[i];
+        if ((i > 0) && (((arr [i-1] != 0) && (arr[i] / arr[i-1] > 0))  || ((arr[i] == 0) && (arr[i-1] == 0))))
+            alpha = 0;
+        i++;
+    }
+    cout << arr[i-2] << ' ' << arr[i-1];
 
+
+    return 0;
 }
