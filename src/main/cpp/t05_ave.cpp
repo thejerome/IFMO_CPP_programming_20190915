@@ -22,5 +22,17 @@
 using namespace std;
 
 int t05_ave() {
-
+double s = 0.0, x;
+int i = 0;
+cin >> x;
+while(x != 0)
+{
+    i++;
+    s=s+=x;
+    cin >> x;
+}
+cout.precision(11);
+cout << fixed;
+cout << (s / i);
+return 0;
 };
