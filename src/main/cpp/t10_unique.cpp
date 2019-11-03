@@ -31,14 +31,15 @@ int t10_unique() {
     for ( int k = 0 ; k < i ; k++ ){
         cin >>  A [k];
     }
-    for ( int k = 0 , m = 0; k <= i ; k++ , m = 0 ){
-        for( int n = k+1 ; n <= i ; n++ ){
-            if ( A [k] != A [n]){
+    for ( int k = 0 ; k < i ; k++  ){
+        int m = 0;
+        for( int n = 0 ; n < i ; n++ ){
+            if ( A [k] == A [n]){
                 m++;
             }
-            if ( m == 1){
-                cout << A [k] <<" "<< endl;
-            }
+        }
+        if ( m == 1) {
+            cout << A[k] << " " << endl;
         }
     }
     return 0;
