@@ -28,7 +28,7 @@ int t07_snake() {
     for (int i = 1;i <= N;i++){
         for (int j = 1; j <= M; j++){
             if (i % 2 != 0){
-                Q = j = M * (i - 1);
+                Q = j + M * (i - 1);
                 for(int e = j; e <= M; e++){
                     a[i][e] = Q;
                     Q++;
