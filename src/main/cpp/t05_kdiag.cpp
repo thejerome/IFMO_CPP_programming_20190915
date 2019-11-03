@@ -37,7 +37,27 @@
 
 using namespace std;
 
+
+
 int t05_kdiag() {
-    
-    return 0;
+
+    const int N = 12;
+int a[N][N];
+int n,k;
+    	cin>>n;
+    	for(int i = 1;i <= n;++i){
+    		for(int j = 1;j <= n;++j){
+    			cin>>a[i][j];
+    		}
+    	}
+    	cin>>k;
+    	++k;
+    	int i = 1,j = (k < 1 ? 2 - k: k);
+    	if(k > 0){
+    		swap(i,j);
+    	}
+    	while(i <= n and j <= n){
+    		cout<<a[i][j]<<' ';
+    		++i,++j;
+    	}
 }
