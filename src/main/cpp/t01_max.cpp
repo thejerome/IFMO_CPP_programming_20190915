@@ -38,7 +38,13 @@ int t01_max() {
      }
      for (int i = 0; i < n; i++){
         for (int j = 0; j < m; j++){
-            if (a[i][j] > a[q][w]) a[q][w] = a[i][j], q = i, w = j;
+            if (a[i][j] > a[q][w]){
+                a[q][w] = a[i][j];
+                q = i;
+                w = j;
+            }
         }
      }
+     cout << q << " " << w;
+     return 0;
 }
