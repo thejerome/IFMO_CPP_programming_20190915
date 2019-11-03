@@ -29,29 +29,30 @@
 using namespace std;
 
 int t06_cinema() {
-int n,m,k,max,g_max;
+int n,m,k,max,number;
 cin >>n>>m;
 int a[n][m];
 for (int i=0;i <=(n-1);i++) {
     for (int j=0;j <= (m-1);j++) {
         cin >> a[i][j];};};
 cin>> k;
-max=0;
-g_max=0;
+number=n;
 bool flag=true;
-for (int i=0,ch; i<=(n-1);i++){
-    if (flag)
-    for (int j=0;j <= (m-1);j++) {
-        if (a[i][j]==1) {
-            if (max > g_max) g_max=max;
-        max=0;}
-        else max++;
-
-    }
-    if ((flag) and (g_max>=k)) {
-        cout <<i+1;
-        flag=false;}
-}
-if ((g_max==0) or (g_max<k)) cout <<0;
-    return 0;
+for (int i=0; i<=(n-1);i++){
+    max=0;
+    if (flag){
+        for (int j=0; j<=(m-1); j++){
+            if (a[i][j]==0) {
+                max++;
+                if (max >=k){
+                    flag=false;
+                    number=i;
+                }
+            }
+            else max=0;};
+    };
+};
+if (number==n) cout <<0;
+    else cout<< number+1;
+return 0;
 }
