@@ -35,7 +35,7 @@ int t09_spiral() {
     i = 0; j = 0;
     while (k <= m * n) {
         a[i][j] = k;
-        if (a[i-1][j] != 0 and a[i][j+1] == 0 and j + 1 < m)  j++;
+        if ((a[i-1][j] != 0 or i - 1 < 0) and a[i][j+1] == 0 and j + 1 < m)  j++;
         else if (a[i+1][j] == 0 and i + 1 < n)  i++;
         else if (a[i][j-1] == 0 and j - 1 >= 0)  j--;
         else if (a[i-1][j] == 0 and i - 1 >= 0) i--;
@@ -46,6 +46,5 @@ int t09_spiral() {
             cout << setw(4) << a[i][j];
         }
     }
-    
     return 0;
 }
