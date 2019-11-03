@@ -38,6 +38,22 @@
 using namespace std;
 
 int t05_kdiag() {
-    
+    short n = 1;
+    cin >> n;
+    int a[n][n];
+    for (int i=0; i<n; i++) {
+        for (int j=0; j<n; j++) {
+            cin >> a[i][j];
+        }
+    }
+    int k = 0;
+    cin >> k;
+    for (int i=0; i<n; i++) {
+        for (int j=0; j<n; j++) {
+            if (k==(i-j)) {
+                cout << a[i][j] << " ";
+            }
+        }
+    }
     return 0;
 }
