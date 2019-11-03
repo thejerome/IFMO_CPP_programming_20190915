@@ -21,5 +21,20 @@
 using namespace std;
 
 int t04_neighbors() {
+    int N=0, b=0, flag=1;
+    cin >> N;
+    int arr[N];
+    for (int i = 0;i<N; i++) {
+        cin >> arr[i];
+        if (arr[i]<0 && b<0 && flag==1) {
+            flag=0;
+            cout << b << " " << arr[i] << " ";
+        }
+        else if (arr[i]>0 && b>0  && flag==1) {
+            flag=0;
+            cout << b << " " << arr[i] << " ";
+        }
 
+        b=arr[i];
+    }
 }
