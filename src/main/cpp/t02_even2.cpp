@@ -30,5 +30,5 @@ int A[N];
 		if (k % 2 == 0)
 			cout << k << " ";
 	}
-	retutn 0;
+	return 0;
 };
