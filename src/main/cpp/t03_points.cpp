@@ -23,10 +23,21 @@
 
 #include "t03_points.h"
 #include <iostream>
-
-
+#include <vector>
+#include <algorithm>
+#include <cmath>
 using namespace std;
 
 int t03_points() {
-    
+   int n;
+   cin >> n; 
+   vector<vector<int>> s(n, vector<int>(3));
+   for(int i = 0; i < n; i++)
+   {
+       cin >> s[i][0] >> s[i][1];
+       s[i][2] = pow(s[i][0], 2) + pow(s[i][1], 2);
+   }
+   sort(s.begin(), s.end(), [](const vector<int> & left, const vector<int> & right){ return left[2] < right[2];});
+   for(int i = 0; i < n; i++)cout << s[i][0] << " " << s[i][1] << endl;
+   return 0;
 }
