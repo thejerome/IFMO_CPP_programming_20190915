@@ -19,5 +19,16 @@
 using namespace std;
 
 int t03_bigger() {
-
+ int i;
+    cin >> i;
+    int A [i];
+    for ( int k = 0 ; k < i ; k++ ){
+        cin >>  A [k];
+    }
+    for ( int k = 1 ; k < i ; k++ ){
+        if ( A [k] > A [k - 1]){
+            cout << A [k] << endl;
+        }
+    }
+    return 0;
 }
