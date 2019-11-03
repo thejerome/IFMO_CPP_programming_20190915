@@ -22,62 +22,47 @@
 using namespace std;
 
 int t09_spiral() {
-int n,m,s,I,J;
+int n,m,s=1,I=1,J=1;
 cin >>n>>m;
 int a[n][m];
 for (int i=0;i <=(n-1);i++) {
     for (int j=0;j <= (m-1);j++) {
         a[i][j]=0;
         ;};};
-s=1;
 for (int j = 0; j <= (m-1); j++) {
             a[0][j] = s;
-            s++;
-    }
+            s++;}
 for (int i = 1; i <= (n-1); i++) {
             a[i][m-1] = s;
-            s++;
-    }
+            s++;}
 for (int j = (m-2); j >= 0; j=j-1) {
             a[n-1][j] = s;
-            s++;
-
-}
+            s++;}
 for (int  i= (n-2); i >= 1; i=i-1) {
             a[i][0] = s;
-            s++;
-}
-I=1;
-J=1;
+            s++;}
 while (s<n*m){
     while (a[I][J+1]==0){
         a[I][J]=s;
         s++;
-        J++;
-    }
+        J++;}
     while (a[I+1][J]==0){
         a[I][J]=s;
         s++;
-        I++;
-    }
+        I++;}
     while (a[I][J-1]==0){
         a[I][J]=s;
         s++;
-        J=J-1;
-    }
+        J=J-1;}
     while (a[I-1][J]==0){
         a[I][J]=s;
         s++;
-        I=I-1;
-    }
-}
+        I=I-1;};}
 if (s<=n*m) a[I][J]=n*m;
 for (int i=0;i <=(n-1);i++) {
     for (int j=0;j <= (m-1);j++) {
         if (a[i][j] <10) cout <<"   "<<a[i][j];
             else if (a[i][j] <100) cout <<"  "<<a[i][j];
-                else cout <<" "<<a[i][j];
-    }
+                else cout <<" "<<a[i][j];}
     cout << endl;}
-    return 0;
-}
+    return 0;}
