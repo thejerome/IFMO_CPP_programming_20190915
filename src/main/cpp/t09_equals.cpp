@@ -75,4 +75,5 @@ int t09_equals() {
       nul--;
   }
   cout << k;
+
 }
