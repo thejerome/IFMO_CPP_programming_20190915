@@ -22,19 +22,56 @@
 using namespace std;
 
 int t09_spiral() {
-int n,m;
+int n,m,s,i,j;
 cin >>n>>m;
 int a[n][m];
 for (int i=0;i <=(n-1);i++) {
     for (int j=0;j <= (m-1);j++) {
-        a[i][j]=1;
+        a[i][j]=0;
         ;};};
+s=1;
+for (int j = 0; j <= (m-1); j++) {
+            a[0][j] = s;
+            s++;
+    }
+for (int i = 1; i <= (n-1); i++) {
+            a[i][m-1] = s;
+            s++;
+    }
+for (int j = (m-2); j >= 0; j=j-1) {
+            a[n-1][j] = s;
+            s++;
 
-for (int i=0;i <=n/2;i++) {
-    for (int j=i;j <= (m-i-1);j++) {
-        a[i][j]=2*i*(m+n)-1-8*(i-1)+j-i-6;
-        ;};};
-a[0][0]=1;
+}
+for (int  i= (n-2); i >= 1; i=i-1) {
+            a[i][0] = s;
+            s++;
+}
+i=1;
+j=1;
+while (s<n*m){
+    while (a[i][j+1]==0){
+        a[i][j]=s;
+        s++;
+        j++;
+    }
+    while (a[i+1][j]==0){
+        a[i][j]=s;
+        s++;
+        i++;
+    }
+    while (a[i][j-1]==0){
+        a[i][j]=s;
+        s++;
+        j=j-1;
+    }
+    while (a[i-1][j]==0){
+        a[i][j]=s;
+        s++;
+        i=i-1;
+    }
+}
+a[i][j]=n*m;
 for (int i=0;i <=(n-1);i++) {
     for (int j=0;j <= (m-1);j++) {
         if (a[i][j] <10) cout <<"   "<<a[i][j];
