@@ -41,4 +41,6 @@ int t05_minodd() {
       s = a[i];
   }
   cout << s;
+
+
 }
