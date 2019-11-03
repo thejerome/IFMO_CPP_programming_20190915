@@ -25,5 +25,28 @@
 using namespace std;
 
 int t10_unique() {
+	 int n, cou = 0;
+    cin >> n;
+    int arr[n];
 
+    for(int i = 0; i < n; i++)
+        cin >> arr[i];
+
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++)
+            if(arr[i] == arr[j])
+                cou++;
+
+        if(cou == 1)
+            cout << arr[i] << " ";
+
+        cou = 0;
+    }
+
+//    cout << cou;
+
+//    for(int i = 0; i < n; i++)
+//        cout << arr[i] << " ";
+
+    return 0;
 }
