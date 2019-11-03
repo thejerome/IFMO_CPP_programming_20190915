@@ -27,16 +27,12 @@ int t09_spiral() {
     int C[100][100];
 
       for(int L = 0; L <= P +1 ; L++){
-        for(int H = 0; H <= D +1; H++){
-        C[L][H] = 3;}
-    }
+        for(int H = 0; H <= D +1; H++){ C[L][H] = 3;}
+      }
      for(int L = 1; L <= P; L++){
-        for(int H = 1; H <= D; H++){
-            C[L][H]=-3;}
+        for(int H = 1; H <= D; H++){C[L][H]=-3;}
     }
-    int V = 0;
-    int R = 1;
-    int U=0;
+    int V = 0,R = 1,U=0;
     while (V < P * D){
        while(C[R][U+1]==-3)
        { U++;V++;C[R][U] = V;}
