@@ -35,9 +35,9 @@ for (i;i <= (count-1);i++) {
 };
 c=0;
 for (int i=0;i <= (count-1);i++) {
-    for (int j=1;j <= (count-1);j++) {
+    for (int j=i+1;j <= (count-1);j++) {
         if (a[i]==a[j])
             c=c+1;};
      };
-cout <<c/2;
+cout <<c;
 }
