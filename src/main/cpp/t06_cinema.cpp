@@ -34,17 +34,17 @@ int t06_cinema() {
     int w = 0;
     cin >> N >> M;
     int a[20][20];
-    for (int i = 1; i <= N; i++){
-        for (int j = 1; j <= M; j++){
+    for (int i = 1; i <= N; i++)
+        for (int j = 1; j <= M; j++)
         cin >> a[i][j];
-        }
-    }
     cin >> K;
     for (int i = 1; i <= N; i++){
         for (int j = 1; j <= M; j++){
             if (a[i][j] == 0) q++;
             else {
-                if (q > w) w = q, q = 0;
+                if (q > w)
+                    w = q;
+                q = 0;
             }
         }
         if (q > w){
