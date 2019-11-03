@@ -40,8 +40,8 @@ number=n;
 bool flag=true;
 for (int i=0; i<=(n-1);i++){
     if (flag){
-        for (int j=0; j<=(m-1); j++){
         int max=0;
+        for (int j=0; j<=(m-1); j++){
             if (a[i][j]==0) {
                 max++;
                 if (max >=k){

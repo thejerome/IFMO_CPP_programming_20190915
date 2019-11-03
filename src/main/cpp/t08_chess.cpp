@@ -34,7 +34,8 @@ for (int i=0;i <=(n-1);i++) {
         if (a[i][j] <10) cout <<"   "<<a[i][j];
             else if (a[i][j] <100) cout <<"  "<<a[i][j];
                 else cout <<" "<<a[i][j];
-};cout << endl;};
+};
+cout << endl;
+};
     return 0;
-
 }
