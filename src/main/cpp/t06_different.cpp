@@ -25,10 +25,8 @@ int t06_different() {
     for (int i = 0; i < num; i++) {
         cin >> arr[i];
     }
-    for (int i = 0; i < num; i++) {
-        prev = arr[i];
-        next = arr[i+1];
-        if ( prev != next ){
+    for (int i = 0; i < num-1; i++) {
+        if ( arr[i] != arr[i+1] ){
             count++;
         }
     }
