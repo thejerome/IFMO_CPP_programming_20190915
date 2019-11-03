@@ -19,6 +19,7 @@
 using namespace std;
 
 int t02_even2() {
+	int N;
 int A[N];
 	int i;
 	int k;
