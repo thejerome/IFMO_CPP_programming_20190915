@@ -19,16 +19,14 @@
 using namespace std;
 
 int t06_different() {
-	int n, a = 1;
-	cin >> n;
-	vector <int> a;
-	for (int i = 0; i < n; i++) {
-		int temp;
-		cin >> temp;
-	}
-	for (int i = 1; i < n; i++) {
-		if (a[i - 1] != a[i]) a++;
-	}
-	cout << a;
-	return 0;
+int x,y=0;
+cin>>x;
+int a[x];
+for(int i=0;i<x;i++){
+    cin>>a[i];
+    if(a[i-1]!=c[i])
+        y++;
+}
+cout<<y;
+return 0;
 }
