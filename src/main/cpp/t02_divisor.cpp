@@ -19,5 +19,14 @@
 using namespace std;
 
 int t02_divisor() {
-
+int i=2, a;
+cin >> a;
+while (i <= a) {
+if (a%i ==0){
+cout << i;
+break;
+}
+i++;
+}
+return 0;
 };
