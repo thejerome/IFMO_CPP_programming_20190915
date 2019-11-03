@@ -26,16 +26,16 @@ int t06_different() {
   //int y = 0;
   for(int i = 0; i < n; i++)
     cin >> a[i];
-  for(int i = 0; i < n-1; i++){
+  for(int i = 0; i < n; i++){
     k++;
     //y = 0;
-    while(a[i] == a[i+1] && i+1 < n){
+    while(i+1 < n && a[i] == a[i+1]){
         i++;
         //y++;
     }
     //if(y != 0)
-        //i--;
-      
+        //k++;
+    //cout << k << '*' << endl;  
     
   }
   cout << k;
