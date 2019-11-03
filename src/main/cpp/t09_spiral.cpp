@@ -22,42 +22,42 @@
 using namespace std;
 
 int t09_spiral() {
-    int n=0,m=0;
+ int n=0,m=0;
     cin >> n >> m;
-    int mas[n][m];
+    int a[n][m];
     int k = 1;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            mas[i][j] = 0;
+            a[i][j] = 0;
         }
     }
-    mas[0][0]=1;
     int i = 0;
     int j = 0;
-    while ((mas[i][j + 1] == 0 and j < m - 1) or (mas[i + 1][j] == 0 and i < n - 1) or (mas[i][j - 1] == 0 and j > 0) or (mas[i - 1][j] == 0 and i > 0)) {
-        while (mas[i][j + 1] == 0 and j < (m - 1)) {
-            mas[i][j+1] = k++;
+    a[0][0] = k++;
+    while ((a[i][j + 1] == 0 and j < m - 1) or (a[i + 1][j] == 0 and i < n - 1) or (a[i][j - 1] == 0 and j > 0) or (a[i - 1][j] == 0 and i > 0)) {
+        while (a[i][j + 1] == 0 and j < (m - 1)) {
+            a[i][j + 1] = k++;
             j++;
         }
-        while (mas[i + 1][j] == 0 and i < (n - 1)) {
-            mas[i + 1][j] = k++;
+        while (a[i + 1][j] == 0 and i < (n - 1)) {
+            a[i + 1][j] = k++;
             i++;
         }
-        while (mas[i][j - 1] == 0 and j > 0) {
-            mas[i][j - 1] = k++;
+        while (a[i][j - 1] == 0 and j > 0) {
+            a[i][j - 1] = k++;
             j--;
         }
-        while (mas[i - 1][j] == 0 and i > 0) {
-            mas[i - 1][j] = k++;
+        while (a[i - 1][j] == 0 and i > 0) {
+            a[i - 1][j] = k++;
             i--;
         }
     }
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            if (mas[i][j] % 10 == mas[i][j]) cout << "   ";
-            else if (mas[i][j] % 100 == mas[i][j]) cout << "  ";
-            else if (mas[i][j] % 1000 == mas[i][j]) cout << " ";
-            cout << mas[i][j];
+            if (a[i][j] % 10 == a[i][j]) cout << "   ";
+            else if (a[i][j] % 100 == a[i][j]) cout << "  ";
+            else if (a[i][j] % 1000 == a[i][j]) cout << " ";
+            cout << a[i][j];
         }
         cout << endl;
     }
