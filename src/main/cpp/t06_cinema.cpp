@@ -46,8 +46,9 @@ for (int i=0,ch; i<=(n-1);i++){
             if (max > g_max) g_max=max;
         max=0;}
         else max++;
+
     }
-    if (g_max>=k) {
+    if ((flag) and (g_max>=k)) {
         cout <<i+1;
         flag=false;}
 }
