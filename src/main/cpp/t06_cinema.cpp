@@ -38,9 +38,9 @@ int t06_cinema() {
             cin >> a[i][j];
         }
     }
-    i = 0;
+    i = 0; j = 0;
     cin >> k;
-    while (i < n and not_found) {                          // i = 0;
+    while (i < n and not_found) {
         while (j < m and not_found) {
             int count;
             count = 0;

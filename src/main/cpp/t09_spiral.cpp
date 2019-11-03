@@ -11,9 +11,9 @@
 //Sample Output:
 //
 //   1   2   3   4   5
-//  14  15  16  17   6 //
+//  14  15  16  17   6
 //  13  20  19  18   7
-//  12  11  10   9   8 //
+//  12  11  10   9   8
 
 #include "t09_spiral.h"
 #include <iostream>
@@ -35,16 +35,17 @@ int t09_spiral() {
     i = 0; j = 0;
     while (k <= m * n) {
         a[i][j] = k;
-        if (a[i][j+1] == 0 and j + 1 < m)  j++;
+        if (a[i-1][j] != 0 and a[i][j+1] == 0 and j + 1 < m)  j++;
         else if (a[i+1][j] == 0 and i + 1 < n)  i++;
         else if (a[i][j-1] == 0 and j - 1 >= 0)  j--;
-        else i--;
+        else if (a[i-1][j] == 0 and i - 1 >= 0) i--;
         k++;
     }
     for (i = 0; i < n; i++) {
         for (j = 0; j < m; j++) {
             cout << setw(4) << a[i][j];
         }
+        cout << endl;
     }
     return 0;
 }
