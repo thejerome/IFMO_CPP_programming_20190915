@@ -26,34 +26,18 @@
 using namespace std;
 
 int t09_equals() {
-	int n, x, sum = 0;
-	cin >> n;
-	vector <int> a;
-	vector <int> counts;
-	vector <int> val;
-	for (int i = 0; i < n; i++) {
-		cin >> x;
-	}
-	val.push_back(a[0]);
-	counts.push_back(1);
-	for (int i = 1; i < n; i++) {
-		bool added = false;
-		for (int j = 0; j < val.size(); j++) {
-			if (val[j] == a[i]) {
-				counts[j]++;
-				added = true;
-			}
-		}
-		if (not added) {
-			val.push_back(a[i]);
-			counts.push_back(1);
-		}
-	}
-	for (auto now : counts) {
-		if (now > 1) {
-			sum = sum + (now * now - 3 * now) / 2 + now;
-		}
-	}
-	cout << sum;
-	return 0;
+int x,y=0;
+cin>>x;
+int a[x];
+for(int i=0;i<x;i++){
+    cin>>a[i];
 }
+for(int i=0;i<x-1;i++){
+for(int j=i+1;j<x;j++){
+if(a[i]==a[j])
+ y++;
+}
+}
+return 0;
+}
+
