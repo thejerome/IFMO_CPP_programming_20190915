@@ -31,14 +31,9 @@ for (int i=0;i <=(n-1);i++) {
     for (int j=0;j <= (m-1);j++) {
         if ((i+j)%2!=0) a[i][j]=0;
             else a[i][j]=(i*m+j)/2+1;
-    };};
-
-for (int i=0;i <=(n-1);i++) {
-    for (int j=0;j <= (m-1);j++) {
         if (a[i][j] <10) cout <<"   "<<a[i][j];
             else if (a[i][j] <100) cout <<"  "<<a[i][j];
                 else cout <<" "<<a[i][j];
-    }
-    cout << endl;}
+};cout << endl;};
     return 0;
 }
