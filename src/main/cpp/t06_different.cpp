@@ -19,7 +19,7 @@
 using namespace std;
 
 int t06_different() {
-  nt n;
+  int n;
   cin >> n;
   int a[n];
   int k = 0;
