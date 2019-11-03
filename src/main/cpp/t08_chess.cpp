@@ -30,7 +30,7 @@ int t08_chess() {
   for(int i=0;i<n;i++)
   for(int j=0;j<m;j++)a[i][j]=0;
   for(int i=0;i<n;i++)
-  for(int j=0;j<m;j++) {if(k%2==0){a[i][j]=br;br++;}k++;}
+  for(int j=0;j<m;j++) if((i+j)%2==0){a[i][j]=br;br++;}
   for(int i=0;i<n;i++){
     for(int j=0;j<m;j++){
       if(j==0)cout<<a[i][j];
