@@ -23,56 +23,23 @@ using namespace std;
 
 int t09_spiral() {
 		int a = 0, b = 0, ac = 0, bc = 0, ab = 1, bb = 0, z[21][21], count = 1, summary = 0;
-	cin >> a >> b;
-	summary = a * b;
-	int i = 0, j = 0;
-	ac = a;
-	bc = b;
+	cin >> a >> b;summary = a * b;int i = 0, j = 0;ac = a;bc = b;
 	while (1)
-	{
-		if (count == summary + 1)
-			break;
+	{if (count == summary + 1)break;
 		while (j < b)
-		{
-			z[i][j] = count;
-			j++;
-			count++;
-		}
-		j--;
-		b--;
+		{z[i][j] = count;j++;count++;}j--;b--;
 		if (count == summary + 1)
 			break;
 		while (i < a)
-		{
-			i++;
-			if (i >= a)
-			{
-				i--;
-				break;
-			}
-			z[i][j] = count;
-			count++;
-		}
+		{i++;if (i >= a){i--;break;}z[i][j] = count;count++;}
 		a--;
-		//if(ac%2==1 && ac-1==a)
-		//	a--;
 		if (count == summary + 1)
 			break;
 		while (j > bb)
-		{
-			j--;
-			z[i][j] = count;
-			count++;
-		}
-		bb++;
-		if (count == summary + 1)
-			break;
+		{j--;z[i][j] = count;count++;}bb++;
+		if (count == summary + 1)break;
 		while (i > ab)
-		{
-			i--;
-			z[i][j] = count;
-			count++;
-		}
+		{i--;z[i][j] = count;count++;}
 		ab++;
 		j++;
 		if (count == summary + 1)
