@@ -53,7 +53,7 @@ while (s<n*m){
     while (a[I][J+1]==0){
         a[I][J]=s;
         s++;
-        j++;
+        J++;
     }
     while (a[I+1][J]==0){
         a[I][J]=s;
