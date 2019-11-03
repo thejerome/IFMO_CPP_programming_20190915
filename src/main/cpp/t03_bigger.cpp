@@ -19,5 +19,15 @@
 using namespace std;
 
 int t03_bigger() {
-
+            int n;
+            cin>>n;
+            int pre = 1000000000;
+            for(int i = 0;i < n;++i){
+                int x;
+                cin>>x;
+                if(x > pre){
+                    cout<<x<<' ';
+                }
+                pre = x;
+            }
 }

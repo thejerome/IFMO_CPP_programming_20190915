@@ -28,5 +28,17 @@
 using namespace std;
 
 int t05_minodd() {
-
+            int n;
+            cin>>n;
+            int a[n];
+            for(int i = 0;i < n;++i){
+                cin>>a[i];
+            }
+            int min_odd = 1000000000;
+            for(int i = 0;i < n;++i){
+                if(a[i] & 1){
+                    min_odd = min(min_odd,a[i]);
+                }
+            }
+            cout<<(min_odd == 1000000000 ? 0 : min_odd);
 }
