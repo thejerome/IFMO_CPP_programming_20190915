@@ -38,7 +38,9 @@ for (int i=0;i <=(n-1);i++) {
 cin>> k;
 max=0;
 g_max=0;
+bool flag=true;
 for (int i=0,ch; i<=(n-1);i++){
+    if (flag)
     for (int j=0;j <= (m-1);j++) {
         if (a[i][j]==1) {
             if (max > g_max) g_max=max;
@@ -47,7 +49,8 @@ for (int i=0,ch; i<=(n-1);i++){
     }
     if (g_max>=k) {
         cout <<i+1;
-        break;}
+        flag=false;}
 }
+if (g_max==0) cout <<0;
     return 0;
 }
