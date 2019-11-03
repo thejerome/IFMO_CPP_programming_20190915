@@ -21,17 +21,19 @@
 using namespace std;
 
 int t04_neighbors() {
-int A[N];
-	int i;
-	int k;
-	cin >> N;
-	cin >> k;
-	for (int i = 0; i < N; i++) {
-		A[i] = k;
-	       if if (A[i] > 0 && A[i - 1] > 0 || A[i] < 0 && A[i - 1] < 0) {
-			cout << A[i - 1] << " " << A[i];
-			break;
+	int n;
+	cin >> n;
+	vector <int> a;
+	for (int i = 0; i < n; i++) {
+		int x;
+		cin >> x;
+		a.push_back(x);
 	}
-	retutn 0;
-};
-
+	for (int i = 1; i < n; i++) {
+		if (a[i] > 0 && a[i - 1] > 0 || a[i] < 0 && a[i - 1] < 0) {
+			cout << a[i - 1] << " " << a[i];
+			break;
+		}
+	}
+	return 0;
+}
