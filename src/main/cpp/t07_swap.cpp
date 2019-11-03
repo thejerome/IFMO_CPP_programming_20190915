@@ -19,14 +19,13 @@
 using namespace std;
 
 int t07_swap() {
-int count,i,m;
-i=0;
-m=0;
+int count;
 cin >> count;
 int a[count];
-for (i;i <= (count-1);i++) {
+for (int i=0;i <= (count-1);i++) {
     cin >> a[i];
 };
+int m=0;
 for (int i=0;i <= (count-1);i=i+2) {
      if (i!=count-1){
         m=a[i];

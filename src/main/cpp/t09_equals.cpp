@@ -26,11 +26,10 @@
 using namespace std;
 
 int t09_equals() {
-int count,i,c,j;
-i=0;
+int count,c,j;
 cin >> count;
 int a[count];
-for (i;i <= (count-1);i++) {
+for (int i=0;i <= (count-1);i++) {
     cin >> a[i];
 };
 c=0;

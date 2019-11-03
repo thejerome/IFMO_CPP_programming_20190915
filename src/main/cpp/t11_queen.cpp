@@ -39,10 +39,7 @@
 using namespace std;
 
 int t11_queen() {
-int count,i,j;
-bool flag;
-flag=false;
-i=0;
+bool flag=false;
 int a[8][2];
 for (int i=0;i <=7;i++) {
     for (int j=0;j <= 1;j++) {
@@ -51,7 +48,6 @@ for (int i=0;i <=7;i++) {
     for (int j=i+1;j <=7;j++) {
         if ((a[i][0]==a[j][0]) or (a[i][1]==a[j][1]) or ((a[i][0]-a[j][0])==(a[i][1]-a[j][1])) or ((a[i][0]-a[j][0])==(a[j][1]-a[i][1])))
             flag=true;
-//cout << a[i][0] <<" " <<a[i][1] << " " << a[j][0] <<" " <<a[j][1] << " " << endl;
     };};
 if (flag)
     cout << "YES";

@@ -21,11 +21,10 @@
 using namespace std;
 
 int t04_neighbors() {
-int count,i;
-i=0;
+int count;
 cin >> count;
 int a[count];
-for (i;i <= (count-1);i++) {
+for (int i=0;i <= (count-1);i++) {
     cin >> a[i];
 };
 for (int i=0;i <= (count-1);i++) {

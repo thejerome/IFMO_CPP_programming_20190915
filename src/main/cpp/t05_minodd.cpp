@@ -28,14 +28,13 @@
 using namespace std;
 
 int t05_minodd() {
-int count,i,m;
+int count,m;
 bool flag;
-i=0;
 m=0;
 flag=false;
 cin >> count;
 int a[count];
-for (i;i <= (count-1);i++) {
+for (int i=0;i <= (count-1);i++) {
     cin >> a[i];
 };
 for (int i=0;i <= (count-1);i++) {
