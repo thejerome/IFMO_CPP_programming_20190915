@@ -36,4 +36,5 @@ A/=2;
 if (!B) {cout<<"YES";}
 else {cout<<"NO";}
 return 0;
+    
 };
