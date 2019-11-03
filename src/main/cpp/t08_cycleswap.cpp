@@ -30,6 +30,6 @@ for (int i=0;i <= (count-1);i++) {
 for (int i=1;i <= (count-1);i++) {
      a[i]=b[i];}
 a[0]=b[count];
-for (i=0;i <= (count-1);i++) {
+for (int i=0;i <= (count-1);i++) {
     cout << a[i]<< " ";
 };}

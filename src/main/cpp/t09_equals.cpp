@@ -26,7 +26,7 @@
 using namespace std;
 
 int t09_equals() {
-int count,c,j;
+int count,c;
 cin >> count;
 int a[count];
 for (int i=0;i <= (count-1);i++) {
