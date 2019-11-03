@@ -71,7 +71,7 @@ while (s<n*m){
         i=i-1;
     }
 }
-if (s<n*m) a[i][j]=n*m;
+if (s<=n*m) a[i][j]=n*m;
 for (int i=0;i <=(n-1);i++) {
     for (int j=0;j <= (m-1);j++) {
         if (a[i][j] <10) cout <<"   "<<a[i][j];
