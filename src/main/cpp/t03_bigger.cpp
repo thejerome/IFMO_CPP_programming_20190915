@@ -19,6 +19,7 @@
 using namespace std;
 
 int t03_bigger() {
+	int N;
 	int A[N];
 	int i;
 	int k;
@@ -29,5 +30,5 @@ int t03_bigger() {
 		if (A[i]>A[i-1])
 			cout << k << " ";
 	}
-	retutn 0;
+	return 0;
 };
