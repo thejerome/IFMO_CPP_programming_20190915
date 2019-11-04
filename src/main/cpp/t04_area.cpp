@@ -35,12 +35,12 @@ using namespace std;
 //function IsPointInArea
 bool IsPointInArea(float W, float R)
 {
-float CIC = ((abs(R + 1)*(R+1))+ (abs(R + 1)*(R+1))  <= 4);
+  float CIC = ((abs(W + 1)*(R+1))+ (abs(R - 1)*(R-1))  <= 4);
    float LA = (W + R >= 0);
    float LB = (R*0.5-W >= 1);
    float LB1 = (R*0.5-W <= 1);
    float LA1 = (W + R <= 0);
-   float CCIC = ((abs(R + 1)*(R+1))+ (abs(R + 1)*(R+1))  == 4);
+   float CCIC = ((abs(W + 1)*(R+1))+ (abs(R - 1)*(R-1))  == 4);
    return CIC && LA && LB || (CCIC || not CIC) && LB1 && LA1;
 
 }
