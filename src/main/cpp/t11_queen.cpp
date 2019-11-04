@@ -35,7 +35,8 @@
 #include <iostream>
 #include <cmath>
 #include <vector>
-
+#include <iomanip>
+#include <cstdlib>
 
 using namespace std;
 
