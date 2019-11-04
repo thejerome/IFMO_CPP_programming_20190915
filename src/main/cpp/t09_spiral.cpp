@@ -63,6 +63,5 @@ int t09_spiral() {
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < m; j++) { cout << setw(4) << a[i][j] << " "; }
-		cout << endl;
 	}
 }
