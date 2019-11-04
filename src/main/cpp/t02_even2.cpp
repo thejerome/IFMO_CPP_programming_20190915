@@ -19,5 +19,13 @@
 using namespace std;
 
 int t02_even2() {
-
-}
+    int n = 0;
+    cin >> n;
+    int arr[n];
+    for (int i=0; i<n; i++) {
+        cin >> arr[i];
+    }
+    for (i=0; i<n; i++) {
+        if (a[i] % 2 = 0) cout << arr[i]; }
+    return 0;
+    }
