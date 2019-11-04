@@ -37,8 +37,6 @@ for(int L = 0;L<P;++L)
 
         cin >> C[L];
     }
-
-
 }
 
 for(int L = 0;L<P;L++)
