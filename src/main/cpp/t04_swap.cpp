@@ -23,7 +23,7 @@
 
 
 using namespace std;
-
+int t04_swap(){
 int a[101][101], m, n, l, k;
 cin >> n >> m;
 for(int i = 0; i < n; i++)
