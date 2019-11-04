@@ -20,7 +20,7 @@ using namespace std;
 
 int t06_different() {
     int n,b=1;
-    int a[n];
+    int a[100];
     cin>>n;
     for(int i=0;i<n;i++) {
         cin>>a[i];
