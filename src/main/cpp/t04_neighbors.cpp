@@ -16,26 +16,23 @@
 
 #include "t04_neighbors.h"
 #include <iostream>
-
+#include <vector>
 
 using namespace std;
 
 int t04_neighbors() {
-	int n, i;
+		int n;
 	cin >> n;
-	int a[n];
-	for (i = 0; i < n; i++)
-	{
-		cin >> a[i];
+	vector <int> a;
+	for (int i = 0; i < n; i++) {
+		int temp;
+		cin >> temp;
+		a.push_back(temp);
 	}
-	for (i = 1; i < n; i++) {
-		if ((a[i] > 0 && a[i - 1] > 0) || (a[i] < 0 && a[i - 1] < 0)) {
-			if (a[i] > a[i - 1]) {
-				cout << a[i - 1] << " " << a[i];
-				break;
-			}
-			else
-				cout << a[i] << " " << a[i - 1];
+	for (int i = 1; i < n; i++) {
+		if (a[i] > 0 && a[i - 1] > 0 || a[i] < 0 && a[i - 1] < 0) {
+			cout << a[i - 1] << " " << a[i];
+			break;
 		}
 	}
 	return 0;
