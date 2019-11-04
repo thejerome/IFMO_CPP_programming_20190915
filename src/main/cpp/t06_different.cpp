@@ -19,5 +19,18 @@
 using namespace std;
 
 int t06_different() {
-
+    int n, k = 0, a[10];
+    cin >> n;
+    for(int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+        if(i == 0){
+            k++;
+        }
+        else if(a[i] != a[i - 1]){
+            k++;
+        }
+    }
+    cout << k;
+    return 0;
 }

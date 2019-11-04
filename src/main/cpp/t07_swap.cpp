@@ -19,5 +19,17 @@
 using namespace std;
 
 int t07_swap() {
-
+    int a[20], n;
+    cin >> n;
+    for(int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+        if(i % 2 >= 1)
+        {
+            cout << a[i] << " " << a[i - 1] << " ";
+        }
+    }
+    if(n % 2 >= 1)cout << a[n - 1];
+    return 0;
 }
+

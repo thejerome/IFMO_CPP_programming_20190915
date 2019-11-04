@@ -23,10 +23,23 @@
 #include "t05_minodd.h"
 #include <iostream>
 #include <cmath>
+#include <vector>
 
 
 using namespace std;
-
 int t05_minodd() {
-
+    int z = 1e6, a[10], n;
+    cin >> n;
+    for(int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+        if((a[i] % 2 == 1 || a[i] % 2 == -1) && a[i] < z){
+            z = a[i];
+        }
+    }
+    if(z != 1e6){
+        cout << z;
+    }
+    else cout << 0;
+    return 0;
 }
