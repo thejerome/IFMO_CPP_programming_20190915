@@ -30,15 +30,15 @@ int t01_max() {
     int n, m;
     cin >> n >> m;
     int a[100][100];
-    int i = 0, j = 0, maxI = 0, maxJ = 0;
-    for (i = 0; i < n; i++) {
-        for (j = 0; j < m; j++) {
+    int maxI = 0, maxJ = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
             cin >> a[i][j];
         }
     }
     int max = a[0][0];
-    for (i = 0; i < n; i++) {
-        for (j = 0; j < m; j++) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
             if (a[i][j] > max) {
                 max = a[i][j];
                 maxI = i;
