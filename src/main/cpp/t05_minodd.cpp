@@ -27,8 +27,7 @@
 
 
 using namespace std;
-
-int t05_minodd() {
+int t05_minodd(){
     int n;
     cin >> n;
     vector <int> v;
