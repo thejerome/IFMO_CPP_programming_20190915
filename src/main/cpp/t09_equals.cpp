@@ -38,5 +38,5 @@ int t09_equals() {
         c--;
     }
     cout << c / 2;
-    delete[] a;6
+    delete[] a;
 }
