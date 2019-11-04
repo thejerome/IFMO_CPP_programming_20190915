@@ -25,6 +25,30 @@
 using namespace std;
 
 int t04_swap() {
-    
+	int n, m, j1, j2;
+	cin >> n >> m;
+	int a[n][m];
+	for (int i = 0 ; i < n ; i++)
+	{
+		for (int j = 0 ; j < m ; j++)
+		{
+			cin >> a[i][j];
+		}
+	}
+	cin >> j1 >> j2;
+	for (int i = 0 ; i < n ; i++)
+	{
+		int k  = a[i][j1];
+		a[i][j1] = a[i][j2];
+		a[i][j2] = k;
+	}
+	for (int i = 0 ; i < n ; i++)
+	{
+		for (int j = 0 ; j < m ; j++)
+		{
+			cout << a[i][j] << " ";
+		}
+		cout << endl;
+	}
     return 0;
 }
