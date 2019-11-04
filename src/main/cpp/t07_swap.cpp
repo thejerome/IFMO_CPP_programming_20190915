@@ -23,18 +23,19 @@ int x;
 cin>>x;
 int a[x];
 for(int i=0;i<x;i++){
-    if(i%2==0 && i+1,x)
-        {cin>>a[i+1];
+if(i%2==0 && i+1 <x)
+{cin>>a[i+1];
 }
 else if(i%2!=0){
-    cin>>a[i-1];
+cin>>a[i-1];
 }
 else{
 cin>>a[i];
 }
 }
 for(int i=0;i<x;i++){
-    cout<< a[i]<< " ";
+cout<<a[i]<< " ";
 }
 return 0;
 }
+
