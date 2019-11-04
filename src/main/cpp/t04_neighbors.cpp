@@ -31,6 +31,6 @@ for(int L = 0;L<P;L++)
     {
         cout << C[L-1] << " " << C[L];
         break;
-    }
+ }
 }
 }
