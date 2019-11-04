@@ -17,7 +17,7 @@
 #include <iostream>
 #include <cmath>
 
-using namespace std;
+using namespace std; 
 
 int t01_frac() {
 	double a; 
