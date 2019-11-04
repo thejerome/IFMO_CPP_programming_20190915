@@ -35,6 +35,11 @@ int t04_swap() {
     }
     int i,j,temp;
     cin>>i>>j;
+    if(i>j){
+        x=i;
+        i=j;
+        j=x;
+    }
     for(int h=0;h<n;h++){
         for(int k=0;k<m;k++){
             if(k==i){
