@@ -26,5 +26,22 @@
 using namespace std;
 
 int t09_equals() {
+    int n,i,j,sum;
+    cin >> n;
+    int a[1000];
+    sum = 0;
+
+    for (i = 0; i < n; i++)
+        cin >> a[i];
+
+    for (i = 0; i < n; i++) {
+        for (j = i+1; j < n; j++) {
+            if (a[i] == a[j])
+                sum++;
+        }
+    }
+    cout << sum;
+
+    return (0);
 
 }

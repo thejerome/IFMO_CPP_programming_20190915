@@ -19,5 +19,27 @@
 using namespace std;
 
 int t07_swap() {
+    int n,i,k,middle;
+    cin >> n;
+    int a[1000];
+    k = n-n%2;
+    for (i = 0; i < k; i = i+2) {
+        cin >> a[i] >> a[i+1];
+        middle = a[i];
+        a[i] = a[i+1];
+        a[i+1] = middle;
+    }
+    if (n%2 != 0) {
+        cin >> a[i];
+        middle = a[i];
+    }
+    i = 0;
+    while (i < k){
+        cout << a[i] << ' ';
+        i++;
+    }
+    if (n%2 != 0)
+        cout << middle;
+    return (0);
 
 }
