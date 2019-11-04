@@ -28,5 +28,12 @@
 using namespace std;
 
 int t05_minodd() {
-
+      int n, num, minchet = 1000000000;
+      cin >> n;
+      for (int i = 0; i < n; ++i) {
+          cin >> num;
+          if (num < minchet && num % 2 != 0)
+              minchet = num;
+      }
+      minchet == 1000000000 ? cout << 0 : cout << minchet;
 }
