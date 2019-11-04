@@ -20,11 +20,11 @@ using namespace std;
 
 int t01_even() {
 	int N;
-	int A[N];
 	cin >> N;
+	int A[N];
 	for (int i = 0; i < N; i++) {
-		A[i] = i;
-		if (i % 2 == 0)
+		cin>>A[I];
+		if (A[I] % 2 == 0)
 			cout << i << " ";
 	}
 	return 0;
