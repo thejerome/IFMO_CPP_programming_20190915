@@ -40,7 +40,7 @@ int t09_equals() {
   int j;
   for(int i = 0; i < n; i++){
     cin >> a[i];
-    if(a != 0){
+    if(a[i] != 0){
       for(j = 0; j < n; j++){
         if(a[i] == b[j]){
           c[j]++;
