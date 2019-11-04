@@ -57,6 +57,6 @@ int P,D;
         (C[L][H] %1000 == C[L][H]){cout << "   ";}
         cout << C[L][H];
         }
-        cout << endl;
+            cout << endl;
     }
 }
