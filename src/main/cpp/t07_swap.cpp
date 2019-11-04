@@ -25,14 +25,14 @@ int t07_swap() {
     for (int i=0; i<n; i++) {
         cin >> arr[i]; }
 
-    ch = 0;
-    for (i=0; i<n; i+=2) {
-        int ch = arr[i];
+    int ch = 0;
+    for (int i=0; i<n; i+=2) {
+        ch = arr[i];
         arr[i]=arr[i+1];
         arr[i+1]=ch;
     }
 
-    for (i=0; i<n; i++) {
+    for (int i=0; i<n; i++) {
         cout << arr[i] << " ";
     }
     return 0;
