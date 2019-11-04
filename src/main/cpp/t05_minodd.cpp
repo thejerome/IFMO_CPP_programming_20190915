@@ -27,17 +27,19 @@
 
 
 using namespace std;
-int t05_minodd(){
-    int n;
+int t05_minodd() {
+    int z = 1e6, a[10], n;
     cin >> n;
-    vector <int> v;
-    for (int i = 0; i < n; i++) {
-        int temp;
-        cin >> temp;
-        if (temp % 2 != 0) v.push_back(temp);
+    for(int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+        if((a[i] % 2 == 1 || a[i] % 2 == -1) && a[i] < z){
+            z = a[i];
+        }
     }
-    vector<int>::iterator i = min_element(v.begin(),v.end());
-    if (i == v.end()) cout << 0;
-    else cout << *i;
+    if(z != 1e6){
+        cout << z;
+    }
+    else cout << 0;
     return 0;
 }
