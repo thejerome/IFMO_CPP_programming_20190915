@@ -35,29 +35,28 @@
 #include <iostream>
 #include <cmath>
 #include <vector>
-#include <iomanip>
-#include <cstdlib>
+
 
 using namespace std;
 
 int t11_queen() {
-	int a = 0;
-	vector <int> a(16);
-	for (int i = 0; i < 16; i++)
-		cin >> a[i];
-	for (int i = 0; i < 14; i += 2)
-	{
-		for (int j = i + 2; j < 16; j += 2)
-			if (a[i] == a[j] || a[i + 1] == a[j + 1] || abs(a[i] - a[j]) == abs(a[i + 1] - a[j + 1]))
-			{
-				a = 1;
-				cout << "YES";
-				break;
-			}
-		if (a == 1)
-			break;
+		int t;
+	bool cross = false;
+	vector <int> x, y;
+	for (int i = 1; i <= 8; i++) {
+		cin >> t;
+		x.push_back(t);
+		cin >> t;
+		y.push_back(t);
 	}
-	if (a != 1)
-		cout << "NO";
+	for (int i = 0; i < x.size() - 1; i++) {
+		for (int j = i + 1; j < x.size(); j++) {
+			if (abs(x[i] - x[j]) == abs(y[i] - y[j]) || x[i] == x[j] || y[i] == y[j]) {
+				cross = true;
+			}
+		}
+	}
+	if (cross) cout << "YES";
+	else cout << "NO";
 	return 0;
 }
