@@ -28,4 +28,4 @@ int t01_even() {
 		cout << arr[i] << " ";
 	}
 	return 0;
-} 
+}  
