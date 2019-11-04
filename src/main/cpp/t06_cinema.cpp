@@ -56,6 +56,7 @@ int t06_cinema() {
   {if (a[i][k] == 0) {cout << i + 1; q = 0; break;}
   }
   if (q ==0) {break;}
-}}    
+}}
+  if(q==1) {cout << 0;}
     return 0;
 }
