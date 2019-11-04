@@ -24,6 +24,31 @@
 using namespace std;
 
 int t02_star() {
-
+  int n = 0, m = 0, s = 0;
+  cin >> n;
+  int a[n][n];
+  for (int i = 0; i < n; i++)
+  {
+  for (int k = 0; k < n; k++)
+  {
+  a[i][k] = 0;  
+  }
+  }
+  for (int i = 0; i < n; i++)
+  {
+  for (int k = 0; k < n; k++)
+  {
+  if (i == k or (i+k+1 == n) or k == n/2 or i == n/2) {a[i][k] = 1;}  
+  }
+  }
+  for (int i = 0; i < n; i++)
+  {
+  for (int k = 0; k < n; k++)
+  {
+  if (a[i][k] == 0) {cout << "." << " ";}
+  else   {cout << "*" << " ";}
+  }
+  cout << endl;
+}
     return 0;
 }
