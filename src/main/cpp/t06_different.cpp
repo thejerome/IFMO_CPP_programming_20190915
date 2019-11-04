@@ -27,5 +27,5 @@ int t06_different() {
   for (int i = 0; i < n-1; i++)
   {if (a[i+1] != a[i]) {
     s ++;}}
-  cout << s; 
+  cout << s+1; 
 }
