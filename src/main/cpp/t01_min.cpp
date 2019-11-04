@@ -27,5 +27,25 @@ using namespace std;
 
 int t01_min() {
 
-    return 0;
+    
+int min(int W , int R){
+if (W < R)
+{
+    return W;
+}
+else return R;}
+
+int min4(int F , int C)
+{
+    if(min(F , C))
+    {
+        return F;
+    }
+    else return C;
+}
+int main(){
+int W,R,F,C;
+cin >> W >> R >> F >> C;
+
+    cout << min4(min(W,R), min(F,C));
 }
