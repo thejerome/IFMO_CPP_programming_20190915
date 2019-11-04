@@ -17,41 +17,35 @@
 
 #include "t09_spiral.h"
 #include <iostream>
-#include <iomanip>
 
 
 using namespace std;
 
 int t09_spiral() {
-
-    int n,m, k = 0;
-    cin >> n >> m;
-    int a[n][m];
-    int  rem=n;
-    if (rem>m) rem=m;
-    int i, j;
-    for (i = 0; i < rem / 2; ++i) {
-        for (j = i; j < m - i - 1; ++j)
-            a[i][j] = ++k;
-        for (j = i; j < n - i - 1; ++j)
-            a[j][m - i - 1] = ++k;
-        for (j = i; j < m - i - 1; ++j)
-            a[n - i - 1][m - j - 1] = ++k;
-        for (j = i; j < n - i - 1; ++j)
-            a[n - j - 1][i] = ++k;
-    }
-    if (rem%2==1) {
-        ++j;
-        if (n<m) {
-            for (j = i; j < m - i ; ++j) a[i][j] = ++k;
+int m, n;
+    cin >> m >> n;
+    int a[m][n];
+    int x = m, y = n, k = 1, p = 0, i, j;
+    while(k <= m*n){
+        for(i = p; i < y; i++)
+            a[p][i] = k++;
+        for(i = p+1; i < x; i++)
+            a[i][y-1] = k++;
+        if ( p != x-1){
+            for(i = y-2; i >=p; i--)
+                a[x-1][i] = k++;
         }
-        else     {
-            for (j = i; j < n - i ; ++j) a[j][m - i - 1] = ++k;
+        if(p!=y-1){
+            for(i = x-2; i > p; i--)
+                a[i][p] = k++;
         }
+        p++;x--;y--;
     }
-    for (i = 0; i < n; ++i) {
-        for (j = 0; j < m; ++j) cout << setw(4) << a[i][j];
+    for(i = 0; i < m; i++){
+        for(j = 0; j < n; j++)
+            cout << a[i][j] << " ";
         cout << endl;
     }
+
     return 0;
 }
