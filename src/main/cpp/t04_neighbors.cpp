@@ -22,7 +22,7 @@ using namespace std;
 
 int t04_neighbors() {
     int n;
-    int a[n], b[n];
+    int a[100], b[100];
     cin>>n;
     for (int i=0;i<n;i++) {
         cin>>a[i];
