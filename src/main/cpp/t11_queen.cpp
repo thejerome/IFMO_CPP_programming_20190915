@@ -45,11 +45,10 @@ int a[16];
    bool x=true;
 for(int i = 0; i < 16;i+=2){
    for(int j = i+2; j < 16;j+=2){
-     if ((a[i] == a[j]) || (a[i+1] == a[j+1]) || (abs(a[i]-a[j])) == (abs(C[L+1] - C[H+1])))
+     if ((a[i] == a[j]) || (a[i+1] == a[j+1]) || (abs(a[i]-a[j])) == (abs(a[i+1] - a[j+1])))
   x=false;}
 }
-if (x==true) {
-        cout << "NO";}
+if (x==true) {cout << "NO";}
 else {cout << "YES";}
 return 0;
 }
