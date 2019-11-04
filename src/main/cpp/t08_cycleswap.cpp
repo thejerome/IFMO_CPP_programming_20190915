@@ -25,7 +25,7 @@ int t08_cycleswap() {
     for (int i=0; i<n; i++) {
         cin >> arr[i]; }
 
-    int last = arr[i-1];
+    int last = arr[n-1];
     for (int i=n-1; i>0; i-=1) {
         if (i == 0) arr[i] = last;
         else arr[i] = arr[i - 1];
