@@ -40,6 +40,7 @@ using namespace std;
 
 int t11_queen() {
 int C[8][2];
+  
 for(int L = 0 ; L < 8;L++)
 for(int H = 0 ; H < 2;H++){
 cin >> C[L][H];}
