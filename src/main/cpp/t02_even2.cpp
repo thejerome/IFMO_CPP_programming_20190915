@@ -21,14 +21,13 @@ using namespace std;
 int t02_even2() {
 	int N;
 int A[N];
-	int i;
-	int k;
+	int N;
 	cin >> N;
-	cin >> k;
+	int A[N];
 	for (int i = 0; i < N; i++) {
-		A[i] = k;
-		if (k % 2 == 0)
-			cout << k << " ";
+		cin>>A[i];
+		if (A[i] % 2 == 0)
+			cout << A[i] << " ";
 	}
 	return 0;
 };
