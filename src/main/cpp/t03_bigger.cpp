@@ -32,6 +32,4 @@ int t03_bigger() {
    if (C[L]>C[L-1])
       cout << C[L] <<  " ";
 }
-
-
 }
