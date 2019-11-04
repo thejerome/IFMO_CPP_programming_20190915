@@ -22,6 +22,47 @@
 using namespace std;
 
 int t09_spiral() {
-    
+    int n,m;
+    cin>>m>>n;
+    int a[101][101];
+    int startX = 0, startY = 0;
+    int endX = m-1, endY = n-1;
+    int num = 1;
+    int i;
+    while (startX <= endX && startY <= endY)
+    {
+        for (i=startY; i<=endY && num<=m*n; i++)
+        {
+            a[startX][i] = num;
+            num++;
+        }
+        startX++;
+
+        for (i=startX; i<=endX && num<=m*n; i++)
+        {
+            a[i][endY] = num;
+            num++;
+        }
+        endY--;
+
+        for (i=endY; i>=startY && num<=m*n; i--)
+        {
+            a[endX][i] = num;
+            num++;
+        }
+        endX--;
+
+        for (i=endX; i>=startX && num<=m*n; i--)
+        {
+            a[i][startY] = num;
+            num++;
+        }
+        startY++;
+    }
+    for(int i=0;i<m;i++){
+        for(int j=0;j<n;j++){
+            cout<<a[i][j]<<" ";
+        }
+    }
     return 0;
 }
