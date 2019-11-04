@@ -26,8 +26,8 @@ int P,D;
     cin >> P >> D;
     int C[100][100];
 
-      for(int L = 0; L <= P +1 ; L++){
-        for(int H = 0; H <= D +1; H++){
+      for(int L = 0; L <= P ; L++){
+        for(int H = 0; H <= D; H++){
         C[L][H] = 3;}
     }
      for(int L = 1; L <= P; L++){
