@@ -48,7 +48,7 @@ int t11_queen() {
   
   for (int i = 0; i < 8; i++)
   {
-    for(k = i + 1; k < 8 - i - 1; k++)
+    for(k = i + 1; k < 8; k++)
     {if (a[i] == a[k] or b[i] == b[k] or (a[i]-b[i]) == (a[k] - b[k]) or (a[i]+b[i] == a[k] + b[k]))
     {s = 1;
     break;}
