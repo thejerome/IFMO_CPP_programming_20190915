@@ -33,7 +33,7 @@ else return R;}
 
 int min4(int F , int C)
 {
-    if(min(F , C))
+    if(F < C)
     {
         return F;
     }
