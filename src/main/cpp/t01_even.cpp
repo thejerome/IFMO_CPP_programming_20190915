@@ -20,7 +20,7 @@ using namespace std;
 
 int t01_even() {
     int n;
-    int a[n];
+    int a[100];
     cin>>n;
     for(int i=0;i<n;i++) {
         cin>>a[i];
