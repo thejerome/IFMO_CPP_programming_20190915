@@ -24,10 +24,6 @@ using namespace std;
 //function min 
 
 //function min4 
-
-int t01_min() {
-
-    
 int min(int W , int R){
 if (W < R)
 {
@@ -43,7 +39,9 @@ int min4(int F , int C)
     }
     else return C;
 }
-int main(){
+int t01_min() {
+
+    
 int W,R,F,C;
 cin >> W >> R >> F >> C;
  
