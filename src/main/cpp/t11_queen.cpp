@@ -39,23 +39,17 @@
 using namespace std;
 
 int t11_queen() {
-	int x;
-	bool cross = false;
-	vector <int> x, y;
-	for (int i = 1; i <= 8; i++) {
-		cin >> x;
-		x.push_back(x);
-		cin >> x;
-		y.push_back(x);
-	}
-	for (int i = 0; i < x.size() - 1; i++) {
-		for (int j = i + 1; j < x.size(); j++) {
-			if (abs(x[i] - x[j]) == abs(y[i] - y[j]) || x[i] == x[j] || y[i] == y[j]) {
-				cross = true;
-			}
-		}
-	}
-	if (cross) cout << "YES";
-	else cout << "NO";
-	return 0;
+int a[16];
+ for(int i = 0; i < 16;i++)
+  cin>>a[i];
+   bool x=true;
+for(int i = 0; i < 16;i+=2){
+   for(int j = i+2; j < 16;j+=2){
+     if ((a[i] == a[j]) || (a[i+1] == a[j+1]) || (abs(a[i]-a[j])) == (abs(C[L+1] - C[H+1])))
+  x=false;}
+}
+if (x==true) {
+        cout << "NO";}
+else {cout << "YES";}
+return 0;
 }
