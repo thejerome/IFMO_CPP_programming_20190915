@@ -21,9 +21,18 @@
 
 using namespace std;
 
-//function distance
+float distance(float W, float R ,float F , float C)
+{
+   float answer1 = abs(W - F);
+   float answer2 = abs(R - C);
+   float Dis = sqrt(pow(answer1,2)+ pow(answer2,2));
+   return Dis;
+}
 
 int t02_dist() {
 
-    return 0;
+    float W,R,F,C;
+cin >> W >> R >> F >> C;
+
+    cout << distance(W,R,F,C);
 }
