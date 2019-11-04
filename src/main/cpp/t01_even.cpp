@@ -23,8 +23,8 @@ int t01_even() {
 	cin >> N;
 	int A[N];
 	for (int i = 0; i < N; i++) {
-		cin>>A[I];
-		if (A[I] % 2 == 0)
+		cin>>A[i];
+		if (i % 2 == 0)
 			cout << i << " ";
 	}
 	return 0;
