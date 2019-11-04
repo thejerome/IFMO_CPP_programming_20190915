@@ -22,6 +22,19 @@
 using namespace std;
 
 int t03_diag() {
-    
+	int i = 0, j = 0, n = 0, l = 0; bool p = false;
+	cin >> n;
+	for (i = 0; i < n; i++) 
+	{
+		cout << i << " ";
+		l = i;
+		p = false;
+		for(j=1;j<n;j++)
+		{
+			if (l == 0) { p = true; }
+			if (l > 0 && p == false) { l--; cout << l << " "; }
+			else { l++; cout << l << " "; }
+		}
+	}
     return 0;
 }

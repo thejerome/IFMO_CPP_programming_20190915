@@ -27,6 +27,16 @@
 using namespace std;
 
 int t01_max() {
-    
+	int A = 0, B = 0, i = 0, j = 1, c = 0, n = 0, m = 0, l = 0;
+	cin >> n >> m;
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < m; j++)
+		{
+			cin >> l;
+			if (l > c) { c = l; A = i; B = j; }
+		}
+	}
+	cout << A << " " << B;
     return 0;
 }
