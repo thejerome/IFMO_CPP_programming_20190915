@@ -21,7 +21,6 @@ using namespace std;
 int t02_even2() {
 	int N;
 int A[N];
-	int N;
 	cin >> N;
 	int A[N];
 	for (int i = 0; i < N; i++) {
