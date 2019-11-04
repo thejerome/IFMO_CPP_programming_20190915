@@ -45,8 +45,9 @@ int t11_queen() {
 
     int count = 0;
     for (int i=0; i<7; i++)
-        for(int j=i+1; j<8; i++)
+        for(int j=i+1; j<8; i++) {
             if ((x[i]==x[j]) || (y[i]==y[j]) || (abs(x[j]-x[i])==abs(y[j]-y[i]))) count++;
-            if (count>0) cout << "YES"; else cout << "NO";
+            }
+        if (count>0) cout << "YES"; else cout << "NO";
     return 0;
 }
