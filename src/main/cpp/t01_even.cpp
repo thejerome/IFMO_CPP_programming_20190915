@@ -19,5 +19,13 @@
 using namespace std;
 
 int t01_even() {
-
+	int a, i;
+	cin >> a;
+	int* arr = new int[a];
+	for (i = 0; i < a; ++i)
+		cin >> arr[i];
+	for (i = 0; i < a; i += 2) {
+		cout << arr[i] << " ";
+	}
+	return 0;
 }

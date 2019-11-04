@@ -21,9 +21,28 @@
 
 #include "t10_unique.h"
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
 int t10_unique() {
-
+	int n, m = 0, s = 0;
+	cin >> n;
+	vector <int> a(n);
+	for (int i = 0; i < n; i++)
+		cin >> a[i];
+	for (int i = 0; i < n; i++) {
+		int r = 0;
+		for (int i = 0; i < n; i++) {
+			if (a[m] == a[i]) {
+				r++;
+			}
+		}
+		if (r == 1) {
+			cout << a[m] << " ";
+		}
+		m++;
+		s++;
+	}
+	return 0;
 }
