@@ -28,15 +28,15 @@
 using namespace std;
 
 int t05_minodd() {
-	int x;
-cin >>x;
+int x,y=0;
+cin>>x;
 int a[x];
 for(int i=0;i<x;i++){
     cin>>a[i];
-    if ((a[i]>0 && a[i-1]>0)||(a[i]<0 && a[i-1]<0)){
-        cout<<a[i-1]<<" "<<a[i];
-        break;
+    if((a[i]%2!=0)&&(int y==0||y>a[i])){
+        y=a[i];
     }
 }
+cout<<y;
 return 0;
 }
