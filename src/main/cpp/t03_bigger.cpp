@@ -23,7 +23,7 @@ int t03_bigger() {
 	cin >> N;
 	int A[N];
 	for (int i = 0; i < N; i++) {
-		cin>>A[I];
+		cin>>A[i];
 		for(int i=1;i<N;i++){
     if(a[i]>a[i-1])
         cout<<a[i]<<" ";
