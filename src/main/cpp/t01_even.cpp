@@ -26,6 +26,6 @@ int t01_even() {
         cin >> arr[i];
     }
     for (int i=0; i<n; i++) {
-        if (i % 2 = 0) cout << arr[i]; }
+        if (i % 2 == 0) cout << arr[i]; }
     return 0;
     }
