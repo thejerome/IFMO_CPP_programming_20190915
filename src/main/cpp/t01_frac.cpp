@@ -25,3 +25,4 @@ int t01_frac() {
 	cout << a - trunc(a);
 	return 0; 
 };
+ 
