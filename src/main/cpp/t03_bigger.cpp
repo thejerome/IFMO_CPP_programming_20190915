@@ -25,7 +25,7 @@ int t03_bigger() {
     for (int i=0; i<n; i++) {
         cin >> arr[i]; }
 
-        for (i=0; i<n; i++) {
+        for (int i=0; i<n; i++) {
             if (arr[i] > arr[i-1])
                 cout << arr[i];
         }
