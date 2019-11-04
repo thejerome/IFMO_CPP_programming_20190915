@@ -26,7 +26,7 @@ int t03_bigger() {
    {
        cin >> C[L];
    }
-    for(int L=1;L<P;L++)
+    for(int L=1;L<P;L++) 
     {
 
    if (C[L]>C[L-1])
