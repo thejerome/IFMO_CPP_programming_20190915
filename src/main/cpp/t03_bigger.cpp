@@ -29,5 +29,6 @@ int t03_bigger() {
         cout<<A[i]<<" ";
 }
 return 0;
-};
+}
+}
 
