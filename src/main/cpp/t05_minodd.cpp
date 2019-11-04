@@ -23,30 +23,22 @@
 #include "t05_minodd.h"
 #include <iostream>
 #include <cmath>
+#include <vector>
 
 
 using namespace std;
 
 int t05_minodd() {
-    int n, a[100];
+    int n;
     cin >> n;
+    vector <int> v;
     for (int i = 0; i < n; i++) {
-        cin >> a[i];
+        int temp;
+        cin >> temp;
+        if (temp % 2 != 0) v.push_back(temp);
     }
-    for (int i = 0; i < n; i++) {
-        if (a[1]%2>=1&&a[i+1]>a[1]&&a[i+1]%2>=1){
-            a[i]=a[i+1];
-            a[1]=a[1];
-
-        }
-        else {cout << " ";}
-
-
-    }
-    if (a[1]%2==0) {
-        cout << "0";
-    }
-
-    else {cout << a[1]; }
+    vector<int>::iterator i = min_element(v.begin(),v.end());
+    if (i == v.end()) cout << 0;
+    else cout << *i;
     return 0;
 }

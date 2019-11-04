@@ -25,8 +25,9 @@ int t03_bigger() {
         cin >> a[i];
     }
     for (int i = 0;i<n;i++) {
-        if (a[i+1]>a[i])cout << a[i+1] << " ";
+        if(i > 0)if(a[i] > a[i - 1])cout << a[i] << " ";
 
     }
     return 0;
 }
+
