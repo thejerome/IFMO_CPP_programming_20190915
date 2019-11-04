@@ -24,6 +24,24 @@
 using namespace std;
 
 int t02_star() {
-
+    int i;
+    cin>>i;
+    char A[i][i];
+    for(int j=0;j<i;j++){
+        for(int k=0;k<i;k++){
+            A[j][k]='.';
+            if(j==i/2||k==i/2){
+                A[j][k]='*';
+            }
+            else if(abs(j-(i/2))==abs(k-(i/2))){
+                A[j][k]='*';
+            }
+        }
+    }
+    for(int j=0;j<i;j++){
+        for(int k=0;k<i;k++){
+            cout<<A[j][k]<<" ";
+        }
+    }
     return 0;
 }
