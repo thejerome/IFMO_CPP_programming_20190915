@@ -33,7 +33,7 @@ int t04_swap() {
             cin>>A[h][k];
         }
     }
-    int i,j,temp;
+    int i,j,x,temp;
     cin>>i>>j;
     if(i>j){
         x=i;
