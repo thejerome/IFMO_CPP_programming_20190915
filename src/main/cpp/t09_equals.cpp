@@ -26,5 +26,21 @@
 using namespace std;
 
 int t09_equals() {
+   int P,D=0;
+    cin >> P;
+    int C[P];
+    for(int L=0;L<P;L++)
+   {
+       cin >> C[L];
+}
+    for(int L=0;L<P-1;L++)
+    {
+        for(int H=L+1;H<P;H++)
+        {
+            if (C[L]==C[H])
+                D++;
+        }
+    }
 
+ cout << D << " ";
 }

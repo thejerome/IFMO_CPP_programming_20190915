@@ -19,5 +19,17 @@
 using namespace std;
 
 int t02_even2() {
+int P;
+cin >> P;
+int C[P];
+
+for(int L=0;L<P;L++)
+{
+    cin >> C[L];
+    if(C[L]%2==0)
+
+         cout << C[L] << " ";
+
 
 }
+};

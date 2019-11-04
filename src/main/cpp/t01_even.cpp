@@ -19,5 +19,15 @@
 using namespace std;
 
 int t01_even() {
+  int P;
+    cin >> P;
+int C[P];
+for(int L = 0;L<P;L++)
+{
 
+    cin >> C[L];
+  if (L%2==0)
+    cout << C[L]  << " ";
+
+}
 }

@@ -25,5 +25,21 @@
 using namespace std;
 
 int t10_unique() {
-
+int P; 
+cin >> P;
+    int C[P];
+    for(int L=0;L<P;L++)
+   {cin >> C[L];}
+    for(int L=0;L<P;L++){ 
+        int H , D=0;
+        for (H=0; H<P; H++){
+        if (C[L] - C[H] == 0 )
+            {D++;}
+        } 
+        if (D - 2 < 0) 
+        { 
+            cout << C[L] << " ";
+        }   
+    } 
 }
+
