@@ -41,10 +41,10 @@ using namespace std;
 int t11_queen() {
     int x[8], y[8];
     for (int i=0; i<8; i++)
-        cin >> x[i] >>" " >> y[i];
+        cin >> x[i] >> y[i];
 
     int count = 0;
-    for (i=0; i<7; i++)
+    for (int i=0; i<7; i++)
         for(int j=i+1; j<8; i++)
             if ((a[i]==a[j]) || (b[i]==b[j]) || (abs(a[j]-a[i])==abs(b[j]-b[i]))) count++;
             if (count>0) cout << "YES"; else cout << "NO";
