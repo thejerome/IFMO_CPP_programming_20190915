@@ -30,7 +30,7 @@ cin >> P;
     int C[P];
     for(int L=0;L<P;L++)
    {cin >> C[L];}
-    for(int L=0;L<P;L++){
+    for(int L=0;L<P;L++){ 
         int H , D=0;
         for (H=0; H<P; H++){
         if (C[L] - C[H] == 0 )
