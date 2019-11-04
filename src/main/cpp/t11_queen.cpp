@@ -45,7 +45,7 @@ for(int L = 0; L < 16;L++)
 cin >> C[L];
 bool V = true;
 for(int L = 0; L < 16;L+=2){
-for(int H = L+2; H < 16;H+=2){
+for(int H = 2; H < 16;H+=2){
 if ((C[L] == C[H]) || (C[L+1] == C[H+1]) || (abs(C[L]-C[H])) == (abs(C[L+1] - C[H+1])))
 V=false;}}
 if (V == true)
