@@ -35,7 +35,7 @@ int t05_minodd() {
         cin>>a[i];
     }
     a[n+1]=10000;
-    for (int i=1;i<n;i++) {
+    for (int i=0;i<n;i++) {
         if (a[i]%2!=0 && a[i]<a[n+1]) {
             a[n+1]=a[i];
         }
