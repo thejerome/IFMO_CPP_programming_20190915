@@ -19,5 +19,12 @@
 using namespace std;
 
 int t01_even() {
-
+    int N, chislo;
+    cin >> N;
+    for (int i = 0; i < N; i++){
+        cin >> chislo;
+        if (i % 2 == 0){
+            cout << chislo<< ' ';
+        }
+    }
 }
