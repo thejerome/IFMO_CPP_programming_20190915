@@ -25,7 +25,7 @@
 using namespace std;
 
 int t10_unique() {
-int P;
+int P; 
 cin >> P;
     int C[P];
     for(int L=0;L<P;L++)
