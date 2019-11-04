@@ -37,7 +37,7 @@
 
 
 using namespace std;
-
+ 
 int t11_queen() {
  int C[8][2];
  for(int L = 0 ; L < 8;L++)
