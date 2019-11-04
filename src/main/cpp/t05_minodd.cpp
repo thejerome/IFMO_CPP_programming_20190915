@@ -28,5 +28,21 @@
 using namespace std;
 
 int t05_minodd() {
+    int i , m = 75;
+    cin >> i;
+    int A [i];
+    for ( int k = 0 ; k < i ; k++ ){
+        cin >>  A [k];
+        if( abs( A [k] % 2) == 1 && A [k] < m ){
+            m = A [k];
+        }
+    }
+    if ( m == 75 ){
+        cout << 0 << endl;
+    }else{
+        cout << m << endl;
+    }
+
+        return 0;
 
 }

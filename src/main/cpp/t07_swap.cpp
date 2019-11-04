@@ -19,5 +19,21 @@
 using namespace std;
 
 int t07_swap() {
-
+    int i;
+    cin >> i;
+    int A [i];
+    for ( int k = 0 ; k < i ; k++ ){
+        cin >>  A [k];
+    }
+    for ( int k = 0, temp ; k < i ; k = k + 2){
+        if( k + 1 != i){
+            temp = A [k + 1];
+            A [k + 1] = A [k];
+            A [k] = temp;
+        }
+    }
+    for ( int k = 0 ; k < i ; k++ ){
+        cout << A [k] <<" "<< endl;
+    }
+    return 0;
 }
