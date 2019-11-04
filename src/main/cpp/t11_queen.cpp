@@ -34,10 +34,29 @@
 #include "t11_queen.h"
 #include <iostream>
 #include <cmath>
+#include <vector>
 
 
 using namespace std;
 
 int t11_queen() {
-
+		int t;
+	bool cross = false;
+	vector <int> x, y;
+	for (int i = 1; i <= 8; i++) {
+		cin >> t;
+		x.push_back(t);
+		cin >> t;
+		y.push_back(t);
+	}
+	for (int i = 0; i < x.size() - 1; i++) {
+		for (int j = i + 1; j < x.size(); j++) {
+			if (abs(x[i] - x[j]) == abs(y[i] - y[j]) || x[i] == x[j] || y[i] == y[j]) {
+				cross = true;
+			}
+		}
+	}
+	if (cross) cout << "YES";
+	else cout << "NO";
+	return 0;
 }
