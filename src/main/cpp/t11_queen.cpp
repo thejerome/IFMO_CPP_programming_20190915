@@ -50,4 +50,5 @@ if (((C[L][0]== C[H][0]) || (C[L][1] == C[H][1])) || (abs(C[L][0]-C[H][0])) == (
 V=false;}}
  if (V==true) {cout << "NO";}
 else {cout << "YES";}
+ 
 }
