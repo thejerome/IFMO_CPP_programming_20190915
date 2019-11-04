@@ -24,4 +24,4 @@ int t01_frac() {
 	cin >> a;
 	cout << a - trunc(a);
 	return 0; 
-};
+}; 
