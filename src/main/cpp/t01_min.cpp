@@ -46,6 +46,6 @@ int min4(int F , int C)
 int main(){
 int W,R,F,C;
 cin >> W >> R >> F >> C;
-
+ 
     cout << min4(min(W,R), min(F,C));
 }
