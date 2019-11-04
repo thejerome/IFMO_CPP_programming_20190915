@@ -49,5 +49,6 @@ if ((C[L] == C[H]) || (C[L+1] == C[H+1]) || (abs(C[L]-C[H])) == (abs(C[L+1] - C[
 V=false;}}
 if (V == true)
 {cout << "NO";}
-else {cout << "YES";V=true;}
+else {cout << "YES";}
+  V=true;
 }
