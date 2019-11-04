@@ -48,6 +48,7 @@ for(int L = 0; L < 8;L+=2){
 for(int H = 1; H < 8;H+=2){
 if (((C[L][0]== C[H][0]) || (C[L][1] == C[H][1])) || (abs(C[L][0]-C[H][0])) == (abs(C[L][1]- C[H][1])))
 V=false;}}
+ 
 if (V==true) {cout << "NO";}
 else {cout << "YES";}
 }
