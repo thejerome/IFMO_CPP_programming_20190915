@@ -35,7 +35,7 @@ int t05_minodd() {
     for (int i=0; i<n; i++) {
         cin >> arr[i]; }
 
-    for (i=0; i<n; i++) {
+    for (int i=0; i<n; i++) {
         if ((arr[i] % 2 != 0)&&(arr[i]>min))
             min = arr[i];
     }
