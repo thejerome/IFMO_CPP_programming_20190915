@@ -40,7 +40,8 @@ bool IsPointInArea(float W, float R)
    float LB = (R*0.5-W >= 1);
    float LB1 = (R*0.5-W <= 1);
    float LA1 = (W+ R <= 0);
-   return CIC && LA && LB || CIC && LB1 && LA1;
+   float CCIC = ( pow((W + 1),2) + ( pow((R + 1),2)  == 4));
+   return CIC && LA && LB || CCIC && LB1 && LA1;
 
 }
 int t04_area() {
