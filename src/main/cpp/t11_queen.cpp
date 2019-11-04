@@ -33,7 +33,7 @@
 
 #include "t11_queen.h"
 #include <iostream>
-#include <cmath>
+
 
 
 using namespace std;
@@ -48,14 +48,14 @@ int t11_queen() {
   
   for (int i = 0; i < 8; i++)
   {
-    for(k = i + 1; k < 8; k++)
-    {if (a[i] == a[k] or b[i] == b[k] or abs(a[i]-b[i]) == abs(a[k] - b[k]) or (a[i]+b[i] == a[k] + b[k]))
+    for(k = i + 1; k < 8 - i - 1; k++)
+    {if (a[i] == a[k] or b[i] == b[k] or (a[i]-b[i]) == (a[k] - b[k]) or (a[i]+b[i] == a[k] + b[k]))
     {s = 1;
     break;}
     }
     if (s!= 0) {break;} 
   
   }
- if (s == 0) {cout << "YES";} 
- else {cout << "NO";}
+ if (s == 0) {cout << "NO";} 
+ else {cout << "YES";}
 }
