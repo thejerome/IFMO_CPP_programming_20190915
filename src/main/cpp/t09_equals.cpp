@@ -17,7 +17,6 @@
 //1 1 1 1 1
 //Sample Output 2:
 //
-
 //10
 
 #include "t09_equals.h"

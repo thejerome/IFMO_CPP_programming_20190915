@@ -12,7 +12,6 @@
 //
 //3
 
-
 #include "t06_different.h"
 #include <iostream>
 
