@@ -21,7 +21,7 @@
 using namespace std;
 
 int t04_neighbors() {
-    int n,i,previous;
+    int n, i,previous;
     cin >> n;
     int a[1000];
     cin >> a[0];
