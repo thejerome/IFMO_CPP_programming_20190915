@@ -30,7 +30,9 @@ using namespace std;
 
 int t06_cinema() {
 	int n, m, k, f = 0, c = 0;
+	
 	cin >> n >> m;
+	
 	int a[n][m];
     for (int i = 0 ; i < n ; i++)
     {
