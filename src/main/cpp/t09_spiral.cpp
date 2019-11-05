@@ -29,34 +29,40 @@ int t09_spiral() {
     int i = 0;
     int j = 0;
     int k = 1;
-    while(k != m*n){
-        while(i < n-1-l){
-            a[i][j] = k;
-            k++;
-            i++;
-        }
+    while(k <= m*n){
         while(j < m-1-l){
             a[i][j] = k;
             k++;
             j++;
         }
-        while(i > 0+l){
+        while(i < n-1-l){
             a[i][j] = k;
             k++;
-            i--;
+            i++;
         }
-        while(j > 1+l){
+        while(j > 0+l){
             a[i][j] = k;
             k++;
             j--;
         }
+        while(i > 1+l){
+            a[i][j] = k;
+            k++;
+            i--;
+        }
         l++;
+    }
+    int p;
+    int y = n*m;
+    while(y > 0){
+        y /= 10;
+        p++;
     }
     for(int i = 0; i < n; i++){
         for(int j = 0; j < m; j++){
-            cout << a[i][j] << ' ';
+            cout << a[i][j] << setw(5);
         }
-        cout << endl;
+        cout << "\n";
     }
     
     return 0;
