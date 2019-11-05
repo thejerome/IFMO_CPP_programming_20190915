@@ -39,5 +39,25 @@ using namespace std;
 
 int t05_kdiag() {
     
-    return 0;
+   int P;
+    cin >> P;
+    int C[10][10];
+
+    for(int L = 0; L < P; L++) {
+         for(int H = 0; H < P; H++)
+    {
+        cin >> C[L][H];
+    }
+    }
+    int D;
+    cin >> D;
+    for(int L = 0; L < P; L++) {
+         for(int H = 0; H < P; H++)
+    {
+        if (L == H + D)
+        {
+         cout << C[L][H] << " ";
+        }
+    }
+    }
 }

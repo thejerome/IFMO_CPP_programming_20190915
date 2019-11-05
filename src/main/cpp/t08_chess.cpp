@@ -25,5 +25,37 @@ using namespace std;
 
 int t08_chess() {
     
-    return 0;
+  int P,D,S=0;
+    cin >> P >> D;
+    int C[100][100];
+
+      for(int L = 0; L < P; L++){
+        for(int H = 0; H < D; H+=2){
+        C[L][H] = 0;
+
+        }
+      }
+    for(int L = 0; L < P; L++){
+           int V;
+            if (L%2!=0) V =1;
+            else V = 0;
+        for(int H = V; H < D; H+=2){
+
+        S++;C[L][H]= S;
+    }
+    }
+
+    for(int L = 0; L < P; L++){
+        for(int H = 0; H < D; H++){
+         if (C[L][H]<10)
+        {cout << " ";}
+        else if (C[L][H]<100)
+        {cout << "  ";}
+       else  if (C[L][H]<1000)
+        {cout << "  ";}
+        cout << C[L][H];
+        }
+        cout << endl;
+       
+    }
 }
