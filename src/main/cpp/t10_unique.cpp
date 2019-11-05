@@ -25,7 +25,7 @@
 using namespace std;
 
 int t10_unique() {
-  int n=0, s=0, k = 0;
+  int n, s=0;
   cin >> n;
   int a[n];
   for (int i = 0; i < n; i++)
@@ -33,7 +33,7 @@ int t10_unique() {
   
   for (int i = 0; i < n; i++)
   {
-    for(k = 0; k < n; k++)
+    for(int k = 0; k < n; k++)
     {if (a[i] == a[k])
     {s++;}
     }
