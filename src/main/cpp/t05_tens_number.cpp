@@ -23,5 +23,10 @@
 using namespace std;
 
 int t05_tens_number() {
-
+    int N;
+    cin >> N;
+    int tens_num = N / 10;
+    int hund_num = tens_num / 10;
+    cout << tens_num - hund_num * 10;
+    return 0;
 };

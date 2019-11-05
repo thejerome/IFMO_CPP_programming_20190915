@@ -23,5 +23,9 @@
 using namespace std;
 
 int t03_last_number() {
-
+    int N;
+    cin >> N;
+    int last_num = N % 10;
+    cout << last_num;
+    return 0;
 };
