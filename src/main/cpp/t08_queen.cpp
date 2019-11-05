@@ -22,7 +22,50 @@
 
 using namespace std;
 
-int t08_queen(){
+void update(int n, int** a, int x, int y, int u) {
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < n; j++)
+			if (i == x || j == y || x + y == i + j || x - y == i - j)
+				a[i][j] += u;
+}
 
-    return 0;
+int ferz(int n, int** a, int i = 0) {
+	int combos = 0;
+	for (int j = 0; j < n; j++) {
+		if (!a[i][j]) {
+			if (n - i - 1) {
+				update(n, a, i, j, 1);
+				a[i][j] = -1;
+				combos += ferz(n, a, i + 1);
+			}
+			else {
+				combos++;
+				break;
+			}
+		}
+	}
+	if (i)
+		for (int j = 0; j < n; j++)
+			if (a[i - 1][j] == -1) {
+				update(n, a, i - 1, j, -1);
+				a[i - 1][j] = 0;
+				break;
+			}
+	return combos;
+}
+
+int t08_queen() {
+	int n = 0;
+	cin >> n;
+	int** a = new int* [n];
+	for (int i = 0; i < n; i++) {
+		a[i] = new int[n];
+		for (int j = 0; j < n; j++)
+			a[i][j] = 0;
+	}
+	cout << ferz(n, a);
+	for (int i = 0; i < n; i++)
+		delete[] a[i];
+	delete[] a;
+	return 0;
 }
