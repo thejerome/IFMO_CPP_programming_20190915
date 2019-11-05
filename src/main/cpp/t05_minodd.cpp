@@ -42,6 +42,8 @@ int t05_minodd() {
     }
     if (K == 1000000000)
         cout << 0;
+    else
+        cout << K;
     delete [] mas;
     return 0;
 }
