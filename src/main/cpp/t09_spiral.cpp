@@ -22,6 +22,42 @@
 using namespace std;
 
 int t09_spiral() {
+    int n,m;
+    cin >> n >> m;
+    int a[n][m];
+    int l = 0;
+    int i = 0;
+    int j = 0;
+    int k = 1;
+    while(k != m*n){
+        while(i < n-1-l){
+            a[i][j] = k;
+            k++;
+            i++;
+        }
+        while(j < m-1-l){
+            a[i][j] = k;
+            k++;
+            j++;
+        }
+        while(i > 0+l){
+            a[i][j] = k;
+            k++;
+            i--;
+        }
+        while(j > 1+l){
+            a[i][j] = k;
+            k++;
+            j--;
+        }
+        l++;
+    }
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
+            cout << a[i][j] << ' ';
+        }
+        cout << endl;
+    }
     
     return 0;
 }
