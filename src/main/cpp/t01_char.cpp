@@ -28,7 +28,17 @@
 
 
 using namespace std;
+bool P(int S)
+{
 
+return S;
+
+}
 int t01_char() {
-
+int S;
+cin >> S;
+if (P(S))
+    cout << "yes";
+else
+    cout <<"no";
 }
