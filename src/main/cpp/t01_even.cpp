@@ -20,4 +20,15 @@ using namespace std;
 
 int t01_even() {
 
+    int num;
+    cin >> num;
+    int *arr = new int[num];
+    for (int i = 0; i < num; i++) {
+        cin >> arr[i];
+    }
+    for (int i = 0; i < num; i = i + 2) {
+        cout << arr[i] << " ";
+    }
+    delete [] arr;
+    return 0;
 }
