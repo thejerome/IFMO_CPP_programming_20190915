@@ -22,7 +22,7 @@
 using namespace std;
 
 int t04_deposit() {
-	int p, x, y, k, yy, i =0;
+	int p, x, y, k, i =0;
 	cin >> p >> x >> y >> k;
 	while (i < k) {
 		yy = x * p % 100;
