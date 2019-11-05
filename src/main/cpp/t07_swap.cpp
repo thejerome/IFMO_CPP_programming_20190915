@@ -19,16 +19,14 @@
 using namespace std;
 
 int t07_swap() {
-    int num = 0, t;
+    int num = 0;
     cin >> num;
     int *arr = new int[num];
     for (int i = 0; i < num; i++) {
         cin >> arr[i];
     }
     for (int i = 0; i < num - 1; i = i + 2) {
-        t = arr[i];
-        arr[i] = arr[i + 1];
-        arr[i + 1] = t;
+        swap(arr[i], arr[i + 1]);
     }
     for (int i = 0; i < num; i++) {
         cout << arr[i] << " ";
