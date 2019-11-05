@@ -20,4 +20,16 @@ using namespace std;
 
 int t01_even() {
 
-}
+    int N;
+    cin >> N;
+
+    int A[N];
+
+    for (int i = 0; i < N; i++)
+        cin >> A [i];
+
+    for (int i = 0; i < N; i = i + 2)
+        cout << A [i] << " ";
+
+return 0;
+};
