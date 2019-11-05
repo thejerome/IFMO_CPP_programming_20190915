@@ -38,7 +38,7 @@ int t05_minodd() {
         cin >> A [i];
 
     for (int i = 0; i < N; i++)
-        if ((!A[i] % 2 == 0) && ((A[i] < m) || (m == 0)))
+        if ((A[i] % 2 != 0) && ((A[i] < m) || (m == 0)))
            m = A[i];
 
     cout << m;
