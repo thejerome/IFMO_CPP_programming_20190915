@@ -29,6 +29,24 @@
 using namespace std;
 
 int t06_cinema() {
-    
+    int n, m;
+    cin >> n >> m;
+    int arr[n][m];
+    for(int i = 0; i<n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> arr[i][j];
+        }
+    }
+    int k = 0;
+    int count = 0, ryad = 0;
+    cin >> k;
+    for(int i = 0; i<n; i++) {
+        for (int j = 0; j < m; j++) {
+            if (a[i][j]==0) {
+                count++;
+                if ((count == k ) && (ryad == 0)) ryad = i;} else count = 0;
+        }
+    }
+    cout << f;
     return 0;
 }
