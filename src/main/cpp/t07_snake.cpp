@@ -36,7 +36,7 @@ int t07_snake() {
         {C[L][D - H -1]= S;}
         }
     }
-
+ 
     for(int L = 0; L < P; L++){
         for(int H = 0; H < D; H++){
          if (C[L][H] < 10){cout << " ";}
