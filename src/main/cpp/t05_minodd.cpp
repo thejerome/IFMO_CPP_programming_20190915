@@ -18,6 +18,7 @@
 //2 4 6 8 10
 //Sample Output 2:
 //
+
 //0
 
 #include "t05_minodd.h"
