@@ -17,9 +17,19 @@
 
 using namespace std;
 
-// function fib
+
+int fib(int W)
+{
+    if(W == 0) {return 0;}
+    if(W == 1) {return 1;}
+    if(W == 2) {return 1;}
+
+    return (fib(W-1) + fib(W-2));
+}
 
 int t07_fib()
 {
-    return 0;
+ int W;
+cin >> W;
+cout << fib(W);
 }
