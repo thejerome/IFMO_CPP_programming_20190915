@@ -19,7 +19,7 @@
 using namespace std;
 
 int t08_cycleswap() {
-    int n,i,middle,previous;
+    int n,i,previous;
     cin >> n;
     int a[1000];
     cin >> a[0];
@@ -27,7 +27,7 @@ int t08_cycleswap() {
 
     for (i = 1; i < n-1; i++) {
         cin >> a[i];
-        middle = a[i];
+        int middle = a[i];
         a[i] = previous;
         previous = middle;
     }
