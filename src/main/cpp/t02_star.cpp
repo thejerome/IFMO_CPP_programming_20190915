@@ -37,7 +37,7 @@ int t02_star() {
 		for (int j = 0; j < n; j++) {
 			if (a[i][j] == 0) cout << "." << " ";
 			else cout << "*" << " ";
-		}
+		} 
 		cout << endl;
 	}
     return 0;
