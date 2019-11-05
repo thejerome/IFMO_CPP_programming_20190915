@@ -26,5 +26,20 @@
 using namespace std;
 
 int t09_equals() {
-
+    int N, K, A;
+    K = 0;
+    cin >> N;
+    int *mas = new int[N];
+    for (int i = 0; i < N; i++) {
+        cin >> mas[i];
+    }
+    for (int i = 0; i < N; i++) {
+        for (int A = i + 1; A < N; A++) {
+            if (mas[i] == mas[A])
+                K++;
+        }
+    }
+    cout << K;
+    delete [] mas;
+    return 0;
 }
