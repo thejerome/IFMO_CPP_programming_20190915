@@ -28,12 +28,12 @@ int t08_cycleswap() {
     for (int i = 0; i < N; i++)
         cin >> A [i];
 
-    m = A[0];
+    m = A[N-1];
 
-    for (int i = 0; i < N-1; i++)
-        A[i] = A[i+1];
+    for (int i = N-1; i > 0; i--)
+        A[i] = A[i-1];
 
-    A[N-1] = m;
+    A[0] = m;
 
     for (int i = 0; i < N; i++)
         cout << A [i] << " ";
