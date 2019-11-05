@@ -28,6 +28,7 @@ using namespace std;
 int t09_equals() {
 
     int N, m = 0;
+    
     cin >> N;
 
     int A[N];
