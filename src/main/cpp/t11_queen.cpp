@@ -39,7 +39,7 @@
 using namespace std;
 
 int t11_queen() {
-  int s=0, k = 0;
+  int s=0;
   int a[8], b[8];
   for (int i = 0; i < 8; i++)
   {cin >> a[i];
@@ -48,7 +48,7 @@ int t11_queen() {
   
   for (int i = 0; i < 8; i++)
   {
-    for(k = i + 1; k < 8; k++)
+    for(int k = i + 1; k < 8; k++)
     {if (a[i] == a[k] or b[i] == b[k] or (a[i]-b[i]) == (a[k] - b[k]) or (a[i]+b[i] == a[k] + b[k]))
     {s = 1;
     break;}
