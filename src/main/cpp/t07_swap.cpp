@@ -29,7 +29,8 @@ int t07_swap() {
         swap(arr[i], arr[i + 1]);
     }
     for (int i = 0; i < num; i++) {
-        cout << arr[i] << " ";
+        cout << arr[i];
+        cout << " ";
     }
     delete [] arr;
     return 0;
