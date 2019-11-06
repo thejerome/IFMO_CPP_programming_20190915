@@ -43,6 +43,6 @@ int t06_different() {
 			}
 		}
 	}
-	cout << (sizeof(a) / sizeof(*a));
+	cout << (sizeof(mas) / sizeof(*mas));
 	return (0);
 }

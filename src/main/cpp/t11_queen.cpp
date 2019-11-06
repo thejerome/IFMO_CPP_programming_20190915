@@ -43,12 +43,12 @@ int t11_queen() {
 	int A[8];
 	int B[8];
 	for (i = 0; i < 8; i++) {
-		cin >> A[i]
+		cin >> A[i];
 	    cin >> B[i];
 	}
 	bool flag = true;
 	for (i = 0; i < 8; i++) {
-		for (j = i + 1; j < 8; p++) {
+		for (j = i + 1; j < 8; j++) {
 			if ((abs(A[i] - A[j]) == abs(B[i] - B[j]) || A[i] == A[j]) || (B[i] == B[j]))
 				flag = false;
 		}

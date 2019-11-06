@@ -30,14 +30,14 @@ int t09_equals() {
 	int mas[100000];
 	s = 0;
     cin >> N;
-	for (i = 0; i < n; i++) {
+	for (i = 0; i < N; i++) {
 		cin >> mas[i];
 	}
 
 
 	for (i = 0; i < N; i++) {
 		for (j = i + 1; j < N; j++) {
-			if mas[i] == mas[j])
+			if (mas[i] == mas[j])
 				s++;
 		}
 	}
