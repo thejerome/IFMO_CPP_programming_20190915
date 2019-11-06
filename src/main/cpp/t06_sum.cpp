@@ -30,7 +30,6 @@ int sum() {
    return n + sum();
 }
 int t06_sum() {
-int main() {
     cout << sum();
     return 0;
 }
