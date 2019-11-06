@@ -22,7 +22,7 @@ using namespace std;
 
 int t06_quad() {
 	double a, b, c;
-	double x1, x2;
+	float x1, x2;
 	cin >> a >> b >> c;
 	
 	double d = pow(b,2) - 4 * a * c;
