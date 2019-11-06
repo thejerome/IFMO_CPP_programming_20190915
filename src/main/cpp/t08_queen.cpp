@@ -21,8 +21,28 @@
 #include <vector>
 
 using namespace std;
-
+vector <int> a(10);
+bool b(int i, int j, int k) {
+    if (k == i) return true;
+    else return a[k] != j && (i - k) != (j - a[k]) && (i - k) != (a[k] - j) && b(i, j, k + 1);
+}
+int put(int n, int i, int j) {
+    if (i == n) return 1;
+    else {
+      if (j < n) {
+          int r = 0;
+          if (b(i, j, 0)) {
+              a[i] = j;
+              r = put(n, i + 1, 0);
+          }
+          return r + put(n, i, j + 1);
+      }
+     else return 0;
+   }
+}
 int t08_queen(){
-
-    return 0;
+     int n;
+    cin >> n;
+    cout << put(n, 0, 0);
+  return 0;
 }
