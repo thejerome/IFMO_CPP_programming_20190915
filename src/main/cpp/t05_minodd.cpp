@@ -38,12 +38,13 @@ int t05_minodd() {
 		if (mas[i] % 2 == 1 && mas[i] < min) {
 			min = mas[i];
 		}
-		if (min == 100000) {
-			cout << 0;
-		}
-		else {
-			cout << min;
-		}
+		
+	}
+	if (min == 100000) {
+		cout << '0';
+	}
+	else {
+		cout << min;
 	}
 	return (0);
 

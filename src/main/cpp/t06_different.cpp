@@ -24,9 +24,8 @@ int t06_different() {
 	int mas[10000];
 	for (i = 0; i < N; i++) {
 		cin >> mas[i];
-		
-
 	}
+
 	for (i = 0; i < N - 1; i++) {
 		for (int j = 0; j < N - i - 1; j++) {
 			if (mas[j] > mas[j + 1]) {
@@ -38,8 +37,8 @@ int t06_different() {
 	}
 	for (i = 0; i < N - 1; i++) {
 		if (mas[i] == mas[i + 1]) {
-			for (i = 0; i < N - 1; i++) {
-				mas[i] = mas[i + 1];
+			for (j = 0; j < N - 1; j++) {
+				mas[j] = mas[j + 1];
 			}
 		}
 	}

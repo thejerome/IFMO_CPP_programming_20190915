@@ -29,6 +29,7 @@ int t10_unique() {
 	cin >> N;
 	int mas[100000];
 	s = 0;
+
 	for (i = 0; i < N; i++) {
 		cin >> mas[i];
 	}
@@ -38,9 +39,10 @@ int t10_unique() {
 			if (mas[i] == mas[j])
 				s++;
 		}
-		if (s == 0)
+		if (s == 0) {
 			cout << mas[i] << ' ';
-		s = 0;
+			s = 0;
+		}
 	}
 
 	return (0);

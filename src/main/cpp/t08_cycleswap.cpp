@@ -29,13 +29,16 @@ int t08_cycleswap() {
 	}
 
 	j = mas[N];
+
 	for (i = N-1; i >= 0 ; i--) {
 		mas[i + 1] = mas[i];
 
 	}
+
 	mas[0] = j;
+
 	for (i = 0; i < N; i++) {
-		cout << mas[i];
+		cout << mas[i] << ' ';
 	}
 
 	return (0);
