@@ -21,11 +21,19 @@
 
 using namespace std;
 
-//function min 
+//function min
+int min (int a, int b) {
+    return a < b ? a: b;
+}
 
 //function min4 
+void min4 (int a, int b, int c, int d) {
+    cout << min(min(a,b), min(c,d));
+}
 
 int t01_min() {
-
+    int a, b, c, d;
+    cin >> a >> b >> c >> d;
+    min4(a,b,c,d);
     return 0;
 }
