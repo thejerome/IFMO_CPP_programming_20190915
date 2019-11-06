@@ -50,5 +50,6 @@ int t03_circle() {
     else {
         cout << "NO";
     }
+    
   return 0;
 }
