@@ -28,7 +28,7 @@ int t04_neighbors() {
         cin >> mas[i];
     }
     for (int i = 1; i < N; ++i) {
-        if ((mas[i] < 0 & mas[i - 1] < 0) || (mas[i] > 0 & mas[i - 1] > 0)) {
+        if ((mas[i] < 0 && mas[i - 1] < 0) || (mas[i] > 0 && mas[i - 1] > 0)) {
             cout << mas[i - 1] << " " << mas[i] << " ";
             break;
         }
