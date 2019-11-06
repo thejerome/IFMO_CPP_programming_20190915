@@ -36,8 +36,8 @@ bool check(int x, int y, int k=0) {
 }
 
 int check2(int n, int x, int y) {
-    int k = 0;
     if (y < n) {
+        int k = 0;
         if (check(x, y, 0)) {
             a[x] = y;
             k = result(n, x + 1);
