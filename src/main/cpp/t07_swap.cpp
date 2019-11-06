@@ -32,8 +32,8 @@ int t07_swap() {
 		if (i % 2 == 1) {
 			j = mas[i];
 			mas[i] = mas[i - 1];
-			mas[i - 1] = j
-		}
+			mas[i - 1] = j;
+		};
 
 	}
 

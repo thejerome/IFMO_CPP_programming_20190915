@@ -29,7 +29,7 @@ int t10_unique() {
 	cin >> N;
 	int mas[100000];
 	s = 0;
-	for (i = 0; i < n; i++) {
+	for (i = 0; i < N; i++) {
 		cin >> mas[i];
 	}
 
