@@ -61,4 +61,3 @@ int t08_queen() {
     cout << result(n, 0);
     return 0;
 }
-
