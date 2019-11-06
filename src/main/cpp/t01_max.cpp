@@ -42,3 +42,4 @@ int t01_max() {
     }
     cout << l << " " << z;
     return 0;
+}
