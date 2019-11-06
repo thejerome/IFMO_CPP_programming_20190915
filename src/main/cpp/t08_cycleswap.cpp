@@ -19,5 +19,25 @@
 using namespace std;
 
 int t08_cycleswap() {
+	int N, i, j;
+	cin >> N;
+	int mas[10000];
+
+
+	for (i = 0; i < N; i++) {
+		cin >> mas[i];
+	}
+
+	j = mas[N];
+	for (i = N-1; i >= 0 ; i--) {
+		mas[i + 1] = mas[i];
+
+	}
+	mas[0] = j;
+	for (i = 0; i < N; i++) {
+		cout << mas[i];
+	}
+
+	return (0);
 
 }

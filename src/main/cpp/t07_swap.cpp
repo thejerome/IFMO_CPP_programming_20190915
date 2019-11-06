@@ -19,5 +19,26 @@
 using namespace std;
 
 int t07_swap() {
+	int N, i, j;
+	cin >> N;
+	int mas[10000];
+	for (i = 0; i < N; i++) {
+		cin >> mas[i];
 
+	}
+
+
+	for (i = 1; i < N; i++) {
+		if (i % 2 == 1) {
+			j = mas[i];
+			mas[i] = mas[i - 1];
+			mas[i - 1] = j
+		}
+
+	}
+
+	for (i = 0; i < N; i++) {		
+			cout << mas[i] << ' ';		
+	}
+	return (0);
 }

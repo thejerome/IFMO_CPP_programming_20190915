@@ -19,5 +19,30 @@
 using namespace std;
 
 int t06_different() {
+	int N, i, j, f;
+	cin >> N;
+	int mas[10000];
+	for (i = 0; i < N; i++) {
+		cin >> mas[i];
+		
 
+	}
+	for (i = 0; i < N - 1; i++) {
+		for (int j = 0; j < N - i - 1; j++) {
+			if (mas[j] > mas[j + 1]) {
+				f = mas[j];
+				mas[j] = mas[j + 1];
+				mas[j + 1] = f;
+			}
+		}
+	}
+	for (i = 0; i < N - 1; i++) {
+		if (mas[i] == mas[i + 1]) {
+			for (i = 0; i < N - 1; i++) {
+				mas[i] = mas[i + 1];
+			}
+		}
+	}
+	cout << (sizeof(a) / sizeof(*a));
+	return (0);
 }
