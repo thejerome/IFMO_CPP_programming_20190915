@@ -47,7 +47,7 @@ int t01_max() {
 			}
 		}
 	}
-	cout << i << ' ' << j;
+	cout << mi << ' ' << mj;
 
     return 0;
 }

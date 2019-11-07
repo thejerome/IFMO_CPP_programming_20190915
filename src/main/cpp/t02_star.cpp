@@ -34,10 +34,10 @@ int t02_star() {
 	}
 
 	for (i = 0; i < n; i++) {
-			mas[i][(n+1)/2] = '*';
+			mas[i][n/2] = '*';
 	}
 		for (j = 0; j < n; j++) {
-			mas[(n + 1) / 2][j] = '*';
+			mas[n/2][j] = '*';
 		}
 
 		j = 0;
@@ -48,7 +48,7 @@ int t02_star() {
 		}
 
 		j = 4;
-		for (i = 0; i < n; i++) {
+		for (i = 0; i < n; i--) {
 
 			mas[i][j] = '*';
 			j--;
