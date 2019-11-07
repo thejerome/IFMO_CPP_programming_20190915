@@ -29,6 +29,8 @@ using namespace std;
 int t01_max() {
 	int n, m, i, j, max, mi, mj;
 	cin >> n >> m;
+	mj = 0;
+	mi = 0;
 	int mas[100][100];
 	for (i = 0; i < n; i++) {
 		for (j = 0; j < m; j++) {
@@ -41,6 +43,7 @@ int t01_max() {
 			if (mas[i][j] > max) {
 				mi = i;
 				mj = j;
+				max = mas[i][j];
 			}
 		}
 	}

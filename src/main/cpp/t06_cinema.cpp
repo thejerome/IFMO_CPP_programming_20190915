@@ -29,9 +29,9 @@
 using namespace std;
 
 int t06_cinema() {
-	int n, m, k, s, free = 0;
+	int n, m, k, r,free = 0;
 	cin >> n;
-    cin >> m;
+	cin	>> m;
 	int mas[n][m];
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
@@ -40,25 +40,23 @@ int t06_cinema() {
 	}
 	cin >> k;
 	for (int i = 0; i < n; i++) {
-		int free = 0;
+	  free = 0;
 		for (int j = 0; j < m; j++) {
 			if (mas[i][j] == 0) {
 				free++;
 				if (free == k) {
-					s = i + 1;
+					r = i + 1;
 					break;
 				}
 			}
 			else {
 				free = 0;
 			}
-			if (free == k) {
-				break;
-			}
 		}
-	
-		cout << s;
-		
+		if (free == k) { 
+			break
+		};
 	}
+	cout << r;
 	return 0;
 }
