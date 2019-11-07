@@ -36,13 +36,15 @@ int t06_different() {
 			}
 		}
 	}
-
+	f = 0;
 	for (i = 0; i < N - 1; i++) {
 		if (mas[i] == mas[i + 1]) {
-			for (j = i; j < N - 1; j++) {
+			for (j = 0; j < N; j++) {
 				mas[j] = mas[j + 1];
 				b++;
+				mas[N - f] = 0;
 			}
+			f++;
 		}
 	}
 
