@@ -39,7 +39,7 @@ int t06_different() {
 
 	for (i = 0; i < N - 1; i++) {
 		if (mas[i] == mas[i + 1]) {
-			for (j = 0; j < N - 1; j++) {
+			for (j = i; j < N - 1; j++) {
 				mas[j] = mas[j + 1];
 				b++;
 			}
