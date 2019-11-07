@@ -16,7 +16,7 @@
 //0 3 2 4
 //2 3 5 5
 //5 1 2 3
-//Sample Output:
+//Sample Outpu//t:
 //
 //1 2//
 
