@@ -22,41 +22,32 @@
 using namespace std;
 
 int t09_spiral() {
-	int n, m, k , i, j;
-	cin >> n;
+	int m, n ,l,x ,y ,k ,i,j;
 	cin >> m;
-	int mas[100][100];
+	cin >> n;
+	int mas[m][n];
 	k = 1;
-
-
-	for (i = 0; i < n; i++) {
-		for (j = 0; j < m; j++) {
-			mas[i][j] = 0;
-		}
-	}
-	i = 0; j = 0;
+	l = 0;
+	x = m;
+	y = n;
 	while (k <= m * n) {
-		mas[i][j] = k;
-		if (mas[i][j + 1] == 0 and j + 1 < m)  j++;
-		else if (mas[i + 1][j] == 0 and i + 1 < n)  i++;
-		else if (mas[i][j - 1] == 0 and j - 1 >= 0)  j--;
-		else i--;
-		k++;
-	}
-
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			if (mas[i][j] % 10 == mas[i][j]) {
-				cout << " ";
-			}
-			else if (mas[i][j] % 100 == mas[i][j]) {
-				cout << " ";
-			}
-			else if (mas[i][j] % 1000 == mas[i][j]) {
-				cout << " ";
-			}
-			cout << mas[i][j];
+		for (i = l; i < y; i++)
+			mas[l][i] = k++;
+		for (i = l + 1; i < x; i++)
+			mas[i][y - 1] = k++;
+		if (l != x - 1) {
+			for (i = y - 2; i >= l; i--)
+				mas[x - 1][i] = k++;
 		}
+		if (l != y - 1) {
+			for (i = x - 2; i > l; i--)
+				mas[i][l] = k++;
+		}
+		l++; x--; y--;
+	}
+	for (i = 0; i < m; i++) {
+		for (j = 0; j < n; j++)
+			cout << mas[i][j] << " ";
 	}
     return 0;
 }
