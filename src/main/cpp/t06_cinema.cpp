@@ -49,7 +49,7 @@ int t06_cinema() {
                 i = n+2;
                 j = n+2;
             }
-            if(i == n-1 && j == n-1)
+            if(i == n-1 && j == m-1)
                 cout << 0;
         }
         
