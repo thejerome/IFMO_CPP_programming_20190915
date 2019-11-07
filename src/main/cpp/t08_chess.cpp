@@ -25,7 +25,7 @@ using namespace std;
 
 int t08_chess() {
 	int n, m, s, k, i;
-	cin >> n 
+	cin >> n;
     cin >> m;
 	int mas[n][m];
 	k = 1;

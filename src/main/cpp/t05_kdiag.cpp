@@ -49,7 +49,9 @@ int t05_kdiag() {
 	cin >> k;
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
-			if (i - j = 0) cout << a[i][j] << " ";
+			if (i - j - k == 0) {
+				cout << a[i][j] << " ";
+			}
 		}
 	}
     return 0;

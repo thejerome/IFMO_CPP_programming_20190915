@@ -24,7 +24,7 @@
 using namespace std;
 
 int t02_star() {
-	int n;
+	int n,i,j;
 	cin >> n;
 	char mas[15][15];
 	for (i = 0; i < n; i++) {

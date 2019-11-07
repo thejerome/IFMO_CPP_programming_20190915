@@ -35,7 +35,8 @@ int t04_swap() {
 		}
 	}
 
-	cin >> x >> y;
+	cin >> a 
+	cin >> b;
 
 	for (int i = 0; i < n; i++) {
 		k = mas[i][a];

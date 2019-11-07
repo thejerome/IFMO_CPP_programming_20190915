@@ -39,8 +39,8 @@ int t01_max() {
 	for (i = 0; i < n; i++) {
 		for (j = 0; j < m; j++) {
 			if (mas[i][j] > max) {
-				maxi = i;
-				maxj = j;
+				mi = i;
+				mj = j;
 			}
 		}
 	}

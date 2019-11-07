@@ -5,7 +5,7 @@
 //
 //Sample Input:
 //
-//5
+//5//
 //Sample Output:
 //
 //0 1 2 3 4
@@ -28,13 +28,13 @@ int t03_diag() {
 	int mas[100][100];
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
-			a[i][j] = (int)abs(i - j);
+			mas[i][j] = (int)abs(i - j);
 		}
 	}
 
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
-			cout << a[i][j] << " ";
+			cout << mas[i][j] << " ";
 		}
 	}
     return 0;
