@@ -41,13 +41,12 @@ int t06_different() {
 		if (mas[i] == mas[i + 1]) {
 			for (j = 0; j < N - 1; j++) {
 				mas[j] = mas[j + 1];
+				b++;
 			}
 		}
 	}
 
-	for (i = 0; i < N; i++) {
-		b++;
-	}
-	cout << b;
+	
+	cout << N-b;
 	return (0);
 }
