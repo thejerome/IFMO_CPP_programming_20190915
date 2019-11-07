@@ -28,7 +28,7 @@ int t08_cycleswap() {
 		cin >> mas[i];
 	}
 
-	j = mas[N];
+	j = mas[N-1];
 
 	for (i = N-1; i >= 0 ; i--) {
 		mas[i + 1] = mas[i];

@@ -35,11 +35,12 @@ int t05_minodd() {
 
 	for (i = 0; i < N ; i++) {
 		cin >> mas[i];
-		if (mas[i] % 2 == 1 && mas[i] < min) {
+		if ((mas[i] % 2 == 1 || mas[i] % 2 == -1) && mas[i] < min) {
 			min = mas[i];
 		}
 		
 	}
+
 	if (min == 100000) {
 		cout << '0';
 	}

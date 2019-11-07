@@ -35,11 +35,11 @@ int t10_unique() {
 	}
 
 	for (i = 0; i < N; i++) {
-		for (j = 1; j < N; j++) {
+		for (j = 0; j < N; j++) {
 			if (mas[i] == mas[j])
 				s++;
 		}
-		if (s == 0) {
+		if (s == 1) {
 			cout << mas[i] << ' ';
 			s = 0;
 		}

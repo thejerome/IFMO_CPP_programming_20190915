@@ -19,7 +19,8 @@
 using namespace std;
 
 int t06_different() {
-	int N, i, j, f;
+	int N, i, j, f,b;
+	b = 0;
 	cin >> N;
 	int mas[10000];
 	for (i = 0; i < N; i++) {
@@ -35,6 +36,7 @@ int t06_different() {
 			}
 		}
 	}
+
 	for (i = 0; i < N - 1; i++) {
 		if (mas[i] == mas[i + 1]) {
 			for (j = 0; j < N - 1; j++) {
@@ -42,6 +44,10 @@ int t06_different() {
 			}
 		}
 	}
-	cout << (sizeof(mas) / sizeof(*mas));
+
+	for (i = 0; i < N; i++) {
+		b++;
+	}
+	cout << b;
 	return (0);
 }
