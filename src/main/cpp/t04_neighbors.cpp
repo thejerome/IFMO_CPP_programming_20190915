@@ -24,10 +24,9 @@ int t04_neighbors() {
     int n = 0;
     cin >> n;
     int A = 0;
-    int prev = 0;
     cin >> A;
     for (int i = 1; i < n; i++){
-        prev = A;
+        int prev = A;
         cin >> A;
         if (A * prev > 0){
             cout << prev << " " << A;
