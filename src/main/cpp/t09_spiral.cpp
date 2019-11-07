@@ -4,13 +4,13 @@
 //
 //Формат выходных данных
 //        Выведите полученный массив, отводя на вывод каждого элемента ровно 4 символа.
-//
+//dw
 //Sample Input:
 //
 //4 5
-//Sample Output:
+//Sample Output://
 //
-//   1   2   3   4   5
+//   1   2   3   4   5//
 //  14  15  16  17   6
 //  13  20  19  18   7
 //  12  11  10   9   8
@@ -22,6 +22,32 @@
 using namespace std;
 
 int t09_spiral() {
-    
+	int m, n ,l,x ,y ,k ,i,j;
+	cin >> m;
+	cin >> n;
+	int mas[m][n];
+	k = 1;
+	l = 0;
+	x = m;
+	y = n;
+	while (k <= m * n) {
+		for (i = l; i < y; i++)
+			mas[l][i] = k++;
+		for (i = l + 1; i < x; i++)
+			mas[i][y - 1] = k++;
+		if (l != x - 1) {
+			for (i = y - 2; i >= l; i--)
+				mas[x - 1][i] = k++;
+		}
+		if (l != y - 1) {
+			for (i = x - 2; i > l; i--)
+				mas[i][l] = k++;
+		}
+		l++; x--; y--;
+	}
+	for (i = 0; i < m; i++) {
+		for (j = 0; j < n; j++)
+			cout << mas[i][j] << " ";
+	}
     return 0;
 }

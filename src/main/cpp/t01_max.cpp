@@ -16,9 +16,9 @@
 //0 3 2 4
 //2 3 5 5
 //5 1 2 3
-//Sample Output:
+//Sample Outpu//t:
 //
-//1 2
+//1 2//
 
 #include "t01_max.h"
 #include <iostream>
@@ -27,6 +27,27 @@
 using namespace std;
 
 int t01_max() {
-    
+	int n, m, i, j, max, mi, mj;
+	cin >> n >> m;
+	mj = 0;
+	mi = 0;
+	int mas[100][100];
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < m; j++) {
+			cin >> mas[i][j];
+		}
+	}
+	max = mas[0][0];
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < m; j++) {
+			if (mas[i][j] > max) {
+				mi = i;
+				mj = j;
+				max = mas[i][j];
+			}
+		}
+	}
+	cout << mi << ' ' << mj;
+
     return 0;
 }

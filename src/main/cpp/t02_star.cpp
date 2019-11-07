@@ -6,10 +6,10 @@
 // В результате "*" в массиве должны образовывать изображение звездочки.
 // Выведите полученный массив на экран, разделяя элементы массива пробелами.
 //
-//Sample Input:
+//Sample Input://
 //
 //5
-//Sample Output:
+//Sample Output://
 //
 //* . * . *
 //. * * * .
@@ -24,6 +24,31 @@
 using namespace std;
 
 int t02_star() {
+	int n;
+	cin >> n;
+	int mas[15][15];
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			if (i == j || i == n - 1 - j || i == n / 2 || j == n / 2) {
+				mas[i][j] = 1;
+			}
+			else {
+				mas[i][j] = 0;
+			}
+		}
+	}
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			if (mas[i][j] == 0) { 
+				cout << "." << " "; 
+			}
+			else {
+				cout << "*" << " ";
+			}
+		}
+	}
+
 
     return 0;
 }

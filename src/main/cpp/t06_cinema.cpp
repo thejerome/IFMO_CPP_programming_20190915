@@ -12,8 +12,8 @@
 // Если подходящего ряда нет, выведите число 0.
 //
 //Sample Input:
-//
-//3 4
+////
+//3 4//
 //0 1 0 1
 //1 0 0 1
 //1 1 1 1
@@ -29,6 +29,40 @@
 using namespace std;
 
 int t06_cinema() {
-    
-    return 0;
+	int n, m, k, i, j, x, y;
+	cin >> n >> m;
+	x = 0;
+	y = 0;
+	int mas[20][20];
+	for (i = 1; i <= n; i++)
+		for (j = 1; j <= m; j++)
+		cin >> mas[i][j];
+	cin >> k;
+	for (i = 1; i <= n; i++)
+	{
+		for (j = 1; j <= m; j++)
+		{
+			if (mas[i][j] == 0)
+			{
+				x++;
+			}
+			else
+			{
+				if (x > y) {
+					y = x;
+				}
+				x = 0;
+			}
+		}
+		if (x > y) {
+			y = x;
+		}
+		if (k <= y) {
+			cout << i;
+			break;
+		}
+	}
+	if (k > y)
+		cout << 0;
+	return 0;
 }
