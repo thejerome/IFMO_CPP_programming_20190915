@@ -4,7 +4,7 @@
 //        В первой строке вводится количество элементов в массиве. Во второй строке вводятся элементы массива.
 //Формат выходных данных
 //        Выведите ответ на задачу.
-//Sample Input:
+//Sample Input://
 //
 //6
 //1 2 2 3 3 3
@@ -19,40 +19,19 @@
 using namespace std;
 
 int t06_different() {
-	int N, i, j, f,b;
-	b = 0;
-	cin >> N;
+	int N, i, j, s;
 	int mas[10000];
-	for (i = 0; i < N; i++) {
+	cin >> N;
+	cin >> mas[0];
+	j = mas[0];
+	s = 1;
+	for (i = 1; i < N; i++) {
 		cin >> mas[i];
-	}
-
-	for (i = 0; i < N - 1; i++) {
-		for (int j = 0; j < N - i - 1; j++) {
-			if (mas[j] > mas[j + 1]) {
-				f = mas[j];
-				mas[j] = mas[j + 1];
-				mas[j + 1] = f;
-			}
+		if (mas[i] != j) {
+			s++;
+			j = mas[i];
 		}
 	}
-	f = 0;
-	for (i = 0; i < N - 1; i++) {
-		if (mas[i] == mas[i + 1]) {
-			for (j = 0; j < N; j++) {
-				mas[j] = mas[j + 1];
-				b++;
-				mas[N - f] = 0;
-			}
-			f++;
-		}
-	}
-
-	
-	for (i = 0; i < N; i++) {
-		cout << mas[i] << ' ';
-	}
-	cout << b;
-	
+	cout << s;
 	return (0);
 }

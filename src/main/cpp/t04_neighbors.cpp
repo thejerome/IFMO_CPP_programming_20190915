@@ -11,7 +11,7 @@
 //5
 //-1 2 3 -1 -2
 //Sample Output:
-//
+////
 //2 3
 
 #include "t04_neighbors.h"

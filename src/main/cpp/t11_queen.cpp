@@ -28,7 +28,7 @@
 //7 2
 //8 1
 //Sample Output 2:
-//
+////
 //YES
 
 #include "t11_queen.h"

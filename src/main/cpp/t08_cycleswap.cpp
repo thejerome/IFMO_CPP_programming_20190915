@@ -9,7 +9,7 @@
 //5
 //1 2 3 4 5
 //Sample Output:
-//
+////
 //5 1 2 3 4
 
 #include "t08_cycleswap.h"
