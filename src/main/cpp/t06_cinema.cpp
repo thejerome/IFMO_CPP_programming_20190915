@@ -54,7 +54,7 @@ int t06_cinema() {
 			}
 		}
 		if (free == k) { 
-			break
+			break;
 		};
 	}
 	cout << r;
