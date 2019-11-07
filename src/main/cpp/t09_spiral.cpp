@@ -22,27 +22,46 @@
 using namespace std;
 
 int t09_spiral() {
-    int n = 0, m = 0, stk = 0, step = 1;
-    cin >> n >> m;
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++){
-            if (n - i - 1 < i)
-                stk = n - 1 - i;
-            else
-                stk = i;
-            if (m - j - 1 < stk)
-                stk = m - j - 1;
-            if (j < stk)
-                stk = j;
-            for (int k = 0; k < stk; k++)
-                step += 2 * (m + n - 4 * k - 2);
-        if (i == stk || j == m - stk - 1)
-            cout << i + j - 2 * stk + step << ' ';
-        else
-            cout << 2 * (m + n - 4 * stk - 2) - (i + j - 2 * stk) + step << ' ';
-        step = 1;
-        }
-        cout << endl;
-    }
-    return 0;
+	int n = 0, m = 0;
+	cin >> n >> m;
+	int** a = new int* [n];
+	for (int i = 0; i < n; i++) {
+		a[i] = new int[m];
+		for (int j = 0; j < m; j++)
+			a[i][j] = 0;
+	}
+
+	for (int i = 0, j = 0, k = 0; k < n * m;) {
+		while (j < m - 1 && !a[i][j + 1])
+			a[i][j++] = ++k;
+		if (!a[i][j])
+			a[i++][j] = ++k;
+
+		while (i < n - 1 && !a[i + 1][j])
+			a[i++][j] = ++k;
+		if (!a[i][j])
+			a[i][j--] = ++k;
+
+		while (j > 0 && !a[i][j - 1])
+			a[i][j--] = ++k;
+		if (!a[i][j])
+			a[i--][j] = ++k;
+
+		while (i > 0 && !a[i - 1][j])
+			a[i--][j] = ++k;
+		if (!a[i][j])
+			a[i][j++] = ++k;
+	}
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++)
+			cout << a[i][j] << ' ';
+		cout << endl;
+	}
+
+	for (int i = 0; i < n; i++)
+		delete[] a[i];
+	delete[] a;
+
+	return 0;
 }
