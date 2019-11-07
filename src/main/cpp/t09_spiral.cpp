@@ -23,48 +23,55 @@
 using namespace std;
 
 int t09_spiral() {
-    int n,m;
-    cin >> n >> m;
+    int n = 0, m =0;
+    cin >>n>>m;
     int a[n][m];
-    int l = 0;
-    int i = 0;
-    int j = 0;
-    int k = 1;
-    while(k <= m*n){
-        while(j < m-1-l){
-            a[i][j] = k;
-            k++;
+    for (int i=0;i < n;i++) {
+        for (int j = 0; j < m; j++) {
+            a[i][j] = 0;
+        }
+    }
+    int k=1;
+    for (int j = 0; j <= (m-1); j++) {
+        a[0][j] = k;
+        k++;
+    }
+    for (int i = 1; i <= (n-1); i++) {
+        a[i][m - 1] = k;
+        k++;
+    }
+    for (int j = (m-2); j >= 0; j=j-1) {
+        a[n - 1][j] = k;
+        k++;
+    }
+    for (int  i= (n-2); i >= 1; i=i-1) {
+        a[i][0] = k;
+        k++;
+    }
+    int i=1, j=1;
+    while (k<n*m) {
+        while (a[i][j+1]==0){
+            a[i][j]=k++;
             j++;
         }
-        while(i < n-1-l){
-            a[i][j] = k;
-            k++;
+    while (a[i+1][j]==0) {
+            a[i][j] = k++;
             i++;
         }
-        while(j > 0+l){
-            a[i][j] = k;
-            k++;
-            j--;
+    while (a[i][j-1]==0) {
+            a[i][j] = k++;
+            j = j - 1;
         }
-        while(i > 1+l){
-            a[i][j] = k;
-            k++;
-            i--;
+    while (a[i-1][j]==0) {
+            a[i][j]=k++;
+            i=i-1;
         }
-        l++;
     }
-    int p;
-    int y = n*m;
-    while(y > 0){
-        y /= 10;
-        p++;
-    }
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < m; j++){
-            cout << setw(5) << a[i][j];
+    if (k<=n*m) a[i][j]=n*m;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) { 
+            cout << setw(4) << a[i][j]; 
         }
-        cout << "\n";
+            cout << endl;    
     }
-    
-    return 0;
 }
