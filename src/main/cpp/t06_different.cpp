@@ -47,6 +47,10 @@ int t06_different() {
 	}
 
 	
-	cout << N-b;
+	for (i = 0; i < N; i++) {
+		cout << mas[i] << ' ';
+	}
+	cout << b;
+	
 	return (0);
 }

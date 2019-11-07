@@ -28,24 +28,22 @@ int t10_unique() {
 	int N, i, j, s;
 	cin >> N;
 	int mas[100000];
-	s = 0;
-
+	
 	for (i = 0; i < N; i++) {
 		cin >> mas[i];
 	}
 
-	for (i = 0; i < N-1; i++) {
-		for (j = i+1; j < N; j++) {
-			if (mas[i] == mas[j])
+	for (i = 0; i < N; i++)
+	{
+		s = 0;
+		for (int j = 0; j < N; j++)
+			if (mas[i] == mas[j]) {
 				s++;
-		}
-		if (s == 0) {
-			cout << mas[i] << ' ';
-			s = 0;
+			}
+		if (s == 1) {
+			cout << mas[i] << " ";
 		}
 	}
 
 	return (0);
-
-
 }
