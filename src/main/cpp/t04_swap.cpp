@@ -35,7 +35,7 @@ int t04_swap() {
 		}
 	}
 
-	cin >> a 
+	cin >> a;
 	cin >> b;
 
 	for (int i = 0; i < n; i++) {
@@ -46,7 +46,7 @@ int t04_swap() {
 	
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
-			cout << a[i][j] << ' ';
+			cout << mas[i][j] << ' ';
 		}
 		
 	}
