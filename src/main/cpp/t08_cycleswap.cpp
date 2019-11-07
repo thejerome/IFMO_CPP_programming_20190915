@@ -19,5 +19,12 @@
 using namespace std;
 
 int t08_cycleswap() {
+    int n = 0;
+    cin >> n;
+    int A[n];
+    for (int i = 0; i < n; i++) cin >> A[i];
+    cout << A[n-1];
+    for (int i = 0; i < n - 1; i++) cout << " " << A[i];
+
 
 }

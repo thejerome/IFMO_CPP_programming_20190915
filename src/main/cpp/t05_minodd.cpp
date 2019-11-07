@@ -28,5 +28,15 @@
 using namespace std;
 
 int t05_minodd() {
+    int n = 0;
+    int min = 2147483647;
+    int A = 0;
+    cin >> n;
+    for(int i = 0; i < n; i++){
+        cin >> A;
+        if (abs(A) % 2 == 1 && A < min) min = A;
+    }
+
+    cout << (min == 2147483647 ? 0 : min);
 
 }
