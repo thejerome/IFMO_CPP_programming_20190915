@@ -29,7 +29,7 @@
 //-2
 //Sample Output 2:
 //
-//3 8
+//3 8//
 
 #include "t05_kdiag.h"
 #include <iostream>
