@@ -11,7 +11,7 @@
 //Sample Output 1:
 //
 //2
-//Sample Input 2://
+//Sample Input 2:////
 //
 //5
 //1 1 1 1 1
