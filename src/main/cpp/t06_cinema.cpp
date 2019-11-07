@@ -29,34 +29,40 @@
 using namespace std;
 
 int t06_cinema() {
-	int n, m, k, r,free = 0;
-	cin >> n;
-	cin	>> m;
-	int mas[n][m];
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			cin >> mas[i][j];
-		}
-	}
+	int n, m, k, i, j, x, y;
+	cin >> n >> m;
+	x = 0;
+	y = 0;
+	int mas[20][20];
+	for (i = 1; i <= n; i++)
+		for (j = 1; j <= m; j++)
+		cin >> mas[i][j];
 	cin >> k;
-	for (int i = 0; i < n; i++) {
-	  free = 0;
-		for (int j = 0; j < m; j++) {
-			if (mas[i][j] == 0) {
-				free++;
-				if (free == k) {
-					r = i + 1;
-					break;
-				}
+	for (i = 1; i <= n; i++)
+	{
+		for (j = 1; j <= m; j++)
+		{
+			if (mas[i][j] == 0)
+			{
+				x++;
 			}
-			else {
-				free = 0;
+			else
+			{
+				if (x > y) {
+					y = x;
+				}
+				x = 0;
 			}
 		}
-		if (free == k) { 
+		if (x > y) {
+			y = x;
+		}
+		if (k <= y) {
+			cout << i;
 			break;
-		};
+		}
 	}
-	cout << r;
+	if (k > y)
+		cout << 0;
 	return 0;
 }
