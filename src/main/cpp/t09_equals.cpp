@@ -11,7 +11,7 @@
 //Sample Output 1:
 //
 //2
-//Sample Input 2:
+//Sample Input 2:////
 //
 //5
 //1 1 1 1 1
@@ -26,5 +26,23 @@
 using namespace std;
 
 int t09_equals() {
+	int N, i, j, s;
+	int mas[100000];
+	s = 0;
+    cin >> N;
+	for (i = 0; i < N; i++) {
+		cin >> mas[i];
+	}
+
+
+	for (i = 0; i < N; i++) {
+		for (j = i + 1; j < N; j++) {
+			if (mas[i] == mas[j])
+				s++;
+		}
+	}
+	cout << s;
+
+	return (0);
 
 }

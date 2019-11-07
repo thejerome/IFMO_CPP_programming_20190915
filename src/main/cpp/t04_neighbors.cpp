@@ -11,8 +11,8 @@
 //5
 //-1 2 3 -1 -2
 //Sample Output:
-//
-//2 3
+////
+//2 3//
 
 #include "t04_neighbors.h"
 #include <iostream>
@@ -21,5 +21,20 @@
 using namespace std;
 
 int t04_neighbors() {
+	int N, i, k;
+	cin >> N;
+	int mas[10000];
 
+	for (i = 0; i < N; i++) {
+		cin >> mas[i];
+	}
+
+	for (i = 1; i < N; i++) {
+		if (mas[i] * mas[i - 1] > 0) {
+			cout << mas[i - 1] << ' ' << mas[i];
+			break;
+		}
+
+	}
+	return (0);
 }
