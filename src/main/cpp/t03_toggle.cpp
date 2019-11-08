@@ -25,4 +25,18 @@ using namespace std;
 
 int t03_toggle() {
 
+ char S;
+cin >> S;
+
+   if (char(S) >= 'A' && char(S) <='Z')
+   {
+     cout << char(S+32);
+}
+
+   else if (S >= 'a' && S <='z')
+
+        cout << char(S-32);
+    else
+        cout << S;
+
 }
