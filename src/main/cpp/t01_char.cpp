@@ -28,16 +28,10 @@
 
 
 using namespace std;
-bool P(int S)
-{
-    if(cin >> S)
-        return 1;
-    else
-        return 0;
-}
+
 int t01_char() {
 int S;
-if (P(S)== 1)
+if (cin >> S)
     cout << "yes";
 else
     cout <<"no";
