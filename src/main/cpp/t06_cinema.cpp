@@ -45,17 +45,17 @@ int t06_cinema() {
     for (int i=0; i<n; i++){
         g = 0;
         for (int j=0; j<m; j++){
-            if (g >= k){
-                p=1;
-                if (i+1 < R){
-                    R = i+1;
-                }
-            }
             if (a[i][j] == 0){
                 g++;
             }
             if (a[i][j] == 1){
                 g = 0;
+            }
+            if (g >= k){
+                p=1;
+                if (i+1 < R){
+                    R = i+1;
+                }
             }
         }
     }
