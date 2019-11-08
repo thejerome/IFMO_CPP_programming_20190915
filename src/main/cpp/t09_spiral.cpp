@@ -17,11 +17,87 @@
 
 #include "t09_spiral.h"
 #include <iostream>
+#include <iomanip> 
 
 
 using namespace std;
 
 int t09_spiral() {
-    
-    return 0;
+	int n, m;
+	cin >> n >> m;
+	int mas[n][m];
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			mas[i][j] = 0;
+		} 
+	}
+	bool right = false, down = false, left = false, up = false;
+	int count = 1, i = 0, j = 0;
+
+	while (right == false || left == false || down == false || up == false) {
+
+		while (right == false) {
+			if (right == false && j < m) {
+				mas[i][j] = count;
+				j++; count++;
+			}
+			else { right = true; j--; i++; }
+		}
+		if (mas[i][j] == 0) { right = false; }
+
+
+		while (down = false) {
+			if (down == false && i < n) {
+				mas[i][j] = count;
+				count++; i++;
+			}
+			else { down = true; i--; j--; }
+		}
+		if (mas[i][j] == 0) { down = false; }
+
+
+
+		while (left == false) {
+			if (left == false && j >= 0) {
+				mas[i][j] = count;
+				count++; j--;
+			}
+			else { left = true; j++; i--; }
+		}
+		if (mas[i][j] == 0) { left = false; }
+
+
+
+		while (up == false) {
+			if (up == false && i >= 0) {
+				mas[i][j] = count;
+				count++; i++;
+			}
+			else { up = true; i++; j++; }
+		}
+		if (mas[i][j] == 0) { up = false; }
+	}
+
+
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			cout << mas[i][j] << " ";
+		}
+	}
+
+	return 0;
 }
+	
+
+			
+	
+			
+
+
+
+
+
+
+
+
