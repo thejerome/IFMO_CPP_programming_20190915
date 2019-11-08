@@ -43,6 +43,7 @@ int t06_cinema() {
     int p=0;
     int R=21;
     for (int i=0; i<n; i++){
+        g = 0;
         for (int j=0; j<m; j++){
             if (g >= k){
                 p=1;
