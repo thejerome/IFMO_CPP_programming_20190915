@@ -22,6 +22,10 @@
 
 using namespace std;
 
+int count (int j, int n) {
+
+};
+
 int t08_queen(){
 
     return 0;
