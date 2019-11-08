@@ -32,4 +32,5 @@ int t04_neighbors() {
         }
     }
     return 0;
+    
 }
