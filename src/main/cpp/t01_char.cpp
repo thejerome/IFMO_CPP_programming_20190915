@@ -31,13 +31,13 @@ using namespace std;
 bool P(int S)
 {
     if(cin >> S)
-        return true;
+        return 1;
     else
-        return false;
+        return 0;
 }
 int t01_char() {
-bool S;
-if (P(S)== true)
+int S;
+if (P(S)== 1)
     cout << "yes";
 else
     cout <<"no";
