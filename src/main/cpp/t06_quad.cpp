@@ -21,12 +21,8 @@
 using namespace std;
 
 int t06_quad() {
-	double a, b, c, D, x1=0, x2=0;
+	double a, b, c, D, x1, x2;
 	cin >> a >> b >> c;
-	D=x1+5;
-	if(D>0) {}
-	D=x2+3;
-	if(D>0) {}
 	D = sqrt(b * b - 4 * a * c);
 	if (D > 0)
 	{
