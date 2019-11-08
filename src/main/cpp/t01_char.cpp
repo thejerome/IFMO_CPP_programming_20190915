@@ -37,7 +37,7 @@ bool P(int S)
 }
 int t01_char() {
 int S;
-if (P(S))
+if (P(S)== true)
     cout << "yes";
 else
     cout <<"no";
