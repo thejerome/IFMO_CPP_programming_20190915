@@ -30,7 +30,7 @@ int t08_chess() {
 	int mas[n][m];
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
-			if ((i + j) % 2 == 0) 
+			if ((i + j) % 2 == 0)
 			{
 				mas[i][j] = l;
 				l++;
@@ -50,45 +50,8 @@ int t08_chess() {
 	}
 
 	return 0;
-
-
-
-	int n, m;
-	cin >> n >> m;
-	int mas[n][m];
-	int h = 1;
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			mas[i][j] = 0;
-		}
-	}
-	int i = 0, j = 0;
-	while (m * n > h) {
-		while (mas[i][(j + 1) % m] == 0) {
-			mas[i][j] = h;
-			h++;
-			j++;
-		}
-		while (mas[(i - 1) % n][j] == 0) {
-			mas[i][j] = h;
-			h++;
-			i--;
-		}
-		while (mas[i][(j - 1) % m] == 0) {
-			mas[i][j] = h;
-			h++;
-			j--;
-		}
-		while (mas[(i + 1) % n][j] == 0) {
-			mas[i][j] = h;
-			h++;
-			i++;
-		}
-	}
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			cout << mas[i][j] << " ";
-		}
-	}
-	return 0;
 }
+
+
+
+	
