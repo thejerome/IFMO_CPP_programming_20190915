@@ -22,12 +22,12 @@ using namespace std;
 
 int t06_quad() {
 	double a, b, c, D, x1=2, x2=2;
+	cin >> a >> b >> c;
+	x1 = sqrt(b * b - 4 * a * c);
+	x2 = sqrt(b * b - 4 * a * c);
+	D = sqrt(b * b - 4 * a * c);
 	x1=0;
 	x2=0;
-	x1 = x1+x2;
-	x2 = x1+x2;
-	cin >> a >> b >> c;
-	D = sqrt(b * b - 4 * a * c);
 	if (D > 0)
 	{
 		x1 = (-b + D) / (2 * a);
