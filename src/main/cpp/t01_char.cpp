@@ -30,13 +30,13 @@
 using namespace std;
 bool P(int S)
 {
-
-return S;
-
+    if(cin >> S)
+        return true;
+    else
+        return false;
 }
 int t01_char() {
 int S;
-cin >> S;
 if (P(S))
     cout << "yes";
 else
