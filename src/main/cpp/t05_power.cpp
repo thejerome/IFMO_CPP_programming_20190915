@@ -26,10 +26,24 @@
 #include <cmath>
 
 using namespace std;
-
-//function power
+double power(double a, int n) {
+double x;
+if (n == 0) x = 1;
+else if (n == 1) x = a;
+else if (n > 1) {
+x = a;
+for (int i = 2; i <= n; i++) x = x * a;}
+else if (n < 0) {
+x = a;
+for (int i = 2; i <= -n; i++) x = x * a;
+x = 1 / x;}
+return x;}
 
 int t05_power() {
-
-    return 0;
+double  a;
+int n;
+cin >>a>>n;
+cout<<power(a,n);
+return 0;
 }
+
