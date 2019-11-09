@@ -32,10 +32,10 @@ int t08_chess() {
     bool ch;
     for (int i =0; i<n; i++){
         if (i%2 == 0){
-            ch = false;
-        }
-        if ((i%2 != 0) or (i == 0)){
             ch = true;
+        }
+        if ((i%2 != 0)){
+            ch = false;
         }
         for (int j=0; j<m; j++){
             if (ch){
