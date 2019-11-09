@@ -36,7 +36,6 @@ using namespace std;
 int t07_ip() {
 int w1,w2,w3,w4;
 bool n=(cin>>w1) && cin.get()=='.' &&(cin>>w2) && cin.get()=='.' &&(cin>>w3) && cin.get()=='.' &&(cin>>w4) &&w1>=0 && w1<256 &&w2>=0 && w2<256 && w3>=0 && w3<256 &&w4>=0 && w4<256;
-if (w2<w4){cout<<"NO";return 0;}
 cout<<(n?"YES":"NO");
 return 0;
 }
