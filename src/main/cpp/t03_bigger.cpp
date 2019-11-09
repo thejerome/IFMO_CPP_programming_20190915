@@ -20,4 +20,17 @@ using namespace std;
 
 int t03_bigger() {
 
+    int n,i,previous;
+    cin >> n;
+    int a[1000];
+    cin >> a[0];
+    previous = a[0];
+    for (i = 1; i < n; i++) {
+        cin >> a[i];
+        if (a[i] > previous)
+            cout << a[i] << ' ';
+        previous = a[i];
+    }
+    return (0);
+
 }

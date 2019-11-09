@@ -19,5 +19,19 @@
 using namespace std;
 
 int t06_different() {
-
+    int n,i,current,sum;
+    cin >> n;
+    int a[1000];
+    cin >> a[0];
+    current = a[0];
+    sum = 1;
+    for (i = 1; i < n; i++) {
+        cin >> a[i];
+        if (a[i] != current){
+            sum++;
+            current = a[i];
+        }
+    }
+    cout << sum;
+    return (0);
 }

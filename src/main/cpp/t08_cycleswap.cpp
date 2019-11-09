@@ -19,5 +19,25 @@
 using namespace std;
 
 int t08_cycleswap() {
+    int n,i,previous;
+    cin >> n;
+    int a[1000];
+    cin >> a[0];
+    previous = a[0];
+
+    for (i = 1; i < n-1; i++) {
+        cin >> a[i];
+        int middle = a[i];
+        a[i] = previous;
+        previous = middle;
+    }
+
+    cin >> a[n-1];
+    cout << a[n-1] << ' ';
+    for (i = 1; i < n-1; i++)
+        cout << a[i] << ' ';
+    cout << previous;
+
+    return (0);
 
 }

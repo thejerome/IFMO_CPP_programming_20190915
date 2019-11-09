@@ -25,5 +25,26 @@
 using namespace std;
 
 int t10_unique() {
+    int n,i,j,sum;
+    cin >> n;
+    int a[1000];
+    sum = 0;
+
+    for (i = 0; i < n; i++)
+        cin >> a[i];
+
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            if (a[i] == a[j])
+                sum++;
+        }
+        if (sum == 1)
+            cout << a[i] << ' ';
+        sum = 0;
+    }
+
+    return (0);
+
+    return (0);
 
 }
