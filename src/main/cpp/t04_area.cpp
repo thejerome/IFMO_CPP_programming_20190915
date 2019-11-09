@@ -38,7 +38,7 @@ bool IsPointInCircle(float x,float y){
     else return false;
 }
 bool IsPointOnCircle(float x,float y){
-    if (sqrt(pow(x+1,2)+pow(y-1,2))==2) return true;
+    if (sqrt(pow(x+1,2)+pow(y-1,2))>=2) return true;
     else return false;
 }
 bool IsPointInArea(float x,float y){
