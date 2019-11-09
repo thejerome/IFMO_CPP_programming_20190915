@@ -29,7 +29,7 @@ int t07_snake() {
     int num = 1;
     bool ch = (n % 2 == 0);
     if (ch){
-        for (int i = 0; i<(n/2)+1; i=i+2){
+        for (int i = 0; i<n+1; i=i+2){
             for (int j = 0; j < m; j++){
                 a[i][j] = num;
                 num++;
@@ -41,7 +41,7 @@ int t07_snake() {
         }
     }
     if (!ch){
-        for (int i = 0; i<(n/2)+1; i=i+2){
+        for (int i = 0; i<n+1; i=i+2){
             for (int j = 0; j < m; j++){
                 a[i][j] = num;
                 num++;
