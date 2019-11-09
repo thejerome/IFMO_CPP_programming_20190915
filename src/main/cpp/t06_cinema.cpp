@@ -43,18 +43,16 @@ int t06_cinema() {
         for (int j=0;j<c;j++) {
             if (a[i][j]==0) {
                 s++;
-                cout<<"s="<<s<<endl;
                 if (max<s) {
                     max=s;
-                    cout<<"max="<<max<<endl;
                 }
             }
             else {
                 s=0;
             }
         }
-        if ((d<max) && (max<max2)) {
-            r=i;
+        if ((d<=max) && (max<max2)) {
+            r=i+1;
             max2=max;
         }
     }
