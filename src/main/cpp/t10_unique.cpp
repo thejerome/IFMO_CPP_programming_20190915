@@ -38,7 +38,7 @@ for (i=0;i<n;i++) {
     }
   }
   if (count==1) {
-    cout << a[i] << " ";
+    cout << a[j] << " ";
   }
 }
   return 0;
