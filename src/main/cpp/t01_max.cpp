@@ -57,6 +57,7 @@ int t01_max() {
             }
         }
     }
+    
     cout <<maxi <<" "<<maxj;
     return 0;
 }
