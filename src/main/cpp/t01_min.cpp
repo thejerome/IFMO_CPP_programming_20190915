@@ -21,11 +21,14 @@
 
 using namespace std;
 
-//function min 
-
-//function min4 
+int min(int a,int b){
+if (a<b) return a;
+else return b;
+}
 
 int t01_min() {
-
-    return 0;
+int a,b,c,d;
+cin>>a>>b>>c>>d;
+cout<<min(min(a,b),min(c,d));
+return 0;
 }
