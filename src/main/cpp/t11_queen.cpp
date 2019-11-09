@@ -40,4 +40,22 @@ using namespace std;
 
 int t11_queen() {
 
-}
+    int N = 8, m = 0, x, y;
+
+    int A[N];
+    int B[N];
+
+    for (int i = 0; i < N; i++)
+        cin >> A [i] >> B [i];
+
+    for (int i = 0; i < N-1; i++)
+        for (int j = i+1; j < N; j++) {
+            x=abs(A[i]-A[j]);
+            y=abs(B[i]-B[j]);
+            if (((x==y) && ((x+y)!=0)) || ((A[i]==A[j]) && (B[i]!=B[j])) || ((A[i]!=A[j]) && (B[i]==B[j]))) m++;
+        }
+    if (m == 0) cout << "NO";
+        else cout << "YES";
+
+return 0;
+};
