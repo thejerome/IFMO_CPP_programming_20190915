@@ -20,22 +20,16 @@ using namespace std;
 
 int t07_swap() {
 
-    int N, m;
+    int N;
     cin >> N;
 
     int A[N];
-
     for (int i = 0; i < N; i++)
         cin >> A [i];
-
     for (int i = 1; i < N; i = i + 2) {
-        m = A[i];
-        A[i] = A[i-1];
-        A[i-1] = m;
+        swap(A[i], A[i-1]);
     }
-
     for (int i = 0; i < N; i++)
         cout << A [i] << " ";
-
 return 0;
 };
