@@ -35,7 +35,6 @@ if (check(I, J, 0)) {first[I] = J;R = second(N, I + 1, 0);}
 return R + second(N, I, J + 1);}
 else return 0;}
 }
-
 int t08_queen(){
 int N;
 cin >> N;
