@@ -36,10 +36,16 @@
 #include <cmath>
 
 using namespace std;
-
-//function IsPointInCircle
+bool Point(double x, double y, double xc, double yc, double r) {
+return abs(x - xc)*abs(x - xc) + abs(y - yc)*abs(y - yc) <= r*r;
+}
 
 int t03_circle() {
-
-    return 0;
+double  x, y, xc, yc, r;
+cin >> x >> y >> xc >> yc >> r;
+if (Point(x, y, xc, yc, r)) {
+cout << "YES";}
+else
+cout << "NO";
+return 0;
 }

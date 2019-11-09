@@ -31,10 +31,20 @@
 #include <cmath>
 
 using namespace std;
-
-//function IsPointInArea
+bool IsPointInArea(double x, double y) {
+double in_circle = 2 * 2 >= abs(x + 1) * abs(x + 1) + abs(y - 1) * abs(y - 1);
+double a1 = y >= 2 * x + 2;
+double a2 = y >= -x;
+double b1 = y <= 2 * x + 2;
+double b2 = y <= -x;
+double on_circle = 2 * 2 == abs(x + 1) * abs(x + 1) + abs(y - 1) * abs(y - 1);
+return in_circle && a1 && a2 || (on_circle || not in_circle) && b1 && b2;
+}
 
 int t04_area() {
-
-    return 0;
+double  x, y;
+cin >> x >> y;
+if (IsPointInArea(x, y)) cout << "YES";
+else cout << "NO";
+return 0;
 }
