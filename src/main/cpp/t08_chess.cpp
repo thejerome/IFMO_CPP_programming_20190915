@@ -24,6 +24,32 @@
 using namespace std;
 
 int t08_chess() {
-    
-    return 0;
+    int n, m, k;
+    cin >> n >> m;
+    int a[100][100];
+    k = 1;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            if (((i + j) % 2) == 0) {
+                a[i][j] = k;
+                k++;
+            }
+            if (((i + j) % 2) == 1) {
+                a[i][j] = 0;
+            }
+        }
+    }
+
+    for (int i = 0 ; i < n ; i++) {
+        for (int j = 0 ; j < m ; j++) {
+            if (a[i][j] < 10)
+                cout << "   ";
+            if (9 < a[i][j] && a[i][j]< 100)
+                cout << "  ";
+            if (99 < a[i][j] && a[i][j] < 1000)
+                cout << " ";
+            cout << a[i][j];
+        }
+    }
 }
