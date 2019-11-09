@@ -34,7 +34,34 @@ using namespace std;
 
 //function IsPointInArea
 
+bool IsPointInArea (double x, double y) {
+
+    double coord1 = pow((x - (-1) ), 2);
+    double coord2 = pow((y - 1), 2);
+
+    double dist = sqrt(coord1 + coord2);
+    bool InCircle = (2 > dist);
+    bool AtCircle = (2 == dist);
+
+    bool area1 = (y >= -x) && (y >= (2 * x + 2));
+    area1 = (area1 && (InCircle || AtCircle));
+
+    bool area2 = (y <= -x) && (y <= (2 * x + 2));
+    area2 = (area2 && (!InCircle || AtCircle));
+
+    return (area1 || area2);
+}
+
+
+
 int t04_area() {
+
+    double x = 0;
+    double y = 0;
+    cin >> x >> y;
+
+    if (IsPointInArea (x, y)) cout << "YES";
+    else cout << "NO";
 
     return 0;
 }
