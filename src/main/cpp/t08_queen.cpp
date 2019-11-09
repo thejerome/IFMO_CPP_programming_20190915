@@ -22,7 +22,24 @@
 
 using namespace std;
 
-int t08_queen(){
-
-    return 0;
+int first[10];
+bool check(int I, int J, int K) {
+if (K == I) return true;
+else return first[K] != J && (I - K) != (J -first[K]) && (I - K) != (first[K] - J) && check(I, J, K + 1);
 }
+int second(int N, int I, int J) {
+if (I == N) return 1;
+else {
+if (J < N) {int R = 0;
+if (check(I, J, 0)) {first[I] = J;R = second(N, I + 1, 0);}
+return R + second(N, I, J + 1);}
+else return 0;}
+}
+
+int t08_queen(){
+int N;
+cin >> N;
+cout << second(N, 0, 0);
+return 0;
+}
+
