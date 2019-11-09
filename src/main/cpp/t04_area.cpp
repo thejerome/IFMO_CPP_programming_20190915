@@ -47,7 +47,6 @@ bool IsPointInArea(float x,float y){
     if ((y<=0)and(y<=-x)and(y<=(2*x+2))and(IsPointOnCircle(x,y))) flag=true;
     return flag;
 }
-
 int t04_area() {
 float x, y;
 cin >>x>>y;
