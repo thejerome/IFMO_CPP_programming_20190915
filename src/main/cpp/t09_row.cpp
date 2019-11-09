@@ -23,5 +23,21 @@
 using namespace std;
 
 int t09_row() {
+    int MAX, CMAX, a, b;
+    MAX = 1;
+    CMAX = 1;
+    b = -1;
+    cin >> a ;
+    while (b!=0) {
+        cin >> b;
+        if (a == b)
+            CMAX++;
+        else
+            CMAX = 1;
+        if (MAX < CMAX)
+            MAX = CMAX;
+        a = b;
+    }
+    cout << MAX;
 
 };
