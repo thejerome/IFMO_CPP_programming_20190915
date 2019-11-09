@@ -26,32 +26,27 @@ int t07_snake() {
     int n=0, m=0;
     cin >>n >>m;
     int a[n][m];
-    int ch;
     int num = 1;
-    if (n%2 == 0) {
-        ch = 1;
-    } else {
-        ch = 0;
-    }
-    if (ch == 1){
+    bool ch = (n % 2 == 0);
+    if (ch){
         for (int i = 0; i<(n/2)+1; i=i+2){
             for (int j = 0; j < m; j++){
                 a[i][j] = num;
                 num++;
             }
-            for (int k = m; k > -1; k--){
+            for (int k = m-1; k > -1; k--){
                 a[i+1][k] = num;
                 num++;
             }
         }
     }
-    if (ch == 0){
+    if (!ch){
         for (int i = 0; i<(n/2)+1; i=i+2){
             for (int j = 0; j < m; j++){
                 a[i][j] = num;
                 num++;
             }
-            for (int k = m; k > -1; k--){
+            for (int k = m-1; k > -1; k--){
                 a[i+1][k] = num;
                 num++;
             }
@@ -63,7 +58,7 @@ int t07_snake() {
     }
     for (int i=0; i<n; i++){
         for (int j=0; j<m; j++){
-            cout <<setw(4) <<a[n][m] <<" ";
+            cout <<setw(4) <<a[i][j] <<" ";
         }
         cout <<endl;
     }
