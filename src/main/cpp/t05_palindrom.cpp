@@ -21,7 +21,18 @@
 
 
 using namespace std;
-
+bool palindrom(const std::string & a){
+for (std::size_t i = 0, k = a.size() - 1; i <= k; ++i, --k){
+if (a[i] != a[k])
+return false;}
+return true;
+}
 int t05_palindrom() {
-
+string a;
+getline (cin, a);
+if (palindrom(a)){
+cout << "yes";}
+else{
+cout << "no";}
+return 0;
 }
