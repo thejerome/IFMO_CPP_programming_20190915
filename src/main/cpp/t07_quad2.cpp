@@ -20,7 +20,7 @@
 
 using namespace std;
 int t07_quad2() {
-    float a, b, c, d, x1, x2;
+    float a, b, c, d;
     cin >> a >> b >> c;
     d = b*b - 4*a*c;
     if(d < 0) {cout << 0;}
@@ -28,7 +28,7 @@ int t07_quad2() {
     if(a == 0 and b == 0 and c!=0) {cout << 0;}
     if(a == 0 and b == 0 and c==0) {cout << 3;}
         if (d >= 0 and a!=0 ) {
-        x1 = (-b + sqrt(d))/2/a;
-        c = (-b - sqrt(d))/2/a;
-        if(x1 == c) {cout << 1 << " " << x1;} else {if(x1 > c) {cout << 2 << " " << c << " " << x1;} else {cout << 2 << x1 << " " << c;}}}
+        d = (-b + sqrt(b*b - 4*a*c))/2/a;
+        c = (-b - sqrt(b*b - 4*a*c))/2/a;
+        if(d == c) {cout << 1 << " " << d;} else {if(d > c) {cout << 2 << " " << c << " " << d;} else {cout << 2 << d << " " << c;}}}
 };
