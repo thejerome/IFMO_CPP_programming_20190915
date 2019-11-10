@@ -22,5 +22,15 @@
 using namespace std;
 
 int t06_longest() {
-
+string x,y;
+int max = 0;
+while(cin>>x){
+    if(max <x.length()){
+        y = x;
+        max=x.length();
+    }
 }
+cout<<y;
+return 0;
+}
+

@@ -24,5 +24,11 @@
 using namespace std;
 
 int t02_up() {
-    
+char a;
+cin>>a;
+if (a>='a' && a<='z'){
+int b=(int)a -32;
+cout<<(char)b;}
+else {cout<<a;}
+return 0;
 }

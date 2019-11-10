@@ -34,5 +34,30 @@
 using namespace std;
 
 int t07_ip() {
-
+string x;
+cin>>x;
+if(x[0]=='.' || x[x.length()-1]=='.'){
+cout<<"NO";
+return 0;}
+int count=0,y=0;
+while(x.find('.',y) != string::npos){
+count++;
+y=x.find('.',y)+1;}
+if(count != 3){
+cout<<"NO";
+return 0;}
+for(int i=0;i<x.length();i++){
+int a=0;
+while(i<x.length() && x[i]!='.'){
+a=a*10+(x[i]-'0');
+i++;}
+if(a>255 || a<0){
+cout<<"NO";
+return 0;}
+if(i<x.length()-1)
+if(x[i+1]=='.'){
+cout<<"NO";
+return 0;}
 }
+cout<<"YES";
+return 0;}

@@ -28,5 +28,20 @@
 using namespace std;
 
 int t04_count() {
-
+char x[80];
+int w, a = 0;
+cin.get(x, 80);
+int i = 0;
+while (x[i] == ' ' && x[i] != '\0')
+i++;
+w = 0;
+while (x[i] != '\0') {
+if (x[i] != ' ' && w == 0){
+w = 1;
+a++;}
+else if (x[i] == ' ')
+w = 0;
+i++;}
+cout<<a;
+return 0;
 }
