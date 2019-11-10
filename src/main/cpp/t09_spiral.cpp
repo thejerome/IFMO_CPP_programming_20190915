@@ -27,19 +27,25 @@ int t09_spiral() {
     cin>>b>>c;
     int a[b][c];
 for (int k=0;k<b-k;k++) {
+    if ((k<b-1-k) && (k<c-1-k)) {
     for (int j=k;j<c-k;j++) {
         a[k][j]=d;
         d++;
     }
+    }
+    if ((k<b-1-k) && (k<c-1-k)) {
     for (int i=k+1;i<b-k;i++) {
         a[i][c-k-1]=d;
         d++;
+    }
     }
     if ((k<b-1-k) && (k<c-1-k)) {
     for (int j=k+1;j<c-k;j++) {
         a[b-1-k][c-1-j]=d;
         d++;
     }
+    }
+    if ((k<b-1-k) && (k<c-1-k)) {
     for (int i=k+1;i<b-1-k;i++) {
         a[b-1-i][k]=d;
         d++;
@@ -55,3 +61,4 @@ for (int k=0;k<b-k;k++) {
     }
     return 0;
 }
+
