@@ -39,10 +39,9 @@ int t07_ip() {
     bool b = 1;
     char c;
     getline(cin, s);
-    int i, j, len, pointcount = 0, length, y1, y2, y3, y4;
-    len = s.size();
+    int i, j, pointcount = 0, length, y1, y2, y3, y4;
      vector <int> pointid(3);
-     for (i = 0; i < len; i++) {
+     for (i = 0; i < s.size(); i++) {
          if (s[i] == '.') {
              pointid[pointcount] = i;
              pointcount++;
@@ -56,7 +55,7 @@ int t07_ip() {
    x1 = s.substr(0, pointid[0]);                              
    x2 = s.substr(pointid[0]+1, pointid[1]-pointid[0]-1);    
    x3 = s.substr( pointid[1]+1, pointid[2]-pointid[1]-1);     
-   x4 = s.substr( pointid[2]+1, len-pointid[2]-1);         
+   x4 = s.substr( pointid[2]+1, s.size()-pointid[2]-1);         
  //-------------------------       
         for (auto c: x1) {
          if (c < '0' || c > '9') {
@@ -83,7 +82,7 @@ int t07_ip() {
          }
        }
     //-----------------------      
- if (!b || pointid[0] * (pointid[1]-pointid[0]-1) * (pointid[2]-pointid[1]-1) * (len-pointid[2]-1) == 0) {
+ if (!b || pointid[0] * (pointid[1]-pointid[0]-1) * (pointid[2]-pointid[1]-1) * (s.size()-pointid[2]-1) == 0) {
        cout << "NO";   
       }
       else {
