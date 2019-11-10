@@ -36,11 +36,10 @@ using namespace std;
 
 int t07_ip() {
   string s, x1, x2, x3, x4;
-    bool check = 1;
+    bool b = 1;
     char c;
     getline(cin, s);
     int i, j, len, pointcount = 0, length, y1, y2, y3, y4;
-    int  length1, length2, length3;
     len = s.size();
      vector <int> pointid(3);
      for (i = 0; i < len; i++) {
@@ -52,42 +51,40 @@ int t07_ip() {
     
     if (pointcount != 3) {
         cout << "NO";
-    }    
-  
+    }
+    
     else {
-   x1 = s.substr(0, pointid[0]);                          length1 = x1.size();       
-   x2 = s.substr(pointid[0]+1, pointid[1]-pointid[0]-1);  length2 = x2.size();       
-   x3 = s.substr( pointid[1]+1, pointid[2]-pointid[1]-1); length3 = x3.size();    
-   x4 = s.substr( pointid[2]+1, len-pointid[2]-1);            
+   x1 = s.substr(0, pointid[0]);                              
+   x2 = s.substr(pointid[0]+1, pointid[1]-pointid[0]-1);    
+   x3 = s.substr( pointid[1]+1, pointid[2]-pointid[1]-1);     
+   x4 = s.substr( pointid[2]+1, len-pointid[2]-1);         
  //-------------------------       
-      while (check != 0) {  
-      for (auto c: x1) {
+        for (auto c: x1) {
          if (c < '0' || c > '9') {
-             check = 0;
-            break;
+             b = 0;
+             break;
          }
         }
         for (auto c: x2) {
          if (c < '0' || c > '9') {
-             check = 0;
-            break;
+             b = 0;
+             break;
          }
         }
         for (auto c: x3) {
          if (c < '0' || c > '9') {
-             check = 0;
-            break;
+             b = 0;
+             break;
          }
         }
         for (auto c: x4) {
          if (c < '0' || c > '9') {
-             check = 0;
-           break;
+             b = 0;
+             break;
          }
-        }
-      }
+       }
     //-----------------------      
-      if (!check || length1 * length2 * length3 == 0) {
+ if (!b || pointid[0] * (pointid[1]-pointid[0]-1) * (pointid[2]-pointid[1]-1) * (len-pointid[2]-1) == 0) {
        cout << "NO";   
       }
       else {
@@ -96,7 +93,7 @@ int t07_ip() {
         y3 = stoi(x3);
         y4 = stoi(x4); 
         if ( y1<0 || y1>255 || y2<0 || y2>255 || y3<0 || y3>255 || y4<0 || y4>255) {
-         cout << "NO";   
+         cout << "NO";  
         }
           else {
            cout << "YES";   
