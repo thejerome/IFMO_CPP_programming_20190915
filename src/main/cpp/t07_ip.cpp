@@ -38,7 +38,7 @@ int t07_ip() {
   string s, x1, x2, x3, x4;
     char c;
     getline(cin, s);
-    int i, j, pointcount = 0, length, y1, y2, y3, y4;
+    int i, j, pointcount = 0, length;
      vector <int> pointid(3);
      for (i = 0; i < s.size(); i++) {
          if (s[i] == '.') {
@@ -86,6 +86,7 @@ int t07_ip() {
        cout << "NO";   
       }
       else {
+        string  y1, y2, y3, y4;
         y1 = stoi(x1);   
         y2 = stoi(x2);
         y3 = stoi(x3);
