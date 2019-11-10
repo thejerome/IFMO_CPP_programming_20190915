@@ -60,26 +60,32 @@ int t07_ip() {
    x3 = s.substr( pointid[1]+1, pointid[2]-pointid[1]-1); length3 = x3.size();    
    x4 = s.substr( pointid[2]+1, len-pointid[2]-1);            
  //-------------------------       
-        for (auto c: x1) {
+      while (check != 0) {  
+      for (auto c: x1) {
          if (c < '0' || c > '9') {
              check = 0;
+            break;
          }
         }
         for (auto c: x2) {
          if (c < '0' || c > '9') {
              check = 0;
+            break;
          }
         }
         for (auto c: x3) {
          if (c < '0' || c > '9') {
              check = 0;
+            break;
          }
         }
         for (auto c: x4) {
          if (c < '0' || c > '9') {
              check = 0;
+           break;
          }
         }
+      }
     //-----------------------      
       if (!check || length1 * length2 * length3 == 0) {
        cout << "NO";   
@@ -90,10 +96,7 @@ int t07_ip() {
         y3 = stoi(x3);
         y4 = stoi(x4); 
         if ( y1<0 || y1>255 || y2<0 || y2>255 || y3<0 || y3>255 || y4<0 || y4>255) {
-         check = 0;   
-        }
-        if (!check) {
-         cout << "NO";  
+         cout << "NO"   
         }
           else {
            cout << "YES";   
