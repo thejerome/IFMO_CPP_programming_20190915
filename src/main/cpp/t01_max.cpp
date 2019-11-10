@@ -45,7 +45,7 @@ int t01_max() {
                 maxi = i;
                 maxj = j;
             }
-            if ((a[i][j] == max) and (maxi > i)){
+            if ( (maxi > i) and (a[i][j] == max)){
                 max = a[i][j];
                 maxi = i;
                 maxj = j;

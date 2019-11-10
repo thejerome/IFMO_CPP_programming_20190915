@@ -39,11 +39,10 @@ int t06_cinema() {
     }
     int k = 0;
     cin >>k;
-    int g=0;
     int p=0;
     int R=21;
     for (int i=0; i<n; i++){
-        g = 0;
+        int g = 0;
         for (int j=0; j<m; j++){
             if (a[i][j] == 0){
                 g++;
