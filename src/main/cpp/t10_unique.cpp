@@ -20,8 +20,10 @@
 //4 2 1
 
 #include "t10_unique.h"
-#include <iostream>
-
+#include <iostream> 
+#include <iomanip>
+#include <cmath>
+#include <vector>
 using namespace std;
 
 int t10_unique() {
