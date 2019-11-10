@@ -38,7 +38,7 @@ int n, count=0;
     for (int j = 0; j < n; j += 1)
     {
 
-      if (a[i] == a[j]) r++;
+      if (a[i] == a[j]) count++;
     }
     if (count == 1)
       cout << a[i] << " ";
