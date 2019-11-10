@@ -26,25 +26,21 @@ using namespace std;
 
 int t10_unique() {
     int n;
-    bool unq = true;
     cin >> n;
     int arr[n];
     for (int i = 0; i < n; i++){
         cin >> arr[i];
     };
     for (int i = 0; i < n; i++){
-        for (int j = 1; j < n; j++){
-            if ((arr[i] == arr[j]) ){
+        bool unq = true;
+        for (int j = 0; j < n; j++){
+            if ((arr[i] == arr[j]) && i != j ){
                 unq = false;
             }
         }
-        for (int j = 0; j < i; j++){
-            if(arr[i] == arr[j]){
-                unq = false;
-            }
-        }
+
         if (unq){
-            cout << arr[i];
+            cout << arr[i]<< " ";
         }
     }
 }
