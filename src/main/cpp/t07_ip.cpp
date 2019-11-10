@@ -47,8 +47,7 @@ int t07_ip() {
              pointid[pointcount] = i;
              pointcount++;
          }
-     }
-    
+     } 
     if (pointcount != 3) {
         cout << "NO";
     }
