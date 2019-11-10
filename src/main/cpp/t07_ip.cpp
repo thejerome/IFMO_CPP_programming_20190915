@@ -36,7 +36,6 @@ using namespace std;
 
 int t07_ip() {
   string s, x1, x2, x3, x4;
-    bool b = 1;
     char c;
     getline(cin, s);
     int i, j, pointcount = 0, length, y1, y2, y3, y4;
@@ -55,7 +54,8 @@ int t07_ip() {
    x1 = s.substr(0, pointid[0]);                              
    x2 = s.substr(pointid[0]+1, pointid[1]-pointid[0]-1);    
    x3 = s.substr( pointid[1]+1, pointid[2]-pointid[1]-1);     
-   x4 = s.substr( pointid[2]+1, s.size()-pointid[2]-1);         
+   x4 = s.substr( pointid[2]+1, s.size()-pointid[2]-1);     
+          bool b = 1;
  //-------------------------       
         for (auto c: x1) {
          if (c < '0' || c > '9') {
