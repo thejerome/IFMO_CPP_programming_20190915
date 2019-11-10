@@ -24,9 +24,9 @@ using namespace std;
 
 int t09_spiral() {
     int b,c,d=1;
-    int a[100][100];
     cin>>b>>c;
-for (int k=0;k<b-1;k++) {
+    int a[b][c];
+for (int k=0;k<b-k;k++) {
     for (int j=k;j<c-k;j++) {
         a[k][j]=d;
         d++;
@@ -35,15 +35,12 @@ for (int k=0;k<b-1;k++) {
         a[i][c-k-1]=d;
         d++;
     }
-    for (int j=c-2-k;j!=-1;j--) {
-        a[b-1][j]=d;
+    for (int j=k+1;j<c-k;j++) {
+        a[b-1-k][c-1-j]=d;
         d++;
     }
-    for (int i=b-2-k;i!=0;i--) {
-        if (i==1) {
-            break;
-        }
-        a[i][k]=d;
+    for (int i=k+1;i<b-1-k;i++) {
+        a[b-1-i][k]=d;
         d++;
     }
     
