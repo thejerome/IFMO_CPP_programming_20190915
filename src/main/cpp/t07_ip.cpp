@@ -29,10 +29,70 @@
 
 #include "t07_ip.h"
 #include <iostream>
-
+#include <vector>
+#include <string>
 
 using namespace std;
 
 int t07_ip() {
-
+  string s;
+    char c;
+    getline(cin, s);
+    int i, j, pointcount = 0;
+     vector <int> pointid(3);
+     for (i = 0; i < s.size(); i++) {
+         if (s[i] == '.') {
+             pointid[pointcount] = i;
+             pointcount++;
+         }
+     } 
+    if (pointcount != 3) {
+        cout << "NO";
+    }
+    else {
+      
+      string x1, x2, x3, x4;
+   x1 = s.substr(0, pointid[0]);                              
+   x2 = s.substr(pointid[0]+1, pointid[1]-pointid[0]-1);    
+   x3 = s.substr( pointid[1]+1, pointid[2]-pointid[1]-1);     
+   x4 = s.substr( pointid[2]+1, s.size()-pointid[2]-1);     
+       bool b = 1;
+        for (auto c: x1) {
+         if (c < '0' || c > '9') {
+             b = 0;
+         }
+        }
+        for (auto c: x2) {
+         if (c < '0' || c > '9') {
+             b = 0;
+         }
+        }
+        for (auto c: x3) {
+         if (c < '0' || c > '9') {
+             b = 0;
+         }
+        }
+        for (auto c: x4) {
+         if (c < '0' || c > '9') {
+             b = 0;
+         }
+       }   
+ if (!b || pointid[0] * (pointid[1]-pointid[0]-1) * (pointid[2]-pointid[1]-1) * (s.size()-pointid[2]-1) == 0) {
+       cout << "NO";   
+      }
+      else {
+        int y1, y2, y3, y4;
+        y1 = stoi(x1);   
+        y2 = stoi(x2);
+        y3 = stoi(x3);
+        y4 = stoi(x4); 
+        if ( y1<0 || y1>255 || y2<0 || y2>255 || y3<0 || y3>255 || y4<0 || y4>255) {
+         cout << "NO";  
+        }
+          else {
+           cout << "YES";   
+          }
+      }
+   }
+  return 0;
 }
