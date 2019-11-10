@@ -38,7 +38,7 @@ int t07_ip() {
   string s;
     char c;
     getline(cin, s);
-    int i, j, pointcount = 0, length;
+    int i, j, pointcount = 0;
      vector <int> pointid(3);
      for (i = 0; i < s.size(); i++) {
          if (s[i] == '.') {
