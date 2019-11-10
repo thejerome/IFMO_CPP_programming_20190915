@@ -35,7 +35,7 @@
 using namespace std;
 
 int t07_ip() {
-  string s, x1, x2, x3, x4;
+  string s;
     char c;
     getline(cin, s);
     int i, j, pointcount = 0, length;
@@ -51,6 +51,7 @@ int t07_ip() {
     }
     
     else {
+      string x1, x2, x3, x4;
    x1 = s.substr(0, pointid[0]);                              
    x2 = s.substr(pointid[0]+1, pointid[1]-pointid[0]-1);    
    x3 = s.substr( pointid[1]+1, pointid[2]-pointid[1]-1);     
