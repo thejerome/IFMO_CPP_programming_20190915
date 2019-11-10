@@ -18,10 +18,23 @@
 
 #include "t05_palindrom.h"
 #include <iostream>
+#include <algorithm>
 
 
 using namespace std;
 
 int t05_palindrom() {
+
+    string a;
+    cin >> a;
+    bool check = true;
+
+    for (int i = 0; i < a.length(); i++) {
+        if (a[i] != a [a.length() - i - 1]) check = false;
+    }
+    if (check) cout << "yes";
+    else cout << "no";
+    return 0;
+
 
 }
