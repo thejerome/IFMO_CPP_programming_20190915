@@ -28,5 +28,14 @@
 using namespace std;
 
 int t05_minodd() {
-
+  int n, s=11111;
+  cin >> n;
+  int a[n];
+  for (int i = 0; i < n; i++)
+  {cin >> a[i];}
+  for (int i = 0; i < n; i++)
+  {if (a[i]%2 !=0 and a[i]< s) {
+    s = a[i];}}
+  if (s == 11111) {cout << 0;}
+  else {cout << s;}  
 }
