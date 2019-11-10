@@ -25,27 +25,31 @@
 using namespace std;
 
 int t04_swap() {
-	int n=0, m=0;
+	int n = 0, m = 0;
 	cin >> n >> m;
 	int mas[n][m];
-	for (int I = 0; I < n; I++) {
-		for (int J = 0; J < n; J++) {
-			cin >> mas[I][J];
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			cin >> mas[i][j];
 		}
 	}
-	int i=0, j=0;
+	int i = 0, j = 0;
 	cin >> i >> j;
-	for (int I = 0; I < n; I++) {
-		int k = mas[I][i];
-		mas[I][i] = mas[I][j];
-		mas[I][i] = k;
-	}
-	for (int I = 0; I < n; I++) {
-		for (int J = 0; J < n; J++) {
-			cout << mas[I][J]<<" ";
-		}
-		cout << endl;
-	}
 
+	for (int x = 0; x < n; x++) {
+		int k = mas[x][j];
+			mas[x][j] = mas[x][i];
+			mas[x][i] = k;
+		}
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			cout << mas[i][j] << " ";
+			cout << endl;
+		}
+	}
 	return 0;
+
+
+
 }
