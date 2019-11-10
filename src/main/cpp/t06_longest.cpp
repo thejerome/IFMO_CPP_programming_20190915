@@ -22,11 +22,15 @@
 using namespace std;
 
 int t06_longest() {
-string longest="",x;
+string x,y;
+int max = 0;
 while(cin>>x){
-if (x.length()>longest.length())longest=x;
-cout<<longest;
-return 0;
+    if(max <x.length()){
+        y = x;
+        max=x.length();
+    }
 }
+cout<<y;
+return 0;
 }
 
