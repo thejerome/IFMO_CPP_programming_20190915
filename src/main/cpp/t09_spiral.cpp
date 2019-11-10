@@ -23,69 +23,37 @@
 using namespace std;
 
 int t09_spiral() {
-	int n, m;
+	int n, m, k = 1, x, y;
 	cin >> n >> m;
-	int mas[n][m];
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			mas[i][j] = 0;
-		} 
-	}
-	bool right = false, down = false, left = false, up = false;
-	int count = 1, i = 0, j = 0;
-
-	while (right == false || left == false || down == false || up == false) {
-
-		while (right == false) {
-			if (right == false && j < m) {
-				mas[i][j] = count;
-				j++; count++;
-			}
-			else { right = true; j--; i++; }
+	int a[n][m];
+	if (n < m) { x = n; }
+	else { x = m; }
+	if (x % 2 == 1) { y = x / 2 + 1; }
+	else { y = x / 2; }
+	for (int i = 0; i < y; i++) {
+		for (int j = i; j < m - i; j++) {
+			a[i][j] = k;
+			k++;
 		}
-		if (mas[i][j] == 0) { right = false; }
-
-
-		while (down = false) {
-			if (down == false && i < n) {
-				mas[i][j] = count;
-				count++; i++;
-			}
-			else { down = true; i--; j--; }
+		for (int j = i + 1; j < n - i; j++) {
+			a[j][m - i - 1] = k;
+			k++;
 		}
-		if (mas[i][j] == 0) { down = false; }
-
-
-
-		while (left == false) {
-			if (left == false && j >= 0) {
-				mas[i][j] = count;
-				count++; j--;
-			}
-			else { left = true; j++; i--; }
+		for (int j = n - i - 1; !((x % 2 == 1) && (i == x / 2)) && j > i; j--) {
+			a[j][i] = k;
+			k++;
 		}
-		if (mas[i][j] == 0) { left = false; }
-
-
-
-		while (up == false) {
-			if (up == false && i >= 0) {
-				mas[i][j] = count;
-				count++; i++;
-			}
-			else { up = true; i++; j++; }
-		}
-		if (mas[i][j] == 0) { up = false; }
-	}
-
-
-
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			cout << mas[i][j] << " ";
+		for (int j = m - i - 2; !((x % 2 == 1) && (i == x / 2)) && j > i; j--) {
+			a[n - i - 1][j] = k;
+			k++;
 		}
 	}
-
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+			cout << setw(4) << a[i][j];
+		cout << endl;
+	}
 	return 0;
 }
 	
