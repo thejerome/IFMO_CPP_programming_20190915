@@ -47,8 +47,15 @@ int t05_kdiag() {
         }
     }
     cin>>d;
+    if (d>=0){
     for (int i=0;i<n-d;i++) {
         cout<<a[i+d][i]<<' ';
+    }
+    }
+    else {
+        for (int i=0;i<n+d;i++) {
+        cout<<a[i][i-d]<<' ';
+    }
     }
     return 0;
 }
