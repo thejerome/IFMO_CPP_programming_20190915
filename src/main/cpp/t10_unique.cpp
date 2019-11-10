@@ -20,10 +20,30 @@
 //4 2 1
 
 #include "t10_unique.h"
-#include <iostream>
-
+#include <iostream> 
+#include <iomanip>
+#include <cmath>
+#include <vector>
 using namespace std;
 
 int t10_unique() {
+int n,k;
+  cin >> n;
+  vector <int> a;
+  for (int i = 0; i < n; i ++ ){
+        int temp;
+        cin >> temp;
+          a.push_back(temp);
+  }
+  for (int i = 0; i < n; i += 1){
+    k = 0; 
+    for (int j = 0; j < n; j += 1)
+    {
 
+      if (a[i] == a[j]) k++;
+    }
+    if (k == 1)
+      cout << a[i] << " ";
+  }     
+  return 0;
 }
