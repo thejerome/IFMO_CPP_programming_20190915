@@ -21,11 +21,11 @@
 using namespace std;
 
 int t06_quad() {
-    float a, b, c, d, x1;
+    float a, b, c, d;
     cin >> a >> b >> c;
     d = b*b - 4*a*c;
     if (d >= 0) {
-        x1 = (-b + sqrt(d))/2/a;
-        c = (-b - sqrt(d))/2/a;
-        if(x1 == c) {cout << x1;} else {if(x1 > c) {cout << c << " " << x1;} else {cout << x1 << " " << c;}}}
+        d = (-b + sqrt(b*b - 4*a*c))/2/a;
+        c = (-b - sqrt(b*b - 4*a*c))/2/a;
+        if(x1 == c) {cout << d;} else {if(d > c) {cout << c << " " << d;} else {cout << d << " " << c;}}}
 };
