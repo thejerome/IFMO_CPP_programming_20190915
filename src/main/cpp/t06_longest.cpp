@@ -17,16 +17,11 @@
 
 #include "t06_longest.h"
 #include <iostream>
-
-
-using namespace std;
-
-int t06_longest() {
-#include <iostream>
 #include <string>
 #include <vector>
 using namespace std;
-int main() {
+
+int t06_longest() {
   string s, x;
     int i, n = 0, len, word = 0, maxl = 0, begcount = 0, encount = 0;
     getline(cin, s);
@@ -64,5 +59,5 @@ int main() {
    for (i = beg[n]; i <= en[n]; i++) {
       cout << s[i];
    }
-  return 0;
+    return 0;
 }
