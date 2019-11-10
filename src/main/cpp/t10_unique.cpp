@@ -27,7 +27,7 @@
 using namespace std;
 
 int t10_unique() {
-int n, count;
+int n,k;
   cin >> n;
   vector <int> a;
   for (int i = 0; i < n; i ++ ){
@@ -40,9 +40,9 @@ int n, count;
     for (int j = 0; j < n; j += 1)
     {
 
-      if (a[i] == a[j]) count++;
+      if (a[i] == a[j]) k++;
     }
-    if (count == 1)
+    if (k == 1)
       cout << a[i] << " ";
   }     
   return 0;
