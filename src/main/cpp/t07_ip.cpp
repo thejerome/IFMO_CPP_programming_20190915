@@ -89,7 +89,7 @@ int t07_ip() {
         y3 = stoi(x3);
         y4 = stoi(x4); 
         if ( y1<0 || y1>255 || y2<0 || y2>255 || y3<0 || y3>255 || y4<0 || y4>255) {
-         b = 0;   
+         check = 0;   
         }
         if (!check) {
          cout << "NO";  
