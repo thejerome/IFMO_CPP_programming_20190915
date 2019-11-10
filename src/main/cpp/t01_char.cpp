@@ -38,4 +38,3 @@ int t01_char() {
     else cout << "no";
 
 }
-
