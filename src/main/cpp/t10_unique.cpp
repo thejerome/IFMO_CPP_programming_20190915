@@ -36,7 +36,7 @@ int n,k;
           a.push_back(temp);
   }
   for (int i = 0; i < n; i += 1){
-    count = 0; 
+    k = 0; 
     for (int j = 0; j < n; j += 1)
     {
 
