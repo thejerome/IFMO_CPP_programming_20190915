@@ -19,6 +19,7 @@
 using namespace std;
 
 int t01_even() {
+    
     int n, b;
     cin >> n;
     int arr[n];
