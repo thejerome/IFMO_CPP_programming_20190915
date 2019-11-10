@@ -16,9 +16,13 @@
 #include "t01_frac.h"
 #include <iostream>
 #include <cmath>
-
+#include <iomanip>
 using namespace std;
 
 int t01_frac() {
-
+  double x;
+  int a;
+  cin >> x;
+  a = int(x);
+  cout << x - a;
 };

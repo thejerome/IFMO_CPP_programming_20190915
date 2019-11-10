@@ -19,7 +19,16 @@
 #include <cmath>
 
 using namespace std;
-
 int t07_quad2() {
-
+    float a, b, c, d;
+    cin >> a >> b >> c;
+    d = b*b - 4*a*c;
+    if(d < 0) {cout << 0;}
+    if(a == 0 and b!= 0) {cout << 1 << " " << -c/b;}
+    if(a == 0 and b == 0 and c!=0) {cout << 0;}
+    if(a == 0 and b == 0 and c==0) {cout << 3;}
+        if (d >= 0 and a!=0 ) {
+        d = (-b + sqrt(b*b - 4*a*c))/2/a;
+        c = (-b - sqrt(b*b - 4*a*c))/2/a;
+        if(d == c) {cout << 1 << " " << d;} else {if(d > c) {cout << 2 << " " << c << " " << d;} else {cout << 2 << d << " " << c;}}}
 };
