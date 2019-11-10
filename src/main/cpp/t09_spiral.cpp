@@ -26,13 +26,13 @@ int t09_spiral() {
     int b,c,d=1;
     cin>>b>>c;
     int a[b][c];
-for (int k=0;k<b-k;k++) {
+for (int k=0;(k<b-k) && (k<c-k);k++) {
     for (int j=k;j<c-k;j++) {
         a[k][j]=d;
         d++;
-  
+
     }
-    if (k<b-1-k) {
+    if ((k<b-1-k) || (k<c-1-k)) {
     for (int i=k+1;i<b-k;i++) {
         a[i][c-k-1]=d;
         d++;
