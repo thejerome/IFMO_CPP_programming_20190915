@@ -76,9 +76,7 @@ int t07_ip() {
          if (c < '0' || c > '9') {
              b = 0;
          }
-       }
-      
-    //-----------------------      
+       }   
  if (!b || pointid[0] * (pointid[1]-pointid[0]-1) * (pointid[2]-pointid[1]-1) * (s.size()-pointid[2]-1) == 0) {
        cout << "NO";   
       }
