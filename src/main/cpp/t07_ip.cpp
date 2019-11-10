@@ -51,8 +51,7 @@ int t07_ip() {
     
     if (pointcount != 3) {
         cout << "NO";
-    }
-    
+    }    
     else {
    x1 = s.substr(0, pointid[0]);                          length1 = x1.size();       
    x2 = s.substr(pointid[0]+1, pointid[1]-pointid[0]-1);  length2 = x2.size();       
