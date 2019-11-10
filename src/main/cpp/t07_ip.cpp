@@ -49,7 +49,6 @@ int t07_ip() {
     if (pointcount != 3) {
         cout << "NO";
     }
-    
     else {
       string x1, x2, x3, x4;
    x1 = s.substr(0, pointid[0]);                              
