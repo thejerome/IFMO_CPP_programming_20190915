@@ -39,7 +39,8 @@ int t07_ip() {
     bool check = 1;
     char c;
     getline(cin, s);
-    int i, j, len, pointcount = 0, length, y1, y2, y3, y4, length1, length2, length3;
+    int i, j, len, pointcount = 0, length, y1, y2, y3, y4;
+    int  length1, length2, length3;
     len = s.size();
      vector <int> pointid(3);
      for (i = 0; i < len; i++) {
