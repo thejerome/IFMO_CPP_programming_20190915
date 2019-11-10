@@ -24,7 +24,7 @@ using namespace std;
 int t06_longest() {
 string longest="",x;
 while(cin>>x){
-if (longest.length()<x.length())longest=x;
+if (x.length()>longest.length())longest=x;
 cout<<longest;
 return 0;
 }
