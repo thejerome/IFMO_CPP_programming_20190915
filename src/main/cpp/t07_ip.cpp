@@ -87,7 +87,7 @@ int t07_ip() {
        cout << "NO";   
       }
       else {
-        string  y1, y2, y3, y4;
+        int y1, y2, y3, y4;
         y1 = stoi(x1);   
         y2 = stoi(x2);
         y3 = stoi(x3);
