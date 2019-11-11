@@ -37,7 +37,7 @@ using namespace std;
 bool IsPointInArea(double x,double y){
     return ((sqrt((x+1)*(x+1)+(y-1)*(y-1)) <= 2)&&(y>=-x)&&(y>=2*x+2))|((sqrt((x+1)*(x+1)+(y-1)*(y-1)) >= 2)&&(y<=-x)&&(y<=2*x+2));
 }
-int main(){
+int t04_area(){
     double x,y;
     cin >> x >> y;
     if (IsPointInArea(x, y)){
