@@ -29,6 +29,6 @@ int sum(){
         return 0;
     }
 }
-int main(){
+int t06_sum(){
     cout << sum();   
 }
