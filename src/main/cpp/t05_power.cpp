@@ -37,7 +37,7 @@ double power(double a,int n){
         return 1/(a*power(a,(n-1)));    
     }    
 }
-int main(){
+int t05_power(){
     double a;
     int n;
     cin >> a >> n;
