@@ -39,5 +39,33 @@
 using namespace std;
 
 int t11_queen() {
-
+    long znacheniya[8][2];
+    for (int i = 0; i < 8; i++)
+    {
+        for (int j = 0; j < 2; j++){
+            long zn = 0;
+            cin >> zn;
+            znacheniya[i][j] = zn;
+        }
+    }
+    for (int i = 0; i < 8; i++)
+    {
+        for (int j = 0; j < 8; j++)
+        {
+            if (i == j){
+                continue;
+            }
+            if (znacheniya[i][0] - znacheniya[j][0] == 0 || znacheniya[i][1] - znacheniya[j][1] == 0){
+                cout << "YES" << endl;
+                return 0;
+            }
+            else if (abs(znacheniya[i][0] - znacheniya[j][0]) == abs(znacheniya[i][1] - znacheniya[j][1]))
+            {
+                cout << "YES" << endl;
+                return 0;
+            }
+        }
+    }
+    cout << "NO" << endl;
+    return 0;
 }

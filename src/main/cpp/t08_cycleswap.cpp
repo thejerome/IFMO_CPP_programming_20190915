@@ -19,5 +19,29 @@
 using namespace std;
 
 int t08_cycleswap() {
-
+    long n = 0;
+    cin >> n;
+    const long a = n;
+    long znacheniya[a];
+    for (int i = 0; i < n; i++)
+    {
+        long zn = 0;
+        cin >> zn;
+        znacheniya[i] = zn;
+    }
+    long tmp = 0;
+    for (int i = n - 1; i != 0; i--)
+    {
+        if (i == n - 1){
+            tmp = znacheniya[i];
+            znacheniya[i] = znacheniya[i - 1];
+            continue;
+        }
+        znacheniya[i] = znacheniya[i - 1];
+    }
+    znacheniya[0] = tmp;
+    for(const auto& i : znacheniya){
+        cout << i << ' ';
+    }
+    return 0;
 }

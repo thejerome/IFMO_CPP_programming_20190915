@@ -26,5 +26,26 @@
 using namespace std;
 
 int t09_equals() {
-
+    long n = 0;
+    cin >> n;
+    const long a = n;
+    long znacheniya[a];
+    for (int i = 0; i < n; i++)
+    {
+        long zn = 0;
+        cin >> zn;
+        znacheniya[i] = zn;
+    }
+    long kol = 0;
+    for (int i = 0; i < n; i++){
+        for (int j = i + 1; j < n; j++)
+        {
+            if (znacheniya[i] == znacheniya[j]){
+                kol++;
+            }
+        }
+        
+    }
+    cout << kol << endl;
+    return 0;
 }
