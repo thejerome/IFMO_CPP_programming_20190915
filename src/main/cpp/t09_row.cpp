@@ -23,5 +23,22 @@
 using namespace std;
 
 int t09_row() {
+int n, prev, cou = 1, count = 1;
+  	    cin >> n;
+    while (n != 0) {
+        prev = n;
+        cin >> n;
+        if (n == prev){
+            cou ++;
+        
+            if (cou > count){
+             count = cou;
+        };}
+        else{
+             cou = 1;
+        };
 
+}
+cout << count;
+    return 0;
 };
