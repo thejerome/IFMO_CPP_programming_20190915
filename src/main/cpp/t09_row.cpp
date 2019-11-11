@@ -23,7 +23,7 @@
 using namespace std;
 
 int t09_row() {
-int n, prev = 0, cou = 1, count = 1;
+int n, prev, cou = 1, count = 1;
   	    cin >> n;
     while (n != 0) {
         prev = n;
