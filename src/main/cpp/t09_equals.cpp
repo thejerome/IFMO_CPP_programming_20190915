@@ -40,9 +40,6 @@ int t09_equals() {
     for (int i = 0; i < n; i++){
         for (int j = i + 1; j < n; j++)
         {
-            if (i == j){
-                continue;
-            }
             if (znacheniya[i] == znacheniya[j]){
                 kol++;
             }
