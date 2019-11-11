@@ -19,5 +19,21 @@
 using namespace std;
 
 int t01_even() {
-
+    long n = 0;
+    cin >> n;
+    const long a = n;
+    long indez[a];
+    for (long i = 0; i < a; i++){
+        long vvod = 0;
+        cin >> vvod;
+        indez[i] = vvod;
+    }
+    for (long i = 0; i < a; i++)
+    {
+        if (i%2 == 0){
+            cout << indez[i] << ' ';
+        }
+    }
+    
+    return 0;
 }

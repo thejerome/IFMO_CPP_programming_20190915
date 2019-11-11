@@ -1,0 +1,7 @@
+{
+    "python.linting.enabled": false,
+    "files.associations": {
+        "iostream": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}

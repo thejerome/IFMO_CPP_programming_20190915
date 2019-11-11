@@ -21,5 +21,19 @@
 using namespace std;
 
 int t04_neighbors() {
-
+    long n = 0;
+    cin >> n;
+    const long kol = n;
+    long mas[kol];
+    for (int i = 0; i < kol; i++)
+    {
+        int znachenie = 0;
+        cin >> znachenie;
+        if (((znachenie > 0 && mas[i-1] > 0) || (znachenie < 0 && mas[i-1] < 0)) && i != 0){
+            cout << mas[i - 1] << ' ' << znachenie << endl;
+            break;
+        }
+        mas[i] = znachenie;
+    }
+    return 0;
 }

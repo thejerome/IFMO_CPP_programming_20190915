@@ -25,5 +25,33 @@
 using namespace std;
 
 int t10_unique() {
-
+    long n = 0;
+    cin >> n;
+    const long a = n;
+    long znacheniya[a];
+    for (int i = 0; i < n; i++)
+    {
+        long zn = 0;
+        cin >> zn;
+        znacheniya[i] = zn;
+    }
+    bool is = 1;
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < n; j++)
+        {
+            if (i == j){
+                continue;
+            }
+            if (znacheniya[i] == znacheniya[j]){
+                is = 0;
+                break;
+            }
+        }
+        if (is){
+            cout << znacheniya[i] << ' ';
+        }
+        is = 1;
+    }
+    cout << endl;
+    return 0;
 }

@@ -19,5 +19,28 @@
 using namespace std;
 
 int t06_different() {
-
+    long n = 0;
+    cin >> n;
+    const long a = n;
+    long znacheniya[a];
+    for (int i = 0; i < n; i++)
+    {
+        long zn = 0;
+        cin >> zn;
+        znacheniya[i] = zn;
+    }
+    long count = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (i == 0){
+            count++;
+        }
+        else if (znacheniya[i] > znacheniya[i - 1])
+        {
+            count++;
+        }
+        
+    }
+    cout << count << endl;
+    return 0;
 }

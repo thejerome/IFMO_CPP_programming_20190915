@@ -19,5 +19,35 @@
 using namespace std;
 
 int t07_swap() {
-
+    long n = 0;
+    cin >> n;
+    const long a = n;
+    long znacheniya[a];
+    for (int i = 0; i < n; i++)
+    {
+        long zn = 0;
+        cin >> zn;
+        znacheniya[i] = zn;
+    }
+    for (int i = 0; i < n; i += 2)
+    {
+        if (i == n - 1){
+            break;
+        }
+        else if (i == n - 2)
+        {
+            long tmp = znacheniya[i + 1];
+            znacheniya[i + 1] = znacheniya[i];
+            znacheniya[i] = tmp;
+            break;
+        }
+        
+        long tmp = znacheniya[i + 1];
+        znacheniya[i + 1] = znacheniya[i];
+        znacheniya[i] = tmp;
+    }
+    for(const auto& i : znacheniya){
+        cout << i << ' ';
+    }
+    return 0;
 }

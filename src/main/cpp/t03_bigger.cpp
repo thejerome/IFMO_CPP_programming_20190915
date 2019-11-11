@@ -19,5 +19,18 @@
 using namespace std;
 
 int t03_bigger() {
-
+    long n = 0;
+    cin >> n;
+    const long kol = n;
+    long mas[kol];
+    for (int i = 0; i < kol; i++)
+    {
+        int znachenie = 0;
+        cin >> znachenie;
+        if (znachenie > mas[i-1] && i != 0){
+            cout << znachenie << endl;
+        }
+        mas[i] = znachenie;
+    }
+    return 0;
 }

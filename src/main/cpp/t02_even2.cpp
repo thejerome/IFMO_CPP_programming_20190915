@@ -19,5 +19,18 @@
 using namespace std;
 
 int t02_even2() {
-
+    long n = 0;
+    cin >> n;
+    const long kol = n;
+    long mas[kol];
+    for (int i = 0; i < kol; i++)
+    {
+        int znachenie = 0;
+        cin >> znachenie;
+        if (znachenie%2 == 0){
+            cout << znachenie << endl;
+        }
+        mas[i] = znachenie;
+    }
+    return 0;
 }
