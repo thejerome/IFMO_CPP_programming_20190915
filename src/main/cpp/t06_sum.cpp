@@ -20,9 +20,15 @@
 #include <iostream>
 #include <cmath>
 
-using namespace std;
-
-int t06_sum() {
-
-    return 0;
+int sum(){
+    int a;
+    cin >> a;
+    if (a!=0){
+        return a + sum();
+    }else{
+        return 0;
+    }
+}
+int main(){
+    cout << sum();   
 }
