@@ -19,5 +19,31 @@
 using namespace std;
 
 int t10_sort3() {
+int a, b, c, tempf,tempm,templ = 0;
+    cin >>a >>b >> c;
+    if (a>=b && a>=c) {
+        tempf = a;
+        tempm = b;
+        templ = c;
+    }
+    if (b>=a && b>=c) {
+        tempf = b;
+        tempm = a;
+        templ = c;
+    }
+    if (c>=a && c>=b) {
+        tempf = c;
+        tempm = a;
+        templ = b;
+    }
+    if (tempm>templ){
+        cout << templ << " " << tempm << " " << tempf;
+    }
+    else{
+        cout << tempm << " " << templ << " " << tempf;
+    };
+    return 0;
+
+
 
 };
