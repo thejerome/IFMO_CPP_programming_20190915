@@ -27,10 +27,13 @@ int t03_bigger() {
     {
         int znachenie = 0;
         cin >> znachenie;
-        if (znachenie > mas[i-1] && i != 0){
-            cout << znachenie << endl;
-        }
         mas[i] = znachenie;
     }
+    for (int i = 1; i < kol;i++){
+        if (mas[i] > mas[i -1]){
+            cout << mas[i] << ' ';
+        }
+    }
+    cout << endl;
     return 0;
 }
