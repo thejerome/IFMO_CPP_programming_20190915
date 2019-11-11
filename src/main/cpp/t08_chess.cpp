@@ -19,11 +19,26 @@
 
 #include "t08_chess.h"
 #include <iostream>
-
+#include <iomanip>
 
 using namespace std;
 
 int t08_chess() {
-    
+    int n,m,k=1;
+    cin >> n >> m;
+    int a[n][m];
+    for (int i=0;i<n;i++){
+        for (int j=0;j<m;j++){
+            if ((i+j) % 2 == 0){
+                a[i][j] = k;
+                k++;
+                cout << setw(4) << a[i][j];
+            }else{
+                a[i][j] = 0;
+                cout << setw(4) << a[i][j];
+            }    
+        }
+        cout << endl;
+    }    
     return 0;
 }
