@@ -26,9 +26,12 @@
 #include "t01_char.h"
 #include <iostream>
 
-
 using namespace std;
 
 int t01_char() {
-
+    char s;
+    cin >> s;
+    if (s=='0' || s=='1' || s=='2' || s=='3' || s=='4' || s=='5'  || s=='6'  || s=='7'  || s=='8'  || s=='9') {
+        cout << "yes";
+    } else cout << "no";
 }

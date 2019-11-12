@@ -29,10 +29,51 @@
 
 #include "t07_ip.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t07_ip() {
-
+    string s;
+    cin >> s;
+    int dot1=0,dot2=0,dot3=0,dot4=0;
+    bool k1=false,k2=false,k3=false,k4=false;
+    dot1=s.find('.');
+    dot2=s.find('.',dot1+1);
+    dot3=s.find('.',dot2+1);
+    dot4=s.find('.',dot3+1);
+    if (dot3!=-1 && dot4==-1 && s.find('-')==-1) {
+        int t=0;
+        for (int i=0;i<dot1;++i){
+            t=t*10+(s[i]-'0');
+        }
+        if (t<256 && t>=0) {
+            k1=true;
+        }
+        t=0;
+        for (int i=dot1+1;i<dot2;++i){
+            t=t*10+(s[i]-'0');
+        }
+        if (t<256 && t>=0) {
+            k2=true;
+        }
+        t=0;
+        for (int i=dot2+1;i<dot3;++i){
+            t=t*10+(s[i]-'0');
+        }
+        if (t<256 && t>=0) {
+            k3=true;
+        }
+        t=0;
+        for (int i=dot3+1;i<s.length();++i){
+            t=t*10+(s[i]-'0');
+        }
+        if (t<256 && t>=0) {
+            k4=true;
+        }
+        t=0;
+    }
+    if (k1 && k2 && k3 && k4) {
+    cout << "YES";
+    } else cout << "NO";
 }

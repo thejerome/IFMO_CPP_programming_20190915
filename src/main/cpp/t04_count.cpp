@@ -23,10 +23,17 @@
 
 #include "t04_count.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t04_count() {
-
+    int k=0;
+    while (true){
+        string s;
+        cin >> s;
+        if (s=="") break;
+        k++;
+    }
+    cout << k;
 }
