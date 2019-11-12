@@ -25,16 +25,15 @@ using namespace std;
 int t06_longest() {
     string s;
     getline(cin, s);
-    int end, max, beg, maxbeg, n, maxend;
+    int end, max, beg, maxbeg, n;
     n = s.length();
-    maxend = s.find (' ');
-    max = maxend;
-    beg = maxend + 1;
+    max = s.find (' ');
+    beg = max + 1;
     maxbeg = 0;
 
     for (end = s.find (' ', beg); end != -1; end = s.find (' ', beg) ) {
         if (end - beg > max) {
-            max = end - beg; maxbeg = beg; maxend = end;
+            max = end - beg; maxbeg = beg;
         }
         beg = end + 1;
     }
