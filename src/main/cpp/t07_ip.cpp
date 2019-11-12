@@ -71,7 +71,6 @@ int t07_ip() {
         if (t<256 && t>=0) {
             k4=true;
         }
-        t=0;
     }
     if (k1 && k2 && k3 && k4) {
     cout << "YES";
