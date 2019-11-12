@@ -24,5 +24,16 @@
 using namespace std;
 
 int t03_toggle() {
-
+char c;
+cin >>c;
+if(c >= 'a' and c <= 'z'){
+    int add = c - 'a';
+    c = 'A' + add;}
+else {
+    if(c >= 'A' and c <= 'Z'){
+        int add = c - 'A';
+        c = 'a' + add;};
+}
+cout << c;
+return 0;
 }
