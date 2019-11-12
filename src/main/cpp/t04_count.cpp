@@ -24,9 +24,15 @@
 #include "t04_count.h"
 #include <iostream>
 
-
 using namespace std;
 
 int t04_count() {
-
+string s;
+getline(cin,s);
+int count=0;
+for (auto c : s){
+    if (c==' ') count++;
+}
+cout << count;
+return 0;
 }
