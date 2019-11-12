@@ -42,7 +42,7 @@ int t07_ip() {
     dot2=s.find('.',dot1+1);
     dot3=s.find('.',dot2+1);
     dot4=s.find('.',dot3+1);
-    if (dot3!=-1 && dot4==-1 && s.find('-')==-1) {
+    if (dot3!=-1 && dot4==-1 && s.find('-',0)==-1) {
         int t=0;
         for (int i=0;i<dot1;++i){
             t=t*10+(s[i]-'0');
