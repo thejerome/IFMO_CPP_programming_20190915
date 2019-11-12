@@ -24,5 +24,11 @@
 using namespace std;
 
 int t02_up() {
-    
+char letter;
+cin >>letter;
+if(letter >= 'a' and letter <= 'z'){
+    int add = letter - 'a';
+    letter = 'A' + add;}
+cout << letter;
+return 0;
 }
