@@ -24,11 +24,11 @@
 using namespace std;
 
 int t02_up() {
-    char s1,s2;
-    int diff=0;
+    char s1;
     cin >> s1;
     if (s1>='a' && s1<='z') {
-        diff=s1-'a';
+        char s2;
+        int diff=s1-'a';
         s2='A'+diff;
         cout << s2;
     } else cout << s1;
