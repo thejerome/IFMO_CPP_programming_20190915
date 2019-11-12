@@ -24,5 +24,22 @@
 using namespace std;
 
 int t03_toggle() {
-
+    string s;
+    char c;
+    getline(cin, s);
+    string s2 = "";
+    for (auto c : s) {
+        if (c >= 'a' and c <= 'z') {
+            int al_num = c - 'a';
+            s2 += 'A' + al_num;
+        } else {
+            if (c >= 'A' and c <= 'Z') {
+                int al_num = c - 'A';
+                s2 += 'a' + al_num;
+            } else {
+                s2 += c;
+            }
+        }
+    }
+    cout << s2;
 }

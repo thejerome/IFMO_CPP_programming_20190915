@@ -24,5 +24,17 @@
 using namespace std;
 
 int t02_up() {
-    
+    string s;
+    char c;
+    getline(cin, s);
+    string s2 = "";
+    for (auto c : s) {
+        if (c >= 'a' and c <= 'z') {
+            int al_num = c - 'a';
+            s2 += 'A' + al_num;
+        } else {
+            s2 += c;
+        }
+    }
+    cout << s2;
 }
