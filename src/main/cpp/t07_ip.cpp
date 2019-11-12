@@ -1,4 +1,4 @@
-//В сети интернет каждому компьютеру присваивается четырехбайтовый код, 
+//В сети интернет каждому компьютеру присваивается четырехбайтовый код,
 // который принято записывать в виде четырех чисел, 
 // каждое из которых может принимать значения от 0 до 255, разделенных точками.
 // Вот примеры правильных IP-адресов:
@@ -34,5 +34,27 @@
 using namespace std;
 
 int t07_ip() {
-
+    string s;
+    getline (cin, s);
+    int d1, d2, d3, d4;
+    d1 = s.find('.');
+    d2 = s.find ('.', d1+1);
+    d3 = s.find ('.', d2+1);
+    d4 = s.find ('.', d3+1);
+    if (d1 == -1 or d2 == -1 or d3 == -1 or d4 != -1) cout << "NO";
+    else {
+        string chislo;
+        int c1, c2, c3, c4;
+        chislo = s.substr(0, d1);
+        c1 = stoi(chislo);
+        chislo = s.substr(d1+1, d2-d1);
+        c2 = stoi(chislo);
+        chislo = s.substr(d2+1, d3-d2);
+        c3 = stoi(chislo);
+        chislo = s.substr(d3+1);
+        c4 = stoi(chislo);
+        if (c1 < 0 or c1 > 255 or c2 < 0 or c2 > 255 or c3 < 0 or c3 > 255 or c4 < 0 or c4 > 255) cout << "NO";
+        else cout << "YES";
+    }
+    return 0;
 }

@@ -30,5 +30,9 @@
 using namespace std;
 
 int t01_char() {
-
+    char c;
+    cin >> c;
+    if (c >= '0' and c <= '9') cout << "yes";
+    else cout << "no";
+    return 0;
 }
