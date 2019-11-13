@@ -32,5 +32,5 @@ using namespace std;
 int t01_char() {
           string a, b = "1234567890";
           cin >> a;
-          if (b.find(a) < 9) {cout << "yes";} else {cout << "no";}
+          if (b.find(a) < 10) {cout << "yes";} else {cout << "no";}
 }
