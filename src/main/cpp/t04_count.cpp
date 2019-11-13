@@ -39,4 +39,4 @@ while (b.find(' ', pos) <= b.rfind(' '))
 q++;
 }
 cout << q;
-}
+}}
