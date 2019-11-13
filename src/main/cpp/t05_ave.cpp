@@ -27,7 +27,7 @@ int t05_ave() {
     double sum;
     cin>>n;
     i=0;
-    sum+=n;
+    sum=n;
     while (n!=0){
         cin>>n;
         sum+=n;
