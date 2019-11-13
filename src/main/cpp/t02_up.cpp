@@ -24,5 +24,8 @@
 using namespace std;
 
 int t02_up() {
-    
+            char a;
+          cin >> a;
+          if (a > 91) {a = a - 32;}
+cout << a;  
 }
