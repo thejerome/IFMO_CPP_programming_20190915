@@ -27,7 +27,7 @@ int D=1,L,H,C;
 char S[65000];
 cin >> S;
 for(L=0;S[L]!='\0';L++);
-for(H=0,C=L-1;H<=L;H++,C--)
+for(H=0,C=L-1;H<L/2;H++,C--)
 {
      if(S[H]!=S[C])
        D=0;
