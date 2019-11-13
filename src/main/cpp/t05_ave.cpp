@@ -29,7 +29,7 @@ int t05_ave() {
     while (x != 0) {
         cin >> x;
         sum += x;
-        i++
+        i++;
     };
     i--;
     AVE = (sum / i);
