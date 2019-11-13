@@ -28,5 +28,15 @@
 using namespace std;
 
 int t04_count() {
+int q = 1, pos = 0;
+string b;
+cin >> b;
 
+      if (b.find(' ') == b.rfind(' ')) {cout << 1;}
+      else{
+while (b.find(' ', pos) <= b.rfind(' '))
+{pos = b.find(' ', pos) + 1;
+q++;
+}
+cout << q;
 }
