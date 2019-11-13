@@ -26,7 +26,7 @@ int t03_bigger() {
         cin >> x;
         a[i] = x;
         if ((i != 0) && (a[i] != 0) && (a[i] > a[i-1])) {
-            cout << a[i];
+            cout << a[i] << " ";
         };
     };
     return 0;
