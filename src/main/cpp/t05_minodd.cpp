@@ -35,14 +35,14 @@ int t05_minodd() {
     int a[n];
     for (int i = 0; i < n; i++) {
         cin >> a[i];
-        if (a[i] % 2 == 1) {
+        if (abs(a[i] % 2) == 1) {
             f = true;
             min = a[i];
         };
     };
 
     for (int i =0; i < n; i++) {
-        if ((a[i] % 2 == 1) && (min > a[i])) {
+        if ((abs(a[i] % 2) == 1) && (min > a[i])) {
             min = a[i];
         };
     };
