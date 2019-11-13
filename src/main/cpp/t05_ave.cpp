@@ -22,19 +22,17 @@
 using namespace std;
 
 int t05_ave() {
-    int x,sum,i;
-    double AVE;
+    double x,sum,AVE;
+    int i;
     sum = 0;
-    i = 1;
-    cin >> x;
-    sum = x;
+    i = 0;
     while (x != 0) {
         cin >> x;
-        sum = (sum + x);
-        i++;
+        sum += x;
+        i++
     };
+    i--;
     AVE = (sum / i);
-    cout << fixed;
-    cout << setprecision(11) << AVE;
+    cout << fixed << setprecision(11) << AVE;
     return 0;
 };
