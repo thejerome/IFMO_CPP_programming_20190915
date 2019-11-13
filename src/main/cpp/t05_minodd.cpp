@@ -30,6 +30,7 @@ using namespace std;
 int t05_minodd() {
     int x,n,min;
     bool f;
+    int a[n];
     f = false;
     cin >> n;
     for (int i = 0; i < n; i++) {
