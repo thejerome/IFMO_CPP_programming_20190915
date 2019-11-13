@@ -19,4 +19,9 @@ using namespace std;
 
 int t02_frac_2() {
 
+    double m;
+    cin >> m;
+    cout << int((m - int(m))*10);
+    return 0;
+
 };

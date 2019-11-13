@@ -21,4 +21,9 @@ using namespace std;
 
 int t01_frac() {
 
+    double m;
+    cin >> m;
+    cout << m - int(m);
+    return 0;
+
 };
