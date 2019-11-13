@@ -21,7 +21,7 @@
 using namespace std;
 
 int t07_quad2() {
-    double a,b,c,d,x,y;
+    double a,b,c;
     cin>>a>>b>>c;
     if (a==0){
         if (b != 0)
@@ -34,6 +34,7 @@ int t07_quad2() {
     }
 
     if (a!=0) {
+        double d;
         d = b * b - 4 * a * c;
         if (d > 0)
             cout << 2 <<" "<<(-1 * b - sqrt(d)) / (2 * a) << " " << (-1 * b + sqrt(d)) / (2 * a);
