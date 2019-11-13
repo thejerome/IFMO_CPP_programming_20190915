@@ -23,5 +23,16 @@
 using namespace std;
 
 int t05_palindrom() {
-
+int D=1,L,H,C;
+char S[65000];
+cin >> S;
+for(L=0;S[L]!='\0';L++);
+for(H=0,C=L-1;H<=L;H++,C--)
+{
+     if(S[H]!=S[C])
+       D=0;
+}
+if(D==1)
+    cout << "yes";
+else cout << "no";
 }
