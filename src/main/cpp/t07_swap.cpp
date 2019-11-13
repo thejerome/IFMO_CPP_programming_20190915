@@ -30,7 +30,7 @@ int t07_swap() {
             a[i + 1] = x;
         };
     };
-    for (i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         cout << a[i] << " ";
     };
     return 0;
