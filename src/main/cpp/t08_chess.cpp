@@ -24,6 +24,29 @@
 using namespace std;
 
 int t08_chess() {
-    
+    int n, m;
+    int cur = 1;
+    bool flag = true;
+    cin >> n >> m;
+
+    for (int i = 0; i < n; ++i)
+    {
+        for (int j = 0; j < m; ++j){
+            if (flag){
+                cout.width(4);
+                cout << cur++;
+                flag = false;
+            }
+            else {
+                cout.width(4);
+                cout << 0;
+                flag = true;
+            }
+        }
+        if (m % 2 == 0) flag = !flag;
+
+        cout << endl;
+    }
+
     return 0;
 }
