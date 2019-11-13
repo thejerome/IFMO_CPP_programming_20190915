@@ -26,7 +26,23 @@
 
 
 using namespace std;
-
+int Word(char * S)
+{
+int D=1;
+    if (*S == NULL)
+    {
+        D=0;
+    }
+    while(*S)
+    {
+       if (*S == ' ')
+       {D++;}
+    *S++;
+    }
+    return D;
+}
 int t04_count() {
-
+char S[65000];
+cin.getline(S,65000);
+cout << Word(S) << endl;
 }
