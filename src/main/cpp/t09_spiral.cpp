@@ -21,7 +21,71 @@
 
 using namespace std;
 
-int t09_spiral() {
+int t09_spiral() { 
+    int n, m, k = 1, l = 0;
+    int j = 0, i = 0, b = -1, b1 = 0;
+    cin >> n >> m;
+    int a[100][100];
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            a[i][j] = 0;
+        }
+    }
+    while (l <= n * m) {
+        b++;
+        b1++;
+        for (j = b, i = b; j < m - b; j++)  
+        {
+            if (a[i][j] == 0) {
+                l++;
+                a[i][j] = l;
+            }
+            else {
+                break;
+            }
+        }
+        for (j = m - b1, i = b1; i < n - b; i++) 
+        {
+            if (a[i][j] == 0) {
+                l++;
+                a[i][j] = l;
+            }
+            else {
+                break;
+            }
+        }
+        for (j = j - 1, i = n - b1; j >= b; j--)
+        {
+            if (a[i][j] == 0) {
+                l++;
+                a[i][j] = l;
+            }
+            else {
+                break;
+            }
+        }
+        for (j = j + b1, i = i - b1; i >= b1; i--)
+        {
+            if (a[i][j] == 0) {
+                l++;
+                a[i][j] = l;
+            }
+            else {
+                break;
+            }
+        }
+ 
+    }
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            cout << setw(4) << a[i][j];
+        }
+        cout << endl;
+    }
     
     return 0;
 }
