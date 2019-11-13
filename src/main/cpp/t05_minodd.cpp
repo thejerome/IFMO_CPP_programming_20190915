@@ -38,14 +38,14 @@ int t05_minodd() {
         if (a[i] % 2 == 1) {
             f = true;
             min = a[i];
-            cout << "min nashel: " << min;
+            cout << min;
         };
     };
 
     for (int i =0; i < n; i++) {
         if ((a[i] % 2 == 1) && (min > a[i])) {
             min = a[i];
-            cout << "ponenyal min na: " << min;
+            cout << min;
         };
     };
 
