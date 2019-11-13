@@ -28,17 +28,19 @@
 using namespace std;
 
 int t05_minodd() {
-    int n,min;
+    int x,n,min;
     bool f;
     f = false;
     cin >> n;
-    int a[n];
-    cin >> a[0];
-    min = a[0];
-    for (int i = 1; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         cin >> a[i];
-        if ((a[i] % 2 == 1) && (min > a[i])) {
+        if (a[i] % 2 == 1) {
             f = true;
+            min = a[i];
+        };
+    };
+    for (int i =0; i < n; i++) {
+        if ((a[i] % 2 == 1) && (min > a[i])) {
             min = a[i];
         };
     };
