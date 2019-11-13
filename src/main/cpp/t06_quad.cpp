@@ -21,13 +21,14 @@
 using namespace std;
 
 int t06_quad() {
-double a, b, c, d;
+double a, b, c, d,x1;
     cin >> a >> b >> c;
     d = b * b - 4 * a * c;
     if ( d > 0 ) {
+        double x2;
      x1 = ( b * (-1) + sqrt(d) ) / ( 2 * a ) ; 
      x2 = ( b * (-1) - sqrt(d) ) / ( 2 * a ) ; 
-        double x1,x2;
+       
         if ( x1 < x2 ) {
          cout << x1 << " " << x2;
         }
