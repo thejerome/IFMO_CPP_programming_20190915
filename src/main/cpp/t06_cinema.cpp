@@ -41,9 +41,9 @@ int t06_cinema() {
     }
     cin >> k;
     int j, c;
-    bool flag;
     for(int i=0; i<n; i++)
     {
+        bool flag;
         flag = false;
         for(j=0; j<m; j++)
         {
