@@ -22,7 +22,7 @@ int t02_even2() {
     int x,n,i;
     cin >> n;
     int a[n];
-    for (i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
       cin >> x;
       a[i] = x;
       if (a[i] % 2 == 0) {
