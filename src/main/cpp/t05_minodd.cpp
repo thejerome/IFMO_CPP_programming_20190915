@@ -42,7 +42,7 @@ int t05_minodd() {
             min = a[i];
         };
     };
-    if (f == false) {
+    if (f == true) {
         cout << min;
     }
     else {
