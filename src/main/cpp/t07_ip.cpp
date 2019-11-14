@@ -49,7 +49,7 @@ int t07_ip() {
 				pass = false;
 				break;
 			}
-			if (!num)
+			if (num==false)
 			{
 				num = true;
 				numofpoints++;
@@ -61,10 +61,10 @@ int t07_ip() {
 			pass = false;
 			break;
 		}
-		else if ((int)h[i] >= 48 || (int)h[i] <= 57)
+		else if ((int)h[i] >= 48 && (int)h[i] <= 57)
 		{
 			number += h[i];
-			if (num)
+			if (num==true)
 			{
 				num = false;
 				numofnumbers++;
