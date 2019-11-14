@@ -21,8 +21,17 @@
 #include <cmath>
 
 using namespace std;
-
+void sum(int pre_last)
+{
+	int a;
+	cin >> a;
+	if (a != 0)
+		sum(pre_last + a);
+	else
+		cout << pre_last;
+}
 int t06_sum() {
-
-    return 0;
+	int a;
+	cin >> a;
+	sum(a);
 }
