@@ -17,15 +17,16 @@
 
 #include "t01_min.h"
 #include <iostream>
-
-
 using namespace std;
-
-//function min 
-
-//function min4 
-
 int t01_min() {
-
+int min(int a, int b) {
+    if (a < b) return a;
+    else return b;
+}
+int main() {
+    int a, b, c , d;
+    cin >> a >> b >> c >> d;
+    cout << min(min(a,b), min(c,d));
     return 0;
 }
+    
