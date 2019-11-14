@@ -14,12 +14,17 @@
 
 #include <iostream>
 #include <cmath>
-
+#include <iomanip>
 using namespace std;
-
-// function fib
-
-int t07_fib()
-{
+int fib(int n) {
+    if ( n < 1 ) return 0;
+    if ( n == 1) return 1;
+    if ( n == 2) return 1;
+    return fib(n-1) + fib(n-2);
+}
+int t07_fib() {
+int n;
+    cin >> n;
+    cout << fib(n);
     return 0;
 }
