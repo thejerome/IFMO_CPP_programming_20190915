@@ -18,8 +18,28 @@
 using namespace std;
 
 // function fib
-
+short a1 = 1, a2 = 1, a3 = 2;
+int fib(int n)
+{
+	if (n > 0)
+	{
+		a3 = a1 + a2;
+		n--;
+		int t = a2;
+		a2 = a3;
+		a1 = t;
+		fib(n);
+	}
+}
 int t07_fib()
 {
-    return 0;
+	int n;
+	cin >> n;
+	if (n < 3)
+		cout << "1";
+	else
+	{
+		fib(n - 2);
+		cout << a3;
+	}
 }
