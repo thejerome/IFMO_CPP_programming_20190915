@@ -22,7 +22,39 @@
 
 using namespace std;
 
-int t08_queen(){
+int n,a[10],b[20],c[20],x[10],d=0;
 
+void setQueen(int row){
+    if(row==n){
+        d += 1;
+        return ;
+    }
+    for(int col=0;col<n;col++) {
+        if (x[row] == -1) {
+            bool f = false;
+            for (int j = 0; j < row; ++j) {
+                if (abs(row - j) == abs(col - x[j])) {
+                    f = true;
+                }
+                if(x[j] == col){
+                    f = true;
+                }
+            }
+            if (f == false) {
+                x[row] = col;
+                setQueen(row + 1);
+                x[row] = -1;
+            }
+        }
+    }
+}
+
+int t08_queen(){
+        cin>>n;
+    for(int i = 0;i < n;i++){
+        x[i] = -1;
+    }
+    setQueen(0);
+    cout<<d;
     return 0;
 }
