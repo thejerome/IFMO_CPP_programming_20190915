@@ -24,7 +24,7 @@
 using namespace std;
 int arr[10];
 
-bool check(int a, int b, int c) {
+bool g(int a, int b, int c) {
     if (c == a) return true;
     else return arr[c] != b && (a - c) != (b -arr[c]) && (a - c) != (arr[c] - b) && g(a, b, c + 1);
 }
