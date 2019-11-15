@@ -28,5 +28,9 @@
 using namespace std;
 
 int t04_count() {
-
+    string word;
+    int count;
+    cin >> word;
+    count = word.find(' ');
+    cout << count+1;
 }

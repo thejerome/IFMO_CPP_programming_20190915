@@ -30,5 +30,13 @@
 using namespace std;
 
 int t01_char() {
-
+    char word;
+    cin >> word;
+    if ((int(word) <= 57) && (int(word) >= 48)){
+        cout << "yes";
+    }
+    else {
+        cout << "no";
+    }
+    return 0;
 }
