@@ -28,7 +28,7 @@ bool check(int a, int b, int c) {
     if (c == a) return true;
     else return board[c] != b && (a - c) != (b - board[c]) && (a - c) != (board[c] - b) && check(a, b, c + 1);
 }
-int t08_queen(){
+int t08_queen() {
 int put_queen(int n, int a, int b) {
     if (a == n) return 1;
     else {
@@ -48,7 +48,5 @@ int main() {
     int n;
     cin >> n;
     cout << put_queen(n, 0, 0);
-    return 0;
-}
     return 0;
 }
