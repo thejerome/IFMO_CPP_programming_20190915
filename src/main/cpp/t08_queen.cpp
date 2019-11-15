@@ -33,10 +33,10 @@ int ferz(int n, int a, int b) {
         if (b < n) {
             int j = 0;
             if (arr(a, b, 0)) {
-                g[i] = b;
+                g[a] = b;
                 j = ferz(n, a + 1, 0);
             }
-            return r + ferz(n, a, b + 1);
+            return j + ferz(n, a, b + 1);
         }
         else return 0;
     }
