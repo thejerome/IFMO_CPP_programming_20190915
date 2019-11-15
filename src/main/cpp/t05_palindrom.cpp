@@ -26,9 +26,9 @@ int t05_palindrom() {
     string word;
     bool f=true;
     cin >> word;
-    int len = word.length();
-    for (int i = 0; i < len / 2; ++i) {
-        if (word[i] != word[len-1]){
+    int s = word.size();
+    for (int i = 0; i < (s/2); i++) {
+        if (word[i] != word[s-1-i]){
             f = false;
         }
     }

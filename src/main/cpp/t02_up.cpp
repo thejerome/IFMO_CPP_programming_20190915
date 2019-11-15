@@ -30,7 +30,7 @@ int t02_up() {
         cout << char(int(word)+32);
     }
     else{
-        cout << char(int(word)-32);
+        cout << word;
     }
     return 0;
 }
