@@ -23,6 +23,7 @@
 
 #include "t04_count.h"
 #include <iostream>
+#include <string>
 
 
 using namespace std;
@@ -33,9 +34,10 @@ int t04_count() {
     getline(cin, word);
     int s = word.size();
     for (int i = 0; i < s; ++i) {
-        if (word[i] = ' '){
+        if (word[i] == ' '){
             count++;
         }
     }
     cout << count+1;
+    return 0;
 }
