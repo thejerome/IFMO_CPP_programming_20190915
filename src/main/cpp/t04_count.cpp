@@ -24,7 +24,6 @@
 #include "t04_count.h"
 #include <iostream>
 
-
 using namespace std;
 
 int t04_count() {
