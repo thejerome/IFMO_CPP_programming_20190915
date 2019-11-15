@@ -17,9 +17,22 @@
 
 using namespace std;
 
-// function fib
+int fib(int);
 
-int t07_fib()
-{
+int t07_fib(){
+    int n;
+    cin >> n;
+    cout << fib(n);
     return 0;
+}
+int fib(int x){
+    if (x==0){
+        return 0;
+    }
+    if (x==1){
+        return 1;
+    }
+    if (x > 0){
+        return fib(x-1) + fib(x-2);
+    }
 }

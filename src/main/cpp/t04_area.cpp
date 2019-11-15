@@ -31,10 +31,22 @@
 #include <cmath>
 
 using namespace std;
-
-//function IsPointInArea
+bool IsPointInArea(double a, double b){
+    bool result, up, down;
+    up = ((a+1)*(a+1) + (b-1)*(b-1) <= 4)&&(b >= -a)&&(b >= 2*a + 2);
+    down = ((a+1)*(a+1) + (b-1)*(b-1) >= 4)&&(b <= -a)&&(b <= 2*a + 2);
+    result = up||down;
+    return result;
+}
 
 int t04_area() {
-
+    double x, y;
+    cin >> x >> y;
+    if (IsPointInArea(x, y)){
+        cout << "YES";
+    }
+    else{
+        cout << "NO";
+    }
     return 0;
 }

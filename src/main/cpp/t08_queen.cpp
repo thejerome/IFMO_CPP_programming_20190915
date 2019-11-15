@@ -22,7 +22,15 @@
 
 using namespace std;
 
+int queen();
+const int N = 8;
+int arr[N][N];
+
 int t08_queen(){
 
     return 0;
+}
+
+int queen(){
+
 }
