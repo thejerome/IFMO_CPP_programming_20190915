@@ -34,5 +34,12 @@
 using namespace std;
 
 int t07_ip() {
+ int IP1,IP2,IP3,IP4;
+int CF = 0;
+    if (((cin>>IP1) && (cin.get()=='.'))&&((cin>>IP2) && (cin.get()=='.')) &&((cin>>IP3) && (cin.get()=='.')) &&((cin>>IP4) && (cin.get()!='.')) &&(IP1>=0 && IP1<=255) &&(IP2>=0 && IP2<=255) &&(IP3>=0 && IP3<=255) &&(IP4>=0 && IP4<=255))
+            {TF = 1;}
 
+    if(CF == 1)
+    cout<< "YES";
+    else cout << "NO";
 }
