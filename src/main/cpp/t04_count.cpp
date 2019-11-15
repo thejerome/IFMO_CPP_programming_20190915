@@ -23,10 +23,14 @@
 
 #include "t04_count.h"
 #include <iostream>
-
-
+#include <string>
 using namespace std;
-
 int t04_count() {
-
+string s;
+  getline(cin, s);
+  int num_words = 0;
+  for (int i = 0; i != -1; i = s.find(' ', i + 1))
+      num_words++;
+  cout << num_words;
+return 0;
 }

@@ -19,10 +19,13 @@
 
 #include "t02_up.h"
 #include <iostream>
-
-
+#include <string>
 using namespace std;
-
 int t02_up() {
-    
+    char bukva;
+	cin >> bukva;
+	if (bukva >= 'a' && bukva <= 'z') {
+		bukva = 'A' + bukva - 'a';
+	}
+	cout << bukva;
 }

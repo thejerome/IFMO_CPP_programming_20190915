@@ -19,10 +19,16 @@
 
 #include "t03_toggle.h"
 #include <iostream>
-
-
+#include <string>
 using namespace std;
-
 int t03_toggle() {
-
+ char c;
+    cin >> c;
+       if (c >= 'a' && c <= 'z') {
+               c = 'A' + c - 'a';
+       }
+       else if (c >= 'A' && c <= 'Z') {
+               c = 'a' + c - 'A';
+       }
+       cout << c;
 }
