@@ -21,9 +21,9 @@
 #include <cmath>
 using namespace std;
 double distance(double x1, double y1, double x2, double y2) {
-    double a = abs(x1 - x2);
-    double b = abs(y1 - y2);
-    return sqrt(pow(a,2) + pow(b,2));
+    double a = pow((x1 - x2),2);
+    double b = pow((y1 - y2),2);
+    return sqrt(a+b);
 }
 int t02_dist() { 
     double  x1, y1,  x2, y2;
