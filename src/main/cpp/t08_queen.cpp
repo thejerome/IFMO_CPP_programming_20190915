@@ -22,8 +22,41 @@
 
 using namespace std;
 
+vector< vector<int> > b(10);
+int summ(int , int );
+
+bool check(int x, int y,int k) {
+    if (k == x) {
+        return true;}
+    else {
+       return (b[k][1] != y) and (x - b[k][0]) != (y - b[k][1]) and (x - b[k][0]) != (b[k][1] - y) and check(x,y, k + 1);}
+}
+
+int change(int n, int x, int y) {
+    if (y < n) {
+        int k = 0;
+        if (check(x, y,0)) {
+            b[x][1]=y;
+            k = summ(n, x + 1);}
+        return k + change(n, x, y + 1);
+    }
+    return 0;
+}
+
+int summ(int n, int x) {
+    if (x==n) {
+        return 1;
+    } else {
+        return change(n, x, 0);
+    }
+}
 
 int t08_queen(){
-
+    int n;
+    for (int i=0, size=b.size(); i<size; ++i){
+        b[i].reserve(2);
+        b[i][0]=i;}
+    cin >> n;
+    cout << summ(n, 0);
     return 0;
 }
