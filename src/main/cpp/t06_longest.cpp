@@ -34,7 +34,7 @@ for (int i=0; i<n;i++){
         word=word+s[i];
     }
     else {
-        if (c>max) {
+        if (c>=max) {
             max=c;
             maxword=word;
         };
@@ -42,6 +42,6 @@ for (int i=0; i<n;i++){
         word="";
     };
 };
-if (max>c) cout <<maxword;
+if (max>=c) cout <<maxword;
 else cout <<word;
 }
