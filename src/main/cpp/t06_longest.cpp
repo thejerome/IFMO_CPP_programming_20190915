@@ -34,7 +34,7 @@ for (int i=0; i<n;i++){
         word=word+s[i];
     }
     else {
-        if (c>=max) {
+        if (c>max) {
             max=c;
             maxword=word;
         };
