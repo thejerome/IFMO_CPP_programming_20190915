@@ -26,7 +26,7 @@ int arr[10];
 
 bool check(int a, int b, int c) {
     if (c == a) return true;
-    else return arr[c] != b && (a - c) != (b -arr[c]) && (a - c) != (arr[c] - b) && k(a, b, c + 1);
+    else return arr[c] != b && (a - c) != (b -arr[c]) && (a - c) != (arr[c] - b) && c(a, b, c + 1);
 }
 int ferz(int n, int a, int b) {
     if (a == n) return 1;
