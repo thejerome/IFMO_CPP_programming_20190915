@@ -19,33 +19,10 @@
 
 #include <iostream>
 #include <vector>
-#include <cmath>
-#include <iomanip>
-using namespace std;
-int arr[10];
 
-bool g(int a, int b, int c) {
-    if (c == a) return true;
-    else return arr[c] != b && (a - c) != (b -arr[c]) && (a - c) != (arr[c] - b) && g(a, b, c + 1);
-}
-int ferz(int n, int a, int b) {
-    if (a == n) return 1;
-    else {
-        if (b < n) {
-            int r = 0;
-            if (g(a, b, 0)) {
-                arr[a] = b;
-                r = ferz(n, a + 1, 0);
-            }
-            return r + ferz(n, a, b + 1);
-        }
-        else return 0;
-    }
-}
+using namespace std;
 
 int t08_queen() {
-    int n;
-    cin >> n;
-    cout << ferz(n, 0, 0);
+
     return 0;
 }
