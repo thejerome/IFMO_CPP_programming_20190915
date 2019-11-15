@@ -34,4 +34,5 @@ for (int i=0; i<n;i++){
     else {
         if (i==(n-1)) cout <<"yes";}
 }
+
 }
