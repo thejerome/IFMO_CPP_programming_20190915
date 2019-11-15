@@ -22,31 +22,30 @@
 #include <cmath>
 #include <iomanip>
 using namespace std;
-int board[10];
+int arr[10];
 
 bool check(int a, int b, int c) {
     if (c == a) return true;
-    else return board[c] != b && (a - c) != (b - board[c]) && (a - c) != (board[c] - b) && check(a, b, c + 1);
+    else return arr[c] != b && (a - c) != (b -arr[c]) && (a - c) != (arr[c] - b) && k(a, b, c + 1);
 }
-int t08_queen() {
-int put_queen(int n, int a, int b) {
+int ferz(int n, int a, int b) {
     if (a == n) return 1;
     else {
         if (b < n) {
             int r = 0;
-            if (check(a, b, 0)) {
-                board[a] = b;
-                r = put_queen(n, a + 1, 0);
+            if (k(a, b, 0)) {
+                arr[a] = b;
+                r = ferz(n, a + 1, 0);
             }
-            return r + put_queen(n, a, b + 1);
+            return r + ferz(n, a, b + 1);
         }
         else return 0;
     }
 }
 
-int main() {
+int t08_queen() {
     int n;
     cin >> n;
-    cout << put_queen(n, 0, 0);
+    cout << ferz(n, 0, 0);
     return 0;
 }
