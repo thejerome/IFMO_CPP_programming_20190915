@@ -17,10 +17,30 @@
 
 #include "t06_longest.h"
 #include <iostream>
+#include <string>
 
 
 using namespace std;
 
 int t06_longest() {
-
+    string phrase, word;
+    getline(cin, phrase);
+    phrase += ' ';
+    int n = 0;
+    int s1 = phrase.size(), s2 = 0;
+    for (int i = 0; i < s1; i++) {
+        if (phrase[i] != ' ') {
+            n++;
+        }
+        else{
+            string frag = phrase.substr(i-n, n);
+            if(frag.size() > s2){
+                word = frag;
+                s2 = frag.size();
+            }
+            n = 0;
+        }
+    }
+    cout << word;
+    return 0;
 }

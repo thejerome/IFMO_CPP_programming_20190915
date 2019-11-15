@@ -24,5 +24,13 @@
 using namespace std;
 
 int t02_up() {
-    
+    char word;
+    cin >> word;
+    if (int(word) > 95){
+        cout << char(int(word)-32);
+    }
+    else{
+        cout << word;
+    }
+    return 0;
 }

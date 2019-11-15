@@ -24,5 +24,16 @@
 using namespace std;
 
 int t03_toggle() {
-
+    char word;
+    cin >> word;
+    if ((int(word) >= 65)&&(int(word) <= 90)){
+        cout << char(int(word)+32);
+    }
+    else if ((int(word) >= 97)&&(int(word) <= 122)){
+        cout << char(int(word)-32);
+    }
+    else{
+        cout << word;
+    }
+    return 0;
 }

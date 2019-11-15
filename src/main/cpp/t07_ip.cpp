@@ -34,5 +34,32 @@
 using namespace std;
 
 int t07_ip() {
-
+    string ip;
+    cin >> ip;
+    ip += '.';
+    int t = 0, n = 0, s = ip.size();
+    bool f=false;
+    for (int i = 0; i < s; i++) {
+        if (ip[i] != '.') {
+            n++;
+        }
+        else {
+            string frag = ip.substr(i - n, n);
+            if (!frag.empty()){
+                f = (stoi(frag) > 255) || (stoi(frag) < 0);
+            }
+            if (f){
+                break;
+            }
+            n = 0;
+            t++;
+        }
+    }
+    if ((!f)&&(t==4)){
+        cout << "YES";
+    }
+    else{
+        cout << "NO";
+    }
+    return 0;
 }
