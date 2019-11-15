@@ -58,4 +58,4 @@ int t07_ip() {
     cout << (result ? "YES" : "NO");
     return 0; 
 }
-}
+
