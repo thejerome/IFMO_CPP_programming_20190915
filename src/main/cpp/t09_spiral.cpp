@@ -29,6 +29,7 @@ int t09_spiral() {
     }
     for (int k = 0; k < (n + m); k++) { 
         for (int j = (1 + k); j <= (m - k); j++) {
+           int i;
             i = 1 + k;
             if (a[i][j] == 0) {
                 a[i][j] = c;
@@ -44,6 +45,7 @@ int t09_spiral() {
             }
         }
         for (int j = (m - 1 - k); j >= (1 + k); j--) {
+           int i;
             i = n - k;
             if (a[i][j] == 0) {
                 a[i][j] = c;
