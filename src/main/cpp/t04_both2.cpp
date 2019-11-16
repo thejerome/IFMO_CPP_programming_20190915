@@ -46,7 +46,7 @@ int t04_both2() {
 	for (std::multiset<int>::iterator it = mst.begin(); it != mst.end(); ++it)
 		if (mst.count(*it) > 1) {
 			std::cout << *it << ' ';
-			it = mst.upper_bound(*it);
+			it = ++mst.find(*it);
 		}
 
 	return 0;
