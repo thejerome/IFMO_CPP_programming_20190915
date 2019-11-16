@@ -38,17 +38,15 @@ string ip, str;
 getline(cin, ip);
 int count=0,number;
 for (auto i: ip){
-    if (i!='.') str=str+i;
-    else {
+    if (i=='.'){
         number=stoi(str);
         count++;
         if ((count>3) or (number<0) or (number>255) or (str=="")){
             count=0;
             break;}
-        else str="";
+        else str="";}
+    else str=str+i;
     }
-}
-if (count==3) cout <<"YES";
-else cout <<"NO";
-    return 0;
+if (count==3) cout «"YES";
+else cout «"NO";
 }
