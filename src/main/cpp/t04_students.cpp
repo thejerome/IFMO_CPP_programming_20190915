@@ -29,10 +29,25 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <string>
+#include <algorithm>
+#include <map>
 
-using namespace std;
 
 int t04_students() {
-    
+	int n, marks[3]{};
+	std::string str[2]{};
+	std::multimap<double, std::string> mmp;
+
+	std::cin >> n;
+	for (int i = 0; i < n; ++i) {
+		std::cin >> str[0] >> str[1] >> marks[0] >> marks[1] >> marks[2];
+		mmp.emplace(marks[0] + marks[1] + marks[2] + double(n - i) / 100, str[0] + ' ' + str[1]);
+	}
+
+	for (auto it = mmp.rbegin(); it != mmp.rend(); ++it)
+		std::cout << (*it).second << std::endl;
+
+	return 0;
 }
 
