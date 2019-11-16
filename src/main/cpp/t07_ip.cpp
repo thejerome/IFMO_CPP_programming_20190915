@@ -44,9 +44,8 @@ for (auto i: ip){
         if ((count>3) or (number<0) or (number>255) or (str=="")){
             count=0;
             break;}
-        else str="";
+        else str="";}
     else str=str+i;
-    }
 }
 if (count==3) cout «"YES";
 else cout «"NO";
