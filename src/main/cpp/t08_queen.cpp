@@ -22,28 +22,55 @@
 #include <iomanip>
 #include <cmath>
 using namespace std;
-int g[10];
-bool arr(int a, int b, int k) {
-    if (k == a) return true;
-    else return arr(a, b, k + 1) && (a - k) != (b - g[k]) && (a - k) != (g[k] - b) && g[k] != b;
-}
-int ferz(int n, int a, int b) {
-    if (a == n) return 1;
-    else {
-        if (b < n) {
-            int j = 0;
-            if (arr(a, b, 0)) {
-                g[a] = b;
-                j = ferz(n, a + 1, 0);
-            }
-            return j + ferz(n, a, b + 1);
+int count = 0;
+
+void ferz(int x, int y, vector < vector <int> > a, int n) {  
+	int j;
+	if (a[y][x] == 0) {
+		a[y][x] = 1; 
+		for (j = 0; j < n; ++j) {
+			if (a[y][j] == 0) {
+				a[y][j] = 2;
+			}
+		}
+		for (j = 0; j < n; ++j) {
+			if (a[j][x] == 0) {
+				a[j][x] = 2;
+			}
         }
-        else return 0;
-    }
+		for (j = 1; j < n + 1; ++j) {
+			if (y + j < n && x + j < n) {
+				if (a[y + j][x + j] == 0) {
+					a[y + j][x + j] = 2;
+				}
+			}
+			if (y - j >= 0 && x + j < n) {
+				if (a[y - j][x + j] == 0) {
+					a[y - j][x + j] = 2;
+				}
+			}
+		}
+        for (j = 0; j < n; ++j) {
+			if (x + 1 >= n) {
+				count++;
+				break;
+			}
+			ferz(x + 1, j, a, n);
+		}
+	}
 }
+
 int t08_queen() {
 int n;
-    cin >> n;
-    cout << ferz(n, 0, 0);
-    return 0;
-}
+    int n, i, j;
+	cin >> n;
+	vector < vector <int> > a(n, vector<int>(n));
+	for (i = 0; i < n; ++i) {
+		for (j = 0; j < n; ++j) {
+			a[i][j] = 0; 
+		}
+	}
+	for (i = 0; i < n; ++i) {
+		ferz(0, i, a, n);
+	}
+    cout << count;
