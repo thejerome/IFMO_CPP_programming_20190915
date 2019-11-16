@@ -25,10 +25,18 @@
 
 #include "t02_new.h"
 #include <iostream>
-
-
-using namespace std;
+#include <set>
 
 int t02_new() {
-    
+	int n = 0, x = 0;
+	std::set<int> st;
+
+	std::cin >> n;
+
+	for (int i = 0; i < n; ++i) {
+		std::cin >> x;
+		std::cout << (st.insert(x).second ? "NO" : "YES") << std::endl;
+	}
+
+	return 0;
 }

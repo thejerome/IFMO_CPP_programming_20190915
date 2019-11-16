@@ -80,9 +80,60 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <map>
+#include <string>
 
 using namespace std;
 
-int t06_homework() {
+std::string to_upper(std::string str) {
+	for (std::string::iterator it = str.begin(); it != str.end(); ++it)
+		* it = toupper(*it);
+	return str;
+}
 
+std::string to_lower(std::string str) {
+	for (std::string::iterator it = str.begin(); it != str.end(); ++it)
+		* it = tolower(*it);
+	return str;
+}
+
+bool comparison(const std::string& str, std::multimap<std::string, std::string>& mmp) {
+	if (mmp.find(to_lower(str)) == mmp.end())
+		return true;
+	else
+		for (std::multimap<std::string, std::string>::iterator it = mmp.lower_bound(to_lower(str)); it != mmp.upper_bound(to_lower(str)); ++it)
+			if (str == (*it).second)
+				return true;
+	return false;
+}
+
+bool mistake(const std::string& str, std::multimap<std::string, std::string>& mmp) {
+	if (str == to_lower(str))
+		return true;
+	else if (comparison(str, mmp))
+		return false;
+	else
+		return true;
+}
+
+int t06_homework() {
+	int n = 0, c = 0;
+	std::string str;
+	std::multimap<std::string, std::string> mmp;
+
+	std::cin >> n;
+
+	for (int i = 0; i < n; ++i) {
+		std::cin >> str;
+		mmp.emplace(to_lower(str), str);
+	}
+
+	do {
+		std::cin >> str;
+		c += mistake(str, mmp);
+	} while (std::cin.peek() != '\n');
+
+	std::cout << c;
+
+	return 0;
 }
