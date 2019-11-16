@@ -43,6 +43,7 @@ int t02_shoes() {
 	}
 	sort(v.begin(), v.end());
 
+	s -= 3;
 	for (int i = 0; i < n; ++i) {
 		if (v[i] - s >= 3) {
 			s = v[i];
