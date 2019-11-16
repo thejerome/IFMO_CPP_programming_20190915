@@ -17,11 +17,27 @@
 #include "t03_diag.h"
 #include <iostream>
 #include <cmath>
-
-
 using namespace std;
-
-int t03_diag() {
-    
+int t03_diag() { 
+    int N;
+    cin >> N;
+    int a[15][15];
+    for (int y = 0; y < N; y++)
+    {
+        for (int x = 0; x < N; x++)
+        {
+            for (int k = 0; k < N; k++)
+            {
+                if ( x - y == k || y - x == k)
+                {
+                    cout << k << " ";
+                }
+            }
+            
+        }
+        
+        cout << endl;
+        
+    }
     return 0;
 }
