@@ -47,6 +47,6 @@ for (auto i: ip){
         else str="";}
     else str=str+i;
 }
-if (count==3) cout «"YES";
-else cout «"NO";
+if (count==3) cout <<"YES";
+else cout <<"NO";
 }
