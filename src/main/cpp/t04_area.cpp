@@ -33,8 +33,6 @@
 using namespace std;
 
 bool IsPointInArea(double x, double y) {
-    bool InCircle = pow(x+1,2) + pow (y-1 , 2) <= 4;
-    bool bLines = y >= 2*x+2 and y >= -x;
     return ( (pow(x+1,2) + pow (y-1 , 2) <= 4 and y >= 2*x+2 and y >= -x) or
     (pow(x+1,2) + pow (y-1 , 2) >= 4 and y <= 2*x+2 and y <= -x));
 }
