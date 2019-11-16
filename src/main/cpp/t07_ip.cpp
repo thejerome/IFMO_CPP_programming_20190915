@@ -39,7 +39,7 @@ getline(cin, ip);
 int count=0,number;
 for (auto i: ip){
     if (i=='.'){
-        number=stoi(str);
+        if (str!="") number=stoi(str);
         count++;
         if ((count>3) or (number<0) or (number>255) or (str=="")){
             count=0;
