@@ -27,9 +27,17 @@
 
 using namespace std;
 
-//function power
+
+float power(float W, float R)
+{
+    float Ans = pow(W,R);
+    return Ans;
+}
 
 int t05_power() {
 
-    return 0;
+   float W,R;
+cin >> W >> R;
+     cout << power(W,R);
+
 }

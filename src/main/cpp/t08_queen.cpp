@@ -21,8 +21,23 @@
 #include <vector>
 
 using namespace std;
+int C[10];
+int QC1(int Q1, int Q2, int Q4) {
+     int AN = (C[Q4] - Q2 != 0) && ((Q1 - Q4) - (Q2 - C[Q4])) != 0 && ((Q1 - Q4) - (C[Q4] - Q2)) != 0;
+     if (Q4 == Q1){return true;}
+    else return AN && QC1(Q1, Q2, Q4+1);
+}
 
+int B(int Q1, int Q2, int Q3) {
+    int F=0,P = 0;
+    if (Q2 == Q1){return F=1;}
+    else if (Q3 < Q1) {if (QC1(Q2, Q3, 0))
+    {C[Q2] = Q3;P = B(Q1, Q2 + 1, 0);}
+    return P + B(Q1, Q2, Q3 + 1);}
+    else {return F;}
+}
 int t08_queen(){
-
-    return 0;
+    int Q1;
+ cin >> Q1;
+ cout << B(Q1,0,0);
 }
