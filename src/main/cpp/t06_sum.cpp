@@ -19,10 +19,17 @@
 
 #include <iostream>
 #include <cmath>
-
+#include <iomanip>
 using namespace std;
-
+int sum () {
+    int a;
+    cin >> a;
+    if ( a == 0) {
+        return 0;
+    }
+    return a+sum();
+}
 int t06_sum() {
-
+    cout << sum();
     return 0;
 }

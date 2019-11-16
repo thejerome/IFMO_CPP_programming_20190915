@@ -17,13 +17,17 @@
 //1.41421
 
 #include <iostream>
+#include <iomanip>
 #include <cmath>
-
 using namespace std;
-
-//function distance
-
-int t02_dist() {
-
+double distance(double x1, double y1, double x2, double y2) {
+    double a = pow((x1 - x2),2);
+    double b = pow((y1 - y2),2);
+    return sqrt(a+b);
+}
+int t02_dist() { 
+    double  x1, y1,  x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    cout << distance(x1, y1, x2, y2);
     return 0;
 }

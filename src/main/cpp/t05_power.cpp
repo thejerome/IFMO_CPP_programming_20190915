@@ -24,12 +24,17 @@
 
 #include <iostream>
 #include <cmath>
-
+#include <iomanip>
 using namespace std;
-
-//function power
-
+double power(double a, int n) {
+    if ( n == 0 ) return 1;
+    if ( n < 0) return (power(a,n+1) / a);
+    if ( n > 0) return (a * power(a,n-1));
+}
 int t05_power() {
-
-    return 0;
+    double a;
+    int n;
+    cin >> a >> n;
+    cout << power(a,n);
+  return 0;
 }
