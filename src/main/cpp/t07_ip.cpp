@@ -37,6 +37,7 @@ int t07_ip() {
 string ip, str;
 getline(cin, ip);
 int count=0,number;
+void stoi();
 for (auto i: ip){
     if (i!='.') str=str+i;
     else {
