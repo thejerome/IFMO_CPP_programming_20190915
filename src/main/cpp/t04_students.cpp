@@ -32,8 +32,8 @@
 #include <string>
 #include <algorithm>
 #include <map>
-
-
+//
+//
 int t04_students() {
 	int n, marks[3]{};
 	std::string str[2]{};
