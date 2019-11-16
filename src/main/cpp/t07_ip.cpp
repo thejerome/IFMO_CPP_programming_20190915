@@ -35,13 +35,13 @@ using namespace std;
 
 int t07_ip() {
 	string h, number = "";
-	bool pass = true, num = true;
+	bool pass = true;
 	int numofpoints = 0;
 	int numofnumbers = 0;
 	cin >> h;
 	for (int i = 0; i < h.size(); i++)
 	{
-		if (h[i] == '.' && num ==false)
+		if (h[i] == '.' && numofpoints < numofnumbers)
 		{
 			if (stoi(number) > 255)
 			{
@@ -49,9 +49,8 @@ int t07_ip() {
 				pass = false;
 				break;
 			}
-			if (num==false)
+			if (numofpoints<numofnumbers)
 			{
-				num = true;
 				numofpoints++;
 			}
 			number = "";
@@ -64,9 +63,8 @@ int t07_ip() {
 		else if ((int)h[i] >= 48 && (int)h[i] <= 57)
 		{
 			number += h[i];
-			if (num==true)
+			if (numofnumbers<=numofpoints)
 			{
-				num = false;
 				numofnumbers++;
 			}
 		}
