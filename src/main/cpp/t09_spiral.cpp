@@ -19,7 +19,7 @@
 #include <iostream>
 using namespace std;
 int t09_spiral() { 
-   int n, m, c = 1, i = 0, j = 0;
+   int n, m, c = 1, i = 0;
     cin >> n >> m;
     int a[100][100];
     for (int i = 1; i <= n; i++) {
