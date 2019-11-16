@@ -25,8 +25,8 @@ using namespace std;
 int count = 0;
 
 void ferz(int x, int y, vector < vector <int> > a, int n) {  
-	int j;
 	if (a[y][x] == 0) {
+		int j;
 		a[y][x] = 1; 
 		for (j = 0; j < n; ++j) {
 			if (a[y][j] == 0) {
