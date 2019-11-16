@@ -18,7 +18,7 @@
 //4
 #include <iostream>
 using namespace std;
-int main() {
+int t04_first_number() {
 	int N;
 	cin >> N;
 	cout << N / 10;

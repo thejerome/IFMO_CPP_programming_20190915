@@ -18,7 +18,7 @@
 //17
 #include <iostream>
 using namespace std;
-int main() {
+int t06_3digits() {
 	int N = 941;
 	cin >> N;
 	cout << N % 10 + N / 10 % 10 + N / 100;

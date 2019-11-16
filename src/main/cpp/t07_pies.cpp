@@ -32,7 +32,7 @@
 //10 0
 #include <iostream>
 using namespace std;
-int main() {
+int t07_pies() {
 	int A, B, N;
 	cin >> A >> B >> N;
 	cout << A * N + B * N / 100 << ' ' << B * N % 100;

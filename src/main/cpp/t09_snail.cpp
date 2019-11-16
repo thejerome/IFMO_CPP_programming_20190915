@@ -22,7 +22,7 @@
 //8
 #include <iostream>
 using namespace std;
-int main() {
+int t09_snail() {
 	int H, A, B, N, P;
 	cin >> H >> A >> B;
 	P = H - A;

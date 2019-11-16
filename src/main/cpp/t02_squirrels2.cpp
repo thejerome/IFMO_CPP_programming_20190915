@@ -19,7 +19,7 @@
 //2
 #include <iostream>
 using namespace std;
-int main() {
+int t02_squirrels2() {
   int K, N;
 	cout << "number of nuts:";
 	cin >> K;
