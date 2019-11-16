@@ -34,12 +34,28 @@
 
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 
 using namespace std;
 
-//function IsPointInCircle
+bool IsPointInCircle(double x, double y, double xc, double yc, double r)
+{
+    double a = ((x - xc) * (x - xc) + (y - yc) * (y - yc) - r * r);
+    //cout << a;
+    a = (trunc((a) / (a + 1)));
+
+    return a;
+}
 
 int t03_circle() {
+    double x, y, xc, yc, r;
+    cin >> x >> y >> xc >> yc >> r;
+    if (IsPointInCircle(x, y, xc, yc, r))
+        cout << "YES";
+    else
+        cout << "NO";
+
 
     return 0;
+
 }
