@@ -29,4 +29,5 @@ int main() {
 	N = A - B;
 	cout << 1 + P / N + (P % N + N - 1) / N;
 	return 0;
+
 }
