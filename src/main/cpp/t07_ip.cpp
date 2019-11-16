@@ -29,10 +29,48 @@
 
 #include "t07_ip.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t07_ip() {
+	string h, number = "";
+	bool pass = true;
+	int numofpoints = 0;
+	int numofnumbers = 0;
+	cin >> h;
+	for (int i = 0; i < h.size(); i++)
+	{
+		if (h[i] == '.' && numofpoints < numofnumbers)
+		{
+			if (stoi(number) > 255)
+			{
 
+				pass = false;
+				break;
+			}
+			if (numofpoints<numofnumbers)
+			{
+				numofpoints++;
+			}
+			number = "";
+		}
+		else if (((int)h[i] < 48 || (int)h[i] > 57) || ((h[i] == h[i + 1]) && h[i] == '.'))
+		{
+			pass = false;
+			break;
+		}
+		else if ((int)h[i] >= 48 && (int)h[i] <= 57)
+		{
+			number += h[i];
+			if (numofnumbers<=numofpoints)
+			{
+				numofnumbers++;
+			}
+		}
+	}
+	if (pass == true && numofnumbers == 4 && numofpoints == 3)
+		cout << "YES";
+	else
+		cout << "NO";
 }

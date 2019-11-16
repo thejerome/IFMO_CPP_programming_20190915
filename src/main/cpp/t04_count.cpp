@@ -28,5 +28,14 @@
 using namespace std;
 
 int t04_count() {
-
+	char buffer[450];
+	cin.getline(buffer, 450);
+	int i = 0, count = 1;
+	while (buffer[i] != '\0')
+	{
+		if (buffer[i] == ' ')
+			count++;
+		i++;
+	}
+	cout << count;
 }
