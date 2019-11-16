@@ -32,4 +32,5 @@ int S() {
 int t06_sum() {
     cout << S();
     return 0;
+    
 }
