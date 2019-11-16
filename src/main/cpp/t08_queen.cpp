@@ -23,9 +23,8 @@
 using namespace std;
 int C[10];
 int QC1(int Q1, int Q2, int Q4) {
-     int F=0;
      int AN = (C[Q4] - Q2 != 0) && ((Q1 - Q4) - (Q2 - C[Q4])) != 0 && ((Q1 - Q4) - (C[Q4] - Q2)) != 0;
-     if (Q4 == Q1){return F=1;}
+     if (Q4 == Q1){return true;}
     else return AN && QC1(Q1, Q2, Q4+1);
 }
 
