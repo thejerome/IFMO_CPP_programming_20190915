@@ -61,7 +61,6 @@ void ferz(int x, int y, vector < vector <int> > a, int n) {
 }
 
 int t08_queen() {
-int n;
     int n, i, j;
 	cin >> n;
 	vector < vector <int> > a(n, vector<int>(n));
@@ -74,3 +73,5 @@ int n;
 		ferz(0, i, a, n);
 	}
     cout << count;
+	return 0;
+}
