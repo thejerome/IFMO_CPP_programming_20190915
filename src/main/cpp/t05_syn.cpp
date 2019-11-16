@@ -27,10 +27,23 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
-
-using namespace std;
+#include <map>
 
 int t05_syn() {
+	int n = 0;
+	std::string str1 = "", str2 = "";
+	std::map<std::string, std::string> mp;
 
+	std::cin >> n;
+
+	for (int i = 0; i < n; ++i) {
+		std::cin >> str1 >> str2;
+		mp.emplace(str1, str2);
+		mp.emplace(str2, str1);
+	}
+
+	std::cin >> str1;
+	std::cout << mp[str1];
+
+	return 0;
 }

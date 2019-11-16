@@ -19,9 +19,19 @@
 
 #include "t01_unique.h"
 #include <iostream>
-
-using namespace std;
+#include <set>
 
 int t01_unique() {
-    
+	int n = 0, x = 0;
+	std::set<int> st;
+	std::cin >> n;
+
+	for (int i = 0; i < n; ++i) {
+		std::cin >> x;
+		st.insert(x);
+	}
+
+	std::cout << st.size();
+
+	return 0;
 }
