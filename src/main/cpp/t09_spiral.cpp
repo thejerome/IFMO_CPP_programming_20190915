@@ -51,6 +51,7 @@ int t09_spiral() {
             }
         }
         for (int i = (n - 1 - k); i >= (2 + k); i--) {
+           int j;
             j = 1 + k;
             if (a[i][j] == 0) {
                 a[i][j] = c;
