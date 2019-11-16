@@ -22,10 +22,7 @@ using namespace std;
 int t01_squirrels()
 {
 	int K, N;
-	cout << "number of nuts:";
-	cin >> K;
-	cout << "The number of squirrels:";
-	cin >> N;
-	cout << "How many nuts will each squirrel get:" << K / N;
+	cin >> K >> N;
+	cout << K / N;
 	return 0;
 }
