@@ -20,8 +20,8 @@
 #include <iostream>
 using namespace std;
 int t02_squirrels2() {
-  int N, K;
-  cin >> K >> N;
+  int N=0, K=0;
+  cin >> N >> K;
   cout << K % N;
 	return 0;
 }
