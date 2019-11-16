@@ -17,49 +17,59 @@
 
 #include "t09_spiral.h"
 #include <iostream>
-#include <iomanip>
-
-
 using namespace std;
-
 int t09_spiral() { 
-    int n, m, k = 1;
+   int n, m, c = 1, i = 0, j = 0;
     cin >> n >> m;
-    int a[n][m];
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            a[i][j]=0;
+    int a[100][100];
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= m; j++) {
+            a[i][j] = 0;
         }
     }
-    int i=0,j=0;
-    while(k<m*n){
-        while(a[i][(j+1)%m]==0){
-            a[i][j]=k;
-            k++;
-            j++;
+    for (int k = 0; k < (n + m); k++) { 
+        for (int j = (1 + k); j <= (m - k); j++) {
+            i = 1 + k;
+            if (a[i][j] == 0) {
+                a[i][j] = c;
+                c++;
+            }
         }
-        while(a[(i+1)%n][j]==0){
-            a[i][j]=k;
-            k++;
-            i++;
+        for (int i = (2 + k); i <= (n - k); i++) {
+            j = m - k;
+            if (a[i][j] == 0) {
+                a[i][j] = c;
+                c++;
+            }
         }
-        while(a[i][(j-1)%m]==0){
-            a[i][j]=k;
-            k++;
-            j--;
+        for (int j = (m - 1 - k); j >= (1 + k); j--) {
+            i = n - k;
+            if (a[i][j] == 0) {
+                a[i][j] = c;
+                c++;
+            }
         }
-        while(a[(i-1)%n][j]==0){
-            a[i][j]=k;
-            k++;
-            i--;
+        for (int i = (n - 1 - k); i >= (2 + k); i--) {
+            j = 1 + k;
+            if (a[i][j] == 0) {
+                a[i][j] = c;
+                c++;
+            }
         }
-    }
-    a[i][j]=m*n;
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            cout<<setw(4)<<a[i][j]<< " ";
+    }        
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= m; j++) {
+            if (a[i][j] < 10) {
+                cout << "   " << a[i][j];
+            }
+            else if (a[i][j] < 100) {
+                 cout << "  " << a[i][j];
+            }
+            else {
+               cout << " " << a[i][j];
+            }
         }
-        cout<<endl;
+        cout << endl;
     }
     return 0;
 }
