@@ -43,10 +43,10 @@ int t04_both2() {
 		mst.insert(x);
 	}
 
-	for (std::multiset<int>::iterator i = mst.begin(); i != mst.end(); ++i)
-		if (mst.count(*i) > 1) {
-			std::cout << *i << ' ';
-			++i;
+	for (std::multiset<int>::iterator it = mst.begin(); it != mst.end(); ++it)
+		if (mst.count(*it) > 1) {
+			std::cout << *it << ' ';
+			it = mst.upper_bound(*it);
 		}
 
 	return 0;
