@@ -38,7 +38,7 @@
 using namespace std;
 
 //function IsPointInCircle
-bool IsPointInCircle(int x, int y, int xc, int yc, int r){
+bool IsPointInCircle(float x, float y, float xc, float yc, float r){
 	return((x - xc) * (x - xc) + (y - yc) * (y - yc) <= r * r);
 }
 
