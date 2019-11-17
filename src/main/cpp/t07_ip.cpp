@@ -49,7 +49,12 @@ int t07_ip() {
         int pos2;
         pos2 = s.find(".", pos);
 
-        arr[cou] = stoi(s.substr(pos, pos2 - pos));
+       try{
+        	arr[cou] = stoi(s.substr(pos, pos2 - pos));
+       }catch(exception e){
+            cout << "NO";
+            return 0;
+       }
 
         cou++;
         pos = pos2 + 1;
@@ -60,7 +65,12 @@ int t07_ip() {
         return 0;
     }
 
-    arr[3] = stoi(s.substr(pos));
+    try{
+    	arr[3] = stoi(s.substr(pos));
+    }catch(exception e){
+        cout << "NO";
+        return 0;
+    }
 
     bool is = 1;
 
