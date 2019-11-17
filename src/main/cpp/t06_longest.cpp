@@ -22,13 +22,10 @@
 using namespace std;
 
 int t06_longest() {
-    string w;
-    string max_w;
-    int temp_max = 0;
-    while(cin>>w){
-        if(w.length() > temp_max)
-            temp_max = w.length(); max_w = w;
+    string word,longWord;
+    while (cin >> word) {
+        if (word.length() > longWord.length())
+            longWord=word;
     }
-    cout<<max_w<<endl;
-    return 0;
+    cout <<longWord<<endl;
 }
