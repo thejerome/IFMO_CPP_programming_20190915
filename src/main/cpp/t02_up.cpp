@@ -26,6 +26,6 @@ using namespace std;
 int t02_up() {
             char a;
           cin >> a;
-          if (a > 97) {a = a - 32;}
+          if (a > 96) {a = a - 32;}
 cout << a;  
 }
