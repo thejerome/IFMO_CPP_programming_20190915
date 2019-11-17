@@ -34,5 +34,25 @@
 using namespace std;
 
 int t07_ip() {
-
+  int dots = 0;
+  string s, t;
+  getline(cin, s);
+  for (auto c: s + '.') {
+      if (isdigit(c) && t != "0") {
+          t += c;
+      }
+      else if (c == '.' && !t.empty()) {
+          if (stoi(t) > 255) {
+              cout << "NO";
+              return 0;
+          }
+          dots++;
+          t.clear();
+      }
+      else {
+          cout << "NO";
+          return 0;
+      }
+  }
+  cout << (dots == 4 ? "YES" : "NO");
 }
