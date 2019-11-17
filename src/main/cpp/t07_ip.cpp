@@ -29,10 +29,42 @@
 
 #include "t07_ip.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t07_ip() {
-
+	string s;
+	int b = 0;
+	int c, l, cp = 0;
+	cin >> s;
+	if (s[0] == '.') {
+		cout << "NO";
+		return 0;
+	}
+	for (int i = 0; i < s.size();i++) {
+		if (s[i] != '.')
+			l += 1;
+		else {
+			if (l == 0) {
+				cout << "NO";
+				return 0;
+			}
+			else {
+				c = stoi(s.substr(b, l));
+				l = 0;
+				b = i + 1;
+				cp += 1;
+				if (c > 255 || c < 0) {
+					cout << "NO";
+					return 0;
+				}
+			}
+		}
+	}
+	if (cp == 3)
+		cout << "YES";
+	else
+		cout << "NO";
+	return 0;
 }
