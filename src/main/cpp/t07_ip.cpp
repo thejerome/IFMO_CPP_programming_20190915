@@ -34,5 +34,18 @@
 using namespace std;
 
 int t07_ip() {
-
+string b;
+int a, k = 0, prevk=0;
+getline(cin, b);
+a =  b.size();
+for (int i = 0; i < a; i++)
+{if (b[i] == '.'){
+if (((b.substr(prevk, i - prevk) > "255" or b.substr(prevk, i - prevk) < "0")and b.substr(prevk, i - prevk).size() == 3) or b.substr(prevk, i - prevk).size() > 3)
+{cout << "NO";k = 3; prevk = -1; break;}
+prevk = i + 1;
+k++;
+}
+}
+if(k != 3) {cout << "NO";}
+if(prevk != -1 and k ==3) {cout << "YES";}
 }
