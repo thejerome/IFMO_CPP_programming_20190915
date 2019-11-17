@@ -23,17 +23,12 @@
 using namespace std;
 
 int t01_unique() {
- int U,L,H,D=0;
-cin >> U;
-int ARRC[U];
-for(L =0; L < U;L++);
-for(H = U; H > 0;--H)
-{
-    cin >> ARRC[H];
-    if (ARRC[L] != ARRC[H] )
-    {
-        D++;
-    }
-}
-cout << D;
+int D,E;
+ set <int> A;
+ cin >> D;
+ for(int L = D;L > 0; L--){
+    cin >> E;
+    A.insert(E);
+ }
+ cout << A.size();
 }
