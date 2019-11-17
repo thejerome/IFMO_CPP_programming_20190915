@@ -42,5 +42,3 @@ int t09_equals() {
 cout << equals;
 return 0;
 }
-
-}
