@@ -32,7 +32,53 @@
 
 
 using namespace std;
+bool isIPAddressValid(const char* pszIPAddr)
+{
+    if (!pszIPAddr) return false;
+    char IP1[100],cIP[4];
+    int len = strlen(pszIPAddr);
+    int i = 0,j=len-1;
+    int k, m = 0,n=0,num=0;
+    while (pszIPAddr[i++] == ' ');
+    while (pszIPAddr[j--] == ' ');
+    for (k = i-1; k <= j+1; k++)
+    {
+        IP1[m++] = *(pszIPAddr + k);
+    }
+    IP1[m] = '\0';
+    char *p = IP1;
+    while (*p!= '\0')
+    {
+        if (*p == ' ' || *p<'0' || *p>'9') return false;
+        cIP[n++] = *p;
+        int sum = 0;
+        while (*p != '.'&&*p != '\0')
+        {
+            if (*p == ' ' || *p<'0' || *p>'9') return false;
+            sum = sum * 10 + *p-48;
+            p++;
+        }
+        if (*p == '.') {
+            if ((*(p - 1) >= '0'&&*(p - 1) <= '9') && (*(p + 1) >= '0'&&*(p + 1) <= '9'))
+                num++;
+            else
+                return false;
+        };
+        if ((sum > 255) || (sum > 0 && cIP[0] =='0')||num>3) return false;
 
+        if (*p != '\0') p++;
+        n = 0;
+    }
+    if (num != 3) return false;
+    return true;
+}
 int t07_ip() {
-
+    char IP[100];
+    cin >> IP;
+    bool tf = isIPAddressValid(IP);
+    if(tf == 1)
+        cout<<"YES";
+    else
+        cout<<"NO";
+    return 0;
 }
