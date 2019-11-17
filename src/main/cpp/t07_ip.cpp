@@ -35,24 +35,42 @@
 using namespace std;
 
 int t07_ip() {
-string str,sub;
-int probel=0;
-bool flag=false;
-getline(cin,str);
-for(int i=0;i<str.length();i++)
-{
-  if(str[i]=='.'){
-    if(probel==0)sub=str.substr(probel,i-probel);
-    else sub=str.substr(probel+1,i-probel-1);
-    if(i==str.length()-1)
+  string str,sub;
+  int probel=0;
+  bool flag=false;
+  getline(cin,str);
+  int br=0;
+  if((int)str[0]>=48 && (int)str[0]<=57){
+    for(int i=0;i<str.length();i++)
     {
-      sub=str.substr(probel+1,i-probel+1);
+
+      if(str[i]=='.' && i!=str.length()-1) {
+        if((int)str[i+1]>=48 && (int)str[i+1]<=57){
+        br++;
+        if(probel==0)sub=str.substr(probel,i-probel);
+        else sub=str.substr(probel+1,i-probel-1);
+        int number=stoi(sub,nullptr);
+        if(number>=0 && number<=255)flag=true;
+        else {flag=false;break;}
+        probel=i;
+        }
+        else {flag=false;break;}
+      }
+      if(i==str.length()-1)
+      {
+        if((int)str[i]>=48 && (int)str[i]<=57){
+          sub=str.substr(probel+1,i-probel+1);
+          int number=stoi(sub,nullptr);
+          if(number>=0 && number<=255)flag=true;
+          else {flag=false;break;}
+        }
+        else {flag=false;break;}
+      }
     }
-    int number=stoi(sub,nullptr);
-    if(number>=0 && number<=255)flag=true;
-    else {flag=false;break;}
   }
-}
-if(flag)cout<<"YES";
-else cout<<"NO";
+  else flag=false;
+
+  if(br!=3)cout<<"NO";
+  else if(flag)cout<<"YES";
+  else cout<<"NO";
 }

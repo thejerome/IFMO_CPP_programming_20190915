@@ -26,5 +26,6 @@ using namespace std;
 int t02_up() {
   char a;
   cin>>a;
-  cout<<(char)((int)a-32 );
+  if((int) a<97 || (int)a>122)cout<<a;
+  else  cout<<(char)((int)a-32 );
 }
