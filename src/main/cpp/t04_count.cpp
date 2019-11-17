@@ -23,10 +23,21 @@
 
 #include "t04_count.h"
 #include <iostream>
+#include <string>
 
 
 using namespace std;
 
 int t04_count() {
+	string s;
+	int cnt = 1, i = 0;
+	getline(cin, s);
+	while ((int)(s.find(" ", i)) > -1) {
+		cnt++;
+		i = s.find(" ", i) + 1;
+	}
+	cout << cnt;
+	return 0;
+	
 
 }
