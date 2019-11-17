@@ -22,6 +22,30 @@
 using namespace std;
 
 int t03_diag() {
-    
+    int n;
+	cin >> n;
+    int arr[100][100];
+
+    for(int i = 0; i < n; i++)
+        for(int j = 0; j < n; j++)
+            arr[i][j] = -1;
+
+	for(int k = 0; k < n; k++){
+        int cou = 0;
+
+        for(int i = k; i < n; i++){
+            arr[k][i] = cou;
+            arr[i][k] = cou;
+            cou++;
+        }
+	}
+
+	for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++)
+            cout << arr[i][j] << " ";
+
+        cout << endl;
+    }
+
     return 0;
 }
