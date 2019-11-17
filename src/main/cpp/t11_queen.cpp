@@ -39,8 +39,7 @@
 using namespace std;
 
 int t11_queen() {
- int n,i,k;
- n = 8;
+ int n=8;
  int a[n];
  int z[n];
  
@@ -49,13 +48,14 @@ int t11_queen() {
      cin >> z[i];
  }
  bool l = 0;
- for( i = 0 ; i < n ; i++) {
-     for( k = i + 1; k < n ; k++) {
-         if (a[i] == a[k] || z[i] == z[k] || abs(a[i] - a[k]) == abs(z[i] - z[k]))
+ for(int i = 0 ; i < n ; i++) {
+     for(int k = i + 1; k < n ; k++) {
+         if (a[i] == a[k] || z[i] == z[k] || abs(a[i] - a[k]) == abs(z[i] - z[k])) {
          l = 1;
+         }
      }
  }
- if (l=1) 
+ if (l=1)  
     cout << "YES";
  else
     cout << "NO";
