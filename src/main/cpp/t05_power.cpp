@@ -32,7 +32,7 @@ double power(double a, int n)
 {
 	if (n != 0)
 		return pow (a, n);
-	if (n == 0)
+	else
 		return 1;
 }
 int t05_power() {
