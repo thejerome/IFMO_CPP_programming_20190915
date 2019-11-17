@@ -23,10 +23,28 @@
 
 #include "t04_count.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t04_count() {
-
+    int c = 0;
+    bool flag = false;
+    string a;
+    getline(cin, a);
+    for(int i=0; i<a.length(); i++)
+    {
+        if(a[i] != 32 && flag == false)
+        {
+            flag = true;
+        }
+        else
+        if(a[i] == 32 && flag == true)
+        {
+            flag = false;
+            c++;
+        }
+    }
+    if(flag == true) c++;
+    cout << c;
 }
