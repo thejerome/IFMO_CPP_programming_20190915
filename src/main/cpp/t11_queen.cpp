@@ -47,16 +47,18 @@ int t11_queen() {
      cin >> a[i];
      cin >> z[i];
  }
- bool l = 0;
+ bool l = false;
  for(int i = 0 ; i < n ; i++) {
      for(int k = i + 1; k < n ; k++) {
          if (a[i] == a[k] || z[i] == z[k] and abs(a[i] - a[k]) and abs(z[i] - z[k])) {
-         l = 1;
+         l = true;
          }
      }
  }
- if (l=1)  
+ if (l) { 
     cout << "YES";
- else
-    cout << "NO";
+    return 0;
+ }
+ cout << "NO";
+ return 0;
 }
