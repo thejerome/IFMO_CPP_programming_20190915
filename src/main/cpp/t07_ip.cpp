@@ -40,7 +40,7 @@ getline(cin, b);
 a =  b.size();
 for (int i = 0; i < a; i++)
 {if (b[i] == '.'){
-if (((b.substr(prevk, i - prevk) > "255" or b.substr(prevk, i - prevk) < "0")and b.substr(prevk, i - prevk).size() == 3) or b.substr(prevk, i - prevk).size() > 3)
+if(((b.substr(prevk, i - prevk) > "255" and b.substr(prevk, i - prevk).size() == 3) or b.substr(prevk, i - prevk) < "0") or b.substr(prevk, i - prevk).size() > 3)
 {cout << "NO";k = 3; prevk = -1; break;}
 prevk = i + 1;
 k++;
