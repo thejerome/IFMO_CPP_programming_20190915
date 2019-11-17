@@ -36,6 +36,7 @@ int min4(int num1,int num2,int num3,int num4){
     result2 = min(min(num1,num2),min(num3,num4));
     return result2;
 }
+
 int t01_min() {
     int num1,num2,num3,num4,min;
     cin>>num1>>num2>>num3>>num4;
