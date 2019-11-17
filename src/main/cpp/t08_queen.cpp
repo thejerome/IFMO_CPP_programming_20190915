@@ -26,3 +26,25 @@ int t08_queen(){
 
     return 0;
 }
+
+//int start1, start2, fin1, fin2;
+//	int r1, r2;
+//	bool is = 0;
+//
+//	cin >> start1 >> start2 >> fin1 >> fin2;
+//
+//	r1 = fin1 - start1;
+//	r2 = fin2 - start2;
+//
+//	if(r1 * r1 == r2 * r2)
+//		is = 1;
+//
+//	if(start1 == fin1 || start2 == fin2)
+//		is = 1;
+//
+//    if(is)
+//        cout << "YES" << endl;
+//    else
+//        cout << "NO" << endl;
+//
+//	return 0;

@@ -28,11 +28,13 @@
 using namespace std;
 
 //function power
-int power(float a, int n){
-    if(n == 1)
-        return a;
-    else
-        return power(a, n - 1) * a;
+float power(float a, int n){
+	if(n == 0)
+		return 1;
+    if(n  <  0)
+		return power(a, n + 1) / a;
+    
+    return power(a, n - 1) * a;
 }
 
 int t05_power() {
