@@ -22,5 +22,16 @@
 using namespace std;
 
 int t06_longest() {
-
+    string word = "", max = "";
+    char line[450];
+    cin.getline(line, 450);
+    for (int i = 0; i <= ((string) line).size(); i++){
+        if (line[i] != ' ' && i != ((string)line).size())
+            word += line[i];
+        else if (max.size() < word.size())
+            max = word;
+        if (line[i] == ' ')
+            word = "";
+    }
+    cout << max;
 }
