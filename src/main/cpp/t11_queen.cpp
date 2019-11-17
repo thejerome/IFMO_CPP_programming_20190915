@@ -50,12 +50,12 @@ int t11_queen() {
  }
  bool l = 0;
  for( i = 0 ; i < n ; i++) {
-     for( k = i +1; k < n ; k++) {
-         if (a[i] == a[k] || abs(a[i] - a[k]) == abs(z[i] - z[k]) || z[i] == z[k])
+     for( k = i + 1; k < n ; k++) {
+         if (a[i] == a[k] || z[i] == z[k]) || abs(a[i] - a[k]) == abs(z[i] - z[k]))
          l = 1;
      }
  }
- if (l=1) 
+ if (l=0) 
     cout << "YES";
  else
     cout << "NO";
