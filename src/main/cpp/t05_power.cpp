@@ -26,12 +26,19 @@
 #include <cmath>
 
 using namespace std;
-
-//function power
+#include<iostream>
+#include<cmath>
+using namespace std;
 double power(double a, int n)
 {
+  if(n>0){
   if(n==1)return a;
-  else return a+power(a,n-1);
+  else return a*power(a,n-1);}
+  else if(n<0){
+    if(n==-1)return a;
+    else return a*power(a,n+1);
+  }
+  else return 1;
 }
 
 int t05_power() {
@@ -39,7 +46,8 @@ int t05_power() {
   int n;
   double a;
   cin>>a>>n;
-  cout<<power(a,n);
+  if(n<0)cout<<1/power(a,n);
+  else cout<<power(a,n);
 
     return 0;
 }

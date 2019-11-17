@@ -27,6 +27,8 @@
 //
 //NO
 
+
+
 #include <iostream>
 #include <cmath>
 
@@ -47,9 +49,11 @@ double funk3(double x, double y)
 bool IsPointInArea(double x, double y)
 {
   bool flag=false;
-  if(y>=2/3)
+  double k=(double)2/(double)3;
+
+  if(y>=k)
   {
-      if(funk1(x,y)<=0 && funk2(x,y)>=0 && funk3(x,y)<=0)flag=true;
+      if(funk1(x,y)>=0 && funk2(x,y)>=0 && funk3(x,y)<=0)flag=true;
       else flag=false;
   }
   else
