@@ -27,7 +27,7 @@ int t05_palindrom() {
 
   string str;
   int k;
-  bool flag=flag;
+  bool flag=false;
   cin>>str;
   k=str.length()-1;
   for(int i=0;i<str.length()/2;i++)

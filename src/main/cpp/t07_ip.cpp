@@ -36,11 +36,11 @@ using namespace std;
 
 int t07_ip() {
   string str,sub;
-  int probel=0;
   bool flag=false;
   getline(cin,str);
   int br=0;
   if((int)str[0]>=48 && (int)str[0]<=57){
+    int probel=0;
     for(int i=0;i<str.length();i++)
     {
 
