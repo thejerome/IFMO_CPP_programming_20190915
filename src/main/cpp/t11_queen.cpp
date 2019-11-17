@@ -50,7 +50,7 @@ int t11_queen() {
  bool l = 0;
  for(int i = 0 ; i < n ; i++) {
      for(int k = i + 1; k < n ; k++) {
-         if (a[i] == a[k] || z[i] == z[k] || abs(a[i] - a[k]) == abs(z[i] - z[k])) {
+         if (a[i] == a[k] || z[i] == z[k] and abs(a[i] - a[k]) and abs(z[i] - z[k])) {
          l = 1;
          }
      }
