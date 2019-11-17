@@ -44,10 +44,10 @@ int t07_ip() {
         } else {
             c = b;
             b = "";
-            if (stoi(c) >= 0 && stoi(c) <= 255)
-                d++;
-            else if (c == "")
+            if (c == "")
                 d = x;
+            else if (stoi(c) >= 0 && stoi(c) <= 255)
+                d++;
         }
     }
     if (d == 4)
