@@ -29,7 +29,7 @@ int t04_neighbors() {
      }
  for( i = 1; i < n ; i++ ) {
      if (a[i] > 0 and a[i-1] > 0) {
-         cout << a[i] << ' ' << a[i-1];
+         cout << a[i-1] << ' ' << a[i];
          break;
         }
      if (a[i] < 0 and a[i-1] < 0) {
