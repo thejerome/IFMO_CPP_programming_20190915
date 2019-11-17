@@ -30,7 +30,7 @@ using namespace std;
 int t04_count() {
 int q = 1, pos = 0;
 string b;
-cin >> b;
+getline(cin, b);
 
       if (b.find(' ') == b.rfind(' ')) {cout << 1;}
       else{
