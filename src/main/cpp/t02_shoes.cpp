@@ -58,4 +58,5 @@ int t02_shoes() {
      }
     }
     cout << count;   
+    return 0;
 }
