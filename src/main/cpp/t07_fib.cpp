@@ -18,8 +18,17 @@
 using namespace std;
 
 // function fib
+int fibb(int t){
+    if(t == 1 || t == 2)
+        return 1;
+    else
+        return fibb(t - 2) + fibb(t - 1);
+}
 
 int t07_fib()
 {
+	int t;
+    cin >> t;
+    cout << fibb(t);
     return 0;
 }
