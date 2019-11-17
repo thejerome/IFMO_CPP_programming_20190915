@@ -22,8 +22,38 @@
 
 using namespace std;
 
-int t08_queen(){
 
+int mx[10], my[10];
+
+bool is(int d, int x, int y){
+    return x == d || (abs(x - mx[d]) != abs(y - my[d])) && (my[d] != y) && is(d + 1, x, y);
+}
+
+int fun(int n, int x, int y){
+    if (n > y){
+        int cou = 0;
+        if (is(0, x, y)){
+            my[x] = y;
+            if (x == (n - 1))
+                cou = 1;
+            else
+                cou = fun(n, x + 1, 0);
+
+        }
+
+        return fun(n, x, y + 1) + cou;
+    }
+    return 0;
+}
+
+
+int t08_queen(){
+	int n;
+    cin >> n;
+    for (int i = 0; i < n; i++)
+        mx[i] = i;
+
+    cout << fun(n, 0, 0);
     return 0;
 }
 
