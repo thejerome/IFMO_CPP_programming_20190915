@@ -62,7 +62,7 @@ int t04_students() {
     stable_sort(a.begin(), a.end(), cmp);
     for (auto i: a) {
      cout << i.firstname << " " << i.secondname << endl; 
-        return 0;
     }   
+  return 0;
 }
 
