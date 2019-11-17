@@ -28,7 +28,7 @@ using namespace std;
 int t09_equals() {
     int n = 0;
     cin >> n;
-    int arr[n];
+    int arr[100];
     for (int i=0; i<n; i++) {
         cin >> arr[i]; }
 
