@@ -17,10 +17,23 @@
 
 #include "t06_longest.h"
 #include <iostream>
+#include <string>
 
 
 using namespace std;
 
 int t06_longest() {
-
+	string line, word, mword;
+	getline(cin, line);
+	int s = line.size();
+	for(int i=0; i<s; i++)
+	{
+		if (line[i] != ' ') { word = word + line[i]; }
+		if(i==s-1 || line[i] == ' ')
+		{
+			if (mword.size() < word.size()) { mword = word; }
+			word.clear();
+		}
+	}
+	cout << mword;
 }
