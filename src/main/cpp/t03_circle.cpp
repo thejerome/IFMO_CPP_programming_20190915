@@ -37,11 +37,15 @@
 
 using namespace std;
 
+double distance1(double x1,double y1, double x2, double y2 )
+{
+  return sqrt(pow((x2-x1),2)+pow((y2-y1),2));
+}
 
 //function IsPointInCircle
 bool IsPointInCircle(double x, double y, double xc, double yc, double r)
 {
-  if(distance(x,y,xc,yc)>r) return false;
+  if(distance1(x,y,xc,yc)>r) return false;
   else return true;
 }
 
