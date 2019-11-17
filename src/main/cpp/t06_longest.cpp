@@ -30,7 +30,6 @@ int t06_longest() {
         int pos2;
         pos2 = s.find(" ", pos);
 
-        cout << pos << " " << pos2 << endl;
         if(pos2 - pos > maxs.size())
             maxs = s.substr(pos, pos2 - pos);
 

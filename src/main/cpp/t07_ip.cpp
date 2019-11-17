@@ -49,8 +49,6 @@ int t07_ip() {
         int pos2;
         pos2 = s.find(".", pos);
 
-        cout << pos << " " << pos2 << endl;
-
         arr[cou] = stoi(s.substr(pos, pos2 - pos));
 
         cou++;
