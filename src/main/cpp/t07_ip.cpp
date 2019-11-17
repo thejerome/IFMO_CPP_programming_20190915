@@ -1,5 +1,5 @@
-//В сети интернет каждому компьютеру присваивается четырехбайтовый код, 
-// который принято записывать в виде четырех чисел, 
+//В сети интернет каждому компьютеру присваивается четырехбайтовый код,
+// который принято записывать в виде четырех чисел,
 // каждое из которых может принимать значения от 0 до 255, разделенных точками.
 // Вот примеры правильных IP-адресов:
 //127.0.0.0
@@ -29,10 +29,30 @@
 
 #include "t07_ip.h"
 #include <iostream>
+#include<string>
 
 
 using namespace std;
 
 int t07_ip() {
-
+string str,sub;
+int probel=0;
+bool flag=false;
+getline(cin,str);
+for(int i=0;i<str.length();i++)
+{
+  if(str[i]=='.'){
+    if(probel==0)sub=str.substr(probel,i-probel);
+    else sub=str.substr(probel+1,i-probel-1);
+    if(i==str.length()-1)
+    {
+      sub=str.substr(probel+1,i-probel+1);
+    }
+    int number=stoi(sub,nullptr);
+    if(number>=0 && number<=255)flag=true;
+    else {flag=false;break;}
+  }
+}
+if(flag)cout<<"YES";
+else cout<<"NO";
 }
