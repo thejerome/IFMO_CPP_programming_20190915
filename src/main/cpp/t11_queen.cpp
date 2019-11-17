@@ -55,7 +55,7 @@ int t11_queen() {
          l = 1;
      }
  }
- if (l=0) 
+ if (l=1) 
     cout << "YES";
  else
     cout << "NO";
