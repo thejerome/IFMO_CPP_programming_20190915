@@ -36,7 +36,7 @@ int t09_spiral() {
 
 		//r
 		while (r == 0) {
-			if (a[i][j] == 0 && j < m) {
+			if (a[i][j] == 0 && j < m && i < n) {
 				s++;
 				a[i][j] = s;
 				j++;
@@ -55,7 +55,7 @@ int t09_spiral() {
 
 		//d
 		while (d == 0) {
-			if (a[i][j] == 0 && i < n) {
+			if (a[i][j] == 0 && i < n && j<m) {
 				s++;
 				a[i][j] = s;
 				i++;
@@ -72,7 +72,7 @@ int t09_spiral() {
 		}
 		//l
 		while (l == 0) {
-			if (a[i][j] == 0 && j >= 0) {
+			if (a[i][j] == 0 && j >= 0 && i >=0) {
 				s++;
 				a[i][j] = s;
 				j--;
@@ -87,7 +87,7 @@ int t09_spiral() {
 			u = 0;
 		}
 		while (u == 0) {
-			if (a[i][j] == 0 && i >= 0) {
+			if (a[i][j] == 0 && i >= 0 && j >=0) {
 				s++;
 				a[i][j] = s;
 				i--;
