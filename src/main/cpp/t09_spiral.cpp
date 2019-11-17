@@ -17,11 +17,98 @@
 
 #include "t09_spiral.h"
 #include <iostream>
+#include <iomanip>
 
 
 using namespace std;
 
 int t09_spiral() {
-    
+	int n, m, s = 0, u = 0, d = 0, l = 0, r = 0, i = 0, j = 0;
+	int a[100][100];
+
+	cin >> n >> m;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			a[i][j] = 0;
+		}
+	}
+	while (u == 0 || d == 0 || l == 0 || r == 0) {
+
+		//r
+		while (r == 0) {
+			if (a[i][j] == 0 && j < m) {
+				s++;
+				a[i][j] = s;
+				j++;
+			}
+			else {
+				r = 1;
+				i++;
+				j--;
+			}
+		}
+		if (a[i][j] == 0) {
+			d = 0;
+
+		}
+
+
+		//d
+		while (d == 0) {
+			if (a[i][j] == 0 && i < n) {
+				s++;
+				a[i][j] = s;
+				i++;
+			}
+			else {
+				d = 1;
+				i--;
+				j--;
+			}
+		}
+		if (a[i][j] == 0) {
+			l = 0;
+
+		}
+		//l
+		while (l == 0) {
+			if (a[i][j] == 0 && j >= 0) {
+				s++;
+				a[i][j] = s;
+				j--;
+			}
+			else {
+				l = 1;
+				i--;
+				j++;
+			}
+		}
+		if (a[i][j] == 0) {
+			u = 0;
+		}
+		while (u == 0) {
+			if (a[i][j] == 0 && i >= 0) {
+				s++;
+				a[i][j] = s;
+				i--;
+			}
+			else {
+				u = 1;
+				j++;
+				i++;
+			}
+		}
+		if (a[i][j] == 0)
+			r = 0;
+
+	}
+
+	for (int i = 0;i < n;i++) {
+		for (int j = 0; j < m; j++) {
+
+			cout << setw(4) << a[i][j] << " ";
+		}
+		
+	}
     return 0;
 }
