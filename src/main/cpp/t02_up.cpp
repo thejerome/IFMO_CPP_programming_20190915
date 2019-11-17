@@ -24,5 +24,10 @@
 using namespace std;
 
 int t02_up() {
-    
+    char c;
+    cin >> c;
+    if(c > 96 && c < 123)
+        c -= 32;
+
+    cout << c;
 }

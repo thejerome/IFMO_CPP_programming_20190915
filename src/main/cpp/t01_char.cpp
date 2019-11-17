@@ -30,5 +30,10 @@
 using namespace std;
 
 int t01_char() {
-
+	char c;
+    cin >> c;
+    if(c > 47 && c < 58)
+        cout << "yes";
+    else
+        cout << "no";
 }
