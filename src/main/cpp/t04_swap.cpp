@@ -25,6 +25,37 @@
 using namespace std;
 
 int t04_swap() {
+    long n = 0, m = 0;
+    cin >> n >> m;
+    const long stroki = n;
+    const long stolb = m;
+    long mass[stroki][stolb];
+    for (int i = 0; i < stroki; i++)
+    {
+        for (int j = 0; j < stolb; j++)
+        {
+                long zn = 0;
+                cin >> zn;
+                mass[i][j] = zn;
+        }
+    }
+    long stlb_a = 0, stlb_b = 0;
+    cin >> stlb_a >> stlb_b;
+    for (int i = 0; i < stroki; i++)
+    {
+        int tmp = mass[i][stlb_a];
+        mass[i][stlb_a] = mass[i][stlb_b];
+        mass[i][stlb_b] = tmp; 
+    }
+
+    for (int i = 0; i < stroki; i++)
+    {
+        for (int j = 0; j < stolb; j++)
+        {
+            cout << mass[i][j] << ' ';
+        }
+        
+    }
     
     return 0;
 }

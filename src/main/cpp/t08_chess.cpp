@@ -19,11 +19,53 @@
 
 #include "t08_chess.h"
 #include <iostream>
+#include <iomanip>
 
 
 using namespace std;
 
 int t08_chess() {
-    
+    short n = 0, m = 0;
+    cin >> n >> m;
+    const short visota = n;
+    const short shirina = m;
+    long mass[visota][shirina];
+    n = 0;
+    for (int i = 0; i < visota; i++)
+    {
+        if (i%2 == 0){
+            for (int j = 0; j < shirina; j++)
+            {
+                if(j%2 == 0){
+                    mass[i][j] = ++n;
+                }
+                else{
+                    mass[i][j] = 0;
+                }
+            }
+        }
+        else
+        {
+            for (int j = 0; j < shirina; j++)
+            {
+                if(j%2 == 1){
+                    mass[i][j] = ++n;
+                }
+                else{
+                    mass[i][j] = 0;
+                }
+            }
+            
+        }
+        
+    }
+    for (int i = 0; i < visota; i++)
+    {
+        for (int j = 0; j < shirina; j++)
+        {
+            cout << setw(4) << setfill(' ') << mass[i][j];
+        }
+        cout << endl;
+    }
     return 0;
 }

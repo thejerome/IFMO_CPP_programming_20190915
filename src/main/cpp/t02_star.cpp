@@ -24,6 +24,42 @@
 using namespace std;
 
 int t02_star() {
+    long n = 0;
+    cin >> n;
+    const long a = n;
+    char mass[n][n];
+    for (int i = 0; i < a; i++)
+    {
+        for (int j = 0; j < a; j++)
+        {
+            if (i == j){
+                mass[i][j] = '*';
+            }
+            else if (j == a/2){
+                mass[i][j] = '*';
+            }
+            else if (i == a/2){
+                mass[i][j] = '*';
+            }
+            else if (i == a - (j + 1)){
+                mass[i][j] = '*';
+            }
+            else
+            {
+                mass[i][j] = '.';
+            }
+        }
+    }
 
+    for (int i = 0; i < a; i++)
+    {
+        for (int j = 0; j < a; j++)
+        {
+            cout << mass[i][j] << ' ';
+        }
+        
+    }
+    
+    
     return 0;
 }

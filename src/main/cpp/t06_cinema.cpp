@@ -29,6 +29,45 @@
 using namespace std;
 
 int t06_cinema() {
-    
+    short n = 0, m = 0;
+    cin >> n >> m;
+    const short visota = n;
+    const short shirina = m;
+    bool mass[visota][shirina];
+    for (int i = 0; i < visota; i++)
+    {
+        for (int j = 0; j < shirina; j++)
+        {
+            bool zn = 0;
+            cin >> zn;
+            mass[i][j] = zn;
+        }
+    }
+    short kol_mest = 0;
+    cin >> kol_mest;
+    for (int i = 0; i < visota; i++)
+    {
+        short shcet = 0;
+        for (int j = 0; j < shirina; j++)
+        {
+            if (!mass[i][j])
+            {
+                shcet++;
+            }
+            else
+            {
+                shcet = 0;
+            }
+
+            if (shcet == kol_mest)
+            {
+                cout << i+1 << endl;
+                return 0;
+            }
+            
+        }
+        
+    }
+    cout  << 0 << endl;
     return 0;
 }

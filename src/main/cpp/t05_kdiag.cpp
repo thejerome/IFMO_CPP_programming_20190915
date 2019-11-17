@@ -33,11 +33,63 @@
 
 #include "t05_kdiag.h"
 #include <iostream>
+#include <cmath>
 
 
 using namespace std;
 
 int t05_kdiag() {
-    
+    long n = 0;
+    cin >> n;
+    const long a = n;
+    long mass[n][n];
+    for (int i = 0; i < a; i++)
+    {
+        for (int j = 0; j < a; j++)
+        {
+            long zn = 0;
+            cin >> zn;
+            mass[i][j] = zn;
+        }
+    }
+    long diag = 0;
+    cin >> diag;
+    if (diag == 0){
+        for (int i = 0; i < a; i++)
+        {
+            for (int j = 0; j < a; j++)
+            {
+                if (i == j)
+                {
+                    cout << mass[i][j] << ' ';
+                }  
+            }
+        }
+    }
+    else if (diag > 0){
+        for (int i = 0; i < a; i++)
+        {
+            for (int j = 0; j < a; j++)
+            {
+                if (i-j == diag)
+                {
+                    cout << mass[i][j] << ' ';
+                }
+                
+            }
+        }
+    }
+    else if (diag < 0){
+        for (int i = 0; i < a; i++)
+            {
+            for (int j = 0; j < a; j++)
+            {
+                if (j-i == abs(diag)){
+                    cout << mass[i][j] << ' ';
+                }
+            }
+        }
+    }
+
     return 0;
 }
