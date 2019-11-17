@@ -23,5 +23,19 @@
 using namespace std;
 
 int t05_palindrom() {
+	string s;
+    bool is = 1;
+    getline(cin, s);
+    for(int i = 0; i < s.size(); i++)
+        if(s[i] != s[s.size() - 1 - i]){
+            is = 0;
+            break;
+        }
 
+    if(is)
+        cout << "yes";
+    else
+        cout << "no";
+
+    return 0;
 }
