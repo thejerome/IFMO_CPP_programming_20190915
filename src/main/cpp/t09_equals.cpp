@@ -35,8 +35,9 @@ int t09_equals() {
  }
  for( i = 0; i < n ; i++) {
      for ( k=i+1; k < n; k++) {
-         if (a[i] == a[k]);
+         if (a[i] == a[k]) {
          equals++;
+         }
     }
 }
 cout << equals;
