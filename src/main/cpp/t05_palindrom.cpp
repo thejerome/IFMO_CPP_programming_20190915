@@ -33,7 +33,7 @@ int t05_palindrom() {
                 temp++;i++;
     }
     if(temp == l/2)
-        cout<<"YES";
+        cout<<"yes";
     else
-        cout<<"NO";
+        cout<<"no";
 }
