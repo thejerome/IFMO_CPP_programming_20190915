@@ -41,24 +41,23 @@ using namespace std;
 int t11_queen() {
  int n=8;
  int a[n];
- int z[n];
+ int m[n];
  
  for (int i=0; i < n; i++) {
-     cin >> a[i];
-     cin >> z[i];
+     cin >> a[i] >> m[i];
  }
- bool l = false;
+ bool l = 1;
  for(int i = 0 ; i < n ; i++) {
      for(int k = i + 1; k < n ; k++) {
-         if (a[i] == a[k] || z[i] == z[k] and abs(a[i] - a[k]) and abs(z[i] - z[k])) {
-         l = true;
+         if ((a[i] == a[k]) | (z[i] == z[k]) | (abs(a[i] - a[k]) | abs(z[i] - z[k]))) {
+         l = 0;
          }
      }
  }
- if (l) { 
-    cout << "YES";
-    return 0;
+ if (l==true) { 
+    cout << "NO";
  }
- cout << "NO";
- return 0;
+ else {
+ cout << "YES";
+ }
 }
