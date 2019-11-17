@@ -26,7 +26,7 @@ int t02_even2() {
 	{
 	cin >> A[i];
 	if (A[i] % 2 == 0) {
-	cout << A[i];
+	cout << A[i] << ' ';
 	};
 	};
 	return 0;
