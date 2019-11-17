@@ -35,6 +35,7 @@ struct point {
 bool cmp ( point a, point b) {
   return a.distance < b.distance;  
 }
+
 int t03_points() {
  int n, i, temp1, temp2, dis;
     cin >> n;
@@ -52,4 +53,5 @@ int t03_points() {
     for (auto i: a) {
      cout << i.x << " " << i.y << endl; 
     }    
+ return 0;
 }
