@@ -26,5 +26,16 @@
 using namespace std;
 
 int t09_equals() {
+    int n = 0;
+    cin >> n;
+    int arr[100];
+    for (int i=0; i<n; i++) {
+        cin >> arr[i]; }
 
+    int count = 0;
+    for (int i=0; i<n-1; i++)
+        for(int j=i+1; j<n; i++)
+            if (arr[i]==arr[j]) count++;
+    cout << count;
+    return 0;
 }
