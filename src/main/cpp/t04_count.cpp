@@ -28,7 +28,7 @@
 using namespace std;
 
 int t04_count() {
-int q = 1;
+int q = 1, pos = 0;
 string b;
 getline(cin, b);
 
