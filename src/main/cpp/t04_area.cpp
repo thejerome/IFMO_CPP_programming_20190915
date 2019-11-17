@@ -36,14 +36,23 @@ using namespace std;
 bool IsPointInCircle(double x, double y){
     return (x+1)*(x+1)+(y-1)*(y-1)-4 <= 0;
 }
+bool IsPointOutOfCircle(double x, double y){
+    return (x+1)*(x+1)+(y-1)*(y-1)-4 >= 0;
+}
 bool IsPointUnderLine1(double x, double y){
     return 2*x+2 >= y;
+}
+bool IsPointAboveLine1(double x, double y){
+    return 2*x+2 <= y;
 }
 bool IsPointUnderLine2(double x, double y){
     return -x>=y;
 }
+bool IsPointAboveLine2(double x, double y){
+    return -x<=y;
+}
 bool IsPoinInArea(double x, double y){
-    return ( (IsPointInCircle(x, y) && !IsPointUnderLine1(x, y) && !IsPointUnderLine2(x, y)) || (2*x+2 == y) || (-x==y) ) || ( !IsPointInCircle(x, y) && IsPointUnderLine1(x, y) && IsPointUnderLine2(x, y) ) || (x+1)*(x+1)+(y-1)*(y-1)-4 == 0;
+    return ( IsPointInCircle(x,y) && IsPointAboveLine1(x,y) && IsPointAboveLine2(x,y) ) || ( IsPointOutOfCircle(x,y) && IsPointUnderLine1(x,y) && IsPointUnderLine2(x,y) );
 }
 int t04_area() {
     double x,y;
