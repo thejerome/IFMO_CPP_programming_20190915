@@ -27,7 +27,7 @@ string b;
 int a;
 cin >> b;
 a =  b.size();
-for (int i = 0; i < a/2; i++)
+for (int i = 0; i <= a/2; i++)
 {if (b[i] != b[a-1])
 {
   a = 0;
