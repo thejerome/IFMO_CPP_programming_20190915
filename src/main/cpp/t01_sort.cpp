@@ -21,7 +21,6 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
 using namespace std;
 
 int t01_sort() {
@@ -31,6 +30,7 @@ int t01_sort() {
     for (i = 0; i < n; i++) {
      cin >> a[i];   
     }
+   
     sort(a.begin(), a.end());
     for (auto i: a) {
      cout << i << " ";   
