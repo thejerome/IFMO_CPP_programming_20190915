@@ -35,4 +35,5 @@ int t01_sort() {
     for (auto i: a) {
      cout << i << " ";   
     }   
+   return 0;
 }
