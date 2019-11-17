@@ -51,7 +51,7 @@ int t11_queen() {
  bool l = 0;
  for( i = 0 ; i < n ; i++) {
      for( k = i +1; k < n ; k++) {
-         if (a[i] == a[k] | abs(a[k] - a[i]) == abs(z[i] - z[k]) | z[i] == z[k])
+         if (a[i] == a[k] || abs(a[i] - a[k]) == abs(z[i] - z[k]) || z[i] == z[k])
          l = 1;
      }
  }
