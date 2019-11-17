@@ -29,7 +29,7 @@
 
 #include "t07_ip.h"
 #include <iostream>
-
+#include <cstring>
 
 using namespace std;
 bool isIPAddressValid(const char* pszIPAddr)
