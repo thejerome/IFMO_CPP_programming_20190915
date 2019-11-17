@@ -99,7 +99,7 @@ void func(int n, int pi, int pj, int ni, int nj, int num){
     }
 }
 
-int main(){
+int t8_queen(){
     int n =0;
     cin >>n;
     for (int i=0; i<n; i++){
