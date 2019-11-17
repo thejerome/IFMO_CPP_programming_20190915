@@ -27,6 +27,37 @@
 using namespace std;
 
 int t01_max() {
-    
+    long n = 0, m = 0;
+    cin >> n >> m;
+    const long stroki = n;
+    const long stolb = m;
+    long mass[stroki][stolb];
+    for (int i = 0; i < stroki; i++)
+    {
+        for (int j = 0; j < stolb; j++)
+        {
+                long zn = 0;
+                cin >> zn;
+                mass[i][j] = zn;
+        }
+    }
+    long max = 0;
+    long koordinati = 0;
+    for (int i = 0; i < stroki; i++)
+    {
+        for (int j = 0; j < stolb; j++)
+        {
+                if (i == 0 && j == 0){
+                    max = mass[i][j];
+                    koordinati = i*100 + j;
+                    continue;
+                }
+                if (mass[i][j] > max){
+                    max = mass[i][j];
+                    koordinati = i*100 + j;
+                }
+        }
+    }
+    cout << koordinati/100 << ' ' << koordinati%100 << endl;
     return 0;
 }

@@ -22,6 +22,25 @@
 using namespace std;
 
 int t03_diag() {
-    
+    long n = 0;
+    cin >> n;
+    const long a = n;
+    long mass[n][n];
+    for (int i = 0; i < a; i++)
+    {
+        for (int j = 0; j < a; j++)
+        {
+            mass[i][j] = abs(i - j);
+        }
+    }
+
+    for (int i = 0; i < a; i++)
+    {
+        for (int j = 0; j < a; j++)
+        {
+            cout << mass[i][j] << ' ';
+        }
+        
+    }
     return 0;
 }
