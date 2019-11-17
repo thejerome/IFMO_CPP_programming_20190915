@@ -19,5 +19,24 @@
 using namespace std;
 
 int t08_cycleswap() {
+	int n, b, z;
+	b = 0;
+	z = 0;
+	cin >> n;
+	int a[n];
+	for (int i = 0; i < n; i++) {
+		cin >> a[i];
+	}
+	z = a[0];
+	for (int i = 1; i < n; i++) {
+		b = a[i];
+		a[i] = z;
+		z = b;
+	}
+	a[0] = z;
+	for (int i = 0; i < n; i++) {
+		cout << a[i] << ' ';
+	};
 
-}
+	return 0;
+};
