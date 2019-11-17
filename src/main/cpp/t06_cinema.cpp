@@ -43,7 +43,6 @@ int t06_cinema() {
             mass[i][j] = zn;
         }
     }
-    short iskomiy_ryad = 0;
     short kol_mest = 0;
     cin >> kol_mest;
     for (int i = 0; i < visota; i++)

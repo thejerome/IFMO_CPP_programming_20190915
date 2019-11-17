@@ -45,31 +45,31 @@ int t09_spiral() {
             mass[i][j] = k++;
             j++;
         }
-        if(mass[i][j] != -2 && mass[i][j - 1] == k -1){
+        else if(mass[i][j] != -2 && mass[i][j - 1] == k -1){
             j--;
             i++;
         }
-        if(mass[i][j] == -2 && mass[i - 1][j] == k -1){
+        else if(mass[i][j] == -2 && mass[i - 1][j] == k -1){
             mass[i][j] = k++;
             i++;
         }
-        if(mass[i][j] != -2 && mass[i - 1][j] == k -1){
+        else if(mass[i][j] != -2 && mass[i - 1][j] == k -1){
             i--;
             j--;
         }
-        if(mass[i][j] == -2 && mass[i][j + 1] == k -1){
+        else if(mass[i][j] == -2 && mass[i][j + 1] == k -1){
             mass[i][j] = k++;
             j--;
         }
-        if(mass[i][j] != -2 && mass[i][j + 1] == k -1){
+        else if(mass[i][j] != -2 && mass[i][j + 1] == k -1){
             j++;
             i--;
         }
-        if(mass[i][j] == -2 && mass[i + 1][j] == k -1){
+        else if(mass[i][j] == -2 && mass[i + 1][j] == k -1){
             mass[i][j] = k++;
             i--;
         }
-        if(mass[i][j] != -2 && mass[i + 1][j] == k -1){
+        else if(mass[i][j] != -2 && mass[i + 1][j] == k -1){
             i++;
             j++;
         }
