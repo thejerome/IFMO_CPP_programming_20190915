@@ -36,7 +36,7 @@
 #include <cmath>
 
 using namespace std;
-/*double distance(double x1, double y1, double x2, double y2){
+double distance(double x1, double y1, double x2, double y2);/*{
     double dx = abs(x2 - x1);
     dx = dx*dx;
     double dy = abs (y2 - y1);
