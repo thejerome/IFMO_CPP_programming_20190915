@@ -38,5 +38,5 @@ int t01_char() {
     }
     else
         cout << "no";
-    return 0;
+    return 0;//codacy lets be friends plsssssss
 }
