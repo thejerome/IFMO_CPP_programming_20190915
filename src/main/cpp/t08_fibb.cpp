@@ -21,13 +21,14 @@
 using namespace std;
 
 int t08_fibb() {
-	int N, i = 0, a = 1, b = 1;
+	int N;
 	cin >> N;
 	if (N== 0)
 	{
 		cout << 0;
 	}
 	else {
+		int b = 1, a = 1, i = 0;
 		while (i < N - 2)
 		{
 			int sum = a + b;
