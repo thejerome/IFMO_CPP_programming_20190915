@@ -27,7 +27,7 @@ int res =0;
 bool a[10][10];
 int i2[11];
 int j2[11];
-/*
+
 void func(int n, int pi, int pj, int ni, int nj, int num);
 void func(int n, int pi, int pj, int ni, int nj, int num){
     i2[num] = ni;
@@ -112,9 +112,9 @@ void func(int n, int pi, int pj, int ni, int nj, int num){
             func(n, i2[num-2], j2[num-2], i2[num-1], j2[num-1]+1, num-1);
         }
     }
-}*/
+}
 
-int t8_queen(){
+int t08_queen(){
     int n =0;
     cin >>n;
     for (int i=0; i<n; i++){
