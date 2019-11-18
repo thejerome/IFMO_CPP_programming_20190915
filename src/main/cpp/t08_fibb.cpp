@@ -21,7 +21,7 @@
 using namespace std;
 
 int t08_fibb() {
-	int N, i = 0, a = 1, b = 1, sum;
+	int N, i = 0, a = 1, b = 1;
 	cin >> N;
 	if (N== 0)
 	{
@@ -30,7 +30,7 @@ int t08_fibb() {
 	else {
 		while (i < N - 2)
 		{
-			sum = a + b;
+			int sum = a + b;
 			a = b;
 			b = sum;
 			i++;
