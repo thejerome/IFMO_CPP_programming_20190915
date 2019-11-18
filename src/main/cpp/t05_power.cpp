@@ -31,7 +31,7 @@ using namespace std;
 int power(int a, int n)
 {
 	int s = 1;
-	if (n > 0) { s = s*a*power(a, n - 1); }
+	if (n > 0) { return s = s*a*power(a, n - 1); }
 	else { return s; }
 }
 

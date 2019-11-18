@@ -23,13 +23,13 @@
 using namespace std;
 int sum(int a)
 {
-	int sm = 0;
-	if (a == 0) { return sm; }
+	int b = 0;
+	if (a == 0) { return b; }
 	else
 	{		
-		int b = 0;
+	
 		cin >> b;
-		sm = sm + b + sum(b);
+		b = b + sum(b);
 	}
 }
 
