@@ -17,10 +17,18 @@
 
 #include "t06_longest.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t06_longest() {
-
+string n, a;
+cin >> a;
+while(cin >> n)
+{
+    if(n.size() > a.size())
+    	a = n;
+}
+cout << a;
+return 0;
 }
