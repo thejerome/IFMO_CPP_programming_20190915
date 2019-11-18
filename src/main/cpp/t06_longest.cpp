@@ -26,7 +26,7 @@ int t06_longest() {
     string s, word, max;
     getline(cin, s);
 
-    for (int i = 0; i < s.size(); i++){
+    for (int i =0; i < s.size(); i++){
         if (s[i] != ' ' )
             word += s[i];
         else if (word.size() > max.size())
