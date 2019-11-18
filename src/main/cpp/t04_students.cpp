@@ -46,17 +46,15 @@ bool cmp ( student a, student b) {
 int t04_students() {
   int n, i, mark1, mark2, mark3;
   string temp1, temp2;
-  int mid;
     cin >> n;
     vector <student> a(n);
     for (i = 0; i < n; i++) {
         cin >> temp1 >> temp2;
-        cin >> mark1 >> mark2 >> mark3;
-        mid = mark1 + mark2 + mark3;        
+        cin >> mark1 >> mark2 >> mark3;      
         student struct_temp;        
         struct_temp.firstname = temp1;
         struct_temp.secondname = temp2;
-        struct_temp.mark = mid;
+        struct_temp.mark = mark1 + mark2 + mark3;
         a[i] = struct_temp;
     }
     stable_sort(a.begin(), a.end(), cmp);
