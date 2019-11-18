@@ -37,16 +37,15 @@ bool cmp ( point a, point b) {
 }
 
 int t03_points() {
- int n, i, temp1, temp2, dis;
+ int n, i, temp1, temp2;
     cin >> n;
     vector <point> a(n);
     for (i = 0; i < n; i++) {
-        cin >> temp1 >> temp2;
-        dis = temp1*temp1 + temp2*temp2;        
+        cin >> temp1 >> temp2;      
         point struct_temp;        
         struct_temp.x = temp1;
         struct_temp.y = temp2;
-        struct_temp.distance = dis;
+        struct_temp.distance = temp1*temp1 + temp2*temp2;
         a[i] = struct_temp;
     }
     stable_sort(a.begin(), a.end(), cmp);
