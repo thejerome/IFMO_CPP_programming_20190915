@@ -30,5 +30,13 @@
 using namespace std;
 
 int t01_char() {
-
+    char x;
+    cin >> x;
+    if ((x == '0') || (x == '1') || (x == '2') || (x == '3') || (x == '4') || (x == '5') || (x == '6') || (x == '7') || (x == '8') || (x == '9'))
+    {
+        cout << "yes";
+    }
+    else
+        cout << "no";
+    return 0;
 }
