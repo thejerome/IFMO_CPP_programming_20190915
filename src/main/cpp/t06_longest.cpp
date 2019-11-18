@@ -34,6 +34,8 @@ int t06_longest() {
         if (s[i] == ' ')
             word.clear();
     }
+    if (word.size() > max.size())
+        max = word;
     cout << max;
     return(0);
 
