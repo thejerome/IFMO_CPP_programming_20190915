@@ -21,8 +21,19 @@
 #include <cmath>
 
 using namespace std;
+int sum(int a)
+{
+	int b = 0;
+	if (a == 0) { return b; }
+	else
+	{		
+	
+		cin >> b;
+		return b = b + sum(b);
+	}
+}
 
 int t06_sum() {
+	cout << sum(1);
 
-    return 0;
 }
