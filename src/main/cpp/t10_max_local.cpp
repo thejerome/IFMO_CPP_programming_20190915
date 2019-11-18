@@ -24,5 +24,32 @@
 using namespace std;
 
 int t10_max_local() {
-
+	int llMax = -999, count =1,nextV = -999, prev = 999, i = -1 ;
+	cin >> prev;
+	cin >> i;
+	cin >> nextV;
+	while (i != 0)
+	{
+		if (i > prev && i > nextV && i >= llMax && nextV != 0)
+		{
+			if (i == llMax)
+			{
+				count++;
+			}
+			else
+			{
+				count = 1;
+			}
+			llMax = i;
+		}
+		prev = i;
+		i = nextV;
+		cin >> nextV;
+	}
+	if (llMax == -999)
+	{
+		count = 0;
+	}
+	cout << count;
+	return 0;
 };
