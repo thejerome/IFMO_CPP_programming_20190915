@@ -33,5 +33,6 @@ int t03_toggle() {
         x += 32;
     cout << x;
     return 0;
-
+//codacy!!!!!!!!!!!!!!!!!!!!!!
+    //codacy!
 }
