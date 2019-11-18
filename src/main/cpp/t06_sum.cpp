@@ -29,7 +29,7 @@ int sum(int a)
 	{		
 	
 		cin >> b;
-		b = b + sum(b);
+		return b = b + sum(b);
 	}
 }
 
