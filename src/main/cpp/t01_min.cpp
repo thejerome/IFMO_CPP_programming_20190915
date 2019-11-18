@@ -22,10 +22,22 @@
 using namespace std;
 
 //function min 
-
-//function min4 
-
+double min(double a, double b){
+    if (a>b) {
+        return b;
+    } else {
+        return a;
+    }
+}
+//function min4
+double min4(double a, double b, double c, double d){
+    a = min(a,b);
+    b = min(c, d);
+    return min(a,b);
+}
 int t01_min() {
-
+    double a=0, b=0, c=0, d=0;
+    cin >>a >>b >>c >>d;
+    cout <<min4(a,b,c,d);
     return 0;
 }

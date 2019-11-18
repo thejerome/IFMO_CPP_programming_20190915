@@ -19,11 +19,20 @@
 #include <iostream>
 #include <cmath>
 
+
 using namespace std;
 
 //function distance
-
+double distance(double x1, double y1, double x2, double y2){
+    double dx = abs(x2 - x1);
+    dx = dx*dx;
+    double dy = abs (y2 - y1);
+    dy = dy*dy;
+    return (sqrt(dx+dy));
+}
 int t02_dist() {
-
+    double x1=0, x2=0, y1=0, y2=0;
+    cin >>x1 >>y1 >>x2 >>y2;
+    cout <<distance(x1, y1, x2, y2);
     return 0;
 }

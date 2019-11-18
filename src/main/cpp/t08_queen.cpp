@@ -26,7 +26,7 @@ int res =0;
 bool a[10][10];
 int i2[11];
 int j2[11];
-
+/*
 void func(int n, int pi, int pj, int ni, int nj, int num);
 void func(int n, int pi, int pj, int ni, int nj, int num){
     i2[num] = ni;
@@ -45,39 +45,53 @@ void func(int n, int pi, int pj, int ni, int nj, int num){
                     plc = false;
                 }
             }
-            for (int i = 1; i <= top; i++) {
-                if (a[i1 - i][j1]) {
-                    plc = false;
+            if (plc) {
+                for (int i = 1; i <= top; i++) {
+                    if (a[i1 - i][j1]) {
+                        plc = false;
+                    }
                 }
             }
-            for (int i = 1; i <= rgt; i++) {
-                if (a[i1][j1 + i]) {
-                    plc = false;
+            if (plc) {
+                for (int i = 1; i <= rgt; i++) {
+                    if (a[i1][j1 + i]) {
+                        plc = false;
+                    }
                 }
             }
-            for (int i = 1; i <= btm; i++) {
-                if (a[i1 + i][j1]) {
-                    plc = false;
+            if (plc) {
+                for (int i = 1; i <= btm; i++) {
+                    if (a[i1 + i][j1]) {
+                        plc = false;
+                    }
                 }
             }
-            for (int i = 1, j = 1; (i <= lft) and (j <= top); i++, j++) {
-                if (a[i1 - j][j1 - i]) {
-                    plc = false;
+            if (plc) {
+                for (int i = 1, j = 1; (i <= lft) and (j <= top); i++, j++) {
+                    if (a[i1 - j][j1 - i]) {
+                        plc = false;
+                    }
                 }
             }
-            for (int i = 1, j = 1; (i <= rgt) and (j <= top); i++, j++) {
-                if (a[i1 - j][j1 + i]) {
-                    plc = false;
+            if (plc) {
+                for (int i = 1, j = 1; (i <= rgt) and (j <= top); i++, j++) {
+                    if (a[i1 - j][j1 + i]) {
+                        plc = false;
+                    }
                 }
             }
-            for (int i = 1, j = 1; (i <= rgt) and (j <= btm); i++, j++) {
-                if (a[i1 + j][j1 + i]) {
-                    plc = false;
+            if(plc) {
+                for (int i = 1, j = 1; (i <= rgt) and (j <= btm); i++, j++) {
+                    if (a[i1 + j][j1 + i]) {
+                        plc = false;
+                    }
                 }
             }
-            for (int i = 1, j = 1; (i <= lft) and (j <= btm); i++, j++) {
-                if (a[i1 + j][j1 - i]) {
-                    plc = false;
+            if (plc) {
+                for (int i = 1, j = 1; (i <= lft) and (j <= btm); i++, j++) {
+                    if (a[i1 + j][j1 - i]) {
+                        plc = false;
+                    }
                 }
             }
             if (plc){
@@ -97,7 +111,7 @@ void func(int n, int pi, int pj, int ni, int nj, int num){
             func(n, i2[num-2], j2[num-2], i2[num-1], j2[num-1]+1, num-1);
         }
     }
-}
+}*/
 
 int t8_queen(){
     int n =0;
@@ -109,7 +123,7 @@ int t8_queen(){
     }
     i2[0] = -1;
     j2[0] = -1;
-    func (n, -1, -1, 0, 0, 1);
+    //    func (n, -1, -1, 0, 0, 1);
     cout <<res;
     return 0;
 }
