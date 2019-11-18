@@ -29,10 +29,38 @@
 
 #include "t04_students.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
+#include <string>
 using namespace std;
 
+struct student {
+ string firstname, secondname;
+    int mark;
+};
+
+bool cmp ( student a, student b) {
+  return a.mark > b.mark;  
+}
+
 int t04_students() {
-    
+  int n, i, mark1, mark2, mark3;
+  string temp1, temp2;
+    cin >> n;
+    vector <student> a(n);
+    for (i = 0; i < n; i++) {
+        cin >> temp1 >> temp2;
+        cin >> mark1 >> mark2 >> mark3;      
+        student struct_temp;        
+        struct_temp.firstname = temp1;
+        struct_temp.secondname = temp2;
+        struct_temp.mark = mark1 + mark2 + mark3;
+        a[i] = struct_temp;
+    }
+    stable_sort(a.begin(), a.end(), cmp);
+    for (auto i: a) {
+     cout << i.firstname << " " << i.secondname << endl; 
+    }   
+  return 0;
 }
 
