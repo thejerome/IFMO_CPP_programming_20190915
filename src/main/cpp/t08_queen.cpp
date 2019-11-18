@@ -19,6 +19,7 @@
 
 #include <iostream>
 #include <vector>
+#include "t08_queen.h"
 
 using namespace std;
 
