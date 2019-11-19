@@ -26,7 +26,7 @@
 #include <set>
 using namespace std;
 int t03_both() {
-et <int> s;
+set <int> s;
 	int n, m;
 	cin >> n;
 	for (int i = 0; i < n; i++) {
