@@ -24,20 +24,29 @@
 #include "t04_both2.h"
 #include <iostream>
 #include <string>
-#include <map>
 using namespace std;
 int t04_both2() {
-map <string, string> m;
-    int n;
-    cin >> n;
-    for(int i = 0; i < n; i++){
-        string x, y;
-        cin >> x >> y;
-        m[x] = y;
-        m[y] = x;
-    }
-    string s;
-    cin >> s;
-    cout << m[s];
-    return 0;
+ set <int> s1;
+ set <int> s2;
+  int n, m;
+  cin >> n;
+  for (int i = 0; i < n; i++) {
+      int x;
+      cin >> x;
+      s1.insert(x);
+  }
+    
+  cin >> m;
+  for (int i = 0; i < m; i++) {
+      int x;
+      cin >> x;
+      s2.insert(x);
+  }
+    
+  for (auto x : s1) {
+      if (s2.find(x) != s2.end())
+          cout << x << " ";
+  }
+    
+  return 0;
 }
