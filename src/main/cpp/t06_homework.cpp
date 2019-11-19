@@ -87,7 +87,7 @@ int t06_homework() {
 bool abc;
 	string word, task;
 	set <string> dict;
-	int n, k, x,  = 0;
+	int n, k, x, osh = 0;
 	cin >> n;
 
 	for (int i = 0; i < n; i++) {
@@ -125,15 +125,15 @@ bool abc;
 			}
 
 			if (!abc) {
-				mist++;
+				osh++;
 			}
 		}
 		else {
-			mist++;
+			osh++;
 		}
 	}
 
-	cout << mist;
+	cout << osh;
 
 	return 0;
 }
