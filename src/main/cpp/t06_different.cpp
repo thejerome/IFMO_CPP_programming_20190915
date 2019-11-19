@@ -28,12 +28,12 @@ int t06_different() {
     };
     for (int i = 0; i < n; i++ ) {
         f = true;
-        for (int j = 0; j < n: j++) {
+        for (int j = 0; j < n; j++) {
             if ((a[i] == a[j]) && (i != j)) {
                 f = false;
             };
         };
-        if (f == true) {
+        if (f) {
             counter++;
         };
     };
