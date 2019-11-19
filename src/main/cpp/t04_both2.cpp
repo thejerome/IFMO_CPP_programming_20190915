@@ -24,6 +24,7 @@
 #include "t04_both2.h"
 #include <iostream>
 #include <string>
+#include <set>
 using namespace std;
 int t04_both2() {
  set <int> s1;
