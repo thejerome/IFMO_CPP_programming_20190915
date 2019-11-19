@@ -20,11 +20,20 @@ using namespace std;
 
 int t06_different() {
     int n,counter;
+    bool f;
     cin >> n;
     int a[n];
-    for (int i = 0; i < (n -1); i++) {
+    for (int i = 0; i < n; i++) {
         cin >> a[i];
-        if (a[i] != a[i + 1]) {
+    };
+    for (int i = 0; i < n; i++ ) {
+        f = true;
+        for (int j = 0; j < n: j++) {
+            if ((a[i] == a[j]) && (i != j)) {
+                f = false;
+            };
+        };
+        if (f == true) {
             counter++;
         };
     };
