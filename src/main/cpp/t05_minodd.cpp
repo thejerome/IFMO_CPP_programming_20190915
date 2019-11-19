@@ -47,7 +47,7 @@ int t05_minodd() {
         };
     };
 
-    if (f == true) {
+    if (f) {
         cout << min;
     }
     else {

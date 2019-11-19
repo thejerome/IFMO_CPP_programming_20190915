@@ -29,6 +29,7 @@ int t09_equals() {
     int n,counter;
     cin >> n;
     int a[n];
+    counter = 0;
     for (int i = 0; i < n; i++) {
         cin >> a[i];
     };

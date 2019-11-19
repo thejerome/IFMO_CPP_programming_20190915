@@ -23,6 +23,7 @@ int t06_different() {
     bool f;
     cin >> n;
     int a[n];
+    counter = 0;
     for (int i = 0; i < n; i++) {
         cin >> a[i];
     };
