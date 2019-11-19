@@ -26,7 +26,7 @@ int t07_swap() {
         cin >> a[i];
     };
     for (int i = 0; i < n; i++) {
-        if ((i % 2 == 0) && (i != (n-1)) {
+        if ((i % 2 == 0) && (i != (n-1))) {
             x = a[i];
             a[i] = a[i+1];
             a[i+1] = x;

@@ -39,7 +39,8 @@
 using namespace std;
 
 int t11_queen() {
-const n = 8;
+int n;
+n = 8;
 int x[n],y[n];
 bool f;
 f = true;
@@ -53,7 +54,7 @@ f = true;
             };
         };
     };
-    if (f == true) {
+    if (f) {
         cout << "NO";
     }
     else {

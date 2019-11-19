@@ -31,7 +31,7 @@ int t08_cycleswap() {
         a[i] = x;
     };
         for (int i = 0; i < n; i++) {
-            count << a[i] << " ";
+            cout << a[i] << " ";
         };
     return 0;
 }
