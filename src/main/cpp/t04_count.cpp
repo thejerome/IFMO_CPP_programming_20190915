@@ -28,5 +28,14 @@
 using namespace std;
 
 int t04_count() {
-
+    string sentence;
+    getline(cin,sentence);
+    int position,num;
+    position = 0;
+    num = 1;
+    while(sentence.find(" ",position) != string::npos){
+        num++;
+        position = sentence.find(" ",position) + 1;
+    }
+    cout<<num;
 }

@@ -22,5 +22,10 @@
 using namespace std;
 
 int t06_longest() {
-
+    string word,longWord;
+    while (cin >> word) {
+        if (word.length() > longWord.length())
+            longWord=word;
+    }
+    cout <<longWord<<endl;
 }
