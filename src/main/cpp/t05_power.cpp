@@ -43,7 +43,7 @@ double power(double a, int n){
         a=a*a;
         return power(a, n-1);
     }
-    if (n < 0){
+    if (n < -1){
         a = 1/a;
         return power (a, n+1);
     }
