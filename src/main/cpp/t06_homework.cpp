@@ -80,9 +80,62 @@
 
 #include "t06_homework.h"
 #include <iostream>
-
+#include <string>
+#include <set>
 using namespace std;
-
 int t06_homework() {
+	string word, task;
+	set <string> dict;
+	int n, k,osh = 0;
+	cin >> n;
 
+	for (int i = 0; i < n; i++) {
+		cin >> word;
+		dict.insert(word);
+	}
+
+	while (cin >> word) {
+		bool abc;
+		int x;
+	abc = true;
+		x = 0;
+		for (auto i : word) {
+			if (i >= 'A' && i <= 'Z') {
+				x++;
+			}
+		}
+
+		if (x == 1) {
+			for (auto s : dict) {
+				if (word == s) {
+					abc = true;
+					break;
+				}
+				else if (word.size() == s.size()) {
+					k = 0;
+
+					for (int j = 0; j < s.size(); j++) {
+						if (tolower(word[j]) == tolower(s[j])) {
+							k++;
+						}
+					}
+					if (k == s.size()) {
+						abc = false;
+					}
+				}
+			}
+
+			if (!abc) {
+				osh++;
+			}
+		}
+		else {
+			osh++;
+		}
+	}
+
+	cout << osh;
+
+	return 0;
 }
+
