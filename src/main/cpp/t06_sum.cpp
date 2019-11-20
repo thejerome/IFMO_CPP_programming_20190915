@@ -31,6 +31,9 @@ void summ(){
         a1 = a1+a;
         summ();
     }
+    if (a == 0){
+        cout <<a;
+    }
 }
 
 int t06_sum() {
