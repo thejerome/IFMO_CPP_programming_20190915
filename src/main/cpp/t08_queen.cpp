@@ -18,7 +18,7 @@
 //92
 
 #include <iostream>
-#include <vector>
+//#include <vector>
 #include "t08_queen.h"
 
 using namespace std;
@@ -110,7 +110,7 @@ int func(int n, int ni, int nj, int num){
 }
 
 int t08_queen(){
-    int n =0;
+    int n;
     cin >>n;
     i2[0] = -1;
     j2[0] = -1;
