@@ -28,8 +28,8 @@ bool a2[10][10] {false};
 int i2[11];
 int j2[11];
 
-void func(int n, int ni, int nj, int num);
-void func(int n, int ni, int nj, int num){
+int func(int n, int ni, int nj, int num);
+int func(int n, int ni, int nj, int num){
     i2[num] = ni;
     j2[num] = nj;
     if ((ni >= 0) and (nj >= 0)) {
@@ -106,6 +106,7 @@ void func(int n, int ni, int nj, int num){
             func(n,  i2[num-1], j2[num-1]+1, num-1);
         }
     }
+    return res;
 }
 
 int t08_queen(){
@@ -113,7 +114,6 @@ int t08_queen(){
     cin >>n;
     i2[0] = -1;
     j2[0] = -1;
-    func (n,  0, 0, 1);
-    cout <<res;
+    cout <<func (n,  0, 0, 1);
     return 0;
 }
