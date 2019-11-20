@@ -24,7 +24,7 @@
 using namespace std;
 
 int res =0;
-bool a2[10][10];
+bool a2[10][10] {false};
 int i2[11];
 int j2[11];
 
@@ -111,11 +111,6 @@ void func(int n, int ni, int nj, int num){
 int t08_queen(){
     int n =0;
     cin >>n;
-    for (int i=0; i<n; i++){
-        for (int j=0; j<n; j++){
-            a2[i][j] = false;
-        }
-    }
     i2[0] = -1;
     j2[0] = -1;
     func (n,  0, 0, 1);
