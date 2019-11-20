@@ -31,10 +31,18 @@
 #include <cmath>
 
 using namespace std;
-
+bool IsPointInCircle(double x, double y, double xc, double yc, double r);
 //function IsPointInArea
-
+bool IsPointInArea(double x, double y){
+    return (  ((IsPointInCircle(x, y, -1, -1, 2)) and (y >= 2*x + 2) and (y >= -x))   or      ((!IsPointInCircle(x, y, -1, -1, 2)) and (y <= 2*x + 2) and (y <= -x))   );
+}
 int t04_area() {
-
+    double x=0, y=0;
+    cin >>x >>y;
+    if (IsPointInArea(x, y)){
+        cout <<"YES";
+    } else {
+        cout <<"NO";
+    }
     return 0;
 }
