@@ -28,8 +28,8 @@ bool a2[10][10];
 int i2[11];
 int j2[11];
 
-void func(int n, int pi, int pj, int ni, int nj, int num);
-void func(int n, int pi, int pj, int ni, int nj, int num){
+void func(int n, int ni, int nj, int num);
+void func(int n, int ni, int nj, int num){
     i2[num] = ni;
     j2[num] = nj;
     if ((ni >= 0) and (nj >= 0)) {
@@ -92,18 +92,18 @@ void func(int n, int pi, int pj, int ni, int nj, int num){
             if (plc){
                 if (ni +1 >= n){
                     res++;
-                    func(n, i2[num-1], j2[num-1], ni, nj+1, num);
+                    func(n,  ni, nj+1, num);
                 }
                 if (ni +1 < n){
                     a2[ni][nj] = true;
-                    func (n, i2[num], j2[num], ni+1, 0, num+1);
+                    func (n,  ni+1, 0, num+1);
                 }
             } else {
-                func(n,i2[num-1], j2[num-1], ni, nj+1, num);
+                func(n, ni, nj+1, num);
             }
         } else {
             a2[i2[num-1]][j2[num-1]] = false;
-            func(n, i2[num-2], j2[num-2], i2[num-1], j2[num-1]+1, num-1);
+            func(n,  i2[num-1], j2[num-1]+1, num-1);
         }
     }
 }
@@ -118,7 +118,7 @@ int t08_queen(){
     }
     i2[0] = -1;
     j2[0] = -1;
-    func (n, -1, -1, 0, 0, 1);
+    func (n,  0, 0, 1);
     cout <<res;
     return 0;
 }
