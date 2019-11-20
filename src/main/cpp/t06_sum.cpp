@@ -32,7 +32,7 @@ void summ(){
         summ();
     }
     if (a == 0){
-        cout <<a;
+        cout <<a1;
     }
 }
 
