@@ -34,7 +34,16 @@ using namespace std;
 bool IsPointInCircle(double x, double y, double xc, double yc, double r);
 //function IsPointInArea
 bool IsPointInArea(double x, double y){
-    return (  ((IsPointInCircle(x, y, -1, -1, 2)) and (y >= 2*x + 2) and (y >= -x))   or      ((!IsPointInCircle(x, y, -1, -1, 2)) and (y <= 2*x + 2) and (y <= -x))   );
+    bool bl1 = (IsPointInCircle(x, y, -1, 1, 2));
+    bool bl2 = (y >= 2*x + 2);
+    bool bl3 = (y >= -x);
+    bool bl4 = (y <= 2 * x + 2);
+    bool bl5 = (y <= -x);
+    bool bl0 = (!bl1 or (sqrt((-1-x)*(-1-x) + (1-y)*(1-y)) == 2));
+    bl1 = bl1 and bl2 and bl3;
+    bl2 = bl0 and bl4 and bl5;
+    bool bl6 = bl1 or bl2;
+    return bl6;
 }
 int t04_area() {
     double x=0, y=0;
@@ -46,6 +55,4 @@ int t04_area() {
     }
     return 0;
 }
-
-
-
+//fixed-1
