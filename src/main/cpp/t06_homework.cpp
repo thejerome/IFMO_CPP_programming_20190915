@@ -84,10 +84,9 @@
 #include <set>
 using namespace std;
 int t06_homework() {
-bool abc;
 	string word, task;
 	set <string> dict;
-	int n, k, x, osh = 0;
+	int n, k,osh = 0;
 	cin >> n;
 
 	for (int i = 0; i < n; i++) {
@@ -96,6 +95,8 @@ bool abc;
 	}
 
 	while (cin >> word) {
+		bool abc;
+		int x;
 	abc = true;
 		x = 0;
 		for (auto i : word) {
