@@ -23,7 +23,7 @@ using namespace std;
 int t04_neighbors() {
 	int n;
 	cin >> n;
-	vector <int> mas(n);
+	int mas[1000];
 	for (int i = 0; i < n; i++) {
 		cin >> mas[i];
 	}
