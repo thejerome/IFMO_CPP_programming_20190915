@@ -24,5 +24,15 @@
 using namespace std;
 
 int t02_up() {
-    
+    char c;
+    cin >> c;
+    if (c >= 'a' && c <= 'z') {
+        c=c-32;
+        cout<<c;
+    }
+    else {
+        cout<<c;
+    }
+    return 0;
 }
+
