@@ -102,7 +102,7 @@ string a,c,f;
     cin.ignore();
     getline(cin,c);
             for (int i = 0; i <= c.size(); i++) {
-                if (c[i] !=' '&&i!=c.size())
+                if (c[i]>64)
                     f += c[i];
                 else {
                     string h = f;
