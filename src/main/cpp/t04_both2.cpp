@@ -41,5 +41,5 @@ for(int i =0; i<m; i++) {
   cin >> a;
  if(row.find(a) != row.end()) {
 common.insert(a);}
-}for (auto i : common {cout << i << endl;}
+}for (auto i : common {cout << i << " ";}
 }
