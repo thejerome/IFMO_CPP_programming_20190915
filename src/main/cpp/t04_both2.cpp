@@ -27,5 +27,19 @@
 using namespace std;
 
 int t04_both2() {
-
+int t03_both() {
+int n, a, m;
+cin >> n;
+set <int> row;
+set <int> common;
+for(int i =0; i<n; i++) {
+ cin >> a;
+row.insert(a);
+ }
+cin >> m;
+for(int i =0; i<m; i++) {
+  cin >> a;
+ if(row.find(a) != row.end()) {
+common.insert(a);}
+}for (auto i : common {cout << i << endl;}
 }
