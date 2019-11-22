@@ -17,17 +17,14 @@
 //
 //92
 
-#include <iostream>
+/*#include <iostream>
 #include <vector>
 
 using namespace std;
 int queen(int, int, int, int [11][11]);
 
 int queen(int c, int s, int n, int a[11][11]) {
-    /*   if(s==252) {
-           cout << c << endl;
-           print(a);
-       }*/
+
     if (c == -1) {
         return s;
     }
@@ -99,5 +96,77 @@ int t08_queen() {
         for (int j = 0; j < n; j++)
             a[i][j] = 0;
     cout << queen(c, s, n, a);
+    return 0;
+}*/
+
+
+/*#include <iostream>
+using namespace std;
+int s=0;
+short n;
+short y[10];
+bool isn() {
+    bool flag = true;
+    for (short i = 0; i < n - 1; i++)
+        for (short j = i + 1; j < n; j++)
+            if ((abs(i-j)==abs(y[i]-y[j]))||(y[i]==y[j]))
+                flag=false;
+    return flag;
+}
+void c(short lv){
+    if(lv!=0)
+        for (short i = 0; i < n; i++) {
+            y[n-lv] = i;
+            c(lv - 1);
+        }
+    else
+        s+=isn();
+}
+int main() {
+    cin >> n;
+    c(n);
+    cout << s;
+    return 0;
+}*/
+
+#include <iostream>
+using namespace std;
+int s=0;
+short n;
+int fact=1;
+short y[10]={0,0,0,0,0,0,0,0,0,0};
+bool isn() {
+    bool flag = true;
+    for (short i = 0; i < n - 1; i++)
+        for (short j = i + 1; j < n; j++)
+            if (abs(i-j)==abs(y[i]-y[j]))
+                flag=false;
+    return flag;
+}
+void per(int num){
+    short lr[n];
+    for(short i=0;i<n;i++){
+        y[i]=0;
+        lr[i]=num%(i+2);
+        num/=(i+2);
+    }
+    for(short i=n-2;i>=0;i--){
+        int j=n-1;
+        while(lr[i]!=0||y[j]!=0) {
+            if(y[j]==0)
+                lr[i]--;
+            j--;
+        }
+        y[j]=i+1;
+    }
+    s+=isn();
+}
+int t08_queen() {
+    cin >> n;
+    for(short i=1;i<=n;i++)
+        fact*=i;
+    for(int i=0;i<fact;i++)
+        per(i);
+    cout << s;
     return 0;
 }
