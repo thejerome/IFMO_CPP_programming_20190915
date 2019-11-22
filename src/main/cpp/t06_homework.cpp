@@ -80,9 +80,54 @@
 
 #include "t06_homework.h"
 #include <iostream>
-
+#include <set>
+#include <string>
 using namespace std;
 
 int t06_homework() {
-
+string a,c,f;
+    set<string> b;
+    set<string> k;
+    int N,e=0,g=1;
+    cin>>N;
+    for(int i=0;i<N;i++){
+        cin>>a;
+        b.insert(a);
+        for(int j=0;j<a.length();j++) {
+            if (a[j] >= 65 && a[j] <= 90)
+                a[j] += 32;
+        }
+            k.insert(a);
+    }
+    cin.ignore();
+    getline(cin,c);
+            for (int i = 0; i <= c.size(); i++) {
+                if (c[i] !=' '&&i!=c.size())
+                    f += c[i];
+                else {
+                    string h = f;
+                    if (b.find(f) == b.end()) {
+                            int d = 0;
+                            while (d < f.length()) {
+                                if (f[d] >= 65 && f[d] <= 90) {
+                                    f[d] += 32;
+                                }
+                                d++;
+                            }
+                            if (k.find(f) != k.end())
+                                e++;
+                            else{
+                                for (int i = 0; i < h.length(); i++) {
+                                    if (h[i] > 64 && h[i] < 91)
+                                        g++;
+                                }
+                            if (g != 2)
+                                e++;
+                            g = 1;
+                        }
+                    }
+                    f = "";
+                }
+            }
+            cout<<e;
 }
