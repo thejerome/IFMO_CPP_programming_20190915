@@ -40,7 +40,7 @@ using namespace std;
 string IsPointInCircle(float x, float y, float xc, float yc, float r){
     float x2=x-xc;
     float y2=y-yc;
-    if ((x2*x2 + y2*y2) <= r) {
+    if ((x2*x2 + y2*y2) <= r*r) {
     return "YES";
     }
     else return "NO";
