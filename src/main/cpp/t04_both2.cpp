@@ -27,5 +27,19 @@
 using namespace std;
 
 int t04_both2() {
-
+set<int> A,B,SW;
+int D,E,Z,X;
+ cin >> D;
+for(int L = 0;L < D; L++){
+    cin >> X;
+    A.insert(X);}
+cin >> E;
+ for(int L = 0;L < E; L++){
+    cin >> Z;
+    B.insert(Z);
+    if(A.find(Z) != A.end())
+        SW.insert(Z);
+	}
+for (auto H : SW) {cout << H << " ";}
+  
 }
