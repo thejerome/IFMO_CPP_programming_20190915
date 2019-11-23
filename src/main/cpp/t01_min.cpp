@@ -21,11 +21,27 @@
 
 using namespace std;
 
-//function min 
+int min (int a1, int a2) {
+    if (a1>a2){
+        return a2;
+    }
+    else return a1;
+}
+int min4 (int a1, int a2, int b1, int b2){
+    if (min(a1,a2)> min (b1,b2)) {
+        return min (b1,b2);
+    }
+    else return min (a1,a2);
+}
 
-//function min4 
-
-int t01_min() {
+int t01_min(int argc, char* argv[])
+{
+    int a,b,c,d;
+    cin>>a;
+    cin>>b;
+    cin>>c;
+    cin>>d;
+    cout<<min4(a,b,c,d);
 
     return 0;
 }
