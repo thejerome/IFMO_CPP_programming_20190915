@@ -1,4 +1,4 @@
-//Даны два списка чисел, которые могут содержать до 100000 чисел каждый. 
+//Даны два списка чисел, которые могут содержать до 100000 чисел каждый.
 // Посчитайте, сколько чисел содержится одновременно как в первом списке, так и во втором.
 //
 //Входные данные
@@ -23,9 +23,26 @@
 
 #include "t03_both.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t03_both() {
-
+    int n;
+    cin >> n;
+    set <int> s1;
+    for (int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
+        s1.insert(x);
+    }
+    cin >> n;
+    int count = 0;
+    for (int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
+        if (s1.find(x) != s1.end()) count++;
+    }
+    cout << count;
+    return 0;
 }
