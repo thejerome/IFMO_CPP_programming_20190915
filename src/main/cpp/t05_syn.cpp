@@ -27,10 +27,23 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
+#include <map>
 
 using namespace std;
 
 int t05_syn() {
-
+int n;
+map <string, string> syn;
+string a, b;
+cin >> n;
+getline(cin, b);
+for(int i = 0; i < n; i++) {
+getline(cin, b);
+a = b.substr(0, b.find(' '));
+b = b.substr(b.find(' ')+1, b.size() - b.find(' '));
+syn[b] = a;
+syn[a] = b;
+}
+cin >> b;
+cout << syn[b];
 }
