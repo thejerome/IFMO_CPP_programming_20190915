@@ -31,7 +31,7 @@ int sum (int s=0){
     return sum(s);  
 }
 
-int t06_sum() (){
+int t06_sum(){
 int s=0;
 cout << sum(s);
 return 0;
