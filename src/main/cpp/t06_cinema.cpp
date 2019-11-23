@@ -24,11 +24,36 @@
 
 #include "t06_cinema.h"
 #include <iostream>
-
+ 
 
 using namespace std;
 
 int t06_cinema() {
-    
-    return 0;
+	int n, m;
+	cin >> n >> m;
+	int mas[20][20];
+	for (int i = 1; i <= n; i++) {
+		for (int j = 1; j <= m; j++) {
+			cin >> mas[i][j];
+		}
+	}
+    int x=0, y = 0;
+	int k = 0;
+	cin >> k;
+	for (int i = 1; i <= n; i++) {
+		for (int j = 1; j <= m; j++) {
+			if (mas[i][j] == 0) { x++; }
+			else {
+				if (x > y) { y = x; }
+				x = 0;
+			}
+		}
+		if (x > y) { y = x; }
+		if (k <= y) { cout << i; break; }
+	}
+	if (k > y)
+		cout << 0;
+	return 0;
 }
+
+

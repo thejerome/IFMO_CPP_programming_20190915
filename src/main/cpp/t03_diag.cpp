@@ -22,6 +22,16 @@
 using namespace std;
 
 int t03_diag() {
-    
-    return 0;
+	int n;
+	cin >> n;
+	int mas[n][n];
+	for (int i = 0; i < n; i++) {
+		for (int l = 0; l < n; l++) {
+			mas[i][l] = abs(i - l);
+			cout << mas[i][l]<<" ";
+
+		}
+	}
+
+	return 0;
 }
