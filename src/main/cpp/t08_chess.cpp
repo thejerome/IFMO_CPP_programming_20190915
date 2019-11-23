@@ -25,7 +25,6 @@
 using namespace std;
 
 int t08_chess() {
-
 	int n, m, l = 1;
 	cin >> n >> m;
 	int mas[n][m];
@@ -40,6 +39,7 @@ int t08_chess() {
 				mas[i][j] = l;
 				l++;
 			}
+			else if ((i + j) % 2 != 0) mas[i][j] = 0;
 		}
 	}
 	for (int i = 0; i < n; i++) {
@@ -50,7 +50,6 @@ int t08_chess() {
 	}
 
 	return 0;
-
 }
 
 
