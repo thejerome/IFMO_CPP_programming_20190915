@@ -17,9 +17,22 @@
 
 using namespace std;
 
-// function fib
+int fib (int n, int a, int b, int s){
+    int t;
+    if(n==s)
+        return a;
+    t=b;
+    b=a+b;
+    a=t;
+    s++;
+    return fib(n,a,b,s);
+    
+}
 
 int t07_fib()
 {
-    return 0;
+int n;
+cin>>n;
+cout << fib(n,1,1,1);
+return 0;
 }
