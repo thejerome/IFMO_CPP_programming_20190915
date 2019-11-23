@@ -27,10 +27,23 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
+#include <map>
+#include <string>
 
 using namespace std;
 
 int t05_syn() {
-
+    int n;
+    string word;
+    cin >> n;
+    map <string, string> dictionary;
+    for (int i = 0; i < n; i++) {
+        string s1, s2;
+        cin >> s1 >> s2;
+        dictionary[s1] = s2;
+        dictionary[s2] = s1;
+    }
+    cin >> word;
+    cout << dictionary[word];
+    return 0;
 }

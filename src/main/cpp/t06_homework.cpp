@@ -80,9 +80,61 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
+#include <string>
 
 using namespace std;
 
 int t06_homework() {
+    int n, result = 0;
+    cin >> n;
+    set <string> dictionary, lower_dictionary, homework, lower_homework;
+    for (int i = 0; i < n; i++) {
+        string s;
+        cin >> s;
+        dictionary.insert(s);
+        string l_s;
+        l_s = s;
+        for (int j = 0; j < s.length(); j++) {
+            l_s[j] = tolower(s[j]);
+        }
+        lower_dictionary.insert(l_s);
+    }
+    string task, lower_task;
+    getline(cin, task);
+    int beg_of_word = 0;
+    homework.insert(task.substr(beg_of_word, task.find(' ') ));
+    for (auto elem :homework) {
+        for(int i = 0; i < elem.length(); i++) lower_task[i] = tolower(task[i]);
+    }
+    lower_homework.insert(lower_task);
 
+    for (int i = task.find(' '); i != -1; i = task.find(' ', i+1)) {
+        beg_of_word = i + 1;
+        int next_space;
+        next_space = task.find (' ', beg_of_word);
+        homework.insert(task.substr(beg_of_word, next_space - beg_of_word ));
+    }
+
+    for (auto word : homework) {
+        if (dictionary.find(word) == dictionary.end()) {
+            string lowercase;
+            lowercase = word;
+            for (int j = 0; j < word.length(); j++) {
+                lowercase[j] = tolower(word[j]);
+            }
+            if (lower_dictionary.find(lowercase) == lower_dictionary.end() ) {
+                int counter = 0;
+                for (int m = 0; m < word.length(); m++) {
+                    if (isupper(word[m]) ) counter++;
+                }
+                if (counter != 1) result++;
+            }
+            else result++;
+        }
+    }
+
+    cout << result-1;
+
+    return 0;
 }
