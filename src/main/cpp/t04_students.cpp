@@ -29,10 +29,36 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
 
 using namespace std;
 
+struct guy {
+    string name, surname;
+    double s;
+};
+bool score (guy one, guy two) {
+    return (one.s > two.s);
+}
+
 int t04_students() {
-    
+    int n;
+    cin >> n;
+    vector <guy> a(n);
+    for (int i = 0; i < n; i++) {
+        string name1, name2;
+        double m, p, in;
+        cin >> name1 >> name2 >> m >> p >> in;
+        guy student;
+        student.name = name1;
+        student.surname = name2;
+        student.s = (m + p + in) / 3;
+        a[i] = student;
+    }
+    sort (a.begin(), a.end(), score);
+    for (auto person : a) cout << person.name << " " << person.surname << endl;
+    return 0;
 }
 
