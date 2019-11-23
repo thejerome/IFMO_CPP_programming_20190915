@@ -39,7 +39,6 @@ int t08_chess() {
 				mas[i][j] = l;
 				l++;
 			}
-			else if ((i + j) % 2 != 0) mas[i][j] = 0;
 		}
 	}
 	for (int i = 0; i < n; i++) {
