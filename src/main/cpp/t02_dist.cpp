@@ -21,7 +21,7 @@
 
 using namespace std;
 
-float dist(int x1, int y1, int x2, int y2){
+float distance(int x1, int y1, int x2, int y2){
     int x=x1-x2;
     int y=y1-y2;
     float s=sqrt(x*x+y*y);
@@ -35,7 +35,7 @@ int t02_dist(int argc, char* argv[])
     cin>>b;
     cin>>c;
     cin>>d;
-    cout<<dist(a,b,c,d);
+    cout<<distance(a,b,c,d);
 
     return 0;
 }
