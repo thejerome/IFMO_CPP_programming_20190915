@@ -27,9 +27,15 @@
 
 using namespace std;
 
-//function power
+int power (int b, int a, int n){
+    if(n<=0)
+        return b;
+    return power(a*b,a,n-1);
+}
 
 int t05_power() {
-
-    return 0;
+int a, n;
+cin >> a >> n;
+cout << power (1,a,n);
+return 0;
 }
