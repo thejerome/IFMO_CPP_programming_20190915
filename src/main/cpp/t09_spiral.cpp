@@ -23,41 +23,42 @@
 using namespace std;
 
 int t09_spiral() {
-	int n, m, k = 1, x, y;
+	int n = 0, m = 0;
 	cin >> n >> m;
-	int a[n][m];
-	if (n < m) { x = n; }
-	else { x = m; }
-	if (x % 2 == 1) { y = x / 2 + 1; }
-	else { y = x / 2; }
-	for (int i = 0; i < y; i++) {
-		for (int j = i; j < m - i; j++) {
-			a[i][j] = k;
-			k++;
+	int mas[100][100] = { 0 };
+	bool right = false, down = false, left = false, up = false;
+	int x = 0, y = 0, c = 0;
+	while (right == false || down == false || left == false || up == false) {
+		while (right == false) {
+			if (y < m && mas[x][y] == 0) { c++; mas[x][y] = c; y++; }
+			else { right = true; y--; x++; }
 		}
-		for (int j = i + 1; j < n - i; j++) {
-			a[j][m - i - 1] = k;
-			k++;
+		if (mas[x][y] == 0) { down = false; }
+		while (down == false) {
+			if (x < n && mas[x][y] == 0) { c++; mas[x][y] = c; x++; }
+			else { down = true; x--; y--; }
 		}
-		for (int j = n - i - 1; !((x % 2 == 1) && (i == x / 2)) && j > i; j--) {
-			a[j][i] = k;
-			k++;
+		if (mas[x][y] == 0) { left = false; }
+		while (left == false) {
+			if (y >= 0 && mas[x][y] == 0) { c++; mas[x][y] = c; y--; }
+			else { left = true; y++; x--; }
 		}
-		for (int j = m - i - 2; !((x % 2 == 1) && (i == x / 2)) && j > i; j--) {
-			a[n - i - 1][j] = k;
-			k++;
+		if (mas[x][y] == 0) { up = false; }
+		while (up == false) {
+			if (x >= 0 && mas[x][y] == 0) { c++; mas[x][y] = c; x--; }
+			else { up = true; x++; y++; }
 		}
+
+		if (mas[x][y] == 0) { right = false; }
+
 	}
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < m; j++)
-			cout << setw(4) << a[i][j];
-		cout << endl;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			cout << setw(4) << mas[i][j] << " ";
+		}
 	}
 	return 0;
 }
-	
-
 			
 	
 			
