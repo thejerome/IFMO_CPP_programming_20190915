@@ -43,6 +43,6 @@ b = b.substr(b.find(' ')+1, b.size() - b.find(' '));
 syn[b] = a;
 syn[a] = b;
 }
-cin >> b;
+getline(cin, b);
 cout << syn[b];
 }
