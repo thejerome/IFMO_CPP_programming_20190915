@@ -84,7 +84,7 @@
 using namespace std;
 
 int t06_homework() {
-int n, faults = 0, q = 1, pos = 0;
+int n, faults = 0, q = 1, pos;
 set <string> dict;
 set <string> low;
 cin>> n;
