@@ -84,7 +84,7 @@
 using namespace std;
 
 int t06_homework() {
-int n, faults = 0, q = 1, pos = 0;
+int n, faults = 0, q = 2;
 set <string> dict;
 set <string> low;
 cin>> n;
@@ -101,12 +101,13 @@ low.insert(a);
 getline(cin, m);
 
 n = 0; 
-if (m.find(' ') == m.rfind(' ')) {q =1;}
-else{
-while (m.find(' ', pos) <= m.rfind(' '))
-{pos = m.find(' ', pos) + 1;
+      if (m.find(' ') == m.rfind(' ')) {q = 1;}
+      else{
+while (m.find(' ') != m.rfind(' '))
+{m=m.substr(m.find(' ')+1);
 q++;
-}}
+}
+}
 for(int i = 0; i < q; i++) {
 a = m.substr(0, m.find(' '));
 if(dict.count(a) == 0 and low.count(a) != 0) {faults++; m = m.substr(m.find(' ')+1, m.size() - m.find(' ')); n = 0; continue;}
