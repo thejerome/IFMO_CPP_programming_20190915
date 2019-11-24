@@ -40,6 +40,7 @@ for(int i = 0; i < n; i++) {
 getline(cin, b);
 a = b.substr(0, b.find(' '));
 b = b.substr(b.find(' ')+1, b.size() - b.find(' '));
+  cout << a << " " << b << " ";
 syn[b] = a;
 syn[a] = b;
 }
