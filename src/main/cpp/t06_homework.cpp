@@ -99,7 +99,7 @@ if(symb >64 and symb < 91) {a[k]=a[k]+32;}}
 low.insert(a);
 }
 getline(cin, m);
-getline(cin, m);
+
 n = 0; 
 if (m.find(' ') == m.rfind(' ')) {q =1;}
 else{
