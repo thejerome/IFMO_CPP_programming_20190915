@@ -36,7 +36,6 @@ int n;
 map <string, string> syn;
 string a, b;
 cin >> n;
-getline(cin, b);
 for(int i = 0; i < n; i++) {
 getline(cin, b);
 a = b.substr(0, b.find(' '));
