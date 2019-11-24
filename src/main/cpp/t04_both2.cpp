@@ -42,7 +42,7 @@ for(int i=0; i<N; i++){
     if (number.find(n)!=number.end()) number2.insert(n);
 }
 for (int i: number2){
-    cout << i;
+    cout << i<<" ";
 }
 return 0;
 }
