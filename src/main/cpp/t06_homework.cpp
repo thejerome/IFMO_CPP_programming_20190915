@@ -85,7 +85,7 @@
 using namespace std;
 
 int t06_homework() {
-string a,c,f;
+    string a,c,f;
     set<string> b;
     set<string> k;
     int N,e=0,g=1;
@@ -97,37 +97,39 @@ string a,c,f;
             if (a[j] >= 65 && a[j] <= 90)
                 a[j] += 32;
         }
-            k.insert(a);
+        k.insert(a);
     }
     cin.ignore();
     getline(cin,c);
-            for (int i = 0; i <= c.size(); i++) {
-                if (c[i]>64)
-                    f += c[i];
-                else {
-                    string h = f;
-                    if (b.find(f) == b.end()) {
-                            int d = 0;
-                            while (d < f.length()) {
-                                if (f[d] >= 65 && f[d] <= 90) {
-                                    f[d] += 32;
-                                }
-                                d++;
-                            }
-                            if (k.find(f) != k.end())
-                                e++;
-                            else{
-                                for (int i = 0; i < h.length(); i++) {
-                                    if (h[i] > 64 && h[i] < 91)
-                                        g++;
-                                }
-                            if (g != 2)
-                                e++;
-                            g = 1;
-                        }
+    for (int i = 0; i < c.size(); i++) {
+        if (c[i] >=65&&i!=c.size()-1)
+            f += c[i];
+        else {
+            if(i==c.size()-1)
+                f+=c[i];
+            string h = f;
+            if (b.find(f) == b.end()) {
+                int d = 0;
+                while (d < f.length()) {
+                    if (f[d] >= 65 && f[d] <= 90) {
+                        f[d] += 32;
                     }
-                    f = "";
+                    d++;
+                }
+                if (k.find(f) != k.end())
+                    e++;
+                else{
+                    for (int i = 0; i < h.length(); i++) {
+                        if (h[i] > 64 && h[i] < 91)
+                            g++;
+                    }
+                    if (g != 2)
+                        e++;
+                    g = 1;
                 }
             }
-            cout<<e;
+            f = "";
+        }
+    }
+    cout<<e;
 }
