@@ -37,7 +37,7 @@ map <string, string> syn;
 string a, b;
 cin >> n;
 for(int i = 1; i < n; i++) {
-getline(cin, b);
+cin >> b;
 a = b.substr(0, b.find(' '));
 b = b.substr(b.find(' ')+1, b.size() - b.find(' '));
   cout << a << " " << b << '*';
