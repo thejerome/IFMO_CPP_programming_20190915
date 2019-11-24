@@ -41,10 +41,10 @@ cin >> b;
 cin >> a;
 //a = b.substr(0, b.find(' '));
 //b = b.substr(b.find(' ')+1, b.size() - b.find(' '));
-  cout << a << " " << b << '*';
+ // cout << a << " " << b << '*';
 syn[b] = a;
 syn[a] = b;
 }
 cin >> b;
-cout << '*' << syn[b];
+cout << syn[b];
 }
