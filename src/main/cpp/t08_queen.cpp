@@ -23,16 +23,27 @@
 
 using namespace std;
 
-int res =0;
 bool a2[10][10] {false};
 int i2[11];
 int j2[11];
 
 int func(int n, int ni, int nj, int num);
 int func(int n, int ni, int nj, int num){
+    int res =0;
     i2[num] = ni;
     j2[num] = nj;
-    if ((ni >= 0) and (nj >= 0)) {
+    /*
+     for (int i=0; i<n; i++){
+        if ( ((a2[ni][i]) or (a2[i][nj]) or (a2[i][i]) or (a2[n-1-i][i])) and (*a2[i][i] != *a2[ni][nj]) )
+        a2[ni][i]
+        a2[i][nj]
+        a2[i][nj-ni+i]
+        {
+
+        }
+     }
+     */
+    if ((ni > 0)) {
         if (nj < n) {
             bool plc = true;
             for (int i = 1; i <= nj; i++) {
@@ -109,11 +120,15 @@ int func(int n, int ni, int nj, int num){
     return res;
 }
 
-int t08_queen(){
+int main(){
     int n;
     cin >>n;
+    int res2=0;
     i2[0] = -1;
     j2[0] = -1;
-    cout <<func (n,  0, 0, 1);
+    for (int o=0; o<n; o++){
+        res2 = res2+func(n, 0, o, 1);
+    }
+    cout <<res2;
     return 0;
 }
