@@ -99,7 +99,7 @@ if(symb >64 and symb < 91) {a[k]=a[k]+32;}}
 low.insert(a);
 }
 getline(cin, m);
-
+a = m;
 n = 0; 
       if (m.find(' ') == m.rfind(' ')) {q = 1;}
       else{
@@ -108,6 +108,7 @@ while (m.find(' ') != m.rfind(' '))
 q++;
 }
 }
+m = a;      
 for(int i = 0; i < q; i++) {
 a = m.substr(0, m.find(' '));
 if(dict.count(a) == 0 and low.count(a) != 0) {faults++; m = m.substr(m.find(' ')+1, m.size() - m.find(' ')); n = 0; continue;}
