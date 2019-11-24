@@ -23,5 +23,17 @@
 using namespace std;
 
 int t01_unique() {
-    
+int N,a[N],count=0;
+cin >>N;
+for (int i=0; i<N;i++){
+    cin >>a[i];
 }
+for (int i=0; i<N;i++){
+    for (int j=1; j<N/2;j++){
+        if(a[j]!=a[i]) count++;
+    }
+}
+if (count==0) cout <<"1";
+else cout<<count;
+}
+
