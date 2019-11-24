@@ -34,5 +34,40 @@
 using namespace std;
 
 int t07_ip() {
-
+    string str, str2;
+    getline(cin, str);
+    int sz = str.size();
+    int a=-1;
+    bool tr = true;
+    int pt =0;
+    str2="";
+    string ch;
+    for (int i=0; i<sz; i++){
+        if (str[i] != '.'){
+            ch = str[i];
+            str2.append(ch);
+        }
+        if (str[i] == '.'){
+            pt++;
+        }
+        if ((str[i] == '.') or (i+1 >=sz)){
+            //pt++;
+            if (!str2.empty()) {
+                if ((stoi(str2) >= 0) and (stoi(str2) <= 255)) {
+                } else {
+                    tr = false;
+                }
+                str2 = "";
+            }
+        }
+    }
+    if(pt != 3){
+        tr = false;
+    }
+    if (tr){
+        cout <<"YES";
+    } else {
+        cout <<"NO";
+    }
+    return 0;
 }

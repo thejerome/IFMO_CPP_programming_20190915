@@ -24,5 +24,13 @@
 using namespace std;
 
 int t02_up() {
-    
+    char ch;
+    cin >>ch;
+    int a=ch;
+    if ((a>=97)and(a<=122)){
+        a = a-32;
+    }
+    ch = a;
+    cout <<ch;
+    return 0;
 }
