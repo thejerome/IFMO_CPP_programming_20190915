@@ -119,5 +119,5 @@ if(n != 1 or low.count(a) != 0) {faults ++;}
 n = 0;
 m = m.substr(m.find(' ')+1, m.size() - m.find(' '));
 }
-cout << faults;
+cout << faults-1;
 }
