@@ -36,10 +36,11 @@ int n;
 map <string, string> syn;
 string a, b;
 cin >> n;
-for(int i = 1; i < n; i++) {
+for(int i = 0; i < n; i++) {
 cin >> b;
-a = b.substr(0, b.find(' '));
-b = b.substr(b.find(' ')+1, b.size() - b.find(' '));
+cin >> a;
+//a = b.substr(0, b.find(' '));
+//b = b.substr(b.find(' ')+1, b.size() - b.find(' '));
   cout << a << " " << b << '*';
 syn[b] = a;
 syn[a] = b;
