@@ -38,7 +38,7 @@ int t06_longest() {
             max =0;
         }
     }
-    for (int i=inmax; i<(inmax+maxa+1); i++){
+    for (int i=inmax+1; i<(inmax+maxa+1); i++){
         cout <<str[i];
     }
     return 0;
