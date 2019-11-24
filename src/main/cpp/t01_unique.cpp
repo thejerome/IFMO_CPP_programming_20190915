@@ -31,5 +31,5 @@ for(int i=0; i<N; i++){
     number.insert(n);
 }
 cout << number.size();
-retern 0;
+return 0;
 }
