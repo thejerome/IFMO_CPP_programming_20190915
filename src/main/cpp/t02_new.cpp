@@ -25,10 +25,20 @@
 
 #include "t02_new.h"
 #include <iostream>
-
+#include <set>
 
 using namespace std;
 
 int t02_new() {
-    
+ int n, a;
+cin >> n;
+multiset <int> row;
+for(int i =0; i<n; i++) {
+ cin >> a;
+ if(row.find(a) == row.end()) {cout << "NO" << " ";}
+ else {cout << "YES" << " ";}
+ row.insert(a);
+ 
+}
+   
 }

@@ -80,9 +80,46 @@
 
 #include "t06_homework.h"
 #include <iostream>
-
+#include <set>
 using namespace std;
 
 int t06_homework() {
-
+int n, faults = 0, q = 2;
+set <string> dict;
+set <string> low;
+cin>> n;
+string a, m;
+char symb;
+for(int i = 0; i < n; i++) {
+cin>> a;
+dict.insert(a);
+for(int k = 0; k < a.size(); k++)
+{symb = a[k];
+if(symb >64 and symb < 91) {a[k]=a[k]+32;}}
+low.insert(a);
+}
+getline(cin, m);
+a = m;
+n = 0; 
+      if (m.find(' ') == m.rfind(' ')) {q = 1;}
+      else{
+while (m.find(' ') != m.rfind(' '))
+{m=m.substr(m.find(' ')+1);
+q++;
+}
+}
+m = a;      
+for(int i = 0; i < q; i++) {
+a = m.substr(0, m.find(' '));
+if(dict.count(a) == 0 and low.count(a) != 0) {faults++; m = m.substr(m.find(' ')+1, m.size() - m.find(' ')); n = 0; continue;}
+if(dict.count(a) == 0 and low.count(a) == 0) {
+for(int k = 0; k < a.size(); k++)
+{symb = a[k];
+if(symb >64 and symb < 91) {n++; a[k] = a[k]+32;}}
+if(n != 1 or low.count(a) != 0) {faults ++;}
+}
+n = 0;
+m = m.substr(m.find(' ')+1, m.size() - m.find(' '));
+}
+cout << faults-1;
 }
