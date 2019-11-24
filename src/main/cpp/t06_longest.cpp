@@ -22,5 +22,18 @@
 using namespace std;
 
 int t06_longest() {
+string b;
+int a, k = 0, maxk = 0, maxi;
+getline(cin, b);
+a =  b.size();
+for (int i = 0; i < a; i++)
+{if (b[i] == ' ')
+{if(k > maxk) {maxk = k; maxi = i - k;}
+k = 0;
 
+}
+else{k++;}
+}
+if(k > maxk) {maxk = k; maxi = a - k;}
+cout << b.substr(maxi, maxk);
 }
