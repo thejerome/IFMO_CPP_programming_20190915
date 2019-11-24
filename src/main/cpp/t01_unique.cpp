@@ -19,21 +19,19 @@
 
 #include "t01_unique.h"
 #include <iostream>
-
+#include <set>
 using namespace std;
 
 int t01_unique() {
-int N,a[N],count=0;
+set<int>number;
+int N,n;
 cin >>N;
-for (int i=0; i<N;i++){
-    cin >>a[i];
+for(int i=0; i<N; i++){
+    cin >> n;
+    number.insert(n);
 }
-for (int i=0; i<N;i++){
-    for (int j=1; j<N/2;j++){
-        if(a[j]!=a[i]) count++;
-    }
+cout << number.size();
+retern 0;
 }
-if (count==0) cout <<"1";
-else cout<<count;
-}
+
 
