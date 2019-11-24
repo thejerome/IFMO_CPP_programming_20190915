@@ -34,7 +34,7 @@ double power(double a,int n){
     }else if (n>0){
         return (a*power(a,(n-1)));
     }else if (n<0){
-        return 1/(a*power(a,(-n-1)));    
+        return 1/(a*power(a,((-n)-1)));    
     }    
 }
 int t05_power(){
