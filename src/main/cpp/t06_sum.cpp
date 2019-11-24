@@ -20,6 +20,8 @@
 #include <iostream>
 #include <cmath>
 
+using namespace std;
+
 int sum(){
     int a;
     cin >> a;
@@ -29,6 +31,7 @@ int sum(){
         return 0;
     }
 }
+
 int t06_sum(){
     cout << sum();   
 }
