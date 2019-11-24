@@ -27,12 +27,20 @@ int res =0;
 bool a2[10][10] {false};
 int i2[11];
 int j2[11];
+bool frst = true;
 
 int func(int n, int ni, int nj, int num);
 int func(int n, int ni, int nj, int num){
     i2[num] = ni;
     j2[num] = nj;
+    if ((num == 1) and (!frst)){
+        ni = -1;
+        nj = -1;
+    }
     if ((ni >= 0) and (nj >= 0)) {
+        if (num == 1){
+            frst = false;
+        }
         if (nj < n) {
             bool plc = true;
             for (int i = 1; i <= nj; i++) {
@@ -114,6 +122,12 @@ int t08_queen(){
     cin >>n;
     i2[0] = -1;
     j2[0] = -1;
-    cout <<func (n,  0, 0, 1);
+    int res2=0;
+    for (int o=0; o<n; o++){
+        res2 = res2 + func (n, 0, o, 1);
+        res = 0;
+        frst = true;
+    }
+    cout <<res2;
     return 0;
 }
