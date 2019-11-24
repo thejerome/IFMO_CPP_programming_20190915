@@ -36,10 +36,25 @@
 #include <cmath>
 
 using namespace std;
-
+double distance(double x1, double y1, double x2, double y2);/*{
+    double dx = abs(x2 - x1);
+    dx = dx*dx;
+    double dy = abs (y2 - y1);
+    dy = dy*dy;
+    return (sqrt(dx+dy));
+}*/
 //function IsPointInCircle
+bool IsPointInCircle(double x, double y, double xc, double yc, double r){
+    return (distance(x, y, xc, yc) <= r);
+}
 
 int t03_circle() {
-
+    double x=0, y=0, xc=0, yc=0, r=0;
+    cin >>x >>y >>xc >>yc >>r;
+    if(IsPointInCircle(x, y, xc, yc, r)){
+        cout <<"YES";
+    } else {
+        cout <<"NO";
+    }
     return 0;
 }
