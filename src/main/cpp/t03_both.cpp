@@ -41,7 +41,7 @@ for(int i=0; i<N; i++){
     if (number.find(n)!=number.end()) number2.insert(n);
 }
 count=number2.size();
-cout <<count-1;
+cout <<count;
 return 0;
 }
 
