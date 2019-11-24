@@ -30,5 +30,19 @@
 using namespace std;
 
 int t01_char() {
-
+    string num("0123456789");
+    bool tr = false;
+    char ch;
+    cin >>ch;
+    for (int i=0; i < 10; i++){
+        if (num[i]  == ch){
+            tr = true;
+        }
+    }
+    if (tr){
+        cout <<"yes";
+    } else {
+        cout <<"no";
+    }
+    return 0;
 }

@@ -22,5 +22,24 @@
 using namespace std;
 
 int t06_longest() {
-
+    string str;
+    getline(cin, str);
+    int sz=str.size();
+    int max=0, maxa=0, inmax=0;
+    for (int i=0; i<sz; i++){
+        if (str[i] != ' '){
+            max++;
+        }
+        if ((str[i+1] == ' ') or (i+1 >= sz)){
+            if (max > maxa){
+                maxa=max;
+                inmax = i-max;
+            }
+            max =0;
+        }
+    }
+    for (int i=inmax; i<(inmax+maxa+1); i++){
+        cout <<str[i];
+    }
+    return 0;
 }
