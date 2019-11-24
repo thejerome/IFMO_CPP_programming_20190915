@@ -33,5 +33,3 @@ for(int i=0; i<N; i++){
 cout << number.size();
 retern 0;
 }
-
-
