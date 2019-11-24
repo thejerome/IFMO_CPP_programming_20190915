@@ -35,8 +35,8 @@ cin >> n;
 multiset <int> row;
 for(int i =0; i<n; i++) {
  cin >> a;
- if(row.find(a) == row.end()) {cout << "NO";}
- else {cout << "YES";}
+ if(row.find(a) == row.end()) {cout << "NO" << " ";}
+ else {cout << "YES" << " ";}
  row.insert(a);
  
 }
