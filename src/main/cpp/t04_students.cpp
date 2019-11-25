@@ -36,8 +36,8 @@
 using namespace std;
 
 int t04_students() {
-int n, m1, m2, m3;
-double numb;
+int n;
+double numb, m1, m2, m3;
 vector <string> v;
 set <double, greater<double> > m;
 map <double,vector<string> > stmark;
@@ -46,7 +46,6 @@ cin >> n;
 for(int i = 0; i < n; i++)
 {cin >> im >> fam >> m1 >> m2 >> m3;
 a = im + ' ' + fam;
-//cout << a;
 numb = (m1 + m2 + m3)/3;
 if(m.count(numb)!= 0){stmark[numb].push_back(a);}
 else{
