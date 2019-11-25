@@ -22,29 +22,34 @@
 //2 3
 
 #include "t03_points.h"
-#include <iostream>#include <iostream>
+#include <iostream>
 #include<set>
 #include<map>
+#include<vector>
 #include<cmath>
-#include <string>
-
 using namespace std;
 
 int t03_points() {
-    multiset <double> dist;
-map <double,string> points;
+vector <int> a;
+multiset <double> dist;
+map <double,vector<int> > points;
 int n, x, y;
 double d;
-string a;
 cin >> n;
-getline(cin, a);
-for(int i = 0; i < n; n++) {
-getline(cin, a);
-x = stoi(a.substr(0, a.find(' ')));
-y = stoi(a.substr(a.find(' ') + 1, a.size()));
+
+for(int i = 0; i < n; i++) {
+cin >> x;
+cin >> y;
 d = sqrt(x*x + y*y);
+//cout << d << " ";
 dist.insert(d);
+a.push_back(x);
+a.push_back(y);
 points[d] = a;
+a.pop_back();
+a.pop_back();
+//cout << dist.size() << endl;
 }
-for(auto i : dist) {cout << points[i] << endl;}
+
+for(auto i : dist) {cout <<points[i][0] << " " <<points[i][1] << " ";}
 }
