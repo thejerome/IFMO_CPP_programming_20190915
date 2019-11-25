@@ -24,13 +24,14 @@
 using namespace std;
 
 int t01_sort() {
-int D,F;
+int D;
 cin >> D;
 int C[D];
 for(int L = 0;L < D;L++)
 {
     cin >> C[L];
-    sort(C, C+sizeof(C)/sizeof(C[0]));
+    int F = sizeof(C)/sizeof(C[1]);
+    sort(C, C+S);
 }
  for (int L = 0; L < D; L++)
         cout << C[L] << " ";
