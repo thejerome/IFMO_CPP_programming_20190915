@@ -40,6 +40,6 @@ int t09_equals() {
             };
         };
     };
-    cout << counter;
+    cout << counter / 2;
     return 0;
 }
