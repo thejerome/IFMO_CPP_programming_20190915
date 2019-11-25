@@ -23,10 +23,32 @@
 
 #include "t03_points.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
+#include <cmath>
 
 using namespace std;
+struct PT{
+ float x;
+ float y;};
+bool SW(PT S1,PT S2)
+{
 
+    float C1 = sqrt(pow(S1.x,2) + pow(S1.y,2));
+    float C2 = sqrt(pow(S2.x,2) + pow(S2.y,2));
+    return (C1 < C2);
+
+}
 int t03_points() {
-    
+    int D;
+cin >> D;
+vector <PT> SIZE(D);
+for(int L =0;L < D;L++)
+{cin >> SIZE[L].x >> SIZE[L].y;
+}
+sort(SIZE.begin(),SIZE.end(), SW);
+for(int L = 0; L < D; L++)
+{
+cout << SIZE[L].x  << " " << SIZE[L].y << "\n";
+}
 }
