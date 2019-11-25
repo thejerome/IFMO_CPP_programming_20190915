@@ -19,10 +19,19 @@
 
 #include "t01_sort.h"
 #include <iostream>
-
+#include <algorithm>
 
 using namespace std;
 
 int t01_sort() {
-    
+int D,F;
+cin >> D;
+int C[D];
+for(int L = 0;L < D;L++)
+{
+    cin >> C[L];
+    sort(C, C+sizeof(C)/sizeof(C[0]));
+}
+ for (int L = 0; L < D; L++)
+        cout << C[L] << " ";
 }
