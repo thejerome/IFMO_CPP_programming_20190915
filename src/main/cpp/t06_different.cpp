@@ -26,12 +26,12 @@ int t06_different() {
     int a[n];
     int b[k];
     counter = 0;
-    for (i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         cin >> a[i];
     };
-    for (i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         f = true;
-        for (j = 0; j < k; j++) {
+        for (int j = 0; j < k; j++) {
             if (a[i] == b[j]) {
                 f = false;
             };
