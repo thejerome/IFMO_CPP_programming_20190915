@@ -39,7 +39,7 @@ int t10_unique() {
                 f = false;
             };
         };
-        if (f == true) {
+        if (f) {
             cout << a[i] << " ";
         };
     };
