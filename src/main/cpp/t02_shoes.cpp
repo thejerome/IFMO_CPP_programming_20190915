@@ -44,6 +44,6 @@ for(int i = 0; i < n; i++) {cin >> x; assort.push_back(x);
 sort(assort.begin(), assort.end());
 x  = 0;
 for(auto i : assort) {if(x > 0 and leg<= i -3) {leg = i; x++;}
-if (x == 0 and leg >= i) {leg = i; x++;}}
+if (x == 0 and leg <= i) {leg = i; x++;}}
 cout << x;
 }
