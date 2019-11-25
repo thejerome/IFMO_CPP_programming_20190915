@@ -36,22 +36,18 @@
 using namespace std;
 
 int t04_students() {
-    int n;
+int n, m1, m2, m3;
 double numb;
 vector <string> v;
-set <double> m;
+set <double, greater<double> > m;
 map <double,vector<string> > stmark;
-string student, a, marks;
+string student, a,im, fam;
 cin >> n;
-cin >> student;
 for(int i = 0; i < n; i++)
-{getline(cin, student);
-a = student.substr(0, student.find(' ') + 1);
-student.erase(0, student.find(' ') + 1);
-a += student.substr(0, student.find(' '));
-student.erase(0, student.find(' ') + 1);
-numb = (stoi(&student[0]) + stoi(&student[2]) + stoi(&student[4]))/3;
-
+{cin >> im >> fam >> m1 >> m2 >> m3;
+a = im + ' ' + fam;
+//cout << a;
+numb = (m1 + m2 + m3)/3;
 if(m.count(numb)!= 0){stmark[numb].push_back(a);}
 else{
 m.insert(numb);
