@@ -45,5 +45,5 @@ d = (x*x + y*y)^0,5;
 dist.insert(d);
 points[d] = a;
 }
-for(auto i : dist) {cout << points[i];}
+for(auto i : dist) {cout << points[i] << endl;}
 }
