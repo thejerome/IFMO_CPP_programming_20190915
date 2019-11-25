@@ -29,7 +29,8 @@
 
 #include "t04_students.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 using namespace std;
 struct PR
 {
