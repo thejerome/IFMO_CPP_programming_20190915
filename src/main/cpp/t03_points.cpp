@@ -50,5 +50,5 @@ points[d] = a;
 a.pop_back();
 a.pop_back();}
 }
-for(auto i : dist) {if(points[i].size() == 2){cout <<points[i][0] << "*" <<points[i][1] << " ";} else {cout << points[i][0] << " " << points[i][1] << " " << points[i][2] << " " << points[i][3] << " ";}}
+for(auto i : dist) {if(points[i].size() == 2){cout <<points[i][0] << " " <<points[i][1] << " ";} else {cout << points[i][0] << " " << points[i][1] << " " << points[i][2] << " " << points[i][3] << " ";}}
 }
