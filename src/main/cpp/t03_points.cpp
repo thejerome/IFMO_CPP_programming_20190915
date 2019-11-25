@@ -25,6 +25,7 @@
 #include <iostream>#include <iostream>
 #include<set>
 #include<map>
+#include<cmath>
 #include <string>
 
 using namespace std;
@@ -41,7 +42,7 @@ for(int i = 0; i < n; n++) {
 getline(cin, a);
 x = stoi(a.substr(0, a.find(' ')));
 y = stoi(a.substr(a.find(' ') + 1, a.size()));
-d = (x*x + y*y)^ 0.5;
+d = sqrt(x*x + y*y);
 dist.insert(d);
 points[d] = a;
 }
