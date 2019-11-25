@@ -30,8 +30,7 @@ int C[D];
 for(int L = 0;L < D;L++)
 {
     cin >> C[L];
-    int F = sizeof(C)/sizeof(C[1]);
-    sort(C, C+F);
+    sort(C, C+D);
 }
  for (int L = 0; L < D; L++)
         cout << C[L] << " ";
