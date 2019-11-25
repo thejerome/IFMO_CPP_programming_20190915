@@ -28,10 +28,22 @@
 
 #include "t02_shoes.h"
 #include <iostream>
+#include<algorithm>
+#include<vector>
 
 
 using namespace std;
 
 int t02_shoes() {
-    
+    vector <int> assort;
+int n, x, leg;
+
+cin >> leg>> n ;
+for(int i = 0; i < n; i++) {cin >> x; assort.push_back(x);
+}
+sort(assort.begin(), assort.end());
+x  = 0;
+for(auto i : assort) {if(x > 0 and leg<= i -3) {leg = i; x++;}
+if (x == 0 and leg >= i) {leg = i; x++;}}
+cout << x;
 }
