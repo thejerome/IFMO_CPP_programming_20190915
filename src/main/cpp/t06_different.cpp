@@ -19,25 +19,28 @@
 using namespace std;
 
 int t06_different() {
-    int n,counter;
+    int n,counter,k;
     bool f;
     cin >> n;
+    k = 1;
     int a[n];
+    int b[k];
     counter = 0;
-    for (int i = 0; i < n; i++) {
+    for (i = 0; i < n; i++) {
         cin >> a[i];
     };
-    for (int i = 0; i < n; i++ ) {
+    for (i = 0; i < n; i++) {
         f = true;
-        for (int j = 0; j < n; j++) {
-            if ((a[i] == a[j]) && (i != j)) {
+        for (j = 0; j < k; j++) {
+            if (a[i] == b[j]) {
                 f = false;
             };
         };
-        if (f) {
-            counter++;
+        if (f == true) {
+            k++;
+            b[k] = a[i];
         };
     };
-    cout << counter;
+    cout << (k-1);
     return 0;
 }
