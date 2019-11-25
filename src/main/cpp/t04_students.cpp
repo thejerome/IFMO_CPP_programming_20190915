@@ -38,9 +38,7 @@ struct PR
 };
 int SR(PR S1,PR S2)
 {
-   int BSR1= S1.B1+S1.B2+S1.B3;
-   int BSR2= S2.B2+S2.B2+S2.B3;
-   return BSR1 > BSR2 ? 1:0;
+  return (S1.B1+S1.B2+S1.B3 > S2.B1+S2.B2+S2.B3);
 }
 int t04_students() {
     int D;
