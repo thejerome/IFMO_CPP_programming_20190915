@@ -34,12 +34,13 @@
 using namespace std;
 
 int t02_shoes() {
- int R,D,F=0,PF=0;
+ int R,D,F=0;
 cin >> R >> D;
 vector <int> SIZE(D);
 for(int L =0;L < D;L++)
 {cin >>SIZE[L];}
 sort(SIZE.begin(),SIZE.end());
+int PF;
 for(int L =0;L < D;L++)
 {
     if(SIZE[L] >= R)
