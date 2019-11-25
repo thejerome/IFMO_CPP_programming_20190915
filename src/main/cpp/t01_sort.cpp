@@ -28,5 +28,5 @@ int t01_sort() {
 int n, x;
 cin >> n;
 for(int i = 0; i < n; i++) {cin >> x; list.insert(x);}
-for(auto i : list) {cout << i;} 
+for(auto i : list) {cout << i << " ";} 
 }
