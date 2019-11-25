@@ -29,10 +29,26 @@
 
 #include "t04_students.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 using namespace std;
-
+struct PR
+{
+    string NM;string FAM;int B1;int B2;int B3;
+};
+int SR(PR S1,PR S2)
+{
+  return (S1.B1+S1.B2+S1.B3 > S2.B1+S2.B2+S2.B3);
+}
 int t04_students() {
-    
+    int D;
+cin >> D;
+vector<PR> DB(D);
+for(int L = 0;L < D;L++)
+{cin >> DB[L].FAM >> DB[L].NM ;
+ cin >> DB[L].B1 >> DB[L].B2 >> DB[L].B3;}
+sort(DB.begin(), DB.end(),SR);
+for(int L = 0;L < D;L++)
+{cout << DB[L].FAM << " " << DB[L].NM << "\n";}
 }
 

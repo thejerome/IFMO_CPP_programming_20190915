@@ -24,5 +24,20 @@
 using namespace std;
 
 int t01_sort() {
-    
+int D;
+cin >> D;
+int C[D];
+for(int L = 0;L < D;L++)
+{cin >> C[L];}
+for(int L = 0;L < D;L++){
+for(int H = 0;H < D - L - 1; ++H)
+    {
+        if(C[H+1] < C[H])
+        {int SW = C[H];
+            C[H]=C[H+1];
+            C[H+1]=SW;}
+    }
+}
+for (int L = 0; L < D; L++)
+        cout << C[L] << " ";
 }
