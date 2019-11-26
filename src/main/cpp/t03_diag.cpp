@@ -30,6 +30,7 @@ int t03_diag() {
             a[i][j] = abs(i-j);
             cout << a[i][j] << " ";
         };
+        cout << endl;
     };
     return 0;
 }

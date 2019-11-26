@@ -32,14 +32,17 @@ int t08_chess() {
         for (int j = 0; j < m; j++) {
             if ((i + j) % 2 == 1) {
                 a[i][j] = 0;
-                cout << setprecission(4) << a[i][j];
+                cout.width(4);
+                cout << a[i][j];
             }
             else {
                 counter++;
                 a[i][j] = counter;
-                cout << setprecission(4) << a[i][j];
+                cout.width(4);
+                cout << a[i][j];
             };
         };
+        cout << endl;
     };
     return 0;
 }

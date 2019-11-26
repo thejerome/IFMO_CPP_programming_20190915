@@ -31,15 +31,19 @@ int t07_snake() {
             for (int j = 0; j < m; j++) {
                 counter++;
                 a[i][j] = counter;
-                cout << setprecission(6) << a[i][j];
+                cout.width(4);
+                cout << a[i][j];
             };
+            cout << endl;
         }
         else {
             for (int j = m-1; j >= 0; j--) {
                 counter++;
                 a[i][j] = counter;
-                cout << setprecission(4) << a[i][j];
+                cout.width(4);
+                cout << a[i][j];
             };
+            cout << endl;
         };
     };
     return 0;
