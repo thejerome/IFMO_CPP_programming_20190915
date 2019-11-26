@@ -52,8 +52,8 @@ int t09_spiral() {
             };
         };
         for (int x = (n - i - 1); x >= (i + 2); x--) {
-            if (a[i + 1][j] == 0) {
-                a[i + 1][j] = counter;
+            if (a[x][i+1] == 0) {
+                a[x][i+1] = counter;
                 counter++;
             };
         };
