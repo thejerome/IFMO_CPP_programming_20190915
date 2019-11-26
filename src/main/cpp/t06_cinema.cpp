@@ -31,7 +31,7 @@ using namespace std;
 int t06_cinema() {
     int n,m,k,counter;
     bool f;
-    f = false;
+    f = true;
     cin >> n >> m;
     int a[n][m];
     for (int i = 0; i < n; i++) {
@@ -41,20 +41,20 @@ int t06_cinema() {
     };
     cin >> k;
     for (int i = 0; i < n; i++) {
-        counter == 1;
-        for (int j = 0; j < m-1; j++) {
-            if ((!f) && (a[i][j] == a[i][j+1])) {
+        counter == 0;
+        for (int j = 0; j < m; j++) {
+            if ((f) && (a[i][j] == 0)) {
                 counter++;
             }
             else {
                 if (counter >= k) {
-                    f = true;
-                    cout << i;
+                    f = false;
+                    cout << i+1;
                 };
             };
         };
     };
-    if (!f) {
+    if (f) {
         cout << "0";
     };
     return 0;
