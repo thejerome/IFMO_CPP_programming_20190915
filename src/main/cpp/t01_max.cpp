@@ -35,7 +35,7 @@ max = a[0][0];
 maxn = 0;
 maxm = 0;
 for (int i = 0; i < n; i++) {
-    for (int j = 1; j < m; j++) {
+    for (int j = 0; j < m; j++) {
         cin >> a[i][j];
         if (max < a[i][j]) {
             max = a[i][j];
