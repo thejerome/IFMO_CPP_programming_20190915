@@ -46,11 +46,13 @@ int t06_cinema() {
             if (f) {
                 if (a[i][j] == 0) {
                     counter++;
-                } else {
+                }
+                else {
                     if (counter >= k) {
                         f = false;
                         cout << i + 1;
                     };
+                    counter = 0;
                 };
             };
         };
