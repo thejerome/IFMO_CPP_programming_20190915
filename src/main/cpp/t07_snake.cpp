@@ -45,7 +45,7 @@ int t07_snake() {
             cout.width(4);
             cout << a[i][j];
         };
-        count << endl;
+        cout << endl;
     };
     return 0;
 }
