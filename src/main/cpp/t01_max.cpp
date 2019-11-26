@@ -27,7 +27,7 @@
 using namespace std;
 
 int t01_max() {
-int n,m,max,mxm,mxn;
+int n,m,max,maxm,maxn;
 cin >> n >> m;
 int a[n][m];
 cin >> a[0][0];

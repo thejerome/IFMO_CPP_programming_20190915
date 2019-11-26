@@ -26,6 +26,7 @@ using namespace std;
 int t08_chess() {
     int n,m,counter;
     cin >> n >> m;
+    int a[n][m];
     counter = 0;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
