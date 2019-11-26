@@ -44,6 +44,6 @@ for (int i = 0; i < n; i++) {
         };
     };
 };
-cout << maxn << maxm;
+cout << maxn << " " << maxm;
 return 0;
 }
