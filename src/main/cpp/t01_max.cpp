@@ -27,6 +27,23 @@
 using namespace std;
 
 int t01_max() {
-    
-    return 0;
+int n,m,max,mxm,mxn;
+cin >> n >> m;
+int a[n][m];
+cin >> a[0][0];
+max = a[0][0];
+maxn = 0;
+maxm = 0;
+for (int i = 1; i < n; i++) {
+    for (int j = 1; j < m; j++) {
+        cin >> a[i][j];
+        if (max < a[i][j]) {
+            max = a[i][j];
+            maxn = i;
+            maxm = j;
+        };
+    };
+};
+cout << maxn << maxm;
+return 0;
 }

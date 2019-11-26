@@ -22,6 +22,13 @@
 using namespace std;
 
 int t09_spiral() {
-    
+    int n,m,sum;
+    cin >> n >> m;
+    sum = n*m;
+    int a[n][m];
+    for (int i =0; i < ; i++) {
+        for (int j =; j <; j++)
+    }
+
     return 0;
 }
