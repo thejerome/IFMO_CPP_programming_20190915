@@ -30,20 +30,24 @@ int t01_max() {
 int n,m,max,maxm,maxn;
 cin >> n >> m;
 int a[n][m];
-cin >> a[0][0];
-max = a[0][0];
 maxn = 0;
 maxm = 0;
-for (int i = 0; i < n; i++) {
-    for (int j = 0; j < m; j++) {
-        cin >> a[i][j];
-        if (max < a[i][j]) {
-            max = a[i][j];
-            maxn = i;
-            maxm = j;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> a[i][j];
         };
     };
-};
+    max = a[0][0];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            if (max < a[i][j]) {
+                max = a[i][j];
+                maxn = i;
+                maxm = j;
+            };
+        };
+    };
+
 cout << maxn << " " << maxm;
 return 0;
 }

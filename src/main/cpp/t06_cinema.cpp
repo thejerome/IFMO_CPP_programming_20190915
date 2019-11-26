@@ -43,13 +43,14 @@ int t06_cinema() {
     for (int i = 0; i < n; i++) {
         counter == 0;
         for (int j = 0; j < m; j++) {
-            if ((f) && (a[i][j] == 0)) {
-                counter++;
-            }
-            else {
-                if (counter >= k) {
-                    f = false;
-                    cout << i+1;
+            if (f) {
+                if (a[i][j] == 0) {
+                    counter++;
+                } else {
+                    if (counter >= k) {
+                        f = false;
+                        cout << i + 1;
+                    };
                 };
             };
         };
