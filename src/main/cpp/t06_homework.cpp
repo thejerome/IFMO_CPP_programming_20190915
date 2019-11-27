@@ -80,9 +80,57 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <vector>
+#include <cstring>
 
 using namespace std;
 
 int t06_homework() {
+    int count =0;
+    int n =0;
+    cin>>n;
+    vector <string> vec;
+    for (int i=0; i<n; i++){
+        string t;
+        cin>>t;
+        vec.push_back(t);
+    }
+
+    string word;
+    cin>>word;
+    while( word!=""){
+        bool error=true;
+        bool exists=false;
+        for (int i=0; i<n; i++) {
+            for(int j=0; j<word.length(); j++){
+                if(tolower(word[j])!=tolower(vec[i][j]))
+                    break;
+                if(j==word.length()-1){
+                    exists= true;
+                    if(word==vec[i])
+                        error=false;
+                }
+            }
+            if (!error)
+                break;
+        }
+
+        if(exists){
+            if(error)
+                count++;
+        }
+        else{
+            int k=0;
+            for(int j=0; j<word.length(); j++){
+                if (word[j]!=tolower(word[j]))
+                    k++;
+            }
+            if(k!=1)
+                count++;
+        }
+        word="";
+        cin>>word;
+    }
+    cout<<count;
 
 }
