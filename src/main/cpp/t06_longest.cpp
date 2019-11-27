@@ -47,6 +47,7 @@ int t06_longest() {
 		cout << s[i];
 	}
 	return 0;
+
 }
 			
 	
