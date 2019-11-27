@@ -27,10 +27,36 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
+#include <vector>
 
 using namespace std;
 
 int t05_syn() {
+    int n =0;
+    cin>>n;
+    vector <string> vec;
+    for (int i=0; i<n*2; i++){
+        string t;
+        cin>>t;
+        vec.push_back(t);
+    }
+
+    string word;
+    cin>>word;
+
+    for (int i=0; i<n*2; i++){
+        if(vec[i]==word){
+            if (i%2==0)
+                cout<<vec[i+1];
+            else
+                cout<<vec[i-1];
+            break;
+        }
+    }
+
+
+
+
+
 
 }
