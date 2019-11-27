@@ -24,5 +24,12 @@
 using namespace std;
 
 int t03_toggle() {
+    char symbol = 0;
+    cin >> symbol;
+    if (64 < symbol && symbol < 91) symbol += 32;
+    else if (96 < symbol && symbol < 123) symbol -= 32;
+    cout << symbol;
+
+    return 0;
 
 }
