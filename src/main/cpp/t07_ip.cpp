@@ -50,8 +50,8 @@ int t07_ip() {
 		m1 = stoi(b1);
 		m2 = stoi(b2);
 		m3 = stoi(b3);
-		m4 = stoi(b3);\
-	 if (m1 >= 0 && m1 >= 255 && m2 <= 255 && m2 >= 0 && m3 >= 0 && m3 <= 255 && m4 <= 255 && m4 >= 0) cout << "YES";
+		m4 = stoi(b4);
+	 if (m1 >= 0 && m1 <= 255 && m2 <= 255 && m2 >= 0 && m3 >= 0 && m3 <= 255 && m4 <= 255 && m4 >= 0) cout << "YES";
      else cout << "NO";	
 	}
 	else cout << "NO";
