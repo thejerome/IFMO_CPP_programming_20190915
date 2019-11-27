@@ -22,52 +22,44 @@
 using namespace std;
 
 int t09_spiral() {
-    int n, m, counter;
-    counter = 1;
+    int n, m,z,x,c;
     cin >> n >> m;
     int a[n][m];
+    z = 0;
+    x = 1;
+    c = 0;
 
-    for (int i = 1; i < n; i++) {
-        for (int j = 1; j < m; j++) {
-            a[i][j] = 0;
-        };
-    };
-    for (int i = 0; i < (n + m); i++) {
-        for (int j = (i + 1); j <= (m - i); j++) {
-            if (a[i + 1][j] == 0) {
-                a[i + 1][j] = counter;
-                counter++;
-            };
-        };
-        for (int x = (i + 2); x <= (n - i); x++) {
-            if (a[x][m - i] == 0) {
-                a[x][m - i] = counter;
-                counter++;
-            };
-        };
-        for (int j = (m - 1 - i); j >= (i + 1); j--) {
-            if (a[n - i][j] == 0) {
-                a[n - i][j] = counter;
-                counter++;
-            };
-        };
-        for (int x = (n - i - 1); x >= (i + 2); x--) {
-            if (a[x][i+1] == 0) {
-                a[x][i+1] = counter;
-                counter++;
-            };
-        };
-    };
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= m; j++) {
-            if (a[i][j] < 10) {
-                cout << "   " << a[i][j];
+    for (int i = 0; i <= n ; i++) {
+        for (int j = 0; j <= m; j++) {
+            if ((i == 0) || (j == 0)) {
+                a[i][j] = 0;
             }
             else {
-                if (a[i][j] < 100) {
-                    cout << "  " << a[i][j];
-                };
+                a[i][j] = -1;
             };
+        };
+    };
+
+    while (z < n * m) {
+        while (a[x][c+1] == -1) {
+            c++;
+            z++;
+            a[x][c] = z;
+        };
+        while (a[x+1][c] == -1) {
+            x++;
+            z++;
+            a[x][c] = z;
+        };
+        while (a[x][c-1] == -1) {
+            c--;
+            z++;
+            a[x][c] = z;
+        };
+        while (a[x-1][c] == -1) {
+            x--;
+            z++;
+            a[x][c] = z;
         };
     };
     return 0;
