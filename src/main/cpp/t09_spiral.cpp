@@ -62,5 +62,11 @@ int t09_spiral() {
             a[x][c] = z;
         };
     };
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cout.width(4);
+            cout << a[i][j];
+        };
+    };
     return 0;
 }
