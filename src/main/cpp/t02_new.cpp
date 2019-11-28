@@ -25,10 +25,16 @@
 
 #include "t02_new.h"
 #include <iostream>
-
+#include <set>
 
 using namespace std;
 
 int t02_new() {
-    
+    int N,n;
+    cin >> N;
+    set <int> qwe;
+    for (int i = 0; i < N; i++){
+            cin >> n;
+    cout << (qwe.insert(n).second ? "NO" : "YES") << endl;
+    }
 }

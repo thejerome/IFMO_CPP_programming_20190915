@@ -80,9 +80,62 @@
 
 #include "t06_homework.h"
 #include <iostream>
-
+#include <set>
 using namespace std;
 
 int t06_homework() {
-
+  int N, Errors = 0, q = 2;
+    set <string> qwe;
+    set <string> ewq;
+    cin >> N;
+    string n, m;
+    char sqwe;
+    for(int i = 0; i < N; i++){
+        cin >> n;
+        qwe.insert(n);
+        for(int j = 0; j < n.size(); j++){
+            sqwe = n[j];
+            if (sqwe > 64 && sqwe < 91){
+                n[j] = n[j] + 32;
+            }
+        }
+        ewq.insert(n);
+    }
+    getline(cin,m);
+    n = m;
+    N = 0;
+    if(m.find(' ') == m.rfind(' ')){
+            q = 1;
+    }
+    else {
+        while (m.find(' ')!= m.rfind(' ')){
+            m = m.substr(m.find(' ') + 1);
+            q++;
+        }
+    }
+    m = n;
+    for(int i = 0; i < q; i++){
+        n = m.substr(0, m.find(' '));
+        if (qwe.count(n) == 0 && ewq.count(n) != 0){
+            Errors++;
+            m = m.substr(m.find(' ') + 1, m.size() - m.find(' '));
+            N = 0;
+            continue;
+        }
+        if (qwe.count(n) == 0 && ewq.count(n) == 0){
+            for(int j = 0; j < n.size(); j++){
+                sqwe = n[j];
+                if (sqwe > 64 && sqwe < 91){
+                    N++;
+                    n[j] = n[j] + 32;
+                }
+            }
+            if(N != 1 || ewq.count(n) != 0){
+                Errors++;
+            }
+        }
+        N = 0;
+        m = m.substr(m.find(' ')+1, m.size() - m.find(' '));
+    }
+    cout << Errors-1;
 }
