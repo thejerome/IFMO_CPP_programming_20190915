@@ -28,10 +28,28 @@
 
 #include "t02_shoes.h"
 #include <iostream>
-
+#include <set>
 
 using namespace std;
 
 int t02_shoes() {
-    
+multiset<int> number;
+int N, size, count, last;
+count=0;
+cin >> size;
+cin >> N;
+for(int i=0; i<N; i++){
+    int n;
+    cin >> n;
+    number.insert(n);
 }
+for (int i: number){
+    if (i-size >= 3) {
+        count++;
+        size=i;
+    }
+}
+cout << count;
+    return 0;
+}
+
