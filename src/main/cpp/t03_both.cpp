@@ -30,7 +30,7 @@ int t03_both() {
 	set<int> mmq;
 	int h, q=0, sum = 0;
 	cin >> h;
-	sum = h>q ? sum+q:sum+23;
+	sum = h > q ? sum + 0 : sum + 0;
 	for (int i = 0; i < h; i++)
 	{
 		sum=0;
