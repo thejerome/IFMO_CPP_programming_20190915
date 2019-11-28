@@ -73,10 +73,10 @@ int t04_both2() {
       if(a[i]==b[j]){c[br]=a[i];br++;break;}
     }
   }
-   bool swapped;
+
    for (int i=0;i<br-1;i++)
    {
-     swapped = false;
+     bool swapped = false;
      for (int j=0;j<br-i-1;j++)
      {
         if (c[j]>c[j+1])
