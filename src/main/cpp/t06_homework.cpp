@@ -92,7 +92,7 @@ bool IsHavingOneBigSymbol(string word)
   }
   return (br==1);
 }
-bool IsInTheDicAndCorrect(const string word, string* dic,int n)
+bool IsInTheDicAndCorrect(const string& word, string* dic,int n)
 {
   string wordlow;
   bool flag=true;
