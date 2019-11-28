@@ -23,9 +23,26 @@
 
 #include "t03_both.h"
 #include <iostream>
-
+#include <set>
 using namespace std;
 
 int t03_both() {
-
+	set<int> mmq;
+	int h, q, sum = 0;
+	cin >> h;
+	for (int i = 0; i < h; i++)
+	{
+		int num;
+		cin >> num;
+		mmq.insert(num);
+	}
+	cin >> q;
+	for (int i = 0; i < q; i++)
+	{
+		int num;
+		cin >> num;
+		if (mmq.count(num) > 0)
+			sum++;
+	}
+	cout << sum;
 }
