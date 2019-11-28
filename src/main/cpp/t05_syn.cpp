@@ -27,10 +27,31 @@
 
 #include "t05_syn.h"
 #include <iostream>
+#include <map>
 
 
 using namespace std;
 
 int t05_syn() {
 
+    map <string, string> Dictionary;
+    int N = 0;
+    cin >> N;
+
+    for (int i = 0; i < N; i++) {
+        string Word1;
+        cin >> Word1;
+
+        string Word2;
+        cin >> Word2;
+
+        Dictionary.insert(pair <string, string> (Word1, Word2));
+        Dictionary.insert(pair <string, string> (Word2, Word1));
+
+    }
+
+    string syn;
+    cin >> syn;
+
+    cout << Dictionary [syn];
 }

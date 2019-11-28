@@ -25,10 +25,26 @@
 
 #include "t02_new.h"
 #include <iostream>
+#include <set>
 
 
 using namespace std;
 
 int t02_new() {
-    
+
+    int N = 0;
+    cin >> N;
+
+    set <int> New;
+
+    for (int i = 0; i < N; i++) {
+        int input = 0;
+        cin >> input;
+        if (New.count(input) == 0) {
+            cout << "NO" << endl;
+            New.insert(input);
+        }
+        else cout << "YES" << endl;
+    }
+
 }

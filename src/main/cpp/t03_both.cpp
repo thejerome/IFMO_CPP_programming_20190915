@@ -23,9 +23,32 @@
 
 #include "t03_both.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t03_both() {
 
+    set <int> First;
+
+    int N = 0;
+    cin >> N;
+
+    for (int i = 0; i < N; i++) {
+        int a = 0;
+        cin >> a;
+        First.insert(a);
+    }
+
+    int count = 0;
+    int M = 0;
+    cin >> M;
+
+    for (int i = 0; i < M; i++) {
+        int a = 0;
+        cin >> a;
+        if (First.count(a) == 1) count++;
+    }
+
+    cout << count;
 }
