@@ -37,7 +37,7 @@ using namespace std;
 
 int t04_students() {
 int n;
-double numb, m1, m2, m3;
+double numb=0, m1, m2, m3;
 vector <string> v;
 set <double, greater<double> > m;
 map <double,vector<string> > stmark;
