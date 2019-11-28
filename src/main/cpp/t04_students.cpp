@@ -29,10 +29,37 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <algorithm>
+#include <map>
+#include <vector>
+#include <set>
+#include <string>
 
 using namespace std;
-
+bool sx(double i,double j){
+    return i>j;
+}
 int t04_students() {
-    
+     int n;
+    cin>>n;
+    string a,b,c;
+    double h,x,y,z;
+    map<double,string > v;
+    vector<double> m;
+    set<double> k;
+    for(int i=0;i<n;i++){
+        cin>>a>>b>>x>>y>>z;
+        h=(x+y+z)/3;
+        c=a+" "+b;
+        while(k.find(h)!=k.end())
+            h-=0.0001;
+        k.insert(h);
+        m.push_back(h);
+        v[h]=c;
+    }
+    sort(m.begin(),m.end(),sx);
+    for(int i=0;i<n;i++){
+        cout<<v[m[i]]<<endl;
+    }
 }
 
