@@ -43,13 +43,13 @@ int t04_students() {
      int n;
     cin>>n;
     string a,b,c;
-    double h,x,y,z;
+    double x,y,z;
     map<double,string > v;
     vector<double> m;
     set<double> k;
     for(int i=0;i<n;i++){
         cin>>a>>b>>x>>y>>z;
-        h=(x+y+z)/3;
+        double h=(x+y+z)/3;
         c=a+" "+b;
         while(k.find(h)!=k.end())
             h-=0.0001;
