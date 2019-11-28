@@ -23,9 +23,23 @@
 
 #include "t03_both.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t03_both() {
-
+  int N = 0,n = 0,M = 0,m = 0;
+    cin >> N;
+    set <int> qwe;
+    for (int i = 0; i < N; i++){
+            cin >> n;
+            qwe.insert(n);
+    }
+    cin >> M;
+    for (int i = 0; i < M; i++){
+        cin >> n;
+        if (!qwe.insert(n).second)
+            ++m;
+    }
+    cout << m;
 }
