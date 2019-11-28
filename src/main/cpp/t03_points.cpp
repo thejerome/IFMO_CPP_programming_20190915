@@ -23,10 +23,20 @@
 
 #include "t03_points.h"
 #include <iostream>
-
+#include <map>
 
 using namespace std;
 
 int t03_points() {
-    
+int N,x,y;
+map<int, int> point;
+cin >> N;
+for(int i=0; i<N; i++){
+    cin >> x>>y;
+    point.insert(pair<int, int>(x,y));
+}
+for (auto it = point.begin(); it != point.end(); ++it){
+     cout << (*it).first << " " << (*it).second << endl;
+}
+    return 0;
 }
