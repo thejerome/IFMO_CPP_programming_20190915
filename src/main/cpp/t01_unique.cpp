@@ -19,9 +19,17 @@
 
 #include "t01_unique.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t01_unique() {
-    
+    int N,n;
+    cin >> N;
+    set <int> qwe;
+    for (int i = 0; i < N; i++){
+        cin >> n;
+    qwe.insert(n);
+    }
+cout << qwe.size();
 }
