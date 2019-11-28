@@ -30,6 +30,7 @@ int t04_both2() {
 	set<int> mmq,out;
 	int h, q, sum = 0;
 	cin >> h;
+	sum = h>q ? sum+q:sum+23;
 	for (int i = 0; i < h; i++)
 	{
 		int num;
