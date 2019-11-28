@@ -34,7 +34,7 @@ vector <int> a;
 set <double> dist;
 map <double,vector<int> > points;
 int n, x, y;
-double d;
+double d=0;
 cin >> n;
 
 for(int i = 0; i < n; i++) {
