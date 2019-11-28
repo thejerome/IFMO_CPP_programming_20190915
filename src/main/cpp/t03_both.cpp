@@ -30,8 +30,10 @@ int t03_both() {
 	set<int> mmq;
 	int h, q, sum = 0;
 	cin >> h;
+	sum = h;
 	for (int i = 0; i < h; i++)
 	{
+		sum=0;
 		int num;
 		cin >> num;
 		mmq.insert(num);
