@@ -23,9 +23,28 @@
 
 #include "t04_both2.h"
 #include <iostream>
-
+#include <set>
 using namespace std;
 
 int t04_both2() {
-
+	set<int> mmq,out;
+	int h, q=0, sum = 0;
+	cin >> h;
+	sum = h>q ? sum+q:sum+23;
+	for (int i = 0; i < h; i++)
+	{
+		int num;
+		cin >> num;
+		mmq.insert(num);
+	}
+	cin >> q;
+	for (int i = 0; i < q; i++)
+	{
+		int num;
+		cin >> num;
+		if (mmq.count(num) > 0)
+			out.insert(num);
+	}
+	for (int i :out)
+		cout << i << " ";
 }

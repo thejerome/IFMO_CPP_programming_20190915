@@ -25,10 +25,21 @@
 
 #include "t02_new.h"
 #include <iostream>
-
+#include <map>
 
 using namespace std;
 
 int t02_new() {
-    
+	int n;
+	map<char, int> chrg;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		int j;
+		cin >> j;
+		if (!chrg.insert(make_pair((char)j, j)).second)
+			cout << "YES\n";
+		else
+			cout << "NO\n";
+	}
 }

@@ -27,10 +27,22 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
+#include <map>
 
 using namespace std;
 
 int t05_syn() {
-
+	map<string,string> mmq;
+	int h;
+	cin >> h;
+	for (int i = 0; i < h; i++)
+	{
+		string fwd,swd;
+		cin >> fwd >> swd;
+		mmq.insert(make_pair(fwd,swd));
+		mmq.insert(make_pair(swd, fwd));
+	}
+	string lastword;
+	cin >> lastword;
+	cout << mmq.find(lastword)->second;
 }

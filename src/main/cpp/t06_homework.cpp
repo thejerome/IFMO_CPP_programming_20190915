@@ -80,9 +80,50 @@
 
 #include "t06_homework.h"
 #include <iostream>
-
+#include <map>
+#include <string>
 using namespace std;
 
 int t06_homework() {
+	int n, upperChar = 0, Err = 0, cIt = -1;
+	map<string, string> Ac,Acl;
 
+	string wordPass = "";
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		string num, numl = "";
+		cin >> num;
+		for (char f : num)
+			numl += tolower(f);
+		Ac.insert(make_pair(num, numl));
+		Acl.insert(make_pair(numl, num));
+	}
+	string buff;
+	getline(cin, buff);
+	//getline(cin, buff);
+	//buff += "0";
+	do
+	{
+		cIt++;
+		if ((int)buff[cIt] > 59 && (int)buff[cIt] < 91)
+			upperChar++;
+		if (buff[cIt] != ' ' && buff[cIt] != '\0')
+			wordPass += buff[cIt];
+		else
+		{
+			string lwordPass = "";
+			for (char f : wordPass)
+				lwordPass += tolower(f);
+			if (Ac.count(wordPass) == 1 || (Ac.count(wordPass) == 1 && upperChar == 1)) {}
+			else if (upperChar != 1 ||(Ac.count(wordPass) == 0 && upperChar != 1) || (Acl.count(lwordPass) == 1 && Acl.find(lwordPass)->second != wordPass))
+			{
+				Err++;
+			}
+			upperChar = 0;
+			wordPass = "";
+		}
+	} while (buff[cIt] != '\0');
+	cout << Err-1;
 }
+
