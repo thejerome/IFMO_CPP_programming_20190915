@@ -137,5 +137,5 @@ int t06_homework() {
         N = 0;
         m = m.substr(m.find(' ')+1, m.size() - m.find(' '));
     }
-    cout << Errors-1;
+    cout << Errors;
 }
