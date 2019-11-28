@@ -28,7 +28,7 @@ using namespace std;
 
 int t04_both2() {
 	set<int> mmq,out;
-	int h, q, sum = 0;
+	int h, q=0, sum = 0;
 	cin >> h;
 	sum = h>q ? sum+q:sum+23;
 	for (int i = 0; i < h; i++)
