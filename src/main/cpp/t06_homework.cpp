@@ -127,7 +127,7 @@ int t06_homework() {
                 sqwe = n[j];
                 if (sqwe > 64 && sqwe < 91){
                     N++;
-                    n[j] = n[j] = 32;
+                    n[j] = n[j] + 32;
                 }
             }
             if(N != 1 || ewq.count(n) != 0){
@@ -137,5 +137,5 @@ int t06_homework() {
         N = 0;
         m = m.substr(m.find(' ')+1, m.size() - m.find(' '));
     }
-    cout << Errors;
+    cout << Errors-1;
 }
