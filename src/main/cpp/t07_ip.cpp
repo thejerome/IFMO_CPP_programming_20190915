@@ -37,7 +37,7 @@ using namespace std;
 int t07_ip() {
 	string h;
 	getline(cin, h);
-	int m1 = 0, m2 = 0, m3 = 0, m4 = 0;
+	int m1 = 0, m2 = 0, m3 = 0;
 	int a1 = h.find('.');
 	int a2 = h.find('.', a1 + 1);
 	int a3 = h.find('.', a2 + 1);
@@ -50,8 +50,7 @@ int t07_ip() {
 		m1 = stoi(b1);
 		m2 = stoi(b2);
 		m3 = stoi(b3);
-		m4 = stoi(b4);
-	 if (m1 >= 0 && m1 <= 255 && m2 <= 255 && m2 >= 0 && m3 >= 0 && m3 <= 255 && m4 <= 255 && m4 >= 0) cout << "YES";
+	 if (m1 >= 0 && m1 <= 255 && m2 <= 255 && m2 >= 0 && m3 >= 0 && m3 <= 255 ) cout << "YES";
      else cout << "NO";	
 	}
 	else cout << "NO";
