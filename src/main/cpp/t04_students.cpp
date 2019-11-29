@@ -29,33 +29,31 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <vector>
 #include <algorithm>
 #include <string>
-#include <vector>
 using namespace std;
 struct student {
-	string a;
-	float b;
+	string f_name;
+	string l_name;
+	double rating;
 };
-
 bool cmp(student a, student b) {
-	return a.b > b.b;
+	return a.rating > b.rating;
 }
 int t04_students() {
 int n;
 	cin >> n;
-	vector <student> a(n);
-	string st1, st2;
-	float b, c, d;
-	for (int i = 0; i < n; i++){
-		cin >> st1 >> st2 >> b >> c >> d;
-		b = (b + c + d) / 3;
-		a[i].a = st1 + " " + st2;
-		a[i].b = b;
+	vector <student> v(n);
+	for (int i = 0; i < n; i++) {
+		student st;
+		int a, b, c; 
+		cin >> st.f_name >> st.l_name >> a >> b >> c;
+		st.rating = (double)(a + b + c) / 3;
+		v[i] = st;
 	}
-	stable_sort(a.begin(), a.end(), cmp);
-	for (int i = 0; i < n; i++)	{
-		cout << a[i].a << endl;
+	stable_sort(v.begin(), v.end(), cmp);
+	for (student now : v) {
+		cout << now.f_name << " " << now.l_name << endl;
 	}
-	return 0;
 }
