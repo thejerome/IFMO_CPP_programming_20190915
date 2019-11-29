@@ -31,7 +31,7 @@ struct junk{
     double rast;
 };
 double distance (double x, double y){
-    double rast = sqrt (x * x + y * y);
+    double rast = sqrt(x * x + y * y);
     return rast;
 }
 
