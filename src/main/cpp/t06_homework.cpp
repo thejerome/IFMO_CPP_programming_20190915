@@ -94,24 +94,23 @@ set<string> MSET;
  while (cin >> S2) {
   bool CSET;
   CSET =MSET.count(S2);
-  int CT = 1,CF = 0;
+  bool CT = false; int CF = 0;
 
     if (CSET)
-    {   CT = 0;}
-    else {char Conv;
-     for (int L = 0;L < S2.length();L++) {
-        Conv = S2[L];
+    { CT = true;}
+    else {
+        for (char L : S2){
     if (L > '64' && L < '92')
         {CF++;}}}
         if (CF == 1) {
-        for (int L = 0; L < S2.length();L++)
+        for(char & L : S2)
         {L = tolower(L);}
+        CT = true;
         for (int L = 0; L < S2.length();L++) {
         S2[L] = toupper(S2[L]);
         if (MSET.count(S2))
-        {CT = 1; break;}
-        S2[L] = tolower(S2[L]);}
-        CT = 0;}
-        if (CT == 1) {F++;}}
+        {CT = false; break;}
+        S2[L] = tolower(S2[L]);}}
+        if (!CT) {F++;}}
     cout << F;
 }
