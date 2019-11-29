@@ -34,6 +34,7 @@ using namespace std;
 int t02_shoes() {
     int c, n, count = 0;
     cin >> c >> n;
+    bool j = true;
     vector <int> a(n);
     for (int i = 0; i < n; i++) {
         cin >> a[i];
@@ -42,7 +43,6 @@ int t02_shoes() {
     int i = 0;
     for(i; i < n and j; i++) {
         if (a[i] >= c) {
-              bool j = true;
             c = a[i];
             j = false;
             count++;
