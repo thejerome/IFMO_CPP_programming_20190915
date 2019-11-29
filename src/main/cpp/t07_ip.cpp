@@ -51,7 +51,7 @@ int t07_ip() {
         b2 = stoi(l);
         l = s.substr(a2+1,a3-a2);
         b3 = stoi(l);
-        l = s.substr(a3+1,size(s)-a3);
+        l = s.substr(a3+1,s.length()-a3);
         b4 = stoi(l);
         if ((b1>=0)&&(b1<=255)&&(b2>=0)&&(b2<=255)&&(b3>=0)&&(b3<=255)&&(b4>=0)&&(b4<=255)){
             cout << "YES";
