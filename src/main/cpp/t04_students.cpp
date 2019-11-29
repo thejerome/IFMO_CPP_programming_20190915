@@ -29,10 +29,40 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <algorithm>
+#include <vector>
+#include <cmath>
 
 using namespace std;
 
+struct man{
+    string first_name;
+    string last_name;
+    int mas[3];
+};
+
 int t04_students() {
-    
+    int n=0;
+    cin>>n;
+    vector <man> my_vec;
+    for (int i=0; i<n; i++){
+        man t;
+        cin>>t.first_name;
+        cin>>t.last_name;
+        cin>>t.mas[0];
+        cin>>t.mas[1];
+        cin>>t.mas[2];
+        my_vec.push_back(t);
+    }
+
+    sort(my_vec.begin(),my_vec.end(), [](man a, man b)
+    {
+        return (a.mas[0]+a.mas[1]+a.mas[2])/3.0 > (b.mas[0]+b.mas[1]+b.mas[2])/3.0;
+    });
+
+    for (int i=0; i<n; i++){
+        cout<<my_vec[i].first_name<<" "<<my_vec[i].last_name<<" ";
+    }
+
 }
 
