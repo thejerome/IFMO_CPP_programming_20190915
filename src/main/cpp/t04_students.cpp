@@ -29,10 +29,35 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
 
 using namespace std;
-
-int t04_students() {
-    
+struct garbage {
+    string name, surname;
+    double k;
+};
+bool mark (garbage one, garbage two){
+    return (one.k > two.k);
 }
 
+int t04_students() {
+    int N;
+    cin >> N;
+    vector <garbage> qwe(N);
+    for (int i = 0; i < N; i++){
+        string n1, n2;
+        double q, w, e;
+        cin >> n1 >> n2 >> q >> w >> e;
+        garbage ballast;
+        ballast.name = n1;
+        ballast.surname = n2;
+        ballast.k = (q + w + e) / 3;
+        qwe[i] = ballast;
+    }
+    sort(qwe.begin(), qwe.end(), mark);
+    for (auto subject : qwe){
+        cout << subject.name << subject.surname << endl;
+    }
+}
