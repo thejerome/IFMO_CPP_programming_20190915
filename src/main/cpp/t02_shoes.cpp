@@ -41,8 +41,8 @@ int t02_shoes() {
     sort(a.begin(), a.end());
     int i = 0;
     for(i; i < n and j; i++) {
-         bool j = true;
         if (a[i] >= c) {
+              bool j = true;
             c = a[i];
             j = false;
             count++;
