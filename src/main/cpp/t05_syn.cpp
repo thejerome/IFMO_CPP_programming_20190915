@@ -27,10 +27,26 @@
 
 #include "t05_syn.h"
 #include <iostream>
+#include <map>
 
 
 using namespace std;
 
 int t05_syn() {
-
+int D;
+ string FS,CS;
+ cin >> D;
+    map <string, string> C;
+    for(int L = 0; L < D; L++) {
+        cin >> FS;
+		cin >> CS;
+        C.insert(pair<string,string>(FS,CS));
+        }
+    cin >> CS;
+    for(auto L : C)
+    {if(L.second == CS )
+        {cout << L.first;break;}
+        else if (L.first == CS)
+        {cout << L.second;break;}
+    }
 }
