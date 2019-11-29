@@ -31,6 +31,7 @@
 #include <iostream>
 #include <set>
 #include <algorithm>
+#include <vector>
 
 using namespace std;
 
@@ -63,8 +64,15 @@ int t04_students() {
 
     }
 
+    vector <double> b;
 
-    for (auto i = rbegin(average); i != rend(average); i++) {
+    for (auto i : average) {
+    b.push_back(i);
+    }
+
+    reverse(b.begin(), b.end());
+
+    for (auto i = begin(b); i != end(b); i++) {
         for (int j = 0; j < N; j++) {
             if (a[j].ave == *i) {
 
