@@ -56,4 +56,5 @@ int n;
 	for (student now : v) {
 		cout << now.f_name << " " << now.l_name << endl;
 	}
+	return 0;
 }
