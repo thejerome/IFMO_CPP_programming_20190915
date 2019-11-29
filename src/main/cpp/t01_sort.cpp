@@ -23,7 +23,6 @@
 #include <algorithm>
 using namespace std;
 int t01_sort() {
-int main() {
     int n;
     cin >> n;
     vector <int> a(n);
