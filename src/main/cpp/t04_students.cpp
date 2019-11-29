@@ -30,37 +30,31 @@
 #include "t04_students.h"
 #include <iostream>
 #include <vector>
-#include <algorithm>
 #include <string>
+#include <algorithm>
 using namespace std;
-struct student {
-    string surname;
+struct student{
     string name;
-    int rating;
+    string surname;
+    double mark;
 };
 
-bool cmp(student a, student b) {
-    return a.rating > b.rating;
+bool cmp(student a, student b){
+    return (a.mark > b.mark);
 }
 int t04_students() {
- int n;
+int n;
     cin >> n;
-    vector <student> students(n);
-    for (int i = 0; i < n; i++) {
-        int s_rating, s_mark1, s_mark2, s_mark3;
-        string s_surname, s_name;
-        cin >> s_surname >> s_name >> s_mark1 >> s_mark2 >> s_mark3;
-                
-        student student_temp;
-        student_temp.surname = s_surname;
-        student_temp.name = s_name;
-        student_temp.rating = s_mark1 + s_mark2 + s_mark3;
-        
-        students[i] = student_temp;
+    vector <student> s;
+    for (int i = 0; i < n; i++){
+        student temp;
+        int f_mark, s_mark, t_mark;
+        cin >> temp.name >> temp.surname >> f_mark >> s_mark >> t_mark;
+        temp.mark = (f_mark + s_mark +t_mark)*3.0;
+        s.push_back(temp);
     }
-    stable_sort(students.begin(), students.end(), cmp);
-    for (auto now : students) {
-        cout << now.surname << " " << now.name << endl;
+    stable_sort(s.begin(), s.end(), cmp);
+    for (auto c : s){
+        cout << c.name << " " << c.surname << endl;
     }
-    return 0;
-}   
+}
