@@ -83,7 +83,6 @@ int t04_students() {
 		m.insert(make_pair((a1 + a2 + a3) / 3, name));
 	}
 	int h = 0;
-	double a1 = 0, a2 = 0;
 	for (multimap<double, string>::iterator it = m.end(); it != m.begin();)
 	{
 		double a1 = 0, a2 = 0;
