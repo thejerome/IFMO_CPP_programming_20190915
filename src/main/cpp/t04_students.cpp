@@ -86,18 +86,17 @@ int t04_students() {
 	double a1 = 0, a2 = 0;
 	for (multimap<double, string>::iterator it = m.end(); it != m.begin();)
 	{
-		a1 = 0;
-		a2 = 0;
+		double a1 = 0, a2 = 0;
 		--it;
 		if (h <= n - 2)
 		{
 			a1 = (--it)->first;
-			it++;
+			++it;
 		}
 		if (h != 0)
 		{
 			a2 = ((++it)->first);
-			it--;
+			--it;
 		}
 		if ((h == 0 && (it->first == a1)) ||
 			(h <= n - 2 && h != 0 && (it->first == a2)) ||
