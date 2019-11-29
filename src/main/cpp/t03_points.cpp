@@ -23,10 +23,48 @@
 
 #include "t03_points.h"
 #include <iostream>
-
-
+#include <map>
+#include <cmath>
+#include <string>
+#include <algorithm>
 using namespace std;
-
+bool cmp12(int a1, int a2)
+{
+	return a1 < a2;
+}
 int t03_points() {
-    
+	multimap<double, string> mm;
+	int n, ba[12001];
+	cin >> n;
+	sort(ba, ba + n);
+	for (int i = 0; i < n; i++)
+	{
+		int x, y;
+		cin >> x >> y;
+		char jh[101];
+		sprintf(jh, "%d %d", x, y);
+
+		mm.insert(make_pair(sqrt(x * x + y * y), jh));
+	}
+	for (auto i : mm)
+	{
+		string numb = "";
+		int h = -1;
+		do
+		{
+			h++;
+			if (i.second[h] != ' ' && i.second[h] != '\0')
+			{
+				numb += i.second[h];
+			}
+			else
+			{
+				if (i.second[h] == '\0')
+					cout << " ";
+				cout << stoi(numb);
+				numb = "";
+			}
+		} while (i.second[h] != '\0');
+		cout << '\n';
+	}
 }

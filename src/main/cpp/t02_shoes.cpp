@@ -28,10 +28,31 @@
 
 #include "t02_shoes.h"
 #include <iostream>
-
+#include <algorithm>
 
 using namespace std;
-
+bool cmp2(int a1, int a2)
+{
+	return a1 < a2;
+}
 int t02_shoes() {
-    
+	int n, a[100001],s,max=0;
+	cin >> s>> n;
+	for (int i = 0; i < n; i++)
+	{
+		int h;
+		cin >> h;
+		a[i] = h;
+	}
+	sort(a, a + n, cmp2);
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] >= s)
+		{
+			max++;
+			s =a[i]+ 3;
+		}
+
+	}
+	cout << max;
 }

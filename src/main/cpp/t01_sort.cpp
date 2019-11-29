@@ -19,10 +19,25 @@
 
 #include "t01_sort.h"
 #include <iostream>
-
+#include <algorithm>
 
 using namespace std;
-
+bool cmp(int a1, int a2)
+{
+	return a1 < a2;
+}
 int t01_sort() {
-    
+	int n,a[100001];
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		int h;
+		cin >> h;
+		a[i] = h;
+	}
+	sort(a, a+n ,cmp);
+		for (int i = 0; i < n; i++)
+		{
+			cout << a[i] << " ";
+		}
 }
