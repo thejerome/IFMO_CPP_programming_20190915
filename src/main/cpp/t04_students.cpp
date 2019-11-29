@@ -29,10 +29,30 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <algorithm>
+#include <vector>
+#include <set>
 
 using namespace std;
 
+bool t04student_cmp(pair <int,pair <int,string> >  x,pair <int,pair <int,string> >  y){
+    return (x.first == y.first ? x.second < y.second : x.first > y.first);
+}
+
 int t04_students() {
-    
+
+    int n;
+    cin>>n;
+    vector <pair <int,pair <int,string> > > ve;
+    for(int i = 0;i < n;i++){
+        string a,b;
+        int x,y,z;
+        cin>>a>>b>>x>>y>>z;
+        ve.push_back(make_pair(x + y + z,make_pair(i,a + " " + b)));
+    }
+    sort(ve.begin(),ve.end(),t04student_cmp);
+    for(int i = 0;i < ve.size();++i){
+        cout<<ve[i].second.second<<'\n';
+    }
 }
 

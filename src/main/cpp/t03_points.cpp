@@ -23,10 +23,23 @@
 
 #include "t03_points.h"
 #include <iostream>
-
+#include <algorithm>
+#include <cmath>
 
 using namespace std;
-
+int n;
+int x[100],y[100];
+bool dis(int i,int j){
+    return sqrt(pow(x[i],2)+pow(y[i],2)) < sqrt(pow(x[j],2)+pow(y[j],2));
+}
 int t03_points() {
-    
+    int i,myint[100];
+    cin>>n;
+    for(i=0;i<n;i++){
+        cin>>x[i]>>y[i];
+        myint[i]=i;
+    }
+    sort(myint,myint+n,dis);
+    for(i=0;i<n;i++)
+        cout<<x[myint[i]]<<" "<<y[myint[i]]<<endl;
 }
