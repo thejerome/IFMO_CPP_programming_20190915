@@ -23,7 +23,7 @@
 
 #include "t03_points.h"
 #include <iostream>
-
+#include <cmath>
 
 using namespace std;
 struct junk{
