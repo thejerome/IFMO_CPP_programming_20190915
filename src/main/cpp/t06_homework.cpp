@@ -82,15 +82,23 @@
 #include <iostream>
 #include <set>
 using namespace std;
+
+int t06_homework() {
+int D,F = 0;
+cin >> D;
+string S1,S2;
 set<string> MSET;
-int CMSET(string S2)
-{
-   bool CT=false,CSET; int CF=0,F=0;
-    CSET = MSET.count(S2);
-    if(CSET)
-    {CT=true;}
-    else{
-    char Conv;
+    for (int L = 0; L < D; L++) {
+    cin >> S1;
+    MSET.insert(S1);}
+ while (cin >> S2) {
+  bool CSET;
+  CSET =MSET.count(S2);
+  int CT = 1,CF = 0;
+
+    if (CSET)
+    {   CT = 0;}
+    else {char Conv;
      for (int L = 0;L < S2.length();L++) {
         Conv = S2[L];
     if (L > '64' && L < '92')
@@ -101,23 +109,9 @@ int CMSET(string S2)
         for (int L = 0; L < S2.length();L++) {
         S2[L] = toupper(S2[L]);
         if (MSET.count(S2))
-        {CT = false; break;}
+        {CT = 1; break;}
         S2[L] = tolower(S2[L]);}
-        CT = true;}
-        if (!CT) {F++;}
-        return F;
-}
-int t06_homework() {
-int D,F = 0;
-bool CT = false;
-cin >> D;
-string S1,S2;
-    for (int L = 0; L < D; L++) {
-    cin >> S1;
-    MSET.insert(S1);}
- while (cin >> S2) {
-
-    if (CMSET)
-    {cout << F;}
-}
+        CT = 0;}
+        if (CT == 1) {F++;}}
+    cout << F;
 }
