@@ -29,31 +29,33 @@
 
 #include "t04_students.h"
 #include <iostream>
-#include <string>
 #include <algorithm>
+#include <string>
 #include <vector>
-#include <utility>
 using namespace std;
-struct student{
-    string name;
-    int sum;
+struct student {
+	string a;
+	float b;
 };
-bool comp(student a,student b){
-    return a.sum > b.sum;
+
+bool cmp(student a, student b) {
+	return a.b > b.b;
 }
 int t04_students() {
 int n;
-    cin >> n;
-    vector <student> bas(n);
-    for(int i = 0; i < n; i++){
-        student temp; string s, t; int a, b, c;
-        cin >> s >> t >> a >> b >> c;
-        temp.name = s + ' ' + t;
-        temp.sum = a + b + c;
-        bas[i] = temp;
-    }
-    stable_sort(bas.begin(),bas.end(),comp);
-    for(auto i:bas)
-        cout << i.name << '\n';
-    return 0;
+	cin >> n;
+	vector <student> a(n);
+	string st1, st2;
+	float b, c, d;
+	for (int i = 0; i < n; i++){
+		cin >> st1 >> st2 >> b >> c >> d;
+		b = (b + c + d) / 3;
+		a[i].a = st1 + " " + st2;
+		a[i].b = b;
+	}
+	stable_sort(a.begin(), a.end(), cmp);
+	for (int i = 0; i < n; i++)	{
+		cout << a[i].a << endl;
+	}
+	return 0;
 }
