@@ -58,6 +58,6 @@ int t04_students() {
     }
     sort(qwe.begin(), qwe.end(), mark);
     for (auto subject : qwe){
-        cout << subject.name << subject.surname << endl;
+        cout << subject.name << " " << subject.surname << endl;
     }
 }
