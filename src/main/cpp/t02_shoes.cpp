@@ -28,10 +28,28 @@
 
 #include "t02_shoes.h"
 #include <iostream>
-
+#include <set>
 
 using namespace std;
 
 int t02_shoes() {
-    
+    set <int> qwe;
+    int max_par = 0, Razmer_Obuvi = 0, N, R = 101;
+    cin >> Razmer_Obuvi >> N;
+    for (int i = 0; i < N; i++) {
+    int Q = 0;
+    cin >> Q;
+    qwe.insert(Q);
+    }
+    for (auto i : qwe) {
+            if (R == 101 && i >= Razmer_Obuvi){
+            R = i;
+            max_par++;
+        }
+        if ((R + 3) <= i ) {
+            max_par++;
+            R = i;
+        }
+    }
+    cout << max_par;
 }

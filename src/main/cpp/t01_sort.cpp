@@ -19,10 +19,20 @@
 
 #include "t01_sort.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
 int t01_sort() {
-    
+    int N;
+    cin >> N;
+    vector <int> qwe(N);
+    for(int i = 0; i < N; i++){
+        cin >> qwe[i];
+    }
+    sort(qwe.begin(), qwe.end());
+    for (auto Result : qwe){
+        cout << Result << " ";
+    }
 }
