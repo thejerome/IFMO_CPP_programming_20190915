@@ -34,7 +34,6 @@
 #include <vector>
 #include <utility>
 using namespace std;
-using namespace std;
 struct student{
     string name;
     int sum;
