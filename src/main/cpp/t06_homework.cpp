@@ -80,9 +80,44 @@
 
 #include "t06_homework.h"
 #include <iostream>
-
+#include <set>
 using namespace std;
-
+set<string> MSET;
+int CMSET(string S2)
+{
+   bool CT=false,CSET; int CF=0,F=0;
+    CSET = MSET.count(S2);
+    if(CSET)
+    {CT=true;}
+    else{
+    char Conv;
+     for (int L = 0;L < S2.length();L++) {
+        Conv = S2[L];
+    if (L > '64' && L < '92')
+        {CF++;}}}
+        if (CF == 1) {
+        for (int L = 0; L < S2.length();L++)
+        {L = tolower(L);}
+        for (int L = 0; L < S2.length();L++) {
+        S2[L] = toupper(S2[L]);
+        if (MSET.count(S2))
+        {CT = false; break;}
+        S2[L] = tolower(S2[L]);}
+        CT = true;}
+        if (!CT) {F++;}
+        return F;
+}
 int t06_homework() {
+int D,F = 0;
+bool CT = false;
+cin >> D;
+string S1,S2;
+    for (int L = 0; L < D; L++) {
+    cin >> S1;
+    MSET.insert(S1);}
+ while (cin >> S2) {
 
+    if (CMSET)
+    {cout << F;}
+}
 }
