@@ -80,9 +80,51 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t06_homework() {
-
+    set <string> dict, phrase;
+    string word, homework;
+    int errors=0;
+    int N;
+    cin >> N;
+    for (int i = 0; i < N; i++) {
+        cin >> word;
+        dict.insert(word);
+    }
+    word = "";
+    getline(cin, homework);
+    cin >> homework;
+    for (int i = 0; i < homework.size(); i++){
+        if (i != ' '){
+            word += homework[i];
+        }
+        else {
+            phrase.insert(word);
+            word = "";
+        }
+    }
+    for (const auto& i: phrase) cout << i << " ";
+    for (const auto& i: phrase){
+        int count=0;
+        for (char j : i) {
+            if ((int(j) > 64)&&(int(j) < 91)) count++;
+        }
+        if ((count>1)||(count==0)) {
+            errors++;
+            phrase.erase(i);
+        }
+    }
+    int n = dict.size();
+    for (const auto& i: phrase) {
+        dict.insert(i);
+        if (dict.size() != n){
+            errors++;
+            dict.erase(i);
+        }
+    }
+    cout << errors;
+    return 0;
 }
