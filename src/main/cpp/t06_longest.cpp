@@ -34,8 +34,8 @@ int t06_longest() {
         }
         a = b+1;
     }
-    if (size(s)-a>m){
-        cout << s.substr(a,size(s)-a);
+    if (s.length()-a>m){
+        cout << s.substr(a,s.length()-a);
     }else{
         cout << l;
     }
