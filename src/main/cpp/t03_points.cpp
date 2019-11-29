@@ -45,7 +45,7 @@ int t03_points() {
         a[i].rast = distance(a[i].TTR[0], a[i].TTR[1]);
     }
     for(int i = 0; i < N; i++){
-        for (int j = 0; j < N; j++){
+        for (int j = i; j < N; j++){
             if (a[i].rast > a[j].rast){
                 a[N] = a[i];
                 a[i] = a[j];
