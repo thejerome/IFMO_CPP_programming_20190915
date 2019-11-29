@@ -51,6 +51,6 @@ void is_it_new(int x, const set<int>& s){
             check = false;
         }
     }
-    if (check) cout << "YES" << "\n";
-    else cout << "NO" << "\n";
+    if (check) cout << "NO" << "\n";
+    else cout << "YES" << "\n";
 }
