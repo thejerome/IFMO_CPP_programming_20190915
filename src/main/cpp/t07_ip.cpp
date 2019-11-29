@@ -34,5 +34,29 @@
 using namespace std;
 
 int t07_ip() {
-
+    string s;
+    getline(cin,s);
+    int a1 = s.find('.'),
+        a2 = s.find('.',a1+1), 
+        a3 = s.find('.',a2+1),
+        a4 = s.find('.',a3+1);
+    if((a1 == -1)||(a2 == -1)||(a3 == -1)||(a4 != -1)){
+        cout << "NO";
+    }else{
+        string l;
+        int b1,b2,b3,b4;
+        l = s.substr(0,a1);
+        b1 = stoi(l);
+        l = s.substr(a1+1,a2-a1);
+        b2 = stoi(l);
+        l = s.substr(a2+1,a3-a2);
+        b3 = stoi(l);
+        l = s.substr(a3+1,size(s)-a3);
+        b4 = stoi(l);
+        if ((b1>=0)&&(b1<=255)&&(b2>=0)&&(b2<=255)&&(b3>=0)&&(b3<=255)&&(b4>=0)&&(b4<=255)){
+            cout << "YES";
+        }else{
+            cout << "NO";
+        }
+    }
 }
