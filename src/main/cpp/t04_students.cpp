@@ -29,10 +29,58 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <set>
+#include <algorithm>
+#include <vector>
 
 using namespace std;
 
-int t04_students() {
-    
-}
+struct students{
+    string name [2];
+    double ave;
+};
 
+
+int t04_students() {
+
+
+    const int MarkCount = 3;
+    int N = 0;
+    cin >> N;
+
+    students a[N];
+    multiset<double> average;
+
+    for (int i = 0; i < N; i++) {
+        double mark[MarkCount];
+        a[i].ave = 0;
+
+        cin >> a[i].name[0];
+        cin >> a[i].name[1];
+        cin >> mark[0] >> mark[1] >> mark[2];
+
+        a[i].ave = (mark[0] + mark[1] + mark[2]) / MarkCount;
+        average.insert(a[i].ave);
+
+    }
+
+    vector <double> b;
+
+    for (auto i : average) {
+    b.push_back(i);
+    }
+
+    reverse(b.begin(), b.end());
+
+    for (auto i = begin(b); i != end(b); i++) {
+        for (int j = 0; j < N; j++) {
+            if (a[j].ave == *i) {
+
+                cout << a[j].name[0] << ' ';
+                cout << a[j].name[1] << ' ';
+                a[j].ave = 6;
+                break;
+            }
+        }
+    }
+}

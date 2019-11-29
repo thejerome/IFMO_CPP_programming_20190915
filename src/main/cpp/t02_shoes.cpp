@@ -28,10 +28,40 @@
 
 #include "t02_shoes.h"
 #include <iostream>
+#include <set>
 
 
 using namespace std;
 
 int t02_shoes() {
-    
+
+    set <int> shoes;
+    int count = 0;
+
+    int size = 0;
+    cin >> size;
+
+    int N = 0;
+    cin >> N;
+
+    for (int i = 0; i < N; i++) {
+    int temp = 0;
+    cin >> temp;
+
+    shoes.insert(temp);
+    }
+    int taken = 101;
+    for (int i : shoes) {
+
+        if (taken == 101 && i >= size){
+            taken = i;
+            count++;
+        }
+
+        if ((taken + 3) <= i ) {
+            count++;
+            taken = i;
+        }
+    }
+    cout << count;
 }
