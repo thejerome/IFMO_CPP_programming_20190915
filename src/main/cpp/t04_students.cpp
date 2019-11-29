@@ -30,36 +30,29 @@
 #include "t04_students.h"
 #include <iostream>
 #include <algorithm>
-#include <map>
 #include <vector>
 #include <set>
-#include <string>
 
 using namespace std;
-bool sx(double i,double j){
-    return i>j;
+
+bool t04student_cmp(pair <int,pair <int,string> >  x,pair <int,pair <int,string> >  y){
+    return (x.first == y.first ? x.second < y.second : x.first > y.first);
 }
+
 int t04_students() {
-     int n;
+
+    int n;
     cin>>n;
-    string a,b,c;
-    double x,y,z;
-    map<double,string > v;
-    vector<double> m;
-    set<double> k;
-    for(int i=0;i<n;i++){
+    vector <pair <int,pair <int,string> > > ve;
+    for(int i = 0;i < n;i++){
+        string a,b;
+        int x,y,z;
         cin>>a>>b>>x>>y>>z;
-        double h=(x+y+z)/3;
-        c=a+" "+b;
-        while(k.find(h)!=k.end())
-            h-=0.0001;
-        k.insert(h);
-        m.push_back(h);
-        v[h]=c;
+        ve.push_back(make_pair(x + y + z,make_pair(i,a + " " + b)));
     }
-    sort(m.begin(),m.end(),sx);
-    for(int i=0;i<n;i++){
-        cout<<v[m[i]]<<endl;
+    sort(ve.begin(),ve.end(),t04student_cmp);
+    for(int i = 0;i < ve.size();++i){
+        cout<<ve[i].second.second<<'\n';
     }
 }
 
