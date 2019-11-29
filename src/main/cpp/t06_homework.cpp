@@ -89,8 +89,11 @@ cin >> D;
 string S1,S2;
 set<string> MSET;
     for (int L = 0; L < D; L++) {
+    
     cin >> S1;
-    MSET.insert(S1);}
+    MSET.insert(S1);
+    S1 = "";
+    }
  while (cin >> S2) {
   bool CSET;
   CSET =MSET.count(S2);
@@ -100,7 +103,7 @@ set<string> MSET;
     { CT = true;}
     else {
         for (char L : S2){
-    if (L > '64' && L < '92')
+    if (L > 64 && L < 91)
         {CF++;}}}
         if (CF == 1) {
         for(char & L : S2)
