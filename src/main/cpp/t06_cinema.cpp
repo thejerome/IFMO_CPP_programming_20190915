@@ -51,12 +51,12 @@ int t06_cinema() {
                       f = false;
                       cout << i + 1;
                   };
-              };
+              }
               else {c = 0;}  
            };
        };
     };
-    if (f = 1) {
+    if (f) {
         cout << "0";
     };
     return 0;
