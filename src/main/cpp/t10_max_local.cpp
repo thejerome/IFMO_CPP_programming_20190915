@@ -28,8 +28,8 @@ int a,b = -1,c = -1, f = 0;
 cin >> a;
 while(a != 0)
 {
-    if(c > a && f > b && b != -1)f++;
-    b = f; f = a;
+    if(c > a && c > b && b != -1)f++;
+    b = c; c = a;
     cin >> a;
 }
 cout << f;
