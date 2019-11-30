@@ -29,10 +29,32 @@
 
 #include "t04_students.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
+#include <map>
 using namespace std;
 
-int t04_students() {
-    
-}
+struct smth {
+    string name, surname;
+    double p;
+};
 
+int t04_students() {
+    int n;
+    cin >> n;
+    vector <smth> v(n);
+    for (int i = 0; i < n; i++) {
+        string str1, str2;
+        double a, b, c;
+        cin >> str1 >> str2 >> a >> b >> c;
+        smth temp;
+        temp.name = str1;
+        temp.surname = str2;
+        temp.p = (a + b + c) / 3;
+        v[i] = temp;
+    }
+    sort(v.begin(), v.end(), [](smth x, smth y) { return x.p > y.p; });
+    for (auto now : v) {
+        cout << now.name << " " << now.surname << endl;
+    }
+}
