@@ -80,9 +80,36 @@
 
 #include "t06_homework.h"
 #include <iostream>
-
+#include <set>
 using namespace std;
 
 int t06_homework() {
-
+int q,n=0;
+cin>>q;
+string a1,a2;
+set<string>ws;
+for(int k=0;k<q;k++){
+cin>>a1;
+ws.insert(a1);
+a1="";
 }
+while (cin>>a2){
+bool bs;
+bs=ws.count(a2);
+bool r1=false;int r2=0;
+if (bs){r1=true;}
+else {for(char k:a2){if(k>64&&k<91){r2++;}}
+}
+if (r2==1){for(char&k:a2){k=tolower(k);
+}
+r1=true;
+for (int k=0;k<a2.length();k++){a2[k]=toupper(a2[k]);
+if (ws.count(a2)){r1=false;break;
+}
+a2[k]=tolower(a2[k]);
+}
+}
+if (!r1){n++;}
+}
+cout<<n;
+return 0;}
