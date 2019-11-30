@@ -24,5 +24,20 @@
 using namespace std;
 
 int t01_sort() {
-    
+int a;
+cin>>a;
+int f[a];
+for(int k=0;k<a;k++){
+cin>>f[k];}
+for(int k=0;k<a;k++){
+for(int j=0;j<a-k-1;++j){
+    if(f[j+1]<f[j]){
+        int n=f[j];
+            f[j]=f[j+1];
+            f[j+1]=n;}
+    }
+}
+for (int k=0;k<a;k++)
+        cout<<f[k]<<" ";
+return 0;
 }
