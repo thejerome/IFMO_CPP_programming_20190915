@@ -24,28 +24,20 @@
 using namespace std;
 
 int t01_sort() {
-     int *a;
-    int m;
-    cout<<"n = ";
-    cin>>m;
-    if (m<=0){
-        cerr<<"Invalid m"<<endl;
-        return 1;}
-    a=new int[m];
-    for(int i=0;i<m;i++){
-        cout<<"a["<<i<<"]=";
-        cin>>a[i];}
-    int x;
-    for (int i=0;i<m-1;i++) {
-        for (int k=0;k<m-i-1;k++) {
-            if (a[k]>a[k+1]) {
-                x=a[k];
-                a[k]=a[k+1];
-                a[k+1]=x;}
-        }
+int a;
+cin>>a;
+int f[a];
+for(int k=0;k<a;k++){
+cin>>f[k];}
+for(int k=0;k<a;k++){
+for(int j=0;j<a-k-1;++j){
+    if(f[j+1]<f[j]){
+        int n=f[j];
+            f[j]=f[j+1];
+            f[j+1]=n;}
     }
-    for (int i=0;i<m;i++){
-        cout<<a[i]<<" ";}
-    cout<<endl;
-    return 0; 
+}
+for (int k=0;k<a;k++)
+        cout<<f[k]<<" ";
+return 0;
 }
