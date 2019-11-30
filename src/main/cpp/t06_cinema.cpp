@@ -33,7 +33,7 @@ int t06_cinema() {
     cin >> n >> m;
     int a[n];
     int k;
-    int prev = -1;
+    int prev;
     int cur = -1;
 
     for (int i = 0; i < n; ++i){
