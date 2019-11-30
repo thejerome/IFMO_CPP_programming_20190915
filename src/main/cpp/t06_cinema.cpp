@@ -44,7 +44,7 @@ int t06_cinema() {
     for (int i = 0; i < n; i++) {
       c == 0;
       for (int j = 0; j < m; j++) {
-          if (f) {
+          if (f = 1) {
               if (a[i][j] == 0) {
                   c++;
                   if (c >= k) {
@@ -52,11 +52,11 @@ int t06_cinema() {
                       cout << i + 1;
                   };
               };
-              else c = 0;  
+              else {c = 0;}  
            };
        };
     };
-    if (f) {
+    if (f = 1) {
         cout << "0";
     };
     return 0;

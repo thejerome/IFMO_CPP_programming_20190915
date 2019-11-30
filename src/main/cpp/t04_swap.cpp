@@ -27,21 +27,21 @@ using namespace std;
 int t04_swap() {
      int n,m,a,b;
     cin>>n >> m;
-    int a[100][100];
+    int mas[100][100];
     	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++)
-			cin >> a[i][j];
+			cin >> mas[i][j];
 	};
 	cin>>a>>b;
 		for (int i = 0; i < n; i++) {
-		int s = a[i][a];
-		a[i][a] = a[i][b];
-		a[i][b] = s;
+		int s = mas[i][a];
+		mas[i][a] = mas[i][b];
+		mas[i][b] = s;
 	};
 
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
-			cout << a[i][j] << ' ';
+			cout << mas[i][j] << ' ';
 		};
 
 	};

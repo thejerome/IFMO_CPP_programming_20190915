@@ -24,7 +24,7 @@
 using namespace std;
 
 int t08_chess() {
-   {
+   
     int n,m,c;
     cin >> n >> m;
     int a[n][m];
