@@ -27,10 +27,24 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
+#include <map>
+#include <string>
 
 using namespace std;
 
 int t05_syn() {
-
+    map <string, string> s;
+    string a, b, c;
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        cin >> a >> b;
+        s.insert(make_pair(a, b));
+        s.insert(make_pair(b, a));
+    }
+    cin >> c;
+    auto it = s.find(c);
+    if ((*it).first == c) {
+        cout << (*it).second;
+    }
 }
