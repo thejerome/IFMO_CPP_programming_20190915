@@ -31,8 +31,29 @@
 #include <iostream>
 
 using namespace std;
-
+struct student {
+string name2;
+string name1;
+double arr;
+};
 int t04_students() {
-    
+    int n;
+cin>>n;
+student t[n];
+for (int i=0;i<n;i++) {
+int a1,a2,a3;
+cin>>t[i].name2>>t[i].name1;
+cin>>a1>>a2>>a3;
+t[i].arr=(a1+a2+a3)/3.0;}
+for (int i=1;i<n;i++) {
+for (int k=1;k<n;k++) {
+if (t[i-1].arr<t[i].arr){
+student x;
+x=t[i-1];
+t[i-1]=t[i];
+t[i]=x;}}}
+for (int i=0;i<n;i++) {
+cout<<t[i].name2<<" "<<t[i].name1<<"\n";}
+return 0;
 }
 
