@@ -29,7 +29,7 @@
 using namespace std;
 
 int t06_cinema() {
-    {
+    
 
     int n,m,k,c;
     bool f = 1;
