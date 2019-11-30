@@ -28,10 +28,32 @@
 
 #include "t02_shoes.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
+
+
 int t02_shoes() {
-    
+    int size;
+    cin >> size;
+    size -= 3;
+    vector<int> set;
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
+        set.push_back(x);
+    }
+    sort(set.begin(), set.end());
+    int k=0;
+    for (int i = 0; i < n; i++) {
+        if ((set[i] - size) > 2) {
+            size = set[i];
+            k++;
+        }
+    }
+    cout << k;
 }

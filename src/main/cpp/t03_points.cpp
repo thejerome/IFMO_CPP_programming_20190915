@@ -23,10 +23,26 @@
 
 #include "t03_points.h"
 #include <iostream>
+#include <vector>
+#include <cmath>
+#include <algorithm>
 
 
 using namespace std;
 
 int t03_points() {
-    
+    int n;
+    cin >> n;
+    vector <pair<int, int>> coord(n);
+    for (int i = 0; i < n; ++i) {
+        int x, y;
+        cin >> x >> y;
+        coord[i] = {x, y};
+    }
+    sort(coord.begin(), coord.end(), [](pair<int, int> &a, pair<int, int> &b) {
+        return (pow(a.first, 2) + pow(a.second, 2)) < (pow(b.first, 2) + pow(b.second, 2));
+    });
+    for (auto now : coord) {
+        cout << now.first << " " << now.second << endl;
+    }
 }
