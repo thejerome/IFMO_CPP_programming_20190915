@@ -39,7 +39,6 @@ int t04_both2() {
     set<int> s2;
     set<int> s3;
     cin >> n;
-    int k = 0;
     for (int i = 0; i < n; i++) {
         int x2;
         cin >> x2;
