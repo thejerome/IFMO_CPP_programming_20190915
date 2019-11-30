@@ -29,31 +29,29 @@
 
 #include "t04_students.h"
 #include <iostream>
-
+#include <algorithm>
+#include <vector>
 using namespace std;
-struct student {
-string name2;
-string name1;
-double arr;
+struct q{
+string n;
+string c;
+int a1;
+int a2;
+int a3;
 };
+int z(q b1,q b2){
+    return (b1.a1+b1.a2+b1.a3>b2.a1+b2.a2+b2.a3);
+}
 int t04_students() {
-    int n;
-cin>>n;
-student t[n];
-for (int i=0;i<n;i++) {
-int a1,a2,a3;
-cin>>t[i].name2>>t[i].name1;
-cin>>a1>>a2>>a3;
-t[i].arr=(a1+a2+a3)/3.0;}
-for (int i=1;i<n;i++) {
-for (int k=1;k<n;k++) {
-if (t[i-1].arr<t[i].arr){
-student x;
-x=t[i-1];
-t[i-1]=t[i];
-t[i]=x;}}}
-for (int i=0;i<n;i++) {
-cout<<t[i].name2<<" "<<t[i].name1<<"\n";}
+int v;
+cin>>v;
+vector<q> f(v);
+for(int k=0;k<v;k++)
+{cin>>f[k].c>>f[k].n;
+ cin>>f[k].a1>>f[k].a2>>f[k].a3;}
+sort(f.begin(),f.end(),z);
+for(int k=0;k<v;k++)
+{cout<<f[k].c<<" "<<f[k].n<<"\n";}
 return 0;
 }
 
