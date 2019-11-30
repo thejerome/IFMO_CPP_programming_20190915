@@ -44,7 +44,7 @@ int t06_cinema() {
     for (int i = 0; i < n; i++) {
       c == 0;
       for (int j = 0; j < m; j++) {
-          if (f = 1) {
+          if (f) {
               if (a[i][j] == 0) {
                   c++;
                   if (c >= k) {
