@@ -36,7 +36,7 @@ struct TPoint {
     friend istream& operator >>(istream& stream, const TPoint& Point);
 }; 
 ostream& operator <<(ostream& stream, TPoint& Point) {
-    return stream << Point.x << " " << Point.y << endl;    
+    return stream << Point.x << " " << Point.y << endl;  
 }; 
 istream& operator >>(istream& stream, TPoint& Point) {
     return stream >> Point.x >> Point.y;         
@@ -48,4 +48,5 @@ int t03_points() {
     for (auto& i: Points) cin >> i;
     sort(Points.begin(), Points.end());
     for (auto i: Points) cout << i;
+    return 0;
 }
