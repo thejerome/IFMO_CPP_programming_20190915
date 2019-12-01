@@ -45,7 +45,7 @@ for(int i=0; i<N; i++){
 }
 
 for (int i: number){
-    if ((count>0) and (i-size >= 3) or (count==0) and (i-size>=0) {
+    if ((count>0) and (i-size >= 3) or (count==0) and (i-size>=0)) {
         count++;
         size=i;
     }
