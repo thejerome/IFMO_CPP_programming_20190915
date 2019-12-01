@@ -34,14 +34,31 @@
 using namespace std;
 
 int t07_ip() {
-  int x1,x2,x3,x4;
-    bool res=(cin>>x1) && cin.get()=='.' &&
-            (cin>>x2) && cin.get()=='.' &&
-            (cin>>x3) && cin.get()=='.' &&
-            (cin>>x4) &&
-            x1>=0 && x1<256 &&
-            x2>=0 && x2<256 &&
-            x3>=0 && x3<256 &&
-            x4>=0 && x4<256;
-    cout<<(res?"YES":"NO");
+  #include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+    int R = 0;
+    string q, w;
+    getline(cin, q);
+    for (auto c: q + '.') {
+      if (isdigit(c) && w != "0") {
+          w += c;
+      }
+      else if (c == '.' && !w.empty()) {
+          if (stoi(w) > 255) {
+              cout << "NO";
+              return 0;
+          }
+          R++;
+          w.clear();
+      }
+      else {
+          cout << "NO";
+          return 0;
+      }
+  }
+  cout << (R == 4 ? "YES" : "NO");
 }
