@@ -28,10 +28,29 @@
 
 #include "t02_shoes.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
 int t02_shoes() {
-    
+    int foot,shoes,count = 0;
+    cin >> foot;
+    foot-=3;
+    vector<int> v;
+    int n;
+    cin >> n;
+    for (int i=0;i<n;i++){
+        int a;
+        cin >> a;
+        v.push_back(a);
+    }
+    sort(v.begin(),v.end());
+    for (auto it=v.begin();it!=v.end();++it){
+        if (*it>=foot+3) {
+            foot=*it;
+            count++;
+        }
+    }
+    cout << count;
 }

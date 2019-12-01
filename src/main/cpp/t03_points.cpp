@@ -23,10 +23,27 @@
 
 #include "t03_points.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
+bool kvadrat (pair<int, int> &a, pair<int, int> &b) {
+    return (a.first*a.first + a.second*a.second) < (b.first*b.first + b.second*b.second);
+}
+
 int t03_points() {
-    
+    int n;
+    cin >> n;
+    vector <pair<int, int>> coord(n);
+    for (int i = 0; i < n; ++i) {
+        int x, y;
+        cin >> x >> y;
+        coord[i] = {x, y};
+    }
+    sort(coord.begin(), coord.end(), kvadrat);
+    for (auto now : coord) {
+        cout << now.first << " " << now.second << endl;
+    }
+
 }
