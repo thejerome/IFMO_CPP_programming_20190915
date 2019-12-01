@@ -17,9 +17,19 @@
 
 using namespace std;
 
-// function fib
+long fib(long n, long a = 1){
+    if (n <= 2)
+    {
+        return 1;
+    }
+    return fib(--n, a) + fib(--n, a + a);
+    
+}
 
 int t07_fib()
 {
+    long n = 0;
+    cin >> n;
+    cout << fib(n) << endl;
     return 0;
 }
