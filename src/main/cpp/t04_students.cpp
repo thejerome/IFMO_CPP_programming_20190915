@@ -45,7 +45,7 @@ for(int i=0; i<N; i++){
     cin >> x>>y>>z1>>z2>>z3;
     xy.push_back(x);
     xy.push_back(y);
-    distance=(z1+z2+z3)/3-i%100;
+    distance=(z1+z2+z3)/3-i*0.01;
     point.insert(pair<float,int>(distance,i));
 }
 for (auto it = point.end(); it != point.begin();){
