@@ -32,6 +32,7 @@ using namespace std;
 int t01_char() {
    char N;
    cin >> N;
-   N >= 48 && N <= 56 ?cout << "yes" : cout << "no";
-   return 0;
+   int(N) < 58 && int(N) > 47 ? cout << "yes" : cout << "no";
 }
+
+
