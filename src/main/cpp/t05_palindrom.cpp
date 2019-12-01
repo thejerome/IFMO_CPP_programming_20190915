@@ -27,7 +27,7 @@ int t05_palindrom() {
     bool k=1;
     getline(cin,s);
     for (int i=0;i<s.length()/2;i++){
-        if (s[i]!=s[s.length()-i-1]){
+        if ((k)&&(s[i]!=s[s.length()-i-1])){
             cout << "no";
             k=0;
         }
