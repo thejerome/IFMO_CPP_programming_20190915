@@ -82,7 +82,6 @@
 #include <iostream>
 #include <set>
 #include <string>
-#include <cctype>
 
 using namespace std;
 
@@ -101,7 +100,7 @@ int t06_homework() {
     homework += ' ';
     N = 0;
     int s1 = homework.size();
-    for (int i = 2; i < s1; i++) {
+    for (int i = 0; i < s1; i++) {
         if (homework[i] != ' ')
             N++;
         else{
