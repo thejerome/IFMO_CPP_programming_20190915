@@ -29,10 +29,48 @@
 
 #include "t04_students.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 using namespace std;
 
+struct human {
+    string fname;
+    string lname;
+    int m;
+    int p;
+    int i;
+};
+
+bool cmp(human &lhs, human &rhs){
+    int a=(lhs.m + lhs.p + lhs.i);
+    int b=(rhs.m + rhs.p + rhs.i);
+    return a>b;
+}
+
 int t04_students() {
-    
+    int n=0;
+    cin >>n;
+    vector<human> v1;
+    for (int i=0; i<n; i++){
+        human a;
+        string name;
+        cin >>name;
+        a.fname = name;
+        cin >>name;
+        a.lname = name;
+        int p=0;
+        cin >>p;
+        a.m = p;
+        cin >>p;
+        a.p = p;
+        cin >>p;
+        a.i = p;
+        v1.push_back(a);
+    }
+    sort(v1.begin(), v1.end(), cmp);
+    for (auto i:v1){
+        cout <<i.fname <<" " <<i.lname <<endl;
+    }
+    return 0;
 }
 
