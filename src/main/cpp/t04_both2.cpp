@@ -29,19 +29,21 @@ using namespace std;
 int t04_both2() {
     set <int> n;
     set <int> m;
-    int N,M,a,b;
+    int N,M;
     cin>>N;
     for(int i=0 ; i<N ; i++){
+        int a;
         cin>>a;
         n.insert(a);
     }
     cin>>M;
     for(int i=0 ; i<M ; i++){
+        int b;
         cin>>b;
         if( n.count(b) >= 1 )
             m.insert(b);
     }
     for(int j : m)
-        cout<<j<<endl;
+        cout<<j<<" ";
     return 0;
 }
