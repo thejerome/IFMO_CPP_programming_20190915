@@ -86,7 +86,7 @@
 using namespace std;
 
 int t06_homework() {
-    int N,faults = 0,CAPS=0;
+    int N,faults = 0;
     string words_homework;
     set <string> dictionary;
     cin >> N;
@@ -97,6 +97,7 @@ int t06_homework() {
     }
     while (cin >> words_homework){
         if (dictionary.count(words_homework)==0){
+            int CAPS = 0;
             for (char i : words_homework) {
                 if (i >= 'A' && i <= 'Z')
                     CAPS++;
