@@ -33,6 +33,7 @@
 using namespace std;
 
 int t05_syn() {
+   int n,i;
    string str1, str2, str; 
     cin >> n;
     map <string, string> s;
