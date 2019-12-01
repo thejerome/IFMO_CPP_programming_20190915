@@ -30,5 +30,9 @@
 using namespace std;
 
 int t01_char() {
-
+   char N;
+   cin >> N;
+   int(N) < 58 && int(N) > 47 ? cout << "yes" : cout << "no";
 }
+
+

@@ -17,10 +17,17 @@
 
 #include "t06_longest.h"
 #include <iostream>
-
+#include <sstream>
 
 using namespace std;
 
 int t06_longest() {
-
+  string s;
+    getline(cin, s);
+    stringstream ss(s);
+    string max;
+    while (ss >> s)
+        if (s.size() > max.size())
+            max = s;
+    cout << max << endl;
 }

@@ -34,5 +34,25 @@
 using namespace std;
 
 int t07_ip() {
-
+    int R = 0;
+    string q, w;
+    getline(cin, q);
+    for (auto c: q + '.') {
+      if (isdigit(c) && w != "0") {
+          w += c;
+      }
+      else if (c == '.' && !w.empty()) {
+          if (stoi(w) > 255) {
+              cout << "NO";
+              return 0;
+          }
+          R++;
+          w.clear();
+      }
+      else {
+          cout << "NO";
+          return 0;
+      }
+  }
+  cout << (R == 4 ? "YES" : "NO");
 }
