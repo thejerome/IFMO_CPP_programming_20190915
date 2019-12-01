@@ -23,9 +23,36 @@
 
 #include "t04_both2.h"
 #include <iostream>
-
+#include <set>
 using namespace std;
 
 int t04_both2() {
-
+    int n=0, m=0;
+    int p=0;
+    cin >>n;
+    /*multi*/set<int> s1;
+    /*multi*/set<int> s2;
+    for (int i=0; i<n; i++){
+        cin >>p;
+        s1.insert(p);
+    }
+    cin >>m;
+    for (int i=0; i<m; i++) {
+        cin >> p;
+        s2.insert(p);
+    }
+    p = 0;
+    set<int> s3;
+    for (auto i:s1){
+        for (auto j:s2){
+            if (i==j){
+                s3.insert(i);
+                break;
+            }
+        }
+    }
+    for (auto i:s3){
+        cout <<i <<" ";
+    }
+    return 0;
 }
