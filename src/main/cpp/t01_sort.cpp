@@ -22,7 +22,28 @@
 
 
 using namespace std;
-
+void sortArray(int array[],int length) {
+    for (int i = 0; i < length; i++) {
+        for (int j = 0; j < length - 1 - i; j++) {
+            if (array[j] > array[j + 1]) {
+                int temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        }
+    }
+}
 int t01_sort() {
-    
+    int length,n;
+    cin>>length;
+    int array[length];
+    for(int i=0 ; i<length ; i++){
+        cin>>n;
+        array[i]=n;
+    }
+    sortArray(array, length);
+    for(int i=0 ; i<length ; i++){
+        cout<<array[i]<<" ";
+    }
+    return 0;    
 }
