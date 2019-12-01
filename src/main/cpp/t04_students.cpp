@@ -31,20 +31,23 @@
 #include <iostream>
 
 using namespace std;
+
 struct student{
   string name;
   string family;
   int m;
   int f;
   int i;
-}
-double mejdinno(students s)
+};
+
+double mejdinno(student s)
 {
   return (s.m+s.f+s.i)/3;
 }
-void sort(point arr[], int n)
+
+void sort(student arr[], int n)
 {
-  point swap;
+  student	 swap;
   for(int i=0;n >i;i++)
     for(int j=n-1;j>i;j--)
        if(mejdinno(arr[j-1]) <mejdinno(arr[j]))
@@ -54,6 +57,7 @@ void sort(point arr[], int n)
            arr[j]=swap;
         }
 }
+
 int t04_students() {
 int n;
 cin>>n;
