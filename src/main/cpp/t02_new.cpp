@@ -25,10 +25,25 @@
 
 #include "t02_new.h"
 #include <iostream>
-
+#include <set>
+#include <vector>
 
 using namespace std;
 
 int t02_new() {
+  int n, i;
+    cin >> n;
+    set <int> s;
+    vector <int> a(n);
     
+    for (i = 0; i < n; i++) {
+     cin >> a[i];
+        if (s.find(a[i]) != s.end()) {
+       cout << "YES" << endl;   
+     }
+     else 
+       cout << "NO"  << endl;
+    s.insert(a[i]);  
+    }
+  return 0;    
 }
