@@ -30,7 +30,7 @@
 #include "t04_students.h"
 #include <iostream>
 #include <vector>
-#include <cmath>
+#include <algorithm>
 
 using namespace std;
 
@@ -42,8 +42,10 @@ struct stud{
     double z;
 };
 
-double mark (stud & a){
-    return (a.x + a.y + a.z)/3;
+bool comp(stud &lhs, stud &rhs){
+    double q=(lhs.x + lhs.y + lhs.z)/3;
+    double w=(rhs.x + rhs.y + rhs.z)/3;
+    return q>w;
 }
 
 int t04_students() {
@@ -55,12 +57,7 @@ int t04_students() {
         nums.push_back(s);
         cin >> nums.at(i).fname >> nums.at(i).lname >> nums.at(i).x >> nums.at(i).y >> nums.at(i).z;
     }
-    for (int i = 0; i < nums.size(); ++i) {
-        for (int j = 0; j < nums.size(); ++j) {
-            if (mark(nums[i]) > mark(nums[j]))
-                swap(nums[i], nums[j]);
-        }
-    }
+    sort(nums.begin(), nums.end(), comp);
     for (const auto& i: nums)
         cout << i.fname << " " << i.lname << endl;
     return 0;
