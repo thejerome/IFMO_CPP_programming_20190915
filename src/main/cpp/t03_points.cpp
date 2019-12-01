@@ -32,7 +32,7 @@ using namespace std;
 int t03_points() {
 int N,x,y;
 float distance;
-map<float,int> point;
+multimap<float,int> point;
 vector<int> xy;
 cin >> N;
 for(int i=0; i<N; i++){
