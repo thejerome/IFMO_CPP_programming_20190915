@@ -29,8 +29,8 @@ int t06_longest() {
     int m = b;
     for (b = s.find(' ',a);b != -1; b = s.find(' ',a)){
         if(b-a>m){
-           l = s.substr(a,b);
            m = b-a;
+           l = s.substr(a,m);
         }
         a = b+1;
     }
