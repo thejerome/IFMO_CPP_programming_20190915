@@ -61,4 +61,5 @@ for(int i=0;i<n;i++)
 {
   cout<<arr[i].x<<" "<<arr[i].y<<endl;
 }
+return 0;
 }

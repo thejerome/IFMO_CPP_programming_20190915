@@ -75,4 +75,5 @@ for(int i=0;i<n;i++)
 {
   cout<<students[i].family<<" "<<students[i].name<<endl;
 }
+return 0;
 }

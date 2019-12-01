@@ -59,4 +59,5 @@ int t01_sort() {
       if(i!=n-1)cout<<arr[i]<<" ";
       else cout<<arr[i];
     }
+    return 0;
 }

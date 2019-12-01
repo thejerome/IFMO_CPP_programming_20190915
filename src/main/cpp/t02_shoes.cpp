@@ -61,4 +61,5 @@ while (i<=100)
   }
 
     cout<<br;
+    return 0;
 }
