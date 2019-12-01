@@ -29,10 +29,10 @@
 
 using namespace std;
 
-int t02_new() {
+int t02_new() {    
+    set<int> d;
     int N;
     cin>>N;
-    set<int> d;
     for(int i=0 ; i<N ; i++){
         int n;
         cin>>n;
