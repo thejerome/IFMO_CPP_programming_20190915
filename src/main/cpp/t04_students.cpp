@@ -42,22 +42,28 @@ struct student{
 
 double mejdinno(student s)
 {
-  return (s.m+s.f+s.i)/3;
+  return (double)(s.m+s.f+s.i)/3;
 }
 
 void sort(student arr[], int n)
 {
-  student	 swap;
-  for(int i=0;n >i;i++)
-    for(int j=n-1;j>i;j--)
-       if(mejdinno(arr[j-1]) <mejdinno(arr[j]))
-        {
-           swap=arr[j-1];
-           arr[j-1]=arr[j];
-           arr[j]=swap;
-        }
+  bool swapped;
+  for(int i=0;i<n-1;i++)
+  {
+    swapped=false;
+    for(int j=0;j<n-i-1;j++)
+    {
+      if(mejdinno(arr[j]) <mejdinno(arr[j+1]))
+      {
+        student mod=arr[j];
+        arr[j]=arr[j+1];
+        arr[j+1]=mod;
+        swapped=true;
+      }
+    }
+    if(!swapped)break;
+  }
 }
-
 int t04_students() {
 int n;
 cin>>n;
@@ -73,7 +79,7 @@ for(int i=0;i<n;i++)
 sort(students,n);
 for(int i=0;i<n;i++)
 {
-  cout<<students[i].family<<" "<<students[i].name<<endl;
+  cout<<students[i].family<<" "<<students[i].name<<""<<endl;
 }
 return 0;
 }
