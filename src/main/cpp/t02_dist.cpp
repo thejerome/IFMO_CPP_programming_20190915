@@ -23,7 +23,14 @@ using namespace std;
 
 //function distance
 
-int t02_dist() {
+double distance(int & a,int & b,int & c,int & d)
+{
+    return sqrt(pow((b-a),2) + pow((d - c),2));
+}
 
+int t02_dist() {
+ int a,b,c,d;
+    cin >>a>>b>>c>>d;
+    cout << distance(a,c,b,d);
     return 0;
 }

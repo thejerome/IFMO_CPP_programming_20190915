@@ -21,8 +21,52 @@
 #include <vector>
 
 using namespace std;
-
+int fun(int n, int c, int a[10])
+{
+if (c==n-1)
+{
+int s=0;
+for (int i=0; i<n; i++)
+{
+bool x=true;
+for (int j=0; j<c;j++)
+{
+if (abs(j-c) == abs(a[j]-i)||i==a[j])
+{
+x=false;
+break;
+}
+}
+if(x)s++;
+}
+return s;
+}
+else
+{
+int s=0;
+for (int i=0; i<n;i++)
+{
+bool x=true;
+for (int j=0; j<c;j++)
+{
+if (abs(j-c)==abs(a[j]-i)||i==a[j])
+{
+x=false;
+break;
+}
+}
+if (x)
+{
+a[c]=i;
+s+=fun(n,c+1,a);
+}
+}
+return s;
+}
+}
 int t08_queen(){
-
+int n, a[10];
+	cin>>n;
+	cout<<fun(n,0,a);
     return 0;
 }
