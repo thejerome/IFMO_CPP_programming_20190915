@@ -87,10 +87,9 @@ using namespace std;
 bool samewrd(string wrd1, string wrd2, int lgt){
     bool ex = false;
     bool wrn = false;
-    int a=0, b=0;
     for (int i=0; i<lgt; i++){
-        a = wrd1[i];
-        b = wrd2[i];
+        int a = wrd1[i];
+        int b = wrd2[i];
         if (abs(a - b) != 0 and abs(a - b) != 32){
             wrn = true;
         }
@@ -120,15 +119,15 @@ int t06_homework() {
         wrk.insert(st);
     }*/
     int wrn=0; //Кол-во ошибок
-    int lgt=0; //Длинна слова
-    int ud =0; //Кол-во ударений в слове
-    bool udwrn; //Наличие в слове ошибки ударения
-    bool ex = false; //Существование слова в словаре
+   // //Длинна слова
+    // //Кол-во ударений в слове
+    //bool udwrn; //Наличие в слове ошибки ударения
+    //bool ex = false; //Существование слова в словаре
     for (auto i1:wrk){
-        ex = false;
-        ud =0;
-        udwrn =true;
-        lgt = i1.length();
+        bool ex = false;
+        int ud =0;
+        bool udwrn =true;
+        int lgt = i1.length();
         for (int i2 =0; i2<lgt; i2++){
             if ((i1[i2] > 64) and (i1[i2] < 90)){
                 ud++;
