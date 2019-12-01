@@ -31,11 +31,11 @@ using namespace std;
 
 int t02_new() {    
     set<int> d;
-    int N,n,num;
+    int N,n,num=0;
     cin>>N;
     for(int i=0 ; i<N ; i++){
         cin>>n;
-        d.insert(n);
+        d.emplace(n);
         if(d.size() == num)
             cout<<"YES"<<" ";
         else
