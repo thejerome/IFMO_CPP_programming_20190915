@@ -86,37 +86,39 @@
 using namespace std;
 
 int t06_homework() {
+    int N, faults,CAPS=0;
+    string words_homework;
     set<string> dictionary;
-    int N,faults=0,CAPS=0;
-    bool IsItInTheDictionary=0;
-    cin>>N;;
-    string words_dictionary,words_homework;
-    for(int i=0 ; i<N ; i++){
-        cin>>words_dictionary;
-        dictionary.insert(words_dictionary);
+    bool IsItInTheDictionary = false;
+    cin >> N;
+    for (int i = 0; i < N; i++) {
+        string x;
+        cin >> x;
+        dictionary.insert(x);
     }
-    while(cin>>words_homework){
-        if(dictionary.count(words_homework) == 0){
-            for(int i=0 ; i<words_homework.size() ; i++){
-                if(words_homework[i] >= 65 && words_homework[i] <= 90)
+    while (cin >> words_homework) {
+        if (dictionary.count(words_homework) == 0) {
+            for (char i : words_homework) {
+                if (i >= 'A' && i <= 'Z')
                     CAPS++;
             }
-            if(CAPS == 1){
-                for(int i=0 ; i<words_dictionary.size() ; i++){
-                    words_dictionary[i] = tolower(words_dictionary[i]);
-                }
-                for(int i=0 ; i<words_homework.size() ; i++){
+            if (CAPS == 1) {
+                for (int i = 0; i < words_homework.length(); i++) {
                     words_homework[i] = tolower(words_homework[i]);
-                    if(dictionary.count(words_homework) == 1)
-                        IsItInTheDictionary = 1;
                 }
-                if(IsItInTheDictionary == 1)
+                for (int i = 0; i < words_homework.length(); i++) {
+                    words_homework[i] = toupper(words_homework[i]);
+                    if (dictionary.count(words_homework) == 1)
+                        IsItInTheDictionary = true;
+                    words_homework[i] = tolower(words_homework[i]);
+                }
+                if (IsItInTheDictionary)
                     faults++;
             }
-            if(CAPS > 1 || CAPS == 0)
+            if (CAPS > 1 || CAPS == 0)
                 faults++;
         }
     }
-    cout<<faults<<endl;
+    cout << faults<<endl;
     return 0;
 }
