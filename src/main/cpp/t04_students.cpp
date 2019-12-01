@@ -29,10 +29,38 @@
 
 #include "t04_students.h"
 #include <iostream>
-
+#include <cstring>
+#include <vector>
+#include <algorithm>
 using namespace std;
+struct StudentData
+{
+    std::string name;
+    std::string surname;
+    int math;
+    int phys;
+    int comp_science;
+};
 
+bool
+comp(const StudentData &a, const StudentData &b)
+{
+    int tmp1 = a.math + a.phys + a.comp_science;
+    int tmp2 = b.math + b.phys + b.comp_science;
+    return tmp1 > tmp2 ? true : false;
+}
 int t04_students() {
-    
+    int n;
+    std::cin >> n;
+    std::vector< StudentData > data(n);
+    for (int i = 0; i < n; i++) {
+        std::cin >> data[i].name >> data[i].surname;
+        std::cin >> data[i].math >> data[i].phys >> data[i].comp_science;
+    }
+    std::sort(data.begin(), data.end(), comp);
+    for (int i = 0; i < n; i++) {
+        std::cout << data[i].name << " " << data[i].surname << std::endl;
+    }
+    return 0;
 }
 
