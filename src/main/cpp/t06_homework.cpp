@@ -81,7 +81,7 @@
 #include "t06_homework.h"
 #include <iostream>
 #include <set>
-#include <mem.h>
+
 using namespace std;
 
 bool samewrd(string wrd1, string wrd2, int lgt){
