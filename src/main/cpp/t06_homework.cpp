@@ -150,7 +150,7 @@ int t06_homework() {
         }
         else N++;
     }
-    cout << errors;
+    cout << errors - 1;
     return 0;
 }
 
