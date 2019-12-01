@@ -37,10 +37,11 @@ int t02_new() {
         cin>>n;
         d.emplace(n);
         if(d.size() > num) {
-            cout << "NO" ;
+            cout << "NO" <<endl;
             num = d.size();
         }
         else
-            cout<< "YES" ;
+            cout<< "YES" <<endl;
     }
     return 0;
+}
