@@ -117,5 +117,6 @@ int t06_homework() {
                 faults++;
         }
     }
+    cout<<faults<<endl;
     return 0;
 }
