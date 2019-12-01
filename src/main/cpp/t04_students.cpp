@@ -29,10 +29,40 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <vector>
+#include <cmath>
 
 using namespace std;
 
+struct stud{
+    string fname;
+    string lname;
+    double x;
+    double y;
+    double z;
+};
+
+double mark (stud & a){
+    return (a.x + a.y + a.z)/3;
+}
+
 int t04_students() {
-    
+    vector<stud> nums;
+    stud s{};
+    int N;
+    cin >> N;
+    for (int i = 0; i < N; ++i) {
+        nums.push_back(s);
+        cin >> nums.at(i).fname >> nums.at(i).lname >> nums.at(i).x >> nums.at(i).y >> nums.at(i).z;
+    }
+    for (int i = 0; i < nums.size(); ++i) {
+        for (int j = 0; j < nums.size(); ++j) {
+            if (mark(nums[i]) > mark(nums[j]))
+                swap(nums[i], nums[j]);
+        }
+    }
+    for (const auto& i: nums)
+        cout << i.fname << " " << i.lname << endl;
+    return 0;
 }
 

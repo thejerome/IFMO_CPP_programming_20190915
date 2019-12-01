@@ -28,10 +28,34 @@
 
 #include "t02_shoes.h"
 #include <iostream>
+#include <set>
 
 
 using namespace std;
 
 int t02_shoes() {
-    
+    multiset<int> shoes;
+    int N = 0, size, minsize;
+    cin >> minsize;
+    cin >> N;
+    for (int i = 0; i < N; ++i) {
+        cin >> size;
+        shoes.insert(size);
+    }
+    N=0;
+    for (auto i : shoes){
+        if ((minsize == i)||(minsize == i-1)||(minsize == i-2)){
+            minsize = i;
+            N++;
+            break;
+        }
+    }
+    for (auto i : shoes){
+        if (minsize <= (i - 3)){
+            minsize = i;
+            N++;
+        }
+    }
+    cout << N;
+    return 0;
 }
