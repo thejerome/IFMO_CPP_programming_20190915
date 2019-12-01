@@ -34,12 +34,6 @@
 using namespace std;
 
 int t07_ip() {
-  #include <iostream>
-#include <string>
-
-using namespace std;
-
-int main(){
     int R = 0;
     string q, w;
     getline(cin, q);
