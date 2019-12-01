@@ -107,7 +107,7 @@ int t06_homework() {
                 }
                 for(int i=0 ; i<words_homework.size() ; i++){
                     words_homework[i] = tolower(words_homework[i]);
-                    if(words_dictionary.count(words_homework) == 1)
+                    if(dictionary.count(words_homework) == 1)
                         IsItInTheDictionary = 1;
                 }
                 if(IsItInTheDictionary == 1)
