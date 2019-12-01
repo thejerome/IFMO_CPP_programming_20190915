@@ -80,9 +80,76 @@
 
 #include "t06_homework.h"
 #include <iostream>
-
+#include <set>
+#include <mem.h>
 using namespace std;
 
-int t06_homework() {
+bool samewrd(string wrd1, string wrd2, int lgt){
+    bool ex = false;
+    bool wrn = false;
+    int a=0, b=0;
+    for (int i=0; i<lgt; i++){
+        a = wrd1[i];
+        b = wrd2[i];
+        if (abs(a - b) != 0 and abs(a - b) != 32){
+            wrn = true;
+        }
+    }
+    if (!wrn) {
+        ex = true;
+    }
+    return ex;
+}
 
+int t06_homework() {
+    int n=0;
+    cin >>n;
+    set<string> voc; //Сет словаря
+    string st; //Строка для ввода
+    for (int i=0; i<n; i++){
+        cin >>st;
+        voc.insert(st);
+    }
+    multiset<string> wrk; //Мультисет работы
+    while (cin>>st){
+        wrk.insert(st);
+    }
+    /*cin >>n;
+    for (int i=0; i<n; i++){
+        cin >>st;
+        wrk.insert(st);
+    }*/
+    int wrn=0; //Кол-во ошибок
+    int lgt=0; //Длинна слова
+    int ud =0; //Кол-во ударений в слове
+    bool udwrn; //Наличие в слове ошибки ударения
+    bool ex = false; //Существование слова в словаре
+    for (auto i1:wrk){
+        ex = false;
+        ud =0;
+        udwrn =true;
+        lgt = i1.length();
+        for (int i2 =0; i2<lgt; i2++){
+            if ((i1[i2] > 64) and (i1[i2] < 90)){
+                ud++;
+            }
+        }
+        if (ud != 1){
+            wrn++;
+            continue;
+        }
+        for (auto i2:voc){
+            if(samewrd(i1, i2, lgt)){         //Проверка что слово есть в словаре
+                if (i1 == i2){
+                    udwrn = false;
+                }
+                ex = true;
+            }
+        }
+        if (ex and udwrn){
+            wrn++;
+        }
+    }
+    cout <<wrn;
+    return 0;
 }

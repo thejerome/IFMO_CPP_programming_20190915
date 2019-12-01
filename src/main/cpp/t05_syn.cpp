@@ -27,10 +27,28 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
+#include <map>
 
 using namespace std;
 
 int t05_syn() {
-
+    int n=0;
+    cin >>n;
+    map <string, string> voc;
+    pair<string, string> p1, p2;
+    string st;
+    for (int i=0; i<n; i++){
+        cin >>st;
+        p1.first = st;
+        p2.second = st;
+        cin >>st;
+        p1.second = st;
+        p2.first = st;
+        voc.insert(p1);
+        voc.insert(p2);
+    }
+    cin >>st;
+    string smth = voc.find(st)->second;
+    cout <<smth;
+    return 0;
 }
