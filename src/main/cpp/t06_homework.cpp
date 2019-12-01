@@ -84,6 +84,7 @@
 #include <vector>
 using namespace std;
 
+string low(string);
 string low(string word) {
         int i;
       for ( i = 0; i < word.size(); i++) {
