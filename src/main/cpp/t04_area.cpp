@@ -33,8 +33,18 @@
 using namespace std;
 
 //function IsPointInArea
-
+bool IsPointInArea(double x, double y) {
+    double vnutri = 2 * 2 >= abs(x + 1) * abs(x + 1) + abs(y - 1) * abs(y - 1);
+    double naverxu1 = y >= 2 * x + 2;
+    double naverxu2 = y >= -x;
+    double vnizu1 = y <= 2 * x + 2;
+    double vnizu2 = y <= -x;
+    double po_krugu = 2 * 2 == abs(x + 1) * abs(x + 1) + abs(y - 1) * abs(y - 1);
+    return vnutri && naverxu1 && naverxu2 || (po_krugu || not vnutri) && vnizu1 && vnizu2;
+}
 int t04_area() {
-
+    double  x, y;
+    cin >> x >> y;
+     IsPointInArea(x, y) ? cout << "YES" : cout << "NO";
     return 0;
 }
