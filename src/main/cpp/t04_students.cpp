@@ -35,9 +35,9 @@
 using namespace std;
 
 int t04_students() {
-int N,z1,z2,z3;
+int N;
 string x,y;
-float distance;
+float distance,z1,z2,z3;
 multimap<float,int> point;
 vector<string> xy;
 cin >> N;
@@ -45,7 +45,7 @@ for(int i=0; i<N; i++){
     cin >> x>>y>>z1>>z2>>z3;
     xy.push_back(x);
     xy.push_back(y);
-    distance=(z1+z2+z3)/3-i*0.01;
+    distance=(z1+z2+z3)/3-i*0.000000001;
     point.insert(pair<float,int>(distance,i));
 }
 for (auto it = point.end(); it != point.begin();){
