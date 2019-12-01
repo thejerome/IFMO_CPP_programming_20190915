@@ -36,11 +36,11 @@ int t02_new() {
     for(int i=0 ; i<N ; i++){
         cin>>n;
         d.emplace(n);
-        if(d.size() == num)
-            cout<<"YES"<<" ";
+        if(d.size() > num) {
+            cout << "NO" ;
+            num = d.size();
+        }
         else
-            cout<<"NO"<<" ";
-        num = d.size();
+            cout<< "YES" ;
     }
     return 0;
-}
