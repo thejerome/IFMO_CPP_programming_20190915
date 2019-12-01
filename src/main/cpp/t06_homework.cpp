@@ -80,9 +80,44 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t06_homework() {
+    set <string> st;
+    set <string> st_low;
+    int n = 0;
+    int counter = 0;
+    string a;
+
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        cin >> a;
+        st.insert(a);
+        for (int i = 0; i < a.length(); i++){
+            if (64 < a[i] && a[i] < 91) a[i] += 32;
+            st_low.insert(a);
+
+        }
+    }
+
+    while(cin >> a){
+        int tmp_count = 0;
+        if (st.find(a) == st.end()){
+            //cout << a << " ";
+            for (int i = 0; i < a.length(); i++){
+                if (64 < a[i] && a[i] < 91) {tmp_count++;  a[i] += 32;}
+
+            }
+            //cout << a << " " << tmp_count << " ";
+            if (tmp_count != 1) counter++;
+            else if (st_low.find(a) != st_low.end()) counter++;
+        }
+    }
+
+    cout << counter;
+
+
 
 }
