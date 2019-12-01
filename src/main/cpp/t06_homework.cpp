@@ -80,9 +80,83 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
+#include <string>
 
 using namespace std;
 
-int t06_homework() {
+char make_little(char);
 
+int t06_homework() {
+    set<string> dict, phrase, stress1, little;
+    string word, homework;
+    int N=0, errors=0;
+    cin >> N;
+    for (int i = 0; i < N; i++) {
+        cin >> word;
+        dict.insert(word);
+    }
+    getline(cin, homework);
+    homework += ' ';
+    N = 0;
+    int s1 = homework.size();
+    for (int i = 0; i < s1; i++) {
+        if (homework[i] != ' ')
+            N++;
+        else{
+            word = homework.substr(i-N, N);
+            phrase.insert(word);
+            N = 0;
+        }
+    }
+    for (const auto& i: phrase){
+        N=0;
+        for (char j : i) {
+            if ((int(j) > 64)&&(int(j) < 91)) N++;
+        }
+        if ((N>1)||(N==0)) {
+            errors++;
+        }
+        else stress1.insert(i);
+    }
+    phrase.clear();
+    N = dict.size();
+    for (const auto& i: stress1) {
+        dict.insert(i);
+        if (dict.size() > N){
+            dict.erase(i);
+            phrase.insert(i);
+        }
+    }
+    word = "";
+    for (const auto& i: dict){
+        for (char j : i){
+            j = make_little(j);
+            word += j;
+        }
+        little.insert(word);
+        word = "";
+    }
+    N = little.size();
+    for (const auto& i: phrase){
+        for (char j : i) {
+                j = make_little(j);
+                word += j;
+            }
+        little.insert(word);
+        word = "";
+        if (little.size() == N){
+            errors++;
+        }
+        else N++;
+    }
+    cout << errors - 1;
+    return 0;
+}
+
+char make_little (char x) {
+    if ((int(x) > 64) && (int(x) < 91)) {
+        x = char(int(x) + 32);
+    }
+    return x;
 }
