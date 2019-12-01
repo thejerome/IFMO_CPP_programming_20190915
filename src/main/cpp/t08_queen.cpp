@@ -48,6 +48,7 @@ int IsSvobodnoyeMestechko(int n, int i, int j) {
         return 0;
     }
 }
+
 int t08_queen(){
     int n;
     cin >> n;
