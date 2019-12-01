@@ -30,18 +30,18 @@
 using namespace std;
 
 int t02_new() {
-    set<int> d;
     int N;
     cin>>N;
+    set<int> d;
     for(int i=0 ; i<N ; i++){
         int n;
         cin>>n;
-        if(d.count(n) != 0){
-             cout<<"YES"<<" ";
-        }       
-        else{ 
+        if(d.count(n) == 0){
             d.insert(n);
             cout<<"NO"<<" ";
+        }       
+        else{           
+            cout<<"YES"<<" ";
         }
     }
     return 0;
