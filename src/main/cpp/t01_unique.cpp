@@ -23,5 +23,13 @@
 using namespace std;
 
 int t01_unique() {
-    
+    int n;
+    cin >> n;
+    set <int> b;
+    for (int i = 0;i < n;i++){
+        int a;
+        cin >> a;
+        b.insert(a);
+    }
+    cout << size(b);    
 }
