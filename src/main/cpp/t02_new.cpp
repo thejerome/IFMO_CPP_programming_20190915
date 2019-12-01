@@ -31,16 +31,18 @@ using namespace std;
 
 int t02_new() {
     set<int> d;
-    int N,n,num;
+    int N,n;
     cin>>N;
     for(int i=0 ; i<N ; i++){
         cin>>n;
-        d.insert(n);
-        if(d.size() == num)
-            cout<<"YES"<<" ";
-        else
+        if(d.count(n) != 0){
+             d.insert(n);
+             cout<<"YES"<<" ";
+        }       
+        else{ 
+            d.insert(n);
             cout<<"NO"<<" ";
-        num = d.size();
+        }
     }
     return 0;
 }
