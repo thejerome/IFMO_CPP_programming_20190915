@@ -34,5 +34,14 @@
 using namespace std;
 
 int t07_ip() {
-
+  int x1,x2,x3,x4;
+    bool res=(cin>>x1) && cin.get()=='.' &&
+            (cin>>x2) && cin.get()=='.' &&
+            (cin>>x3) && cin.get()=='.' &&
+            (cin>>x4) &&
+            x1>=0 && x1<256 &&
+            x2>=0 && x2<256 &&
+            x3>=0 && x3<256 &&
+            x4>=0 && x4<256;
+    cout<<(res?"YES":"NO");
 }
