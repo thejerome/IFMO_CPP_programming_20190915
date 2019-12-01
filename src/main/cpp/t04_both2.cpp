@@ -28,7 +28,7 @@
 using namespace std;
 
 int t04_both2() {
-    int N,M,count=0;
+    int N,M;
     cin >> N;
     set<int> v,w,res;
     for (int i = 0; i < N; ++i) {
