@@ -80,9 +80,73 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <string>
+#include <set>
 
 using namespace std;
+string frase;
+set<string> arr;
+int j=0;
+int count_accent=0;
+void division() {
+int n=frase.length();
+string word, maxword;
+for (int i=0; i<n;i++){
+    if (frase[i] !=' '){
+        word=word+frase[i];}
+    else {
+        arr.insert(word);
+        j++;
+        word="";
+    };
+};
+arr.insert(word);
+j++;
+}
+
+string upper(string s){
+for (basic_string<char>::iterator p = s.begin();p != s.end(); ++p) {
+    *p = toupper(*p); 
+}
+return s;
+}
+void countaccent(string s){
+    count_accent=0;
+    for (basic_string<char>::iterator p = s.begin();p != s.end(); ++p) {
+        if ((*p>='A') and (*p<='Z')) count_accent++; 
+    }
+}
 
 int t06_homework() {
-
+int N, count=0;
+string n,str="";
+set<string>words;
+cin>> N;
+for(int i=0; i<N; i++){
+    cin >> n;
+    words.insert(n);
+}
+while (str=="") getline(cin,str);
+frase=str;
+division();
+set <string> :: iterator it1 = arr.begin();
+for (int i = 1; it1 != arr.end(); i++){
+    bool indictionary=false;
+    bool accent=false;
+    set <string> :: iterator it2 = words.begin();
+    for (int j = 1; it2 != words.end(); j++){
+        if (upper(*it1)==upper(*it2)) {
+            indictionary=true;
+        } 
+        if((*it1)==(*it2)){
+            accent=true;
+        }
+        advance(it2,1);
+    }
+    if (indictionary and not(accent)) count++;
+    countaccent(*it1);
+    if ((count_accent != 1) and not(indictionary)) count++;
+    advance(it1,1);
+}
+cout << count-1;
 }
