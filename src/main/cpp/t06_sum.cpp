@@ -21,8 +21,12 @@
 #include <cmath>
 
 using namespace std;
-
+int shi() {
+	int a;
+	cin >> a;
+	return a == 0 ? a : a + shi();
+}
 int t06_sum() {
-
+	cout << shi();
     return 0;
 }
