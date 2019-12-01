@@ -80,9 +80,57 @@
 
 #include "t06_homework.h"
 #include <iostream>
-
+#include <string>
+#include <vector>
 using namespace std;
 
-int t06_homework() {
+string low(string);
+string low(string word) {
+        int i;
+      for ( i = 0; i < word.size(); i++) {
+          word[i] = word[i] | 0x20; 
+      }
+        return word;
+    }
 
+bool checkup(string word) {
+ int i, mist = 0; 
+    for (i = 0; i < word.size(); i++) {
+        if (word[i] >= 'A' && word[i] <= 'Z') 
+            mist++;
+    }
+    return (mist == 1);
+}
+
+bool check(const string& word, string* dict, int n) {
+ int i;
+    string loword;
+    loword = low(word);
+    bool b = 1;
+    for (i = 0; i < n; i++) {
+     if (low(dict[i]) == loword) {
+         b = 0;
+         if (dict[i] == word) return 1;
+     }     
+    }
+    return b;
+}
+
+int t06_homework() {
+ int i, n, mist = 0;
+    string word;
+    cin >> n;
+    string dict[n];
+    for (i = 0; i < n; i++) {
+      cin >> word;
+       dict[i] = word;
+    }
+   while ( cin >> word ) {
+    if (checkup(word)) {
+     if (!check(word, dict, n)) mist++;   
+    }
+       else mist++;
+   }
+    cout << mist;
+  return 0;
 }
