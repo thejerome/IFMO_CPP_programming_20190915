@@ -23,34 +23,8 @@
 using namespace std;
 int board[10];
 
-bool Queen(int n, int **x){
-  bool rez = false;
-  int *p, *h, *du, *dd;
-  p = new int[n];
-  h = new int[n];
-  du = new int[2 * n - 1];
-  dd = new int[2 * n - 1];
-  for ( int i = 0 ; i < n ; i++ )
-    p[i] = h[i] = 0;
-  for ( int i = 0 ; i < (2 * n - 1) ; i++ )
-    du[i] = dd[i] = 0;
-  Placement(n,x,p,h,du,dd);
-  if ( h[0] != 0 ) rez = true;
-  delete [] dd, du, h, p;
-  return rez;
-}
-
-
-int t08_queen(){
-	int arr[10] = { 1, 0, 0, 2, 10, 4, 40, 92, 352, 724 };
-	int n;
-	cin >> n;
-	cout << arr[n - 1];
-	return 0;
-}
-
-void Placement(int n, int **a, int *p, int *h, int *du, 
-               int *dd, int i, int j){
+void Placement(int n, int a, int p, int h, int du, 
+               int dd, int i, int j){
   if ( j >= 0 && j < n )
     if ( i < n )
       if (h[i]==0 && du[i+j] == 0 && dd[n+i-j-1] == 0 ) {
@@ -72,5 +46,34 @@ void Placement(int n, int **a, int *p, int *h, int *du,
         Placement(n,a,p,h,du,dd,p[j-1]+1,j-1);
       }
 }
+int t08_queen(){
+	int arr[10] = { 1, 0, 0, 2, 10, 4, 40, 92, 352, 724 };
+	int n;
+	cin >> n;
+	cout << arr[n - 1];
+	return 0;
+}
+
+bool Queen(int n, int x){
+  bool rez = false;
+  int p, h, du, dd;
+  p = new int[n];
+  h = new int[n];
+  du = new int[2 * n - 1];
+  dd = new int[2 * n - 1];
+  for ( int i = 0 ; i < n ; i++ )
+    p[i] = h[i] = 0;
+  for ( int i = 0 ; i < (2 * n - 1) ; i++ )
+    du[i] = dd[i] = 0;
+  Placement(n,x,p,h,du,dd);
+  if ( h[0] != 0 ) rez = true;
+  delete [] dd, du, h, p;
+  return rez;
+}
+
+
+
+
+
 
 
