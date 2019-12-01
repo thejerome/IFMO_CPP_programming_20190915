@@ -131,21 +131,23 @@ while (str=="") getline(cin,str);
 frase=str;
 division();
 set <string> :: iterator it1 = arr.begin();
-for (int i = 1; it1 != arr.end(); i++, it1=it1+1){
+for (int i = 1; it1 != arr.end(); i++){
     indictionary=false;
     bool accent=false;
     set <string> :: iterator it2 = words.begin();
-    for (int j = 1; it2 != words.end(); j++, it2=it2+1){
+    for (int j = 1; it2 != words.end(); j++){
         if (upper(*it1)==upper(*it2)) {
             indictionary=true;
         } 
         if((*it1)==(*it2)){
             accent=true;
         }
+        it2=it2+1;
     }
     if (indictionary and not(accent)) count++;
     countaccent(*it1);
     if ((count_accent != 1) and not(indictionary)) count++;
+    it1=it1+1;
 }
 cout << count-1;
 }
