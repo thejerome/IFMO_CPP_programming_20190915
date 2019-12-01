@@ -28,7 +28,7 @@ int min(int a, int b){
 }
 //function min4 
 int min4(int a,int b,int c,int d){
-    min(min(a, b), min(c, d));
+    return min(min(a, b), min(c, d));
 }
 int t01_min() {
     int q, w, e, r;
