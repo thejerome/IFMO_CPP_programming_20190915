@@ -24,5 +24,7 @@
 using namespace std;
 
 int t02_up() {
-    
+    char a;
+    cin >> a;
+    (int(a)>96)&&(int(a)<123) ? cout << char(int(a)-32) : cout << a;
 }
