@@ -35,8 +35,8 @@
 using namespace std;
 struct StudentData
 {
-    std::string name;
-    std::string surname;
+    string name;
+    string surname;
     int math;
     int phys;
     int comp_science;
@@ -51,15 +51,15 @@ comp(const StudentData &a, const StudentData &b)
 }
 int t04_students() {
     int n;
-    std::cin >> n;
-    std::vector< StudentData > data(n);
+    cin >> n;
+    vector< StudentData > data(n);
     for (int i = 0; i < n; i++) {
-        std::cin >> data[i].name >> data[i].surname;
-        std::cin >> data[i].math >> data[i].phys >> data[i].comp_science;
+        cin >> data[i].name >> data[i].surname;
+        cin >> data[i].math >> data[i].phys >> data[i].comp_science;
     }
-    std::sort(data.begin(), data.end(), comp);
+    sort(data.begin(), data.end(), comp);
     for (int i = 0; i < n; i++) {
-        std::cout << data[i].name << " " << data[i].surname << std::endl;
+        cout << data[i].name << " " << data[i].surname <<endl;
     }
     return 0;
 }
