@@ -80,9 +80,65 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <map>
+#include <string>
 
 using namespace std;
 
-int t06_homework() {
+bool err(string s) {
+    int m = 0;
+    bool error=false;
+    for (int i = 0; i < s.length(); i++) {
+        if (s[i] >= 'A' and s[i] <= 'Z') {
+            m++;
+        }
+    }
+    if (m != 1) {
+        error=true;
+    }
+    return error;
+}
 
+string tolower(string s) {
+    for (int i = 0; i < s.length(); i++) {
+        if (s[i] >= 'A' and s[i] <= 'Z') {
+            s[i] -= 'A' - 'a';
+        }
+    }
+    return s;
+}
+
+int t06_homework() {
+    multimap <string, string> dict;
+    int count = 0,n = 0;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        string a;
+        cin >> a;
+        dict.insert(make_pair(tolower(a), a));
+    }
+    string b;
+    while (cin >> b) {
+        bool problem = true;
+        auto it = dict.find(tolower(b));
+        if (it != dict.end()) {
+            while (it != dict.end() && (*it).first == tolower(b)) {
+                if ((*it).second == b) {
+                    problem = false;
+                    break;
+                }
+                it++;
+            }
+        } else {
+            problem = false;
+        }
+        if (problem) {
+            count++;
+        } else {
+            if (err(b)) {
+                count++;
+            }
+        }
+    }
+    cout << count;
 }
