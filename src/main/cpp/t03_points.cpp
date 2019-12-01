@@ -23,20 +23,27 @@
 
 #include "t03_points.h"
 #include <iostream>
+#include <cmath>
 #include <map>
+#include <vector>
 
 using namespace std;
 
 int t03_points() {
 int N,x,y;
-map<int, int> point;
+float distance;
+map<float,int> point;
+vector<int> xy;
 cin >> N;
 for(int i=0; i<N; i++){
     cin >> x>>y;
-    point.insert(pair<int, int>(x,y));
+    xy.push_back(x);
+    xy.push_back(y);
+    distance=sqrt(x*x+y*y);
+    point.insert(pair<float,int>(distance,i));
 }
 for (auto it = point.begin(); it != point.end(); ++it){
-     cout << (*it).first << " " << (*it).second << endl;
+    cout << xy[2*(*it).second] << " " <<  xy[2*(*it).second+1]<< " ";
 }
     return 0;
 }
