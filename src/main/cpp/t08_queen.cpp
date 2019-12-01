@@ -22,7 +22,42 @@
 
 using namespace std;
 
+bool desk[10][10];
+int n = 0;
+
+bool check(int x, int y){
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            if (((x - i == y - j) || (x - i == j - y) || (x == i) || (y == j)) && desk[i][j])
+                return false;
+    return true;
+
+
+
+}
+
+int new_q(int x){
+    if (x == n) return 1;
+    int count = 0;
+    for (int j = 0; j < n; j++){
+        if(check(x,j)){
+            desk[x][j] = true;
+            //cout << x << " " << j << endl;
+            count += new_q(x + 1);
+            desk[x][j] = false;
+        }
+    }
+    return count;
+
+}
+
 int t08_queen(){
+    cin >> n;
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            desk[i][j] = false;
+
+    cout << new_q(0);
 
     return 0;
 }

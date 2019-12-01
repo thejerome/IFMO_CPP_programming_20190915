@@ -37,9 +37,20 @@
 
 using namespace std;
 
+double dist(double x1, double y1, double x2, double y2){
+    return sqrt ((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+}
+
 //function IsPointInCircle
+bool  IsPointInCircle(double x, double y, double xc, double yc, double r){
+    return r > dist(x, y, xc, yc);
+}
 
 int t03_circle() {
+    double x, y, xc, yc, r;
+    cin >> x >> y >> xc >> yc >> r;
+
+    cout << (IsPointInCircle(x, y, xc, yc, r) ? "YES" : "NO");
 
     return 0;
 }
