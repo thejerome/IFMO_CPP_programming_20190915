@@ -120,7 +120,6 @@ void countaccent(string s){
 int t06_homework() {
 int N, count=0;
 string n,str="";
-bool indictionary;
 set<string>words;
 cin>> N;
 for(int i=0; i<N; i++){
@@ -132,7 +131,7 @@ frase=str;
 division();
 set <string> :: iterator it1 = arr.begin();
 for (int i = 1; it1 != arr.end(); i++){
-    indictionary=false;
+    bool indictionary=false;
     bool accent=false;
     set <string> :: iterator it2 = words.begin();
     for (int j = 1; it2 != words.end(); j++){
@@ -142,12 +141,12 @@ for (int i = 1; it1 != arr.end(); i++){
         if((*it1)==(*it2)){
             accent=true;
         }
-        it2++;
+        advance(it2,1);
     }
     if (indictionary and not(accent)) count++;
     countaccent(*it1);
     if ((count_accent != 1) and not(indictionary)) count++;
-    it1++;
+    advance(it1,1);
 }
 cout << count-1;
 }
