@@ -142,12 +142,12 @@ for (int i = 1; it1 != arr.end(); i++){
         if((*it1)==(*it2)){
             accent=true;
         }
-        it2=it2+1;
+        it2++;
     }
     if (indictionary and not(accent)) count++;
     countaccent(*it1);
     if ((count_accent != 1) and not(indictionary)) count++;
-    it1=it1+1;
+    it1++;
 }
 cout << count-1;
 }
