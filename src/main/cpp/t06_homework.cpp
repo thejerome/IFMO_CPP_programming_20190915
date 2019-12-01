@@ -80,9 +80,41 @@
 
 #include "t06_homework.h"
 #include <iostream>
-
+#include <set>
+#include <map>
 using namespace std;
 
 int t06_homework() {
-
+    set<string> dictionary;
+    int N,faults=0,CAPS=0;
+    bool IsItInTheDictionary=0;
+    cin>>N;;
+    string words_dictionary,words_homework;
+    for(int i=0 ; i<N ; i++){
+        cin>>words_dictionary;
+        dictionary.insert(words_dictionary);
+    }
+    while(cin>>words_homework){
+        if(dictionary.count(words_homework) == 0){
+            for(int i=0 ; i<words_homework.size() ; i++){
+                if(words_homework[i] >= 65 && words_homework[i] <= 90)
+                    CAPS++;
+            }
+            if(CAPS == 1){
+                for(int i=0 ; i<words_dictionary.size() ; i++){
+                    words_dictionary[i] = tolower(words_dictionary[i]);
+                }
+                for(int i=0 ; i<words_homework.size() ; i++){
+                    words_homework[i] = tolower(words_homework[i]);
+                    if(words_dictionary.count(words_homework) == 1)
+                        IsItInTheDictionary = 1;
+                }
+                if(IsItInTheDictionary == 1)
+                    faults++;
+            }
+            if(CAPS > 1 || CAPS == 0)
+                faults++;
+        }
+    }
+    return 0;
 }
