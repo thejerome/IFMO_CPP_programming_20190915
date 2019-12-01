@@ -147,5 +147,5 @@ for (int i = 1; it1 != arr.end(); i++, it1++){
     countaccent(*it1);
     if ((count_accent != 1) and not(indictionary)) count++;
 }
-cout << count;
+cout << count-1;
 }
