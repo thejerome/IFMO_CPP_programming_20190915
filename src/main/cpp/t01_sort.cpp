@@ -19,10 +19,22 @@
 
 #include "t01_sort.h"
 #include <iostream>
-
+#include <set>
 
 using namespace std;
 
 int t01_sort() {
-    
+multiset<int> number;
+int N;
+cin >> N;
+for(int i=0; i<N; i++){
+    int n;
+    cin >> n;
+    number.insert(n);
 }
+for (int i: number){
+    cout << i<<" ";
+}
+    return 0;
+}
+
