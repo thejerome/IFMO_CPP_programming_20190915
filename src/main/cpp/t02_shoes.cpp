@@ -40,7 +40,7 @@ int t02_shoes() {
 	for(int i = 0; i < n; i++)
 		cin >> a[i];
 	sort(a.begin(), a.end());
-	int prev_s = 0, count = 0;
+	int prev_s, count = 0;
 	for(int i = 0; i < n; i++)
 		if(a[i] >= s)
 		{
