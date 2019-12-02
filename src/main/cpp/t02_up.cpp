@@ -24,5 +24,12 @@
 using namespace std;
 
 int t02_up() {
-    
+char symbol = '0';
+cin >> symbol;
+if (symbol >= 'a' && symbol <= 'z'){
+    cout << char(symbol - 32) << endl;
+    return 0;
+}
+cout << symbol << endl;
+return 0;
 }
