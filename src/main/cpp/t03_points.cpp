@@ -34,19 +34,17 @@ vector <int> a;
 set <double> dist;
 map <double,vector<int> > points;
 int n, x, y;
-double d=0;
 cin >> n;
 
 for(int i = 0; i < n; i++) {
 cin >> x;
 cin >> y;
-d = sqrt(x*x + y*y);
-dist.insert(d);
-if(dist.count(d)!= 0){points[d].push_back(x);points[d].push_back(y);}
+dist.insert(sqrt(x*x + y*y));
+if(dist.count(sqrt(x*x + y*y))!= 0){points[sqrt(x*x + y*y)].push_back(x);points[sqrt(x*x + y*y)].push_back(y);}
 else{
 a.push_back(x);
 a.push_back(y);
-points[d] = a;
+points[sqrt(x*x + y*y)] = a;
 a.pop_back();
 a.pop_back();}
 }
