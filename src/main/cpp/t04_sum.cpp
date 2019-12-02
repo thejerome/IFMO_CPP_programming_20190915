@@ -20,14 +20,12 @@
 using namespace std;
 
 int t04_sum() {
-
-     int S,Z;
-     Z=0;
-     cin >> S;
-     while (S!=0) {
-         Z=Z+S;
-         cin >> S;
-     }
-     cout << Z;
-     return 0;
- }
+    int x,z;
+    x=0;
+    while (z!=0){
+        cin >> z;
+        x=x+z;
+    }
+    cout << x;
+    return 0;
+}
