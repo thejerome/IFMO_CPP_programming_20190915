@@ -18,10 +18,29 @@
 
 #include "t05_palindrom.h"
 #include <iostream>
+#include <string>
 
 
 using namespace std;
 
-int t05_palindrom() {
+bool IsPalindrom(string a){
+    if ( a == string(a.rbegin(), a.rend())){
+        return true;
+    }
+    else
+    {
+        return false;
+    }    
+}
 
+int t05_palindrom() {
+    string a;
+    cin >> a;
+    if (IsPalindrom(a))
+    {
+        cout << "yes" << endl;
+        return 0;
+    }
+    cout << "no" << endl;
+    return 0;
 }

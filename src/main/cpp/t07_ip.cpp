@@ -34,5 +34,36 @@
 using namespace std;
 
 int t07_ip() {
-
+short dots = 0;
+string ip = "", currnum = "";
+getline(cin, ip);
+for (int i = 0; i <= ip.length(); i++)
+{
+    if (ip[i] != '.' && i != ip.length())
+    {
+        currnum += ip[i];
+    }
+    else if (currnum != "")
+    {
+        if (stoi(currnum) > 255 || stoi(currnum) < 0)
+        {
+            cout << "NO" << endl;
+            return 0;
+        }
+    }
+    if (ip[i] == '.'){
+        dots += 1;
+        currnum = "";
+    }
+    
+}
+if (dots == 3)
+{
+    cout << "YES" << endl;
+}
+else
+{
+    cout << "NO" << endl;
+}
+return 0;
 }
