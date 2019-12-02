@@ -26,10 +26,17 @@
 #include <cmath>
 
 using namespace std;
+//function distance
+double power(double a, int n)
+{
+    return a*n;
 
-//function power
-
-int t05_power() {
-
+}
+int t05_power(){
+    double a;
+    int n;
+    cin >> a >> n;
+    cout << (a*n);
     return 0;
 }
+

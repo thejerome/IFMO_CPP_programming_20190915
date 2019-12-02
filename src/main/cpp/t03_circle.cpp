@@ -16,7 +16,7 @@
 //0.5
 //0.5
 //0
-//0
+//
 //1
 //Sample Output 1:
 //
@@ -36,10 +36,16 @@
 #include <cmath>
 
 using namespace std;
+//function distance
+double IsPointInCircle( double x, double y, double xc, double yc,double r)
+{
+    return pow (x-xc, 2) + pow( y-yc, 2) < pow(r,2);
 
-//function IsPointInCircle
-
-int t03_circle() {
-
+}
+int main(){
+    double x,y,xc,yc,r;
+    cin >> x >> y >>xc >>yc >>r;
+     if (IsPointInCircle(x,y,xc,yc,r))cout << "YES";
+     else {cout << "NO";}
     return 0;
 }
