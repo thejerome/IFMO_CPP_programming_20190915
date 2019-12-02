@@ -19,7 +19,7 @@
 
 #include "t01_unique.h"
 #include <iostream>
-
+#include <set>
 using namespace std;
 
 int t01_unique() {
