@@ -25,10 +25,32 @@
 
 #include "t02_new.h"
 #include <iostream>
+#include <set>
+
+
 
 
 using namespace std;
 
-int t02_new() {
-    
+int t02_new()
+{
+    int N;
+    cin >> N;
+    set <int> different;
+    for (int i = 0; i < N; i++)
+    {
+        int numb;
+        cin >> numb;
+        if (different.count(numb) != 0)
+        {
+            cout << "YES" << ' ';
+        }
+        else
+        {
+            cout << "NO" << ' ';
+            different.insert(numb);
+        }
+    }
+
+    return 0;
 }

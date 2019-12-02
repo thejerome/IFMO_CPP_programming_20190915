@@ -80,9 +80,56 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <string>
+#include <set>
 
 using namespace std;
 
 int t06_homework() {
+    int N;
+    int err;
+    err = 0;
+    string homework;
+    set <string> dic;
+    cin >> N;
+    for (int i = 0; i < N; i++)
+    {
+        string x;
+        cin >> x;
+        dic.insert(x);
+    }
+    while (cin >> homework)
+    {
+        bool in = false;
+        if (dic.count(homework)==0)
+        {
+            int high = 0;
+            for (char i : homework)
+            {
+                if ((i <= 90) && (i >= 65))
+                    high++;
+            }
+            if (high == 1)
+            {
+                for (int i = 0; i < homework.length(); i++)
+                {
+                    homework[i] = tolower(homework[i]);
+                }
+                for (int i = 0; i < homework.length(); i++)
+                {
+                    homework[i] = toupper(homework[i]);
+                    if (dic.count(homework) == 1)
+                        in = true;
+                    homework[i] = tolower(homework[i]);//codacy come plzzzzz
+                }
+            }
+            if ((high != 1) || (in))
+                err++;
+        }
+    }
+    cout << err;
+    return(0);
 
 }
+
+
