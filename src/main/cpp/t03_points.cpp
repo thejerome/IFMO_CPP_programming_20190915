@@ -23,10 +23,29 @@
 
 #include "t03_points.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 
 using namespace std;
+struct point {int a; int b;};//точка
 
-int t03_points() {
-    
+bool dist (point x, point y) {
+    return (x.a*x.a + x.b*x.b) < (y.a*y.a + y.b*y.b);//сравним две точки
+}
+
+int t03_points()
+{
+    int N;
+    cin >> N;
+    vector <point> points(N);
+    for (int i = 0; i < N; i++) {
+        int xi, yi;
+        cin >> xi >> yi;
+        points[i] = {xi, yi};
+    }
+    sort(points.begin(), points.end(), dist);
+    for (point s : points) {
+        cout << s.a << " " << s.b << " ";
+    }
+
 }

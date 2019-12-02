@@ -29,10 +29,24 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
-int t04_students() {
-    
+struct student {string name; string surname; int grade1; int grade2; int grade3;};
+int summ(student x, student y)
+{
+    return (x.grade1 + x.grade2 + x.grade3 > y.grade1 + y.grade2 + y.grade3);
 }
-
+int t04_students() {
+    int n;
+    cin >> n;
+    vector <student> grades(n);
+    for(int i = 0; i < n; i++)
+        cin >> grades[i].name >> grades[i].surname >> grades[i].grade1 >> grades[i].grade2 >> grades[i].grade3;
+    sort(grades.begin(), grades.end(), summ);
+    for (student i : grades)
+        cout << i.name << ' ' << i.surname << ' ';
+    return 0;
+}
