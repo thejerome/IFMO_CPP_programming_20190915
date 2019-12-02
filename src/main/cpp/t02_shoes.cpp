@@ -28,10 +28,35 @@
 
 #include "t02_shoes.h"
 #include <iostream>
-
+#include <set>
 
 using namespace std;
 
 int t02_shoes() {
-    
+
+    multiset <int> shoes;
+    int N, size;
+    cin >> size >> N;
+
+    for (int i = 0; i < N; i++) {
+        int a;
+        cin >> a;
+        shoes.insert(a);
+    }
+
+    int max = 0;
+
+    for (int i: shoes) {
+        if ((max > 0) && (i - size >= 3)) {
+            max ++;
+            size = i;
+        }
+        else if ((max == 0) and (i - size >= 0)){
+            max ++;
+            size = i;
+        }
+    }
+
+    cout << max;
+    return(0);
 }

@@ -23,10 +23,42 @@
 
 #include "t03_points.h"
 #include <iostream>
-
+#include <vector>
+#include <cmath>
 
 using namespace std;
 
+double rad (double x, double y) {
+    double r = sqrt (x * x + y * y);
+    return (r);
+}
+
+struct point{
+    int x,y;
+};
+
 int t03_points() {
-    
+    vector <point> p;
+    int N;
+    cin >> N;
+
+    for (int i = 0; i < N; i++){
+        int x,y;
+        point a;
+        cin >> a.x;
+        cin >> a.y;
+        p.push_back(a);
+    }
+
+    for (int i = 0; i < p.size(); i++) {
+        for (int j = 0; j < p.size(); j++) {
+            if (rad (p[i].x, p[i].y) < rad (p[j].x, p[j].y))
+                swap(p[i], p[j]);
+        }
+    }
+
+    for (int i = 0; i < N; i++){
+        cout << p[i].x << " "<< p[i].y << " ";
+    }
+    return(0);
 }
