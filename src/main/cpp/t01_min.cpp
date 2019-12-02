@@ -28,8 +28,8 @@ int min(int h1, int h2) {
 	if (h1 < h2) return h1;
 	else return h2;
 }
-int min4(int a, int b, int c, int d) {
-	int min4 = min(min(a, b), min(c, d));
+int min4(int z1, int z2, int z3, int z4) {
+	int min4 = min(min(z1, z2), min(z3, z4));
 }
 int t01_min() {
 	int z1, z2, z3, z4;
