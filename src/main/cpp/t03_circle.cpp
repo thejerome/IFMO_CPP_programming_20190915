@@ -40,7 +40,7 @@ using namespace std;
 //function IsPointInCircle
 bool IsPointInCircle(double & x, double & y, double & xc, double & yc, double & r)
 {
-    if(sqrt(pow((xc-x),2)+pow((yc-y),2))==r)
+    if(sqrt(pow((xc-x),2)+pow((yc-y),2))<=r)
     return true;
     else return false;
 }
