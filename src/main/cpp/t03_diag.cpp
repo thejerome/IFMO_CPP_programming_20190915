@@ -22,6 +22,25 @@
 using namespace std;
 
 int t03_diag() {
-    
+    	int n= 0, i =0;
+	cin >> n;
+	int arr[n][n];
+	for  ( i = 0; i < n; i++){
+		for (int row=i, col=0;row<n && col <n; row++, col++){
+			arr[row][col] = i;}
+		for (int row = 0, col = i; row <n && col <n; row++, col++){
+			arr[row][col] = i;
+	}
+	}
+	
+	
+	
+	for (int row =0; row <n; row++){
+		for(int col = 0; col <n; col++){
+			cout << arr[row][col]<< " ";
+		}
+	cout << endl;
+	}
+}
     return 0;
 }
