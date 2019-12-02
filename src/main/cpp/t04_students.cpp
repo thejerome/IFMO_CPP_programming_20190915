@@ -29,10 +29,37 @@
 
 #include "t04_students.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 using namespace std;
 
+struct Student{
+    bool operator<(const Student& B) const{
+        return average > B.average;
+    }
+    string surname;
+    string name;
+    float average;
+};
+
+
 int t04_students() {
-    
+    vector <Student> v;
+    int n = 0;
+    short a,b,c;
+    string name, surname;
+
+    cin >> n;
+    for (int i = 0; i < n; i++){
+        cin >> surname >> name >> a >> b >> c;
+        Student S = {surname, name, (float)(a+b+c)/3};
+        v.push_back(S);
+    }
+
+    sort(v.begin(),v.end());
+
+    for (int i = 0; i < n; i++){
+        cout << v[i].surname<< " " << v[i].name << endl;
+    }
 }
 

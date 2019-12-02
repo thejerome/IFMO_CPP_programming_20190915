@@ -23,10 +23,44 @@
 
 #include "t03_points.h"
 #include <iostream>
-
+#include <cmath>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
+
+struct Point{
+    bool operator<(const Point& B) const{
+        return radiusVector < B.radiusVector;
+    }
+
+    double x;
+    double y;
+    double radiusVector;
+};
+
+
+
+
 int t03_points() {
+    vector <Point> v;
+    int n = 0;
+    double x,y;
+
+    cin >> n;
+    for (int i = 0; i < n; i++){
+        cin >> x >> y;
+        Point a = {x, y, sqrt(pow(x, 2) + pow(y, 2))};
+        //cout << i << ": " << a.x << " " << a.y << " " << a.radiusVector << endl;
+        v.push_back(a);
+    }
+
+    sort(v.begin(),v.end());
+
+    for (int i = 0; i < n; i++){
+        cout << v[i].x << " " << v[i].y << endl;
+    }
+
     
 }
