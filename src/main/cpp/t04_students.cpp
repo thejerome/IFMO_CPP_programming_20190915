@@ -47,10 +47,10 @@ double mejdinno(student s)
 
 void sort(student arr[], int n)
 {
-  bool swapped;
+
   for(int i=0;i<n-1;i++)
   {
-    swapped=false;
+    bool swapped=false;
     for(int j=0;j<n-i-1;j++)
     {
       if(mejdinno(arr[j]) <mejdinno(arr[j+1]))
