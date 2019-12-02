@@ -23,9 +23,37 @@
 
 #include "t04_both2.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
-int t04_both2() {
-
+int t04_both2()
+{
+        int N;
+        int M;
+        int numb = 0;
+        int counter = 0;
+        set <int> list1;
+        set <int> list2;
+        cin >> N;
+        for(int i = 0; i < N; i++)
+        {
+            cin >> numb;
+            list1.insert(numb);
+        }
+        cin >> M;
+        for(int i = 0; i < M; i++)
+        {
+            cin >> numb;
+            if (list1.count(numb) != 0)
+            {
+                list2.insert(numb);
+                counter++;
+            }
+        }
+        for (int i : list2)
+        {
+            cout << i << ' ';
+        }
+        return 0;
 }
