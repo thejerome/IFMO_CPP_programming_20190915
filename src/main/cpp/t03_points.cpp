@@ -31,7 +31,6 @@ using namespace std;
 
 int t03_points() {
 int N,x,y;
-float distance;
 multimap<float,int> point;
 vector<int> xy;
 cin >> N;
@@ -39,7 +38,7 @@ for(int i=0; i<N; i++){
     cin >> x>>y;
     xy.push_back(x);
     xy.push_back(y);
-    distance=sqrt(x*x+y*y);
+    float distance=sqrt(x*x+y*y);
     point.insert(pair<float,int>(distance,i));
 }
 for (auto it = point.begin(); it != point.end(); ++it){
