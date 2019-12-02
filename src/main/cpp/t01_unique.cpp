@@ -31,7 +31,7 @@ int t01_unique()
     for (int i = 0; i < N; i++)
         {
             int numb;
-            cin >> numb;
+            cin >> numb;//codacy 
             different.insert(numb);
         }
         cout << different.size();
