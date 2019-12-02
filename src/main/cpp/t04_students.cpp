@@ -37,7 +37,7 @@ using namespace std;
 
 int t04_students() {
 int n;
-double numb=0, m1, m2, m3;
+double m1, m2, m3;
 vector <string> v;
 set <double, greater<double> > m;
 map <double,vector<string> > stmark;
@@ -46,12 +46,11 @@ cin >> n;
 for(int i = 0; i < n; i++)
 {cin >> im >> fam >> m1 >> m2 >> m3;
 a = im + ' ' + fam;
-numb = (m1 + m2 + m3)/3;
-if(m.count(numb)!= 0){stmark[numb].push_back(a);}
+if(m.count((m1 + m2 + m3)/3)!= 0){stmark[(m1 + m2 + m3)/3].push_back(a);}
 else{
-m.insert(numb);
+m.insert((m1 + m2 + m3)/3);
 v.push_back(a);
-stmark[numb] = v;
+stmark[(m1 + m2 + m3)/3] = v;
 v.pop_back();   
     }
 }
