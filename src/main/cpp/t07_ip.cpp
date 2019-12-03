@@ -57,9 +57,10 @@ int t07_ip() {
             d=1;
         }
     }
-    if (b>0) cout<<"no";
-    else cout<<"yes";
+    if (b>0) cout<<"NO";
+    else cout<<"YES";
     
     return 0;
 
 }
+
