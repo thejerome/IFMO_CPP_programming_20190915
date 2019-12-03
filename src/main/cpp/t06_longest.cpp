@@ -22,21 +22,20 @@
 using namespace std;
 
 int t06_longest() {
-    setlocale(LC_ALL,"Eng");
+    string text;
+    string tp = "";
+    string max = "";
+    getline(cin, text);
 
-    char str[256];
-    cin.getline(str,256);
-
-    char* ptr=strtok(str," .,!?");
-    char* high=ptr;
-
-    do {
-        if(strlen(high)<strlen(ptr))
-            high=ptr;
+    for(int i=0; i < text.length(); i++)
+    {
+        if(text[i] != ' ')
+            tp += text[i];
+        else
+            tp = "";
+        if(tp.length() > max.length())
+            max=tp;
     }
-    while(ptr=strtok(NULL," .,!?"));
-
-    cout<< high;
-
-    return 0;
+    cout << max << endl;
+   return 0;
 }

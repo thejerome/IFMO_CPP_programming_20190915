@@ -43,3 +43,4 @@ int t07_ip() {
     }
     else cout << "NO";
     return 0;
+}
