@@ -103,9 +103,8 @@ int t06_homework() {
     }
 
     while(cin >> a){
-        int tmp_count = 0;
         if (st.find(a) == st.end()){
-            //cout << a << " ";
+            int tmp_count = 0;
             for (int i = 0; i < a.length(); i++){
                 if (64 < a[i] && a[i] < 91) {tmp_count++;  a[i] += 32;}
 
