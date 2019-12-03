@@ -30,10 +30,12 @@ int t03_toggle(){
         c=c-32;
         cout<<c;
     }
+    else {
     if (c >= 'A' && c <= 'Z') {
         c=c+32;
         cout<<c;
     }
     else cout<<c;
+    }
     return 0;
 }
