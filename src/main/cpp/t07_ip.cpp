@@ -34,5 +34,21 @@
 using namespace std;
 
 int t07_ip() {
+    string s = {};
+    int count = 0;
+
+
+
+    while(getline(cin, s, '.')){
+        //cout << count;
+        if (count > 3) {count++; break;}
+        if("" != s && (stoi(s) > 255 || stoi(s) < 0)){
+            cout << "NO";
+            return 0;
+        }
+        count++;
+    }
+    cout << (count == 4 ? "YES" : "NO");
+    return 0;
 
 }

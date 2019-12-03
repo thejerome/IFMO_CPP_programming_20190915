@@ -24,5 +24,11 @@
 using namespace std;
 
 int t02_up() {
+    char symbol;
+    cin >> symbol;
+    if (symbol >=97 && symbol <= 122) symbol = symbol - 32;
+    cout << symbol;
+
+    return 0;
     
 }

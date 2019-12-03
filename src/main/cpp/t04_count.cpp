@@ -28,5 +28,11 @@
 using namespace std;
 
 int t04_count() {
+    char s[255] = {};
+    int count = 0;
 
+    while (cin >> s) count ++;
+    cout << count;
+
+    return 0;
 }
