@@ -28,5 +28,19 @@
 using namespace std;
 
 int t04_count() {
+    string l;
+    int z = 0, x = 0;
+    bool s = false;
+    getline(cin, l);
+    if (l == ""){cout << "0"; return 0;}
 
+    for (;(l.find(' ',x)) != string::npos;) {
+        z++; s = true;
+        x = l.find(' ', x) + 1;
+    }
+    if(s)cout << ++z;
+    else cout << 1;
+    return 0;
 }
+
+

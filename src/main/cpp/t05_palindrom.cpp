@@ -18,10 +18,35 @@
 
 #include "t05_palindrom.h"
 #include <iostream>
+#include <cstring>
 
 
 using namespace std;
 
-int t05_palindrom() {
+bool cp(string word){
+  
+    int len = word.length();
+    for(int i = 0; i < len/2; ++i)
+    {
+        if(word[i] != word[len-i-1])
+        {
+            return false;
+        }
+    }
+    return true;
+}
 
+int t05_palindrom()
+{
+    string str;
+    cin >> str;
+    if(cp(str))
+    {
+        cout << "yes";
+    }
+    else
+    {
+        cout << "no";
+    }
+    return 0;
 }
