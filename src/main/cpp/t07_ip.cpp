@@ -36,13 +36,17 @@ using namespace std;
 int t07_ip() {
     string s;
     getline (cin, s);
-    int b,a;
+    int b,a,d=1;
     string c;
     b = 0;
     for (int i = 0; i < s.length(); i++) {
         if (s[i] != '.') {
             c=s[i];
-            a=a*10+stoi(c);
+            if (s[i]=='-'){
+                d=-1;
+            }
+            else
+            a=d*(a*10+stoi(c));
         }
     
         else {
@@ -50,10 +54,11 @@ int t07_ip() {
                 b++;
             }
             a=0;
+            d=1;
         }
     }
-    if (b>0) cout<<"NO";
-    else cout<<"YES";
+    if (b>0) cout<<"no";
+    else cout<<"yes";
     
     return 0;
 
