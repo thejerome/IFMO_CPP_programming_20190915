@@ -47,10 +47,8 @@ int t04_both2() {
         }
     }
 
-    set <int> :: iterator it = s3.begin();
-    while (it != s3.end()) {
+    for (auto it = s3.begin(); it != s3.end(); it++) {
         cout << *it << " ";
-        it++;
     }
 
 
