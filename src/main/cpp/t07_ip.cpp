@@ -34,13 +34,22 @@
 using namespace std;
 
 int t07_ip() {
-    int q, w, e, r;
-    char a, s, d;
-    cin >> q >> a >> w >> s >> e >> d >> r ;
-    if  ((q >= 0 && q <= 255) && ( (w >= 0 && w <= 255) || (w == 0) ) && ( (e >= 0 && e <= 255) || (e == 0) ) && ( (r >= 0 && r <= 255) ||
-            (r == 0) ) && a == '.' && s == '.' && d == '.') {
-        cout << "YES";
+    string a, b = "", c;
+    int d = 0;
+    getline(cin, a);
+    int x = a.length();
+    for (int i = 0; i < x + 1; i++) {
+        if (a[i] != '.' && i != x) {
+            b = b + a[i];
+        } else {
+            c = b;
+            b = "";
+            if (c == "")
+                d = x;
+            else if (stoi(c) >= 0 && stoi(c) <= 255)
+                d++;
+        }
     }
+    if (d == 4)cout << "YES";
     else cout << "NO";
-    return 0;
 }
