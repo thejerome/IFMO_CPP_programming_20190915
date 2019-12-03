@@ -23,12 +23,11 @@ using namespace std;
 
 int t06_longest() {
     string s = {};
-    int len = 0;
     int max_len = 0;
     string max = {};
 
     while (cin >> s){
-        len = s.length();
+        int len = s.length();
         if (max_len < len){
             max_len = len;
             max = s;
