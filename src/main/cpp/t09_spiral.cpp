@@ -54,7 +54,7 @@ int t09_spiral() {
                 } else {
                     i--;
                     if (i == counter + 1) {
-                        srt++;
+                        counter++;
                     };
                 };
             };
