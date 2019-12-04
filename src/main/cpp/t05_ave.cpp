@@ -25,7 +25,8 @@ int t05_ave() {
     double x,sum,AVE;
     int i;
     sum = 0;
-    i = 0;
+    i = 1;
+    cin >> x;
     while (x != 0) {
         cin >> x;
         sum += x;

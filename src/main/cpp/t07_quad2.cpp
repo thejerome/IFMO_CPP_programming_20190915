@@ -40,7 +40,7 @@ int t07_quad2() {
         else
             cout << 0;
     }
-    else if(a==0 && b!=0){
+    else if (a == 0 && b != 0){
         x1 = (-c / b);
         cout << 1 << " " << x1;
     }

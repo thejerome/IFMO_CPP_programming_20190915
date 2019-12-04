@@ -22,7 +22,7 @@
 using namespace std;
 
 int t06_quad() {
-    double a,b,c,D,x1,x2;
+    double a,b,c,D,x1;
     cin >> a >> b >> c;
     D = (b*b - 4*a*c);
     if (D == 0.0) {
@@ -31,12 +31,12 @@ int t06_quad() {
     };
     if (D > 0.0) {
         x1 = ((-b+sqrt(D))/(2*a));
-        x2 = ((-b-sqrt(D))/(2*a));
-        if (x1 < x2) {
-            cout << x1 << " " << x2;
+        c = ((-b-sqrt(D))/(2*a));
+        if (x1 < c) {
+            cout << x1 << " " << c;
         }
         else {
-            cout << x2 << " " << x1;
+            cout << c << " " << x1;
         };
     };
     return 0;
