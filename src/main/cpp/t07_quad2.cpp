@@ -20,6 +20,7 @@
 
 using namespace std;
 
+
 int t07_quad2()
 {
     double q, b, c;
