@@ -26,7 +26,8 @@ using namespace std;
 //function distance
 double distance( double a, double b , double c ,double d)
 {
-    return sqrt(pow((b-c),2) +pow((a-c),2)) ;
+    int q = 2;
+    return sqrt(pow((b-d),q) +pow((a-c),q)) ;
 }
 int t02_dist() {
     double a,b,c,d;
