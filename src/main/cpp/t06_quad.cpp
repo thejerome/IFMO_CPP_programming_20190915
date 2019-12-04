@@ -17,9 +17,27 @@
 #include "t06_quad.h"
 #include <iostream>
 #include <cmath>
+#include <math.h>
 
 using namespace std;
 
 int t06_quad() {
-
+    double a,b,c,D,x1;
+    cin >> a >> b >> c;
+    D = (b*b - 4*a*c);
+    if (D == 0.0) {
+        x1 = (-b/(2*a));
+        cout << x1;
+    };
+    if (D > 0.0) {
+        x1 = ((-b+sqrt(D))/(2*a));
+        c = ((-b-sqrt(D))/(2*a));
+        if (x1 < c) {
+            cout << x1 << " " << c;
+        }
+        else {
+            cout << c << " " << x1;
+        };
+    };
+    return 0;
 };
