@@ -55,7 +55,7 @@ int t05_syn() {
     {
         cout << it->second;
     }
-    else if ((it = x.(r)) != x.end())
+    else if ((it = x.find(r)) != x.end())
     {
         cout << it->second;
     }
