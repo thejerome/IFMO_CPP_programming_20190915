@@ -22,7 +22,35 @@
 
 using namespace std;
 
-int t08_queen(){
+int desk[10];
 
+bool proverka(int q, int w, int e) {
+    if (e == q) return true;
+    else return desk[e] != w && (q - e) != (desk[e] - w) && (q - e) != (w - desk[e]) && proverka(q, w, e + 1);
+}
+
+int put_queen(int A, int q, int w) {
+    if (q == A) {
+        return 1;
+    }
+    else {
+        if (w < A) {
+            int r = 0;
+            if (proverka(q, w, 0)) {
+                desk[q] = w;
+                r = put_queen(A, q + 1, 0);
+            }
+            return r + put_queen(A, q, w + 1);
+        }
+        else {
+            return 0;
+        }
+    }
+}
+
+int t08_queen() {
+    int A;
+    cin >> A;
+    cout << put_queen(A, 0, 0);
     return 0;
 }
