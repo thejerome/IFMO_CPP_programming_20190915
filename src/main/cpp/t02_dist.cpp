@@ -27,7 +27,7 @@ double distance( double a, double b , double c ,double d)
 {
     return (sqrt(pow(abs(c-a),2))+(pow(abs(d-b),2)));
 }
-int main() {
+int t02_dist() {
     double a,b,c,d;
     cin >> a >> b >> c >> d;
     cout << distance(a,b,c,d);

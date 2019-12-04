@@ -42,7 +42,7 @@ double IsPointInCircle( double x, double y, double xc, double yc,double r)
     return pow (x-xc, 2) + pow( y-yc, 2) < pow(r,2);
 
 }
-int main(){
+int t03_circle(){
     double x,y,xc,yc,r;
     cin >> x >> y >>xc >>yc >>r;
      if (IsPointInCircle(x,y,xc,yc,r))cout << "YES";
