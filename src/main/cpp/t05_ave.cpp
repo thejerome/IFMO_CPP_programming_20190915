@@ -24,9 +24,9 @@ using namespace std;
 int t05_ave() {
     double x,sum,AVE;
     int i;
-    sum = 0;
     i = 1;
     cin >> x;
+    sum = x;
     while (x != 0) {
         cin >> x;
         sum += x;
