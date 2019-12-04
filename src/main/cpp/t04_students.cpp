@@ -29,10 +29,41 @@
 
 #include "t04_students.h"
 #include <iostream>
-
+#include <string>
 using namespace std;
 
+struct students {
+    string surname;
+    string name;
+    double grades;
+};
+int nol = 0 , odin = 1;
+double tri = 3.0;
 int t04_students() {
-    
+int n;
+cin >> n;
+students student[n];
+for ( int i = nol; i < n ; i++) {
+    int max1, max2, max3;
+    cin >> student[i].surname;
+    cin>> student[i].name;
+    cin >> max1;
+    cin >>max2;
+    cin >> max3;
+    student[i].grades = (max1 + max2 + max3) / tri;
+}
+
+for ( int j = 1; j < n; j++){
+    if  (student[j-odin].grades < student[j].grades) {
+    students last;
+    last = student[j-odin];
+        student[j-odin] = student[j];
+        student[j] = last;
+    }
+}
+for (int k = nol; k < n; k++){
+    cout << student[k].surname << ' ' << student[k].name << endl;
+}
+return 0;
 }
 
