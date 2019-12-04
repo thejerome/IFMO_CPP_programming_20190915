@@ -19,9 +19,25 @@
 
 #include "t01_unique.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t01_unique() {
-    
+    set<int> d;
+    int n,z, k[n];
+
+    cin >> n;
+
+    while ( z != n) {
+        cin >> k[n];
+        d.emplace(k[n]);
+        z++;
+
+
+    }
+
+    cout << d.size();
+
+    return 0;
 }

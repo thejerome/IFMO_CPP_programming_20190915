@@ -27,10 +27,39 @@
 
 #include "t05_syn.h"
 #include <iostream>
+#include <map>
 
 
 using namespace std;
 
 int t05_syn() {
+    int a;
+    cin >> a;
+    string q;
+    string w;
+    string r;
 
+    map <string, string> z, x;
+
+    for (int i = 0; i<a; i++)
+    {
+        cin >> w >> q;
+        z[w] = q;
+        x[q] = w;
+    }
+
+    cin>> r;
+
+    map <string, string>::iterator it;
+    if ((it = z.find(r)) != z.end())
+    {
+        cout << it->second;
+    }
+    else if ((it = x.(r)) != x.end())
+    {
+        cout << it->second;
+    }
+
+    return 0;
 }
+
