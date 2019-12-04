@@ -32,5 +32,17 @@
 using namespace std;
 
 int t05_syn() {
-
+    map <string,string> dic;
+    int n;
+    cin >> n;
+    for (int i = 0;i<n;i++){
+        string s1,s2;
+        cin >> s1 >> s2;
+        dic[s1]=s2;
+        dic[s2]=s1;
+    }
+    
+    string x;
+    cin >> x;
+    cout << dic[x];  
 }
