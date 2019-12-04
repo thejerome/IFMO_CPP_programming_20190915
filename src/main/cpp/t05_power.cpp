@@ -22,21 +22,40 @@
 //
 //4
 
+
 #include <iostream>
 #include <cmath>
 
 using namespace std;
-//function distance
-double power(double a, int n)
-{
-    return a*n;
 
-}
-int t05_power(){
+
+double power(double x, int y) {
     double a;
-    int n;
-    cin >> a >> n;
-    cout << (a*n);
+    int z = 1,c =2;
+    if (y == 0){
+        a = z;
+    }
+    else if (y == z) {
+        a = x;
+    }
+    else if (y > z) {
+        a = x;
+        for (int i = c; i <= y; i++) {
+            a = a * x;
+        }
+    }
+    else if (y < 0) {
+        a = x;
+        for (int i = c; i <= -y; i++) a = a * x;
+        a = z / a;
+    }
+    return a;
+}
+
+int t05_power() {
+    double  x;
+    int y;
+    cin >> x >> y;
+    cout << power(x,y);
     return 0;
 }
-

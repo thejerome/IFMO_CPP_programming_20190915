@@ -17,6 +17,7 @@
 //1.41421
 
 #include <iostream>
+#include <iomanip>
 #include <cmath>
 
 
@@ -25,12 +26,12 @@ using namespace std;
 //function distance
 double distance( double a, double b , double c ,double d)
 {
-    return (sqrt(pow(abs(c-a),2))+(pow(abs(d-b),2)));
+    return sqrt(pow((b-c),2) +pow((a-c),2)) ;
 }
 int t02_dist() {
     double a,b,c,d;
     cin >> a >> b >> c >> d;
-    cout << distance(a,b,c,d);
+    cout << fixed << setprecision(5)  << distance(a,b,c,d);
     return 0;
 }
 
