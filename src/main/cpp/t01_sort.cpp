@@ -25,7 +25,7 @@
 
 using namespace std;
 
-int t01_sort() {{
+int t01_sort() {
     int l;
     int i = 0;
     cin >> l;
