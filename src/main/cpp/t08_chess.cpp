@@ -24,6 +24,31 @@
 using namespace std;
 
 int t08_chess() {
-    
+    int n,m, num, num2 = 1;
+
+    cin >> n;
+    cin >> m;
+
+    int arr[n][m];
+
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            if((i + j)%2 == 0){
+                num = num2;
+                num2++;
+            }else{
+                num = 0;
+            }
+            arr[i][j] = num;
+        }
+    }
+
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            printf("%4d", arr[i][j]);
+        }
+        cout << "\n";
+    }
+
     return 0;
 }

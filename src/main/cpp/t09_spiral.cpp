@@ -22,6 +22,53 @@
 using namespace std;
 
 int t09_spiral() {
-    
-    return 0;
+    int n,m;
+
+    cin >> n;
+    cin >> m;
+
+    int arr[n][m];
+
+    bool isRow = true, isFwd = true;
+
+    int maksI = n, maksJ = m, row = 0, col = 0, rowl = 1, coll = 0;
+    arr[col][row] = 1;
+
+    for (int i = 2; i <= n * m; ++i) {
+        if(isRow){
+            rowl++;
+            if(isFwd){
+                row++;
+            }else{
+                row--;
+            }
+        }else{
+            coll++;
+            if(isFwd){
+                col++;
+            }else{
+                col--;
+            }
+        }
+        arr[col][row] = i;
+
+        if(rowl == maksJ){
+            isRow = false;
+            maksI--;
+            rowl = 0;
+        }
+        if(coll == maksI){
+            isRow = true;
+            isFwd = !isFwd;
+            maksJ--;
+            coll = 0;
+        }
+    }
+
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            printf("%4d", arr[i][j]);
+        }
+        cout << "\n";
+    }
 }

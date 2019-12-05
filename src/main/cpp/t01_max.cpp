@@ -27,6 +27,28 @@
 using namespace std;
 
 int t01_max() {
-    
+
+    int max, indRow=0, indCol=0, n, m, el;
+
+    cin >> n;
+    cin >> m;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> el;
+            if(i ==0 && j==0){
+                max = el;
+            }
+            if(el > max){
+                indRow = i;
+                indCol = j;
+                max = el;
+            }
+            //cout << i << " " << j << "\n";
+        }
+    }
+
+    cout << indRow << " " << indCol;
+
     return 0;
 }

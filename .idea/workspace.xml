@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="false">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="21e85e6c-31ce-46bf-8c84-db9e2f33fae3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/cpp/t09_equals.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/cpp/t10_unique.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/t01_max.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/t01_max.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/t02_star.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/t02_star.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/t03_diag.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/t03_diag.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/t04_swap.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/t04_swap.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/t05_kdiag.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/t05_kdiag.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/t06_cinema.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/t06_cinema.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/t07_snake.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/t07_snake.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/t08_chess.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/t08_chess.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/t09_spiral.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/t09_spiral.cpp" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="t09_spiral.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/cpp/t09_spiral.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="992">
+              <caret line="72" column="5" lean-forward="false" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="t10_unique.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/cpp/t10_unique.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="t09_equals.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/cpp/t09_equals.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-317">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="t11_queen.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/cpp/t11_queen.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="331">
+              <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="t03_diag.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/cpp/t03_diag.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="24" column="3" lean-forward="false" selection-start-line="24" selection-start-column="3" selection-end-line="26" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="t04_swap.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/cpp/t04_swap.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="407">
+              <caret line="58" column="5" lean-forward="false" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="t05_kdiag.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/cpp/t05_kdiag.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="64" column="5" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="64" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="t07_snake.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/cpp/t07_snake.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="t08_chess.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/cpp/t08_chess.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="t06_cinema.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/cpp/t06_cinema.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="723">
+              <caret line="63" column="14" lean-forward="false" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/cpp/t02_triangle.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t03_equal3.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t04_chess_rook.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t05_chess_king.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t06_chess_bishop.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t07_chess_queen.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t08_chess_knight.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t09_choco.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t10_sort3.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t11_boxes.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t01_max3.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/main.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t01_quad.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t02_divisor.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t04_sum.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t05_max.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t06_max_count.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t07_max_2.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t08_fibb.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t09_row.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t10_max_local.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t03_twos.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t01_frac.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t02_frac_2.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t04_deposit.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t05_ave.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t03_triangle.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t06_quad.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t07_quad2.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t01_even.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t11_queen.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t09_equals.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t08_cycleswap.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t07_swap.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t06_different.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t05_minodd.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t04_neighbors.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t03_bigger.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t02_even2.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t10_unique.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t01_max.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t02_star.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t03_diag.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t04_swap.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t05_kdiag.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t07_snake.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t08_chess.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t06_cinema.cpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/t09_spiral.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="IFMO_CPP_programming_20190915" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="IFMO_CPP_programming_20190915" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFMO_CPP_programming_20190915" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="IFMO_CPP_programming_20190915" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFMO_CPP_programming_20190915" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="IFMO_CPP_programming_20190915" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFMO_CPP_programming_20190915" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="IFMO_CPP_programming_20190915" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="cpp" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="IFMO_CPP_programming_20190915" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="IFMO_CPP_programming_20190915" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="IFMO_CPP_programming_20190915" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21e85e6c-31ce-46bf-8c84-db9e2f33fae3" name="Default" comment="" />
+      <created>1571304526358</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571304526358</updated>
+      <workItem from="1571304529234" duration="37000" />
+      <workItem from="1571304854195" duration="33000" />
+      <workItem from="1571304916320" duration="4651000" />
+      <workItem from="1571379070465" duration="394000" />
+      <workItem from="1571379998653" duration="4646000" />
+      <workItem from="1571418985700" duration="663000" />
+      <workItem from="1571608392296" duration="215000" />
+      <workItem from="1572951264865" duration="4379000" />
+      <workItem from="1574961529604" duration="7178000" />
+      <workItem from="1575221487291" duration="1994000" />
+      <workItem from="1575285970498" duration="16931000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="41121000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19789983" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41403025" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t06_chess_bishop.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t07_chess_queen.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t08_chess_knight.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t09_choco.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t10_sort3.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t11_boxes.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t02_triangle.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t01_max3.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t01_quad.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t05_max.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t06_max_count.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t07_max_2.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t08_fibb.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t09_row.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t10_max_local.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t03_twos.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t04_sum.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t02_divisor.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t01_frac.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t02_frac_2.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t04_deposit.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t05_ave.h" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t05_ave.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t06_quad.h" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t03_triangle.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t06_quad.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t07_quad2.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t08_cycleswap.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t06_different.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t05_minodd.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t07_swap.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t04_neighbors.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t03_bigger.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t02_even2.cpp" />
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t01_max.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t02_star.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="42" column="5" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t05_kdiag.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t03_diag.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="24" column="3" lean-forward="false" selection-start-line="24" selection-start-column="3" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t04_swap.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="58" column="5" lean-forward="false" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t08_chess.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t07_snake.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t05_kdiag.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="64" column="5" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="64" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t06_cinema.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="723">
+          <caret line="63" column="14" lean-forward="false" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t11_queen.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t01_even.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-196">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t09_equals.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-317">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t09_spiral.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="992">
+          <caret line="72" column="5" lean-forward="false" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t10_unique.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
