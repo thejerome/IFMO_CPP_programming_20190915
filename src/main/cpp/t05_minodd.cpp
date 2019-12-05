@@ -29,4 +29,27 @@ using namespace std;
 
 int t05_minodd() {
 
+    int n;
+    cin >> n;
+    int num, max;
+    bool maxSet = false;
+
+    for(int i = 0;i<n;i++){
+        cin >> num;
+        if(num % 2 != 0 && !maxSet){
+            max = num;
+            maxSet = true;
+        }
+        if(num % 2 != 0 && num < max){
+            max = num;
+            maxSet = true;
+        }
+    }
+
+    if(maxSet){
+        cout << max;
+    }else{
+        cout << 0;
+    }
+
 }

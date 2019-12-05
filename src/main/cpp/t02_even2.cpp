@@ -20,4 +20,14 @@ using namespace std;
 
 int t02_even2() {
 
+    int n, num;
+    cin >> n;
+
+    for(int i =0;i<n;i++){
+        cin >> num;
+        if(num % 2 == 0){
+            cout << num << " ";
+        }
+    }
+
 }

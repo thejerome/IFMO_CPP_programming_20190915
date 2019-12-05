@@ -27,4 +27,25 @@ using namespace std;
 
 int t09_equals() {
 
+    int n;
+    int num;
+    int ans = 0;
+    cin >> n;
+
+    int arr[n];
+
+    for(int i = 0; i<n; i++){
+        cin >> num;
+        arr[i] = num;
+    }
+
+    for(int i = 0; i<n; i++){
+        for(int j=i+1;j<n;j++){
+            if(arr[i] == arr[j]){
+                ans ++;
+            }
+        }
+    }
+
+    cout << ans;
 }
