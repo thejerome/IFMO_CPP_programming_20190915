@@ -80,9 +80,46 @@
 
 #include "t06_homework.h"
 #include <iostream>
-
+#include <set>
+#include <string>
 using namespace std;
 
 int t06_homework() {
-
+set <string> dic; 
+    set <string> dic1; 
+    int n, l, ans=0, num=0;
+    string a, st, check;
+    bool fail=false;
+    cin >> n;
+    for (int i=0;i<n;i++){
+        cin >> a;
+        dic.insert(a);
+        for (int j=0;j<a.length();j++){
+            st += toupper(a[j]);
+        }
+        dic1.insert(st);
+        st = "";
+    }
+    while (cin >> a){
+            if (dic.find(a) == dic.end()){
+                for (int k=0;k<a.length();k++)
+                    if (a[k] >= 'A' && a[k] <= 'Z'){
+                        num++;
+                    }
+                check = "";
+                for (int j=0;j<a.length();j++){
+                    check += toupper(a[j]);
+                }
+                if (num != 1)
+                    fail = true;
+                else if ((dic1.find(check) != dic1.end()))
+                    fail = true;
+                if (fail)
+                    ans++;
+                fail=false; 
+                num=0;
+            }
+        }
+    cout << ans;
+    return 0;
 }
