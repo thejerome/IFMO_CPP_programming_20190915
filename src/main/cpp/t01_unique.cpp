@@ -31,5 +31,5 @@ int t01_unique() {
         cin >> a;
         b.insert(a);
     }
-    cout << size(b);    
+    cout << b.size();    
 }
