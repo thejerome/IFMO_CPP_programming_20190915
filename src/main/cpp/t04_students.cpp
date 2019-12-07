@@ -29,10 +29,39 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <algorithm>
+#include <vector>
 
 using namespace std;
 
+struct stud
+{
+    string name;
+    string surname;
+    double x;
+    double y;
+    double z;
+};
+
+bool comp(stud &lhs, stud &rhs){
+    double q=(lhs.x + lhs.y + lhs.z)/3;
+    double w=(rhs.x + rhs.y + rhs.z)/3;
+    return q>w;
+}
+
 int t04_students() {
-    
+vector<stud> nums;
+stud s{};
+int n;
+cin >> n;
+for (int i = 0 ; i < n ; i ++)
+{
+    nums.push_back(s);
+    cin >> nums.at(i).name >> nums.at(i).surname >> nums.at(i).x >> nums.at(i).y >> nums.at(i).z;
+}
+sort(nums.begin(), nums.end(), comp);
+for (const auto& i: nums)
+    cout << i.name << " " << i.surname << endl;
+return 0;
 }
 

@@ -23,10 +23,42 @@
 
 #include "t03_points.h"
 #include <iostream>
-
+#include <cmath>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
+struct points
+{
+    double x, y;
+};
+
+double dist (points & a)
+{
+    return sqrt(a.x*a.x + a.y*a.y);
+};
+
+
 int t03_points() {
-    
+    vector<points> nums;
+    points s{};
+    int n;
+    cin >> n;
+    for (int i = 0 ; i < n ; i ++)
+    {
+        nums.push_back(s);
+        cin >> nums.at(i).x >> nums.at(i).y;
+    }
+    for (int i = 0 ; i < nums.size() ; i ++)
+    {
+        for (int j = 0; j < nums.size(); ++j)
+        {
+            if (dist(nums[i]) < dist(nums[j]))
+                swap(nums[i], nums[j]);
+        }
+    }
+    for (auto i: nums)
+        cout << i.x << " " << i.y << endl;
+return 0;
 }

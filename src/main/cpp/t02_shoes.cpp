@@ -28,10 +28,29 @@
 
 #include "t02_shoes.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
 int t02_shoes() {
-    
+int lapa, n, c = 0, a = 0;
+cin >> lapa >> n;
+vector<int> okdoomer;
+for (int i = 0 ; i < n ; i++)
+{
+    cin >> a;
+    okdoomer.push_back(a);
+}
+sort(okdoomer.begin(),okdoomer.end());
+for (auto ii = okdoomer.begin() ; ii < okdoomer.end() ; ii++)
+{
+    if(*ii >= lapa)
+    {
+        lapa = *ii + 3;
+        c++;
+    }
+}
+cout << c;
+return 0;
 }

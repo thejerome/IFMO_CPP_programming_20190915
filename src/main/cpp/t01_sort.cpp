@@ -19,10 +19,19 @@
 
 #include "t01_sort.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
 int t01_sort() {
-    
+int n;
+cin >> n;
+vector<int> okboomer(n);
+for (int i = 0 ; i < n ; i ++)
+	cin >> okboomer[i];
+sort(okboomer.begin() , okboomer.end());
+for (int now : okboomer)
+	cout << now << " ";
+return 0;    
 }
