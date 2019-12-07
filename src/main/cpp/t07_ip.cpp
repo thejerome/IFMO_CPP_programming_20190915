@@ -33,7 +33,8 @@
 
 using namespace std;
 
-int t07_ip() {
+int t07_ip() 
+{
     string s;
     getline (cin, s);
     int b,a,d=1;
