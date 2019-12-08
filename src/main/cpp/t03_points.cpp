@@ -46,13 +46,13 @@ int t03_points() {
 	int n;
 	cin >> n;
 	coordinats ex;
-	vector <coordinats> N(n);
+	vector <coordinats> N;
 	for (int i = 0; i < n; i++) {
 		int x1, y1;
 		cin >> x1 >> y1;
 		ex.a = x1;
 		ex.b = y1;
-		N(n)=ex;
+		N.push_back(ex);
 	}
 
 	sort(N.begin(), N.end(), compare);
