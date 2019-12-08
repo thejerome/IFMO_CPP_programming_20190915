@@ -49,7 +49,7 @@ int t11_queen() {
  bool l = 1;
  for(int i = 0 ; i < n ; i++) {
      for(int k = i + 1; k < n ; k++) {
-         if ((a[i] == a[k]) | (m[i] == m[k]) | (abs(a[i] - a[k]) | abs(m[i] - m[k]))) {
+         if ((a[i] == a[k]) | (m[i] == m[k]) | (abs(a[i] - a[k]) = abs(m[i] - m[k]))) {
          l = 0;
          }
      }
