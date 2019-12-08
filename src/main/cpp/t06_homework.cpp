@@ -80,9 +80,56 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <map>
+#include <set>
 
 using namespace std;
 
+pair<string, int> lower_case(string word)
+{
+	string word_t;
+	int count = 0;
+	for (char it : word)
+	{
+		if (it >= 'A' && it <= 'Z')
+		{
+			it += ('a' - 'A');
+			count++;
+		}
+		word_t += it;
+	}
+	return make_pair(word_t, count);
+}
 int t06_homework() {
-
+	map<string, set<string>> m;
+	int N;
+	cin >> N;
+	for (int i = 0; i < N; ++i)
+	{
+		string word;
+		cin >> word;
+        m[lower_case(word).first].insert(word);
+	}
+	string word;
+	int count = 0;
+	while (cin >> word)
+	{
+		pair<string, int> pair_string_int = lower_case(word);
+		if(m.find(pair_string_int.first) == m.end())
+		{ 
+			if (pair_string_int.second != 1)
+			{
+				count++;
+			}
+		}
+		else
+		{
+			if (m[pair_string_int.first].find(word) == m[pair_string_int.first].end())
+			{
+				count++;
+			}
+		}
+	}
+	cout << count << endl;
+	return 0;
 }
