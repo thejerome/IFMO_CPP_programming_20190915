@@ -39,5 +39,25 @@
 using namespace std;
 
 int t11_queen() {
-
+ int n=8;
+ int a[n];
+ int m[n];
+ 
+ for (int i=0; i < n; i++) {
+     cin >> a[i] >> m[i];
+ }
+ bool l = 1;
+ for(int i = 0 ; i < n ; i++) {
+     for(int k = i + 1; k < n ; k++) {
+         if ((a[i] == a[k]) | (m[i] == m[k]) | (abs(a[i] - a[k]) == abs(m[i] - m[k]))) {
+         l = 0;
+         }
+     }
+ }
+ if (l==true) { 
+    cout << "NO";
+ }
+ else {
+ cout << "YES";
+ }
 }
