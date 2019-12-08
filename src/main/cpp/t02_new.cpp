@@ -30,7 +30,7 @@
 using namespace std;
 
 int t02_new() {
-    int n,c;
+    int n,c=0;
     cin >> n;
     set <int> a;
     for (int i = 0; i < n; i++){
