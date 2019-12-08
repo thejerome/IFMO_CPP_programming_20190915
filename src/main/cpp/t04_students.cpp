@@ -59,7 +59,7 @@ int t04_students() {
 	vector <call> c1;
 	for (int i = 0; i < n; i++) {
 		string name,surname;
-		cin >> name >> surname;
+		cin >> surname >> name;
 		Student.Name = name;
 		Student.Surname = surname;
 		int a, b, c;
@@ -72,7 +72,7 @@ int t04_students() {
 	}
 	sort(c1.begin(), c1.end(), compare);
 	for (auto i : c1) {
-		cout << i.Name <<" "<< i.Surname<<endl;
+		cout << i.Surname <<" "<< i.Name<<endl;
 	}
 	return 0;
 }
