@@ -30,5 +30,15 @@
 using namespace std;
 
 int t02_new() {
-    
+    int n,c;
+    cin >> n;
+    set <int> a;
+    for (int i = 0; i < n; i++){
+        int b;
+        cin >> b;
+        c=a.size();
+        a.insert(b);
+        if (c==a.size()) cout<<"YES"<<endl;
+        else cout<<"NO"<<endl;
+    }
 }
