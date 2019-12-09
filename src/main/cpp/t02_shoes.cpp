@@ -33,5 +33,22 @@
 using namespace std;
 
 int t02_shoes() {
-    
+    int s,v=0,r=0;
+    int n;
+    cin >> s;
+    cin >> n;
+    multiset <int> a;
+    for (int i = 0; i < n; i++){
+        int b;
+        cin >> b;
+        a.insert(b);
+    }
+    for (auto i = a.begin(); i != a.end(); i++){
+        cout<<*i<<endl;
+       if (s<*i && v+3<=*i) {
+           r++;
+           v=*i;
+       }
+    }
+    cout<<r; 
 }
