@@ -80,9 +80,49 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t06_homework() {
+    set <string> Dictionary;
+    int countErr = 0;
+    int N = 0;
+    cin >> N;
+    for (int i = 0; i < N; i++) {
+        string a;
+        cin >> a;
+        Dictionary.insert(a);
+    }
+    string word;
+    while (cin >> word) {
+        bool Correct = false;
+        bool IsInDictionary = Dictionary.count(word);
+        int countCaps = 0;
+        if (IsInDictionary) Correct = true;
+        else {
+            for (char j : word) {
+                if (j <= 'Z' && j >= 'A')
+                    countCaps++;
+            }
+        }
+        if (countCaps == 1) {
+            Correct = true;
+            for (char &j : word)
+                j = tolower(j);
 
+            for (int j = 0; j < word.length(); j++) {
+                word[j] = toupper(word[j]);
+                if (Dictionary.count(word)) {
+                    Correct = false;
+                    break;
+                }
+                word[j] = tolower(word[j]);
+            }
+        }
+        if (!Correct) {
+            countErr++;
+        }
+    }
+    cout << countErr;
 }
