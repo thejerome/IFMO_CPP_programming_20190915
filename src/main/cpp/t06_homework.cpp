@@ -80,9 +80,24 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <map>
 
 using namespace std;
 
 int t06_homework() {
-
+    int n;
+    string a1, a2, a;
+    cin >> n;
+    map <string, string> s;
+    for (int i = 0; i < n; i++) {
+        cin >> a1 >> a2;
+        s[a1] = a2;
+    }
+    cin >> a;
+    for (auto i : s) {
+        if (i.first == a)
+            cout << i.second;
+        if (i.second == a)
+            cout << i.first;
+    }
 }
