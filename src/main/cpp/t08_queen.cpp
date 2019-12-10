@@ -24,7 +24,7 @@ using namespace std;
 
 int k = 0;
 
-int ferz (int n, int j, bool r, bool a, bool b) {
+int ferz (int n, int j, bool* r, bool* a, bool* b) {
 	for (int i = 0; i < n; i++) {
 		if (!r[i] && !a[i + j] && !b[n + i - j]) {
 			r[i] = true;
@@ -43,7 +43,6 @@ int ferz (int n, int j, bool r, bool a, bool b) {
 	}
 }
 int t08_queen(){
-
 	int n;
 	cin >> n;
 	bool r[n], a[2 * n - 1], b[2 * n - 1];
