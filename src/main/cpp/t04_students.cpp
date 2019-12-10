@@ -50,12 +50,13 @@ int t04_students() {
 	stud p;
 	for (int i = 0; i < n; i++)
 	{
-		s.push_back(p);
+		
 		cin >> f >> l >> p1 >> p2 >> p3;
-		s[i].x = f;
-		s[i].y = l;
-		s[i].r = p1 + p2 + p3;
-		s[i].n = c++;
+		p.x = f;
+		p.y = l;
+		p.r = p1 + p2 + p3;
+		p.n = c++;
+		s.push_back(p);
 	}
 	for (int i = 0; i < n - 1; i++)
 	{

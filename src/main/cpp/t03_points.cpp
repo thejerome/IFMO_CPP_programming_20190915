@@ -43,11 +43,12 @@ int t03_points() {
 	points p;
 	for(int i=0;i<n;i++)
 	{
-		s.push_back(p);
+		
 		cin >> p1 >> p2;
-		s[i].x = p1;
-		s[i].y = p2;
-		s[i].r = sqrt(p1 * p1 + p2 * p2);
+		p.x = p1;
+		p.y = p2;
+		p.r = sqrt(p1 * p1 + p2 * p2);
+		s.push_back(p);
 	}
 	for(int i=0; i<n-1;i++)
 	{
