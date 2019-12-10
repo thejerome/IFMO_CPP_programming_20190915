@@ -21,7 +21,7 @@
 
 using namespace std;
 
-int distance(int x1,int y1,int x2,int y2)  {
+double distance(int x1,int y1,int x2,int y2)  {
 		int sx, sy;
 	sx = x2 - x1;
 	sy = y2 - y1;
