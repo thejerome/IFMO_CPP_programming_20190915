@@ -29,10 +29,50 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
 
 using namespace std;
 
 int t04_students() {
-    
+	struct stud
+	{
+		string x;
+		string y;
+		int r;
+		int n;
+	};
+	vector<stud> s;
+	int n = 0, p1 = 0, p2 = 0, p3 = 0, c = 0;
+	string f, l;
+	cin >> n;
+	stud p;
+	for (int i = 0; i < n; i++)
+	{
+		s.push_back(p);
+		cin >> f >> l >> p1 >> p2 >> p3;
+		s[i].x = f;
+		s[i].y = l;
+		s[i].r = p1 + p2 + p3;
+		s[i].n = c++;
+	}
+	for (int i = 0; i < n - 1; i++)
+	{
+		for (int j = 0; j < n - 1; j++)
+		{
+			if (s[j].r < s[j + 1].r) { swap(s[j], s[j + 1]); }
+		}
+	}
+
+	for (int i = 0; i < n - 1; i++)
+	{
+		for (int j = 0; j < n - 1; j++)
+		{
+			if (s[j].r == s[j + 1].r && s[j].n > s[j + 1].n) { swap(s[j], s[j + 1]); }
+		}
+	}
+	
+	for (int i = 0; i < n; i++) { cout << s[i].x << " " << s[i].y << " "; }
 }
 
