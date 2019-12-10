@@ -37,9 +37,19 @@
 
 using namespace std;
 
-//function IsPointInCircle
+
+bool IsPointInCircle(double x, double y, double xr, double yr, double r)
+{
+	if (sqrt(pow((xr - x), 2) + pow((yr - y), 2)) <= r)
+		return true;
+	else return false;
+}//function IsPointInCircle
 
 int t03_circle() {
-
+	double x, y, xr, yr, r;
+	cin >> x >> y >> xr >> yr >> r;
+	if (IsPointInCircle(x, y, xr, yr, r) == true)
+		cout << "YES";
+	else cout << "NO";
     return 0;
 }

@@ -22,7 +22,39 @@
 
 using namespace std;
 
+int k = 0;
+
+int ferz (int n, int j, bool r, bool a, bool b) {
+	for (int i = 0; i < n; i++) {
+		if (!r[i] && !a[i + j] && !b[n + i - j]) {
+			r[i] = true;
+			a[i + j] = true;
+			b[n + i - j] = true;
+			if (j < n - 1) {
+				ferz(n, j + 1, r, a, b);
+			}
+			else {
+				k++;
+			}
+			r[i] = false;
+			a[i + j] = false;
+			b[n + i - j] = false;
+		}
+	}
+}
 int t08_queen(){
 
+	int n;
+	cin >> n;
+	bool r[n], a[2 * n - 1], b[2 * n - 1];
+	for (int i = 0; i < n; i++) {
+		r[i] = false;
+	}
+	for (int i = 0; i < 2 * n - 1; i++) {
+		a[i] = false;
+		b[i] = false;
+	}
+	ferz(n, 0, r, a, b);
+	cout << k << endl;
     return 0;
 }
