@@ -22,7 +22,49 @@
 
 using namespace std;
 
-int t08_queen(){
+int k = 0;
+bool a[10][10];
 
+void ferz(int n,  int s) {
+    
+    for(int i = 0; i < n; i++){
+        if(!a[i-1+s][s+1] && !a[i+1+s][s+1] && !a[i+s][s+1]){
+            a[i-1+s][s+1] =1; 
+            a[i+1+s][s+1] =1; 
+            a[i+s][s+1] =1;
+            if(s < n-1){
+                
+                ferz(n, s+1);
+            }
+            else {
+                for(int h = 0; h < n; h++){
+                    for(int o = 0; o < n; o++)
+                        cout << a[h][o] << ' ';
+                    cout << endl;    
+                }
+                cout << endl;    
+                
+                    k++; 
+            }    
+            a[i-1][s+1] =0; 
+            a[i+1][s+1] =0; 
+            a[i][s+1] =0;    
+        }
+    
+    }
+    
+}
+
+
+int t08_queen(){
+    int n;
+    cin >> n;
+    
+    for(int i = 0; i < n; i++)
+        for(int j = 0; j < n; j++)
+            a[i][j] = 0;
+            
+    ferz(n,0);
+    cout << k;
     return 0;
 }
