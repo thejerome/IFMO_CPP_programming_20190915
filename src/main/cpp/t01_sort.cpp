@@ -19,7 +19,8 @@
 
 #include "t01_sort.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
