@@ -36,6 +36,7 @@ using namespace std;
 int t02_shoes() {
     int size,n,k=0;
     cin >> size >> n;
+    size -= 3;
     vector <int> a(n);
     for (int i=0;i<n;i++){
         cin >> a[i];
