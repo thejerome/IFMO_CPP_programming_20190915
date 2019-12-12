@@ -52,7 +52,7 @@ int t04_students() {
         student s;
         s.name = s1;
         s.surname = s2;
-        s.sr = (x1+x2+x3)/3;
+        s.sr = double((x1+x2+x3))/3;
         a[i] = s;
     }
     sort(a.begin(),a.end(),c);
