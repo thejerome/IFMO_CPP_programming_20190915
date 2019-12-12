@@ -33,7 +33,7 @@ struct dot{
         double l;
     };
 bool c(dot a, dot b){
-    return(a.l>b.l);
+    return(a.l<b.l);
 }
 int t03_points() {
     int n;
@@ -45,11 +45,11 @@ int t03_points() {
         dot d;
         d.x = x;
         d.y = y;
-        d.l = sqrt(x^2+y^2);
+        d.l = sqrt(pow(x,2)+pow(y,2));
         a[i] = d;
     }
     sort(a.begin(),a.end(),c);
     for (int i=0;i<n;i++){
         cout << a[i].x << ' ' << a[i].y << endl;
-    }    
+    }       
 }
