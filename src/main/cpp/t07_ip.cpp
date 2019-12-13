@@ -57,5 +57,5 @@ int t07_ip() {
         cout << "YES";
     else
         cout << "NO";
-
-}
+   if (a[0] == '.') cout << "NO";
+} 
