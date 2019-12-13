@@ -30,7 +30,7 @@ int t04_neighbors() {
     for(int i =0;i<n;i++){
         cin >> num;
         if(num > 0 && num2 > 0 || num < 0 && num2 < 0){
-            cout << min(num2, num) << " " << max(num2, num) << " ";
+            cout << num2 << " " << num << " ";
             break;
         }
         num2 = num;
