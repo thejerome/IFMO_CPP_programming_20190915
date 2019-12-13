@@ -24,7 +24,7 @@ using namespace std;
 int t05_ave() {
 
     double a, med = 0, i = 0;
-    while (a != 0) {
+    while (true) {
         cin >> a;
         if (a == 0) break;
         i = i + 1;
