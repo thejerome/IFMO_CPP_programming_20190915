@@ -20,4 +20,18 @@ using namespace std;
 
 int t03_bigger() {
 
+    int n;
+    cin >> n;
+
+    int num2, num;
+    cin >> num2;
+
+    for(int i =0;i<n;i++){
+        cin >> num;
+        if(num > num2){
+            cout << num << " ";
+        }
+        num2 = num;
+    }
+
 }

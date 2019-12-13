@@ -39,5 +39,25 @@
 using namespace std;
 
 int t11_queen() {
+    int vert[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+    int hor[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+    int diag1[15] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    int diag2[15] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
+    for (int i = 0; i < 8; ++i) {
+        int a,b;
+        cin >> a;
+        cin >> b;
+
+        if(vert[a] == 1 || hor[b] == 1 || diag1[a + b - 1] == 1 || diag2[a + 9 - b - 1] == 1){
+            cout << "YES";
+            return 0;
+        }else{
+            vert[a] = 1;
+            hor[b] = 1;
+            diag1[a + b - 1] = 1;
+            diag2[a + 9 - b - 1] = 1;
+        }
+    }
+    cout << "NO";
 }
