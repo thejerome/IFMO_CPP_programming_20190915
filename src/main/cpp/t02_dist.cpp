@@ -17,13 +17,23 @@
 //1.41421
 
 #include <iostream>
+#include <iomanip>
 #include <cmath>
+
 
 using namespace std;
 
 //function distance
-
+double distance( int a, int b , int c ,int d)
+{
+    int two=2;
+    int four=4;
+    return sqrt(pow((b-d),(four-two)) +pow((a-c),(four-two))) ;
+}
 int t02_dist() {
-
+    double a,b,c,d;
+    cin >> a >> b >> c >> d;
+    cout << distance(a,b,c,d);
     return 0;
 }
+

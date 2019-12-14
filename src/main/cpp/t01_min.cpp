@@ -20,12 +20,20 @@
 
 
 using namespace std;
+//function min
+int min( int a, int b) {
+    if (a < b)return a;
+    if (a > b)return b;
+}
+//function min4
+int min4ik(int a,int b, int c, int d) {
+    if ((a,b) < (c,d))return (a,b);
+    if ((a,b) > (c,d))return (c,d);
+}
 
-//function min 
-
-//function min4 
-
-int t01_min() {
-
+int t01_min(){
+    int a,b,c,d;
+    cin >> a >> b >> c >>d ;
+    cout <<  (min(min( a, b),min( c,  d)));
     return 0;
 }

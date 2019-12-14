@@ -21,8 +21,17 @@
 #include <cmath>
 
 using namespace std;
-
-int t06_sum() {
-
+//function distance
+int sum() {
+int z,x;
+x = 0;
+cin >> z;
+if (z == x)return 0;
+else {
+return z + sum();
+}
+}
+int t06_sum(){
+    cout << sum();
     return 0;
 }
