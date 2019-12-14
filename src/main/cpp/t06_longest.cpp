@@ -26,7 +26,7 @@ int t06_longest() {
     getline(cin, s);
    int a, b, c;
    a = s.size();
-   b =w.size();
+   b = w.size();
    c = max.size();
     for (int i =0; i < a; i++){
         if (s[i] != ' ' )
@@ -37,7 +37,7 @@ int t06_longest() {
             w.clear();
     }
     if (b > c)
-        max = w;
+        {max = w;};
     cout << max;
     return 0;
 }
