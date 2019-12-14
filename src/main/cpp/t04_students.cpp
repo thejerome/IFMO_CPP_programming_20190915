@@ -29,41 +29,35 @@
 
 #include "t04_students.h"
 #include <iostream>
-#include <string>
+
+#include <algorithm>
+#include <vector>
 using namespace std;
+struct Stud{
+    string z;
+    string x;
+    int p;
+    int pp;
+    int ppp;
 
-struct students {
-    string surname;
-    string name;
-    double grades;
 };
-int nol = 0 , odin = 1;
-double tri = 3.0;
-int t04_students() {
-int n;
-cin >> n;
-students student[n];
-for ( int i = nol; i < n ; i++) {
-    int max1, max2, max3;
-    cin >> student[i].surname;
-    cin>> student[i].name;
-    cin >> max1;
-    cin >>max2;
-    cin >> max3;
-    student[i].grades = (max1 + max2 + max3) / tri;
+int SOSTU (Stud PER1, Stud PER2)
+{
+    int BRW1 = PER1.p+PER1.pp+PER1.ppp;
+    int BRW2 = PER2.p+PER2.pp+PER2.ppp;
+    return (BRW1 > BRW2);
 }
-
-for ( int j = 1; j < n; j++){
-    if  (student[j-odin].grades < student[j].grades) {
-    students last;
-    last = student[j-odin];
-        student[j-odin] = student[j];
-        student[j] = last;
+int t04_students(){
+    int O = 0;
+    int Q;
+    cin >> Q;
+    vector <Stud> TAb(Q);
+    for(int y = O; y < Q;y++)
+    {
+        cin >> TAb[y].z >> TAb[y].x;
+        cin >> TAb[y].p >> TAb[y].pp >> TAb[y].ppp;
     }
+    sort(TAb.begin(), TAb.end(),SOSTU);
+    for(int y = O;y < Q;y++)cout << TAb[y].z << " " << TAb[y].x << "\n";
+    return 0;
 }
-for (int k = nol; k < n; k++){
-    cout << student[k].surname << ' ' << student[k].name << endl;
-}
-return 0;
-}
-
