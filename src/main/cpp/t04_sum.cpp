@@ -23,6 +23,7 @@ int t04_sum() {
     int x,z;
     x=0;
     cin >> z;
+    x=x+z;
     while (z!=0){
         cin >> z;
         x=x+z;
