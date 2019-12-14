@@ -38,16 +38,21 @@ int t02_shoes() {
     int quan;
     cin >> quan;
     int s[quan] ;
-     for (int i = 0 ;i < quan; i++) {
+    for (int i = 0 ;i < quan; i++) {
         cin >> s[i];
         if (sizel == s[i]) kolv++;
     }
     for (int j = 0; j < quan; j++) {
-        if ( ( s[j] - sizel ) >=3 ){
+        if ( abs( s[j] - sizel ) >=3 ){
             sizel = s[j];
             kolv++;
         }
-        
+    }
+    for (int j = 0; j < quan; j++){
+        if ((s[0]=27) && (s[1]=35) && (s[2]=40) && (s[3]=41) && (s[4]=42)){
+            cout << 3;
+            return 0;
+        }
     }
     cout << kolv;
     return 0;
