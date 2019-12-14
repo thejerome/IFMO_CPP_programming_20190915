@@ -28,5 +28,17 @@
 using namespace std;
 
 int t04_count() {
+    char c;
+    int n = 0;
 
+    while(cin.get(c)){
+        if(int(c) == 32){
+            n++;
+        }
+        if(int(c) == 10){
+            break;
+        }
+    }
+
+    cout << n + 1;
 }

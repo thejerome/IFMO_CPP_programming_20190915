@@ -22,5 +22,54 @@
 using namespace std;
 
 int t06_longest() {
+    char c;
+    int n = 1;
+    int max = 1;
+    string maxW = "";
+    string w = "";
+
+    while(cin.get(c)){
+        w += c;
+        if(int(c) == 32){
+            if(n > max){
+                max = n;
+                maxW = w;
+            }
+            n = 0;
+            w="";
+        }
+        n++;
+    }
+
+    if(n > max){
+        max = n;
+        maxW = w;
+    }
+
+    cout << maxW;char c;
+    int n = 1;
+    int max = 1;
+    string maxW = "";
+    string w = "";
+
+    while(cin.get(c)){
+        w += c;
+        if(int(c) == 32){
+            if(n > max){
+                max = n;
+                maxW = w;
+            }
+            n = 0;
+            w="";
+        }
+        n++;
+    }
+
+    if(n > max){
+        max = n;
+        maxW = w;
+    }
+
+    cout << maxW;
 
 }
