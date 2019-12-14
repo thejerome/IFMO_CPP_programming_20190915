@@ -27,5 +27,23 @@
 using namespace std;
 
 int t03_both() {
-
+    int a;
+    cin >> a;
+    int count = 0;
+    set <int> k;
+    for (int i = 0 ; i < a ; i++) {
+        int x;
+        cin >> x;
+        k.insert(x);
+    }
+    int b;
+    cin >> b;
+    for ( int i = 0 ; i < b ; i++) {
+        int y;
+        cin >> y;
+        if (k.find(y) != k.end()) {
+            count++;
+        }
+    }
+    cout << count;
 }
