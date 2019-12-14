@@ -19,10 +19,21 @@
 
 #include "t01_sort.h"
 #include <iostream>
+#include <set>
 
 
 using namespace std;
 
 int t01_sort() {
-    
+   int n;
+    set <int> a;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
+        a.insert(x);
+    }
+    for (auto i:a) {
+        cout << i << ' ';
+}
 }
