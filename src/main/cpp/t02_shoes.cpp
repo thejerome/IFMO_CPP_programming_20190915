@@ -33,5 +33,20 @@
 using namespace std;
 
 int t02_shoes() {
-    
+   int size,n;
+    int count = 0;
+    set <int> a;
+    cin >> size >> n;
+    for (int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
+        a.insert(x);
+    }
+    for (auto i:a) {
+        if (i>=size) {
+            count++;
+            size = i+3;
+}
+}
+cout << count;
 }
