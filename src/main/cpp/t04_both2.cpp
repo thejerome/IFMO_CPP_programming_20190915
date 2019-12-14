@@ -23,9 +23,31 @@
 
 #include "t04_both2.h"
 #include <iostream>
-
+#include <set>
 using namespace std;
 
 int t04_both2() {
-
+	int n, k, m;
+	multiset <int> a;
+	set <int> b;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> k;
+		a.insert(k);
+	}
+	cin >> m;
+	for (int i = 0; i < m; i++)
+	{
+		cin >> k;
+		a.insert(k);
+	}
+	for (int i : a) {
+		
+		if (a.count(i) > 1)
+			b.insert(i);
+	}
+	for (int i : b)
+		cout << i << " ";
+	return 0;
 }

@@ -80,9 +80,52 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
-
+//функция проверяющая ударную букву
+int right1(string word, set<string> d) {
+	for (char& l : word)
+		l = tolower(l);
+	for (int l = 0; l < word.length(); l++) {
+		word[l] = toupper(word[l]);
+		if (d.count(word)) {
+			return 0;
+			//break;
+		}
+		word[l] = tolower(word[l]);
+	}
+	return 1;
+}
 int t06_homework() {
-
+	set <string> d;
+	int n, mist = 0;
+	string s, word;                     
+	cin >> n;
+	//заполнение словаря
+	for (int i = 0; i < n; i++) {
+		cin >> s;
+		d.insert(s);
+	}
+	//проверка
+	while (cin >> word) {
+		int right = 0;
+		bool exist = d.count(word);
+		int ccaps = 0;
+		if (exist) {
+			right = 1;
+		}
+		else {
+			for (char l : word) {
+				if (l >= 'A' && l <= 'Z')
+					ccaps++;
+			}
+			if (ccaps == 1) 
+				right = right1(word, d);
+			if (right == 0) 
+				mist++;
+		}
+	}
+	cout << mist;
+	return 0;
 }
