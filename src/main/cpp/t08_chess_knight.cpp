@@ -13,7 +13,7 @@
 //Sample Output 1:
 //
 //NO
-//        Sample Input 2:
+//Sample Input 2:
 //
 //1
 //1
@@ -29,5 +29,23 @@
 using namespace std;
 
 int t08_chess_knight() {
-
+    int x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    bool a1 = (x2 == x1 + 2) && (y2 == y1 + 1);
+    bool a2 = (x2 == x1 + 2) && (y1 == y2 + 1);
+    bool a3 = (x1 == x2 + 2) && (y2 == y1 + 1);
+    bool a4 = (x1 == x2 + 2) && (y1 == y2 + 1);
+    bool b1 = (x2 == x1 + 1) && (y2 == y1 + 2);
+    bool b2 = (x2 == x1 + 1) && (y1 == y2 + 2);
+    bool b3 = (x1 == x2 + 1) && (y2 == y1 + 2);
+    bool b4 = (x1 == x2 + 1) && (y1 == y2 + 2);
+    if (a1 || a2 || a3 || a4 || b1 || b2 || b3 || b4)  
+    {
+        cout << "YES";
+    }
+    else 
+    {
+        cout << "NO";
+    }
+    return 0;
 };
