@@ -28,5 +28,17 @@
 using namespace std;
 
 int t04_count() {
-
+ string a;
+ int count = 0;
+ getline(cin,a);
+ int line = a.length();
+ for (int i = 0 ; i < line ; i++) {
+     if (a[i] == ' ') {
+         count++;
+     }
+ }
+ count++;
+ cout << count;
+ return 0;
 }
+ 
