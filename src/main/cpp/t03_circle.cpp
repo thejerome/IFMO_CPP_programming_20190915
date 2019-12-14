@@ -39,8 +39,8 @@ using namespace std;
 
 //function IsPointInCircle
 int IsPointInCircle(float x, float y, float cx, float cy, float r) {
-    return (pow((x - cx), 2) + pow((y - cy), 2) <= r * r)
-};
+    return (pow((x - cx), 2) + pow((y - cy), 2) <= r * r);
+}
 int t03_circle() {
     float x, y, cx, cy, r;
     cin >> x >> y >> cx >> cy >> r;
