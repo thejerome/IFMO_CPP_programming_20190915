@@ -47,6 +47,7 @@ int t02_shoes() {
             sizel = s[j];
             kolv++;
         }
+        
     }
     cout << kolv;
     return 0;
