@@ -26,18 +26,18 @@ int t06_longest() {
     getline(cin, s);
    int a, b, c;
    a = s.size();
-   b =w.size();
-   c = max.size();
     for (int i =0; i < a; i++){
         if (s[i] != ' ' )
             w = w + s[i];
-        else if (w.size() > c)
+        else if (w.size() > max.size())
             max = w;
         if (s[i] == ' ')
             w.clear();
     }
-    if (w.size() > c)
+    if (w.size() > max.size())
         max = w;
     cout << max;
     return 0;
+
+
 }
