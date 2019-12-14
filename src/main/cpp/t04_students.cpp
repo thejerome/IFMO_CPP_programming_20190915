@@ -29,10 +29,31 @@
 
 #include "t04_students.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 using namespace std;
 
-int t04_students() {
-    
+
+	struct student {
+		string name, surname;
+		int a, b, c;
+	};
+	int grade(student x, student y) {
+		return ((x.a + x.b + x.c) > (y.a + y.b + y.c));
+	}
+	int t04_students() {
+		vector <student> u;
+		int n;
+		cin >> n;
+		for (int i = 0; i < n; i++) {
+			student x;
+			cin >> x.name >> x.surname >> x.a >> x.b >> x.c;
+			u.push_back(x);
+		}
+		sort(u.begin(), u.end(), grade);
+		for (int i = 0; i < n; i++) {
+			cout << u[i].name << " " << u[i].surname << " ";
+		}
+		return 0;
 }
 
