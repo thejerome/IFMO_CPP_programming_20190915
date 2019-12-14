@@ -91,7 +91,7 @@ int right1(string word, set<string> d) {
 		word[l] = toupper(word[l]);
 		if (d.count(word)) {
 			return 0;
-			break;
+			//break;
 		}
 		word[l] = tolower(word[l]);
 	}

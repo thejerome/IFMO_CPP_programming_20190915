@@ -30,19 +30,18 @@
 using namespace std;
 
 int t02_new() {
-	int n, k, s1,s2;
+	int n, k, s1;
 	set <int> a;
 	cin >> n;
 	for (int i = 0; i < n; i++) {
 		s1 = a.size();
 		cin >> k;
 		a.insert(k);
-		s2 = a.size();
-		if (s1 == s2)
+		 
+		if (s1 == a.size())
 			cout << "YES " ;
 		else
 			cout << "NO ";
 	}
-	
 	return 0;
 }

@@ -27,7 +27,7 @@
 using namespace std;
 
 int t04_both2() {
-	int n, k, m, c = 0;
+	int n, k, m;
 	multiset <int> a;
 	set <int> b;
 	cin >> n;
@@ -43,10 +43,9 @@ int t04_both2() {
 		a.insert(k);
 	}
 	for (int i : a) {
-		c=a.count(i);
-		if (c > 1)
+		
+		if (a.count(i) > 1)
 			b.insert(i);
-
 	}
 	for (int i : b)
 		cout << i << " ";
