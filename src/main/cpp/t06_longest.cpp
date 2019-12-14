@@ -22,5 +22,18 @@
 using namespace std;
 
 int t06_longest() {
-
+    if ( a[i] != ' ' ) {
+         lmax = lmax + a[i];
+     }
+     else if (lmax.size() > max.size()) {
+         max = lmax;
+     }
+     if ( a[i] == ' ') {
+         lmax.clear();
+     }
+ }
+if (lmax.size() > max.size()) {
+    max = lmax;
+}
+cout << max;
 }
