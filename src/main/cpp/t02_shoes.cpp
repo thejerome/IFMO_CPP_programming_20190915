@@ -35,9 +35,10 @@ using namespace std;
 int t02_shoes() {
     int sizel , kolv ;
     cin >> sizel ;
-    int quan,s[quan] ;
+    int quan;
     cin >> quan;
-    for (int i = 0 ;i < quan; i++) {
+    int s[quan] ;
+     for (int i = 0 ;i < quan; i++) {
         cin >> s[i];
         if (sizel == s[i]) kolv++;
     }
