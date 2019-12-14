@@ -28,8 +28,12 @@
 using namespace std;
 
 //function power
-
+float power(float a, float n) {
+    return pow(a, n);
+}
 int t05_power() {
-
+    float a, n;
+    cin >> a >> n;
+    cout << power(a, n);
     return 0;
 }
