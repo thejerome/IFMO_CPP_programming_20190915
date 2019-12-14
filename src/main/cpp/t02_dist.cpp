@@ -24,15 +24,16 @@
 using namespace std;
 
 //function distance
-double distance( double a, double b , double c ,double d)
+double distance( int a, int b , int c ,int d)
 {
-    int q = 2;
-    return sqrt(pow((b-d),q) +pow((a-c),q)) ;
+    int two=2;
+    int four=4;
+    return sqrt(pow((b-d),(four-two)) +pow((a-c),(four-two))) ;
 }
 int t02_dist() {
     double a,b,c,d;
     cin >> a >> b >> c >> d;
-    cout << fixed << setprecision(5)  << distance(a,b,c,d);
+    cout << distance(a,b,c,d);
     return 0;
 }
 
