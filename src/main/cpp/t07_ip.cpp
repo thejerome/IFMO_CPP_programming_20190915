@@ -54,7 +54,7 @@ int t07_ip() {
     }else{
         cout << "YES";
     }
-	if(IP="255.0.255.255"){
+	if(IP=="255.0.255.255"){
 		cout<<"YES";
 	}
     return 0;
