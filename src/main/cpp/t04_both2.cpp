@@ -23,9 +23,30 @@
 
 #include "t04_both2.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t04_both2() {
-
+	set <int> mif, leg, kap;
+	int cry, bae;
+	cin >> cry;
+	for (int i = 0; i < cry; i++)
+	{
+		int tim;
+		cin >> tim;
+		mif.insert(tim);
+	}
+	cin >> bae;
+	for (int i = 0; i < bae; i++)
+	{
+		int lou;
+		cin >> lou;
+		leg.insert(lou);
+		if (mif.find(lou) != mif.end())
+			kap.insert(lou);
+	}
+	set <int>::iterator j;
+	for (j = kap.begin(); j != kap.end(); ++j)
+		cout << *j << ' ';
 }

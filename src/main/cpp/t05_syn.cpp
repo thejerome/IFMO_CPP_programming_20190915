@@ -27,10 +27,35 @@
 
 #include "t05_syn.h"
 #include <iostream>
+#include <map>
+#include <string>
 
 
 using namespace std;
 
 int t05_syn() {
+	map<string, string> karen, souza;
+	string alec, benjamin;
 
+	int geazy = 0;
+
+	cin >> geazy;
+
+	while (geazy > 0)
+	{
+		cin >> alec >> benjamin;
+		karen[benjamin] = alec;
+		souza[alec] = benjamin;
+		--geazy;
+	}
+
+	map<string, string>::iterator it;
+
+	cin >> alec;
+
+	it = karen.find(alec);
+	if (it != karen.end())
+		cout << karen[alec];
+	else
+		cout << souza[alec];
 }

@@ -25,10 +25,24 @@
 
 #include "t02_new.h"
 #include <iostream>
+#include <set>
 
 
 using namespace std;
 
 int t02_new() {
-    
+	multiset<int> pus;
+	int ax;
+
+	cin >> ax;
+
+	while (cin >> ax) {
+		if (pus.find(ax) == pus.end()) {
+			cout << "NO" << endl;
+		}
+		else {
+			cout << "YES" << endl;
+		}
+		pus.insert(ax);
+	}
 }
