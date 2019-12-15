@@ -29,10 +29,30 @@
 
 #include "t07_ip.h"
 #include <iostream>
+#include <cstring>
 
 
 using namespace std;
 
-int t07_ip() {
+int t07_ip(int argc, char* argv[]) {
+	char IP[16];
+	int result = 1;
+	cin >> IP;
 
+	char* nu = strtok(IP, ".");
+	while (nu != NULL)
+	{
+		if (atoi(nu) < 0 || atoi(nu) > 255)
+		{
+			result = 0;
+			break;
+		}
+		nu = strtok(NULL, ".");
+	}
+	if (result = 0) {
+		cout << "NO";
+	}
+	else {
+		cout << "NO";
+	}
 }
