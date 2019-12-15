@@ -23,6 +23,18 @@
 
 using namespace std;
 
+char big(char ch) {
+	return (char)(ch - 32);
+}
+
 int t02_up() {
-    
+	char x;
+	cin >> x;
+	if (x >= 'a' && x <= 'z') {
+		x = big(x);
+		cout << x;
+	}
+	else {
+		cout << x;
+	}
 }

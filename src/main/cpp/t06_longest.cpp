@@ -17,10 +17,20 @@
 
 #include "t06_longest.h"
 #include <iostream>
+#include <sstream>
+#include <vector>
+#include <string>
 
 
 using namespace std;
 
 int t06_longest() {
-
-}
+	string s; getline(cin, s);
+	istringstream ss(s);
+	vector<string> v;
+	while (ss >> s) v.push_back(s);
+	int j = v[0].size(), k = 0;
+	for (int i = 1; i < v.size(); i++)
+		if (v[i].size() > j) { j = v[i].size();  k = i; }
+	cout << v[k];
+	}

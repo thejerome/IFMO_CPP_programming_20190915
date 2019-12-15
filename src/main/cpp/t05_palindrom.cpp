@@ -18,10 +18,28 @@
 
 #include "t05_palindrom.h"
 #include <iostream>
+#include <string>
 
 
 using namespace std;
 
 int t05_palindrom() {
+	string w;
+	getline(cin, w);
+	bool kek = true;
 
+	for (int i = 0; i < w.length() / 2; i++)
+
+		if (w[i] != w[w.length() - i - 1]) {
+
+			kek = false;
+
+			break;
+
+		}
+
+	if (kek) cout << "yes";
+
+	else cout << "no";
+	
 }

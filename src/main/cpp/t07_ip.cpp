@@ -29,10 +29,29 @@
 
 #include "t07_ip.h"
 #include <iostream>
+#include <cstring>
 
 
 using namespace std;
 
 int t07_ip() {
-
+string ip, str;
+getline(cin, ip);
+int ex=0,nu;
+for (auto i: ip){
+    if (i=='.'){
+        if (str!="") nu=stoi(str);
+        ex++;
+        if ((ex>3) or (nu<0) or (nu>255) or (str=="")){
+            ex=0;
+            break;}
+        else str="";}
+    else str=str+i;
+}
+if (ex==3){
+	cout <<"YES";
+}
+else{
+	cout <<"NO";
+}
 }
