@@ -28,32 +28,27 @@
 
 #include "t02_shoes.h"
 #include <iostream>
+#include <set>
 
 
 using namespace std;
 
 int t02_shoes() {
-    int sizel , kolv ;
-    cin >> sizel ;
-    int quan;
-    cin >> quan;
-    int s[quan] ;
-    for (int i = 0 ;i < quan; i++) {
-        cin >> s[i];
-        if (sizel == s[i]) kolv++;
+    multiset <int> z;
+    int num;
+    int razm;
+    int  wor=0;
+    int nol=0;
+    cin >> razm >> num;
+    for (int i = nol; i < num; i++) {
+        int kuzl;
+        cin >> kuzl;
+        z.emplace(kuzl);
     }
-    for (int j = 0; j < quan; j++) {
-        if ( abs( s[j] - sizel ) >=3 ){
-            sizel = s[j];
-            kolv++;
-        }
+    for (int j : z) {
+        if (wor == nol && j - razm >= nol){wor=wor+1;razm = j;}
+        if (j - razm >= 3){wor++;razm = j;}
     }
-    for (int j = 0; j < quan; j++){
-        if ((s[0]=27) && (s[1]=35) && (s[2]=40) && (s[3]=41) && (s[4]=42)){
-            cout << 3;
-            return 0;
-        }
-    }
-    cout << kolv;
+    cout << wor;
     return 0;
 }
