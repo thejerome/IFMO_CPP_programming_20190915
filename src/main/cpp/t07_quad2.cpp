@@ -20,6 +20,33 @@
 
 using namespace std;
 
-int t07_quad2() {
 
-};
+int t07_quad2(){
+    float Q, W, E;
+    int R;
+    int nul=0;
+    cin >> Q >> W >> E;
+    if (Q != nul) {
+        R = W * W - (2*2) * Q * E;
+        if (R > nul) {
+            cout << "2" << " " << (-1 * W - sqrt(R)) / (4-2) / Q << " " << (-1 * W + sqrt(R)) / (4-2) / Q;
+        }
+        else if (R == nul) {
+            cout << "1" << " " << -W / (4-2) / Q;
+
+
+        }
+        else
+            cout << "0";
+
+    }
+    else {
+        if (W != nul)
+            cout << "1" << " " << -E / W;
+        else if (E != nul)
+            cout << "0";
+        else
+            cout << "3";
+    }
+
+}

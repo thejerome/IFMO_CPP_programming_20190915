@@ -21,5 +21,26 @@
 using namespace std;
 
 int t06_quad() {
+     double a,b,c,x1,x2,X,D;
+     cin >> a >> b >> c;
+     D = sqrt(b*b-(4*a*c));
+     x1=(-b+D)/(2*a);
+     x2=(-b-D)/(2*a);
+     X=-b/(2*a);
+     if (D==0) {
+         cout << X;
+     }
+     if (D>0) {
+         if (x1>x2) {
+             cout << x2 << " " << x1;
+         }
+         else {
+             cout << x1 << " " << x2;
+         }
 
-};
+     }
+     else {
+         cout <<"";
+     }
+     return 0;
+ }

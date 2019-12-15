@@ -18,5 +18,8 @@
 using namespace std;
 
 int t02_frac_2() {
-
-};
+     float X;
+     cin >> X;
+     cout << trunc((X - floor(X))*10);
+     return 0;
+ }
