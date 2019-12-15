@@ -29,7 +29,7 @@
 
 #include "t07_ip.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
