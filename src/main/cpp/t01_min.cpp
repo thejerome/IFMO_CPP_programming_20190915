@@ -34,7 +34,7 @@ int min4 (int a1, int a2, int b1, int b2){
     else return min (a1,a2);
 }
 
-int t01_min(int argc, char* argv[])
+int t01_min()
 {
     int a,b,c,d;
     cin>>a;
