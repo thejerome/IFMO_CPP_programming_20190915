@@ -39,7 +39,7 @@ string IsPointInCircle(int x, int y){
     else return "NO";
 }
 
-int t04_area() (int argc, char* argv[])
+int t04_area()
 {
     float x, y;
     cin>>x;
