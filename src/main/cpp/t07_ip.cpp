@@ -37,32 +37,29 @@ int t07_ip()
 {
     string s;
     getline (cin, s);
-    int b,d=1;
+    int b,d=0;
     string c;
     b = 0;
     for (int i = 0; i < s.length(); i++) {
-        int a;
+        int a=0;
         if (s[i] != '.') {
-            if (s[i]=='-'){
-                d=-1;
-            }
-            else c=s[i];
-            a=a*10+stoi(c);
-        }
-    
-        else {
-            a=a*d;
-            if (a<0 || a>255) {
                 b++;
-            }
-            a=0;
-            d=1;
         }
+        else {
+                a = stoi(s.substr(i-b, b));
+                b = 0;
+                d++;
+                if (a<0 || a>255) {
+                    cout << "NO";
+                    return 0;
+                }
+        }
+        
     }
-    if (b>0) cout<<"NO";
-    else cout<<"YES";
-    
+     if (d == 3)
+        cout << "YES";
+    else
+        cout << "NO";
     return 0;
 
 }
-
