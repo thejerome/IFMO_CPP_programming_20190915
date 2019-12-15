@@ -29,39 +29,40 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cstring>
 
 using namespace std;
 
-struct stradalec {
-	string surname;
-	string name;
-	double avg;
+struct savage
+{
+	std::string name;
+	std::string surname;
+	int sub;
+	int je;
+	int ct;
 };
 
+bool
+axok(const savage& a, const savage& b)
+{
+	int kro = a.sub + a.je + a.ct;
+	int ezh = b.sub + b.je + b.ct;
+	return kro > ezh ? true : false;
+}
+
 int t04_students() {
-	int ko;
-	cin >> ko;
-	stradalec xex[ko];
-	for (int i = 0; i < ko; i++) {
-		int ti1, ti2, ti3;
-		cin >> xex[i].surname >> xex[i].name;
-		cin >> ti1 >> ti2 >> ti3;
-		xex[i].avg = (ti1 + ti2 + ti3) / 3.0;
+	int slowb;
+	std::cin >> slowb;
+	std::vector< savage > data(slowb);
+	for (int i = 0; i < slowb; i++) {
+		std::cin >> data[i].name >> data[i].surname;
+		std::cin >> data[i].sub >> data[i].je >> data[i].ct;
 	}
-
-	for (int i = 1; i < ko; i++) {
-		for (int j = 1; j < ko; j++) {
-			if (xex[i - 1].avg < xex[i].avg) {
-				stradalec ex;
-				ex = xex[i - 1];
-				xex[i - 1] = xex[i];
-				xex[i] = ex;
-			}
-		}
-	}
-
-	for (int i = 0; i < ko; i++) {
-		cout << xex[i].surname << " " << xex[i].name << "\n";
+	std::sort(data.begin(), data.end(), axok);
+	for (int i = 0; i < slowb; i++) {
+		std::cout << data[i].name << " " << data[i].surname << std::endl;
 	}
 }
 
