@@ -32,9 +32,19 @@
 
 using namespace std;
 
-//function IsPointInArea
+string IsPointInCircle(int x, int y){
+    if (((pow(x+1,2)+pow(y-1,2)<=4) && (y>=-x) && (y>=2*(x+1))) || ((pow(x+1,2)+pow(y-1,2)>=4) && (y<=-x) && (y<=2*(x+1)) )) {
+    return "YES";
+    }
+    else return "NO";
+}
 
-int t04_area() {
+int t04_area()
+{
+    float x, y;
+    cin>>x;
+    cin>>y;
+    cout<<IsPointInCircle(x, y);
 
     return 0;
 }

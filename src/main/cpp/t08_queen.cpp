@@ -21,8 +21,63 @@
 #include <vector>
 
 using namespace std;
+int b[10][10]={ 0 };
+int s=0, n=0;
+
+void Try(int i, int j) {
+    for (int x=0; x<n; x++) {
+        b[x][j]++;
+        b[i][x]++;
+        int k;
+        k=j-i+x;
+        if (k>=0 && k<n) {
+            b[x][k]++;  
+        }
+        k=j+i-x;
+        if (k>=0 && k<n) {
+            b[x][k]++;
+        }
+    }
+}
+
+void Set(int i, int j) {
+    for (int x=0; x<n; x++) {
+        b[x][j]--;
+        b[i][x]--;
+        int k;
+        k = j - i + x;
+        if (k>=0 && k<n) {
+            b[x][k]--;
+        }
+        k = j + i - x;
+        if (k>=0 && k<n) {
+        b[x][k]--;
+
+        }
+    }
+}
+
+void Q(int q){
+    for (int i=0; i<n; i++) {
+    bool set = false;
+    if (b[i][q]==0 && q!=n-1) { 
+        Try(i, q); set=true; Q(q+1); 
+        
+    }
+    if (b[i][q] == 0 && q==n-1) { 
+        s++; 
+        
+    }
+    if (set) { 
+        Set(i, q); 
+        
+    }
+    }
+}
 
 int t08_queen(){
-
-    return 0;
+cin>>n;
+Q(0);
+cout<<s;
+return 0;
 }
