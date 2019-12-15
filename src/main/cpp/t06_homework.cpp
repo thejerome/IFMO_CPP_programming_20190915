@@ -107,8 +107,7 @@ int t06_homework() {
         d1.insert(a);
         d[a]=a2;
     }
-    for (int i=0;i<5;i++) {
-        cin>>a;
+    while (cin>>a) {
         a2="";
         for (int j=0;j<a.length();j++){
             a1= toupper(a[j]);
