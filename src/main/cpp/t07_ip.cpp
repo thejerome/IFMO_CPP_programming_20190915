@@ -34,7 +34,8 @@
 
 using namespace std;
 
-int t07_ip(int argc, char* argv[]) {
+int t07_ip() {
+	int main(int argc, char* argv[]){
 	char IP[16];
 	int result = 1;
 	cin >> IP;
@@ -55,4 +56,5 @@ int t07_ip(int argc, char* argv[]) {
 	else {
 		cout << "NO";
 	}
+}
 }
