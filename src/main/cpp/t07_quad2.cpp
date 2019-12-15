@@ -22,17 +22,17 @@ using namespace std;
 
 
 int t07_quad2(){
-    float Q, W, E, R;
-    int four=4;
+    float Q, W, E;
+    double R;
     int nul=0;
     cin >> Q >> W >> E;
     if (Q != nul) {
-        R = W * W - four * Q * E;
+        R = W * W - (2*2) * Q * E;
         if (R > nul) {
-            cout << "2" << " " << (-1 * W - sqrt(R)) / (four-2) / Q << " " << (-1 * W + sqrt(R)) / (four-2) / Q;
+            cout << "2" << " " << (-1 * W - sqrt(R)) / (4-2) / Q << " " << (-1 * W + sqrt(R)) / (4-2) / Q;
         }
         else if (R == nul) {
-            cout << "1" << " " << -W / (four-2) / Q;
+            cout << "1" << " " << -W / (4-2) / Q;
 
 
         }
