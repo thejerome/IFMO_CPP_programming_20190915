@@ -107,7 +107,7 @@ int t06_homework() {
         d1.insert(a);
         d[a]=a2;
     }
-    for (int i=0;i<5;i++) {
+    for (int i=0;i<10;i++) {
         cin>>a;
         a2="";
         for (int j=0;j<a.length();j++){
