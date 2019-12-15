@@ -29,10 +29,40 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cstring>
 
 using namespace std;
 
+struct savage
+{
+	std::string name;
+	std::string surname;
+	int sub;
+	int je;
+	int ct;
+};
+
+bool
+axok(const savage& a, const savage& b)
+{
+	int kro = a.sub + a.je + a.ct;
+	int ezh = b.sub + b.je + b.ct;
+	return kro > ezh ? true : false;
+}
+
 int t04_students() {
-    
+	int slowb;
+	std::cin >> slowb;
+	std::vector< savage > data(slowb);
+	for (int i = 0; i < slowb; i++) {
+		std::cin >> data[i].name >> data[i].surname;
+		std::cin >> data[i].sub >> data[i].je >> data[i].ct;
+	}
+	std::sort(data.begin(), data.end(), axok);
+	for (int i = 0; i < slowb; i++) {
+		std::cout << data[i].name << " " << data[i].surname << std::endl;
+	}
 }
 
