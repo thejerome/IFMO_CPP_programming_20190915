@@ -84,5 +84,58 @@
 using namespace std;
 
 int t06_homework() {
+    set <string> d1;
+    set <string> hw1;
+    map <string,string> d;
+    map <string,string> hw;
+    int n,v=0,c,err=0,r=0,b=0;
+    string a,a1;
+    cin>>n;
 
+    for (int i=0;i<n;i++) {
+        cin>>a;
+        a1="";
+        for (int j=0;j<a.length();j++){
+            a1 += toupper(a[j]);
+        }
+        d1.insert(a1);
+        d[a1]=a;
+    }
+    for (int i=0;i<n;i++) {
+        cin>>a;
+        a1="";
+        for (int j=0;j<a.length();j++){
+            a1 += toupper(a[j]);
+        }
+        hw1.insert(a1);
+        hw[a1]=a;
+    }
+    for (auto i=hw1.begin();i!=hw1.end();i++) {
+        cout<<*i<<' '<<hw[*i]<<endl;
+    }
+    for (auto i=hw1.begin();i!=hw1.end();i++) {
+        string h=*i;
+        v=r;
+        for (auto j=d1.begin();j!=d1.end();j++) {
+            if (*i==*j) {
+                cout<<hw[*i]<<endl;
+                cout<<d[*j]<<endl;
+                
+            }
+            
+            
+        }
+        if (v=r) {
+            for (int k=0; k<h.length();k++) {
+                if (h[k]==toupper(h[k])) {
+                    b++;
+                }
+            }
+            if (b!=1) {
+                err++;
+            }
+        }
+    }
+    cout<<err;
+    return 0;
 }
