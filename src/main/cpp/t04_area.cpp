@@ -34,12 +34,9 @@ using namespace std;
 
 //function IsPointInArea
 bool IsPointInArea(float x, float y) {
-    float first = (abs(pow((x + 1), 2))+ abs(pow((y - 1), 2))  <= 4);
-    float second = (x + y >= 0);
-    float third = (y * 0.5 - x >= 1);
-    float fourth = (y * 0.5 - x <= 1);
-    float fifth = (x + y <= 0);
-    return first && second && third || first && fourth && fifth;
+    bool first = (((x + 1) * (x + 1) + (y - 1) * (y - 1) <= 4) && (y >= 2*x + 2) && (y >= -x));
+    bool second = (((x + 1) * (x + 1) + (y - 1) * (y - 1) >= 4) && (y <= 2*x + 2) && (y <= -x));
+    return (first || second);
 }
 int t04_area() {
     float x, y;
