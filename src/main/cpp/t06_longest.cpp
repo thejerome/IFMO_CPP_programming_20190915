@@ -25,7 +25,6 @@
 using namespace std;
 
 int t06_longest() {
-	int main(int argc, char** argv){
 	string s; getline(cin, s);
 	istringstream ss(s);
 	vector<string> v;
@@ -35,4 +34,3 @@ int t06_longest() {
 		if (v[i].size() > j) { j = v[i].size();  k = i; }
 	cout << v[k];
 	}
-}
