@@ -122,7 +122,6 @@ int t06_homework() {
     
     for (auto i=hw1.begin();i!=hw1.end();i++) {
         string h=hw[*i];
-        cout<<h<<endl;
         v=err;
         b=0;
         r=0;
