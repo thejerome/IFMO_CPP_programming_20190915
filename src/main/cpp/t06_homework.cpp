@@ -80,6 +80,10 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
+#include <map>
+#include <string>
+#include <cctype>
 
 using namespace std;
 
@@ -89,46 +93,49 @@ int t06_homework() {
     map <string,string> d;
     map <string,string> hw;
     int n,v=0,c,err=0,r=0,b=0;
-    string a,a1;
+    string a,a2;
+    char a1;
     cin>>n;
 
     for (int i=0;i<n;i++) {
         cin>>a;
-        a1="";
+        a2="";
         for (int j=0;j<a.length();j++){
-            a1 += toupper(a[j]);
+            a1= toupper(a[j]);
+            a2+=a1;
         }
-        d1.insert(a1);
-        d[a1]=a;
+        d1.insert(a2);
+        d[a2]=a;
     }
     for (int i=0;i<n;i++) {
         cin>>a;
-        a1="";
+        a2="";
         for (int j=0;j<a.length();j++){
-            a1 += toupper(a[j]);
+            a1= toupper(a[j]);
+            a2+=a1;
         }
-        hw1.insert(a1);
-        hw[a1]=a;
-    }
-    for (auto i=hw1.begin();i!=hw1.end();i++) {
-        cout<<*i<<' '<<hw[*i]<<endl;
+        hw1.insert(a2);
+        hw[a2]=a;
     }
     for (auto i=hw1.begin();i!=hw1.end();i++) {
         string h=*i;
         v=r;
         for (auto j=d1.begin();j!=d1.end();j++) {
             if (*i==*j) {
-                cout<<hw[*i]<<endl;
-                cout<<d[*j]<<endl;
+                if(hw[*i]!=d[*j]) {
+                    err++;
+                    r++;
+                } 
                 
             }
             
             
         }
-        if (v=r) {
+        if (v==r) {
             for (int k=0; k<h.length();k++) {
                 if (h[k]==toupper(h[k])) {
                     b++;
+                    cout<<h[k]<<endl;
                 }
             }
             if (b!=1) {
