@@ -47,6 +47,6 @@ int t04_both2() {
 			kap.insert(lou);
 	}
 	set <int>::iterator j;
-	for (j = kap.begin(); j != kap.end(); j++)
+	for (j = kap.begin(); j != kap.end(); ++j)
 		cout << *j << ' ';
 }
