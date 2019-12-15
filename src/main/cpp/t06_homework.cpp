@@ -80,9 +80,76 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
+#include <map>
+#include <string>
+#include <cctype>
 
 using namespace std;
 
 int t06_homework() {
+    set <string> d1;
+    multiset <string> hw1;
+    map <string,string> d;
+    map <string,string> hw;
+    int n,v=0,c,err=0,r=0,b=0,rs=0;;
+    string a,a2;
+    char a1;
+    cin>>n;
 
+    for (int i=0;i<n;i++) {
+        cin>>a;
+        a2="";
+        for (int j=0;j<a.length();j++){
+            a1= toupper(a[j]);
+            a2+=a1;
+        }
+        d1.insert(a);
+        d[a]=a2;
+    }
+    while (cin>>a) {
+        a2="";
+        for (int j=0;j<a.length();j++){
+            a1= toupper(a[j]);
+            a2+=a1;
+        }
+        hw1.insert(a);
+        hw[a]=a2;
+    }
+    
+    
+    
+    for (auto i=hw1.begin();i!=hw1.end();i++) {
+        string h=*i;
+        v=err;
+        b=0;
+        r=0;
+        rs=0;
+        for (int k=0; k<h.length();k++) {
+                if (h[k]==toupper(h[k])) {
+                    b++;
+                }
+        }
+        if (b!=1) {
+            err++;
+        }
+        if (err==v) {
+            for (auto j=d1.begin();j!=d1.end();j++) {
+                if (hw[*i]==d[*j]) {
+                    if(*i==*j) {
+                        r++;
+                    } 
+                    else {
+                        rs++;
+                    }
+                }
+            }
+            if (r==0 && rs!=0) {
+                err++;
+            }
+        }
+    }
+    cout<<err;
+    return 0;
 }
+
