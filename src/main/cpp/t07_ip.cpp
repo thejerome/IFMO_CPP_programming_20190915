@@ -42,7 +42,7 @@ for (auto i: ip){
     if (i=='.'){
         if (str!="") nu=stoi(str);
         ex++;
-        if ((count>3) or (nu<0) or (nu>255) or (str=="")){
+        if ((ex>3) or (nu<0) or (nu>255) or (str=="")){
             ex=0;
             break;}
         else str="";}
