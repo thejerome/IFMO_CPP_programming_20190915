@@ -23,9 +23,29 @@
 
 #include "t03_both.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t03_both() {
-
+	set <int> grr, ign;
+	int west, coast;
+	cin >> west;
+	for (int i = 0; i < west; i++)
+	{
+		int a;
+		cin >> a;
+		grr.insert(a);
+	}
+	cin >> coast;
+	int go = 0;
+	for (int i = 0; i < coast; i++)
+	{
+		int a;
+		cin >> a;
+		ign.insert(a);
+		if (grr.find(a) != grr.end())
+			go++;
+	}
+	cout << go;
 }

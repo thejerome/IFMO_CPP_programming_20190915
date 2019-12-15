@@ -80,9 +80,100 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <map>
+#include <string>
+#include <vector>
 
 using namespace std;
 
-int t06_homework() {
+string umenshayka(const string& s) {
+	string tmp;
 
+	for (int i = 0; i < s.size(); ++i) {
+		char nut = s[i];
+		if (isupper(nut)) {
+			nut = tolower(nut);
+		}
+
+		tmp.push_back(nut);
+	}
+
+	return tmp;
+}
+
+map<string, vector<string>>& fill_dict(map<string, vector<string>>& d, int n) {
+	string rick;
+	string morty;
+
+	for (int i = 0; i < n; ++i) {
+		cin >> rick;
+		morty = umenshayka(rick);
+		d[morty].push_back(rick);
+	}
+
+	return d;
+}
+
+void print_dict(const map<string, vector<string>>& dict) {
+	for (auto it = dict.begin(); it != dict.end(); ++it) {
+		cout << it->first << ": ";
+		for (auto& i : it->second) {
+			cout << i << ' ';
+		}
+		cout << endl;
+	}
+}
+
+
+bool tar(const vector<string>& dict, const string& word) {
+	for (int i = 0; i < dict.size(); ++i) {
+		if (word == dict[i]) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+int intrsno(const string& s) {
+	int osz = 0;
+
+	for (int i = 0; i < s.size(); ++i) {
+		if (isupper(s[i])) {
+			++osz;
+		}
+	}
+
+	return osz;
+}
+
+int ofmonsters(const map<string, vector<string>>& dict) {
+	int sovsemibyv = 0;
+	string dikic;
+
+	while (cin >> dikic) {
+		if (intrsno(dikic) != 1) {
+			++sovsemibyv;
+		}
+		else {
+			string low_case_word = umenshayka(dikic);
+			auto it = dict.find(low_case_word);
+
+			if (it != dict.end() && !tar(it->second, dikic)) {
+				++sovsemibyv;
+			}
+		}
+	}
+
+	return sovsemibyv;
+}
+int t06_homework() {
+	map<string, vector<string>> uav;
+	int nice;
+
+	cin >> nice;
+	uav = fill_dict(uav, nice);
+	cout << ofmonsters(uav);
+
+	return 0;
 }
