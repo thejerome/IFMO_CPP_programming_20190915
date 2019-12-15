@@ -92,7 +92,7 @@ int t06_homework() {
     set <string> hw1;
     map <string,string> d;
     map <string,string> hw;
-    int n,v=0,c,err=0,r=0,b=0;
+    int n,v=0,c,err=0,r=0,b=0,rs=0;;
     string a,a2;
     char a1;
     cin>>n;
@@ -118,20 +118,23 @@ int t06_homework() {
         hw[a2]=a;
     }
     for (auto i=hw1.begin();i!=hw1.end();i++) {
-        string h=*i;
+        string h=hw[*i];
         v=r;
         for (auto j=d1.begin();j!=d1.end();j++) {
             if (*i==*j) {
-                if(hw[*i]!=d[*j]) {
-                    err++;
+                if(hw[*i]==d[*j]) {
                     r++;
                 } 
+                else rs++;
                 
             }
             
             
         }
+        if (rs!=v && v==r) err++;
+        else {
         if (v==r) {
+            b=0;
             for (int k=0; k<h.length();k++) {
                 if (h[k]==toupper(h[k])) {
                     b++;
@@ -140,6 +143,7 @@ int t06_homework() {
             if (b!=1) {
                 err++;
             }
+        }
         }
     }
     cout<<err;
