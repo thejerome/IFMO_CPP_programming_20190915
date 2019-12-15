@@ -35,7 +35,7 @@
 using namespace std;
 
 int t07_ip() {
-	char IP[16];
+	 char IP[16];
     int result = 1;
     cin >> IP;
  
@@ -49,10 +49,10 @@ int t07_ip() {
         }
         pch = strtok(NULL, ".");
     }
-    if(result==0){
-        cout<<"YES";
-    }else if(result==1){
+    if (result==0){
         cout<<"NO";
+    }else{
+        cout << "YES";
     }
     return 0;
 }
