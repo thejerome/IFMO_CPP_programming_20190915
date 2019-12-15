@@ -46,6 +46,11 @@ int t07_ip()
                 b++;
         }
         else {
+            if (b==0) {
+                cout<<"NO";
+                return 0;
+            }
+            else {
                 a = stoi(s.substr(i-b, b));
                 b = 0;
                 d++;
@@ -53,8 +58,8 @@ int t07_ip()
                     cout << "NO";
                     return 0;
                 }
-        }
-        
+            }
+        }   
     }
      if (d == 3)
         cout << "YES";
