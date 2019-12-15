@@ -37,10 +37,11 @@ int t07_ip()
 {
     string s;
     getline (cin, s);
-    int b,a,d=1;
+    int b,d=1;
     string c;
     b = 0;
     for (int i = 0; i < s.length(); i++) {
+        int a;
         if (s[i] != '.') {
             if (s[i]=='-'){
                 d=-1;
