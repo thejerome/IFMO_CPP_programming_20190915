@@ -46,7 +46,7 @@ string IsPointInCircle(float x, float y, float xc, float yc, float r){
     else return "NO";
 }
 
-int t03_circle(int argc, char* argv[])
+int t03_circle()
 {
     float x, y, xc, yc, r;
     cin>>x;
