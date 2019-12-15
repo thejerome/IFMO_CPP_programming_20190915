@@ -42,7 +42,7 @@ int t07_ip() {
     char *pch = strtok(IP, ".");
     while (pch != NULL)
     {
-        if (atoi(pch) < 0 || atoi(pch) > 255)
+        if (atoi(pch) < 0 || atoi(pch) > 254)
         {
             result = 0;
             break;
