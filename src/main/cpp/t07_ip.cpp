@@ -42,15 +42,15 @@ int t07_ip()
     b = 0;
     for (int i = 0; i < s.length(); i++) {
         if (s[i] != '.') {
-            c=s[i];
             if (s[i]=='-'){
                 d=-1;
             }
-            else
-            a=d*(a*10+stoi(c));
+            else c=s[i];
+            a=a*10+stoi(c);
         }
     
         else {
+            a=a*d;
             if (a<0 || a>255) {
                 b++;
             }
