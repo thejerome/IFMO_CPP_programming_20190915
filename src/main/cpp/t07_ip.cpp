@@ -35,27 +35,23 @@
 using namespace std;
 
 int t07_ip() {
-	 char IP[16];
-    int result = 1;
-    cin >> IP;
- 
-    char *pch = strtok(IP, ".");
-    while (pch != NULL)
-    {
-        if (atoi(pch) < 0 || atoi(pch) > 254)
-        {
-            result = 0;
-            break;
-        }
-        pch = strtok(NULL, ".");
-    }
-    if (result==0){
-        cout<<"NO";
-    }else{
-        cout << "YES";
-    }
-	if(IP=="255.0.255.255"){
-		cout<<"YES";
-	}
-    return 0;
+string ip, str;
+getline(cin, ip);
+int ex=0,nu;
+for (auto i: ip){
+    if (i=='.'){
+        if (str!="") nu=stoi(str);
+        count++;
+        if ((count>3) or (nu<0) or (nu>255) or (str=="")){
+            ex=0;
+            break;}
+        else str="";}
+    else str=str+i;
+}
+if (ex==3){
+	cout <<"YES";
+}
+else{
+	cout <<"NO";
+}
 }
