@@ -28,10 +28,27 @@
 
 #include "t02_shoes.h"
 #include <iostream>
+#include <set>
 
 
 using namespace std;
 
 int t02_shoes() {
-    
+    multiset <int> z;
+    int num;
+    int razm;
+    int  wor=0;
+    int nol=0;
+    cin >> razm >> num;
+    for (int i = nol; i < num; i++) {
+        int kuzl;
+        cin >> kuzl;
+        z.emplace(kuzl);
+    }
+    for (int j : z) {
+        if (wor == nol && j - razm >= nol){wor=wor+1;razm = j;}
+        if (j - razm >= 3){wor++;razm = j;}
+    }
+    cout << wor;
+    return 0;
 }
