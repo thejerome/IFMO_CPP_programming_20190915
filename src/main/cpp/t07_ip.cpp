@@ -41,7 +41,7 @@ int ex=0,nu;
 for (auto i: ip){
     if (i=='.'){
         if (str!="") nu=stoi(str);
-        count++;
+        ex++;
         if ((count>3) or (nu<0) or (nu>255) or (str=="")){
             ex=0;
             break;}
