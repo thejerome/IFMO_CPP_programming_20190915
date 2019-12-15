@@ -28,10 +28,32 @@
 
 #include "t02_shoes.h"
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 
 using namespace std;
 
 int t02_shoes() {
-    
+	int miley, cyrus;
+	cin >> miley >> cyrus;
+	vector <int> ball(cyrus);
+	for (int i = 0; i < cyrus; i++)
+		cin >> ball[i];
+	sort(ball.begin(), ball.end());
+	int wrecking = 0, force = 0;
+	for (int i = 0; i < cyrus; i++)
+		if (ball[i] >= miley)
+		{
+			wrecking = ball[i];
+			force++;
+			for (int j = i; j < cyrus; j++)
+				if (ball[j] - wrecking >= 3)
+				{
+					force++;
+					wrecking = ball[j];
+				}
+			break;
+		}
+	cout << force;
 }

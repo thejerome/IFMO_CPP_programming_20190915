@@ -32,7 +32,36 @@
 
 using namespace std;
 
+struct stradalec {
+	string surname;
+	string name;
+	double avg;
+};
+
 int t04_students() {
-    
+	int ko;
+	cin >> ko;
+	stradalec xex[ko];
+	for (int i = 0; i < ko; i++) {
+		int ti1, ti2, ti3;
+		cin >> xex[i].surname >> xex[i].name;
+		cin >> ti1 >> ti2 >> ti3;
+		xex[i].avg = (ti1 + ti2 + ti3) / 3.0;
+	}
+
+	for (int i = 1; i < ko; i++) {
+		for (int j = 1; j < ko; j++) {
+			if (xex[i - 1].avg < xex[i].avg) {
+				stradalec ex;
+				ex = xex[i - 1];
+				xex[i - 1] = xex[i];
+				xex[i] = ex;
+			}
+		}
+	}
+
+	for (int i = 0; i < ko; i++) {
+		cout << xex[i].surname << " " << xex[i].name << "\n";
+	}
 }
 
