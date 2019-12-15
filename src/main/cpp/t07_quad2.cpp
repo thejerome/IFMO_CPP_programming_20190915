@@ -21,96 +21,32 @@
 using namespace std;
 
 
-int t07_quad2()
-{
-    double q, b, c;
-    int Z;
-    cin >> q >> b >> c;
-    if(q == 0)
-    {
-        if(b == 0)
-        {
-            if(c == 0)
-            {
-                cout << 3;
-            }
-            else
-            {
-                cout << 0;
-            }
+int t07_quad2(){
+    float Q, W, E, R;
+    int four=4;
+    int nul=0;
+    cin >> Q >> W >> E;
+    if (Q != nul) {
+        R = W * W - four * Q * E;
+        if (R > nul) {
+            cout << "2" << " " << (-1 * W - sqrt(R)) / (four-2) / Q << " " << (-1 * W + sqrt(R)) / (four-2) / Q;
+        }
+        else if (R == nul) {
+            cout << "1" << " " << -W / (four-2) / Q;
+
+
         }
         else
-        {
-            if(c == 0)
-            {
-                cout << 1 << " " << 0;
-            }
-            else
-            {
-                cout << 1 << " " << (-c/b);
-            }
-        }
+            cout << "0";
+
     }
-    else
-    {
-        if(b == 0)
-        {
-            if(c == 0)
-            {
-                cout << 1 << " " << 0;
-            }
-            else
-            {
-                if(q > 0 && c < 0 || q < 0 && c > 0)
-                {
-                    cout << 2 << " " << -sqrt(-c/q) <<  " " << sqrt(-c/q);
-                }
-                else
-                {
-                    cout << 0;
-                }
-            }
-        }
+    else {
+        if (W != nul)
+            cout << "1" << " " << -E / W;
+        else if (E != nul)
+            cout << "0";
         else
-        {
-            if(c == 0)
-            {
-                cout << 2 << " ";
-                if((-b/q) < 0)
-                {
-                    cout << (-b/q) << " " << 0;
-                }
-                else
-                {
-                    cout << 0 << " " << (-b/q);
-                }
-            }
-            else
-            {
-                double d = pow(b,Z) - 4 * c * q;
-                if(d == 0)
-                {
-                    cout << 1 << " " << (-b/(2*q));
-                }
-                else if(d > 0)
-                {
-                    double x = (-b + sqrt(d))/(2 * q), X = (-b - sqrt(d))/(2 * q);
-                    cout << 2 << " ";
-                    if(x > X)
-                    {
-                        cout << X << " " << x;
-                    }
-                    else
-                    {
-                        cout << x << " " << X;
-                    }
-                }
-                else
-                {
-                    cout << 0;
-                }
-            }
-        }
+            cout << "3";
     }
-    return 0;
+
 }
