@@ -135,7 +135,6 @@ int t06_homework() {
             for (int k=0; k<h.length();k++) {
                 if (h[k]==toupper(h[k])) {
                     b++;
-                    cout<<h[k]<<endl;
                 }
             }
             if (b!=1) {
