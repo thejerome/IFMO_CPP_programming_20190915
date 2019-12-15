@@ -34,8 +34,10 @@ int power (int b, int a, int n){
 }
 
 int t05_power() {
-int a, n;
-cin >> a >> n;
-cout << power (1,a,n);
-return 0;
+	int a, n;
+	cin >> a >> n;
+	double s = power(1, a, abs(n));
+	if(n>=0) cout << s; 
+	else cout << 1/s; 
+    return 0;
 }
