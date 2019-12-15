@@ -28,7 +28,7 @@ float distance(int x1, int y1, int x2, int y2){
     return s;
 }
 
-int t02_dist(int argc, char* argv[])
+int t02_dist()
 {
     int a,b,c,d;
     cin>>a;
