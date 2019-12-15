@@ -38,8 +38,8 @@ int t05_palindrom() {
 
 		}
 
-	if (kek) cout << "YES";
+	if (kek) cout << "yes";
 
-	else cout << "NO";
+	else cout << "no";
 	
 }
