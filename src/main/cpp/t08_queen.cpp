@@ -24,20 +24,19 @@ using namespace std;
 
 int k=0;
 
-void attempt(int n,int j,bool* r,bool* a,bool* b){
+void attempt(int n,int j,bool* x,bool* a,bool* b){
     for (int i=0;i<n;i++){
-        if (!r[i] && !a[i+j] && !b[n+i-j]) {
-            r[i] = 1; 
-            a[i+j] = 1; 
-            b[n+i-j] = 1;
-            if (j < n-1){
-                attempt(n,j+1,r,a,b);
-            }else{
+        if (!x[i] && !a[i+j] && !b[n+i-j]) {
+            x[i] = true; 
+            a[i+j] = true; 
+            b[n+i-j] = true;
+            if (j < n-1)
+                attempt(n,j+1,x,a,b);
+            else
                 k+=1;
-            }
-            r[i] = 0; 
-            a[i+j] = 0; 
-            b[n+i-j] = 0;
+            x[i] = false; 
+            a[i+j] = false; 
+            b[n+i-j] = false;
         }
     }
 }
@@ -46,15 +45,16 @@ void attempt(int n,int j,bool* r,bool* a,bool* b){
 int t08_queen(){
     int n;
     cin >> n;
-    bool r[n],a[2*n-1],b[2*n-1];
+    bool x[n],a[2*n-1],b[2*n-1];
     for (int i=0;i<n;i++) {
-        r[i] = 0;
+        x[i] = false;
     }
     for (int i=0;i<2*n-1;i++){
-        a[i] = 0;
-        b[i] = 0;
+        a[i] = false;
+        b[i] = false;
     }
-    attempt(n, 0, r, a, b);
+    attempt(n, 0, x, a, b);
     cout << k << endl;
     return 0;
+    
 }
