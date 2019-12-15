@@ -117,35 +117,37 @@ int t06_homework() {
         hw1.insert(a2);
         hw[a2]=a;
     }
+    
+    
+    
     for (auto i=hw1.begin();i!=hw1.end();i++) {
         string h=hw[*i];
-        v=r;
-        for (auto j=d1.begin();j!=d1.end();j++) {
-            if (*i==*j) {
-                if(hw[*i]==d[*j]) {
-                    r++;
-                } 
-                else rs++;
-                
-            }
-            
-            
-        }
-        if (rs!=v && v==r) err++;
-        else {
-        if (v==r) {
-            b=0;
-            for (int k=0; k<h.length();k++) {
+        cout<<h<<endl;
+        v=err;
+        b=0;
+        r=0;
+        rs=0;
+        for (int k=0; k<h.length();k++) {
                 if (h[k]==toupper(h[k])) {
                     b++;
                 }
-            }
-            if (b!=1) {
-                err++;
-            }
         }
+        if (b!=1) {
+            err++;
+        }
+        if (err==v) {
+            for (auto j=d1.begin();j!=d1.end();j++) {
+                if (*i==*j) {
+                    if(hw[*i]==d[*j]) {
+                        r++;
+                    } 
+                    else rs++;
+                }
+            }
+            if (r==0 && rs!=0) err++;
         }
     }
     cout<<err;
     return 0;
 }
+
