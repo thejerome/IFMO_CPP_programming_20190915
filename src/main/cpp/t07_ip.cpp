@@ -54,7 +54,7 @@ int t07_ip() {
 		cout << "NO";
 	}
 	else {
-		cout << "NO";
+		cout << "YES";
 	}
 }
 }
