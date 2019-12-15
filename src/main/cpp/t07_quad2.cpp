@@ -23,7 +23,7 @@ using namespace std;
 
 int t07_quad2(){
     float Q, W, E;
-    double R;
+    int R;
     int nul=0;
     cin >> Q >> W >> E;
     if (Q != nul) {
