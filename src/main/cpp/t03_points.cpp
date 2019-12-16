@@ -29,7 +29,7 @@
 using namespace std;
 
 int t03_points() {
-    int n,l,j;
+    int n,l;
     cin >> n;
     multiset <int> a;
     map <int,int> c1;
