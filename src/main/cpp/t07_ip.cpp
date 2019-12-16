@@ -62,9 +62,6 @@ int t07_ip() {
     if(num.length() == 0 || stoi(num) > 255 || numOfDots != 3){
         cout << "NO";
         return 0;
-    }else{
-        numOfDots ++;
-        num = "";
     }
     cout << "YES";
 }

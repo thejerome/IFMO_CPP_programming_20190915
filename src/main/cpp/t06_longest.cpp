@@ -42,10 +42,8 @@ int t06_longest() {
     }
 
     if(n > max){
-        max = n;
         maxW = w;
     }
 
     cout << maxW;
-
 }
