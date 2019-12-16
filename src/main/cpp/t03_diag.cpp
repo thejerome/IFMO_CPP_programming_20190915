@@ -22,6 +22,30 @@
 using namespace std;
 
 int t03_diag() {
-    
-    return 0;
+	int n, c = 0;
+	cin >> n;
+	int** a = new int* [n];
+	for (int i = 0; i < n; i++) {
+		a[i] = new int[n];
+	}
+	for (int i = 0; i < n; i++) {
+		for (int j = i; j < n; j++) {
+			a[i][j] = c;
+			c++;
+		}
+		c = 0;
+		for (int j = i; j >= 0; j--) {
+			a[i][j] = c;
+			c++;
+		}
+		c = 0;
+		cout << endl;
+	}
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			cout << a[i][j] << " ";
+		}
+		cout << endl;
+	}
+	return 0;
 }
