@@ -36,14 +36,13 @@ using namespace std;
 int t04_students() {
     int n;
     string j;
-    float s;
     cin >> n;
     multiset <float> a;
     map <float,string> c1;
     map <string,string> c2;
     for (int i = 0; i < n; i++){
         string sn, nam, p;
-        s=0;
+        float s=0;
         cin>>sn>>nam;
         for (int j=0; j<3; j++) {
         cin>>p;
