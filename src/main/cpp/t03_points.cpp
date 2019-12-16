@@ -32,17 +32,18 @@ int t03_points() {
     int n,l,j;
     cin >> n;
     multiset <int> a;
-    map <int,int> c;
+    map <int,int> c1;
+    map <int,int> c2;
     for (int i = 0; i < n; i++){
-        int c1,c2;
-        cin >> c1 >> c2;
-        l=c1*c1+c2*c2;
+        int a1,a2;
+        cin >> a1 >> a2;
+        l=a1*a1+a2*a2;
         a.insert(l);
-        c[c1]=c2;
-        c[l]=c1;
+        c1[l]=a1;
+        c2[l]=a2;
+       
     }
     for (auto i = a.begin(); i != a.end(); i++){
-      j=c[*i];
-      cout<<j<<' '<<c[j]<<endl;
+      cout<<c1[*i]<<' '<<c2[*i]<<endl;
     }
 }
