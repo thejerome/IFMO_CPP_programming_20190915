@@ -15,13 +15,26 @@
 //  13  20  19  18   7
 //  12  11  10   9   8
 
-#include "t09_spiral.h"
 #include <iostream>
-
-
-using namespace std;
+#include <iomanip>
 
 int t09_spiral() {
-    
-    return 0;
+	int n, m, a[100][100] = {}, c = 0, i = 1, j = 0;
+	std::cin >> n >> m;
+	while (c < m * n) {
+		while (a[i][j + 1] == 0 && j < m)
+			a[i][++j] = ++c;
+		while (a[i + 1][j] == 0 && i < n)
+			a[++i][j] = ++c;
+		while (a[i][j - 1] == 0 && j > 1)
+			a[i][--j] = ++c;
+		while (a[i - 1][j] == 0 && i > 1)
+			a[--i][j] = ++c;
+	}
+	for (i = 1; i <= n; i++) {
+		for (int j = 1; j <= m; j++)
+			std::cout << std::setw(4) << a[i][j];
+		std::cout << std::endl;
+	}
+	return 0;
 }
