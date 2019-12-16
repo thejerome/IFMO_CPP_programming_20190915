@@ -45,8 +45,10 @@ int t06_cinema() {
         for (int j = 0; j < m-1; j++)
             if ((A[i][j] == 0) && (A[i][j+1] == 0)) {
                 b++;
-                if ((b >= k) && (c == -1)) c = i;
-            } else b = 1;
+            } else {
+                   if ((b >= k) && (c == -1)) c = i;
+                   b = 1;
+            }
         b = 1;
     }
 
