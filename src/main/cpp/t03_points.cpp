@@ -29,18 +29,23 @@
 using namespace std;
 
 int t03_points() {
-    int n,l;
+    int n;
+    float l;
     cin >> n;
-    multiset <int> a;
-    map <int,int> c1;
-    map <int,int> c2;
+    multiset <float> a;
+    map <float,int> c1;
+    map <float,int> c2;
     for (int i = 0; i < n; i++){
         int a1,a2;
         cin >> a1 >> a2;
         l=a1*a1+a2*a2;
+        for (auto j = a.begin(); j != a.end(); j++) {
+            if (l==*j) l=l+0.0001;
+        }
         a.insert(l);
         c1[l]=a1;
         c2[l]=a2;
+        
        
     }
     for (auto i = a.begin(); i != a.end(); i++){
