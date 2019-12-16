@@ -44,7 +44,6 @@ int t02_shoes() {
         a.insert(b);
     }
     for (auto i = a.begin(); i != a.end(); i++){
-        cout<<*i<<endl;
        if (s<*i && v+3<=*i) {
            r++;
            v=*i;
