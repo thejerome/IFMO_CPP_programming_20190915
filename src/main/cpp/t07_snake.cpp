@@ -17,11 +17,31 @@
 
 #include "t07_snake.h"
 #include <iostream>
-
+#include <iomanip>
 
 using namespace std;
 
 int t07_snake() {
     
-    return 0;
-}
+    int n, m, k=0;
+    cin >> n >> m;
+
+    int A[n][m];
+
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < m; j++)
+            A[i][j] = ++k;
+        i++;
+        if (i < n) for (int j = m-1; j >= 0; j--)
+                       A[i][j] = ++k;
+    }
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++)
+            cout << setw(4) << A [i][j];
+    cout << endl;
+    }
+    
+return 0;
+};
+
