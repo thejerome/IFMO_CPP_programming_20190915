@@ -27,9 +27,9 @@ int t09_spiral() {
 	int a[100][100];
 
 	cin >> n >> m;
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			a[i][j] = 0;
+	for (int l = 0; l < n; l++) {
+		for (int p = 0; p < m; p++) {
+			a[l][p] = 0;
 		}
 	}
 	while (u == 0 || d == 0 || l == 0 || r == 0) {
