@@ -23,10 +23,32 @@
 
 #include "t03_points.h"
 #include <iostream>
-
+#include <set>
+#include <map>
 
 using namespace std;
 
 int t03_points() {
-    
+    int n;
+    cin >> n;
+    multiset <float> a;
+    map <float,int> c1;
+    map <float,int> c2;
+    for (int i = 0; i < n; i++){
+        float l;
+        int a1,a2;
+        cin >> a1 >> a2;
+        l=a1*a1+a2*a2;
+        for (auto j = a.begin(); j != a.end(); j++) {
+            if (l==*j) l=l+0.0001;
+        }
+        a.insert(l);
+        c1[l]=a1;
+        c2[l]=a2;
+        
+       
+    }
+    for (auto i = a.begin(); i != a.end(); i++){
+      cout<<c1[*i]<<' '<<c2[*i]<<endl;
+    }
 }

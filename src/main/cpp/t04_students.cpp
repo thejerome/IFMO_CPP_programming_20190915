@@ -29,10 +29,39 @@
 
 #include "t04_students.h"
 #include <iostream>
-
+#include <set>
+#include <map>
 using namespace std;
 
 int t04_students() {
-    
+    int n;
+    string j;
+    cin >> n;
+    multiset <float> a;
+    map <float,string> c1;
+    map <string,string> c2;
+    for (int i = 0; i < n; i++){
+        string sn, nam, p;
+        float s=0;
+        cin>>sn>>nam;
+        for (int j=0; j<3; j++) {
+        cin>>p;
+        int b=stoi(p);
+        s=s+b;
+        }
+        s=s/3;
+        s=1/s;
+        for (auto j = a.begin(); j != a.end(); j++) {
+            if (s==*j) s=s+0.0001;
+        }
+        a.insert(s);
+        c2[sn]=nam;
+        c1[s]=sn;
+    }
+    for (auto i = a.begin(); i != a.end(); i++){
+        j=c1[*i];
+        cout<<j<<' '<<c2[j]<<endl;
+    }
 }
+
 
