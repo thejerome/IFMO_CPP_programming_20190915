@@ -30,12 +30,12 @@ using namespace std;
 
 int t03_points() {
     int n;
-    float l;
     cin >> n;
     multiset <float> a;
     map <float,int> c1;
     map <float,int> c2;
     for (int i = 0; i < n; i++){
+        float l;
         int a1,a2;
         cin >> a1 >> a2;
         l=a1*a1+a2*a2;
