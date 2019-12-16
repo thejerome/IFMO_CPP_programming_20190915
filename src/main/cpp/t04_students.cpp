@@ -38,26 +38,28 @@ int t04_students() {
     string j;
     float s=0;
     cin >> n;
-    multiset <int> a;
-    map <int,string> c1;
+    multiset <float> a;
+    map <float,string> c1;
     map <string,string> c2;
     for (int i = 0; i < n; i++){
-        string sen, nam;
-        int p;
+        string sn, nam, p;
         s=0;
-        cin >> sen >> nam;
+        cin>>sn>>nam;
         for (int i=0; i<3; i++) {
-        cin >> p;
-        s=s+p;
+        cin>>p;
+        int b=stoi(p);
+        s=s+b;
         }
         s=s/3;
+        s=1/s;
         a.insert(s);
-        c1[s]=sen;
-        c2[sen]=nam;
+        c2[sn]=nam;
+        c1[s]=sn;
     }
     for (auto i = a.begin(); i != a.end(); i++){
-      j=c1[*i];
-      cout<<j<<' '<<c2[j]<<endl;
+        j=c1[*i];
+        cout<<j<<' '<<c2[j]<<endl;
     }
 }
+
 
