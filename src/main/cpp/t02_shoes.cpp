@@ -33,7 +33,7 @@
 using namespace std;
 
 int t02_shoes() {
-    int s,v=0,r=0;
+    int s,v=-3,r=0;
     int n;
     cin >> s;
     cin >> n;
@@ -44,7 +44,7 @@ int t02_shoes() {
         a.insert(b);
     }
     for (auto i = a.begin(); i != a.end(); i++){
-       if (s<*i && v+3<=*i) {
+       if (s<=*i && v+3<=*i) {
            r++;
            v=*i;
        }
