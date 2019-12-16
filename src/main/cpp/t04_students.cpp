@@ -45,13 +45,16 @@ int t04_students() {
         string sn, nam, p;
         s=0;
         cin>>sn>>nam;
-        for (int i=0; i<3; i++) {
+        for (int j=0; j<3; j++) {
         cin>>p;
         int b=stoi(p);
         s=s+b;
         }
         s=s/3;
         s=1/s;
+        for (auto j = a.begin(); j != a.end(); j++) {
+            if (s==*j) s=s+0.0001;
+        }
         a.insert(s);
         c2[sn]=nam;
         c1[s]=sn;
