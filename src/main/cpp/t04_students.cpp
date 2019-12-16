@@ -36,7 +36,7 @@ using namespace std;
 int t04_students() {
     int n;
     string j;
-    float s=0;
+    float s;
     cin >> n;
     multiset <float> a;
     map <float,string> c1;
