@@ -21,8 +21,41 @@
 #include <vector>
 
 using namespace std;
-
+void f(int N, int k, int& s, int a[10][10]) {
+	for (int i = 0; i < N; i++) {
+		if (a[i][k] == -1) {
+			int n = i;
+			for (int i = 0; i < N; i++) {
+				for (int j = k + 1; j < N; j++) {
+					if ((i == n || (j - k) * (j - k) == (i - n) * (i - n)) && a[i][j] == -1)
+						a[i][j] = k + 1;
+				}
+			}
+			if (k < N - 1) {
+				f(N, k + 1, s, a);
+			}
+			else if (k == N - 1) {
+				s++;
+			}
+			for (int i = 0; i < N; i++) {
+				for (int j = k + 1; j < N; j++) {
+					if (a[i][j] == k + 1) {
+						a[i][j] = -1;
+					}
+				}
+			}
+		}
+	}
+}
 int t08_queen(){
-
+	int N, b[10][10], k = 0, g = 0;
+	cin >> N;
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N; j++) {
+			b[i][j] = -1;
+		}
+	}
+	f(N, k, g, b);
+	cout << g;
     return 0;
 }
