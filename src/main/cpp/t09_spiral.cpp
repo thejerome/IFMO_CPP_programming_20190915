@@ -17,81 +17,36 @@
 
 #include "t09_spiral.h"
 #include <iostream>
+#include <iomanip>
 
 
 using namespace std;
 
 int t09_spiral() {
-    int n, m;
-	cin >> n >> m;
-    int arr[100][100];
+    int b = 0, po = 0, n, m, p = 0, q = 0;
+    int vec[100][100];
+    cin >> n >> m;
 
-    for(int i = 0; i < n; i++)
-        for(int j = 0; j < n; j++)
-            arr[i][j] = 0;
+    while (n * m > b){
+        b++;
+        vec[p][q] = b;
 
-    int k = 1;
-
-    int napr = 6;
-
-	int i, j;
-
-	bool is = 1;
-	int i0 = 0, j0 = 0;
-
-	while(is){
-        is = 0;
-        int last = -1;
-
-        switch(napr){
-            case 6:
-                for(int i = 0; i == n - 1 || i < n && arr[i + 1] == 0; i++){
-                    arr[i0][i] = k;
-                    last = i;
-                    is = 1;
-                    k++;
-                }
-                j0 = i;
-                napr = 2;
-                break;
-
-            case 4:
-                for(int i = n - 1; i == 0 || i > 0 && arr[i - 1] == 0; i++){
-                    arr[i0][i] = k;
-                    is = 1;
-                    k++;
-                }
-                j0 = i;
-                napr = 8;
-                break;
-
-            case 8:
-                for(int i = n - 1; i == 0 || i > 0 && arr[i - 1] == 0; i++){
-                    arr[i][j0] = k;
-                    is = 1;
-                    k++;
-                }
-                i0 = i;
-                napr = 6;
-                break;
-
-            case 2:
-                for(int i = n - 1; i == 0 || i > 0 && arr[i - 1] == 0; i++){
-                    arr[i][j0] = k;
-                    last = j0;
-                    is = 1;
-                    k++;
-                }
-                i0 = i;
-                napr = 8;
-                break;
-
+        if (p - po == 0 && q < m - po - 1)
+            q++;
+        else if (q + po + 1 == m && p < n - po - 1)
+            p++;
+        else if (p + po + 1 == n && q >= po + 1)
+            q--;
+        else {
+            if (p == po + 2)
+                po++;
+            p--;
         }
     }
 
     for(int i = 0; i < n; i++){
         for(int j = 0; j < m; j++)
-            cout << setw(4) << arr[i][j];
+            cout << setw(4) << vec[i][j];
 
         cout << endl;
     }
