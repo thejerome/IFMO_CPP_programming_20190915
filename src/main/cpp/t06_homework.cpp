@@ -112,7 +112,7 @@ int t06_homework() {
             cor = true;
 
 
-        if(caps < 2) {
+        if(caps == 1) {
             cor = true;
 
             for(int i = 0; i < w.size(); i++)

@@ -41,6 +41,7 @@ int t05_syn() {
         cin >> s1;
         cin >> s2;
         mmap[s1] = s2;
+		mmap[s2] = s1;
     }
 
     string s3;
