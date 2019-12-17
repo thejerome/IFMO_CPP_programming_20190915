@@ -29,7 +29,7 @@
 #include "t02_shoes.h"
 #include <iostream>
 #include <vector>
-
+#include <algorithm>
 
 using namespace std;
 
