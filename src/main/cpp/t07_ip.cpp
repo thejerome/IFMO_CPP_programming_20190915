@@ -32,17 +32,27 @@
 #include <string>
 
 using namespace std;
-string O(string z, int i, int d, string j) {
-	if ((z[i] <= '0' && z[i] >= '9') && z[i] != '.') return "NO";
-	if (i == z.size() && d == 3 && j != "") return "YES";
-	if ((z[i] >= '0' && z[i] <= '9') && stoi(j + z[i]) > 255) return "NO";
-	if (z[i] >= '0' && z[i] <= '9')	return O(z, i + 1, d, j + z[i]);
-	if (z[i] == '.' && j != "") return O(z, i + 1, d + 1, "");
-	return "NO";
-}
 int t07_ip() {
-	string c;
-	cin >> c;
-	cout << O(c, 0, 0, "");
+	int dots = 0;
+	string s, t;
+	getline(cin, s);
+	for (auto c : s + '.') {
+		if (isdigit(c) && t != "0") {
+			t += c;
+		}
+		else if (c == '.' && !t.empty()) {
+			if (stoi(t) > 255) {
+				cout << "NO";
+				return 0;
+			}
+			dots++;
+			t.clear();
+		}
+		else {
+			cout << "NO";
+			return 0;
+		}
+	}
+	cout << (dots == 4 ? "YES" : "NO");
 	return 0;
 }
