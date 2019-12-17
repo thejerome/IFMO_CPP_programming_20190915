@@ -29,7 +29,7 @@ using namespace std;
 int t04_both2() {
 	set <int> s;
 	multiset <int> s2;
-	int n, x, m, k = 0;
+	int n, x, m;
 
 	cin >> n;
 	for (int i = 0; i < n; i++) {
