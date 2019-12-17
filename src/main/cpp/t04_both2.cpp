@@ -28,29 +28,23 @@
 using namespace std;
 
 int t04_both2() {
-    set <int>z;
-    set <int>z2;
-    set <int>z1;
-    int q;
-    int w;
-    cin >> q;
-    for(int i = 0; i < q; i++)
-    {
-        int a;
-        cin >> a;
-        z.insert(a);
+    set<int> meme, dl, dsa;
+    int oko, die;
+    cin >> die;
+    int max;
+    int turner;
+    for (int i = 0; i < die; i++) {
+        cin >> turner;
+        meme.emplace(turner);
     }
-    cin >> w;
-    for(int i = 0; i < w; i++)
-    {
-        int a;
-        cin >> a;
-        z1.insert(a);
-        if(z.find(a) != z.end()) {
-            z2.insert(a);
-        }
+    cin >> oko;
+    for (int i = 0; i < oko; i++) {
+        cin >> max;
+        dl.insert(max);
+        if (meme.find(max) != meme.end())
+            dsa.insert(max);
     }
-    set <int>::iterator j;
-    for(j = z2.begin(); j != z2.end(); j++)
+    set<int>::iterator j;
+    for (j = dsa.begin(); j != dsa.end(); ++j)
         cout << *j << ' ';
 }
