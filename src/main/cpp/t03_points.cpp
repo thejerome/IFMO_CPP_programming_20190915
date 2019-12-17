@@ -23,7 +23,7 @@
 
 #include "t03_points.h"
 #include <iostream>
-
+#include <vector>
 
 using namespace std;
 
