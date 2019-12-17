@@ -25,10 +25,23 @@
 
 #include "t02_new.h"
 #include <iostream>
+#include <set>
 
 
 using namespace std;
 
 int t02_new() {
-    
+    set <int>k;
+    int l;
+    cin >> l;
+    for ( int i = 0; i < l; i++){
+        int c;
+        cin >> c;
+        if (k.find(c) == k.end()) cout << "NO" << endl;
+        else cout << "YES" << endl;
+        k.emplace(c);
+    }
+    return 0;
+
 }
+

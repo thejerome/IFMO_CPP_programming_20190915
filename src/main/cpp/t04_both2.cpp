@@ -23,9 +23,28 @@
 
 #include "t04_both2.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t04_both2() {
-
+    set<int> meme, dl, dsa;
+    int oko, die;
+    cin >> die;
+    int max;
+    int turner;
+    for (int i = 0; i < die; i++) {
+        cin >> turner;
+        meme.emplace(turner);
+    }
+    cin >> oko;
+    for (int i = 0; i < oko; i++) {
+        cin >> max;
+        dl.insert(max);
+        if (meme.find(max) != meme.end())
+            dsa.insert(max);
+    }
+    set<int>::iterator j;
+    for (j = dsa.begin(); j != dsa.end(); ++j)
+        cout << *j << ' ';
 }

@@ -80,9 +80,48 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
+#include <string>
 
 using namespace std;
 
 int t06_homework() {
-
+    set <string> meme;
+    set <string> memez;
+    int onelove=1;
+    int dodo;
+    int hehe=0;
+    int puka=0;
+    string q;
+    string garu;
+    string golum;
+    bool wasted=false;
+    cin >> dodo;
+    for (int i=0;i<dodo;i++){cin >> q;meme.insert(q);for (int jop=0;jop<q.length();jop++){
+            garu += toupper(q[jop]);}
+        memez.emplace(garu);garu = "";
+    }
+    while (cin >> q){
+        if (meme.find(q) == meme.end()){
+            for (int kit=0;kit<q.length();kit++)
+                if (q[kit] >= 'A' && q[kit] <= 'Z'){
+                    puka++;
+                }
+            golum = "";
+            for (int j=0;j<q.length();j++){
+                golum += toupper(q[j]);
+            }
+            if (puka != onelove)
+                wasted = true;
+            else if ((memez.find(golum) != memez.end()))
+                wasted = true;
+            if (wasted)
+                hehe++;
+            wasted=false;
+            puka=0;
+        }
+    }
+    cout << hehe;
+    return 0;
 }
+
