@@ -43,8 +43,8 @@ struct student{
 };
 
 bool comp(student p1, student p2){
-    float s1 = (p1.x + p1.y + p1.z) / 3;
-    float s2 = (p2.x + p2.y + p2.z) / 3;
+    float s1 = (p1.x + p1.y + p1.z) / 3.0;
+    float s2 = (p2.x + p2.y + p2.z) / 3.0;
     return s2 < s1;
 }
 
