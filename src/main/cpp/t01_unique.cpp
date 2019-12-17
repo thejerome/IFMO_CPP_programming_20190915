@@ -24,20 +24,13 @@
 using namespace std;
 
 int t01_unique() {
-    set<int> d;
-    int n,z, k[n];
-
+    int n,f;
     cin >> n;
-
-    while ( z != n) {
-        cin >> k[n];
-        d.emplace(k[n]);
-        z++;
-
-
+    set <int> b;
+    for (int i = 0;i < n;i++){
+        cin >> f;
+        b.emplace(f);
     }
-
-    cout << d.size();
-
+    cout << b.size() << "\n";
     return 0;
 }
