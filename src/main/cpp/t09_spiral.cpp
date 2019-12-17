@@ -17,11 +17,39 @@
 
 #include "t09_spiral.h"
 #include <iostream>
+#include <iomanip>
 
 
 using namespace std;
 
 int t09_spiral() {
-    
+    int b = 0, po = 0, n, m, p = 0, q = 0;
+    int vec[100][100];
+    cin >> n >> m;
+
+    while (n * m > b){
+        b++;
+        vec[p][q] = b;
+
+        if (p - po == 0 && q < m - po - 1)
+            q++;
+        else if (q + po + 1 == m && p < n - po - 1)
+            p++;
+        else if (p + po + 1 == n && q >= po + 1)
+            q--;
+        else {
+            if (p == po + 2)
+                po++;
+            p--;
+        }
+    }
+
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++)
+            cout << setw(4) << vec[i][j];
+
+        cout << endl;
+    }
+
     return 0;
 }

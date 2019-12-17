@@ -37,7 +37,31 @@
 
 using namespace std;
 
-int t05_kdiag() {
-    
+int t05_kdiag() {	
+	int n, k;
+	cin >> n;
+    int arr[10][10];
+
+	for(int i = 0; i < n; i++)
+        for(int j = 0; j < n; j++)
+            cin >> arr[i][j];
+
+    cin >> k;
+
+    if(k >= 0){
+        int j = 0;
+        for(int i = k; i < n; i++){
+            cout << arr[i][j] << " ";
+            j++;
+        }
+    }else{
+        k *= -1;
+        int j = 0;
+        for(int i = k; i < n; i++){
+            cout << arr[j][i] << " ";
+            j++;
+        }
+    }
+
     return 0;
 }
