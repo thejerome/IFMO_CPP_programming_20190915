@@ -35,7 +35,7 @@ int t04_swap() {
 
     cin >> p >> q;
 
-    for(int i = 0; i < m; i++){
+    for(int i = 0; i < n; i++){
         int t;
 
         t = arr[i][p];

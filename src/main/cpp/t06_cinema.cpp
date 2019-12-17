@@ -29,7 +29,7 @@
 using namespace std;
 
 int t06_cinema() {
-    int n, m, k, str = 0;
+    int n, m, k, str = -1;
 	cin >> n >> m;
     int arr[20][20];
 
@@ -61,7 +61,7 @@ int t06_cinema() {
             break;
 
     }
-
+	
     cout << str + 1;
 
     return 0;
