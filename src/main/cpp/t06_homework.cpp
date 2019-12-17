@@ -97,7 +97,7 @@ int t06_homework() {
     string golum;
     bool wasted=false;
     cin >> dodo;
-    for (int i=(onelove-1);i<dodo;i++){cin >> q;meme.insert(q);for (int jop=0;jop<q.length();jop++){
+    for (int i=0;i<dodo;i++){cin >> q;meme.insert(q);for (int jop=0;jop<q.length();jop++){
             garu += toupper(q[jop]);}
         memez.emplace(garu);garu = "";
     }
@@ -118,7 +118,7 @@ int t06_homework() {
             if (wasted)
                 hehe++;
             wasted=false;
-            puka=(onelove-1);
+            puka=0;
         }
     }
     cout << hehe;

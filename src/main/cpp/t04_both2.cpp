@@ -31,17 +31,18 @@ int t04_both2() {
     set <int>z;
     set <int>z2;
     set <int>z1;
-    int q, w, o = 0;
+    int q;
+    int w;
     cin >> q;
-    for(int i = o; i < q; i++)
+    for(int i = 0; i < q; i++)
     {
         int a;
         cin >> a;
         z.insert(a);
     }
-    int k = o;
+    int k = 0;
     cin >> w;
-    for(int i = o; i < w; i++)
+    for(int i = 0; i < w; i++)
     {
         int a;
         cin >> a;
