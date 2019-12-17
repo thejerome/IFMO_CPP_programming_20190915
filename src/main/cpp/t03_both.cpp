@@ -46,8 +46,6 @@ int t03_both() {
         set2.insert(t);
     }
 
-    int size10 = set1.size();
-
     set <int> :: iterator it = set2.begin();
 
     for(int i = 0; i < m; i++){

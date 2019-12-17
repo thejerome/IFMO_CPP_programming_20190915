@@ -29,7 +29,7 @@ using namespace std;
 
 int t04_both2() {
 	set <int> set1, set2, set3;
-    int n, m, cou = 0;
+    int n, m;
     cin >> n;
 
     for(int i = 0; i < n; i++){
@@ -45,8 +45,6 @@ int t04_both2() {
         cin >> t;
         set2.insert(t);
     }
-
-    int size10 = set1.size();
 
     set <int> :: iterator it = set2.begin();
 
