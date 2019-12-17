@@ -28,10 +28,36 @@
 
 #include "t02_shoes.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
 int t02_shoes() {
-    
+    vector <int> vec;
+    int n, leg, cou = 0;
+    bool is = 0;
+    cin >> leg >> n;
+    for(int i = 0; i < n; i++){
+        int t;
+        cin >> t;
+        vec.push_back(t);
+    }
+
+    sort(vec.begin(), vec.end());
+
+    for(int i = 0; i < n; i++){
+        if(!is && vec[i] >= leg){
+            is = true;
+            leg = vec[i];
+            cou++;
+        }
+        if(vec[i] - leg >= 3){
+            leg = vec[i];
+            cou++;
+        }
+    }
+
+    cout << cou;
+    return 0;
 }
