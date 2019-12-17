@@ -32,5 +32,21 @@
 using namespace std;
 
 int t05_syn() {
+	map <string, string> mmap;
+    int n;
+    cin >> n;
 
+    for(int i = 0; i < n; i++){
+        string s1, s2;
+        cin >> s1;
+        cin >> s2;
+        mmap[s1] = s2;
+    }
+
+    string s3;
+
+    cin >> s3;
+    cout << mmap[s3];
+
+    return 0;
 }

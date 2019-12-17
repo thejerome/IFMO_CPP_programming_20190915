@@ -30,5 +30,18 @@
 using namespace std;
 
 int t02_new() {
-    
+    set <int> vec;
+    int n;
+    cin >> n;
+
+    for(int i = 0; i < n; i++){
+        int t, size0 = vec.size();
+        cin >> t;
+        vec.insert(t);
+        if(size0 == vec.size())
+            cout << "YES" << endl;
+        else
+            cout << "NO" << endl;
+    }
+    return 0;
 }

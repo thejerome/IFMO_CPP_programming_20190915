@@ -27,5 +27,40 @@
 using namespace std;
 
 int t04_both2() {
+	set <int> set1, set2, set3;
+    int n, m, cou = 0;
+    cin >> n;
 
+    for(int i = 0; i < n; i++){
+        int t;
+        cin >> t;
+        set1.insert(t);
+    }
+
+    cin >> m;
+
+    for(int i = 0; i < m; i++){
+        int t;
+        cin >> t;
+        set2.insert(t);
+    }
+
+    int size10 = set1.size();
+
+    set <int> :: iterator it = set2.begin();
+
+    for(int i = 0; i < m; i++){
+        int size0 = set1.size();
+        set1.insert(*it);
+        if(size0 == set1.size())
+            set3.insert(*it);
+        it++;
+    }
+
+    it = set3.begin();
+
+    for(int i = 0; i < set3.size(); i++)
+        cout << *it++ << endl;
+
+    return 0;
 }

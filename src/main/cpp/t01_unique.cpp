@@ -23,5 +23,16 @@
 using namespace std;
 
 int t01_unique() {
-    
+	set <int> vec;
+    int n;
+    cin >> n;
+
+    for(int i = 0; i < n; i++){
+        int t;
+        cin >> t;
+        vec.insert(t);
+    }
+
+    cout << vec.size();
+    return 0;
 }
