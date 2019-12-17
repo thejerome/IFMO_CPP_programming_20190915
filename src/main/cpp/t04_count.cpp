@@ -28,16 +28,13 @@
 using namespace std;
 
 int t04_count() {
+	int count = 1;
+	char tmp;
 	string s;
 	getline(cin, s);
-	int n, k = -1, l = 0;
-	while (1) {
-		n = s.find(" ", k + 1);
-		if (!(n + 1)) break;
-		if (n - k > 1) l++;
-		k = n;
+	for (int i = 1; i < s.length(); i++) {
+		if (s[i] == ' ' && s[i - 1] != ' ') count++;
 	}
-	if (s[s.length() - 1] != ' ') l++;
-	cout << l;
+	cout << count;
 	return 0;
 }
