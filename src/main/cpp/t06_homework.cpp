@@ -80,12 +80,13 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t06_homework() {
 	
-    set<string>vec;
+    set <string> vec;
 
     int cou = 0, n = 0;
     string w;
@@ -98,7 +99,7 @@ int t06_homework() {
         vec.insert(s);
     }
 
-    while(cin >> word) {
+    while(cin >> w) {
         bool cor = false;
         bool is = vec.count(w);
         int caps = 0;
@@ -125,7 +126,7 @@ int t06_homework() {
 
                 }
 
-                w[j] = tolower(w[j]);
+                w[i] = tolower(w[i]);
             }
         }
 
