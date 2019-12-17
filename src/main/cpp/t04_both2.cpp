@@ -40,7 +40,6 @@ int t04_both2() {
         cin >> a;
         z.insert(a);
     }
-    int k = 0;
     cin >> w;
     for(int i = 0; i < w; i++)
     {
@@ -52,8 +51,6 @@ int t04_both2() {
         }
     }
     set <int>::iterator j;
-    for(j = z2.begin(); j != z2.end(); j++) {
+    for(j = z2.begin(); j != z2.end(); j++)
         cout << *j << ' ';
-    }
-    return 0;
 }
