@@ -12,12 +12,23 @@
 //
 //5 4
 
-#include "t03_bigger.h"
 #include <iostream>
-
-
+#include <vector>
 using namespace std;
-
-int t03_bigger() {
-
+int main() {
+    int N;
+    cin >> N;
+    vector <int> m;
+    
+    for (int i = 0; i < N; i++){
+        int k;
+        cin >> k;
+        m.push_back(k);
+    }
+    
+    for (int i = 1; i < N; i++) {
+        if (m[i] > m[i-1]) 
+            cout << m[i] << " ";
+    }
+    return 0;
 }

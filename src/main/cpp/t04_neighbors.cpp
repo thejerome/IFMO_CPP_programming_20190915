@@ -14,12 +14,33 @@
 //
 //2 3
 
-#include "t04_neighbors.h"
 #include <iostream>
-
-
+#include <vector>
 using namespace std;
 
-int t04_neighbors() {
+int neighbors() {
+    int N;
+    cin >> N;
+    vector <int> m;
 
+    for (int i = 0; i < N; i++){
+        int k;
+        cin >> k;
+        m.push_back(k);
+    }
+    for (int i = 1; i < N; i++) {
+        if (m[i] > 0 && m[i-1] > 0 || m[i] < 0 && m[i-1] < 0) {
+              
+        if (m[i-1] <m[i])
+        {
+            cout << m[i-1] << " "<< m[i];
+        }
+        else
+        { cout << m[i] << " "<< m[i-1] ;
+        }
+
+        break;
+        }
+    }
+    return 0;
 }
