@@ -39,5 +39,29 @@
 using namespace std;
 
 int t11_queen() {
+	int Ar[8][2];
+	for (int i = 0; i < 8; i++)
+	{
+		cin >> Ar[i][0] >> Ar[i][1];
+	}
+	int count = 0;
+	for (int i = 0; i < 7; i++)
+	{
+		for (int j = i + 1; j < 8; j++)
+		{
+			if (Ar[i][0] == Ar[j][0] || Ar[i][1] == Ar[j][1] || (abs(Ar[i][0] - Ar[j][0]) == abs(Ar[i][1] - Ar[j][1]))) {
+				++count;
+			}
+		}
 
+
+
+	}
+	if (count == 0) {
+		cout << "NO";
+	}else
+	{
+		cout << "YES";
+	}
+	return 0;
 }
