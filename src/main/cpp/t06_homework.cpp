@@ -80,9 +80,60 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t06_homework() {
+	
+    set <string> vec;
 
+    int cou = 0, n = 0;
+    string w;
+
+    cin >> n;
+
+    for(int i = 0; i < n; i++) {
+        string s;
+        cin >> s;
+        vec.insert(s);
+    }
+
+    while(cin >> w) {
+        bool cor = false;
+        bool is = vec.count(w);
+        int caps = 0;
+
+        if(!is){
+            for(int i = 0; i < w.size(); i++)
+                if (w[i] >= 'A' && w[i] <= 'Z')
+                    caps++;
+        }else
+            cor = true;
+
+
+        if(caps == 1) {
+            cor = true;
+
+            for(int i = 0; i < w.size(); i++)
+                w[i] = tolower(w[i]);
+
+            for(int i = 0; i < w.size(); i++) {
+                w[i] = toupper(w[i]);
+                if (vec.count(w)) {
+                    cor = false;
+                    break;
+
+                }
+
+                w[i] = tolower(w[i]);
+            }
+        }
+
+        if (!cor)
+            cou++;
+    }
+
+    cout << cou;
+    return 0;
 }
