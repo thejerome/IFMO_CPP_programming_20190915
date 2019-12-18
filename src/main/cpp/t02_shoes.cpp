@@ -33,5 +33,31 @@
 using namespace std;
 
 int t02_shoes() {
-    
+int n, s1, s2, count = 0;
+    bool on = false;
+       std::cin >> s1;
+    std::cin >>n;
+   std::vector<int> v(n);
+    while (n > 0){
+        n--;
+        std::cin >> s2;
+        v[n] = s2;
+    }
+    std::sort(v.begin(), v.end());
+    for (int i : v){
+        if (!on){
+            if ( i >= s1){
+            count++;
+                s1 = i;
+                on = true;
+            }
+        }
+        if (s1 <= i - 3){
+            count++;
+            s1 = i;
+        }
+    }
+    std::cout << count;
+  return 0;
+}    
 }

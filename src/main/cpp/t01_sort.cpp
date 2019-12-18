@@ -24,5 +24,19 @@
 using namespace std;
 
 int t01_sort() {
+    std::vector<long int> v;
+    int n;
+    long int num;
+    std::cin >> n;
+    while (n > 0){
+        std::cin >>num;
+        v.push_back(num);
+        n--;
+    }
+    std::sort(v.begin(), v.end());
+     for (auto i : v){
+         std::cout << i << " ";
+     }
+  return 0;
     
 }

@@ -29,10 +29,37 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <math.h>
+#include <vector>
+#include <algorithm>
+#include <utility>
+#include <string>
+
+bool va(std::pair<std::pair<std::string, std::string>, int>p1, std::pair<std::pair<std::string, std::string>, int>p2){
+    return p1.second > p2.second;
+}
 
 using namespace std;
 
 int t04_students() {
-    
+  int n, m1,m2,m3;
+    std::string name, last_name;
+    std::cin >> n;
+    std::vector<std::pair<std::pair<std::string, std::string>, int>> v(n);
+    while (n>0){
+
+        std::cin >> name;
+        std::cin >> last_name;
+        std::cin >> m1;
+        std::cin >> m2;
+        std::cin >> m3;
+        v[v.size() - n] = {{name, last_name}, m1 +m2+ m3};
+          n--;
+    }
+    std::stable_sort(v.begin(), v.end(), va);
+    for (auto i : v){
+        std::cout << i.first.first << " " << i.first.second << "\n";
+    }
+  return 0;   
 }
 
