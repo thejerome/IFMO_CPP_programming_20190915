@@ -21,20 +21,21 @@
 //1 2
 //2 3
 
-#include <t03_points.h>
+#include "t03_points.h"
 #include <iostream>
 #include <math>
 #include <vector>
 #include <algorithm>
 #include <utility>
 
-
 using namespace std;
 
-bool va(std::pair<int, int> p1, std::pair<int, int> p2){
+bool va(std::pair<int, int> p1, std::pair<int, int> p2)
+{
     return pow(p1.first, 2) + pow(p1.second, 2) < pow(p2.first, 2) + pow(p2.second, 2);
 }
-int t03_points() {
+int t03_points() 
+{
   int n, x, y;
     std::cin >> n;
     std::vector<std::pair<int, int>> v(n);
