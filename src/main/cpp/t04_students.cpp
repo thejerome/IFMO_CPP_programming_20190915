@@ -29,7 +29,7 @@
 
 #include "t04_students.h"
 #include <iostream>
-#include <math.h>
+#include <math>
 #include <vector>
 #include <algorithm>
 #include <utility>

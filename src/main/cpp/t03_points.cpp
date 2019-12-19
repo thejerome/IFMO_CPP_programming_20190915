@@ -23,7 +23,7 @@
 
 #include "t03_points.h"
 #include <iostream>
-#include <math.h>
+#include <math>
 #include <vector>
 #include <algorithm>
 #include <utility>
