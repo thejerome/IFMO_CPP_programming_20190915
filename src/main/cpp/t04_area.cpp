@@ -34,7 +34,7 @@ using namespace std;
 
 bool IsPointInArea(int x, int y){
     bool a;
-    if((y >= -x && y >= 2+x && pow(x+1,2)+pow(y-1,2) <= 4) || (y <= -x && y <= 2+x && pow(x+1,2)+pow(y-1,2) >= 4))
+    if((y >= -x && y >= 2*x+2 && pow(x+1,2)+pow(y-1,2) <= 4) || (y <= -x && y <= 2*x+2 && pow(x+1,2)+pow(y-1,2) >= 4))
         a = 1;
     else
         a = 0;
