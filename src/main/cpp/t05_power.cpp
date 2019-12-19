@@ -39,6 +39,15 @@ int t05_power() {
     int n;
     double a;
     cin >> a >> n;
-    cout << power(a, n);
+    if(n > 0)
+        cout << power(a, n);
+    else{
+        if(n < 0){
+             n = abs(n);
+             cout << 1/(power(a, n));
+        }
+        else
+            cout << 1;
+    }    
     return 0;
 }
