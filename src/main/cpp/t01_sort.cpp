@@ -22,11 +22,8 @@
 #include <vector>
 #include <algorithm>
 
-
-using namespace std;
-
-int t01_sort() {
-    std::vector<long int> v;
+int main() {
+  std::vector<long int> v;
     int n;
     long int num;
     std::cin >> n;
@@ -40,5 +37,4 @@ int t01_sort() {
          std::cout << i << " ";
      }
   return 0;
-    
 }
