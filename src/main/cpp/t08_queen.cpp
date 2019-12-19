@@ -25,15 +25,16 @@ using namespace std;
 int k=0;
 
 void attempt(int n,int j,bool* x,bool* a,bool* b){
-    for (int i=0;i<n;i++){
-        if (!x[i] && !a[i+j] && !b[n+i-j]) {
+    for(int i = 0; i < n; i++){
+        if(!x[i] && !a[i+j] && !b[n+i-j]) {
             x[i] = true; 
             a[i+j] = true; 
             b[n+i-j] = true;
-            if (j < n-1)
+            if(j < n-1)
                 attempt(n,j+1,x,a,b);
-            else
+            else{
                 k+=1;
+            }
             x[i] = false; 
             a[i+j] = false; 
             b[n+i-j] = false;
@@ -46,10 +47,10 @@ int t08_queen(){
     int n;
     cin >> n;
     bool x[n],a[2*n-1],b[2*n-1];
-    for (int i=0;i<n;i++) {
+    for(int i = 0; i < n; i++) {
         x[i] = false;
     }
-    for (int i=0;i<2*n-1;i++){
+    for(int i = 0; i < 2*n-1; i++){
         a[i] = false;
         b[i] = false;
     }
