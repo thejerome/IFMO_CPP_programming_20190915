@@ -38,9 +38,7 @@
 using namespace std;
 
 bool IsPointInCircle(double x, double y, double xc, double yc, double r){
-    bool n = 1;
-    (sqrt(pow(abs(xc-x),2)+pow(abs(yc-y),2)) <= r) ? n = 1 : n = 0;
-    return n;
+    return sqrt((x-xc)*(x-xc)+(y-yc)*(y-yc)) < r;
 }
 
 int t03_circle() {
