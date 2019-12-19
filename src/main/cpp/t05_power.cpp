@@ -33,6 +33,7 @@ double power(double a, int n){
         a *= power(a, n);
     }
     return a;    
+}
 
 int t05_power() {
     int n;
