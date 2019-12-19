@@ -43,7 +43,7 @@ bool IsPointInCircle(double x, double y, double xc, double yc, double r){
 
 int t03_circle() {
     double x, y, xc, yc, r;
-    (IsPointInCircle(x,y,xc,yc,r)==1) ? cout << "YES" : cout << "NO";
+    (IsPointInCircle(x,y,xc,yc,r)==true) ? cout << "YES" : cout << "NO";
 
     return 0;
 }
