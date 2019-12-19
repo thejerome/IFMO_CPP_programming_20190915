@@ -27,9 +27,27 @@
 
 using namespace std;
 
-//function power
+double power(double a, int n){
+    if(n != 1){
+        n--;
+        a *= power(a, n);
+    }
+    return a;    
+}
 
 int t05_power() {
-
+    int n;
+    double a;
+    cin >> a >> n;
+    if(n > 0)
+        cout << power(a, n);
+    else{
+        if(n < 0){
+             n = abs(n);
+             cout << 1/(power(a, n));
+        }
+        else
+            cout << 1;
+    }    
     return 0;
 }

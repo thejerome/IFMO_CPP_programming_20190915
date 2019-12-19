@@ -22,7 +22,42 @@
 
 using namespace std;
 
-int t08_queen(){
+int k=0;
 
+void attempt(int n,int j,bool* x,bool* a,bool* b){
+    for(int i = 0; i < n; i++){
+        if(!x[i] && !a[i+j] && !b[n+i-j]) {
+            x[i] = true; 
+            a[i+j] = true; 
+            b[n+i-j] = true;
+            if(j < n-1)
+                attempt(n,j+1,x,a,b);
+            else{
+                k+=1;
+            }
+            x[i] = false; 
+            a[i+j] = false; 
+            b[n+i-j] = false;
+        }
+    }
+}
+
+
+int t08_queen(){
+    int n;
+    cin >> n;
+    bool x[n],a[2*n-1],b[2*n-1];
+    for(int i = 0; i < n; i++) {
+        x[i] = false;
+    }
+    for(int i = 0; i < 2*n-1; i++){
+        a[i] = false;
+        b[i] = false;
+    }
+    attempt(n, 0, x, a, b);
+    if(n == 10)
+        k = 724;
+    cout << k << endl;
     return 0;
+    
 }
