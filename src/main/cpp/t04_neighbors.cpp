@@ -18,7 +18,7 @@
 #include <vector>
 using namespace std;
 
-int neighbors() {
+int t04_neighbors() {
     int N;
     cin >> N;
     vector <int> m;
