@@ -18,15 +18,16 @@
 using namespace std;
 
 int t03_bigger() {
-     int n, num, count = 0;
-    std::cin >> n;
-    while (n > 0){
-        std::cin >> num;
-        if (num > 0){
-            count++;   
-        }
-        n--;
+    int num, m, k;
+    std::cin >> num >> k;
+
+    for(int i = 0; i < num-1; i++){
+        
+        std::cin >> m;
+
+        if (m > k)  std::cout << m << " ";
+        
+        k = m;
     }
-    std::cout << count;
     return 0;
 }

@@ -28,13 +28,17 @@
 using namespace std;
 
 int t05_minodd() {
-  int n, j = 0, a;
-  std::cin >> n;
-  for (int i = 0; i < n; i++) {
-    std::cin >> a;
-    if (a > 0 && (j == 0 || j > a))
-      j = a;
-  }
-  std::cout << j;
+    int number, a, m = 0;
+
+    std::cin >> number;   
+
+    for(int i = 0; i < number; ++i)
+    {
+        std::cin >> a;
+
+        if(a %2 != 0 && (m > a || m == 0)) m = a;
+    }
+    
+    std::cout << m;
   return 0;
 }
