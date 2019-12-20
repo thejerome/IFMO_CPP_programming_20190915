@@ -13,7 +13,7 @@
 //Sample Output:
 //
 //2 3
-#include "neighbors"
+#include "neighbors.h"
 #include <iostream>
 #include <vector>
 using namespace std;
