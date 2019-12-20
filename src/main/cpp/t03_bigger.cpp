@@ -13,9 +13,11 @@
 //5 4
 
 #include <iostream>
+#include "t03_bigger.h"
 #include <vector>
 using namespace std;
-int main() {
+
+int t03_bigger() {
      int n, num, count = 0;
     std::cin >> n;
     while (n > 0){
