@@ -27,7 +27,7 @@ int t04_neighbors() {
     {
         int value;
         std::cin >> value;
-        if (v*previous>0){
+        if (value*previous>0){
             std::cout << std::min(value, previous) << " " << std::max(value, previous);
             break;
         }
