@@ -21,10 +21,23 @@
 
 #include "t09_equals.h"
 #include <iostream>
+#include <vector>
 
 
 using namespace std;
 
 int t09_equals() {
-
+    int n;
+    std::cin >> n;
+    std::vector<int> v(n);
+    for(auto& i:v)
+        std::cin >> i;
+ 
+    int count=0;
+    for(auto i:v)
+        for(auto j:v)
+            if(i==j) count++;
+    count -=n;
+    count /=2;
+    std::cout <<count;
 }

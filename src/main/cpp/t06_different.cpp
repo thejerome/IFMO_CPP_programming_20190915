@@ -19,5 +19,18 @@
 using namespace std;
 
 int t06_different() {
-
+    int n, mas, t;
+    int c = 0;
+    std::cin>>n;
+    
+    for(int i = 0; i < n; ++i)
+    {
+        std::cin>>mas;
+        if(i > 0 && mas != t)
+           ++c;
+        t = mas;
+    }
+    
+    std::cout<<c + 1;
+  return 0;
 }

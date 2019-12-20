@@ -28,5 +28,13 @@
 using namespace std;
 
 int t05_minodd() {
-
+  int n, j = 0, a;
+  std::cin >> n;
+  for (int i = 0; i < n; i++) {
+    std::cin >> a;
+    if (a > 0 && (j == 0 || j > a))
+      j = a;
+  }
+  std::cout << j;
+  return 0;
 }

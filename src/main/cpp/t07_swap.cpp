@@ -19,5 +19,18 @@
 using namespace std;
 
 int t07_swap() {
+    int n;
+    std::cin >> n;
+    std::vector<int>mas(n);
+    
+    for (int i = 0; i < mas.size(); i++)
+        std::cin >> mas[i];
+   
+    for (int i = 1; i < mas.size(); i+=2)
+        std::swap(mas[i],mas[i-1]);
+    
+    for (auto i:mas)
+        std::cout << i << " ";
 
+    return 0;
 }

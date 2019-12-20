@@ -16,19 +16,15 @@
 #include <vector>
 using namespace std;
 int main() {
-    int N;
-    cin >> N;
-    vector <int> m;
-    
-    for (int i = 0; i < N; i++){
-        int k;
-        cin >> k;
-        m.push_back(k);
+     int n, num, count = 0;
+    std::cin >> n;
+    while (n > 0){
+        std::cin >> num;
+        if (num > 0){
+            count++;   
+        }
+        n--;
     }
-    
-    for (int i = 1; i < N; i++) {
-        if (m[i] > m[i-1]) 
-            cout << m[i] << " ";
-    }
+    std::cout << count;
     return 0;
 }

@@ -19,5 +19,17 @@
 using namespace std;
 
 int t08_cycleswap() {
-
+    int n, t;
+    std::cin >> n;
+    std::list <int> a;
+    for (int i = 0; i < n; i++){
+        std::cin >> t;
+        a.push_back(t);
+    }
+    a.push_front(a.back());
+    a.pop_back();
+    for (auto el : a) {
+        std::cout << el << ' ';
+    }
+    return 0;
 }
