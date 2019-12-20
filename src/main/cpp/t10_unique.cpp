@@ -22,7 +22,7 @@
 #include "t10_unique.h"
 #include <iostream>
 #include <vector>
-using namespace std;
+//using namespace std;
 
 int t10_unique() {
     int n, c = 0;
@@ -34,7 +34,7 @@ int t10_unique() {
 
     for(std::size_t i = 0; i < n; ++i)
     {
-        count = 0;
+        c = 0;
         for(std::size_t j = 0; j < n; ++j)
         {
             if(vec[i] == vec[j])

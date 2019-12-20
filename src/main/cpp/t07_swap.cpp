@@ -14,9 +14,10 @@
 
 #include "t07_swap.h"
 #include <iostream>
+#include <vector>
 
 
-using namespace std;
+//  using namespace std;
 
 int t07_swap() {
     int n;

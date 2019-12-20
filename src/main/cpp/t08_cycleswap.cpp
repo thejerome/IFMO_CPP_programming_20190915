@@ -14,9 +14,10 @@
 
 #include "t08_cycleswap.h"
 #include <iostream>
+#include <list>
 
 
-using namespace std;
+//using namespace std;
 
 int t08_cycleswap() {
     int n, t;

@@ -33,10 +33,11 @@
 
 #include "t11_queen.h"
 #include <iostream>
+#include <vector>
 #include <cmath>
 
 
-using namespace std;
+//using namespace std;
 
 int t11_queen() {
     int number, c = 8;
