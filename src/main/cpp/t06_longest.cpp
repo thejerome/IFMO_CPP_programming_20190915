@@ -23,7 +23,7 @@ std::string blabla(std::string line){
     int curr_len = 0;
     std::string max_word = "";
     std::string curr_word = "";
-    int max_len = 0;
+    int max = 0;
     for(int i =0; i < line.length(); i++){
         
         if (line[i] != ' '){
@@ -31,18 +31,18 @@ std::string blabla(std::string line){
             curr_word += line[i];
         }
         else{
-            if(curr_len > max_len){
-                max_len = curr_len;
+            if(curr_len > max){
+                max = curr_len;
                 max_word = curr_word;
             }
             curr_len = 0;
             curr_word = "";
         }
     }
-    /*if(curr_len > max_len){
-                max_len = curr_len;
+    if(curr_len > max){
+                max = curr_len;
                 max_word = curr_word;
-    }*/
+    }
     return max_word;
 }
 int t06_longest() {
