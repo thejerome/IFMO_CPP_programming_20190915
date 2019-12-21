@@ -25,7 +25,7 @@ int t04_neighbors() {
 	for (int i = 0; i < number; i++) {
 		std::cin >> value[i];
 		if ((value[i] > 0 and value[i - 1] > 0) or (value[i]<0 and value[i-1] < 0)) {
-			std::cout << std::min(value[i],value[i-1]) << " " << std::max(value[i],value[i-1]);
+			std::cout << std::min(value[i],value[i-1]) << " " << std::max(value[i-1],value[i]);
             break;
 		}
 	}
