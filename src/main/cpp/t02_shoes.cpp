@@ -36,7 +36,7 @@
 using namespace std;
 
 int t02_shoes() {
-int n, s1, s2, count = 0;
+    int n, s1, s2, count = 0;
     bool on = false;
        std::cin >> s1;
     std::cin >>n;
@@ -63,4 +63,3 @@ int n, s1, s2, count = 0;
     std::cout << count;
   return 0;
 }    
-}
