@@ -41,11 +41,11 @@ int t03_points() {
     std::cin >> n;
     std::vector<std::pair<int, int>> vec(n);
     for (int i = 0; i < n; i++) {
-        std::cin >> vec[i].f >> vec[i].s;
+        std::cin >> vec[i].first >> vec[i].second;
     }
     std::sort(vec.begin(), vec.end(), cmp);
     for (auto i : vec) {
-        std::cout << i.f << " " << i.s << std::endl;
+        std::cout << i.first << " " << i.second << std::endl;
     }
     return 0;
 }
