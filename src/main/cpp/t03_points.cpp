@@ -23,10 +23,29 @@
 
 #include "t03_points.h"
 #include <iostream>
+#include <math.h>
+#include <vector>
+#include <algorithm>
+#include <utility>
 
+double d(std::pair<int, int> point) {
+    return sqrt(point.first*point.first + point.second*point.second);
+}
 
-using namespace std;
+bool cmp(std::pair<int, int> a, std::pair<int, int> b) {
+    return (d(a) < d(b));
+}
 
 int t03_points() {
-    
+    int n;
+    std::cin >> n;
+    std::vector<std::pair<int, int>> vec(n);
+    for (int i = 0; i < n; i++) {
+        std::cin >> vec[i].first >> vec[i].second;
+    }
+    std::sort(vec.begin(), vec.end(), cmp);
+    for (auto i : vec) {
+        std::cout << i.first << " " << i.second << std::endl;
+    }
+    return 0;
 }
