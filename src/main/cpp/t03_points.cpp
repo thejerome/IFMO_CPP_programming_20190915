@@ -32,7 +32,7 @@ bool va(std::pair<int, int> p1, std::pair<int, int> p2){
     return pow(p1.first, 2) + pow(p1.second, 2) < pow(p2.first, 2) + pow(p2.second, 2);
 }
 
-int main() {
+int t03_points() {
  int n, x, y;
     std::cin >> n;
     std::vector<std::pair<int, int>> v(n);

@@ -22,7 +22,7 @@
 #include <vector>
 #include <algorithm>
 
-int main() {
+int t01_sort() {
   std::vector<long int> v;
     int n;
     long int num;
