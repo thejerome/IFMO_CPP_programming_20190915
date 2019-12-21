@@ -28,13 +28,16 @@ int t04_neighbors() {
     for (int i = 0; i < n; i++)
     {
         std::cin >> array[i];
-        if (i > 0 && (array[i] * array[i - 1] > 0)) {
-            if (array[i] < array[i-1]) {
-                std::swap(array[i], array[i - 1]);
-            };
+    }
+    int x=1;
+
+    for (int i=1;i<n;i++)
+    {  
+        if ( (array[i]/array[i - 1] > 0 && x==1)) {
             std::cout << array[i - 1] << " " << array[i];
-            break;
+            x=0;
         }
+
     }
     return 0;
 }
