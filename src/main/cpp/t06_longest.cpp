@@ -39,10 +39,10 @@ std::string blabla(std::string line){
             curr_word = "";
         }
     }
-    if(curr_len > max_len){
+    /*if(curr_len > max_len){
                 max_len = curr_len;
                 max_word = curr_word;
-    }
+    }*/
     return max_word;
 }
 int t06_longest() {
