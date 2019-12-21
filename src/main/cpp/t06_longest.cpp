@@ -21,10 +21,10 @@
 
 std::string blabla(std::string line){
     int curr_len = 0;
-    int max_len = 0;
     std::string max_word = "";
     std::string curr_word = "";
     for(int i =0; i < line.length(); i++){
+        int max_len =0;
         if (line[i] != ' '){
             curr_len++;
             curr_word += line[i];
