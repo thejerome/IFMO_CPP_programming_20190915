@@ -33,7 +33,7 @@ bool va(std::pair<int, int> p1, std::pair<int, int> p2){
 }
 
 int t03_points() {
- int n, x, y;
+    int n, x, y;
     std::cin >> n;
     std::vector<std::pair<int, int>> v(n);
         while (n > 0){
@@ -42,9 +42,9 @@ int t03_points() {
             std::cin >> y;
             v[n] = {x, y};
         }
-   std::sort(v.begin(), v.end(), va);
+    std::sort(v.begin(), v.end(), va);
     for (auto i : v){
         std::cout << i.first << " " << i.second << "\n";
-     }
+    }
   return 0;
 }
