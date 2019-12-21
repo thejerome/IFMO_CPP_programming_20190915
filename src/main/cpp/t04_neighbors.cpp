@@ -19,15 +19,13 @@
 using namespace std;
 
 int t04_neighbors() {
-	int number;
-	std::cin >> number;
-	std::vector <int> value(number);
-	for (int i = 0; i < number; i++) {
-		std::cin >> value[i];
-		if ((value[i] > 0 and value[i - 1] > 0) or (value[i]<0 and value[i-1] < 0)) {
-			std::cout << std::min(value[i],value[i-1]) << " " << std::max(value[i-1],value[i]);
-            break;
-		}
-	}
+    int n,i,s;
+    std::cin>>n>>s;
+    for(int m = 0;m<n-1;m++){
+        std::cin >> i;
+        if(i/s>0){
+            std::cout<<std::min(s,i)<<" "<<std::max(s,i)<<" ";break;}
+        s=i;
+    }
     return 0;
 }
