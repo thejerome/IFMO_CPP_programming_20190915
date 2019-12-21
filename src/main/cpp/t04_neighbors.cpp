@@ -23,7 +23,7 @@ int t04_neighbors() {
 
     std::cin >> n;
 
-    int array[n];
+    double array[n];
 
     for (int i = 0; i < n; i++)
     {
@@ -33,7 +33,7 @@ int t04_neighbors() {
 
     for (int i=1;i<n;i++)
     {  
-        if ( (array[i]/array[i - 1] > 0 && x==1)) {
+        if (array[i]/array[i - 1] > 0 && x==1) {
             std::cout << array[i - 1] << " " << array[i];
             x=0;
         }
