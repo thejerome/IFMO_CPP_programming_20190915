@@ -19,13 +19,22 @@
 using namespace std;
 
 int t04_neighbors() {
-    int n,i,s;
-    std::cin>>n>>s;
-    for(int m = 0;m<n-1;m++){
-        std::cin >> i;
-        if(i/s>0){
-            std::cout<<std::min(s,i)<<" "<<std::max(s,i)<<" ";break;}
-        s=i;
+    int n;
+
+    std::cin >> n;
+
+    int array[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        std::cin >> array[i];
+        if (i > 0 && (array[i] * array[i - 1] > 0)) {
+            if (array[i] < array[i-1]) {
+                std::swap(array[i], array[i - 1]);
+            };
+            std::cout << array[i - 1] << " " << array[i];
+            break;
+        }
     }
     return 0;
 }
