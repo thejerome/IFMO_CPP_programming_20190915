@@ -13,13 +13,31 @@
 //Sample Output:
 //
 //2 3
-
 #include "t04_neighbors.h"
 #include <iostream>
-
-
+#include <vector>
 using namespace std;
 
 int t04_neighbors() {
+    int n;
 
+    std::cin >> n;
+
+    double array[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        std::cin >> array[i];
+    }
+    int x=1;
+
+    for (int i=1;i<n;i++)
+    {  
+        if (array[i]/array[i - 1] > 0 && x==1) {
+            std::cout << array[i - 1] << " " << array[i];
+            x=0;
+        }
+
+    }
+    return 0;
 }

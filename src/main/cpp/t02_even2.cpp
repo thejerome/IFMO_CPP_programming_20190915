@@ -19,5 +19,15 @@
 using namespace std;
 
 int t02_even2() {
-
+  int n, num;
+    std::cin >> n;
+    while (n > 0){
+        std::cin >> num;
+        if (num % 2== 0){
+            std::cout << num << " ";    
+        }
+        n--;
+    }
+  return 0;
 }
+

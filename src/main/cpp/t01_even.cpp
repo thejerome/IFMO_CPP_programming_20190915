@@ -14,10 +14,19 @@
 
 #include "t01_even.h"
 #include <iostream>
-
+#include <stdlib.h>
 
 using namespace std;
 
 int t01_even() {
+    int N, num;
+    std::cin >> N;       
+    for (int i =0 ; i < N; i++){
+        std::cin >> num;
+        if (i % 2 == 0){
+            std::cout << num << " ";
+        }
+    }
 
+    return 0;
 }

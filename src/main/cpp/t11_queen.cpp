@@ -33,11 +33,28 @@
 
 #include "t11_queen.h"
 #include <iostream>
+#include <vector>
 #include <cmath>
 
 
-using namespace std;
+//using namespace std;
 
 int t11_queen() {
-
+    int number, c = 8;
+    bool t = false;
+    std::vector <int> x, y;
+    while (c--){
+        std::cin >> number;
+        x.push_back(number);
+        std::cin >> number;
+        y.push_back(number);
+    }
+    for (int i = 0; i < x.size() && !t; i++){
+        for (int j = i+1; j < x.size() && !t; j++){
+            if (x[i] == x[j] || y[i] == y[j] || abs(x[i]-x[j]) == abs(y[i]-y[j])) 
+                t = true;
+        }   
+    }
+    if (t) std::cout << "YES";
+    else std::cout << "NO";
 }

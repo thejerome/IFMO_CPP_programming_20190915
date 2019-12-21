@@ -12,12 +12,22 @@
 //
 //5 4
 
-#include "t03_bigger.h"
 #include <iostream>
-
-
+#include "t03_bigger.h"
+#include <vector>
 using namespace std;
 
 int t03_bigger() {
+    int num, m, k;
+    std::cin >> num >> k;
 
+    for(int i = 0; i < num-1; i++){
+        
+        std::cin >> m;
+
+        if (m > k)  std::cout << m << " ";
+        
+        k = m;
+    }
+    return 0;
 }
