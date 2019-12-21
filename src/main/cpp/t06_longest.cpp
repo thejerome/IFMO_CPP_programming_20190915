@@ -30,16 +30,16 @@ std::string blabla(std::string line){
             curr_word += line[i];
         }
         else{
-            if(curr_len > 0){
-                //max_len = curr_len;
+            if(curr_len > max_len){
+                max_len = curr_len;
                 max_word = curr_word;
             }
             curr_len = 0;
             curr_word = "";
         }
     }
-    if(curr_len > 0){
-                //max_len = curr_len;
+    if(curr_len > max_len){
+                max_len = curr_len;
                 max_word = curr_word;
     }
     return max_word;
