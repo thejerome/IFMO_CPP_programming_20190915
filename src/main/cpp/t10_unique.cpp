@@ -25,7 +25,7 @@
 //using namespace std;
 
 int t10_unique() {
-    int n, c = 0;
+    int n;
     std::cin >> n;
     std::vector<int> vec(n);
 
@@ -34,7 +34,7 @@ int t10_unique() {
 
     for(std::size_t i = 0; i < n; ++i)
     {
-        c = 0;
+        int c = 0;
         for(std::size_t j = 0; j < n; ++j)
         {
             if(vec[i] == vec[j])
