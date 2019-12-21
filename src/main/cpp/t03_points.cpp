@@ -28,23 +28,24 @@
 #include <algorithm>
 #include <utility>
 
-bool va(std::pair<int, int> p1, std::pair<int, int> p2){
-    return pow(p1.first, 2) + pow(p1.second, 2) < pow(p2.first, 2) + pow(p2.second, 2);
+double d(std::pair<int, int> point) {
+    return sqrt(point.first*point.first + point.second*point.second);
+}
+
+bool cmp(std::pair<int, int> a, std::pair<int, int> b) {
+    return (d(a) < d(b));
 }
 
 int t03_points() {
-    int n, x, y;
+    int n;
     std::cin >> n;
-    std::vector<std::pair<int, int>> v(n);
-        while (n > 0){
-            n--;
-            std::cin >> x;
-            std::cin >> y;
-            v[n] = {x, y};
-        }
-    std::sort(v.begin(), v.end(), va);
-    for (auto i : v){
-        std::cout << i.first << " " << i.second << "\n";
+    std::vector<std::pair<int, int>> vec(n);
+    for (int i = 0; i < n; i++) {
+        std::cin >> vec[i].f >> vec[i].s;
     }
-  return 0;
+    std::sort(vec.begin(), vec.end(), cmp);
+    for (auto i : vec) {
+        std::cout << i.f << " " << i.s << std::endl;
+    }
+    return 0;
 }
