@@ -38,4 +38,13 @@ using namespace std;
 
 int t07_pies() {
 
+
+	int n, a, b, c, rub, cop;
+	cin >> a;
+	cin >> b;
+	cin >> n;
+	c = (a * 100 + b) * n;
+	rub = c / 100;
+	cop = c % 100;
+	cout << rub << " " << cop;
 };
