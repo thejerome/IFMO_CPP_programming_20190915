@@ -35,7 +35,7 @@ float power(float a, int n) {
 	}
 	else if (n < 0) {
 		float c = a * power(a, n + 1);
-		return 1 / c;
+		return (float) 1 / c;
 	}
 	else return a * power(a, n - 1);
 }
