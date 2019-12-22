@@ -28,20 +28,12 @@
 using namespace std;
 
 int t04_count() {
-   setlocale( LC_ALL,"Russian" );
-    int i=0, k=0;
-    string s;
-    cout <<"String:\n";
-    getline(cin, s);
-    
-    while (s[i]!='.')  
-    {    
-    if (s[i]==' ') k++;    
-    i++;
-    }
-    
-    cout <<"count="<<k+1<<"\n";
-    
-system("pause");
-return 0; 
+string s;
+int k=0;
+while (getline(cin,s)){
+ if (s.find(" ")!= string::npos)
+        k++;
+}
+    cout <<k+1;
+    return 0;
 }
