@@ -34,12 +34,28 @@
 
 #include <iostream>
 #include <cmath>
-
+#include <math.h>
 using namespace std;
+
+bool IsPointInCircle(float x, float y, float xc, float yc, float r){
+    float rc;
+    rc = sqrt(pow(xc-x, 2) + pow(yc-y, 2));
+    return rc <= r;
+}
 
 //function IsPointInCircle
 
 int t03_circle() {
-
+  float x, y, xc, yc, r;
+    std::cin >> x;
+    std::cin >> y;
+    std::cin >> xc;
+    std::cin >> yc;
+    std::cin >> r;
+    
+    if (IsPointInCircle(x, y, xc, yc, r))
+        std::cout << "YES";
+    else
+        std::cout << "NO";
     return 0;
 }
