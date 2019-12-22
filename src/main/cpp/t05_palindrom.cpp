@@ -18,25 +18,33 @@
 
 #include "t05_palindrom.h"
 #include <iostream>
-#include <string>
+#include <cstring>
  
 
 using namespace std;
-
+bool check_polindrom(string word)
+{
+	int len = word.length();
+	for(int i = 0; i < len/2; ++i)
+	{
+		if(word[i] != word[len-i-1])
+		{
+			return false;
+		}
+	}
+	return true;
+}
 int t05_palindrom() {
-bool palind=true;
-string a;
-cout << ">>";
-getline(cin, a);
-int len = a.length();
-for (int i=0; i<len/2; i++)
-    if (a[i]!=a[len-i-1]) 
-    {
-        palind=false; break;
-    }
- 
-cout << (palind ? "yes" : "no") << endl;
- 
-system("pause");
-return 0;
+	string str;
+	cout << "Enter the word: ";
+	cin >> str;
+	if(check_polindrom(str))
+	{
+		cout << "Word is polindrom.";
+	}
+	else
+	{
+		cout << "Word is not polindrom";
+	}
+	return 0;
 }

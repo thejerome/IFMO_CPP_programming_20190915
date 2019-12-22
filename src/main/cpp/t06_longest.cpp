@@ -17,25 +17,40 @@
 
 #include "t06_longest.h"
 #include <iostream>
-#include <string>
-#include <sstream>
+#include <locale>
+#include <cstring>
 
 using namespace std;
 
 int t06_longest() {
-   std::string str;
-    
-    while ( std::cout << "String: " && std::getline(std::cin, str) && ! str.empty() ) {
-        std::istringstream ist(str);
-        std::string longest;
-        
-        ist >> longest;
-        while ( ist >> str )
-            if ( str.length() > longest.length() )
-                longest = str;
-        
-        std::cout << "First longest word: " << longest << std::endl;
+    const int STRLEN = 200;
+    char s[STRLEN];
+    cin.getline(s, STRLEN);
+
+    size_t maxlen = 0;
+    char * maxidx = nullptr;
+
+    for(char * c = s; *c;)
+    {
+        while(*c == ' ') ++c;
+        if (*c == 0) break;
+        char * begin = c;
+        while(*c && *c != ' ') ++c;
+        if (maxlen < (c - begin))
+        {
+            maxlen = c - begin;
+            maxidx = begin;
+        }
     }
-    
-    return 0;
+    if (maxlen == 0)
+    {
+        cout << "Tut pusto!\n";
+        return 0;
+    }
+    else
+    {
+        *(maxidx+maxlen) = 0;
+        cout << maxidx;
+    }
 }
+
