@@ -29,10 +29,50 @@
 
 #include "t04_students.h"
 #include <iostream>
-
+#include <algorithm>
+#include <string>
+#include <vector>
+#include <utility>
 using namespace std;
 
+
+struct call
+{
+	string Surname;
+	string Name;
+	int math;
+	int ph;
+	int inf;
+
+};
+
+bool compare(call a, call b) {
+	int score1, score2;
+	score1 = a.math + a.ph + a.inf;
+	score2 = b.math + b.ph + b.inf;
+	return score1 > score2;
+}
+
 int t04_students() {
-    
+	int n;
+	cin >> n;
+	vector <call> c1(n);
+	for (int i = 0; i < n; i++) {
+		string name,surname;
+		cin >> surname >> name;
+		c1[i].Name = name;
+		c1[i].Surname = surname;
+		int a, b, c;
+		cin >> a >> b >> c;
+		c1[i].math = a;
+		c1[i].ph = b;
+		c1[i].inf = c;
+		
+	}
+	stable_sort(c1.begin(), c1.end(), compare);
+	for (auto i : c1) {
+		cout << i.Surname <<" "<< i.Name<<endl;
+	}
+	return 0;
 }
 
