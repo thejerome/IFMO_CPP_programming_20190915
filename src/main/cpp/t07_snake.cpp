@@ -17,11 +17,38 @@
 
 #include "t07_snake.h"
 #include <iostream>
-
+#include <iomanip>
 
 using namespace std;
 
 int t07_snake() {
-    
+
+    int h, w, count = 1;
+    cin >> h >> w;
+    int arr[h][w];
+
+    for (int i = 0; i < h; i++) {
+        if (i%2 == 0) {
+            for (int j = 0; j < w; j++) {
+                arr[i][j]=count;
+                count++;
+            }
+         }
+        else {
+            for (int j = w-1; j >= 0; j--) {
+                arr[i][j]=count;
+                count++;
+            }
+        }
+    }
+    for (int i = 0; i < h; i++) {
+        for (int j = 0; j < w; j++) {
+
+            cout.w(4);
+            cout<<arr[i][j];
+        }
+        cout << std::endl;
+    }
+}   
     return 0;
 }

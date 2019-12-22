@@ -24,6 +24,24 @@
 using namespace std;
 
 int t08_chess() {
-    
+  int n, m, c=1;
+    std::cin >> n;
+    std::cin >> m;
+    int mas[n][m];
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < m; j++){
+            if ((j + i) % 2 == 0){
+                mas[i][j] = c;
+                c++;
+                printf("%4d", mas[i][j]);   
+             }
+            else{
+                mas[i][j] = 0;
+              printf("%4d", mas[i][j]); 
+            }
+            
+        }
+        std::cout << "\n";
+    }  
     return 0;
 }
