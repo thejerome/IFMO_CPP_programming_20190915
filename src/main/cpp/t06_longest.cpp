@@ -25,29 +25,21 @@
 using namespace std;
 
 int t06_longest() {
-	string s;
-	getline(cin,s) >> s;
-	int c = 0, max = 0, n = 0;
-	for (int i = 0; i < s.size(); i++) {
-		if (s[i] != ' ') c++;
-		else {
-			if (c > max) {
-				max = c;
-				n = i - c;
-			}
-			c = 0;
+	string l;
+	getline(cin, l);
+	l += " ";
+    string max, x = "";
+	for (auto c : l) {
+		if (c == ' ') {
+			if (max.length() < x.length()) max = x;
+			x = "";
 		}
-		if (c > max) {
-			max = c;
-			n = i - c;
-		}
+		else x = (x+c);
 	}
-	max += n;
-	for (int i = n; i <= max; i++) {
-		cout << s[i];
-	}
+	cout << max;
 	return 0;
-
 }
+	
+
 			
 	

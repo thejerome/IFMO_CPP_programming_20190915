@@ -48,7 +48,7 @@ int t07_ip() {
 	int n = 0;
 	for (int i = 0; i < z.size() - 1; i++) {
 		if (z[i] == '.') n++;
-		if (z[i] == '.' && z[i + 1] == '.') {
+		if (z[i + 1] == '.' && z[i] == '.') {
 			cout << "NO";
 			return 0;
 		}
@@ -72,7 +72,7 @@ int t07_ip() {
 				cout << "NO";
 				return 0;
 			}
-			if (x.size() != 1 && x[1] == '0') {
+			if ( x[1] == '0' && x.size() != 1) {
 				cout << "NO";
 				return 0;
 			}
