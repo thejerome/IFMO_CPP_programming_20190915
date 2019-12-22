@@ -36,7 +36,6 @@ using namespace std;
 
 int t07_ip() {
  string s = "";
-    string s_gen = "";
     char s_char[200];
     int a, b, c, d, e;
     cin >> s;
@@ -45,7 +44,7 @@ int t07_ip() {
     {
         if ((a >= 0) && (a <= 255) && (b >= 0) && (b <= 255) && (c >= 0) && (c <= 255) && (d >= 0) && (d <= 255)){
             sprintf(s_char, "%d.%d.%d.%d", a, b, c, d);
-            s_gen = s_char;
+            string s_gen = s_char;
             if (s_gen == s)
                 cout << "YES";
             else

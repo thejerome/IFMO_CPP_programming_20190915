@@ -18,25 +18,24 @@
 #include "t06_longest.h"
 #include <iostream>
 #include <string>
+#include <sstream>
 
 using namespace std;
 
 int t06_longest() {
- string s;
-    int startMax = 0, endMax = 1, bufStart = 0, bufEnd = 0;
-    getline(cin, s);
-    for (int i = 0; i < s.size() + 1; i++){
-        if (s[i] == ' ' || s[i] == '\0'){
-            bufEnd = i;
-            if (bufEnd - bufStart > endMax - startMax){
-                startMax = bufStart;
-                endMax = bufEnd;
-            }
-            bufStart = i + 1;
-        }
+   std::string str;
+    
+    while ( std::cout << "String: " && std::getline(std::cin, str) && ! str.empty() ) {
+        std::istringstream ist(str);
+        std::string longest;
+        
+        ist >> longest;
+        while ( ist >> str )
+            if ( str.length() > longest.length() )
+                longest = str;
+        
+        std::cout << "First longest word: " << longest << std::endl;
     }
-    for (int i = startMax; i < endMax; i++){
-        cout << s[i];
-    }
+    
     return 0;
 }
