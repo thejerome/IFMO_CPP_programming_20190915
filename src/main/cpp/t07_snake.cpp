@@ -25,27 +25,27 @@ using std::cout;
 int t07_snake() {
 
     int h, w, count = 1;
-    cin >> h >> w;
-    int arr[h][w];
+    cin >> h >> width;
+    int arr[h][width];
 
     for (int i = 0; i < h; i++) {
         if (i%2 == 0) {
-            for (int j = 0; j < w; j++) {
+            for (int j = 0; j < width; j++) {
                 arr[i][j]=count;
                 count++;
             }
          }
         else {
-            for (int j = w-1; j >= 0; j--) {
+            for (int j = width-1; j >= 0; j--) {
                 arr[i][j]=count;
                 count++;
             }
         }
     }
     for (int i = 0; i < h; i++) {
-        for (int j = 0; j < w; j++) {
+        for (int j = 0; j < width; j++) {
 
-            cout.w(4);
+            cout.width(4);
             cout<<arr[i][j];
         }
         cout << std::endl;

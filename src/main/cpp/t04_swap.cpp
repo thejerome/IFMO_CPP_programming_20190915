@@ -35,7 +35,7 @@ int t04_swap() {
             cin >> a[k][b];
         }
     }
-    int i,j,c;
+    int i,j, c=0;
     cin >> i >> j;
     for (int k = 0; k < n; k++) {
         c = a[k][i];
