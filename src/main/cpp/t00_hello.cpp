@@ -12,5 +12,5 @@
 using namespace std;
 
 int t00_hello() {
-	cout << "Hello World!\n";
+	cout << "Hello, World!";
 };
