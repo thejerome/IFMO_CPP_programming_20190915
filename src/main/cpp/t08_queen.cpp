@@ -39,8 +39,6 @@ bool Onspot(int x, int y) {
 
 
 
-}
-
 int nq(int x) {
 	if (x == n) {
 		return 1;
