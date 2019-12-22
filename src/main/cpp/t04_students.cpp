@@ -32,7 +32,7 @@
 #include <algorithm>
 #include <string>
 #include <vector>
-
+#include <utility>
 using namespace std;
 
 
@@ -46,31 +46,30 @@ struct call
 
 };
 
-bool compare(call& lhs, call& rhs) {
-	double t1 = ((lhs.math + lhs.ph + lhs.inf) / 3);
-	double t2 = ((rhs.math + rhs.ph + rhs.inf) / 3);
-	return t1 > t2;
+bool compare(call a, call b) {
+	int score1, score2;
+	score1 = a.math + a.ph + a.inf;
+	score2 = b.math + b.ph + b.inf;
+	return score1 > score2;
 }
 
 int t04_students() {
 	int n;
 	cin >> n;
-	call Student;
-	vector <call> c1;
+	vector <call> c1(n);
 	for (int i = 0; i < n; i++) {
 		string name,surname;
 		cin >> surname >> name;
-		Student.Name = name;
-		Student.Surname = surname;
+		c1[i].Name = name;
+		c1[i].Surname = surname;
 		int a, b, c;
 		cin >> a >> b >> c;
-		Student.math = a;
-		Student.ph = b;
-		Student.inf = c;
-		c1.push_back(Student);
+		c1[i].math = a;
+		c1[i].ph = b;
+		c1[i].inf = c;
 		
 	}
-	sort(c1.begin(), c1.end(), compare);
+	stable_sort(c1.begin(), c1.end(), compare);
 	for (auto i : c1) {
 		cout << i.Surname <<" "<< i.Name<<endl;
 	}

@@ -31,36 +31,33 @@
 
 using namespace std;
 
-struct coordinats
-{
-	int a;
-	int b;
-
+struct coordinate {
+	double dist;
+	int x;
+	int y;
 };
-
-bool compare(coordinats x, coordinats y) {
-	return(x.a * x.a + x.b * x.b) < (y.a * y.a + y.b * y.b);
+bool cmp(coordinate a, coordinate b) {
+	return (a.dist < b.dist);
 }
+
 
 int t03_points() {
 	int n;
 	cin >> n;
-	coordinats ex;
-	vector <coordinats> N;
+	vector <coordinate> mas(n);
 	for (int i = 0; i < n; i++) {
-		int x1, y1;
-		cin >> x1 >> y1;
-		ex.a = x1;
-		ex.b = y1;
-		N.push_back(ex);
+		coordinate a;
+		cin >> a.x >> a.y;
+		a.dist = sqrt((a.x * a.x + a.y * a.y));
+		mas[i] = a;
 	}
-
-	sort(N.begin(), N.end(), compare);
-	for (auto i : N) {
-		cout << i.a << " " << i.a << endl;
+	sort(mas.begin(), mas.end(), cmp);
+	for (coordinate v : mas) {
+		cout << v.x << " " << v.y << endl;
 	}
 	return 0;
 }
+	
 		
 
 
