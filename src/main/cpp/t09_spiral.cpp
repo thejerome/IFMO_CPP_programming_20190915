@@ -17,12 +17,12 @@
 
 #include "t09_spiral.h"
 #include <iostream>
-
+#include <iomanip>
 
 using namespace std;
 
 int t09_spiral() {
-    
+
     int n, m, i, j, k = 0;
     int a[100][100];
     cin >> n >> m;

@@ -48,7 +48,5 @@ int t07_snake() {
             cout<<arr[i][j];
         }
         cout << std::endl;
-    }
-}   
-    return 0;
+    }   
 }
