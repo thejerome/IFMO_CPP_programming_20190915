@@ -35,25 +35,51 @@
 using namespace std;
 
 int t07_ip() {
-	string h;
-	getline(cin, h);
-	int m1 = 0, m2 = 0, m3 = 0;
-	int a1 = h.find('.');
-	int a2 = h.find('.', a1 + 1);
-	int a3 = h.find('.', a2 + 1);
-	int a4 = h.find('.', a3 + 1);
-	string b1 = h.substr(0, a1);
-	string b2 = h.substr(a1 + 1, a2 - a1);
-	string b3 = h.substr(a2 + 1, a3 - a2);
-	string b4 = h.substr(a3 + 1);
-	if (a1 != -1 && a2 != -1 && a3 != -1 && a4 == -1) {
-		m1 = stoi(b1);
-		m2 = stoi(b2);
-		m3 = stoi(b3);
-	 if (m1 >= 0 && m1 <= 255 && m2 <= 255 && m2 >= 0 && m3 >= 0 && m3 <= 255 ) cout << "YES";
-     else cout << "NO";	
+	string z;
+	getline(cin, z);
+	if (z[0] == '.' || z[z.size() - 1] == '.') {
+		cout << "NO";
+		return 0;
 	}
-	else cout << "NO";
+	for (auto i : z) if ((i < '0' || i > '9') && i != '.') {
+		cout << "NO";
+		return 0;
+	}
+	int n = 0;
+	for (int i = 0; i < z.size() - 1; i++) {
+		if (z[i] == '.') n++;
+		if (z[i] == '.' && z[i + 1] == '.') {
+			cout << "NO";
+			return 0;
+		}
+	}
+	if (n != 3) {
+		cout << "NO";
+		return 0;
+	}
+	if (z.size() < 7 || z.size() > 15) {
+		cout << "NO";
+		return 0;
+	}
+
+	z = z + '.';
+	string x = "";
+
+	for (auto i : z) {
+		if (i != '.') x += i;
+		else {
+			if (stoi(x) > 255) {
+				cout << "NO";
+				return 0;
+			}
+			if (x.size() != 1 && x[1] == '0') {
+				cout << "NO";
+				return 0;
+			}
+			x = "";
+		}
+	}
+	cout << "YES";
 	return 0;
 }
 
