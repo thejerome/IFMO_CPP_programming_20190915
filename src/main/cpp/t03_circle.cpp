@@ -39,7 +39,7 @@ using namespace std;
 
 bool IspointInCircle(double x, double y, double xc, double yc, double r)
 {
-	return ((sqr(x - xc)) + (sqr(y - yc)) <= sqr(r));
+	return (pow((x - xc), 2) + (pow((y - yc), 2)) <= pow(r, 2));
 }
 
 int t03_circle() {
