@@ -24,11 +24,42 @@
 
 #include "t06_cinema.h"
 #include <iostream>
-
+#include <cmath>
 
 using namespace std;
 
 int t06_cinema() {
-    
+    int n, m, k,ryad=0;
+    cin >> n >> m;
+    int a[n][m];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> a[i][j];
+        }
+    }
+    cin >> k;
+    for (int i = 0; i < n; i++) {
+        int s=0;
+        for (int j = 0; j < m; j++) {
+            if (a[i][j] == 0) {
+                s++; 
+                if (s==k){
+                    ryad = i+1;
+                    break;
+                }
+            }
+            else s = 0;
+           
+        }
+        if (s==k) break; 
+    }
+
+ /*   for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            cout << b[i][j] << " ";
+        }
+        cout << endl;
+    }*/
+    cout << ryad;    
     return 0;
 }
