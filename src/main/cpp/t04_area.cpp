@@ -34,8 +34,8 @@ using namespace std;
 
 bool isPointInArea(float x, float y) {
 
-	bool Vish = (pow(x + 1, 2)) + (pow(y - 1, 2) <= 4) && (x + y >= 0) && ((y - 2) * x >= 2);
-	bool Nij = (pow(x + 1, 2)) + (pow(y - 1, 2) >= 4) && (x + y <= 0) && ((y - 2) * x <= 2);
+	bool Vish = (pow(x + 1, 2) + pow(y - 1, 2) <= 4) && (x + y >= 0) && (y - 2 * x >= 2);
+	bool Nij = (pow(x + 1, 2) + pow(y - 1, 2) >= 4) && (x + y <= 0) && (y - 2 * x <= 2);
 	return Vish || Nij;
 }
 

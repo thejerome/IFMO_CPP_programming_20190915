@@ -27,13 +27,14 @@ bool desk[10][10];
 int n = 0;
 
 bool Onspot(int x, int y) {
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < n; i++) 
 		for (int j = 0; j < n; j++) {
 			if ((((x - i) == (y - j)) || ((x - i) == (j - y)) || (x == i) || (y == j)) && desk[i][j]) {
 				return false;
 			}
-			return true;
 		}
+			return true;
+		
 	}
 
 
