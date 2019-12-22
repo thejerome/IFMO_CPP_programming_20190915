@@ -27,15 +27,15 @@ void solutiuon(int n, int noh, int *pis) {
     ++c;
     return;
     }
+#define attack(i, j) (pis[j] == i || abs(pis[j] - i) == noh - j)   
     for (int i = 0, j = 0; i < n; i++) {
         for (j = 0; j < noh && !attack(i, j); j++);
         if (j < noh) continue;
         pis[noh] = i;
-        solve(n, noh + 1, pis);
+        solutiuon(n, noh + 1, pis);
     }
 }
 int t08_queen(){
-    int main() {
     int n;
     std::cin >> n;
     int pis[n];
