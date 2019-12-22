@@ -18,10 +18,25 @@
 
 #include "t05_palindrom.h"
 #include <iostream>
-
+#include <string>
+ 
 
 using namespace std;
 
 int t05_palindrom() {
-
+bool palind=true;
+string a;
+cout << ">>";
+getline(cin, a);
+int len = a.length();
+for (int i=0; i<len/2; i++)
+    if (a[i]!=a[len-i-1]) 
+    {
+        palind=false; break;
+    }
+ 
+cout << (palind ? "yes" : "no") << endl;
+ 
+system("pause");
+return 0;
 }
