@@ -18,10 +18,26 @@
 
 #include "t05_palindrom.h"
 #include <iostream>
+#include <string>
 
 
 using namespace std;
 
-int t05_palindrom() {
+bool prost(string a)
+{
+	int len = a.length();
+	for (int i = 0; i < len / 2; ++i) 
+	{
+		if (a[i] != a[len - i - 1]) return false; 
+	}
+	return true;
+}
 
+int t05_palindrom()
+{
+	string stroka;
+	cin >> stroka;
+	if (prost(stroka)) cout << "yes";
+	else cout << "no";
+	return 0;
 }
