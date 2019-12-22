@@ -24,7 +24,7 @@ using std::cout;
 
 int t07_snake() {
 
-    int h, w, count = 1;
+    int h, width, count = 1;
     cin >> h >> width;
     int arr[h][width];
 
