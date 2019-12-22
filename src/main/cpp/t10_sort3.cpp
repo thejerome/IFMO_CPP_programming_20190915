@@ -19,5 +19,52 @@
 using namespace std;
 
 int t10_sort3() {
+	int a;
+	int b;
+	int c;
+	cin >> a;
+	cin >> b;
+	cin >> c;
+	if (a >= b)
+	{
+		if (a >= c)
+		{
+			if (b >= c)
+			{
+				cout << c << " " << b << " " << a;
+			}
+			else
+			{
+				cout << b << " " << c << " " << a;
+			}
+
+		}
+		else
+		{
+			cout << b << " " << a << " " << c;
+		}
+
+
+	}
+	else
+	{
+		if (b >= c)
+		{
+			if (a >= c)
+			{
+				cout << c << " " << a << " " << b;
+			}
+			else
+			{
+				cout << a << " " << c << " " << b;
+			}
+
+		}
+		else
+		{
+			cout << a << " " << b << " " << c;
+		}
+
+	}
 
 };

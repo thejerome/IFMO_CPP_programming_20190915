@@ -20,4 +20,16 @@ using namespace std;
 
 int t03_equal3() {
 
+	int a;
+	int b;
+	int c;
+	cin >> a;
+	cin >> b;
+	cin >> c;
+	if ((a == b && b == c) || (a == c && c == b))
+		cout << "3";
+	if ((a == b && b != c) || (a == c && b != c) || (b == c && c != a))
+		cout << "2";
+	if (a != b && a != c && b != c)
+		cout << "0";
 };
