@@ -25,7 +25,7 @@
 using namespace std;
 
 int t10_unique() {
-int n, temp, sum = 0;
+int n, temp = 0;
     cin >> n;
     vector <int> a;
     vector <int> counts;
