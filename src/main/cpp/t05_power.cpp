@@ -29,7 +29,24 @@ using namespace std;
 
 //function power
 
+float power(float a, int n) {
+	if (n == 0) {
+		return 1;
+	}
+	else if (n < 0) {
+		float c = a * power(a, n + 1);
+		return 1 / c;
+	}
+	else return a * power(a, n - 1);
+}
+
+
 int t05_power() {
+
+	int n;
+	float a;
+	cin >> a >> n;
+	cout << power(a, n);
 
     return 0;
 }
