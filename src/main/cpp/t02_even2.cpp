@@ -18,6 +18,14 @@
 
 using namespace std;
 
-int t02_even2() {
-
+int t02_even2() {      
+    int N, i;
+	cin >> N;
+	int *arr = new int[N];
+	for(int i = 0; i<N; i++)
+		cin >> arr[i];
+	for(int i = 0; i<N; i++)
+		if(arr[i]%2==0) cout << arr[i];
+	delete[] arr;
+	return 0;
 }
