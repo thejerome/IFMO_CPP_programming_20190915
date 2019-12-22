@@ -40,11 +40,11 @@ int t05_palindrom() {
 	cin >> str;
 	if(check_polindrom(str))
 	{
-		cout << "Word is polindrom.";
+		cout << "yes";
 	}
 	else
 	{
-		cout << "Word is not polindrom";
+		cout << "no";
 	}
 	return 0;
 }
