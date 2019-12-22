@@ -36,5 +36,6 @@ int t04_count() {
             a++;
 }
     cout << a+1;
+}
     return 0;
 }
