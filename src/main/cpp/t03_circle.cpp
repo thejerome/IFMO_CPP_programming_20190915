@@ -21,7 +21,7 @@
 //Sample Output 1:
 //
 //YES
-//        Sample Input 2:
+//        Sample Input 2:l
 //
 //0.5
 //0.5
