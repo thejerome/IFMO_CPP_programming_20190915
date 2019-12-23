@@ -54,7 +54,7 @@ int t07_ip() {
 			number = "";
 		}
 		if (s[i + 1] == '.') {
-			int a = atoi((string)number);
+			int a = stoi(number);
 			if (a > 255 || a < 0) {
 				cout << "NO";
 				flag = false;
