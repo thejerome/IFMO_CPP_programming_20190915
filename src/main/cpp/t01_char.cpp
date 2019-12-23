@@ -25,10 +25,19 @@
 
 #include "t01_char.h"
 #include <iostream>
-
+#include <ctype.h>
 
 using namespace std;
 
 int t01_char() {
+	char a;
+	cin >> a;
+	if (ifdigit(a)) {
+		cout << "no"
+	}
+	else {
+		cout << "yes"
+	}
 
+	return 0;
 }

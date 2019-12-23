@@ -19,10 +19,18 @@
 
 #include "t02_up.h"
 #include <iostream>
+#include <ctype.h>
 
 
 using namespace std;
 
 int t02_up() {
-    
+	char a;
+	cin >> a;
+	if (a >= 'a' && a <= 'z') {
+		 cout << (char)(a - 32);
+	}
+	eles{
+		cout << a;
+	}
 }
