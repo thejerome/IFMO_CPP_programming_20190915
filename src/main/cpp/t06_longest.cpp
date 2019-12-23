@@ -33,7 +33,7 @@ int t06_longest() {
 			a++;
 		}
 		else {
-			a == 0;
+			a = 0;
 		}
 		if (a > max) {
 			max = a;

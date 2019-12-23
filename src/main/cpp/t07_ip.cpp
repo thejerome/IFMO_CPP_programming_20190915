@@ -42,28 +42,30 @@ int t07_ip() {
 	bool flag = true;
 	getline(cin, s);
 	
-	if (s.length() > 15 || s.length() < 7) {
+	if (s.length() > 15 || s.length() < 7 || s[0] == '.') {
 		cout << "NO";
 	}
-	s + " ";
-	for (int i = 0; i < s.length() - 1; i++) {
-		if (s[i] != '.') {
-			number+(s[i]);
-		}
-		else {
-			number = "";
-		}
-		if (s[i + 1] == '.') {
-			int a = stoi(number);
-			if (a > 255 || a < 0) {
-				cout << "NO";
-				flag = false;
+	else {
+		s + " ";
+		for (int i = 0; i < s.length() - 1; i++) {
+			if (s[i] != '.') {
+				number + (s[i]);
 			}
-		}
+			else {
+				number = "";
+			}
+			if (s[i + 1] == '.') {
+				int a = stoi(number);
+				if (a > 255 || a < 0) {
+					cout << "NO";
+					flag = false;
+				}
+			}
 
-	}
-	if (flag) {
-		cout << "YES";
+		}
+		if (flag == true) {
+			cout << "YES";
+		}
 	}
 	return 0;
 
