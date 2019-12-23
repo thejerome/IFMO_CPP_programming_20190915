@@ -38,7 +38,6 @@ int t07_ip() {
 	string s, s2;
 	getline(cin, s);
 	int size = s.size();
-	int a = -1;
 	bool flag = true;
 	int p = 0;
 	s2 = "";
