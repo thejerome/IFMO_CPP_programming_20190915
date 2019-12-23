@@ -21,7 +21,7 @@
 //Sample Output 1:
 //
 //YES
-//        Sample Input 2:
+//        Sample Input 2:l
 //
 //0.5
 //0.5
@@ -37,9 +37,21 @@
 
 using namespace std;
 
-//function IsPointInCircle
+bool IspointInCircle(double x, double y, double xc, double yc, double r)
+{
+	return (pow((x - xc), 2) + (pow((y - yc), 2)) <= pow(r, 2));
+}
 
 int t03_circle() {
+
+	double x, y, xc, yc, r;
+	cin >> x >> y >> xc >> yc >> r;
+	if (IspointInCircle(x, y, xc, yc, r)) {
+		cout << "YES";
+	}
+	else {
+		cout << "NO";
+	}
 
     return 0;
 }

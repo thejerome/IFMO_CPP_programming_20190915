@@ -19,7 +19,7 @@
 //Sample Output 1:
 //
 //NO
-//        Sample Input 2:
+//        Sample Input 2:l
 //
 //-4
 //-3
@@ -32,9 +32,20 @@
 
 using namespace std;
 
-//function IsPointInArea
+bool isPointInArea(float x, float y) {
+
+	bool Vish = (pow(x + 1, 2) + pow(y - 1, 2) <= 4) && (x + y >= 0) && (y - 2 * x >= 2);
+	bool Nij = (pow(x + 1, 2) + pow(y - 1, 2) >= 4) && (x + y <= 0) && (y - 2 * x <= 2);
+	return Vish || Nij;
+}
 
 int t04_area() {
+
+	float x, y;
+	cin >> x >> y;
+
+	cout << (isPointInArea(x, y) ? "YES" : "NO");
+
 
     return 0;
 }

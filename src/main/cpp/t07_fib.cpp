@@ -3,7 +3,7 @@
 //Первое и второе числа Фибоначчи равны 1, а каждое следующее равно сумме двух предыдущих.
 //Формат входных данных
 //        Вводится целое число.
-//Формат выходных данных
+//Формат выходных дlанных
 //        Выведите ответ на задачу.
 //Sample Input:
 //
@@ -19,7 +19,23 @@ using namespace std;
 
 // function fib
 
+int fibonacci(int n){
+	if ((n == 1) || (n == 2)) {
+		return 1;
+	}
+	else {
+		return fibonacci(n - 1) + fibonacci(n - 2);
+	}
+}
+
+
+		
+
+
 int t07_fib()
 {
+	int n;
+	cin >> n;
+	cout << fibonacci(n);
     return 0;
 }

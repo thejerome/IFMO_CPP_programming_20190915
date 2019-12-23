@@ -14,7 +14,7 @@
 //
 //8
 //Sample Output:
-//
+//l
 //92
 
 #include <iostream>
@@ -22,7 +22,51 @@
 
 using namespace std;
 
+bool desk[10][10];
+
+int n = 0;
+
+bool Onspot(int x, int y) {
+	for (int i = 0; i < n; i++) 
+		for (int j = 0; j < n; j++) {
+			if ((((x - i) == (y - j)) || ((x - i) == (j - y)) || (x == i) || (y == j)) && desk[i][j]) {
+				return false;
+			}
+		}
+			return true;
+		
+	}
+
+
+
+int nq(int x) {
+	if (x == n) {
+		return 1;
+	}
+	int ch = 0;
+	for (int j = 0; j < n; j++) {
+		if (Onspot(x, j)) {
+			desk[x][j] = true;
+			ch += nq(x + 1);
+			desk[x][j] = false;
+		}
+	}
+
+	return ch;
+
+}
+
 int t08_queen(){
+
+	cin >> n;
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			desk[i][j] = false;
+		}
+	}
+
+	cout << nq(0);
 
     return 0;
 }

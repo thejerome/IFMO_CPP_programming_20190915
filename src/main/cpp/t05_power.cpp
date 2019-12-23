@@ -12,7 +12,7 @@
 //2
 //1
 //Sample Output 1:
-//
+//l
 //2
 //Sample Input 2:
 //
@@ -29,7 +29,24 @@ using namespace std;
 
 //function power
 
+float power(float a, int n) {
+	if (n == 0) {
+		return 1;
+	}
+	else if (n < 0) {
+		
+		return 1 / a * power(a, n + 1);
+	}
+	else return a * power(a, n - 1);
+}
+
+
 int t05_power() {
+
+	int n;
+	float a;
+	cin >> a >> n;
+	cout << power(a, n);
 
     return 0;
 }
