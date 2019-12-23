@@ -10,7 +10,7 @@
 //Входные данные
 //
 //Программа получает на вход строку из произвольных символов.
-//
+//gr
 //Выходные данные
 //
 //Если эта строка является корректной записью IP-адреса, выведите YES, иначе выведите NO.
@@ -29,10 +29,51 @@
 
 #include "t07_ip.h"
 #include <iostream>
+#include <string>
 
 
 using namespace std;
 
 int t07_ip() {
+	string s, s2;
+	getline(cin, s);
+	int size = s.size();
+	bool flag = true;
+	int p = 0;
+	s2 = "";
+	string letter;
+	for (int i = 0; i < size; i++) {
+		if (s[i] != '.') {
+			letter = s[i];
+			s2.append(letter);
+		}
+		if (s[i] == '.') {
+			p++;
+		}
+		if ((s[i] == '.') || (i + 1) >= size) {
+			
+			if (!s2.empty()) {
+				if ((stoi(s2) >= 0) && (stoi(s2) <= 255)) {
+				}
+				else {
+
+					flag = false;
+				}
+				s2 = "";
+			}
+		}
+	}
+
+	if (p != 3) {
+
+		flag = false;
+	}
+	if (flag == true) {
+		cout << "YES";
+	}
+	else {
+		cout << "NO";
+	}
+	return 0;
 
 }

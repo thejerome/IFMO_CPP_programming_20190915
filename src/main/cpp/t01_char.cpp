@@ -10,7 +10,7 @@
 // Обратите внимание, что слова нужно выводить маленькими буквами.
 //
 //Sample Input 1:
-//
+//grg
 //1
 //Sample Output 1:
 //
@@ -25,10 +25,19 @@
 
 #include "t01_char.h"
 #include <iostream>
-
+#include <ctype.h>
 
 using namespace std;
 
 int t01_char() {
+	char a;
+	cin >> a;
+	if (a >= '0' && a <= '9') {
+		cout << "yes";
+	}
+	else {
+		cout << "no";
+	}
 
+	return 0;
 }
