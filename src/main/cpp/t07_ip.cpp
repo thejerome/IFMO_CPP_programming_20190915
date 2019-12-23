@@ -35,37 +35,45 @@
 using namespace std;
 
 int t07_ip() {
-	string s;
-	string number;
-	int now = 0;
-	int next = 0;
-	bool flag = true;
+	string s, s2;
 	getline(cin, s);
-	
-	if (s.length() > 15 || s.length() < 7 || s[0] == '.') {
-		cout << "NO";
-	}
-	else {
-		s + " ";
-		for (int i = 0; i < s.length() - 1; i++) {
-			if (s[i] != '.') {
-				number + (s[i]);
-			}
-			else {
-				number = "";
-			}
-			if (s[i + 1] == '.') {
-				int a = stoi(number);
-				if (a > 255 || a < 0) {
-					cout << "NO";
+	int size = s.size();
+	int a = -1;
+	bool flag = true;
+	int p = 0;
+	s2 = "";
+	string letter;
+	for (int i = 0; i < size; i++) {
+		if (s[i] != '.') {
+			letter = s[i];
+			s2.append(letter);
+		}
+		if (s[i] == '.') {
+			p++;
+		}
+		if ((s[i] == '.') || (i + 1) >= size) {
+			
+			if (!s2.empty()) {
+				if ((stoi(s2) >= 0) && (stoi(s2) <= 255)) {
+				}
+				else {
+
 					flag = false;
 				}
+				s2 = "";
 			}
+		}
+	}
 
-		}
-		if (flag == true) {
-			cout << "YES";
-		}
+	if (p != 3) {
+
+		flag = false;
+	}
+	if (flag == true) {
+		cout << "YES";
+	}
+	else {
+		cout << "NO";
 	}
 	return 0;
 
