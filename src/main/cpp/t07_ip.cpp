@@ -46,12 +46,12 @@ int t07_ip() {
 		cout << "NO";
 	}
 	s + " ";
-	for (int i = 0, i < s.length()-1, i++) {
-		if (s[i] != ".") {
+	for (int i = 0; i < s.length() - 1; i++) {
+		if (s[i] != '.') {
 			number+(s[i]);
 		}
 		else {
-			number = '';
+			number = "";
 		}
 		if (s[i + 1] == '.') {
 			int a = atoi(number);
