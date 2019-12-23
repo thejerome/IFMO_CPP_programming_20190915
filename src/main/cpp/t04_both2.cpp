@@ -53,7 +53,7 @@ int t04_both2() {
 	}
 
 	d <int>::iterator t;
-	for (it = d.begin(); t != d.end(); ++t) {
+	for (t = d.begin(); t != d.end(); ++t) {
 		cout << *t << " ";
 	}
 	return 0;
