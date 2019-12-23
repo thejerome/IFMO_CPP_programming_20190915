@@ -94,7 +94,7 @@ int t06_homework() {
 	string work;
 	set <string> slov;
 	no = 0;
-	bool in = false;
+	
 	for (int i = 0; i < N; i++){
 	
 		
@@ -105,6 +105,7 @@ int t06_homework() {
 
 	while (cin >> work)
 	{
+		bool in = false;
 
 		if (slov.count(work) == 0){
 			int Upper = 0;
@@ -132,7 +133,7 @@ int t06_homework() {
 				no++;
 				
 			}
-			bool in = false;
+			
 		}
 		
 	}
