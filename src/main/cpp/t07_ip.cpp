@@ -35,7 +35,8 @@
 using namespace std;
 
 int t07_ip() {
-	string s,number;
+	string s;
+	string number = "";
 	int now = 0;
 	int next = 0;
 	bool flag = true;
@@ -47,7 +48,7 @@ int t07_ip() {
 	s.append(' ')
 	for (int i = 0, i < s.length()-1, i++) {
 		if (s[i] != ".") {
-			number.append(s[i]);
+			number+(s[i]);
 		}
 		else {
 			number = '';

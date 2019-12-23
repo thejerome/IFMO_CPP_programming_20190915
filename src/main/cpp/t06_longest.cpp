@@ -26,7 +26,7 @@ int t06_longest() {
 	int a = 0;
 	int max = 0;
 	int LastBidLet = 0;
-	string s, word;
+	string s;
 	getline(cin, s);
 	for (int i = 0; i < s.length(); i++) {
 		if (s[i] != ' ') {
@@ -41,8 +41,8 @@ int t06_longest() {
 		}
 	}
 	for (int i = LastBidLet - max; i < LastBidLet; i++) {
-		word.append(s[i]);
+		cout << s[i];
 	}
-	cout << word;
+	
 	return 0;
 }
