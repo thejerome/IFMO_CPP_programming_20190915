@@ -26,13 +26,13 @@ int t05_palindrom() {
 
 	string s;
 	getline(cin, s);
-	int Check = 0;
+	int Chek = 0;
 	for (int i = 0; i < s.length(); i++) {
 		if (s[i] != (s[s.length() - i - 1])) {
-			a++;
+			Chek++;
 		}
 	}
-	if (a > 0) {
+	if (Chek > 0) {
 		cout << "no";
 	}
 	else {

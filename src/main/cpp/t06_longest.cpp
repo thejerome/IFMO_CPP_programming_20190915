@@ -17,6 +17,7 @@
 
 #include "t06_longest.h"
 #include <iostream>
+#include <string>
 
 
 using namespace std;
@@ -39,7 +40,7 @@ int t06_longest() {
 			LastBidLet = i + 1;
 		}
 	}
-	for (int i = c - b; i < c; i++) {
+	for (int i = LastBidLet - max; i < LastBidLet; i++) {
 		word.append(s[i]);
 	}
 	cout << word;

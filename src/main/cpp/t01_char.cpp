@@ -32,11 +32,11 @@ using namespace std;
 int t01_char() {
 	char a;
 	cin >> a;
-	if (ifdigit(a)) {
-		cout << "no"
+	if (x >= '0' && x <= '9') {
+		cout << "yes";
 	}
 	else {
-		cout << "yes"
+		cout << "no";
 	}
 
 	return 0;

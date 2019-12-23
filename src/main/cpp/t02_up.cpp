@@ -30,7 +30,7 @@ int t02_up() {
 	if (a >= 'a' && a <= 'z') {
 		 cout << (char)(a - 32);
 	}
-	eles{
+	else{
 		cout << a;
 	}
 }
