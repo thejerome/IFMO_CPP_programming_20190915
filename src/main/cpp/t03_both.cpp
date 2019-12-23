@@ -23,9 +23,33 @@
 
 #include "t03_both.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t03_both() {
-
+	set <int> a;
+	set <int> b;
+	int N, M;
+	int number = 0;
+	cin >> N;
+	for (int i = 0; i < N; i++)
+	{
+		int q;
+		cin >> q;
+		a.insert(q);
+	}
+	cin >> M;
+	
+	for (int i = 0; i < M; i++)
+	{
+		int q;
+		cin >> q;
+		b.insert(q);
+		if (a.find(q) != a.end()) {
+			number++;
+		}
+	}
+	cout << number;
+	return 0;
 }

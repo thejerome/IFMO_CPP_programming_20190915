@@ -80,9 +80,59 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t06_homework() {
 
+
+	int N;
+	int no;
+	cin >> N;
+	string a;
+	string work;
+	set <string> slov;
+	no = 0;
+	for (int i = 0; i < N; i++){
+	
+		
+		cin >> a;
+		slov.insert(a);
+	}
+
+
+	while (cin >> work)
+	{
+		bool in = false;
+
+		if (slov.count(work) == 0){
+			int Upper = 0;
+
+			for (char i : work){
+			
+				if ((i <= 90) && (i >= 65))
+					Upper++;
+			}
+			if (Upper == 1){
+			
+				        for (int i = 0; i < work.length(); i++){
+				
+					            work[i] = tolower(work[i]);
+				           }
+				       for (int i = 0; i < work.length(); i++){
+				
+					        work[i] = toupper(work[i]);
+					        if (slov.count(work) == 1)
+						    in = true;
+					        work[i] = tolower(work[i]);
+				           }
+			}
+			if ((Upper != 1) || (in)) {
+				no++;
+			}
+		}
+	}
+	cout << no;
+	return(0);
 }
