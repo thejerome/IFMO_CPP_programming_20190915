@@ -130,8 +130,9 @@ int t06_homework() {
 			}
 			if ((Upper != 1) || (in)) {
 				no++;
-				bool in = false;
+				
 			}
+			bool in = false;
 		}
 		
 	}
