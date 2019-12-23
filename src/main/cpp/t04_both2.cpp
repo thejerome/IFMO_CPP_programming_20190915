@@ -29,7 +29,7 @@ using namespace std;
 int t04_both2() {
 	set <int> a;
 	set <int> b;
-	set <int> с;
+	set <int> d;
 
 	int N, M;
 	int number = 0;
@@ -48,12 +48,12 @@ int t04_both2() {
 		cin >> q;
 		b.insert(q);
 		if (a.find(q) != a.end()) {
-			c.insert(q);
+			d.insert(q);
 		}
 	}
 
-	c <int>::iterator t;
-	for (it = c.begin(); t != c.end(); ++t) {
+	d <int>::iterator t;
+	for (it = d.begin(); t != d.end(); ++t) {
 		cout << *t << " ";
 	}
 	return 0;
