@@ -44,4 +44,5 @@ int t06_longest() {
 		word.append(s[i]);
 	}
 	cout << word;
+	return 0;
 }

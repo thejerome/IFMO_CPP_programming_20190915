@@ -33,4 +33,5 @@ int t02_up() {
 	else{
 		cout << a;
 	}
+	return 0;
 }

@@ -38,4 +38,5 @@ int t04_count() {
 		}
 	}
 	cout << (a - 1);
+	return 0;
 }
