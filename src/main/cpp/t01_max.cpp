@@ -27,7 +27,7 @@
 using namespace std;
 
 int t01_max() {
-    int n,m;
+    int n,m,x,y;
 int l =-1;
 cin >> n >> m ;
 int a[n][m];
@@ -40,11 +40,11 @@ for( int i = 0; i < n; i++) {
     for(int j = 0 ; j < m; j++) {
         if (a[i][j]>l) {
             l = a[i][j];
-           int x = i;
-           int y = j;
+            x = i;
+            y = j;
             }
         }
     }
-cout <<int x << " " <<int y;
+cout << x << " " << y;
 return 0;
 }
