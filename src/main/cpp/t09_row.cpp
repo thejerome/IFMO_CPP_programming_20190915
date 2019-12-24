@@ -36,7 +36,7 @@ int t09_row() {
          if (d!=a) {
              e = 1;
          }
-         e=e++;
+         e++;
          d=c;
          if (b<e) {
              b = e;
