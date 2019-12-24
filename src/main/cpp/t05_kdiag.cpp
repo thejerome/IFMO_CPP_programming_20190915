@@ -50,6 +50,6 @@ int t05_kdiag() {
                cout << a[i+k][i] << " ";
        }
     else for (int i = 0; i < n+k; i++) {
-               cout << A[i][i-k] << " ";
+               cout << a[i][i-k] << " ";
     }
 }
