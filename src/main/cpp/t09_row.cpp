@@ -23,12 +23,12 @@
 using namespace std;
 
 int t09_row() {
- int a,c,e;
+ int a,e;
  int b = 1;
  int d = 0;
  cin >> a ;
  while (a!=0) {
-     c = a;
+     int c = a;
      cin >> a ;
      if (c== a) {
          if (d!=a) {
