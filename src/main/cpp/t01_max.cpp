@@ -40,8 +40,8 @@ for( int i = 0; i < n; i++) {
     for(int j = 0 ; j < m; j++) {
         if (a[i][j]>l) {
             l = a[i][j];
-            x = i;
-            y = j;
+           int x = i;
+           int y = j;
             }
         }
     }
