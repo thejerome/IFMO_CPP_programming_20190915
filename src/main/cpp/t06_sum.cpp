@@ -30,6 +30,7 @@ int sum() {
     else {
         return 0;
     }
+}
 int t06_sum() {
    cout << sum();
 }
