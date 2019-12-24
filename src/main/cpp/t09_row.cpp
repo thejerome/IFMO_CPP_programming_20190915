@@ -23,11 +23,9 @@
 using namespace std;
 
 int t09_row() {
- int a;
+ int a,c,e;
  int b = 1;
- int c;
  int d = 0;
- int e;
  cin >> a ;
  while (a!=0) {
      c = a;
