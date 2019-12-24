@@ -29,7 +29,7 @@ int t10_max_local() {
  int d = 0;
  int e = 0;
  int s = 0;
- cin >> a ;
+ cin >> a;
  while (a!=0) {
      cin >> a;
      e = b;
@@ -43,7 +43,7 @@ int t10_max_local() {
          }
      }
  }
- cout << (s-1);
+ cout << s;
  return 0;
 
 };
