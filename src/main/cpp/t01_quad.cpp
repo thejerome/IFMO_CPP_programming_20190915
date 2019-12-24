@@ -20,10 +20,11 @@ using namespace std;
 
 int t01_quad() {
  int a,b;
- b = 0;
+ b = 1;
  cin >> a;
- while (b*b < a) {
-     b++;
-     cout << b*b << endl;
+ while (b*b <= a) {
+  cout << b*b << " ";
+  b++;
  }
+ return 0;
 }
