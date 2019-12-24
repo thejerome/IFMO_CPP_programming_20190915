@@ -45,6 +45,6 @@ for( int i = 0; i < n; i++) {
             }
         }
     }
-cout << x << " " << y;
+cout <<int x << " " <<int y;
 return 0;
 }
