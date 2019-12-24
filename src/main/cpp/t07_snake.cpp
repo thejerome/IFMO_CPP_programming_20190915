@@ -28,12 +28,17 @@ int t07_snake() {
  int a[n][m] ;
  for( int i = 0; i < n ; i++) {
     for( int j = 0 ; j < m ; j++) {
-           cin >> a[i][j];
+     a[i][j] = ++count;
+     i++;
+     if ( i < n) {
+      for ( int j = m -1; j>= 0 ; j--) {
+       a[i][j] = ++count;
+      }
+     }
     }
   }
   for( int i = 0; i < n ; i++) {
-    for( int j = 0 ; j < m ; j++) {
-           
+    for( int j = 0 ; j < m ; j++) { 
            cout << setw(4) << a[i][j];
     }
     cout << endl;
