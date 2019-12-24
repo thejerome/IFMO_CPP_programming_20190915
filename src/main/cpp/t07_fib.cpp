@@ -26,8 +26,7 @@ int fib(int n) {
     }
     return fib(n-1)+fib(n-2);
 }
-
-int t07_fib()
+int t07_fib() {
     int n;
     cin >> n;
     cout << fib(n);
