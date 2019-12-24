@@ -21,9 +21,12 @@
 
 using namespace std;
 
-//function distance
+float dist(float x1, float y1, float x2, float y2) {
+    return sqrt(pow(x1-x2,2)+pow(y1-y2,2));
+}
 
 int t02_dist() {
-
-    return 0;
+ float a,b,c,d;
+ cin >> a >> b >> c >> d;
+ cout << dist(a,b,c,d);
 }
