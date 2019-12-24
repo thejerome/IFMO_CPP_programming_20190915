@@ -27,7 +27,7 @@ int t10_max_local() {
    int a = 0;
  int b = 0;
  int d = 0;
- int e = 0;
+ int e;
  int s = 0;
  cin >> a;
  while (a!=0) {
