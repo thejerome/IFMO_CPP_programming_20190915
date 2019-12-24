@@ -33,11 +33,10 @@ for( int i = 0; i < n ; i++) {
     }
 }
 for( int i = 0; i < n; i++) {
-    for(int j = 0 ; j < n; j++) {
-       if((i==(n-1)/2) | (j==(n-1)/2) | (i==j) | (n==j+i)) {
-           a[i][j] = '*';
-        }
-    }
+    a[n/2][i] = '*';
+    a[i][n/2] = '*';
+    a[i][n-i-1] = '*';
+    a[i][i] = '*';
 }
 for (int i = 0; i < n; i++) {
     for(int j = 0; j < n ; j++) {
