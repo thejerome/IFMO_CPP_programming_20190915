@@ -34,22 +34,22 @@ int t09_spiral() {
     }
     i = 0, j = -1; 
     while (b < n * m) {
-        while (j < m - 1 & a[i][j+1]==0){
+        while (j < m - 1 && a[i][j+1]==0){
             j++;
             a[i][j] = b+1;
             b++;
         }
-        while (i < n - 1 & a[i+1][j]==0){
+        while (i < n - 1 && a[i+1][j]==0){
             i++;
             a[i][j] = b+1;
             b++;
         }
-        while (j > 0 & a[i][j-1]==0){
+        while (j > 0 && a[i][j-1]==0){
             j--;
             a[i][j] = b+1;
             b++;
         }
-        while (i > 0 & a[i-1][j]==0){
+        while (i > 0 && a[i-1][j]==0){
             i--;
             a[i][j] = b+1;
             b++;
