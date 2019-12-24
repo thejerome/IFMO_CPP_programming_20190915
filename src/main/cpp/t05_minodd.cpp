@@ -28,5 +28,14 @@
 using namespace std;
 
 int t05_minodd() {
-
+    int k;
+    cin >> k;
+    int *a = new int[k];
+    int minodd = 0;
+    for(int i = 0; i < k; i++) {
+        cin >> a[i];
+        if ((minodd > a[i] || minodd == 0) && a[i] % 2 != 0) minodd = a[i];     
+    }
+    cout << minodd;
+    return 0;
 }
