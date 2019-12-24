@@ -47,11 +47,14 @@ int t06_cinema() {
             if (e==k) {
                 l = i;
             }
+            if ( l != 0) {
+            break;
+        }
         }
         else e=0;
     }
  }
- if (l !=0) {
+ if (l!=0) {
  cout << l+1;
  }
  else cout << 0;
