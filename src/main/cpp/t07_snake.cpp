@@ -17,6 +17,7 @@
 
 #include "t07_snake.h"
 #include <iostream>
+#include <iomanip>
 
 
 using namespace std;
@@ -32,8 +33,8 @@ int t07_snake() {
   }
   for( int i = 0; i < n ; i++) {
     for( int j = 0 ; j < m ; j++) {
-           cout.width(4);
-           cout << a[i][j];
+           
+           cout << setw(4) << a[i][j];
     }
     cout << endl;
   }
