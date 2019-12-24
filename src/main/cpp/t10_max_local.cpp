@@ -28,7 +28,7 @@ int t10_max_local() {
 	int c = 0;
 	int e = 0;
 	int count = 0;
-	int d = 0;
+	int d;
 	while (a != 0) {
 		d = c;
 		c = a;
