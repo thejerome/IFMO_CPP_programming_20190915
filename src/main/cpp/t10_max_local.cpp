@@ -24,26 +24,23 @@
 using namespace std;
 
 int t10_max_local() {
-   int a = 0;
- int b = 0;
- int d = 0;
- int e;
- int s = 0;
- cin >> a;
- while (a!=0) {
-     cin >> a;
-     e = b;
-     b = a;
-     if (d<b) {
-         d = b;
-     }
-     if (d>b) {
-         if (d>e) {
-             s++;
-         }
-     }
- }
- cout << s;
- return 0;
-
+	int a = 1;
+	int c = 0;
+	int e = 0;
+	int count = 0;
+	int d = 0;
+	while (a != 0) {
+		d = c;
+		c = a;
+		cin >> a;
+		if (c > d and c > a and e <= c and a != 0) {
+			if (e < c){
+				count = 0;
+			}
+			e = c;			
+			count++;
+		}
+	}
+	cout << count;
+	return 0;
 };
