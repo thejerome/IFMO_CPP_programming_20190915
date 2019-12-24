@@ -45,7 +45,7 @@ int t06_cinema() {
         if (a[i][j] == 0) {
             e++;
             if (e==k) {
-                l = i;
+                l = i+1;
             }
             if ( l != 0) {
             break;
@@ -55,7 +55,8 @@ int t06_cinema() {
     }
  }
  if (l!=0) {
- cout << l+1;
+ cout << l;
  }
  else cout << 0;
 }
+
