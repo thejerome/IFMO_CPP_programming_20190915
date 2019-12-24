@@ -23,9 +23,9 @@
 using namespace std;
 
 int t09_row() {
- int a = 0 ;
+ int a;
  int b = 1;
- int c = 0;
+ int c;
  int d = 0;
  int e = 0;
  cin >> a ;
