@@ -36,20 +36,14 @@ class student
 {
     public:
     string name, last_name;
-    vector<int> points;
-    double avr;
-    void cupl()
-    {
-        avr = (points[0] + points[1] + points[2])/3;
-    }
+    int points = 0;
 };
-bool operator<(const student & lhd, const student & rhd){return lhd.avr > rhd.avr;}
+bool operator<(const student & lhd, const student & rhd){return lhd.points > rhd.points;}
 int t04_students() {
     int n; cin >> n;
     vector<student> students(n);
-    for(auto & i : students){cin >> i.last_name >> i.name; for(auto j = 0; j < 3; j++){int point; cin >> point; i.points.emplace_back(point); i.cupl();}}
+    for(auto & i : students){cin >> i.last_name >> i.name; for(auto j = 0; j < 3; j++){int point; cin >> point; i.points += point;}}
     sort(students.begin(), students.end());
     for(auto & i : students)cout << i.last_name << " " << i.name << endl;
     return 0;
 }
-

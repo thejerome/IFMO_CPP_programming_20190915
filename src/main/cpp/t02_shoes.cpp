@@ -35,21 +35,13 @@ using namespace std;
 int t02_shoes() {
     int n, initial_size, counter = 0;
     cin >> initial_size >> n;
-    int courrent_size = initial_size;
+    int courrent_size = initial_size - 3;
     vector<int> shoes(n);
     for(auto & i : shoes)cin >> i;
     sort(shoes.begin(), shoes.end());
-    for(auto & i : shoes){
-        if(initial_size == courrent_size && i >= initial_size)
-        {
+    for(auto & i : shoes)if (i >= courrent_size + 3){
             counter++;
-            courrent_size = i;
-        }
-        else if (initial_size != courrent_size)if (i >= initial_size + 3){
-            counter++;
-            courrent_size = i;
-        }
-    }
-    cout << counter;
+            courrent_size = i;}
+    std::cout << counter;
     return 0;
 }

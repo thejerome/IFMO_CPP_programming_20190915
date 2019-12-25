@@ -31,12 +31,13 @@ class point
 {
     public:
     int x, y;
-    double distens;
+    int distence;
     void culc()
     {
-        distens = x*x + y*y;
+        distence = x*x + y*y;
     }
 };
+bool operator< (point & lhd, point & rhd){return lhd.distence < rhd.distence;}
 int t03_points() {
     int n;
     cin >> n;
