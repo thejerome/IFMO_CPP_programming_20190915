@@ -17,10 +17,19 @@
 
 #include "t06_longest.h"
 #include <iostream>
+#include <string>
 
-
-using namespace std;
-
-int t06_longest() {
-
+int t06_longest(){
+  int n = 0;
+  std::string si, abc, maxing;
+  std::getline(std::cin, si);
+  for (int i = 0; i < si.length(); i++) {
+    if (isspace(si[i])) {
+      if (abc.length() > maxing.length()) maxing = abc;
+      abc.clear();continue;}
+    abc += si[i];
+  }
+  if (maxing.length() < abc.length()) maxing = abc;
+  std::cout << maxing;
+  return 0;
 }
