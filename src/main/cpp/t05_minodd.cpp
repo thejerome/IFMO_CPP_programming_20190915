@@ -29,4 +29,23 @@ using namespace std;
 
 int t05_minodd() {
 
+    int N ;
+    int max ;
+    max = 100 ;
+    int v[100] ;
+    cin >> N ;
+    for ( int i = 0; i < N; ++i ) {
+        cin >> v[i];
+    }
+    for ( int i = 1 ; i < N ; i++ ) {
+        if (( v[i] % 2 != 0 ) && (  v[i] < max))
+        {
+            max = v[i] ;
+        }
+        else if ( max == 100 ) {
+            cout << "0" ;
+        }
+    }
+    cout << max ;
+    return 0 ;
 }

@@ -19,5 +19,18 @@
 using namespace std;
 
 int t01_even() {
+    unsigned int N ;
+    unsigned int i ;
+    int V[5] ;
+    cin >> N ;
+    for ( i = 0 ; i < N ; ++i)
+    {
+        cin >> V[i] ;
+        if ( i % 2 == 0 )
+        {
+            cout << V[i] << " " ;
+        }
+    }
+    return 0;
 
 }
