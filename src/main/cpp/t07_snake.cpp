@@ -33,7 +33,7 @@ int t07_snake() {
 				num++;
 			}
 			}
-			else if ( i % 2 != 0){
+			else{
 			    for (int j = m-1; j > -1; j--) {
 				arr[i][j] = num;
 				num++;
