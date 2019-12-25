@@ -80,9 +80,46 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <string>
+#include <sstream>
+#include <map>
+#include <algorithm>
+#include <unordered_set>
 
-using namespace std;
+using string_set = std::unordered_set<std::string>;
+
+template <class T, class Item>
+inline bool has(const T& cls, const Item& item) {
+    return cls.find(item) != cls.end();
+};
+
+inline size_t countCapital(const std::string& s) {
+    return static_cast<size_t>(std::count_if(s.cbegin(), s.cend(), ::isupper));
+}
+
+std::string toLower(const std::string& str) {
+    std::string s = str;
+    std::transform(s.begin(), s.end(), s.begin(), ::tolower);
+    return s;
+}
 
 int t06_homework() {
+    size_t n, n_errors = 0;
+    string_set words, stressed;
+    std::cin >> n;
 
+    std::string lword, word, line;
+    for (size_t i{}; i < n; ++i) {
+        std::cin >> word;
+        stressed.insert(word);
+        words.insert(toLower(word));
+    }
+    while (std::cin >> word) {
+        lword = toLower(word);
+        if (has(words, lword) && !has(stressed, word)) ++n_errors;
+        else if (!has(words, lword) && countCapital(word) != 1) ++n_errors;
+    }
+
+    std::cout << n_errors;
+    return 0;
 }

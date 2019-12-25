@@ -23,9 +23,31 @@
 
 #include "t03_both.h"
 #include <iostream>
-
+#include <set>
 using namespace std;
 
 int t03_both() {
-
+  int N;
+    int num, counter = 0;
+    std::set<int> s;
+    std::cin >> N;
+    while(N > 0){
+    std::cin >> num;
+    s.insert(num);
+    N--;
+    }
+    std::cin >> N;
+    while(N > 0){
+        std::cin >> num;
+        if (!s.insert(num).second)
+            counter++;
+            s.erase(num);
+        
+            
+        N--;
+        
+    }
+    std::cout << counter;
+    
+  return 0;
 }

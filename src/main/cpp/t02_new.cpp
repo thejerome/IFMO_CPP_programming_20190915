@@ -25,10 +25,24 @@
 
 #include "t02_new.h"
 #include <iostream>
-
-
+#include <set>
 using namespace std;
 
 int t02_new() {
-    
+    std::set<int> s;
+    int num, N;
+    int curr_size = 0;
+    std::cin >> N;
+    while (N > 0){
+        std::cin >> num;
+        s.insert(num);
+        if (s.size() > curr_size){
+            std::cout << "NO" << std::endl;
+            curr_size++;
+        }
+        else
+            std::cout << "YES" << std::endl;
+        N--;
+    }
+  return 0;    
 }
