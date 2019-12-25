@@ -19,35 +19,17 @@
 #include <iostream>
 #include <string>
 
-std::string blabla(std::string line){
-    int curr_len = 0;
-    std::string max_word = "";
-    std::string curr_word = "";
-    int max = 0;
-    for(int i =0; i < line.length(); i++){
-        
-        if (line[i] != ' '){
-            curr_len++;
-            curr_word += line[i];
-        }
-        else{
-            if(curr_len > max){
-                max = curr_len;
-                max_word = curr_word;
-            }
-            curr_len = 0;
-            curr_word = "";
-        }
-    }
-    if(curr_len > max){
-                max = curr_len;
-                max_word = curr_word;
-    }
-    return max_word;
-}
-int t06_longest() {
-  std::string line;
-    std::getline(std::cin, line);
-    std::cout << blabla(line);
+int t06_longest(){
+  int n = 0;
+  std::string si, abc, maxing;
+  std::getline(std::cin, si);
+  for (int i = 0; i < si.length(); i++) {
+    if (isspace(si[i])) {
+      if (abc.length() > maxing.length()) maxing = abc;
+      abc.clear();continue;}
+    abc += si[i];
+  }
+  if (maxing.length() < abc.length()) maxing = abc;
+  std::cout << maxing;
   return 0;
 }
