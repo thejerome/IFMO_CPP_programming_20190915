@@ -38,7 +38,7 @@ int t08_chess() {
 				arr[i][j] = 0;
 			}
 			}
-			else( i % 2 != 0){
+			else{
 			  for (int j = 1; j < m; j+=2) {
 				arr[i][j] = num;
 				num++;
