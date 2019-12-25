@@ -84,6 +84,7 @@
 #include <sstream>
 #include <map>
 #include <algorithm>
+#include <unordered_set>
 
 using string_set = std::unordered_set<std::string>;
 
