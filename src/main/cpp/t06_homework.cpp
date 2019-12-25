@@ -85,81 +85,40 @@
 #include <map>
 #include <algorithm>
 
-using namespace std;
-#define EL	std::endl
+using string_set = std::unordered_set<std::string>;
 
+template <class T, class Item>
+inline bool has(const T& cls, const Item& item) {
+    return cls.find(item) != cls.end();
+};
 
-typedef multimap <string, string> :: iterator myIt;
+inline size_t countCapital(const std::string& s) {
+    return static_cast<size_t>(std::count_if(s.cbegin(), s.cend(), ::isupper));
+}
 
-static multimap <string, string> dictionary;
-
-bool Udarenie(const string *w);
+std::string toLower(const std::string& str) {
+    std::string s = str;
+    std::transform(s.begin(), s.end(), s.begin(), ::tolower);
+    return s;
+}
 
 int t06_homework() {
+    size_t n, n_errors = 0;
+    string_set words, stressed;
+    std::cin >> n;
 
-	size_t count = 0;
-	int n;
-	std::cin >> n;
-	std::string de;
-	std::string dk;
-	getline(cin, de); 
-	while (n > 0) {
-		getline(cin, de, '\n');
-		dk = de;
-		std::transform(dk.begin(),
-			       dk.end(),
-			       dk.begin(),
-			       ::toupper);
-		dictionary.insert(pair <string, string> (dk, de) );
-		n--;
-	}
-	
-	std::string t;
-	getline(cin, t, '\n');
-	std::stringstream ss(t);
-	std:: string word;
-	while (ss >> word) {
-		    std::string t = word;
-		    std::transform(t.begin(),
-			            t.end(),
-			            t.begin(),
-			            ::toupper);
-		    if (dictionary.find(t) != dictionary.end()) {
-			        myIt lb;
-			        myIt ub;
-			        lb = dictionary.lower_bound(t);
-			        ub = dictionary.upper_bound(t);
+    std::string lword, word, line;
+    for (size_t i{}; i < n; ++i) {
+        std::cin >> word;
+        stressed.insert(word);
+        words.insert(toLower(word));
+    }
+    while (std::cin >> word) {
+        lword = toLower(word);
+        if (has(words, lword) && !has(stressed, word)) ++n_errors;
+        else if (!has(words, lword) && countCapital(word) != 1) ++n_errors;
+    }
 
-			    bool loc = true;
-			    for (myIt it = lb; it != ub; it++) {
-				        if ( (*it).second == word ) {
-					            loc = false;
-					            break;
-				        }
-			    }
-			    if (loc == true) { count++; }
-			    continue;
-		    }
-
-
-		    if (Udarenie(&word) == true) {
-			    continue;
-		    } else {
-			        count++;
-		    }
-	}
-	std::cout << count << EL;
+    std::cout << n_errors;
+    return 0;
 }
-
-bool Udarenie(const string *w)
-{
-	    bool sf = false;
-	    for (size_t i = 0; i < w->size(); i++ ) {
-		        if ( ((*w)[i] >= 'A') && ((*w)[i] <= 'Z') ) {
-			            if (sf == true) { return false; }
-			            sf = true;
-		        }
-	    }
-	    return sf;
-}
-
