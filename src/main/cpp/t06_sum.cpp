@@ -21,8 +21,21 @@
 #include <cmath>
 
 using namespace std;
+int func (int& c){
+    if (c > 0){
+    int d;
+    cin >> d;
+    return c + func(d);
+    }
+    else {
+        return 0;
+}
+}
 
-int t06_sum() {
+int t06_sum() {   
+    int c;
+    cin >> c;
+    cout << func(c);
 
     return 0;
 }
