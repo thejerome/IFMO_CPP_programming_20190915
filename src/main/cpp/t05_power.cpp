@@ -33,7 +33,7 @@ int func(int& a,int& b){
         return 1;
     }
     else {
-        b++
+        b++;
         return 1/a * func (a,b); 
 }
 }
