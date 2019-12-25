@@ -36,6 +36,7 @@ int func(int& a,int& b){
         b++
         return 1/a * func (a,b); 
 }
+}
 using namespace std;
 
 //function power
