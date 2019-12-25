@@ -28,5 +28,15 @@
 using namespace std;
 
 int t04_count() {
-
+    int cou = 0;
+    while (true){
+        string text;
+        cin >> text;
+        if (text == ""){
+          break;
+        }
+        cou++;
+    }
+    cout << cou;
+}
 }
