@@ -80,9 +80,86 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <string>
+#include <sstream>
+#include <map>
+#include <algorithm>
 
 using namespace std;
+#define EL	std::endl
+
+
+typedef multimap <string, string> :: iterator myIt;
+
+static multimap <string, string> dictionary;
+
+bool Udarenie(const string *w);
 
 int t06_homework() {
 
+	size_t count = 0;
+	int n;
+	std::cin >> n;
+	std::string de;
+	std::string dk;
+	getline(cin, de); 
+	while (n > 0) {
+		getline(cin, de, '\n');
+		dic_key = de;
+		std::transform(dk.begin(),
+			       dk.end(),
+			       dk.begin(),
+			       ::toupper);
+		dictionary.insert(pair <string, string> (dk, de) );
+		n--;
+	}
+	
+	std::string t;
+	getline(cin, t, '\n');
+	std::stringstream ss(t);
+	std:: string word;
+	while (ss >> word) {
+		std::string t = word;
+		std::transform(t.begin(),
+			       t.end(),
+			       t.begin(),
+			       ::toupper);
+		if (dictionary.find(t) != dictionary.end()) {
+			myIt lb;
+			myIt ub;
+			lb = dictionary.lower_bound(t);
+			ub = dictionary.upper_bound(t);
+
+			bool loc = true;
+			for (myIt it = lb; it != ub; it++) {
+				if ( (*it).second == word ) {
+					loc = false;
+					break;
+				}
+			}
+			if (loc == true) { count++; }
+			continue;
+		}
+
+
+		if (Udarenie(&word) == true) {
+			continue;
+		} else {
+			count++;
+		}
+	}
+	std::cout << count << EL;
 }
+
+bool Udarenie(const string *w)
+{
+	bool sf = false;
+	for (size_t i = 0; i < w->size(); i++ ) {
+		if ( ((*w)[i] >= 'A') && ((*w)[i] <= 'Z') ) {
+			if (sf == true) { return false; }
+			sf = true;
+		}
+	}
+	return sf;
+}
+
