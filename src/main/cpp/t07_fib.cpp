@@ -16,10 +16,19 @@
 #include <cmath>
 
 using namespace std;
-
+int fib(int n){
+    if (n == 1)
+        return 1;
+    if (n == 2)
+        return 1;
+    return fib(n-2) + fib(n-1);
+}
 // function fib
 
 int t07_fib()
 {
+    int f;
+    std::cin >> f;
+    std::cout << fib(f);
     return 0;
 }

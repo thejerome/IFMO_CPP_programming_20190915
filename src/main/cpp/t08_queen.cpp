@@ -21,8 +21,25 @@
 #include <vector>
 
 using namespace std;
-
+int c = 0;
+void solutiuon(int n, int noh, int *pis) {
+    if (noh == n) {
+    ++c;
+    return;
+    }
+#define attack(i, j) (pis[j] == i || abs(pis[j] - i) == noh - j)   
+    for (int i = 0, j = 0; i < n; i++) {
+        for (j = 0; j < noh && !attack(i, j); j++);
+        if (j < noh) continue;
+        pis[noh] = i;
+        solutiuon(n, noh + 1, pis);
+    }
+}
 int t08_queen(){
-
+    int n;
+    std::cin >> n;
+    int pis[n];
+    solutiuon(n, 0, pis);
+    std::cout << c;
     return 0;
 }

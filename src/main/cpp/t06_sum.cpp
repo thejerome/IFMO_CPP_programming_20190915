@@ -21,8 +21,15 @@
 #include <cmath>
 
 using namespace std;
-
+int suum(){
+    int curr;
+    std::cin >> curr;
+    if (curr == 0)
+        return 0;
+    else
+        return curr + suum();
+}
 int t06_sum() {
-
+    std::cout << suum();
     return 0;
 }
