@@ -19,10 +19,16 @@
 
 #include "t01_sort.h"
 #include <iostream>
-
-
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 int t01_sort() {
-    
+    int quantity;
+    cin >> quantity;
+    vector<int> numbers(quantity);
+    for(auto & i : numbers)cin >> i;
+    sort(numbers.begin(), numbers.end());
+    for(auto & i : numbers)cout << i << " ";
+    return 0;
 }

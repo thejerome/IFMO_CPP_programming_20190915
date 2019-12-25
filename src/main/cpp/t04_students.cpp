@@ -29,10 +29,27 @@
 
 #include "t04_students.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 using namespace std;
-
+class student
+{
+    public:
+    string name, last_name;
+    vector<int> points;
+    double avr;
+    void cupl()
+    {
+        avr = (points[0] + points[1] + points[2])/3;
+    }
+};
+bool operator<(const student & lhd, const student & rhd){return lhd.avr > rhd.avr;}
 int t04_students() {
-    
+    int n; cin >> n;
+    vector<student> students(n);
+    for(auto & i : students){cin >> i.last_name >> i.name; for(auto j = 0; j < 3; j++){int point; cin >> point; i.points.emplace_back(point); i.cupl();}}
+    sort(students.begin(), students.end());
+    for(auto & i : students)cout << i.last_name << " " << i.name << endl;
+    return 0;
 }
 
