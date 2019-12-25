@@ -24,5 +24,22 @@
 using namespace std;
 
 int t03_toggle() {
+    char symb, symbol2;
+    cin >> symb;
+    if (symb >= 'a' && symb <= 'z') {
+        char s2;
+        int d = symb - 'a';
+        symbol2 = 'A' + d;
+        cout << symbol2;
+    } 
+    else if (symb >= 'A' && symb <= 'Z') {
+        int d = symb - 'A';
+        symbol2 = 'a' + d;
+        cout << symbol;
+    } 
+  else{
+    cout << symb;
+  }
+}
 
 }
