@@ -24,12 +24,22 @@
 
 #include <iostream>
 #include <cmath>
-
+int func(int& a,int& b){
+    if (b > 0){
+        b--;
+        return a * func(a,b); 
+      }
+    else {
+        return 1;
+    }
+}
 using namespace std;
 
 //function power
 
 int t05_power() {
-
+    int a, b;
+    cin >> a>> b;
+    cout << func(a,b);
     return 0;
 }
