@@ -24,17 +24,17 @@
 
 #include <iostream>
 #include <cmath>
-int func(int& a,int& b){
+float func(float& a,float& b){
     if (b > 0){
         b--;
         return a * func(a,b); 
       }
-    else if (b == 0) {
-        return 1;
+    else if (b < 0) {
+         b++;
+        return 1/a * func (a,b); 
     }
     else {
-        b++;
-        return 1/a * func (a,b); 
+      return 1;
 }
 }
 using namespace std;
@@ -42,7 +42,7 @@ using namespace std;
 //function power
 
 int t05_power() {
-    int a, b;
+    float a, b;
     cin >> a>> b;
     cout << func(a,b);
     return 0;
