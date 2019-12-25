@@ -24,12 +24,26 @@
 
 #include <iostream>
 #include <cmath>
-
+float func(float& a,float& b){
+    if (b > 0){
+        b--;
+        return a * func(a,b); 
+      }
+    else if (b < 0) {
+         b++;
+        return 1/a * func (a,b); 
+    }
+    else {
+      return 1;
+}
+}
 using namespace std;
 
 //function power
 
 int t05_power() {
-
+    float a, b;
+    cin >> a>> b;
+    cout << func(a,b);
     return 0;
 }

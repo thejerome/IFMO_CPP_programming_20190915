@@ -18,8 +18,18 @@
 using namespace std;
 
 // function fib
+int func (int c){
+    if (c < 3){
+    return 1;
+}
+    else{
+    return func(c-1) + func(c-2);
+}
+}
 
 int t07_fib()
-{
+{   int c;
+    cin >> c;
+    cout << func(c);
     return 0;
 }
