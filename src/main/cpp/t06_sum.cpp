@@ -22,7 +22,7 @@
 
 using namespace std;
 int func (int& c){
-    if (c > 0){
+    if (c != 0){
     int d;
     cin >> d;
     return c + func(d);
