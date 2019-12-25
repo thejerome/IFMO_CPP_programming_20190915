@@ -29,7 +29,7 @@
 using namespace std;
 
 int t06_cinema() {
-    	int n, num, m, cou, row;
+    	int n, num, m, cou=0, row=0;
 	cin >> n >> m;
 	int arr[n][m];
 	
@@ -40,20 +40,21 @@ int t06_cinema() {
 	}
 	
 	cin >> num;
-	for (int i = 0; i < n; i++){
-        for (int j = 1; j < m; j++){
-            if (arr[i][j] == 0){
-            	cou++;
-            	if (cou == num){
-            		row = 1 + i;
-            		break;
-            	}
-            }
-            else {
-            	cou = 0;
+	    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            if (arr[i][j]==0) {
+                cou++;
+            } else {cou=0;}
+            if (cou == num) {
+                row= i+1;
+                break;
             }
         }
-	}
-	cout << row;
+        if (row>0) {
+            break;
+        }
+        cou=0;
+    }
+    cout << row;
     return 0;
 }
