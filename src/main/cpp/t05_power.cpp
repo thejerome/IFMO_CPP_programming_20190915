@@ -29,9 +29,12 @@ int func(int& a,int& b){
         b--;
         return a * func(a,b); 
       }
-    else {
+    else if (b == 0) {
         return 1;
     }
+    else {
+        b++
+        return 1/a * func (a,b); 
 }
 using namespace std;
 
