@@ -23,10 +23,27 @@
 
 #include "t03_points.h"
 #include <iostream>
-
-
+#include <vector>
+#include <algorithm>
 using namespace std;
 
+class point
+{
+    public:
+    int x, y;
+    int distence;
+    void culc()
+    {
+        distence = x*x + y*y;
+    }
+};
+bool operator< (point & lhd, point & rhd){return lhd.distence < rhd.distence;}
 int t03_points() {
-    
+    int n;
+    cin >> n;
+    vector<point> points(n);
+    for(auto & i : points){cin >> i.x >> i.y; i.culc();}
+    sort(points.begin(), points.end());
+    for(auto & i : points)cout << i.x << " " << i.y << endl;
+    return 0;
 }
