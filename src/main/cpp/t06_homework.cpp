@@ -105,7 +105,7 @@ int t06_homework() {
 	getline(cin, de); 
 	while (n > 0) {
 		getline(cin, de, '\n');
-		dic_key = de;
+		dk = de;
 		std::transform(dk.begin(),
 			       dk.end(),
 			       dk.begin(),
