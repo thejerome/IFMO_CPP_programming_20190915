@@ -24,10 +24,9 @@
 using namespace std;
 
 int t08_chess() {
-    int N=0, M=0,x, y=0;
+    int N=0, M=0,x=1, y=1;
     cin >> N >> M;
     int arr[N][M];
-    y++; x++;
     for (int i = 0;i<N; ++i) {
         for (int j = 0; j < M; ++j) {
             if (!x==0) {
