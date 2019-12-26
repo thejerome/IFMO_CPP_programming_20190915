@@ -32,7 +32,7 @@ int t03_diag() {
         }
     for (int i = 0;i<N; i++) {
         for (int j = 0; j < N; j++)
-            cout << arr[i][j] << endl;
+            cout << arr[i][j] << ' ' << endl;
     }
     return 0;
 }
