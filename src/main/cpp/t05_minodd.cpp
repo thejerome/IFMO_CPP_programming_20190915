@@ -44,6 +44,6 @@ int t05_minodd() {
             A = v[i];
         }
     }
-    cout << A;
+    cout << A ;
     return 0 ;
 }
