@@ -30,7 +30,7 @@ using namespace std;
 
 int t04_both2() {
 	set<int> t, t1;
-	int N, M, cc = 0;
+	int N, M;
 	cin >> N;
 	for (int i = 0; i < N; i++) {
 		int c;
@@ -44,7 +44,7 @@ int t04_both2() {
 		if (t.count(p) == 1) t1.insert(p);
 	}
 	for (int i : t1) {
-		cout << i<<" ";
+		cout << i<< " ";
 	}
 	return 0;
 }
