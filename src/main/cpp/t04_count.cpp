@@ -29,4 +29,15 @@ using namespace std;
 
 int t04_count() {
 
+    string x;
+    int s=0;
+    getline(cin, x);
+    for (int i=0; i<x.length(); i++){
+        if (x[i] == ' '){
+            s++;
+        }
+    }
+    cout<<++s;
+    return 0;
+
 }
