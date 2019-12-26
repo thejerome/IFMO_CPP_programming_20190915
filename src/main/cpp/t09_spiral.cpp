@@ -52,3 +52,4 @@ int t09_spiral() {
     }
     return 0;
 }
+
