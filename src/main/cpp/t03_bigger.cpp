@@ -21,7 +21,7 @@ using namespace std;
 int t03_bigger() {
     unsigned int N ;
     unsigned int i ;
-    int V[5] ;
+    int V[199] ;
     cin >> N ;
     for ( i = 0 ; i < N ; ++i )
     {

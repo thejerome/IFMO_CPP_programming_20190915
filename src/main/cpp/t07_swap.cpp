@@ -19,18 +19,21 @@
 using namespace std;
 
 int t07_swap() {
-    int N = 0 ;
-    int A = 0 ;
-    int B = 0 ;
-    cin >> N ;
-    int Z = N / 2 ;
-    for ( int i = 0 ; i < Z ; i++ ) {
-        cin >> A >> B ;
-        cout << A << " " << B << " " ;
+    int N;
+    cin >> N;
+    int* v = new int[N];
+    for(int i = 0; i < N; ++i)
+    {
+        cin >> v[i];
     }
-    if ( N % 2 != 0 ) {
-        cin >> A ;
-        cout << A ;
+    for(int i = 0; i < N; i = i + 2)
+    {
+        if((i + 1) == N)
+        {
+            cout << v[i] << " ";
+            break;
+        }
+        swap(v[i],v[i+1]);
+        cout << v[i] << " " << v[i+1] << " ";
     }
-    return 0;
 }

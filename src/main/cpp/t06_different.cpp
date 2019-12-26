@@ -21,7 +21,7 @@ using namespace std;
 int t06_different() {
     int N ;
     int count = 1 ;
-    int v[6] ;
+    int v[199] ;
     cin >> N ;
     for ( int i = 0 ; i < N ; ++i )
     {

@@ -28,9 +28,9 @@ int t04_neighbors() {
     for ( int i = 1 ; i < N ; ++i )
     {
         cin >> v[i] ;
-        if (( v[i - 1] < 0 && v[i - 1] < 0 ) || ( v[i - 1] > 0  && v[i] > 0 ))
+        if (( v[i - 1] < 0 && v[i] < 0 ) || ( v[i - 1] > 0  && v[i] > 0 ))
         {
-            cout << v[i] << " " << v[i - 1] ;
+            cout << v[i - 1] << " " << v[i] ;
             break ;
         }
     }
