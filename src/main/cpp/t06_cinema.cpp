@@ -29,7 +29,7 @@
 using namespace std;
 
 int t06_cinema() {
-    int N=0, M=0, x=0, flag=16, tmp=0;
+    int N=0, M=0, x=0, flag=16, t0=0;
     cin >> N >> M;
     int arr[N][M];
     for (int i = 0;i<N; i++) {
@@ -39,16 +39,16 @@ int t06_cinema() {
     }
     cin >> x;
     for (int i = 0;i<N; i++) {
-        tmp=0;
+        t0=0;
         for (int j = 0; j < M; j++) {
 
             if (!arr[i][j] and flag==16) {
-                tmp++;
-                if (tmp==x)
+                t0++;
+                if (t0==x)
                     flag=i+1;
             }
             else {
-                tmp=0;
+                t0=0;
                 }
 
 
