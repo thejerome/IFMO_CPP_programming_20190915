@@ -27,7 +27,7 @@ using namespace std;
 int t10_unique() {
 
     int N = 1 ;
-    bool  a = 0 ;
+    bool  a = false ;
     cin >> N ;
     int v[100] ;
     for ( int i = 0 ; i < N ; i++ )

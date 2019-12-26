@@ -30,21 +30,20 @@ using namespace std;
 int t05_minodd() {
 
     int N ;
-    int max = 0 ;
-    int v[100] ;
+    int A = 0 ;
     cin >> N ;
-    for ( int i = 0; i < N; ++i ) {
+    int v[199] ;
+    for ( int i = 0 ; i < N ; i++ )
+    {
         cin >> v[i];
     }
-    for ( int i = 0 ; i < N ; i++ ) {
-        if ( v[i] % 2 != 0 && v[i] % 2 != 0 && max == 0 )
+    for ( int i = 0 ; i < N; i++ )
+    {
+        if (( ( A > v[i]) || (A == 0) ) && v[i] % 2 != 0 )
         {
-            max = v[i] ;
-        }
-        else if ( v[i] < max && max != 0 ) {
-            max = v[i] ;
+            A = v[i];
         }
     }
-    cout << max ;
+    cout << A;
     return 0 ;
 }
