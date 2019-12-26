@@ -25,7 +25,6 @@ using namespace std;
 int t03_twos() {
 	int n;
 	cin >> n;
-	int s = 2;
 	if (n == 2 || n == 1) {
 		cout << "YES";
 	}

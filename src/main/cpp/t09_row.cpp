@@ -36,7 +36,7 @@ int t09_row() {
 		if (a != numb)
 		{
 		count = 1;
-			count=1;
+			
 		}
 		else
 		{count++;}
