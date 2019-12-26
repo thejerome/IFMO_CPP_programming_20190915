@@ -27,6 +27,24 @@
 using namespace std;
 
 int t01_max() {
-    
+    int N=0, M=0,F=0, x1=0, y1=0;
+    cin >> N >> M;
+    int arr[N][M],arr3[3];
+    for (int i = 0;i<N; i++) {
+        for (int j = 0;j<M; j++) {
+            cin >> arr[i][j];
+        }
+    }
+    for (int i = 0;i<N; i++) {
+        for (int j = 0;j<M; j++) {
+            if(arr[i][j] > F) {
+            x1=i;
+            y1=j;
+            F=arr[i][j];
+            }
+        }
+
+    }
+    cout << x1 << " " << y1 << endl;
     return 0;
 }
