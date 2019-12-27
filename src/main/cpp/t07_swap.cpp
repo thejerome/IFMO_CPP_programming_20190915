@@ -29,8 +29,8 @@ int t07_swap() {
       swapper = arr[i+1];
       arr[i+1] = arr[i];
       arr[i] = swapper;
-      i++;
       cout << arr[i] << " " << arr[i+1] << " ";
+            i++;
     }
     if(i+1 == qua) cout << arr[i];
   }
