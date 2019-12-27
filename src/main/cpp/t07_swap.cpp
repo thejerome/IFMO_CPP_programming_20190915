@@ -34,5 +34,6 @@ int t07_swap() {
       cout << arr[i] << " " << arr[i+1] << " ";
             i++;
     }
+  }
         if(i+1 == qua) cout << arr[i];
 }
