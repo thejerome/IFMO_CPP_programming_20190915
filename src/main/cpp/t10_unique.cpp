@@ -28,7 +28,7 @@ int t10_unique() {
   int qua;
   cin >> qua;
   int *arr = new int[qua];
-  counter = 0;
+  int counter = 0;
   for(int i = 0; i<qua; i++){
     cin >> arr[i];
   }
@@ -38,4 +38,6 @@ int t10_unique() {
            counter++;
       }
       if(counter == 1) cout << arr[i] << " ";
+    }
+  }
 }
