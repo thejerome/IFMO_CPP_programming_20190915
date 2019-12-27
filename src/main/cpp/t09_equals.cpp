@@ -35,7 +35,7 @@ int t09_equals() {
 }
     for(int i = 0; i<qua; z++){      
       for(int z = i+1; z < qua; z++){
-            if (a[i] == a[z]) counter++; 
+            if (arr[i] == arr[z]) counter++; 
         }
     }
       cout << counter;
