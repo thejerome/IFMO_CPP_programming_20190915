@@ -33,7 +33,7 @@ int t09_equals() {
   for(int i = 0; i<qua; i++){
     cin >> arr[i];
 }
-    for(i = 0; i<qua; z++){      
+    for(int i = 0; i<qua; z++){      
       for(int z = i+1; z < qua; z++){
             if (a[i] == a[z]) counter++; 
         }
