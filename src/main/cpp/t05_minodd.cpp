@@ -38,4 +38,5 @@ int t05_minodd() {
       if (min == 0 || min > arr[i]) min = arr[i];
     }
        cout << min;
+  }
 }
