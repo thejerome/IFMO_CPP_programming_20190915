@@ -44,9 +44,9 @@ int t11_queen() {
     for(int i = 0; i < 8; i++) {
       cin >> x[i] >> y[i];
     }
-    int adv = 1
+    int adv = 1;
     for(int i = 0; i < 8; i++){
-       for (int n = i + 1; n < 8; j++){
+       for (int n = i + 1; n < 8; n++){
            if (x[i] == x[n] || y[i] == y[n] || abs(x[i] - x[n]) == abs(y[i] - y[n]))
                adv = 0;
         }
