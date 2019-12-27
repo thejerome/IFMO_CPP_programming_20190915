@@ -22,7 +22,7 @@ int t07_swap() {
   int qua;
   cin >> qua;
   int *arr = new int[qua];
-  int swapper = 0;
+  int swapper;
   int n;
   for(int i = 0; i<qua; i++){
     cin >> arr[i];
