@@ -21,7 +21,6 @@
 using namespace std;
 
 int t04_neighbors() {
-  int t01_even() {
   int qua;
   cin >> qua;
   int *arr = new int[qua];
