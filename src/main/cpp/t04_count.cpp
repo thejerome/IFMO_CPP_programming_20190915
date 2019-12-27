@@ -39,5 +39,4 @@ int t04_count() {
     }
     cout << cou;
 }
-}
-}
+
