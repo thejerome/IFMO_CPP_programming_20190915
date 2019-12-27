@@ -34,7 +34,7 @@ int t05_minodd() {
   int min = 0;
   for(int i = 0; i<qua; i++){
     cin >> arr[i];
-    if(arr[i]%2 == 1){
+    if(arr[i]%2 == 1 || arr[i]%2 == -1 ){
       if (min == 0 || min > arr[i]) min = arr[i];
     }
   }
