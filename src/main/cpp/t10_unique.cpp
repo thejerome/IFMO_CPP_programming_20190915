@@ -32,7 +32,7 @@ int t10_unique() {
   for(int i = 0; i<qua; i++){
     cin >> arr[i];
   }
-  for(i = 0; i<qua; i++){
+  for(int i = 0; i<qua; i++){
     for(int n = 0; n<qua; n++){
       if(arr[n] == arr[i])  {
            counter++;
