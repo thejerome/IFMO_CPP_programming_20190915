@@ -24,4 +24,19 @@ using namespace std;
 
 int t05_palindrom() {
 
+    bool palindrom = true;
+    string word;
+    getline(cin, word);
+    for (int i = 0; i < word.size(); i++){
+        if (word[0+i] != word[word.size() -1 -i]){
+            palindrom = 0;
+        }
+    }
+    if (palindrom){
+    	 cout << "yes";
+    }
+    else {
+    	cout << "no";
+    }
+    return 0;
 }
