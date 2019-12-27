@@ -19,6 +19,7 @@
 using namespace std;
 
 int t03_bigger() {
+  int qua;
   cin >> qua;
   int *arr = new int[qua];
   for(int i = 0; i<qua; i++){
