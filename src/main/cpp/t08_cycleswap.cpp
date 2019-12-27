@@ -22,7 +22,7 @@ int t08_cycleswap() {
   int qua;
   cin >> qua;
   int *arr = new int[qua];
-  swapper = 0;
+  int swapper = 0;
   for(int i = 0; i<qua; i++){
     cin >> arr[i];
     if(i+1 < qua){
@@ -34,5 +34,5 @@ int t08_cycleswap() {
     arr [0] = swapper;
    for(i = 0; i<qua; i++){
      cout << arr[i] << " ";
-   }
+   }  
 }
