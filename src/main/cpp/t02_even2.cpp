@@ -19,7 +19,6 @@
 using namespace std;
 
 int t02_even2() {
-  int t01_even() {
   int qua;
   cin >> qua;
   int *arr = new int[qua];
