@@ -26,7 +26,7 @@ int t07_swap() {
   for(int i = 0; i<qua; i++){
     cin >> arr[i];
   }
-  for(int i = 0; i<qua: i++){
+  for(int i = 0; i<qua; i++){
       if(i+1 < qua){
       swapper = arr[i+1];
       arr[i+1] = arr[i];
