@@ -33,7 +33,7 @@ int t08_cycleswap() {
     n++;
   }
     swapper = arr[n];
-    arr[i] = arr[0];
+    arr[n] = arr[0];
     arr [0] = swapper;
    for(int i = 0; i<qua; i++){
      cout << arr[i] << " ";
