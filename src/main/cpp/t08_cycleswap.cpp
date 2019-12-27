@@ -26,15 +26,12 @@ int t08_cycleswap() {
   int n = 0;
   for(int i = 0; i<qua; i++){
     cin >> arr[i];
-    if(i+1 < qua){
-      arr[i+1] = arr[i];
-      i++;
-    }
-    n++;
   }
-    swapper = arr[n];
-    arr[n] = arr[0];
-    arr [0] = swapper;
+  swapper = arr[i];
+    for(in n = qua-1; n >0; n--){
+      arr[n] = arr[n-1];
+    }
+     arr[0] = swapper;
    for(int i = 0; i<qua; i++){
      cout << arr[i] << " ";
    }  
