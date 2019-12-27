@@ -25,4 +25,16 @@ using namespace std;
 
 int t02_up() {
     
+    char symb;
+    cin >> symb;
+    if (symb >= 'a' && symb <= 'z') {
+        char s2;
+        int d = symb - 'a';
+        char symbol2 = 'A' + d;
+        cout << symbol2;
+    } 
+    else {
+        cout << symb;\
+    }
 }
+

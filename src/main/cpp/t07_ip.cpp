@@ -34,5 +34,30 @@
 using namespace std;
 
 int t07_ip() {
-
+    string ip, str;
+    getline(cin, ip);
+    int z=0, y;
+    for (int i = 0; i < ip.length(); i++){
+      if (ip[i] == '.'){
+        if (str != "") {
+        	y=stoi(str);
+            z++;
+        }
+        if ((z > 3) || (y < 0) || (y > 255) || (str == "")){
+            z = 0;
+            break;
+        }
+        else {
+        	str = "";
+        	}
+    }else {
+    	str= str + ip[i];}
+    	
+}
+if (z == 3){
+	cout <<"YES";
+}
+else{
+	cout <<"NO";
+}
 }
