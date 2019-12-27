@@ -22,7 +22,7 @@ int t06_different() {
   int qua;
   cin >> qua;
   int *arr = new int[qua];
-  int count = 1;
+  int count = 0;
   for(int i = 0; i<qua; i++){
     cin >> arr[i];
     if(arr[i] != arr[i-1]){
