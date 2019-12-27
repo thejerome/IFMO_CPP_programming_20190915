@@ -40,7 +40,5 @@ int t03_toggle() {
   else{
     cout << symb;
   }
-}
 
-}
 }
