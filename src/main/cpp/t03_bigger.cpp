@@ -19,5 +19,12 @@
 using namespace std;
 
 int t03_bigger() {
+int t01_even() {
+  int qua;
+  cin >> qua;
+  int *arr = new int[qua];
+  for(int i = 0; i<qua; i++){
+    cin >> arr[i];
+    if(arr[i] > arr[i - 1]) cout << arr[i] << " ";
+  }
 
-}
