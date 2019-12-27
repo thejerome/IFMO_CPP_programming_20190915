@@ -36,7 +36,7 @@ int t01_max() {
         int v[199][199]
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < a; j++) {
-                cin >> v[i][j];
+                cin >> v[i][j] ;
             }
         }
         int max = v[0][0], max1 = 0, max2 = 0;

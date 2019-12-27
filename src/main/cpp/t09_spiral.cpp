@@ -26,7 +26,7 @@ int t09_spiral() {
     int x;
     int y = 1;
     int a = 0, b = 0;
-    cin >> N;
+    cin >> N ;
     cin >> x;
     int v[199][199];
 

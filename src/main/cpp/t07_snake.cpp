@@ -32,7 +32,7 @@ int t07_snake() {
         if( i % 2 == 0 )
             for( int j = 0; j < a; j++ )
             {
-                v[i][j] = l;
+                v[i][j] = l ;
                 l = l + 1 ;
             }
         else

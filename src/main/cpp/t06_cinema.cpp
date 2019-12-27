@@ -62,7 +62,7 @@ int t06_cinema() {
             }
         }
         if ( c == b ) {
-            break;
+            break ;
         }
     }
 

@@ -46,7 +46,7 @@ int t05_kdiag() {
             cin >> v[i][j] ;
         }
     }
-    int a;
+    int a ;
     cin >> a;
     if( a >= 0 ) {
         for ( int i = 0 ; i < N - a ; i++ )

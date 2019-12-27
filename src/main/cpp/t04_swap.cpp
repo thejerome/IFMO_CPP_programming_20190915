@@ -36,7 +36,7 @@ int t04_swap() {
             cin >> v[i][j] ;
         }
     }
-    cin >> a >> c ;
+    cin >> a >> c  ;
     for (int i = 0 ; i < N ; ++i) {
         int t = 0 ;
         t = v[i][a] ;

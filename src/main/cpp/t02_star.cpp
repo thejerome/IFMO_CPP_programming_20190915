@@ -35,9 +35,9 @@ int t02_star() {
                     v[i][j] = '*';
                 }
             else {
-                    v[i][j] = '.';
+                    v[i][j] = '.' ;
                 }
-            cout << v[i][j] << " ";
+            cout << v[i][j] << " " ;
 
         }
         cout << endl ;

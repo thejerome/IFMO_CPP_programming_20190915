@@ -31,7 +31,7 @@ int t03_diag() {
         {
             if (i < j)
             {
-                cout << j - i << " ";
+                cout << j - i << " " ;
             }
             else
                 {
