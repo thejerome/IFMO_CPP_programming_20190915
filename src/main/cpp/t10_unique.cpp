@@ -33,11 +33,12 @@ int t10_unique() {
     cin >> arr[i];
   }
   for(int i = 0; i<qua; i++){
+    counter = 0;
     for(int n = 0; n<qua; n++){
       if(arr[n] == arr[i])  {
            counter++;
       }
-      if(counter == 1) cout << arr[i] << " ";
     }
+      if(counter == 1) cout << arr[i] << " ";
   }
 }
