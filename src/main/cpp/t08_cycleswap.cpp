@@ -19,5 +19,20 @@
 using namespace std;
 
 int t08_cycleswap() {
-
+  int qua;
+  cin >> qua;
+  int *arr = new int[qua];
+  swapper = 0;
+  for(int i = 0; i<qua; i++){
+    cin >> arr[i];
+    if(i+1 < qua){
+      arr[i+1] = arr[i];
+      i++;
+    }
+    swapper = arr[i];
+    arr[i] = arr[0];
+    arr [0] = swapper;
+   for(i = 0; i<qua; i++){
+     cout << arr[i] << " ";
+   }
 }
