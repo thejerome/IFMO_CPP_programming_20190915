@@ -29,10 +29,45 @@
 
 #include "t07_ip.h"
 #include <iostream>
+#include <string>
 
 
 using namespace std;
 
 int t07_ip() {
+    bool flag = false;
+    string x, trio;
+    int s = 0;
+    getline(cin, x);
+    for (int a = 0; a<x.size(); a++) {
+
+
+
+        if (isdigit(x[a]))
+            trio+=x[a];
+        else if (x[a] == '.' and trio.length()!=0) {
+            if (stoi(trio) > 255) {
+                cout << "NO";
+                return 0;
+            }
+            else {
+                s++;
+                trio = "";
+            }
+        }
+        else {
+            cout << "NO";
+            return 0;
+        }
+    }
+
+    if (s==3) flag=true;
+    else flag=false;
+
+    if (flag) cout << "YES";
+    else cout <<"NO";
+
+
+    return 0;
 
 }
