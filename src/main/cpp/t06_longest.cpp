@@ -23,4 +23,23 @@ using namespace std;
 
 int t06_longest() {
 
+    string x;
+    getline(cin, x);
+    double s=0, f=0, z=0;
+    for (int i=0;i<x.size();i++){
+        if (x[i]!=' '){
+            s++;
+        }
+        if (x[i+1]==' '||i+1>=x.size()){
+            if (s > f){
+                f=s;
+                z = i-s;}
+            s=0; }
+    }
+    int k1=z+1,k2=1+f+z;
+    for (;k1<k2;k1++){
+        cout<<x[k1];
+    }
+    return 0;
+
 }
