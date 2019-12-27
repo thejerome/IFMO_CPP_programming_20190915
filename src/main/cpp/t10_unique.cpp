@@ -28,7 +28,7 @@ int t10_unique() {
   int qua;
   cin >> qua;
   int *arr = new int[qua];
-  int counter = 0;
+  int counter;
   for(int i = 0; i<qua; i++){
     cin >> arr[i];
   }
