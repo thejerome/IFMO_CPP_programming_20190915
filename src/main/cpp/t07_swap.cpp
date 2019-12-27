@@ -25,13 +25,14 @@ int t07_swap() {
   int swapper = 0;
   for(int i = 0; i<qua; i++){
     cin >> arr[i];
-    if(i+1 < qua){
+  }
+  for(int i = 0; i<qua: i++){
+      if(i+1 < qua){
       swapper = arr[i+1];
       arr[i+1] = arr[i];
       arr[i] = swapper;
       cout << arr[i] << " " << arr[i+1] << " ";
             i++;
     }
-    if(i+1 == qua) cout << arr[i];
-  }
+        if(i+1 == qua) cout << arr[i];
 }
