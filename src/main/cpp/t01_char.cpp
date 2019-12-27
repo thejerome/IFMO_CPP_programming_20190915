@@ -32,7 +32,7 @@ using namespace std;
   int t01_char() {
 	char symbol;
 	cin >> symbol;
-	if (symbol <= '9' && symbol >= '0")
+	if (symbol <= '9' && symbol >= '0')
 		cout << "yes";
 	else
 		cout << "no";
