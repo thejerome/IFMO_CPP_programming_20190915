@@ -23,17 +23,17 @@ int t07_swap() {
   cin >> qua;
   int *arr = new int[qua];
   int swapper = 0;
+  int n;
   for(int i = 0; i<qua; i++){
     cin >> arr[i];
   }
-  for(int i = 0; i<qua; i++){
-      if(i+1 < qua){
+  for(int i = 0; i<qua-1; i++){
       swapper = arr[i+1];
       arr[i+1] = arr[i];
       arr[i] = swapper;
       cout << arr[i] << " " << arr[i+1] << " ";
             i++;
-    }
+    
   }
-        if(i+1 == qua) cout << arr[i];
+        if(qua%2 == 1) cout << arr[qua-1];
 }
