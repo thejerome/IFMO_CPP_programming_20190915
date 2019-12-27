@@ -28,6 +28,6 @@ int t06_different() {
     if(arr[i] != arr[i-1]){
       count ++;
     }
-    cout << count;
   }
+      cout << count;
 }
