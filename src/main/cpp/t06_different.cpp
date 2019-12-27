@@ -29,4 +29,5 @@ int t06_different() {
       count ++;
     }
     cout << count;
+  }
 }
