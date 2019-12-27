@@ -35,7 +35,7 @@ int t03_toggle() {
     else if (symb >= 'A' && symb <= 'Z') {
         int d = symb - 'A';
         symbol2 = 'a' + d;
-        cout << symb;
+        cout << symbol2;
     } 
   else{
     cout << symb;
