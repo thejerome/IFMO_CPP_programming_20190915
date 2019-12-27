@@ -23,4 +23,19 @@ using namespace std;
 
 int t06_longest() {
 
+	string string, string1, max;
+	getline(cin, string);
+	for (int i = 0; i < string.length(); i++) {
+		if (string[i] != ' ') {
+			string1 += string[i];
+		}
+		else {
+			string1 = "";
+		}
+		if (string1.size() > max.size()) {
+			max = string1;
+		}
+	}
+	cout << max;
+	return 0;
 }
