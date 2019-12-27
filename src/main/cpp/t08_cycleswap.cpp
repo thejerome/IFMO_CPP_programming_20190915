@@ -26,7 +26,7 @@ int t08_cycleswap() {
   for(int i = 0; i<qua; i++){
     cin >> arr[i];
   }
-  swapper = arr[i];
+  swapper = arr[qua-1];
     for(int n = qua-1; n >0; n--){
       arr[n] = arr[n-1];
     }
