@@ -29,6 +29,7 @@ int t08_cycleswap() {
       arr[i+1] = arr[i];
       i++;
     }
+  }
     swapper = arr[i];
     arr[i] = arr[0];
     arr [0] = swapper;
