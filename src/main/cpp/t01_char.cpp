@@ -29,7 +29,6 @@
 
 using namespace std;
 
-int t01_char() {
   int t01_char() {
 	char symbol;
 	cin >> symbol;
