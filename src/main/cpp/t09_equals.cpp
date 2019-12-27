@@ -29,7 +29,7 @@ int t09_equals() {
     int qua;
   cin >> qua;
   int *arr = new int[qua];
-  counter = 0;
+  int counter = 0;
   for(int i = 0; i<qua; i++){
     cin >> arr[i];
 }
@@ -37,5 +37,6 @@ int t09_equals() {
       for(int z = i+1; z < qua; z++){
             if (a[i] == a[z]) counter++; 
         }
+    }
       cout << counter;
 }
