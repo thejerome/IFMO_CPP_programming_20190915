@@ -17,11 +17,54 @@
 
 #include "t09_spiral.h"
 #include <iostream>
-
+#include <iomanip>
 
 using namespace std;
 
 int t09_spiral() {
-    
+    int N;
+    int x;
+    int y = 1;
+    int a = 0, b = 0;
+    cin >> N ;
+    cin >> x;
+    int v[199][199];
+
+    for (a = 0; a < N; a++)
+    {
+        for (b = 0; b < x; b++)
+        {
+            v[a][b] = 0;
+        }
+    }
+    a = 0; b = 0;
+    while (x * N >= y)
+    {
+        v[a][b] = y;
+        if (( a - 1 < 0 || v[a - 1][b] != 0) &&  b + 1 < x && v[a][b + 1] == 0 )
+        {
+            b = b + 1 ;
+        }
+        else if ( a + 1 < N && v[a+1][b] == 0 )
+        {
+            a = a + 1 ;
+        }
+        else if ( b - 1 >= 0 && v[a][b - 1] == 0 )
+        {
+            b = b - 1 ;
+        }
+        else if (a - 1 >= 0 && v[a - 1][b] == 0 )
+        {
+            a = a - 1 ;
+        }
+        y = y + 1 ;
+    }
+    for ( a = 0; a < N; a++ )
+    {
+        for ( b = 0; b < x; b++ )
+        {
+            cout << setw(4) << v[a][b];
+        }
+    }
     return 0;
 }

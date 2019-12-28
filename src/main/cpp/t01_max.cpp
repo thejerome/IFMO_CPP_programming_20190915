@@ -27,6 +27,26 @@
 using namespace std;
 
 int t01_max() {
-    
+    int N ;
+    int a ;
+    cin >> N ;
+    cin >> a ;
+    int v[199][199];
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < a; j++) {
+            cin >> v[i][j] ;
+        }
+    }
+    int max = v[0][0], max1 = 0, max2 = 0;
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < a; j++) {
+            if (v[i][j] > max) {
+                max = v[i][j];
+                max1 = i;
+                max2 = j;
+            }
+        }
+    }
+    cout << max1 << " " << max2;
     return 0;
 }

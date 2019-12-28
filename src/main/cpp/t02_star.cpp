@@ -24,6 +24,23 @@
 using namespace std;
 
 int t02_star() {
+    int N ;
+    cin >> N ;
+    char v[199][199] ;
+    for ( int i = 0 ; i < N ; i++ )
+    {
+        for ( int j = 0 ; j < N ; j++ )
+        {
+            if ( i == ( N / 2 ) || j == ( N / 2 ) || i == j || i == N - j - 1 ) {
+                v[i][j] = '*';
+            }
+            else {
+                v[i][j] = '.' ;
+            }
+            cout << v[i][j] << " " ;
 
+        }
+        cout << endl ;
+    }
     return 0;
 }

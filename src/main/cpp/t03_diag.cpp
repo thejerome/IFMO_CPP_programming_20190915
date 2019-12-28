@@ -22,6 +22,18 @@
 using namespace std;
 
 int t03_diag() {
-    
+    int N;
+    cin >> N;
+    int v[199][199];
+    for (int i = 0 ; i < N ; i++) {
+        for (int j = 0; j < N; j++) {
+            if (i < j) {
+                cout << j - i << " ";
+            } else {
+                cout << i - j << " ";
+            }
+        }
+        cout << endl;
+    }
     return 0;
 }
