@@ -24,8 +24,17 @@ using namespace std;
 //function min 
 
 //function min4 
-
+int min2(int a, int b)
+{
+    return a < b ? a : b ;
+}
+int min4(int a, int b, int c, int d) {
+    return min2(min2(a, b), min2(c, d)) ;
+}
 int t01_min() {
-
-    return 0;
+        int a, b, c, d;
+        cin >> a >> b >> c >> d;
+        cout << min4(a, b, c, d) ;
+        cout << endl ;
+        return 0;
 }

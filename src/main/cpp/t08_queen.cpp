@@ -18,11 +18,43 @@
 //92
 
 #include <iostream>
-#include <vector>
-
+#include <cmath>
 using namespace std;
+int fun(int v[], int i, int N)
+{
+    int t = 0 ;
+    for ( int a = 1; a <= N; a++ )
+    {
+        bool abc = true;
+        for(int b = 1; b < i; b++ )
+        {
+            if ( abs(b - i ) == abs( v[b - 1] - a ) ||  v[b - 1] == a )
+            {
+                abc = false;
+                break;
+            }
+        }
+        if ( abc ){
+            if(i != N){
+                v[i - 1] = a;
+                t = t + fun(v, i + 1, N);
+            }
+            else {
+                t = t + 1;
+            }
+        }
+    }
+    return t;
+}
 
+int ranking(int N)
+{
+    int v[199];
+    return fun( v ,1, N );
+}
 int t08_queen(){
-
+    int N = 0;
+    cin >> N ;
+    cout << ranking( N );
     return 0;
 }
