@@ -19,5 +19,17 @@
 using namespace std;
 
 int t02_even2() {
-
+    unsigned int N ;
+    unsigned int i ;
+    int V[199] ;
+    cin >> N ;
+    for ( i = 0 ; i < N ; ++i)
+    {
+        cin >> V[i] ;
+        if ( V[i] % 2 == 0 )
+        {
+            cout << V[i] << " " ;
+        }
+    }
+    return 0;
 }

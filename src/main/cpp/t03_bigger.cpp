@@ -19,5 +19,20 @@
 using namespace std;
 
 int t03_bigger() {
-
+    unsigned int N ;
+    unsigned int i ;
+    int V[199] ;
+    cin >> N ;
+    for ( i = 0 ; i < N ; ++i )
+    {
+        cin >> V[i];
+    }
+    for ( i = 1 ; i < N ; ++i )
+    {
+        if ( V[i] > V[i - 1] )
+        {
+            cout << V[i] << " " ;
+        }
+    }
+    return 0;
 }
