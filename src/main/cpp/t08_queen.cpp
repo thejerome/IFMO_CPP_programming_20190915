@@ -22,7 +22,40 @@
 
 using namespace std;
 
-int t08_queen(){
 
-    return 0;
-}
+    int coord_x[10], coord_y[10];
+    int final=0;
+    int check(int x=0, int y=0, int d=0)
+    {
+        if (x==d)
+            final=1;
+        else
+            final=((coord_y[d] != y) and (abs(x - coord_x[d]) != abs(y - coord_y[d]))) and check(x, y, d + 1);
+
+        return final;
+    }
+    int attack(int n=0, int x=0, int y=0)
+    {
+        if ((y < n) and n>0)
+        {
+            int count = 0;
+            if (check(x, y))
+            {
+                coord_y[x] = y;
+                if (((x + 1) == n) and final)
+                    count = 1;
+                else
+                    count = attack(n, x+1);
+            }
+            return count + attack(n, x, y+1);
+        }
+        return 0;
+    }
+
+    int t08_queen() {
+        int z;
+        cin >> z;
+        for (int i = 0; i < z; i++)
+            coord_x[i] = i;
+        cout << attack(z)<<endl;
+    }
