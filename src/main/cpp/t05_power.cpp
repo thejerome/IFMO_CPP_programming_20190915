@@ -39,7 +39,7 @@ long double power(long double a, int n) {
     }
     else
         {
-           return a * power(a, n + 1);
+           return a * power(a, n - 1);
         }
 }
 int t05_power() {
