@@ -18,8 +18,16 @@
 using namespace std;
 
 // function fib
-
+double fib(double n) {
+    if ((n==2) || (n==1))
+        return 1;
+    else
+        return (fib(n-1) + fib(n-2));
+};
 int t07_fib()
 {
+    double n;
+    cin >> n;
+    cout << fib(n);
     return 0;
 }

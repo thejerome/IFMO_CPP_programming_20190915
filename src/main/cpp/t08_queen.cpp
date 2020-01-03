@@ -21,8 +21,39 @@
 #include <vector>
 
 using namespace std;
+int function(int board[],int n, int r) {
+    int counter=0;
+    for (int y = 1; y <= n; y++){
+        bool f;
+        f =true;
+        for(int x = 1; x < r; x++){
+            if ((abs(x - r) == abs(board[x-1] - y)) || (board[x-1] == y)) {
+                f = false;
+                break;
+            };
+        };
+        if (f) {
+            if (r == n) {
+                counter++;
+            }
+            else {
+                board[r-1] = y;
+                counter += func(board, n, r+1);
+            };
+        };
+    };
+    return counter;
+};
+int function2(int n) {
+    int r;
+    r = 1;
+    int board[n];
+    return function(board, n , r);
+}
 
-int t08_queen(){
-
+int t08_queen() {
+    int n;
+    cin >> n;
+    cout << function2(n);
     return 0;
 }
