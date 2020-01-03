@@ -36,14 +36,13 @@ using namespace std;
 
 int t07_ip() {
     bool f;
-    f = false;
     string s, sl;
     int counter;
     counter = 0;
     getline(cin, s);
     for (int i = 0; i < s.size(); i++) {
         if (isdigit(s[i]))
-            trio += s[i];
+            sl += s[i];
         else if ((s[i] == '.') && (sl.length()!= 0)) {
             if (stoi(sl) > 255) {
                 cout << "NO";
