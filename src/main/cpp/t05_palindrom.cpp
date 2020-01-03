@@ -23,5 +23,17 @@
 using namespace std;
 
 int t05_palindrom() {
-
+    bool f;
+    string s;
+    f = true;
+    getline(cin,s);
+    for (int i=0; i < s.length(); i++) {
+        if (s[i] != s[s.length()-i-1])
+            f = false;
+    };
+    if (f)
+        cout << "yes";
+    else
+        cout << "no";
+    return 0;
 }
