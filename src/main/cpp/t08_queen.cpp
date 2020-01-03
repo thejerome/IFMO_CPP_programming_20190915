@@ -38,7 +38,7 @@ int function(int board[],int n, int r) {
             }
             else {
                 board[r-1] = y;
-                counter += func(board, n, r+1);
+                counter += function(board, n, r+1);
             };
         };
     };

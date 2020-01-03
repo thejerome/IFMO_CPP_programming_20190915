@@ -40,7 +40,7 @@ int t04_area() {
     double x,y;
     cin >> x >> y;
     if (IsPointInArea(x,y))
-        cout << "YES"
+        cout << "YES";
     else
         cout << "NO";
     return 0;

@@ -24,7 +24,7 @@ using namespace std;
 double sum(double a) {
     if (a!=0) {
         double b;
-        cin << b;
+        cin >> b;
         if (b!=0) {
             return sum(b) + b;
         }
