@@ -24,7 +24,8 @@
 using namespace std;
 
 int t01_sort() {
-    int n, swap;
+    int n,swap;
+    int a[];
     cin >> n;
     for (int i = 0; i < n; i++) {
         cin >> a[i];

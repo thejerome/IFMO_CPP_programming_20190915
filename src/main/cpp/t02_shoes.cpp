@@ -34,6 +34,7 @@ using namespace std;
 
 int t02_shoes() {
     int size,n,swap,counter;
+    int a[];
     counter = 0;
     cin >> size >> n;
     for (int i = 0; i < n; i++) {
