@@ -33,5 +33,37 @@
 using namespace std;
 
 int t02_shoes() {
-    
+    int size,n,swap,x,counter;
+    cin >> size;
+    cin >> n;
+    int a[n];
+    for (int i = 0; i < n; i++) {
+        cin >> x;
+        if (x >= size) a[i] = x;
+        else a[i] = 0;
+    };
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (a[j] > a[j + 1]) {
+                swap = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = swap;
+            };
+        };
+    };
+    for (int i = 0; i < n; i++) {
+        if (a[i] != 0) {
+            size = a[i];
+            break;
+        };
+    };
+    counter = 0;
+    for (int i = 0; i < n; i++) {
+        if (a[i] - size >= 3) {
+            size = a[i];
+            counter++;
+        };
+    };
+    cout << counter;
+    return 0;
 }
