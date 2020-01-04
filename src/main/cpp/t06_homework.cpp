@@ -98,7 +98,7 @@ int t06_homework() {
     for (int i = 0; i < hw.size(); i++) {
         if (hw[i] != ' ') sl += hw[i];
         else {
-            if (slovarb.find(sl)) counter++;
+            if (slovarb.find(sl) != slovarb.end()) counter++;
             sl = "";
         };
     };

@@ -35,7 +35,7 @@ int t02_new() {
     int n,x;
     for (int i = 0; i < n; i++) {
         cin >> x;
-        if (s.find(x)) cout << "YES";
+        if (s.find(x) != s.end()) cout << "YES";
         else cout << "NO";
         s.insert(x);
     };

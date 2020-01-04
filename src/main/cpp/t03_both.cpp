@@ -38,7 +38,7 @@ int t03_both() {
     cin >> n;
     for (int i = 0; i < n; i++) {
         cin >> x;
-        if (s.find(x)) counter++;
+        if (s.find(x) != s.end()) counter++;
     };
     cout << counter;
     return 0;

@@ -31,6 +31,6 @@ int t01_unique() {
         cin >> x;
         s.insert(x);
     };
-    cout << s.count();
+    cout << s.size;
     return 0;
 }

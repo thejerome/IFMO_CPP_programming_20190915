@@ -41,10 +41,10 @@ int t04_both2() {
     for (int i = 0; i < n; i++) {
         cin >> x;
         s2.insert(x);
-        if (s.find(x)) s3.insert(x);
+        if (s.find(x) != s.end()) s3.insert(x);
     };
     set <int>::iterator i;
-    for (i = s3.begin(); j != s3.end(); i++)
-        cout << *j << ' ';
+    for (i = s3.begin(); i != s3.end(); i++)
+        cout << *i << ' ';
     return 0;
 }
