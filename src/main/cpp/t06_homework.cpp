@@ -80,9 +80,30 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t06_homework() {
-
+    set <string> slovarb;
+    int n,counter;
+    string hw,sl;
+    sl = "";
+    counter = 0;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        cin >> sl;
+        slovarb.insert(sl);
+    };
+    cin >> hw;
+    for (int i = 0; i < hw.size(); i++) {
+        if (hw[i] != ' ') sl += hw[i];
+        else {
+            if (slovarb.find(sl) != slovarb.end()) counter++;
+            cout << sl;
+            sl = "";
+        };
+    };
+    cout << counter;
+    return 0;
 }

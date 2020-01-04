@@ -23,9 +23,24 @@
 
 #include "t03_both.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t03_both() {
-
+    set <int> s;
+    int n,x,counter;
+    cin >> n;
+    counter = 0;
+    for (int i =0; i < n; i++) {
+        cin >> x;
+        s.insert(x);
+    };
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        cin >> x;
+        if (s.find(x) != s.end()) counter++;
+    };
+    cout << counter;
+    return 0;
 }

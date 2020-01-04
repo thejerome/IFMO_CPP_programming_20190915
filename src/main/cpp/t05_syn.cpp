@@ -27,10 +27,23 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
+#include <map>
+#include <string.h>
 
 using namespace std;
 
 int t05_syn() {
-
+    map <string,string> slovarb;
+    string s,s1;
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        cin >> s;
+        cin >> s1;
+        slovarb[s] = s1;
+        slovarb[s1] = s;
+    };
+    cin >> s;
+    cout << slovarb[s];
+    return 0;
 }
