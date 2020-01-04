@@ -40,6 +40,7 @@ int t02_shoes() {
     for (int i = 0; i < n; i++) {
         cin >> x;
         if (x >= size) a[i] = x;
+        else a[i] = 0;
     };
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
@@ -50,8 +51,13 @@ int t02_shoes() {
             };
         };
     };
+    for (int i = 0; i < n; i++) {
+        if (a[i] != 0) {
+            size = a[i];
+            break;
+        };
+    };
     counter = 0;
-    size = a[0];
     for (int i = 0; i < n; i++) {
         if (a[i] - size >= 3) {
             size = a[i];
