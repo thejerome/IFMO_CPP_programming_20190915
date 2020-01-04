@@ -55,9 +55,9 @@ int t02_shoes() {
     for (int i = 0; i < n; i++) {
         if (a[i] - size >= 3) {
             size = a[i];
-            counter++;
+            ++counter;
         };
     };
-    cout << counter;
+    cout << counter+1;
     return 0;
 }
