@@ -51,7 +51,7 @@ int t02_shoes() {
         };
     };
     counter = 0;
-    size = a[1];
+    size = a[0];
     for (int i = 0; i < n; i++) {
         if (a[i] - size >= 3) {
             size = a[i];
