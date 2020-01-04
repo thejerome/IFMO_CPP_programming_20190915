@@ -33,12 +33,13 @@
 using namespace std;
 
 int t02_shoes() {
-    int size,n,swap,counter;
-    bool f;
-    cin >> size >> n;
+    int size,n,swap,x,counter;
+    cin >> size;
+    cin >> n
     int a[n];
     for (int i = 0; i < n; i++) {
-        cin >> a[i];
+        cin >> x;
+        if (x >= size) a[i] = x;
     };
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
@@ -50,13 +51,9 @@ int t02_shoes() {
         };
     };
     counter = 0;
-    f = false;
+    size = a[1];
     for (int i = 0; i < n; i++) {
-        if (size <= a[i]) {
-            f = true;
-            size = a[i];
-        };
-        if ((f == true) && (a[i] - size >= 3)) {
+        if (a[i] - size >= 3) {
             size = a[i];
             counter++;
         };
