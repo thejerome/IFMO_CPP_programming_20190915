@@ -100,6 +100,7 @@ int t06_homework() {
         if (hw[i] != ' ') sl += hw[i];
         else {
             if (slovarb.find(sl) != slovarb.end()) counter++;
+            cout << sl;
             sl = "";
         };
     };

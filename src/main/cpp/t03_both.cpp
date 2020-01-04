@@ -31,6 +31,7 @@ int t03_both() {
     set <int> s;
     int n,x,counter;
     cin >> n;
+    counter = 0;
     for (int i =0; i < n; i++) {
         cin >> x;
         s.insert(x);
