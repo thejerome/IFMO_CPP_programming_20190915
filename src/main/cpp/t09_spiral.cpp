@@ -17,11 +17,70 @@
 
 #include "t09_spiral.h"
 #include <iostream>
-
+#include <iomanip>
 
 using namespace std;
 
+
+
 int t09_spiral() {
-    
-    return 0;
+
+	int n, m, k = 1, i = 0, j = 1;
+	cin >> n >> m;
+	int as[101][101];
+	for (int l = 0; l < n; ++l) {
+		for (int p = 0; p < m; ++p) {
+			as[l][p] = -1;
+		}
+	}
+	as[0][0] = k++;
+	while (k <= n * m) {
+		if ((as[i][j - 1] == k - 1 )&& (as[i][j] == -1) )
+		{
+			as[i][j] = k++;
+			j++;
+		}
+		if ((as[i][j - 1] == k - 1 )&& (as[i][j] != -1)) 
+		{
+			j--;
+			i++;
+		}
+		if ((as[i - 1][j] == k - 1) && (as[i][j] == -1)) 
+		{
+			as[i][j] = k++;
+			i++;
+		}
+		if ((as[i - 1][j] == k - 1) &&( as[i][j] != -1)) 
+		{
+			j--;
+			i--;
+		}
+		if ((as[i][j + 1] == k - 1) && (as[i][j] == -1) )
+		{
+			as[i][j] = k++;
+			j--;
+		}
+		if ((as[i][j + 1] == k - 1) && (as[i][j] != -1) )
+		{
+			j++;
+			i--;
+		}
+		if ((as[i + 1][j] == k - 1) && (as[i][j] == -1))
+		{
+			as[i][j] = k++;
+			i--;
+		}
+		if ((as[i + 1][j] == k - 1) && (as[i][j] != -1) )
+		{
+			j++;
+			i++;
+		}
+	}
+	for (int i = 0; i < n; ++i) {
+		for (int j = 0; j < m; ++j) {
+			cout << setw(4) << as[i][j];
+		}
+		cout << endl;
+	}
+	return 0;
 }

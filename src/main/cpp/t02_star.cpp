@@ -24,6 +24,51 @@
 using namespace std;
 
 int t02_star() {
+	string a[100][100];
+	int n;
 
-    return 0;
+	cin >> n;
+
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			a[i][j] = ".";
+		}
+
+	}
+	for (int i = 0; i < n; i++)
+	{
+		for (int k = 0; k < n; k++)
+		{
+			if (i == k)
+			{
+				a[i][k] = "*";
+			}
+			if (i == (n / 2))
+			{
+				a[i][k] = "*";
+			}
+			if (k == (n / 2))
+			{
+				a[i][k] = "*";
+			}
+			if (i + k == n - 1)
+			{
+				a[i][k] = "*";
+			}
+		}
+	}
+
+
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			cout << a[i][j] << " ";
+		}
+		cout << endl;
+	}
+
+	return 0;
 }

@@ -27,6 +27,32 @@
 using namespace std;
 
 int t01_max() {
-    
-    return 0;
+
+
+	int l, m;
+	cin >> l >> m;
+	int a[100][100];
+	for (int i = 0; i < l; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			cin >> a[i][j];
+		}
+	}
+	int	max = 0;
+	int	stolb = 0;
+	int	stroka = 0;
+	for (int i = 0; i < l; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			if (a[i][j] > max)
+			{
+				max = a[i][j];
+				stolb = j;
+				stroka = i;
+			}
+		}
+	}
+	cout << stroka << " "<< stolb;
 }
