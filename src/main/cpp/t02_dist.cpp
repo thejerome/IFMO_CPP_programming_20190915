@@ -22,8 +22,21 @@
 using namespace std;
 
 //function distance
+double distance(double x1, double y1, double x2, double y2)
+{
+	double dis;
+	dis = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+	return dis;
 
+
+}
 int t02_dist() {
+	double a, b, c, d;
+	cin >> a;
+	cin >> b;
+	cin >> c;
+	cin >> d;
+	cout << distance(a, b, c, d);
 
     return 0;
 }

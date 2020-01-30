@@ -33,8 +33,29 @@
 using namespace std;
 
 //function IsPointInArea
+bool IsPointInAreapower(int x, int y)
+{
+	bool a = ((x + 1) * (x + 1) + ((y - 1) * (y - 1)) <= 4);
+	bool b = (y >= -x);
+	bool c = (y >= 2 * x + 2);
+	bool a1 = ((x + 1) * (x + 1) + ((y - 1) * (y - 1)) >= 4);
+	bool b1 = (y <= -x);
+	bool c1 = (y <= 2 * x + 2);
+	bool s(a && b && c);
+	bool s1(a1 && b1 && c1);
+	bool otvet(s || s1);
+	return(otvet);
+}
+
 
 int t04_area() {
+	int x, y;
+	cin >> x;
+	cin >> y;
+	bool result = IsPointInAreapower(x, y);
+	if (result) cout << "YES";
+	else cout << "NO";
+
 
     return 0;
 }
