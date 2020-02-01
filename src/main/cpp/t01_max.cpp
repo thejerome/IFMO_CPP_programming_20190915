@@ -28,21 +28,21 @@ using namespace std;
 
 int t01_max() {
     int n, m;
-    cin >> n, m;
-    int arr[100][100];
+    cin >> n >> m;
+    int a[100][100];
+
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            cin >> arr[i][j];
+            cin >> a[i][j];
         }
     }
-    int max = arr[0][0], max_i = 0, max_j = 0;
+    int max = a[0][0], max_i = 0, max_j = 0;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            if(arr[i][j] > max)
-            {
-                max = arr[i][j];
+            if (a[i][j] > max) {
+                max = a[i][j];
                 max_i = i;
-                max_j =j;
+                max_j = j;
             }
         }
     }
