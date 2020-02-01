@@ -24,6 +24,15 @@
 using namespace std;
 
 int t02_star() {
-
+    int n;
+    cin >> n;
+    int a[15][15];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (i == j || i == n - 1 - j || i == n / 2 || j == n / 2)
+            cout << "*" << " ";
+            else cout << "." << " ";
+        }
+    }
     return 0;
 }
