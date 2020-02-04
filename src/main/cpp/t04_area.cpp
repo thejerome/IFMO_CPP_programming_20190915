@@ -33,8 +33,19 @@
 using namespace std;
 
 //function IsPointInArea
-
+bool IsPointInArea(double x, double y) {
+	bool in_circle = 2 * 2 >= abs(x + 1) * abs(x + 1) + abs(y - 1) * abs(y - 1);
+	bool above_line1 = y >= 2 * x + 2;
+	bool above_line2 = y >= -x;
+	bool below_line1 = y <= 2 * x + 2;
+	bool below_line2 = y <= -x;
+	bool on_circle = 2 * 2 == abs(x + 1) * abs(x + 1) + abs(y - 1) * abs(y - 1);
+	return in_circle && above_line1 && above_line2 || (on_circle || !in_circle) && below_line1 && below_line2;
+}
 int t04_area() {
-
+	double  x, y;
+	cin >> x >> y;
+	if (IsPointInArea(x, y)) cout << "YES";
+	else cout << "NO";
     return 0;
 }
