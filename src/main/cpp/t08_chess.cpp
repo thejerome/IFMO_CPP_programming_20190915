@@ -31,7 +31,6 @@ int t08_chess() {
 	int m;
 	cin >> n >> m;
 	int count = 1;
-	int numb = 0;
 	for (int i = 0; i < n; i++)
 	{
 	

@@ -39,8 +39,8 @@ int t04_swap() {
 
 	}
 	cin >> p >> q;
-	int count = 0;
-	int boof;
+	
+	int boof=0;
 	int mas [100];
 	for (int i = 0; i < n; i++)
 	{

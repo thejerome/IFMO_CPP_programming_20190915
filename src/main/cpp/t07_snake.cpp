@@ -27,7 +27,7 @@ int t07_snake() {
 	int m;
 	cin >> n >> m;
 	int count = 0;
-	int numb = 0;
+
 	for (int i = 0; i < n; i++)
 	{
 		if (i % 2 == 0)
