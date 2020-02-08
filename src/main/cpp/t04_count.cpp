@@ -32,7 +32,7 @@ int t04_count() {
 	getline(cin, s);
 	int a = s.length();
 	int count = 1;
-	int max = 0;
+
 	for (int i = 0; i < a; i++)
 	{
 		if (s[i] == ' ')

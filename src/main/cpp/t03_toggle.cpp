@@ -26,7 +26,7 @@ using namespace std;
 int t03_toggle() {
 	char s;
 	cin >> s;
-	int t; string y = "";
+	int t; 
 	if (s == '0')
 	{
 		cout << '0';
