@@ -38,6 +38,7 @@ int t06_sum() {
 	int result, d, s;
 	cin >> d;
 	s = 0;
+	result = 0;
 	result = sum(d, s);
 
 	return 0;
