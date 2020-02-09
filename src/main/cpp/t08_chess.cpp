@@ -19,11 +19,64 @@
 
 #include "t08_chess.h"
 #include <iostream>
-
+#include <iomanip>
 
 using namespace std;
 
 int t08_chess() {
-    
-    return 0;
+
+
+	int a[100][100];
+	int n;
+	int m;
+	cin >> n >> m;
+	int count = 1;
+	for (int i = 0; i < n; i++)
+	{
+	
+		
+			for (int j = 0; j < m; j++)
+			{
+
+				if (i % 2 == 0)
+				{
+					if (j % 2 == 0) {
+
+						a[i][j] = count;
+						count++;
+					}
+					else
+					{
+						a[i][j] = 0;
+					}
+				}
+				else {
+					if (j % 2 != 0) {
+
+						a[i][j] = count;
+						count++;
+					}
+					else
+					{
+						a[i][j] = 0;
+					}
+				}
+
+
+			}
+		}
+
+
+	for (int i = 0; i < n; i++)
+	{
+
+		for (int j = 0; j < m; j++)
+		{
+			cout << setw(4) << a[i][j];
+		}
+
+		cout << endl;
+	}
+
+	return 0;
 }

@@ -20,11 +20,52 @@
 
 #include "t04_swap.h"
 #include <iostream>
+#include <string.h>
 
 
 using namespace std;
 
 int t04_swap() {
-    
+	int a[100][100];
+	int n;
+	int m;
+	cin >> n >> m;
+	int p, q;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			cin >> a[i][j];
+		}
+
+	}
+	cin >> p >> q;
+	
+	
+	int mas [100];
+	for (int i = 0; i < n; i++)
+	{
+		
+		
+		int t = a[i][p];
+		int y = a[i][q];
+		int boof = t;
+		a[i][p] = y;
+		a[i][q] = boof;
+	}
+
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			cout << a[i][j] << " ";
+		}
+		cout << endl;
+
+	}
+
+	
+
+
     return 0;
 }

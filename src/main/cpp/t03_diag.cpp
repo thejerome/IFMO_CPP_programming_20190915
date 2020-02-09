@@ -22,6 +22,41 @@
 using namespace std;
 
 int t03_diag() {
-    
+	int a[100][100];
+	int n;
+
+	cin >> n;
+
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			a[i][j] = 0;
+		}
+
+	}
+	int count = 0;
+
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			a[i + j][0 + j] = count;
+			a[0 + j][i + j] = count;
+		}
+		count++;
+
+	}
+
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			cout << a[i][j] << " ";
+		}
+		cout << endl;
+
+	}
+
     return 0;
 }
