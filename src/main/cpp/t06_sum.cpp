@@ -22,13 +22,13 @@
 
 using namespace std;
 
-double  sum(double a)
+double  sum(double n)
 {
-	cin << n;
+	cin >> n;
 	
 	if (n != 0)
 	{
-		return n + sum();
+		return n + sum(n);
 	}
 	else
 	{
