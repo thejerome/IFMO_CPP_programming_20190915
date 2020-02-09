@@ -28,7 +28,28 @@
 
 
 using namespace std;
-
+#include <set>
 int t02_new() {
     
+	set <int> a;
+	int c;
+	cin >> c;
+	int s = a.size();
+	for (int i = 0; i < c; i++)
+	{
+		int b;
+		cin >> b;
+		a.insert(b);
+
+		if (s != a.size())
+		{
+			cout << "NO" << endl;
+			s = a.size();
+		}
+		else
+		{
+			cout << "YES" << endl;
+		}
+		//s = a.count(b);
+	}
 }
