@@ -28,6 +28,7 @@
 using namespace std;
 
 int t05_minodd() {
+
 	int min = 0;
 	bool m = 0;
 	bool s = 0;
@@ -36,20 +37,22 @@ int t05_minodd() {
 	int mas[1000];
 	for (int i = 0; i < n; i++) {
 		cin >> mas[i];
-		if (((mas[i] % 2 == 1)||(mas[i] % 2 ==-1)) && (m == 0))
+		if (((mas[i] % 2 == 1) || (mas[i] % 2 == -1)) && (m == 0))
 		{
 			min = mas[i];
 			m = 1;
+			s++;
 		}
 	}
 	for (int i = 1; i < n; i++)
 	{
 
-		if (mas[i] < min && mas[i] % 2 == 1)
+		if ((mas[i] < min) && ((mas[i] % 2 == 1) || (mas[i] % 2 == -1)))
 		{
 			min = mas[i];
-			s ++;
+			s++;
 		}
+
 
 	}
 
@@ -64,6 +67,7 @@ int t05_minodd() {
 	{
 		cout << "0";
 	}
+
 
 
 }
