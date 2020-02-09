@@ -22,9 +22,8 @@
 
 using namespace std;
 
-int  sum()
+double  sum(double a)
 {
-	int n;
 	cin << n;
 	
 	if (n != 0)
@@ -37,8 +36,8 @@ int  sum()
 	}
 }
 int t06_sum() {
-
-	cout << sum();
+	double n = 0;
+	cout << sum(n);
 
 	return 0;
 }
