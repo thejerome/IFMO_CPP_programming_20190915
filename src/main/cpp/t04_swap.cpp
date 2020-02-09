@@ -40,13 +40,12 @@ int t04_swap() {
 	}
 	cin >> p >> q;
 	
-	int boof=0;
+	
 	int mas [100];
 	for (int i = 0; i < n; i++)
 	{
-		boof = a[i][p];
-		a[i][p] = a[i][q];
-		a[i][q] = boof;
+		
+		swap(a[i][p] = a[i][q]);
 	}
 
 	for (int i = 0; i < n; i++)
