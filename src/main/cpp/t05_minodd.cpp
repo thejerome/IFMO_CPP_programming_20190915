@@ -31,7 +31,7 @@ int t05_minodd() {
 
 	int min = 0;
 	bool m = 0;
-	bool s = 0;
+	int s = 0;
 	int n;
 	cin >> n;
 	int mas[1000];
