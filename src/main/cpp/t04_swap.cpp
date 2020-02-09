@@ -20,6 +20,7 @@
 
 #include "t04_swap.h"
 #include <iostream>
+#include <string.h>
 
 
 using namespace std;
@@ -45,7 +46,12 @@ int t04_swap() {
 	for (int i = 0; i < n; i++)
 	{
 		
-		swap(a[i][p] = a[i][q]);
+		
+		int t = a[i][p];
+		int y = a[i][q];
+		int boof = t;
+		a[i][p] = y;
+		a[i][q] = boof;
 	}
 
 	for (int i = 0; i < n; i++)
