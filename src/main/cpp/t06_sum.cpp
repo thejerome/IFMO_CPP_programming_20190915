@@ -22,24 +22,23 @@
 
 using namespace std;
 
-int sum(int n, int s)
+int  sum()
 {
-	while (n != 0) {
-
-		s = s + n;
-		cin >> n;
-		sum(n, s);
-		if (n == 0) cout << s;
+	int n;
+	cin << n;
+	
+	if (n != 0)
+	{
+		return n + sum();
 	}
-	return s;
+	else
+	{
+		return 0;
+	}
 }
 int t06_sum() {
 
-	int result, d, s;
-	cin >> d;
-	s = 0;
-	result = 0;
-	result = sum(d, s);
+	cout << sum();
 
 	return 0;
 }
