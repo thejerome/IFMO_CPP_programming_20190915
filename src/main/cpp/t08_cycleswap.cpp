@@ -31,8 +31,10 @@ int t08_cycleswap() {
 	int b = 0;
 	for (int i = 1; i < n; i++)
 	{
-		b = mas[i];
-		mas[i] = c;
+		int boof1 =mas[i];
+		int boof2 = c;
+		int b = boof1;
+		mas[i] = boof2;
 		c = b;
 	}
 	for (int i = 0; i < n; i++) {

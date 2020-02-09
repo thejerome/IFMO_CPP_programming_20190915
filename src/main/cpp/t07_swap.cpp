@@ -25,11 +25,13 @@ int t07_swap() {
 	for (int i = 0; i < n; i++) {
 		cin >> mas[i];
 	}
-	int numb = 0;
+	
 	for (int i = 0; i < n - (n % 2); i++)
 	{
-		numb = mas[i];
-		mas[i] = mas[i + 1];
+		int c = mas[i];
+		int b = mas[i + 1];
+		int numb = c;
+		mas[i] = b;
 		mas[i + 1] = numb;
 		i++;
 	}

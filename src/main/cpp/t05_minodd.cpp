@@ -36,7 +36,7 @@ int t05_minodd() {
 	int mas[1000];
 	for (int i = 0; i < n; i++) {
 		cin >> mas[i];
-		if (((mas[i] % 2 == 1)(mas[i] % 2 ==-1)) && (m == 0))
+		if (((mas[i] % 2 == 1)||(mas[i] % 2 ==-1)) && (m == 0))
 		{
 			min = mas[i];
 			m = 1;
@@ -48,7 +48,7 @@ int t05_minodd() {
 		if (mas[i] < min && mas[i] % 2 == 1)
 		{
 			min = mas[i];
-			s = 1;
+			s ++;
 		}
 
 	}
@@ -56,7 +56,7 @@ int t05_minodd() {
 
 
 
-	if (s = 1)
+	if (s != 0)
 	{
 		cout << min;
 	}
