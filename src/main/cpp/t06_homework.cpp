@@ -84,52 +84,63 @@
 #include <set>
 
 using namespace std;
-
-int t06_homework() {
-	int N;
-	int o = 0;
-	string a, hw;
-	set <string> dic;
-	cin >> N;
-	for (int i = 0; i < N; i++) {
-		string x;
-		cin >> x;
-		dic.insert(x);
-	}
-	while (cin >> hw) {
-		if (dic.count(hw) == 0) {
-			int cap = 0;
-			for (char i : hw) {
-				if (i >= 'A' && i <= 'Z')
-					cap++;
-			}
-			if (cap != 1)	errors++;
-			if (cap == 1) 
-			{
-
-				for (int i = 0; i < hw.length(); i++)
-				{
-
-					hw[i] = tolower(hw[i]);
-				}
-
-				bool in = false;
-
-				for (int i = 0; i < hw.length(); i++) {
-					hw[i] = toupper(hw[i]);
-					if (dic.count(hw) == 1)
-						in = true;
-					hw[i] = tolower(hw[i]);
-				}
-				if (in == true)
-					o++;
-
-			}
+bool s(string wrd1, string wrd2, int lgt) {
+	bool ex = false;
+	bool wrn = false;
+	for (int i = 0; i < lgt; i++) {
+		int a = wrd1[i];
+		int b = wrd2[i];
+		if (abs(a - b) != 0 and abs(a - b) != 32) {
+			wrn = true;
 		}
-
 	}
+	if (!wrn) {
+		ex = true;
+	}
+	return ex;
+}
+int t06_homework() {
+    int n = 0;
+    cin >> n;
+    set<string> voc; 
+    string st; 
+    for (int i = 0; i < n; i++) {
+        cin >> st;
+        voc.insert(st);
+    }
+    multiset<string> wrk; 
+    while (cin >> st) {
+        wrk.insert(st);
+    }
 
-	cout << errors;
-
-	return(0);
+    int wrn = 0;
+   
+    for (auto i1 : wrk) {
+        bool ex = false;
+        int ud = 0;
+        bool udwrn = true;
+        int lgt = i1.length();
+        for (int i2 = 0; i2 < lgt; i2++) {
+            if ((i1[i2] > 64) and (i1[i2] < 90)) {
+                ud++;
+            }
+        }
+        if (ud != 1) {
+            wrn++;
+            continue;
+        }
+        for (auto i2 : voc) {
+            if (s(i1, i2, lgt)) {         
+                if (i1 == i2) {
+                    udwrn = false;
+                }
+                ex = true;
+            }
+        }
+        if (ex and udwrn) {
+            wrn++;
+        }
+    }
+    cout << wrn;
+    return 0;
 }

@@ -46,7 +46,6 @@ int t04_both2() {
 	}
 	int c1;
 	cin >> c1;
-	int k = 0;
 	for (int i = 0; i < c1; i++)
 	{
 		int b;
