@@ -31,12 +31,13 @@ using namespace std;
 int t07_max_2() {
 
 
-	int a;
-	cin >> a;
+	int a = 1;
+
 	int max1 = 0;
 	int max2 = 0;
 	while (a != 0)
 	{
+		cin >> a;
 		if (a > max1)
 		{
 			max2 = max1;
@@ -52,5 +53,6 @@ int t07_max_2() {
 
 	}
 	cout << max2;
+
 
 };
