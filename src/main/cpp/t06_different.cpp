@@ -19,5 +19,29 @@
 using namespace std;
 
 int t06_different() {
+	int n;
+	cin >> n;
+	int mas[1000];
+	for (int i = 0; i < n; i++) {
+		cin >> mas[i];
+	}
+	int numb = mas[0];
+	int count = 1;
+	for (int i = 0; i < n; i++)
+	{
+
+		if (mas[i] != numb)
+
+		{
+			count++;
+			numb = mas[i];
+		}
+		else
+		{
+			numb = mas[i];
+		}
+	}
+
+	cout << count;
 
 }
