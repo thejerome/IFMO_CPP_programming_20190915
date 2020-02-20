@@ -21,16 +21,16 @@ using namespace std;
 int t10_sort3() {
 int a,b,c;
 cin >> a >> b >> c;
-if (a >= b)
-if (b >= c)
-cout << c << " " << b << " " << a;
-else if (a >= c)
-cout << b << " " << c << " " << a;
-else cout << b << " " << a << " " << c;
-else if (a >= c)
-cout << c << " " << a << " " << b;
-else if (c >= b)
-cout << a << " " << b << " " << c;
-else cout << a << " " << c << " " << b;
+if (a>b) if (b<c) cout << "cba";
+else 
+{
+    cout << "b";
+    if (a>c) cout << "ca"; else cout << "ac";
+}
+else 
+{
+if (a>c) cout << "cab"; else cout << "a";
+if (b<c) cout << "cb"; else cout << "bc";
+}
 return 0;
 };

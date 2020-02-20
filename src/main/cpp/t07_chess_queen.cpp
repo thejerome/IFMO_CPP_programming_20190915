@@ -31,11 +31,16 @@ using namespace std;
 int t07_chess_queen() {
 int a,b,A,B;
 cin >> a >> b >> A >> B;
-if (((a-A) == (b-B) || (a-A) == (B-b) || (a==A) || (b==B)))
-cout << "YES";
-else
-cout << "NO";
+if ((a==A) || (b==B))
+{
+    cout << "YES";
+    return 0;
+}
+if (abs(a-A)==abs(b-B))
+{
+    cout << "YES";
+    return 0;
+}
+else cout << "NO";
 return 0;
-
-
 };
