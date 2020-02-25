@@ -23,7 +23,7 @@ int a,b,c;
 cin >> a >> b >> c;
 if (a<=b) 
     if (b<=c) 
-    cout << c << ' ' << b << ' ' << a;
+cout << c << ' ' << b << ' ' << a;
 else 
 {
     cout << b;
