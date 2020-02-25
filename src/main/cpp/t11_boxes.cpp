@@ -56,5 +56,5 @@ if ((a1>=a2 && b1>=b2 && c2>=c1) ||
     (a1>=c2 && c1>=b2 && b1>=a2) ||
     (a1>=b2 && b1>=c2 && c1>=a2)) cout << "The first box is larger than the second one";
 else cout << "Boxes are incomparable";
-    return 0;
+return 0;
 };
