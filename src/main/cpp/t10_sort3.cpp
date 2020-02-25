@@ -26,8 +26,8 @@ if (a<=b)
     else if (b>=c) cout << a << ' ' << c << ' ' << b;
         else cout << c << ' ' << a << ' ' << b;
 else 
-    if (a<=c) cout << b << ' ' << c << ' ' << a;
-    else if (c<=b) cout << c << ' ' << b << ' ' << a;
+    if (c<=b) cout << c << ' ' << b << ' ' << a;
+    else if (b<=c) cout << b << ' ' << c << ' ' << a;
         else cout << b << ' ' << a << ' ' << c;  
 return 0;
 };
