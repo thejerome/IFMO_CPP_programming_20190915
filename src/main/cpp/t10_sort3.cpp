@@ -22,25 +22,12 @@ int t10_sort3() {
 int a,b,c;
 cin >> a >> b >> c;
 if (a<=b) 
-    if (b<=c) 
-cout << c << ' ' << b << ' ' << a;
+    if (b<=c) cout << a << ' ' << b << ' ' << c;
+    else if (b>=c) cout << a << ' ' << c << ' ' << b;
+        else cout << c << ' ' << a << ' ' << b;
 else 
-{
-    cout << b;
-    if (a>=c) 
-    cout << c << ' ' << a; 
-    else 
-    cout << a << ' ' << c;
-} 
-else
-{
-if (a>=c) 
-cout << c << ' ' << a << ' ' << b; 
-else 
-cout << a;
-if (b<=c) cout << c << ' ' << b; 
-else 
-cout << b << ' ' << c;
-}
+    if (a<=c) cout << b << ' ' << a << ' ' << c;
+    else if (c<=b) cout << c << ' ' << b << ' ' << a;
+        else cout << b << ' ' << c << ' ' << a;  
 return 0;
 };
