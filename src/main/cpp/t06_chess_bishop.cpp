@@ -20,5 +20,9 @@
 using namespace std;
 
 int t06_chess_bishop() {
-
+int a,b,A,B;
+cin >> a >> b >> A >> B;
+if (abs(a-A)==abs(b-B)) cout << "YES";
+else cout << "NO";
+return 0;
 };
