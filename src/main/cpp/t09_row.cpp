@@ -24,7 +24,7 @@ using namespace std;
 
 int t09_row() {
 int skok = 1, y = 1, ixs, kakoe = 0;
-while (cin » ixs)
+while (cin >> ixs)
 {
 if(ixs == 0)break;
 if (ixs != kakoe)
@@ -36,6 +36,6 @@ skok = 1;
 else skok -= -1;
 }
 if (skok > y)y = skok;
-cout « y;
+cout<< y;
 return 0;
 };
