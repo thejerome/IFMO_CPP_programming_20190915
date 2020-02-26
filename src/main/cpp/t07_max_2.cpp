@@ -32,7 +32,7 @@ int t07_max_2() {
 int m1=0, m2=0, x;
 while (cin >> x)
 {
-    if (!(x >= 0))break;
+    if (!(x > 0))break;
     if (x >= m1)
     {
         m2 = m1;
