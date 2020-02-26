@@ -24,14 +24,14 @@
 using namespace std;
 
 int t10_max_local() {
-int a,b = -1,c = -1, f = 0;
-cin >> a;
-while(a != 0)
+int x,y = -1,z = -1, i = 0;
+while(cin >> x)
 {
-    if(c > a && c > b && b != -1)f++;
-    b = c; c = a;
-    cin >> a;
+    if (x==0) break;
+    if (z > x && z > y && y != -1) i++;
+    y=z;
+    z=x;
 }
-cout << f;
+cout << i;
 return 0;
 };

@@ -29,18 +29,17 @@
 using namespace std;
 
 int t07_max_2() {
-int N=0, M=0, x;
-cin >> x;
-while (x != 0)
+int m1=0, m2=0, x;
+while (cin >> x)
 {
-    if(x >= N)
+    if (!(x >= 0))break;
+    if (x >= m1)
     {
-        M = N;
-        N = x;
+        m2 = m1;
+        m1 = x;
     }
-    if(x > M && x < N)M = x;
-    cin >> x;
+    if (x > m2 && x < m1)m2 = x;
 }
-cout << M;
+cout << m2;
 return 0;
 };

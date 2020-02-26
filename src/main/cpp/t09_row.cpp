@@ -23,22 +23,19 @@
 using namespace std;
 
 int t09_row() {
-int a = 1, b = 1, n, c = 0;
-cin >> n;
-while (n != 0)
+int i = 1, y = 1, n, c = 0;
+while (cin >> n)
 {
+	if (n == 0)break;
 	if (n != c)
 	{
-		if(a > b)
-        b = a;
-		c = n;
-		a = 1;
+		if(1 > y)y=1;
+        c=n;
+		i=1;
 	}
-	else a++;
-	cin >> n;
+	else i -= -1;
 }
-if (a > b)
-b = a;
-cout << b;
+if (i > y)y=1;
+cout << y;
 return 0;
 };
