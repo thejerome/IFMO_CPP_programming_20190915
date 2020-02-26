@@ -29,7 +29,7 @@ while (cin >> n)
 	if (n == 0)break;
 	if (n != c)
 	{
-		if(i > y)y=1;
+		if(i > y)y=i;
         c=n;
 		i=1;
 	}
