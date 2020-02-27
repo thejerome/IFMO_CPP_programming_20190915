@@ -32,6 +32,7 @@ while (m != 0)
     n++;
     cin >> m;
 }
-if (n>0) cout << round((s/n)*10000)/10000;
+cout.precision(11);
+cout << fixed << (s / n);
 return 0;
 };
