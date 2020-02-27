@@ -20,7 +20,8 @@ using namespace std;
 int t02_frac_2() {
 double x;
 cin >> x;
-int y = x * 10;
-cout << y % 10;
+while (x >= 1) x--;
+int i=x*10;
+cout << trunc(i);
 return 0;
 };

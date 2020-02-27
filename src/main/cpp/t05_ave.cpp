@@ -18,21 +18,20 @@
 #include "t05_ave.h"
 #include <iostream>
 #include <iomanip>
+#include <cmath>
 
 using namespace std;
 
 int t05_ave() {
-double s = 0.0, x;
-int i = 0;
-cin >> x;
-while(x != 0)
+double s = 0.0, n;
+int m = 0;
+cin >> m;
+while (m != 0) 
 {
-    i++;
-    s=s+=x;
-    cin >> x;
+    s = s+m;
+    n++;
+    cin >> m;
 }
-cout.precision(11);
-cout << fixed;
-cout << (s / i);
+if (n>0) cout << round((s/n)*10000)/10000;
 return 0;
 };

@@ -22,6 +22,7 @@ using namespace std;
 int t01_frac() {
 double x;
 cin >> x;
-cout << (x-trunc(x));
+while (x >= 1) x--;
+cout << x;
 return 0;
 };

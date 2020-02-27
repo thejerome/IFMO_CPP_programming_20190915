@@ -22,16 +22,21 @@
 using namespace std;
 
 int t04_deposit() {
-double p,x,y,k;
-cin >> p >> x >> y >> k;
-y += x * 100;
-while(--k >= 0)
+double p, x, y, k;
+cin >> p >> x >> y>> k;
+y = y + x * 100;
+k -= +1;
+while(k >= 0)
 {
-    y *= (1 + p / 100);
-    y = trunc(y);    
+y *= (1 + p / 100);
+y = floor(y);
+k += -1;
 }
+x = y / 100;
 cout.precision(0);
 cout << fixed;
-cout << trunc(y / 100) << " " << (y / 100 - trunc(y / 100)) * 100;
-return 0;
+cout << floor(x);
+cout << " ";
+cout << (x - floor(x)) * 100;
+return 0; 
 };
