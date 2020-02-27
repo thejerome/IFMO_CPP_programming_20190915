@@ -24,6 +24,6 @@ double a,b,c;
 cin >> a >> b >> c;
 double p = (a+b+c) / 2;
 double k = sqrt(p * (p - b) * (p - a) * (p - c));
-cout << round(k*10000)/10000;
+cout << round(k*100000)/100000;
 return 0;
 };
