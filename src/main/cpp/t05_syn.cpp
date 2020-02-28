@@ -27,10 +27,26 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
+#include <map>
 
 using namespace std;
 
 int t05_syn() {
+    int N;
+    cin >> N;
+    map <string, string> words;
+    string word1, word2;
+    for (int i = 0; i < N; ++i) {
+        cin >> word1 >> word2;
+        words[word1]=word2;
+        words[word2]=word1;
+    }
+    string word0;
+    cin >> word0;
 
+    map<string, string>::iterator it = words.find(word0);
+    if (it != words.end()){
+        cout << it->second;
+    }
+    return 0;
 }
