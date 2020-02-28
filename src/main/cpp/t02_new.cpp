@@ -33,8 +33,8 @@ int t02_new() {
     int N;
     cin >> N;
     set <int> nums;
-    int c, a1, a2;
     for (int i = 0; i < N; ++i) {
+        int c, a1, a2;
         cin >> c;
         a1 = nums.size();
         nums.insert(c);
