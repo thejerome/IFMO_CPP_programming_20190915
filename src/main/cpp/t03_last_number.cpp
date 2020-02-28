@@ -23,8 +23,9 @@
 using namespace std;
 
 int t03_last_number() {
-int N;
+int N,a;
 cin >> N;
-cout << N%10;
+a=N%10;
+cout << a;
 return 0;
 };
