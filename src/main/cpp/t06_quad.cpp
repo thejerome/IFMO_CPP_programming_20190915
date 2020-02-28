@@ -37,7 +37,7 @@ if (d == 0)
 {
     double x1;
     x1 = (-b + sqrt(d))/2*a;
-    cout << x1;
+    cout << x1 << ' '<< x1;
 };
 return 0;
 };

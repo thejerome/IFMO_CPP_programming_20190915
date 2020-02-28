@@ -29,7 +29,7 @@ cin >> m;
 while (m != 0) 
 {
     s = s+m;
-    n++;
+    n = n + 1;
     cin >> m;
 }
 cout.precision(11);
