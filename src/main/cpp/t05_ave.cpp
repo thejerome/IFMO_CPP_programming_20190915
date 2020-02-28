@@ -18,9 +18,21 @@
 #include "t05_ave.h"
 #include <iostream>
 #include <iomanip>
+#include <cmath>
 
 using namespace std;
 
 int t05_ave() {
-
+double s = 0.0, n=0;
+int m = 0;
+cin >> m;
+while (m != 0) 
+{
+    s = s+m;
+    n = n + 1;
+    cin >> m;
+}
+cout.precision(11);
+cout << fixed << (s / n);
+return 0;
 };
