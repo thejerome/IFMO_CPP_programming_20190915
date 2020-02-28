@@ -80,9 +80,41 @@
 
 #include "t06_homework.h"
 #include <iostream>
-
+#include <string>
+#include <set>
 using namespace std;
 
 int t06_homework() {
-
+    int N;
+    cin >> N;
+    set <string> words, wOrds;
+    string word;
+    for (int i = 0; i < N; i++) {
+        cin >> word;
+        int count = 0;
+        wOrds.insert(word);
+        for (auto &j : word)
+            if (j >= 'A' && j <= 'Z') {
+                j = ('a' + j - 'A');
+                words.insert(word);
+            }
+    }
+    int k = 0;
+    while (cin >> word) {
+        string l = word;
+        int count = 0;
+        for (auto &c : l)
+            if (c >= 'A' && c <= 'Z') {
+                c = 'a' + c - 'A';
+                count++;
+            }
+        if (count == 1) {
+            if (words.find(l) != words.end()) {
+                if (wOrds.find(word) == wOrds.end()) k++;
+            }
+        }
+        else  k++;
+    }
+    cout << k;
+    return 0;
 }
