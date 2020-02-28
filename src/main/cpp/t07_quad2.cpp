@@ -23,7 +23,9 @@ using namespace std;
 int t07_quad2() {
 double a,b,c,d;
 cin >> a >> b >> c;
-if (a == 0 && b == 0 && c == 0) cout << 3;
+if (a == 0 && b == 0 && c == 0) {
+    cout << 3;
+    return 0;}
 d = (b*b - 4*a*c);
 if (d < 0) cout << 0;
 if (d > 0) 
