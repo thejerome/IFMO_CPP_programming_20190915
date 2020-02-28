@@ -23,7 +23,7 @@
 using namespace std;
 
 int t05_ave() {
-double s = 0.0, n;
+double s = 0.0, n=0;
 int m = 0;
 cin >> m;
 while (m != 0) 
