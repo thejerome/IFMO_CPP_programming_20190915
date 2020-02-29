@@ -14,10 +14,24 @@
 
 #include "t07_swap.h"
 #include <iostream>
-
+#include <vector>
 
 using namespace std;
 
 int t07_swap() {
-
+int a[100], n;
+cin >> n;
+for (int i=0; i<n; i++){
+cin >> a[i];
+}
+int elem;
+for (int i=1; i<n; i+=2){
+elem = a[i];
+a[i] = a[i-1];
+a[i-1] = elem;
+}
+for (int i=0; i<n; i++){
+cout << a[i] << ' ';
+}
+    return 0;
 }

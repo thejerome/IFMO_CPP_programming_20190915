@@ -33,11 +33,30 @@
 
 #include "t11_queen.h"
 #include <iostream>
+#include <vector>
 #include <cmath>
 
 
 using namespace std;
 
 int t11_queen() {
-
+struct point {
+int x, y;
+};
+point F[8];
+for (int i=0; i<8; i++){
+cin >> F[i].x >> F[i].y;
+}
+bool kill = false;
+for (int i = 0; i < 8; i++)
+for (int k=i+1; k<8; k++){
+kill = (F[i].x == F[k].x) || (F[i].y == F[k].y) || (abs(F[i].x - F[k].x) == abs(F[i].y - F[k].y));
+if (kill){
+cout << "YES";
+goto end;
+}
+}
+cout << "NO";
+end:
+    return 0;
 }

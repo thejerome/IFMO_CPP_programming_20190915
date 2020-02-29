@@ -21,10 +21,21 @@
 
 #include "t09_equals.h"
 #include <iostream>
-
+#include <vector>
 
 using namespace std;
 
 int t09_equals() {
-
+ int a[100], n;
+cin >> n;
+for (int i=0; i<n; i++){
+cin >> a[i];
+}
+int z=0;
+for (int i=0; i<n; i++){
+for (int k=0; k<n; k++)
+if (i != k && a[i]==a[k])z++;
+}
+cout << z/2 << ' ';
+    return 0;
 }

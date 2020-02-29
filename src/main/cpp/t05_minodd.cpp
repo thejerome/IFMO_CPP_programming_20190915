@@ -22,11 +22,25 @@
 
 #include "t05_minodd.h"
 #include <iostream>
-#include <cmath>
-
+#include <vector>
+#include <limits.h>
 
 using namespace std;
 
 int t05_minodd() {
-
+ int a[100], n;
+cin >> n;
+for (int i=0; i<n; i++){
+cin >> a[i];
+}
+int min=INT_MAX;
+for (int i=0; i<n; i++){
+if (a[i] % 2 != 0){
+min = (a[i]<min)?a[i]:min;
+}
+}
+// (min == INT_MAX)?0:min
+if (min == INT_MAX) cout << 0;
+else cout << min;
+    return 0;
 }
