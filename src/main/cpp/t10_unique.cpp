@@ -25,35 +25,17 @@
 using namespace std;
 
 int t10_unique() {
-int n, temp = 0;
-    cin >> n;
-    vector <int> a;
-    vector <int> counts;
-    vector <int> val;
-    for (int i = 0; i < n; i++){
-        cin >> temp;
-        a.push_back(temp);
-    }
-    val.push_back(a[0]);
-    counts.push_back(1);
-
-    for (int i = 1; i < n; i++) {
-        bool added = false;
-        for (int j = 0; j < val.size(); j++) {
-            if (val[j] == a[i]) {
-                counts[j]++;
-                added = true;
-            }
-        }
-        if (not added) {
-            val.push_back(a[i]);
-            counts.push_back(1);
-        }
-    }
-    for (int j = 0; j < counts.size(); j++) {
-        if (counts[j] == 1) {
-            cout << val[j] << " ";
-        }
-    }
+int a[100], n;
+cin >> n;
+for (int i=0; i<n; i++){
+cin >> a[i];
+}
+int z;
+for (int i=0; i<n; i++){
+z=0;
+for (int k=0; k<n; k++)
+if (i != k && a[i]==a[k])z++;
+if (z == 0) cout << a [i] << ' ';
+}
     return 0;
 }

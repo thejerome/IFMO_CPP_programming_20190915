@@ -19,17 +19,20 @@
 using namespace std;
 
 int t06_different() {
-    int n, difer = 1;
-    cin >> n;
-    vector <int> a;
-    for (int i = 0; i < n; i++){
-        int temp;
-        cin >> temp;
-        a.push_back(temp);
-    }
-    for (int i = 1; i < n; i++) {
-        if (a[i-1] != a[i]) difer++;
-    }
-    cout << difer;
+int a[100], n;
+cin >> n;
+for (int i=0; i<n; i++){
+cin >> a[i];
+}
+int elem, j;
+elem = a[0];
+j=1;
+for (int i=0; i<n; i++){
+if (a[i] != elem) {
+j++;
+elem = a[i];
+}
+}
+cout << j;
     return 0;
 }

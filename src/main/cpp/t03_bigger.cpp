@@ -19,14 +19,14 @@
 using namespace std;
 
 int t03_bigger() {
-int a[10], b;
-cin >> b;
-for(int i = 0; i < b; i++)
-{
-    cin >> a[i];
-    if(i > 0)
-    if(a[i] > a[i - 1])
-    cout << a[i] << " ";
+int a[100], n;
+cin >> n;
+for (int i=0; i<n; i++){
+cin >> a[i];
+}
+for (int i=1; i<n; i++){
+if (a[i-1] < a[i])
+cout << a[i] << ' ';
 }
 return 0;
 }

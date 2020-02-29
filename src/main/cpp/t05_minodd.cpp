@@ -28,19 +28,19 @@
 using namespace std;
 
 int t05_minodd() {
-    int n, min_mod_2 = 0;
-    cin >> n;
-    vector <int> a;
-    for (int i = 0; i < n; i++){
-        int temp;
-        cin >> temp;
-        a.push_back(temp);
-    }
-    for (int i = 0; i < n; i++) {
-        if ((min_mod_2 > a[i] || min_mod_2 == 0) && a[i] % 2 != 0) {
-        min_mod_2 = a[i];
-        }
-    }
-    cout << min_mod_2;
+ int a[100], n;
+cin >> n;
+for (int i=0; i<n; i++){
+cin >> a[i];
+}
+int min=INT_MAX;
+for (int i=0; i<n; i++){
+if (a[i] % 2 != 0){
+min = (a[i]<min)?a[i]:min;
+}
+}
+// (min == INT_MAX)?0:min
+if (min == INT_MAX) cout << 0;
+else cout << min;
     return 0;
 }

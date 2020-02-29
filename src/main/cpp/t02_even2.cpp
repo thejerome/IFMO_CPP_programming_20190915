@@ -19,13 +19,14 @@
 using namespace std;
 
 int t02_even2() {      
-int n[10], k;
-cin >> k;
-for(int i = 0; i < k; i++)
-{
-    cin >> n[i];
-if(n[i] % 2 == 0)
-    cout << n[i] << " ";
+int a[100], n;
+cin >> n;
+for (int i=0; i<n; i++){
+cin >> a[i];
+}
+for (int i=0; i<n; i++){
+if (a[i] % 2 == 0)
+cout << a[i] << ' ';
 }
 	return 0;
 }
