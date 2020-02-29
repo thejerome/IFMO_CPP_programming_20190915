@@ -29,10 +29,40 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <algorithm>
+#include <vector>
 
 using namespace std;
 
+struct student{
+    string name;
+    string surname;
+    int x;
+    int y;
+    int z;
+
+    static bool compare(student p1, student p2){
+        float s1 = (p1.x + p1.y + p1.z) / 3.0;
+        float s2 = (p2.x + p2.y + p2.z) / 3.0;
+        return s2 < s1;
+    }
+};
+
 int t04_students() {
-    
+    vector <student> students;
+    int n;
+    cin >> n;
+    for(int i = 0; i < n; i++){
+        student t;
+        cin >> t.name >> t.surname >> t.x >> t.y >> t.z;
+        students.push_back(t);
+    }
+
+    sort(students.begin(), students.end(), student::compare);
+
+    for(int i = 0; i < n; i++){
+        cout << students[i].name << " " << students[i].surname << " ";
+    }
+    return 0;
 }
 
