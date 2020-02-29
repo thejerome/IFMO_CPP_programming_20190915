@@ -23,7 +23,7 @@
 #include "t05_minodd.h"
 #include <iostream>
 #include <vector>
-
+#include <limits.h>
 
 using namespace std;
 
