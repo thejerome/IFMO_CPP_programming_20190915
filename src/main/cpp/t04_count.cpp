@@ -31,7 +31,7 @@ int t04_count() {
 string s;
 int k=0,beq=0;
 while (getline(cin,s)){
-    while (beq = s.find(" ",beq) != string::npos)
+    while ((beq = s.find(" ",beq)) != string::npos)
         k++;
         beq++;
 }
