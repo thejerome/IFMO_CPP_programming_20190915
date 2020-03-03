@@ -23,34 +23,16 @@
 using namespace std;
 
 int t06_longest() {
-    const int STRLEN = 200;
-    char s[STRLEN];
-    cin.getline(s, STRLEN);
-
-    size_t maxlen = 0;
-    char * maxidx = nullptr;
-
-    for(char * c = s; *c;)
-    {
-        while(*c == ' ') ++c;
-        if (*c == 0) break;
-        char * begin = c;
-        while(*c && *c != ' ') ++c;
-        if (maxlen < (c - begin))
-        {
-            maxlen = c - begin;
-            maxidx = begin;
-        }
-    }
-    if (maxlen == 0)
-    {
-        cout << "Tut pusto!\n";
-        return 0;
-    }
-    else
-    {
-        *(maxidx+maxlen) = 0;
-        cout << maxidx;
-    }
+string s;
+int beq=0,max,lmax=-1,end,l;
+while (getline(cin,s)){
+    while (end = s.find(" ",beq) != string::npos){
+        l=end-beq;
+    if (l>lmax) {max=beq;
+                lmax=l;}
+    beq=end+1;
 }
-
+};
+    cout << l;
+    return 0;
+};

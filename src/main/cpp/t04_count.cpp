@@ -29,11 +29,12 @@ using namespace std;
 
 int t04_count() {
 string s;
-int k=0;
+int k=0,beq=0;
 while (getline(cin,s)){
- if (s.find(" ")!= string::npos)
+    while (beq = s.find(" ",beq) != string::npos)
         k++;
+        beq++;
 }
-    cout <<k+1;
+    cout << k+1;
     return 0;
-}
+};

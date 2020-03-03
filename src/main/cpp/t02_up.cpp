@@ -19,6 +19,7 @@
 
 #include "t02_up.h"
 #include <iostream>
+#include <ctype.h>
 
 
 using namespace std;
@@ -26,9 +27,9 @@ using namespace std;
 int t02_up() {
 char c;
 cin >> c;
-if(c >= 'a' && c <= 'z')
-cout << char('A' + c - 'a');
+if (isalpha(c))
+cout << char(toupper(c));
 else 
-cout << c;
+cout << char(c);
 return 0;
 }

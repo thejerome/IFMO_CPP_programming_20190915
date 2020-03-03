@@ -36,7 +36,6 @@ bool check_polindrom(string word)
 }
 int t05_palindrom() {
 	string str;
-	cout << "Enter the word: ";
 	cin >> str;
 	if(check_polindrom(str))
 	{
