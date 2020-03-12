@@ -36,5 +36,6 @@ while (getline(cin,s)){
         beq++;
 }
     cout << k+1;
+    cout.flush();
     return 0;
 };
