@@ -28,14 +28,18 @@
 using namespace std;
 
 int t04_count() {
+
 string s;
 int k=0,beq=0;
-while (getline(cin,s)){
-    while ((beq = s.find(" ",beq)) != string::npos)
-        k++;
-        beq++;
+getline(cin,s,'\n');
+s=s+'\n';
+while ((beq = s.find_first_of(string(" \n"),beq)) != string::npos)
+{
+k++;
+beq++;
 }
-    cout << k+1;
-    cout.flush();
-    return 0;
+cout << k << "\n";
+
+
+return 0;
 };
