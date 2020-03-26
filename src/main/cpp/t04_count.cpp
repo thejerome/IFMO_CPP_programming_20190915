@@ -23,10 +23,23 @@
 
 #include "t04_count.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t04_count() {
 
+string s;
+int k=0,beq=0;
+getline(cin,s,'\n');
+s=s+'\n';
+while ((beq = s.find_first_of(string(" \n"),beq)) != string::npos)
+{
+k++;
+beq++;
 }
+cout << k << "\n";
+
+
+return 0;
+};
