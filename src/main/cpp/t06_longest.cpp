@@ -23,16 +23,12 @@
 using namespace std;
 
 int t06_longest() {
-string s;
-int beq=0,max,lmax=-1,end,l;
-while (getline(cin,s)){
-    while (end = s.find(" ",beq) != string::npos){
-        l=end-beq;
-    if (l>lmax) {max=beq;
-                lmax=l;}
-    beq=end+1;
+string s, x;
+cin >> x;
+while(cin >> s)
+{
+if(s.size() > x.size())x = s;
 }
-};
-    cout << l;
-    return 0;
-};
+cout << x;
+return 0;
+}
